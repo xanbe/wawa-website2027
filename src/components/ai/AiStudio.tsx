@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowLeft, ArrowRight, Check, Download, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Download, Hand, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
 import {
   COPY,
   DEFAULT_BRIEF,
@@ -25,7 +25,7 @@ import {
   type StudioBrief,
   type StudioLang,
 } from "./studio-data";
-import type { SceneApi, View } from "./StudioScene";
+import type { Move, Moves, SceneApi, View } from "./StudioScene";
 
 const StudioScene = dynamic(() => import("./StudioScene"), {
   ssr: false,
@@ -37,6 +37,37 @@ const StudioScene = dynamic(() => import("./StudioScene"), {
 });
 
 const LINE = "border-wawa-charcoal/15";
+const NO_MOVES: Moves = {};
+// 3D sahnedeki sürükleme ve logo yükleme metinleri
+const SCENE_T = {
+  tr: {
+    drag: "Parçaları 3D görünümde sürükleyerek taşıyın, çift tıklayarak döndürün.",
+    reset: "Yerleşimi sıfırla",
+    logo: "Marka logosu (isteğe bağlı)",
+    logoPick: "Logo yükleyin",
+    logoHint: "PNG, JPG, SVG ya da WebP · en fazla 2 MB",
+    logoRemove: "Logoyu kaldır",
+    logoError: "Dosya açılamadı. 2 MB'tan küçük bir PNG, JPG, SVG ya da WebP seçin.",
+  },
+  en: {
+    drag: "Drag the pieces in the 3D view to move them, double-click to rotate.",
+    reset: "Reset layout",
+    logo: "Brand logo (optional)",
+    logoPick: "Upload logo",
+    logoHint: "PNG, JPG, SVG or WebP · up to 2 MB",
+    logoRemove: "Remove logo",
+    logoError: "Could not open the file. Choose a PNG, JPG, SVG or WebP under 2 MB.",
+  },
+  de: {
+    drag: "Elemente in der 3D-Ansicht ziehen, um sie zu verschieben; Doppelklick dreht sie.",
+    reset: "Anordnung zurücksetzen",
+    logo: "Markenlogo (optional)",
+    logoPick: "Logo hochladen",
+    logoHint: "PNG, JPG, SVG oder WebP · max. 2 MB",
+    logoRemove: "Logo entfernen",
+    logoError: "Datei konnte nicht geöffnet werden. Bitte PNG, JPG, SVG oder WebP unter 2 MB wählen.",
+  },
+};
 const TONE_SWATCH = { sicak: "#C9AE8A", notr: "#C8C2B8", acik: "#E2DCD1", koyu: "#6E5B48" } as const;
 const fmtNum = (n: number, lang: StudioLang) => n.toLocaleString(lang === "tr" ? "tr-TR" : lang === "de" ? "de-DE" : "en-GB", { maximumFractionDigits: 2 });
 
@@ -151,6 +182,11 @@ export function AiStudio({
   const [result, setResult] = useState<{ image: string | null } | null>(null);
   const [show, setShow] = useState<"3d" | "render">("3d");
   const [view, setView] = useState<View>("persp");
+  const S = SCENE_T[lang];
+  // Sürüklenen parçaların yeri: ölçü, stand tipi ya da mekân değişince yerleşim baştan kurulur
+  const [moveState, setMoveState] = useState<{ key: string; map: Moves }>({ key: "", map: NO_MOVES });
+  const [logo, setLogo] = useState<string | null>(null);
+  const [logoError, setLogoError] = useState(false);
   const api = useRef<SceneApi | null>(null);
   const onSceneReady = useCallback((a: SceneApi) => {
     api.current = a;
@@ -162,6 +198,31 @@ export function AiStudio({
   const updStand = (p: Partial<StudioBrief["stand"]>) => setBrief((b) => ({ ...b, stand: { ...b.stand, ...p } }));
   const updRoom = (p: Partial<StudioBrief["room"]>) => setBrief((b) => ({ ...b, room: { ...b.room, ...p } }));
   const refs = brief.mode === "stand" ? references.stand : references.interior;
+  const layoutKey = brief.mode === "stand" ? `s|${s.type}|${s.w}|${s.d}` : `r|${r.space}|${r.w}|${r.l}`;
+  const moves = moveState.key === layoutKey ? moveState.map : NO_MOVES;
+  const onMove = useCallback((id: string, m: Move) => setMoveState((prev) => ({ key: layoutKey, map: { ...(prev.key === layoutKey ? prev.map : NO_MOVES), [id]: m } })), [layoutKey]);
+  const pickLogo = (file: File | undefined) => {
+    if (!file) return;
+    if (!/^image\/(png|jpeg|webp|svg\+xml)$/.test(file.type) || file.size > 2_000_000) return setLogoError(true);
+    const reader = new FileReader();
+    reader.onload = () => {
+      setLogo(typeof reader.result === "string" ? reader.result : null);
+      setLogoError(false);
+    };
+    reader.onerror = () => setLogoError(true);
+    reader.readAsDataURL(file);
+  };
+  const dragHint = (
+    <div className="mb-6 flex items-start gap-3 bg-[#F3F2EF] px-4 py-3 text-[13px] leading-relaxed text-wawa-charcoal/80">
+      <Hand className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+      <span className="flex-1">{S.drag}</span>
+      {moves !== NO_MOVES && (
+        <button type="button" onClick={() => setMoveState({ key: "", map: NO_MOVES })} className="shrink-0 cursor-pointer underline underline-offset-4 hover:text-wawa-charcoal">
+          {S.reset}
+        </button>
+      )}
+    </div>
+  );
 
   const summary = useMemo(() => {
     if (brief.mode === "stand") return `${fmtNum(s.w, lang)} × ${fmtNum(s.d, lang)} m · ${fmtNum(round1(s.w * s.d), lang)} m² · ${C.standTypes[s.type].title}`;
@@ -191,7 +252,7 @@ export function AiStudio({
       const res = await fetch("/api/ai/render/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...lead, lang, brief, sketch }),
+        body: JSON.stringify({ ...lead, lang, brief: { ...brief, stand: { ...brief.stand, logo: Boolean(logo) } }, sketch }),
       });
       const json = (await res.json().catch(() => ({}))) as { image?: string | null; error?: string };
       if (!res.ok) {
@@ -354,6 +415,7 @@ export function AiStudio({
               {/* 3. İçerik */}
               {step === 2 && brief.mode === "stand" && (
                 <>
+                  {dragHint}
                   <Field label={C.elementsLabel}>
                     <div className="grid grid-cols-2 gap-2">
                       {STAND_ELEMENTS.map((e) => {
@@ -392,8 +454,37 @@ export function AiStudio({
                       <span className="text-[15px] uppercase tabular-nums text-wawa-charcoal">{s.color}</span>
                     </div>
                   </Field>
+                  <Field label={S.logo}>
+                    {logo ? (
+                      <div className={`flex h-16 items-center gap-3 border px-3 ${LINE}`}>
+                        {/* Yüklenen logo (data URL) */}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={logo} alt="" className="h-10 w-24 object-contain" />
+                        <span className="flex-1" />
+                        <button type="button" onClick={() => setLogo(null)} className="inline-flex h-10 cursor-pointer items-center gap-2 px-2 text-[14px] text-wawa-charcoal hover:underline">
+                          <X className="h-4 w-4" aria-hidden />
+                          {S.logoRemove}
+                        </button>
+                      </div>
+                    ) : (
+                      <label className={`flex h-16 cursor-pointer items-center gap-3 border border-dashed px-4 text-[14px] text-wawa-charcoal transition-colors hover:border-wawa-charcoal ${LINE}`}>
+                        <Upload className="h-4 w-4 shrink-0" aria-hidden />
+                        <span className="flex-1">
+                          {S.logoPick}
+                          <span className="block text-[12px] text-wawa-charcoal/55">{S.logoHint}</span>
+                        </span>
+                        <input type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" className="sr-only" onChange={(e) => pickLogo(e.target.files?.[0])} />
+                      </label>
+                    )}
+                    {logoError && (
+                      <p role="alert" className="mt-2 text-[13px] text-[#B3261E]">
+                        {S.logoError}
+                      </p>
+                    )}
+                  </Field>
                 </>
               )}
+              {step === 2 && brief.mode === "interior" && dragHint}
               {step === 2 && brief.mode === "interior" && (
                 <Field label={C.tone}>
                   <div className="grid grid-cols-2 gap-2">
@@ -589,7 +680,7 @@ export function AiStudio({
         {/* ------------------------------------------------ Görünüm */}
         <div className="relative order-1 h-[52svh] min-h-[340px] flex-1 bg-[#ECEAE5] lg:order-2 lg:h-auto">
           <div className={`absolute inset-0 ${show === "3d" ? "" : "invisible"}`}>
-            <StudioScene mode={brief.mode} stand={s} room={r} lang={lang} onReady={onSceneReady} />
+            <StudioScene mode={brief.mode} stand={s} room={r} lang={lang} onReady={onSceneReady} moves={moves} onMove={onMove} logo={brief.mode === "stand" ? logo : null} />
           </div>
           {show === "render" && result?.image && (
             // Üretilen görsel (data URL); next/image yerine düz img

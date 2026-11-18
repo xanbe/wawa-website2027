@@ -18,6 +18,7 @@ export interface StandBrief {
   elements: StandElement[];
   sector: string;
   color: string;
+  logo?: boolean; // taslakta marka logosu var mı (görselin kendisi taslak görüntüsündedir)
 }
 
 export interface RoomBrief {

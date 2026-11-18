@@ -43,6 +43,7 @@ export function parseBrief(raw: unknown, allowedRefs: Set<string>): StudioBrief 
     elements: Array.isArray(s.elements) ? STAND_ELEMENTS.filter((e) => (s.elements as unknown[]).includes(e)) : [],
     sector: text(s.sector, 80),
     color,
+    logo: s.logo === true,
   };
   const room: RoomBrief = {
     space: pick(r.space, SPACES, "salon"),
@@ -96,8 +97,12 @@ export function buildPrompt(b: StudioBrief, hasRef: boolean) {
   const common = [
     "The FIRST image is a 3D massing model drawn at exact real-world scale. Keep exactly the same footprint, wall positions, openings, proportions, element placement and camera angle. Replace the plain grey and white blocks with finished, high-quality real materials.",
     hasRef ? "The SECOND image is a reference project by WAWA Interiors: borrow only its material quality, lighting mood and level of detail, not its layout or size." : "",
-    "The grey capsule figure is 1.75 m tall; use it to keep everything at correct human scale and replace it with a realistic person or remove it.",
-    "Photorealistic, natural lighting, professional architectural photography, sharp details. No text, no logos, no watermarks, no dimension labels.",
+    "The plain grey human figures are scale references (the standing one is 1.75 m tall): keep everything at correct human scale and replace each with a realistic person in the same place and pose, or remove it.",
+    b.mode === "interior" ? "The plain blocks inside the room are furniture placeholders at real size: keep each piece in the same position, orientation and size, and render it as real furniture of that kind." : "",
+    b.mode === "stand" && b.stand.logo
+      ? "The massing model shows the exhibitor's logo on the stand: reproduce that logo exactly as drawn, in the same places, with no changes to its shape, letters or colours. Add no other text, logos, watermarks or dimension labels."
+      : "No text, no logos, no watermarks, no dimension labels.",
+    "Photorealistic, natural lighting, professional architectural photography, sharp details.",
     b.notes ? `Client note: ${b.notes}` : "",
   ];
   if (b.mode === "stand") {
