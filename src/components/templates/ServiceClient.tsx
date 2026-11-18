@@ -13,11 +13,14 @@ export function ProjectRail({
   items,
   allLabel,
   allHref,
+  wide = false,
 }: {
   title: string;
   items: { href: string; src: string; title: string; kicker?: string | null; meta?: string | null }[];
   allLabel: string;
   allHref?: string;
+  /** Yatay 16:9 kartlar (fuar standı fotoğrafları genelde yatay çekilir); masaüstünde 3 kart görünür */
+  wide?: boolean;
 }) {
   const rail = useRef<HTMLUListElement>(null);
   const move = (dir: number) => {
@@ -54,10 +57,19 @@ export function ProjectRail({
         </div>
         <ul ref={rail} className="mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [scrollbar-width:none] lg:mt-10 [&::-webkit-scrollbar]:hidden">
           {items.map((p) => (
-            <li key={p.href} className="w-[78%] shrink-0 snap-start sm:w-[44%] lg:w-[calc((100%-72px)/4)]">
+            <li
+              key={p.href}
+              className={`shrink-0 snap-start ${wide ? "w-[86%] sm:w-[60%] lg:w-[calc((100%-48px)/3)]" : "w-[78%] sm:w-[44%] lg:w-[calc((100%-72px)/4)]"}`}
+            >
               <Link href={p.href} className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden bg-[#F3F2EF]">
-                  <Image src={p.src} alt={p.title} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 44vw, 78vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+                <div className={`relative overflow-hidden bg-[#F3F2EF] ${wide ? "aspect-video" : "aspect-[3/4]"}`}>
+                  <Image
+                    src={p.src}
+                    alt={p.title}
+                    fill
+                    sizes={wide ? "(min-width: 1024px) 33vw, (min-width: 640px) 60vw, 86vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 44vw, 78vw"}
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
                 </div>
                 <div className="mt-4 border-b border-wawa-charcoal/15 pb-4">
                   {p.kicker && <p className="text-[11px] tracking-[0.14em] text-wawa-charcoal/55 uppercase">{p.kicker}</p>}
@@ -299,7 +311,9 @@ export function VideoPlaylist({ title, count, videos }: { title: string; count: 
               </button>
             )}
           </div>
-          <ol className="max-h-[420px] overflow-y-auto border-t border-wawa-charcoal/15 lg:order-1 lg:col-span-4 lg:max-h-none lg:self-stretch">
+          {/* Liste masaüstünde video yüksekliğini aşmaz, kendi içinde kayar */}
+          <div className="relative lg:order-1 lg:col-span-4">
+          <ol className="max-h-[420px] overflow-y-auto overscroll-contain border-t border-wawa-charcoal/15 [scrollbar-color:rgb(0_0_0/0.25)_transparent] [scrollbar-width:thin] lg:absolute lg:inset-0 lg:max-h-none">
             {videos.map((item, i) => (
               <li key={item.id} className="border-b border-wawa-charcoal/15">
                 <button
@@ -322,6 +336,7 @@ export function VideoPlaylist({ title, count, videos }: { title: string; count: 
               </li>
             ))}
           </ol>
+          </div>
         </div>
       </div>
     </section>

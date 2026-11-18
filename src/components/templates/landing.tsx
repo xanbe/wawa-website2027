@@ -256,7 +256,7 @@ export function LandingTemplate(props: LandingProps) {
       {landing && <IntroBento images={introImages} title={landing.intro.title} text={landing.intro.text} items={landing.highlights} offer={T.offer} />}
 
       {/* 5. Projeler: yatay kayan kartlar */}
-      {rail.length > 0 && <ProjectRail title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} />}
+      {rail.length > 0 && <ProjectRail title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} wide={isStand} />}
 
       {/* 6. Rakamlar ve yurt dışı (küre, TR) */}
       <CountStats lang={k} stats={STATS.map((st) => ({ ...st, label: st.label[k] }))} />
