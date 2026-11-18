@@ -312,6 +312,13 @@ function Stand({ b, lang, ctx, logo }: { b: StandBrief; lang: string; ctx: DragC
           <LogoPlane url={logo} max={[Math.min(2.4, w * 0.4), 0.8]} pos={[has("depo") ? (xLeft + xRight - depoW) / 2 : 0, h * 0.6, zBack + 0.012]} />
         ))}
 
+      {/* Eleman yokken (serbest tasarım) standın izin verilen hacmi ince bir çerçeveyle gösterilir: yükseklik buradan okunur */}
+      {elements.length === 0 && (
+        <lineSegments position={[0, h / 2 + 0.1, 0]}>
+          <edgesGeometry args={[new THREE.BoxGeometry(w, h, d)]} />
+          <lineBasicMaterial color="#77746E" />
+        </lineSegments>
+      )}
       <Draggable id="p1" ctx={ctx} y={0.1} base={{ x: 0.2, z: d / 2 - 0.5, r: 0.3 }}>
         <Person />
       </Draggable>

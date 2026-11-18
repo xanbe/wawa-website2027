@@ -5,7 +5,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, Download, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Download, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
 import {
   COPY,
   DEFAULT_BRIEF,
@@ -36,6 +36,12 @@ const StudioScene = dynamic(() => import("./StudioScene"), {
 
 const LINE = "border-wawa-charcoal/15";
 const NO_MOVES: Moves = {};
+// Üç aşama: alan ve ölçüler → sektör ve stil → iletişim ve üretim
+const STAGE_T = {
+  tr: { names: ["Alan ve ölçüler", "Sektör ve stil", "İletişim ve üretim"], next: "Devam", back: "Geri" },
+  en: { names: ["Space and size", "Industry and style", "Contact and render"], next: "Continue", back: "Back" },
+  de: { names: ["Fläche und Maße", "Branche und Stil", "Kontakt und Entwurf"], next: "Weiter", back: "Zurück" },
+};
 // Sektör önerileri: yazarken listeden seçilebilir, listede olmayan da yazılabilir
 const SECTORS = {
   tr: ["Enerji", "Gıda ve içecek", "Tekstil ve hazır giyim", "Otomotiv", "Makine ve metal", "Plastik ve ambalaj", "İnşaat ve yapı", "Mobilya ve dekorasyon", "Sağlık ve ilaç", "Kozmetik", "Teknoloji ve yazılım", "Lojistik", "Kuyum", "Savunma", "Turizm"],
@@ -98,10 +104,9 @@ function Choice({ active, onClick, children, className = "" }: { active: boolean
 }
 
 // Numaralı bölüm başlığı: form tek sayfada, bölümler alt alta
-function SecHead({ n, title, first = false }: { n: number; title: string; first?: boolean }) {
+function SecHead({ title, first = false }: { n?: number; title: string; first?: boolean }) {
   return (
     <h2 className={`flex items-center gap-3 text-[17px] font-medium tracking-tight text-wawa-charcoal [&+*]:mt-5 ${first ? "" : "mt-10 border-t border-wawa-charcoal/15 pt-8"}`}>
-      <span className="grid h-6 w-6 shrink-0 place-items-center bg-wawa-charcoal text-[12px] font-medium tabular-nums text-white">{n}</span>
       {title}
     </h2>
   );
@@ -219,6 +224,13 @@ export function AiStudio({
 }) {
   const C = COPY[lang];
   const [brief, setBrief] = useState<StudioBrief>(DEFAULT_BRIEF);
+  const [stage, setStage] = useState(0);
+  const G = STAGE_T[lang];
+  const top = useRef<HTMLDivElement>(null);
+  const goStage = (n: number) => {
+    setStage(n);
+    top.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
   const [lead, setLead] = useState({ name: "", phone: "", email: "", consent: false, website: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
@@ -300,16 +312,36 @@ export function AiStudio({
 
   return (
     <section className="bg-white pt-20 lg:pt-[116px]" lang={lang}>
-      <div className="container-wide flex flex-col lg:flex-row lg:items-start lg:gap-14 lg:pt-12 lg:pb-20">
+      <div className="mx-auto w-full max-w-[860px] px-4 sm:px-6 lg:pt-12 lg:pb-20">
         {/* ------------------------------------------------ Panel */}
-        <div className="order-2 min-w-0 flex-1 lg:order-1">
+        <div>
           <div className={`border-b pt-7 pb-6 lg:pt-0 ${LINE}`}>
             <h1 className="font-heading text-[22px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[30px]">{title}</h1>
             <p className="mt-4 max-w-[58ch] text-[15px] leading-relaxed text-wawa-charcoal/70">{S.free}</p>
+            <ol ref={top as never} className="mt-7 grid scroll-mt-32 grid-cols-3 gap-2">
+              {G.names.map((label, i) => (
+                <li key={label}>
+                  <button
+                    type="button"
+                    disabled={i > stage}
+                    onClick={() => goStage(i)}
+                    aria-current={i === stage ? "step" : undefined}
+                    className="w-full cursor-pointer text-left disabled:cursor-default"
+                  >
+                    <span className={`block h-1 transition-colors ${i === stage ? "bg-wawa-charcoal" : i < stage ? "bg-wawa-accent" : "bg-wawa-charcoal/12"}`} />
+                    <span className={`mt-2.5 flex items-baseline gap-2 text-[13px] ${i === stage ? "text-wawa-charcoal" : "text-wawa-charcoal/50"}`}>
+                      <span className="tabular-nums">{i + 1}</span>
+                      <span className="truncate">{label}</span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ol>
           </div>
 
           <div className="py-8">
             <div>
+              <div className={stage === 0 ? "" : "hidden"}>
               {/* 1. Proje türü */}
               <SecHead n={1} title={C.modeTitle} first />
               <div className="grid grid-cols-2 gap-2">
@@ -414,8 +446,10 @@ export function AiStudio({
                 </>
               )}
 
+              </div>
+              <div className={stage === 1 ? "" : "hidden"}>
               {/* 3. İçerik */}
-              <SecHead n={3} title={C.contentTitle} />
+              <SecHead n={3} title={C.contentTitle} first />
               {brief.mode === "stand" && (
                 <>
                   <Field label={C.sector}>
@@ -511,8 +545,10 @@ export function AiStudio({
                 </>
               }
 
+              </div>
+              <div className={stage === 2 ? "" : "hidden"}>
               {/* 5. Üret */}
-              <SecHead n={5} title={C.generateTitle} />
+              <SecHead n={5} title={C.generateTitle} first />
               {
                 <>
                   <p className="text-[15px] leading-relaxed text-wawa-charcoal/75">{C.generateLead}</p>
@@ -576,6 +612,11 @@ export function AiStudio({
                     <div className="mt-6" aria-live="polite">
                       <p className="text-[18px] tracking-tight text-wawa-charcoal">{C.resultTitle}</p>
                       <p className="mt-2 text-[14px] leading-relaxed text-wawa-charcoal/70">{result?.image ? C.sentNote : C.resultPending}</p>
+                      {result?.image && (
+                        // Üretilen görsel (data URL); görünce sayfa ona kayar
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={result.image} alt={C.resultTitle} ref={(el) => el?.scrollIntoView({ block: "center", behavior: "smooth" })} className="mt-5 w-full bg-wawa-charcoal" />
+                      )}
                       <div className="mt-6 grid gap-2">
                         {result?.image && (
                           <a href={result.image} download="wawa-tasarim.png" className={`inline-flex h-12 items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}>
@@ -599,6 +640,7 @@ export function AiStudio({
                           onClick={() => {
                             setStatus("idle");
                             setShow("3d");
+                            goStage(0);
                           }}
                           className={`inline-flex h-12 cursor-pointer items-center justify-center border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}
                         >
@@ -613,71 +655,39 @@ export function AiStudio({
                   )}
                 </>
               }
+              </div>
+
+              {/* Aşamalar arası gezinme; son aşamada üretim düğmesi formun kendisindedir */}
+              {(stage > 0 || stage < 2) && status !== "done" && (
+                <div className={`mt-10 flex items-center justify-between gap-3 border-t pt-6 ${LINE}`}>
+                  {stage > 0 ? (
+                    <button type="button" onClick={() => goStage(stage - 1)} className="inline-flex h-12 cursor-pointer items-center gap-2 px-1 text-[15px] text-wawa-charcoal hover:underline">
+                      <ArrowLeft className="h-4 w-4" aria-hidden />
+                      {G.back}
+                    </button>
+                  ) : (
+                    <span />
+                  )}
+                  {stage < 2 && (
+                    <button
+                      type="button"
+                      onClick={() => goStage(stage + 1)}
+                      className="group inline-flex h-12 cursor-pointer items-center gap-3 bg-wawa-charcoal px-7 text-[15px] text-white transition-colors hover:bg-black"
+                    >
+                      {G.next}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                    </button>
+                  )}
+                </div>
+              )}
             </div>
           </div>
 
         </div>
 
-        {/* ------------------------------------------------ Görünüm */}
-        <div className="sticky top-20 z-10 order-1 -mx-4 h-[34svh] min-h-[230px] bg-[#ECEAE5] sm:mx-0 lg:top-[140px] lg:order-2 lg:aspect-[4/3] lg:h-auto lg:min-h-0 lg:w-[44%] lg:shrink-0">
-          <div className={`absolute inset-0 ${show === "3d" ? "" : "invisible"}`}>
-            <StudioScene mode={brief.mode} stand={bareStand} room={r} lang={lang} onReady={onSceneReady} moves={NO_MOVES} bare logo={brief.mode === "stand" ? logo : null} />
-          </div>
-          {show === "render" && result?.image && (
-            // Üretilen görsel (data URL); next/image yerine düz img
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={result.image} alt={C.resultTitle} className="absolute inset-0 h-full w-full bg-wawa-charcoal object-contain" />
-          )}
-
-          {/* Üst şerit: özet ve görünüm seçimi */}
-          <div className="pointer-events-none absolute inset-x-3 top-3 flex flex-wrap items-start justify-between gap-2 sm:inset-x-5 sm:top-5">
-            <span className="bg-white px-3 py-2 text-[13px] tabular-nums text-wawa-charcoal shadow-sm">{summary}</span>
-            {result?.image && (
-              <div className="pointer-events-auto flex bg-white shadow-sm">
-                {(["3d", "render"] as const).map((v) => (
-                  <button
-                    key={v}
-                    type="button"
-                    onClick={() => setShow(v)}
-                    className={`cursor-pointer px-3.5 py-2 text-[13px] ${show === v ? "bg-wawa-charcoal text-white" : "text-wawa-charcoal hover:bg-[#F3F2EF]"}`}
-                  >
-                    {v === "3d" ? C.view3d : C.viewRender}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Alt şerit: kamera açıları ve ölçek notu */}
-          {show === "3d" && (
-            <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2 sm:inset-x-5 sm:bottom-5">
-              <div className="flex bg-white shadow-sm">
-                {(["persp", "top", "front"] as const).map((v) => (
-                  <button
-                    key={v}
-                    type="button"
-                    onClick={() => {
-                      setView(v);
-                      api.current?.setView(v);
-                    }}
-                    className={`cursor-pointer px-3 py-2 text-[13px] ${view === v ? "bg-wawa-charcoal text-white" : "text-wawa-charcoal hover:bg-[#F3F2EF]"}`}
-                  >
-                    {C.views[v]}
-                  </button>
-                ))}
-              </div>
-              <span className="hidden bg-white/85 px-2.5 py-1.5 text-[12px] text-wawa-charcoal/70 sm:block">{C.scaleNote}</span>
-            </div>
-          )}
-
-          {status === "loading" && (
-            <div className="absolute inset-0 grid place-items-center bg-white/55 backdrop-blur-[2px]">
-              <span className="flex items-center gap-3 bg-white px-5 py-3 text-[15px] text-wawa-charcoal shadow-sm">
-                <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
-                {C.generating}
-              </span>
-            </div>
-          )}
+        {/* 3D taslak kullanıcıya gösterilmez: ekran dışında, sabit boyutta çizilir ve üretimde yapay zekaya gönderilir */}
+        <div aria-hidden className="pointer-events-none fixed top-0 -left-[300vw] h-[720px] w-[1152px]">
+          <StudioScene mode={brief.mode} stand={bareStand} room={r} lang={lang} onReady={onSceneReady} moves={NO_MOVES} bare logo={brief.mode === "stand" ? logo : null} />
         </div>
       </div>
     </section>

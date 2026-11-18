@@ -95,7 +95,7 @@ const STYLE_EN = { minimal: "minimal", modern: "modern", luks: "luxury", dogal: 
 export function buildPrompt(b: StudioBrief, hasRef: boolean) {
   const styles = b.styles.map((s) => STYLE_EN[s]).join(", ") || "contemporary";
   const common = [
-    "The FIRST image is a 3D model of the EMPTY space drawn at exact real-world scale: it fixes only the footprint, the closed and open sides, the openings and the height. Keep exactly that footprint, those proportions, wall positions, openings, height and camera angle. Everything inside the space is yours to design freely.",
+    "The FIRST image is a 3D model of the EMPTY space drawn at exact real-world scale: it fixes only the footprint, the closed and open sides, the openings and the height. Keep exactly that footprint, those proportions, wall positions, openings, height and camera angle. Everything inside the space is yours to design freely. If thin outline edges of a box are drawn, they mark the exact volume and maximum height available; do not draw those lines in the result.",
     hasRef ? "The SECOND image is a reference project by WAWA Interiors: borrow only its material quality, lighting mood and level of detail, not its layout or size." : "",
     "The plain grey human figure is a scale reference 1.75 m tall: size every element you design against it, and replace it with a realistic person or remove it.",
     b.mode === "stand" && b.stand.logo
