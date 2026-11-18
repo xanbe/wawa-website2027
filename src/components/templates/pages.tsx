@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { OfferWizard } from "./OfferWizard";
+import { FAIRS } from "@/content/fairs";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { ROUTES, contentLang, t, type Lang } from "@/lib/i18n";
@@ -110,20 +112,18 @@ export function OfferTemplate({ lang }: { lang: Lang }) {
     <>
       <PageIntro lang={lang} title={intro.title} lead={intro.lead} />
       <section className="bg-white" lang={lang}>
-        <div className={`container-wide grid gap-12 border-t pt-10 pb-14 lg:grid-cols-12 lg:gap-10 lg:pt-14 lg:pb-16 ${LINE}`}>
-          <div className="lg:col-span-7">
-            <ContactForm lang={lang} kind="offer" />
-          </div>
-          <div className="lg:col-span-4 lg:col-start-9">
-            <ContactInfo lang={lang} />
-            {lang === "tr" && (
-              <Link href={ROUTES.tr.budget} className="group mt-8 flex items-center justify-between gap-4 bg-[#F3F2EF] p-5 text-[15px] text-wawa-charcoal hover:bg-wawa-accent">
-                {budget}
-                <ArrowUpRight className="h-4 w-4 shrink-0" />
-              </Link>
-            )}
-          </div>
+        <div className={`container-wide grid gap-12 border-t pt-10 pb-14 lg:grid-cols-12 lg:gap-10 lg:pt-14 lg:pb-12 ${LINE}`}>
+          {/* Yönlendirmeli teklif formu: solda adımlar, sağda canlı özet ve hızlı iletişim */}
+          <OfferWizard lang={lang} fairs={FAIRS.map((x) => `${x.name} · ${x.city}`)} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
         </div>
+        {lang === "tr" && (
+          <div className="container-wide pb-14 lg:pb-16">
+            <Link href={ROUTES.tr.budget} className="group flex max-w-[720px] items-center justify-between gap-4 bg-[#F3F2EF] p-5 text-[15px] text-wawa-charcoal hover:bg-wawa-accent">
+              {budget}
+              <ArrowUpRight className="h-4 w-4 shrink-0" />
+            </Link>
+          </div>
+        )}
       </section>
     </>
   );
