@@ -1,0 +1,23 @@
+// WAWA Interiors YouTube videoları. Liste wawafuar.com'daki oynatma listesinden (başlık ve süreleriyle),
+// sonuna eski sitenin video haritasında olup o listede bulunmayan iki video eklendi.
+export const VIDEOS = [
+  { id: "06ZxRECy0sU", title: "DFDS Logitrans 2024 Fuarı", duration: "0:42" },
+  { id: "QaL1Tam7cXk", title: "CH Robinson - Logitrans 2024", duration: "0:43" },
+  { id: "2UXR02cFXE8", title: "GCA - 2024 Ambalaj Fuarı", duration: "0:26" },
+  { id: "Lc0mz4kSo-E", title: "ASAŞ Kapı Pencere Fuarı", duration: "1:12" },
+  { id: "t2ClyDXVeQE", title: "ZES EIF Fuarı", duration: "0:32" },
+  { id: "El8AIDhqwQQ", title: "Kardemir Metalexpo 2024", duration: "0:59" },
+  { id: "WUaZK56PeYc", title: "Kardemir Metal Expo Fuarı", duration: "0:29" },
+  { id: "EBMf_xPCPQA", title: "Kardemir Eurasia Rail Fuar Standı", duration: "0:34" },
+  { id: "HQI0FLYq3i4", title: "Midas - 2024 Kuyumculuk Fuarı", duration: "0:56" },
+  { id: "i0Y1FgxsdyM", title: "Midas Kuyumculuk Fuar Standı", duration: "1:20" },
+  { id: "hCJCpF8KYHk", title: "Likit Kimya - Turkchem Fuarı", duration: "0:44" },
+  { id: "gslw-EcNBTM", title: "BANAT Beauty Eurasia 2023", duration: "1:26" },
+  { id: "29so0Kdo_zQ", title: "ELC Kapı Pencere Fuarı", duration: "1:09" },
+  { id: "jzQIU8rpJFY", title: "Comfytex Ibıa Fuarı", duration: "" },
+  { id: "O9K9bomEJDk", title: "Panalı - Ambiyans Fuarı", duration: "" },
+];
+export type Video = (typeof VIDEOS)[number];
+
+// Stand sayfalarının açılışında arkada oynayan video
+export const HERO_VIDEO = "06ZxRECy0sU"; // DFDS Logitrans 2024

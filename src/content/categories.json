@@ -1,0 +1,860 @@
+[
+ {
+  "path": "/portfolio/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio/",
+   "de": "/de/portfolio/",
+   "tr": "/portfolio/"
+  },
+  "seo": {
+   "title": "Portfolio",
+   "fullTitle": "Portfolio - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Portfolio Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "portfolio",
+  "slug": "",
+  "name": "Portfolio",
+  "items": [
+   "/portfolio/naturel-2025-solarex/",
+   "/portfolio/koluman-plastik/",
+   "/portfolio/kelesler-plast/",
+   "/portfolio/kardemir-metalexpo25/",
+   "/portfolio/kardemir-eurasia-rail-25/",
+   "/portfolio/huzur-2025/",
+   "/portfolio/fortis-energy-2/",
+   "/portfolio/erdoganlar-aluminyum/",
+   "/portfolio/elc-aluminium/",
+   "/portfolio/ekos-electric/"
+  ]
+ },
+ {
+  "path": "/en/portfolio/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio/",
+   "de": "/de/portfolio/",
+   "tr": "/portfolio/"
+  },
+  "seo": {
+   "title": "Portfolio",
+   "fullTitle": "Portfolio - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Portfolio Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "portfolio",
+  "slug": "",
+  "name": "Portfolio",
+  "items": [
+   "/en/portfolio/naturel-2025-solarex-en/",
+   "/en/portfolio/koluman-plastik-en/",
+   "/en/portfolio/kelesler-plast-en/",
+   "/en/portfolio/kardemir-metalexpo25-en/",
+   "/en/portfolio/kardemir-eurasia-rail-25-en/",
+   "/en/portfolio/huzur-2025-en/",
+   "/en/portfolio/fortis-energy-2-en/",
+   "/en/portfolio/erdoganlar-aluminyum-en/",
+   "/en/portfolio/elc-aluminium-en/",
+   "/en/portfolio/ekos-electric-en/"
+  ]
+ },
+ {
+  "path": "/de/portfolio/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio/",
+   "de": "/de/portfolio/",
+   "tr": "/portfolio/"
+  },
+  "seo": {
+   "title": "Portfolio",
+   "fullTitle": "Portfolio - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Portfolio Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "portfolio",
+  "slug": "",
+  "name": "Portfolio",
+  "items": [
+   "/de/portfolio/naturel-2025-solarex-de/",
+   "/de/portfolio/koluman-plastik-de/",
+   "/de/portfolio/kelesler-plast-de/",
+   "/de/portfolio/kardemir-metalexpo25-de/",
+   "/de/portfolio/kardemir-eurasia-rail-25-de/",
+   "/de/portfolio/huzur-2025-de/",
+   "/de/portfolio/fortis-energy-2-de/",
+   "/de/portfolio/erdoganlar-aluminyum-de/",
+   "/de/portfolio/elc-aluminium-de/",
+   "/de/portfolio/ekos-electric-de/"
+  ]
+ },
+ {
+  "path": "/service/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/service/",
+   "de": "/de/service/",
+   "tr": "/service/"
+  },
+  "seo": {
+   "title": "Services",
+   "fullTitle": "Services - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Services Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "service",
+  "slug": "",
+  "name": "Services",
+  "items": [
+   "/fuar-standi/",
+   "/service/maxima-stand/",
+   "/service/kongre-stand-tasarimi/",
+   "/ofis-tasarimi-ve-uygulama/",
+   "/cafe-dekorasyon/",
+   "/service/klinik-tasarimi/",
+   "/service/magaza-tasarimi/",
+   "/konut-villa-tasarim/"
+  ]
+ },
+ {
+  "path": "/en/service/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/service/",
+   "de": "/de/service/",
+   "tr": "/service/"
+  },
+  "seo": {
+   "title": "Services",
+   "fullTitle": "Services - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Services Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "service",
+  "slug": "",
+  "name": "Services",
+  "items": [
+   "/en/service/expo-design/",
+   "/en/service/maxima-stand/",
+   "/en/service/congress-stand-design/",
+   "/en/service/office-design-and-implementation/",
+   "/en/service/cafe-restaurant-design-and-implementation/",
+   "/en/service/clinic-design-and-implementation/",
+   "/en/service/store-design-and-implementation/",
+   "/en/service/housing-villa-design/"
+  ]
+ },
+ {
+  "path": "/de/service/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/service/",
+   "de": "/de/service/",
+   "tr": "/service/"
+  },
+  "seo": {
+   "title": "Services",
+   "fullTitle": "Services - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": "Services Archive - İç Mimar | Fuar Standı | Wawa Interiors",
+   "ogImage": null
+  },
+  "kind": "service",
+  "slug": "",
+  "name": "Services",
+  "items": [
+   "/de/service/messe-stand/",
+   "/de/service/maxima-stand/",
+   "/de/service/kongress-stand-design/",
+   "/de/service/buerodesign-und-umsetzung/",
+   "/de/service/cafe-restaurantdesign-und-umsetzungen/",
+   "/de/service/klinikdesign-und-umsetzungen/",
+   "/de/service/laden-design-und-umsetzungen/",
+   "/de/service/wohnungs-villendesign/"
+  ]
+ },
+ {
+  "path": "/uncategorized-tr/",
+  "lang": "tr",
+  "alternates": {},
+  "seo": {
+   "title": "Blog",
+   "fullTitle": "Blog - Wawa Interiors İçmimarlık Ofisi Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "post-category",
+  "slug": "uncategorized-tr",
+  "name": "Blog",
+  "items": []
+ },
+ {
+  "path": "/genel/",
+  "lang": "tr",
+  "alternates": {},
+  "seo": {
+   "title": "Genel",
+   "fullTitle": "Genel - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "post-category",
+  "slug": "genel",
+  "name": "Genel",
+  "items": []
+ },
+ {
+  "path": "/portfolio-category/konut-villa/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/residential-villa/",
+   "de": "/de/portfolio-category/wohnen-villa/",
+   "tr": "/portfolio-category/konut-villa/"
+  },
+  "seo": {
+   "title": "Konut - Villa",
+   "fullTitle": "Konut - Villa - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "konut-villa",
+  "name": "Konut - Villa",
+  "items": [
+   "/portfolio/resadiye-villa-tasarimi/",
+   "/portfolio/caddebostan-konut-projesi/",
+   "/portfolio/almanya-f-h-konut-projesi/",
+   "/portfolio/acarkent-villa-tasarimi/",
+   "/portfolio/iran-tabriz-m-m-projesi/",
+   "/portfolio/m-b-konut-tasarimi/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/klinik-tasarim/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/clinic-design/",
+   "de": "/de/portfolio-category/klinikdesign/",
+   "tr": "/portfolio-category/klinik-tasarim/"
+  },
+  "seo": {
+   "title": "Klinik Tasarım",
+   "fullTitle": "Klinik Tasarım - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "klinik-tasarim",
+  "name": "Klinik Tasarım",
+  "items": [
+   "/portfolio/halide-akinci-klinik-tasarim/",
+   "/portfolio/fulya-klinik-tasarim/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/magaza-tasarim/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/store-design/",
+   "de": "/de/portfolio-category/ladendesign/",
+   "tr": "/portfolio-category/magaza-tasarim/"
+  },
+  "seo": {
+   "title": "Mağaza Tasarım",
+   "fullTitle": "Mağaza Tasarım - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "magaza-tasarim",
+  "name": "Mağaza Tasarım",
+  "items": [
+   "/portfolio/leuze/",
+   "/portfolio/golden-rose-yekta-avm/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/ofis-tasarimi/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/office-design/",
+   "de": "/de/portfolio-category/buerodesign/",
+   "tr": "/portfolio-category/ofis-tasarimi/"
+  },
+  "seo": {
+   "title": "Ofis Tasarımı",
+   "fullTitle": "Ofis Tasarımı - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "ofis-tasarimi",
+  "name": "Ofis Tasarımı",
+  "items": [
+   "/portfolio/acik-ofis-tasarimlari/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/cafe-restoran-tasarim/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/cafe-restaurant-design/",
+   "de": "/de/portfolio-category/cafe-restaurantdesign/",
+   "tr": "/portfolio-category/cafe-restoran-tasarim/"
+  },
+  "seo": {
+   "title": "Cafe - Restoran Tasarım",
+   "fullTitle": "Cafe - Restoran Tasarım - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "cafe-restoran-tasarim",
+  "name": "Cafe - Restoran Tasarım",
+  "items": [
+   "/portfolio/gurme-restoran/",
+   "/portfolio/otantik-cafe-dekorasyon/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/fuar-stand-tasarimi/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/exhibition-stand-design/",
+   "de": "/de/portfolio-category/messestanddesign/",
+   "tr": "/portfolio-category/fuar-stand-tasarimi/"
+  },
+  "seo": {
+   "title": "Fuar Stand Tasarımı",
+   "fullTitle": "Fuar Stand Tasarımı - İç Mimar | Fuar Standı",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "fuar-stand-tasarimi",
+  "name": "Fuar Stand Tasarımı",
+  "items": [
+   "/portfolio/naturel-2025-solarex/",
+   "/portfolio/koluman-plastik/",
+   "/portfolio/kelesler-plast/",
+   "/portfolio/kardemir-metalexpo25/",
+   "/portfolio/kardemir-eurasia-rail-25/",
+   "/portfolio/huzur-2025/",
+   "/portfolio/fortis-energy-2/",
+   "/portfolio/erdoganlar-aluminyum/",
+   "/portfolio/elc-aluminium/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/avm-standi/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/mall-stand/",
+   "de": "/de/portfolio-category/einkaufszentrum-stand/",
+   "tr": "/portfolio-category/avm-standi/"
+  },
+  "seo": {
+   "title": "Avm Standi",
+   "fullTitle": "Avm Standi - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "avm-standi",
+  "name": "Avm Standi",
+  "items": [
+   "/portfolio/gardrops/",
+   "/portfolio/golden-rose-akbati/",
+   "/portfolio/golden-rose-bursa/"
+  ]
+ },
+ {
+  "path": "/portfolio-category/maxima-stand/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/portfolio-category/maxima-stand-en/",
+   "de": "/de/portfolio-category/maxima-stand-de/",
+   "tr": "/portfolio-category/maxima-stand/"
+  },
+  "seo": {
+   "title": "Maxima Stand",
+   "fullTitle": "Maxima Stand - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "maxima-stand",
+  "name": "Maxima Stand",
+  "items": [
+   "/portfolio/tatko/",
+   "/portfolio/besenve/",
+   "/portfolio/handiran/",
+   "/portfolio/altahuna/",
+   "/portfolio/daly/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/mall-stand/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/mall-stand/",
+   "de": "/de/portfolio-category/einkaufszentrum-stand/",
+   "tr": "/portfolio-category/avm-standi/"
+  },
+  "seo": {
+   "title": "Mall Stand",
+   "fullTitle": "Mall Stand - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "mall-stand",
+  "name": "Mall Stand",
+  "items": [
+   "/en/portfolio/gardrops-3/",
+   "/en/portfolio/golden-rose-akbati-3/",
+   "/en/portfolio/golden-rose-bursa-3/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/einkaufszentrum-stand/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/mall-stand/",
+   "de": "/de/portfolio-category/einkaufszentrum-stand/",
+   "tr": "/portfolio-category/avm-standi/"
+  },
+  "seo": {
+   "title": "Einkaufszentrum-Stand",
+   "fullTitle": "Einkaufszentrum-Stand - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "einkaufszentrum-stand",
+  "name": "Einkaufszentrum-Stand",
+  "items": [
+   "/de/portfolio/gardrops-2/",
+   "/de/portfolio/golden-rose-akbati-2/",
+   "/de/portfolio/golden-rose-bursa-2/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/cafe-restaurant-design/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/cafe-restaurant-design/",
+   "de": "/de/portfolio-category/cafe-restaurantdesign/",
+   "tr": "/portfolio-category/cafe-restoran-tasarim/"
+  },
+  "seo": {
+   "title": "Café & Restaurant Design",
+   "fullTitle": "Café & Restaurant Design - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "cafe-restaurant-design",
+  "name": "Café & Restaurant Design",
+  "items": [
+   "/en/portfolio/gurme-restaurant-2/",
+   "/en/portfolio/maddies-cucina-2/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/cafe-restaurantdesign/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/cafe-restaurant-design/",
+   "de": "/de/portfolio-category/cafe-restaurantdesign/",
+   "tr": "/portfolio-category/cafe-restoran-tasarim/"
+  },
+  "seo": {
+   "title": "Café- & Restaurantdesign",
+   "fullTitle": "Café- & Restaurantdesign - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "cafe-restaurantdesign",
+  "name": "Café- & Restaurantdesign",
+  "items": [
+   "/de/portfolio/gurme-restaurant/",
+   "/de/portfolio/maddies-cucina/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/exhibition-stand-design/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/exhibition-stand-design/",
+   "de": "/de/portfolio-category/messestanddesign/",
+   "tr": "/portfolio-category/fuar-stand-tasarimi/"
+  },
+  "seo": {
+   "title": "Exhibition Stand Design",
+   "fullTitle": "Exhibition Stand Design - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "exhibition-stand-design",
+  "name": "Exhibition Stand Design",
+  "items": [
+   "/en/portfolio/naturel-2025-solarex-en/",
+   "/en/portfolio/koluman-plastik-en/",
+   "/en/portfolio/kelesler-plast-en/",
+   "/en/portfolio/kardemir-metalexpo25-en/",
+   "/en/portfolio/kardemir-eurasia-rail-25-en/",
+   "/en/portfolio/huzur-2025-en/",
+   "/en/portfolio/fortis-energy-2-en/",
+   "/en/portfolio/erdoganlar-aluminyum-en/",
+   "/en/portfolio/elc-aluminium-en/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/messestanddesign/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/exhibition-stand-design/",
+   "de": "/de/portfolio-category/messestanddesign/",
+   "tr": "/portfolio-category/fuar-stand-tasarimi/"
+  },
+  "seo": {
+   "title": "Messestanddesign",
+   "fullTitle": "Messestanddesign - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "messestanddesign",
+  "name": "Messestanddesign",
+  "items": [
+   "/de/portfolio/naturel-2025-solarex-de/",
+   "/de/portfolio/koluman-plastik-de/",
+   "/de/portfolio/kelesler-plast-de/",
+   "/de/portfolio/kardemir-metalexpo25-de/",
+   "/de/portfolio/kardemir-eurasia-rail-25-de/",
+   "/de/portfolio/huzur-2025-de/",
+   "/de/portfolio/fortis-energy-2-de/",
+   "/de/portfolio/erdoganlar-aluminyum-de/",
+   "/de/portfolio/elc-aluminium-de/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/clinic-design/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/clinic-design/",
+   "de": "/de/portfolio-category/klinikdesign/",
+   "tr": "/portfolio-category/klinik-tasarim/"
+  },
+  "seo": {
+   "title": "Clinic Design",
+   "fullTitle": "Clinic Design - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "clinic-design",
+  "name": "Clinic Design",
+  "items": [
+   "/en/portfolio/halide-akinci-clinic-design/",
+   "/en/portfolio/fulya-clinic-design/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/klinikdesign/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/clinic-design/",
+   "de": "/de/portfolio-category/klinikdesign/",
+   "tr": "/portfolio-category/klinik-tasarim/"
+  },
+  "seo": {
+   "title": "Klinikdesign",
+   "fullTitle": "Klinikdesign - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "klinikdesign",
+  "name": "Klinikdesign",
+  "items": [
+   "/de/portfolio/halide-akinci-klinik-entwurf/",
+   "/de/portfolio/fulya-klinik-entwurf/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/residential-villa/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/residential-villa/",
+   "de": "/de/portfolio-category/wohnen-villa/",
+   "tr": "/portfolio-category/konut-villa/"
+  },
+  "seo": {
+   "title": "Residential & Villa",
+   "fullTitle": "Residential & Villa - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "residential-villa",
+  "name": "Residential & Villa",
+  "items": [
+   "/en/portfolio/resadiye-villa-design/",
+   "/en/portfolio/caddebostan-residential-project/",
+   "/en/portfolio/germany-f-h-residential-project/",
+   "/en/portfolio/acarkent-villa-design/",
+   "/en/portfolio/iran-tabriz-m-m-project/",
+   "/en/portfolio/m-b-residential-design-and-implementation/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/wohnen-villa/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/residential-villa/",
+   "de": "/de/portfolio-category/wohnen-villa/",
+   "tr": "/portfolio-category/konut-villa/"
+  },
+  "seo": {
+   "title": "Wohnen & Villa",
+   "fullTitle": "Wohnen & Villa - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "wohnen-villa",
+  "name": "Wohnen & Villa",
+  "items": [
+   "/de/portfolio/resadiye-villenentwurf/",
+   "/de/portfolio/caddebostan-wohnprojekt/",
+   "/de/portfolio/deutschland-f-h-wohnprojekt/",
+   "/de/portfolio/acarkent-villenentwurf/",
+   "/de/portfolio/iran-tabriz-m-m-projekt/",
+   "/de/portfolio/m-b-wohnungsdesign-und-umsetzung/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/store-design/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/store-design/",
+   "de": "/de/portfolio-category/ladendesign/",
+   "tr": "/portfolio-category/magaza-tasarim/"
+  },
+  "seo": {
+   "title": "Store Design",
+   "fullTitle": "Store Design - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "store-design",
+  "name": "Store Design",
+  "items": [
+   "/en/portfolio/leuze-3/",
+   "/en/portfolio/golden-rose-yekta-mall/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/ladendesign/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/store-design/",
+   "de": "/de/portfolio-category/ladendesign/",
+   "tr": "/portfolio-category/magaza-tasarim/"
+  },
+  "seo": {
+   "title": "Ladendesign",
+   "fullTitle": "Ladendesign - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "ladendesign",
+  "name": "Ladendesign",
+  "items": [
+   "/de/portfolio/leuze-2/",
+   "/de/portfolio/golden-rose-yekta-einkaufszentrum/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/maxima-stand-en/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/maxima-stand-en/",
+   "de": "/de/portfolio-category/maxima-stand-de/",
+   "tr": "/portfolio-category/maxima-stand/"
+  },
+  "seo": {
+   "title": "Maxima Stand",
+   "fullTitle": "Maxima Stand - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "maxima-stand-en",
+  "name": "Maxima Stand",
+  "items": [
+   "/en/portfolio/tatko-3/",
+   "/en/portfolio/besenve-3/",
+   "/en/portfolio/handiran-3/",
+   "/en/portfolio/altahuna-3/",
+   "/en/portfolio/daly-3/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/maxima-stand-de/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/maxima-stand-en/",
+   "de": "/de/portfolio-category/maxima-stand-de/",
+   "tr": "/portfolio-category/maxima-stand/"
+  },
+  "seo": {
+   "title": "Maxima-Stand",
+   "fullTitle": "Maxima-Stand - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "maxima-stand-de",
+  "name": "Maxima-Stand",
+  "items": [
+   "/de/portfolio/tatko-2/",
+   "/de/portfolio/besenve-2/",
+   "/de/portfolio/handiran-2/",
+   "/de/portfolio/altahuna-2/",
+   "/de/portfolio/daly-2/"
+  ]
+ },
+ {
+  "path": "/en/portfolio-category/office-design/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/portfolio-category/office-design/",
+   "de": "/de/portfolio-category/buerodesign/",
+   "tr": "/portfolio-category/ofis-tasarimi/"
+  },
+  "seo": {
+   "title": "Office Design",
+   "fullTitle": "Office Design - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "office-design",
+  "name": "Office Design",
+  "items": [
+   "/en/portfolio/tatbik-i-office-project/"
+  ]
+ },
+ {
+  "path": "/de/portfolio-category/buerodesign/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/portfolio-category/office-design/",
+   "de": "/de/portfolio-category/buerodesign/",
+   "tr": "/portfolio-category/ofis-tasarimi/"
+  },
+  "seo": {
+   "title": "Bürodesign",
+   "fullTitle": "Bürodesign - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "portfolio-category",
+  "slug": "buerodesign",
+  "name": "Bürodesign",
+  "items": [
+   "/de/portfolio/tatbik-i-bueroprojekt/"
+  ]
+ },
+ {
+  "path": "/service-category/hizmetler/",
+  "lang": "tr",
+  "alternates": {
+   "en": "/en/service-category/services/",
+   "de": "/de/service-category/dienstleistungen/",
+   "tr": "/service-category/hizmetler/"
+  },
+  "seo": {
+   "title": "Hizmetler",
+   "fullTitle": "Hizmetler - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "service-category",
+  "slug": "hizmetler",
+  "name": "Hizmetler",
+  "items": [
+   "/fuar-standi/",
+   "/service/maxima-stand/",
+   "/service/kongre-stand-tasarimi/",
+   "/ofis-tasarimi-ve-uygulama/",
+   "/cafe-dekorasyon/",
+   "/service/klinik-tasarimi/",
+   "/service/magaza-tasarimi/",
+   "/konut-villa-tasarim/"
+  ]
+ },
+ {
+  "path": "/en/service-category/services/",
+  "lang": "en",
+  "alternates": {
+   "en": "/en/service-category/services/",
+   "de": "/de/service-category/dienstleistungen/",
+   "tr": "/service-category/hizmetler/"
+  },
+  "seo": {
+   "title": "Services",
+   "fullTitle": "Services - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "service-category",
+  "slug": "services",
+  "name": "Services",
+  "items": [
+   "/en/service/expo-design/",
+   "/en/service/maxima-stand/",
+   "/en/service/congress-stand-design/",
+   "/en/service/office-design-and-implementation/",
+   "/en/service/cafe-restaurant-design-and-implementation/",
+   "/en/service/clinic-design-and-implementation/",
+   "/en/service/store-design-and-implementation/",
+   "/en/service/housing-villa-design/"
+  ]
+ },
+ {
+  "path": "/de/service-category/dienstleistungen/",
+  "lang": "de",
+  "alternates": {
+   "en": "/en/service-category/services/",
+   "de": "/de/service-category/dienstleistungen/",
+   "tr": "/service-category/hizmetler/"
+  },
+  "seo": {
+   "title": "Dienstleistungen",
+   "fullTitle": "Dienstleistungen - İç Mimar | Fuar Standı | Wawa Interiors",
+   "description": null,
+   "ogImage": null
+  },
+  "kind": "service-category",
+  "slug": "dienstleistungen",
+  "name": "Dienstleistungen",
+  "items": [
+   "/de/service/messe-stand/",
+   "/de/service/maxima-stand/",
+   "/de/service/kongress-stand-design/",
+   "/de/service/buerodesign-und-umsetzung/",
+   "/de/service/cafe-restaurantdesign-und-umsetzungen/",
+   "/de/service/klinikdesign-und-umsetzungen/",
+   "/de/service/laden-design-und-umsetzungen/",
+   "/de/service/wohnungs-villendesign/"
+  ]
+ }
+]

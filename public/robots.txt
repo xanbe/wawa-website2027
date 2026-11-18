@@ -1,0 +1,21 @@
+# WAWA Interiors - Robots.txt
+# https://wawainteriors.com
+
+User-agent: *
+Allow: /
+
+# Admin ve panel sayfalarını engelle
+Disallow: /admin/
+Disallow: /panel/
+Disallow: /login
+Disallow: /auth/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://wawainteriors.com/sitemap.xml
+
+
+
+
+
+

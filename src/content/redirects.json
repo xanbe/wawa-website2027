@@ -1,0 +1,2227 @@
+[
+ {
+  "source": "/klinik-tasarimi/",
+  "destination": "/service/klinik-tasarimi/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/ofis-tasarim/",
+  "destination": "/ofis-tasarim-ve-uygulama-firmasi-nasil-secilir/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/en/blog/",
+  "destination": "/en/blog-2/",
+  "reason": "adjusted"
+ },
+ {
+  "source": "/en/cafe-restaurant-design-and-implementation/",
+  "destination": "/en/service/cafe-restaurant-design-and-implementation/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/clinic-design-and-implementation/",
+  "destination": "/en/service/clinic-design-and-implementation/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/congress-stand-design/",
+  "destination": "/en/service/congress-stand-design/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/expo-design/",
+  "destination": "/en/service/expo-design/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/housing-villa-design/",
+  "destination": "/en/service/housing-villa-design/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/maxima-stand/",
+  "destination": "/maxima-stand/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/en/office-design-and-implementation/",
+  "destination": "/en/service/office-design-and-implementation/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/store-design-and-implementation/",
+  "destination": "/en/service/store-design-and-implementation/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/blog/",
+  "destination": "/de/blog-3/",
+  "reason": "adjusted"
+ },
+ {
+  "source": "/de/buerodesign-und-umsetzung/",
+  "destination": "/de/service/buerodesign-und-umsetzung/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/cafe-restaurantdesign-und-umsetzungen/",
+  "destination": "/de/service/cafe-restaurantdesign-und-umsetzungen/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/klinikdesign-und-umsetzungen/",
+  "destination": "/de/service/klinikdesign-und-umsetzungen/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/kongress-stand-design/",
+  "destination": "/de/service/kongress-stand-design/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/laden-design-und-umsetzungen/",
+  "destination": "/de/service/laden-design-und-umsetzungen/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/maxima-stand/",
+  "destination": "/maxima-stand/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/de/messe-stand/",
+  "destination": "/de/service/messe-stand/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/de/wohnungs-villendesign/",
+  "destination": "/de/service/wohnungs-villendesign/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/service/icmimar/",
+  "destination": "/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/service/maxima-stand/",
+  "destination": "/maxima-stand/",
+  "reason": "adjusted"
+ },
+ {
+  "source": "/magaza-tasarimi/",
+  "destination": "/service/magaza-tasarimi/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/en/service/trade-fair-stand/",
+  "destination": "/en/service/expo-design/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/fuarstand-tasarimi-uygulama/",
+  "destination": "/fuar-standi/",
+  "reason": "adjusted"
+ },
+ {
+  "source": "/portfolio/zes-retail-days/",
+  "destination": "/de/portfolio/zes-retail-days/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/magaza-tasarim/",
+  "destination": "/magaza-tasarim-kriterleri/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/blog/klinik-tasarim/",
+  "destination": "/klinik-tasarim-klinik-alanlarda-ergonomi-iyilestirilmesi/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/blog/magaza-tasarim-kriterleri/",
+  "destination": "/magaza-tasarim-kriterleri/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/blog/magaza-tasariminda-5-altin-kural/",
+  "destination": "/magaza-tasariminda-5-altin-kural/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/kongre-stand-tasarimi/",
+  "destination": "/service/kongre-stand-tasarimi/",
+  "reason": "canonical"
+ },
+ {
+  "source": "/portfolio/zes-retail-days-2/",
+  "destination": "/en/portfolio/zes-retail-days-2/",
+  "reason": "old-301"
+ },
+ {
+  "source": "/en/homepage/",
+  "destination": "/en/",
+  "reason": "old-home"
+ },
+ {
+  "source": "/de/startseite/",
+  "destination": "/de/",
+  "reason": "old-home"
+ },
+ {
+  "source": "/team-member/:slug/",
+  "destination": "/hakkimizda/",
+  "reason": "team"
+ },
+ {
+  "source": "/en/team-member/:slug/",
+  "destination": "/en/about-us/",
+  "reason": "team"
+ },
+ {
+  "source": "/de/team-member/:slug/",
+  "destination": "/de/ueber-uns/",
+  "reason": "team"
+ },
+ {
+  "source": "/author/:slug/",
+  "destination": "/blog/",
+  "reason": "author"
+ },
+ {
+  "source": "/en/author/:slug/",
+  "destination": "/en/blog-2/",
+  "reason": "author"
+ },
+ {
+  "source": "/de/author/:slug/",
+  "destination": "/de/blog-3/",
+  "reason": "author"
+ },
+ {
+  "source": "/sitemap_index.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/post-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/page-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/pbmit-portfolio-sitemap1.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/pbmit-portfolio-sitemap2.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/pbmit-service-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/category-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/pbmit-portfolio-category-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/pbmit-service-category-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/video-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/local-sitemap.xml",
+  "destination": "/sitemap.xml",
+  "reason": "sitemap"
+ },
+ {
+  "source": "/feed/",
+  "destination": "/blog/",
+  "reason": "feed"
+ },
+ {
+  "source": "/en/feed/",
+  "destination": "/en/blog-2/",
+  "reason": "feed"
+ },
+ {
+  "source": "/2020/08/12/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2020/09/09/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/11/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/20/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/21/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/25/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/26/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/27/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/28/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/29/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/30/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/03/31/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/01/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/02/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/03/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/04/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/05/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/06/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/07/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/08/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/2022/04/09/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/acarkent-villa-tasarimi/",
+  "destination": "/portfolio/acarkent-villa-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/acik-ofis-tasarimlari/",
+  "destination": "/portfolio/acik-ofis-tasarimlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/almanya-f-h-konut-projesi/",
+  "destination": "/portfolio/almanya-f-h-konut-projesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/altay-otomotiv/",
+  "destination": "/portfolio/altay-otomotiv/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/angebot-erhalten/",
+  "destination": "/de/angebot-erhalten/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/argetest/",
+  "destination": "/portfolio/argetest/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/asas-batimat/",
+  "destination": "/portfolio/asas-batimat/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ayd-automotive/",
+  "destination": "/portfolio/ayd-automotive/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/banat-beautyeurasia/",
+  "destination": "/portfolio/banat-beautyeurasia/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/banat-migros-festivali/",
+  "destination": "/portfolio/banat-migros-festivali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/bas-endustriyel/",
+  "destination": "/portfolio/bas-endustriyel/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/bitget/",
+  "destination": "/portfolio/bitget/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/2022-almanya-fuarlari/",
+  "destination": "/2022-almanya-fuarlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ahsap-fuar-standi-ile-pratik-tanitim-alanlari/",
+  "destination": "/ahsap-fuar-standi-ile-pratik-tanitim-alanlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/akilli-ve-otonom-uretim-sistemleri-fuari/",
+  "destination": "/akilli-ve-otonom-uretim-sistemleri-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/almanya-fuar-stand-firmalari/",
+  "destination": "/almanya-fuar-stand-firmalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ambalaj-fuari-2022/",
+  "destination": "/ambalaj-fuari-2022/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/amsterdam-fuar-stand-firmasi/",
+  "destination": "/amsterdam-fuar-stand-firmasi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/avm-stand-fiyatlari/",
+  "destination": "/avm-stand-fiyatlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/avmde-stand-acmak/",
+  "destination": "/avmde-stand-acmak/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/avmde-stant-kiralamak/",
+  "destination": "/avmde-stant-kiralamak/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/banyo-dekorasyonunda-dikkat-edilmesi-gerekenler/",
+  "destination": "/banyo-dekorasyonunda-dikkat-edilmesi-gerekenler/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/butik-magaza-tasarimi-nasil-olmalidir/",
+  "destination": "/butik-magaza-tasarimi-nasil-olmalidir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/cafe-dekorasyon-aydinlatma-secimi/",
+  "destination": "/cafe-dekorasyon-aydinlatma-secimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/cafe-dekorasyon-malzeme-secimi/",
+  "destination": "/cafe-dekorasyon-malzeme-secimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/cafe-ve-restaurant-tasarimi-fikirler-ve-ipuclari/",
+  "destination": "/cafe-ve-restaurant-tasarimi-fikirler-ve-ipuclari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/depo-sistemleri-ve-ic-lojistik-fuari/",
+  "destination": "/depo-sistemleri-ve-ic-lojistik-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/dikkat-cekici-fuar-standi-tasarimi/",
+  "destination": "/dikkat-cekici-fuar-standi-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/dis-klinik-tasarimi-nasil-olmali/",
+  "destination": "/dis-klinik-tasarimi-nasil-olmali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ekonomi-bakanligi-fuar-destekleri-ve-fuar-destegi-nasil-alinir/",
+  "destination": "/ekonomi-bakanligi-fuar-destekleri-ve-fuar-destegi-nasil-alinir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/estetik-ve-konforlu-konut-tasarimlari/",
+  "destination": "/estetik-ve-konforlu-konut-tasarimlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/etkilesim-odakli-fuar-standlari/",
+  "destination": "/etkilesim-odakli-fuar-standlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ev-dekorasyonunda-ideal-renk-secimi-nasil-olmalidir/",
+  "destination": "/ev-dekorasyonunda-ideal-renk-secimi-nasil-olmalidir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ev-ve-mutfak-esyalari-fuari/",
+  "destination": "/ev-ve-mutfak-esyalari-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ferah-salon-dekorasyonunda-hasir-malzemenin-etkisi/",
+  "destination": "/ferah-salon-dekorasyonunda-hasir-malzemenin-etkisi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-basariniz-icin-profesyonel-stand-tasarimi/",
+  "destination": "/fuar-basariniz-icin-profesyonel-stand-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-stand-acma-ucreti/",
+  "destination": "/fuar-stand-acma-ucreti/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-stand-tasarimi-firmalari/",
+  "destination": "/fuar-stand-tasarimi-firmalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-stand-tasarimi-nasil-olmali/",
+  "destination": "/fuar-stand-tasarimi-nasil-olmali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-stand-tasariminin-ziyaretci-sayisina-etkisi/",
+  "destination": "/fuar-stand-tasariminin-ziyaretci-sayisina-etkisi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-standi-ile-marka-gelisimi/",
+  "destination": "/fuar-standi-ile-marka-gelisimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-standi-nedir/",
+  "destination": "/fuar-standi-nedir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/fuar-standi-tasariminda-islevsellik/",
+  "destination": "/fuar-standi-tasariminda-islevsellik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/gida-ve-icecek-fuari/",
+  "destination": "/gida-ve-icecek-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/hometex-ev-tekstili-fuari/",
+  "destination": "/hometex-ev-tekstili-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mekan-dekorasyonu-ve-konut-tasarimi/",
+  "destination": "/ic-mekan-dekorasyonu-ve-konut-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mimar-maaslari-ne-kadar-ve-ne-kadar-kazaniyor/",
+  "destination": "/ic-mimar-maaslari-ne-kadar-ve-ne-kadar-kazaniyor/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mimar-ne-is-yapar/",
+  "destination": "/ic-mimar-ne-is-yapar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mimar-olmak-icin-hangi-derslerin-iyi-olmasi-gerekir/",
+  "destination": "/ic-mimar-olmak-icin-hangi-derslerin-iyi-olmasi-gerekir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mimarlar-ne-yapar-ic-mimarlar-bir-evi-ne-kadara-yapar/",
+  "destination": "/ic-mimarlar-ne-yapar-ic-mimarlar-bir-evi-ne-kadara-yapar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ic-mimarlik-hizmeti/",
+  "destination": "/ic-mimarlik-hizmeti/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/istanbul-fuar-merkezi-nerede/",
+  "destination": "/istanbul-fuar-merkezi-nerede/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/istanbul-tuyap-fuar-takvimi-2022/",
+  "destination": "/istanbul-tuyap-fuar-takvimi-2022/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/italya-fuar-stand-firmasi-iletisim-bilgileri-ve-italya-fuarlari-ne-zaman/",
+  "destination": "/italya-fuar-stand-firmasi-iletisim-bilgileri-ve-italya-fuarlari-ne-zaman/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/iyi-bir-fuar-stand-tasarimi-hangi-avantajlari-saglar/",
+  "destination": "/iyi-bir-fuar-stand-tasarimi-hangi-avantajlari-saglar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/izmir-enternasyonal-fuari/",
+  "destination": "/izmir-enternasyonal-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/karantina-sonrasi-home-ofis-tasarima-gecis/",
+  "destination": "/karantina-sonrasi-home-ofis-tasarima-gecis/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/karavan-fuari-istanbul-nerede-kaca-kadar-acik/",
+  "destination": "/karavan-fuari-istanbul-nerede-kaca-kadar-acik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kiosk-ne-demek/",
+  "destination": "/kiosk-ne-demek/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kiosk-nedir/",
+  "destination": "/kiosk-nedir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kisiye-ozel-mimari-tasarimlar/",
+  "destination": "/kisiye-ozel-mimari-tasarimlar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/klinik-fobisini-yenen-ic-mekan-tasarimi/",
+  "destination": "/klinik-fobisini-yenen-ic-mekan-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/klinik-tasarim-klinik-alanlarda-ergonomi-iyilestirilmesi/",
+  "destination": "/klinik-tasarim-klinik-alanlarda-ergonomi-iyilestirilmesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kongre-stand-tasarimi/",
+  "destination": "/service/kongre-stand-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kongre-standi-tasarimlari/",
+  "destination": "/kongre-standi-tasarimlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kongre-standi/",
+  "destination": "/service/kongre-stand-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/konut-ic-mimarisi/",
+  "destination": "/konut-ic-mimarisi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/kosgeb-fuar-destegi-nedir-nasil-alinir-basvuru-evraklari-neler/",
+  "destination": "/kosgeb-fuar-destegi-nedir-nasil-alinir-basvuru-evraklari-neler/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/magaza-tasarimi-ve-dekorasyon-hizmetleri/",
+  "destination": "/magaza-tasarimi-ve-dekorasyon-hizmetleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/marka-imajinizi-yansitan-ozel-stand-tasarimlari/",
+  "destination": "/marka-imajinizi-yansitan-ozel-stand-tasarimlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/markanizi-one-cikaran-fuar-standi-tasarimlari/",
+  "destination": "/markanizi-one-cikaran-fuar-standi-tasarimlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/maxima-stand-tasarim-ornekleri/",
+  "destination": "/maxima-stand-tasarim-ornekleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/mimar-maaslari-ne-kadar-yeni-mimarlar-ne-kadar-kazaniyor/",
+  "destination": "/mimar-maaslari-ne-kadar-yeni-mimarlar-ne-kadar-kazaniyor/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/mimarlar-icin-laptop-nasil-olmali-mimar-bilgisayari-nasil-olmali/",
+  "destination": "/mimarlar-icin-laptop-nasil-olmali-mimar-bilgisayari-nasil-olmali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/modern-konut-tasarim-hizmetleri/",
+  "destination": "/modern-konut-tasarim-hizmetleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/modern-magaza-tasarimi-trendleri/",
+  "destination": "/modern-magaza-tasarimi-trendleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/mutfak-dekorasyonunda-malzeme-secimi-lake-membran-akrilik/",
+  "destination": "/mutfak-dekorasyonunda-malzeme-secimi-lake-membran-akrilik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ofis-dekorasyonunda-akustik-panel/",
+  "destination": "/ofis-dekorasyonunda-akustik-panel/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ofis-tasarimi-ic-mimari-proje-ve-modern-dekorasyon/",
+  "destination": "/ofis-tasarimi-ic-mimari-proje-ve-modern-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/ozgun-fuar-standi-cozumleri/",
+  "destination": "/ozgun-fuar-standi-cozumleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/profesyonel-fuar-standi-uygulamalari/",
+  "destination": "/profesyonel-fuar-standi-uygulamalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/profesyonel-magaza-tasarimi-hizmetleri/",
+  "destination": "/profesyonel-magaza-tasarimi-hizmetleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/savunma-sanayi-fuari/",
+  "destination": "/savunma-sanayi-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/sodex-fuari-nedir-sodex-fuarinda-ne-var-2022-fuari-ne-zaman/",
+  "destination": "/sodex-fuari-nedir-sodex-fuarinda-ne-var-2022-fuari-ne-zaman/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/stand-fiyatlari/",
+  "destination": "/stand-fiyatlari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/stant-mi-stand-mi/",
+  "destination": "/stant-mi-stand-mi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/tuyap-ambalaj-fuari/",
+  "destination": "/tuyap-ambalaj-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/tuyap-gida-fuari/",
+  "destination": "/tuyap-gida-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/villa-tasarimi-ic-mekan-ve-dis-cephelerde/",
+  "destination": "/villa-tasarimi-ic-mekan-ve-dis-cephelerde/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/villa-tasariminda-peyzajin-etkisi/",
+  "destination": "/villa-tasariminda-peyzajin-etkisi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/wawa-interiors-ile-yaratici-fuar-standi/",
+  "destination": "/wawa-interiors-ile-yaratici-fuar-standi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/yaratici-fuar-standi-tasarimi/",
+  "destination": "/yaratici-fuar-standi-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/yurtdisi-fuar-destegi-nasil-alinir/",
+  "destination": "/yurtdisi-fuar-destegi-nasil-alinir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/yurtdisi-fuar-destek/",
+  "destination": "/yurtdisi-fuar-destek/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/blog/yurtdisi-fuar-stand-kurulum-firmasi/",
+  "destination": "/yurtdisi-fuar-stand-kurulum-firmasi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/caddebostan-konut-projesi/",
+  "destination": "/portfolio/caddebostan-konut-projesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/cakirbay-iplik/",
+  "destination": "/portfolio/cakirbay-iplik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/ev-dekorasyon/",
+  "destination": "/ev-dekorasyonunda-ideal-renk-secimi-nasil-olmalidir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/fuar-stand-tasarimi/",
+  "destination": "/fuar-stand-tasarimi-firmalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/",
+  "destination": "/genel/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/page/2/",
+  "destination": "/genel/page/2/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/page/3/",
+  "destination": "/genel/page/3/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/page/4/",
+  "destination": "/genel/page/4/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/page/5/",
+  "destination": "/genel/page/5/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/genel/page/6/",
+  "destination": "/genel/page/6/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/klinik-tasarim/",
+  "destination": "/klinik-tasarim-klinik-alanlarda-ergonomi-iyilestirilmesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/mutfak-dekorasyon/",
+  "destination": "/mutfak-dekorasyonunda-malzeme-secimi-lake-membran-akrilik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/ofis-tasarimi/",
+  "destination": "/ofis-tasarimi-ic-mimari-proje-ve-modern-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/uncategorized-tr/",
+  "destination": "/uncategorized-tr/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/uncategorized/",
+  "destination": "/en/blog-2/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/villa-tasarim/",
+  "destination": "/villa-tasarimi-ic-mekan-ve-dis-cephelerde/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ch-robinson-logitrans/",
+  "destination": "/portfolio/ch-robinson-logitrans/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/contact/",
+  "destination": "/en/contact/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/canberk-y/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/eray-d/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/erdem-d/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/ilayda-s/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/muege-d/",
+  "destination": "/de/ueber-uns/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/altahuna/",
+  "destination": "/portfolio/altahuna/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/argetest/",
+  "destination": "/portfolio/argetest/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/banat-beautyeurasia/",
+  "destination": "/portfolio/banat-beautyeurasia/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/besenve/",
+  "destination": "/portfolio/besenve/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/bitget/",
+  "destination": "/portfolio/bitget/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/cakirbay-iplik/",
+  "destination": "/portfolio/cakirbay-iplik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/daly/",
+  "destination": "/portfolio/daly/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/electrip-intersolar/",
+  "destination": "/portfolio/electrip-intersolar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/entek/",
+  "destination": "/portfolio/entek/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/fortis-energy/",
+  "destination": "/portfolio/fortis-energy/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/gardrops/",
+  "destination": "/portfolio/gardrops/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/gazioglu-solar-enerji-solarex/",
+  "destination": "/portfolio/gazioglu-solar-enerji-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/gca/",
+  "destination": "/portfolio/gca/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/golden-rose-akbati/",
+  "destination": "/portfolio/golden-rose-akbati/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/golden-rose-bursa/",
+  "destination": "/portfolio/golden-rose-bursa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/goyoungs/",
+  "destination": "/portfolio/goyoungs/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/handiran/",
+  "destination": "/portfolio/handiran/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/huzur-plastik/",
+  "destination": "/portfolio/huzur-plastik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/hysoung/",
+  "destination": "/portfolio/hysoung/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/inoksan/",
+  "destination": "/portfolio/inoksan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/inspark/",
+  "destination": "/portfolio/inspark/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/kardemir-eurasia-rail/",
+  "destination": "/portfolio/kardemir-eurasia-rail/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/kardemir-metal-expo/",
+  "destination": "/portfolio/kardemir-metal-expo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/leuze/",
+  "destination": "/portfolio/leuze/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/mexc-global/",
+  "destination": "/portfolio/mexc-global/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/midas-2024/",
+  "destination": "/portfolio/midas-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/naturel-holding/",
+  "destination": "/portfolio/naturel-holding/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/panali/",
+  "destination": "/portfolio/panali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/param-diamond-2023/",
+  "destination": "/portfolio/param-diamond-2023/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/param-diamond-2024/",
+  "destination": "/portfolio/param-diamond-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/pavo-group/",
+  "destination": "/portfolio/pavo-group/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/pilotcar/",
+  "destination": "/portfolio/pilotcar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/rakepsa/",
+  "destination": "/portfolio/rakepsa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/tamek-gulfood/",
+  "destination": "/portfolio/tamek-gulfood/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/tatko/",
+  "destination": "/portfolio/tatko/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/timsan-trafo/",
+  "destination": "/portfolio/timsan-trafo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/yeni-huzur/",
+  "destination": "/portfolio/yeni-huzur/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/portfolio/zes-solarex/",
+  "destination": "/portfolio/zes-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/sercan-y/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/de/zehra-a/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/dila-exclusive/",
+  "destination": "/portfolio/dila-exclusive/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/dubai-fuarstandi/",
+  "destination": "/portfolio/dubai-fuarstandi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ekos-electric/",
+  "destination": "/portfolio/ekos-electric/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/elc-aluminium/",
+  "destination": "/portfolio/elc-aluminium/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/electrip-intersolar/",
+  "destination": "/portfolio/electrip-intersolar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/canberk-y/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/eray-d/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/erdem-d/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/ilayda-s/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/muge-d/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/altahuna/",
+  "destination": "/portfolio/altahuna/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/argetest/",
+  "destination": "/portfolio/argetest/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/banat-beautyeurasia/",
+  "destination": "/portfolio/banat-beautyeurasia/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/banat-migros-festival/",
+  "destination": "/de/portfolio/banat-migros-festival/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/besenve/",
+  "destination": "/portfolio/besenve/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/bitget/",
+  "destination": "/portfolio/bitget/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/daly/",
+  "destination": "/portfolio/daly/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/electrip-intersolar/",
+  "destination": "/portfolio/electrip-intersolar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/endeks-bilisim/",
+  "destination": "/portfolio/endeks-bilisim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/entek/",
+  "destination": "/portfolio/entek/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/fortis-energy/",
+  "destination": "/portfolio/fortis-energy/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/gardrops/",
+  "destination": "/portfolio/gardrops/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/gca/",
+  "destination": "/portfolio/gca/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/golden-rose-akbati/",
+  "destination": "/portfolio/golden-rose-akbati/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/golden-rose-bursa/",
+  "destination": "/portfolio/golden-rose-bursa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/goyoungs/",
+  "destination": "/portfolio/goyoungs/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/gunoz-iplik-fuari-2024/",
+  "destination": "/portfolio/gunoz-iplik-fuari-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/gurme-restaurant/",
+  "destination": "/de/portfolio/gurme-restaurant/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/handiran/",
+  "destination": "/portfolio/handiran/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/huzur-plastik/",
+  "destination": "/portfolio/huzur-plastik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/hysoung/",
+  "destination": "/portfolio/hysoung/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/inoksan/",
+  "destination": "/portfolio/inoksan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/inspark/",
+  "destination": "/portfolio/inspark/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/kardemir-eurasia-rail/",
+  "destination": "/portfolio/kardemir-eurasia-rail/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/kardemir-metal-expo/",
+  "destination": "/portfolio/kardemir-metal-expo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/leuze/",
+  "destination": "/portfolio/leuze/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/maddies-cucina/",
+  "destination": "/de/portfolio/maddies-cucina/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/mexc-global/",
+  "destination": "/portfolio/mexc-global/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/midas-2023/",
+  "destination": "/de/portfolio/midas-2023/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/midas-2024/",
+  "destination": "/portfolio/midas-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/naturel-holding/",
+  "destination": "/portfolio/naturel-holding/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/ode-yalitim-ish/",
+  "destination": "/portfolio/ode-yalitim-ish/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/ofton-dubai-cityscape/",
+  "destination": "/de/portfolio/ofton-dubai-cityscape/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/panali/",
+  "destination": "/portfolio/panali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/param-diamond-2023/",
+  "destination": "/portfolio/param-diamond-2023/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/param-diamond-2024/",
+  "destination": "/portfolio/param-diamond-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/pavo-group/",
+  "destination": "/portfolio/pavo-group/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/pilotcar/",
+  "destination": "/portfolio/pilotcar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/rakepsa/",
+  "destination": "/portfolio/rakepsa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/tamek-gulfood/",
+  "destination": "/portfolio/tamek-gulfood/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/tatarstan/",
+  "destination": "/de/portfolio/tatarstan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/tatko/",
+  "destination": "/portfolio/tatko/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/timsan-trafo/",
+  "destination": "/portfolio/timsan-trafo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/turkaylar-tekstil/",
+  "destination": "/portfolio/turkaylar-tekstil/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/yanginci-tekstil/",
+  "destination": "/portfolio/yanginci-tekstil/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/yeni-huzur/",
+  "destination": "/portfolio/yeni-huzur/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/zes-ev-charge/",
+  "destination": "/portfolio/zes-ev-charge/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/zes-retail-days/",
+  "destination": "/de/portfolio/zes-retail-days/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/portfolio/zes-solarex/",
+  "destination": "/portfolio/zes-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/sercan-y/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/en/zehra-a/",
+  "destination": "/hakkimizda/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/endeks-bilisim/",
+  "destination": "/portfolio/endeks-bilisim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/entek/",
+  "destination": "/portfolio/entek/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/erdoganlar-aluminyum/",
+  "destination": "/portfolio/erdoganlar-aluminyum/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/eroglu/",
+  "destination": "/portfolio/eroglu/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/essel-usa-fuarstandi/",
+  "destination": "/portfolio/essel-usa-fuarstandi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ev-dekorasyon/",
+  "destination": "/ev-dekorasyonunda-ideal-renk-secimi-nasil-olmalidir/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/fortis-energy-2/",
+  "destination": "/portfolio/fortis-energy-2/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/fortis-energy/",
+  "destination": "/portfolio/fortis-energy/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/fuar-stand-tasarimi/",
+  "destination": "/fuar-stand-tasarimi-firmalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/fuar-standi/kongre-standi/",
+  "destination": "/service/kongre-stand-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/fulya-klinik-tasarim/",
+  "destination": "/portfolio/fulya-klinik-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gardrops/",
+  "destination": "/portfolio/gardrops/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gazioglu-solar-eif/",
+  "destination": "/portfolio/gazioglu-solar-eif/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gazioglu-solar-enerji-solarex/",
+  "destination": "/portfolio/gazioglu-solar-enerji-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gca/",
+  "destination": "/portfolio/gca/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/get-offer/",
+  "destination": "/en/get-offer/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/golden-rose-akbati/",
+  "destination": "/portfolio/golden-rose-akbati/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/golden-rose-bursa/",
+  "destination": "/portfolio/golden-rose-bursa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/golden-rose-yekta-avm/",
+  "destination": "/portfolio/golden-rose-yekta-avm/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/goyoungs/",
+  "destination": "/portfolio/goyoungs/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gunoz-iplik-fuari-2023/",
+  "destination": "/portfolio/gunoz-iplik-fuari-2023/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gunoz-iplik-fuari-2024/",
+  "destination": "/portfolio/gunoz-iplik-fuari-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/gurme-restoran/",
+  "destination": "/portfolio/gurme-restoran/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/halide-akinci-klinik-tasarim/",
+  "destination": "/portfolio/halide-akinci-klinik-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/huzur-2025/",
+  "destination": "/portfolio/huzur-2025/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/huzur-plastik/",
+  "destination": "/portfolio/huzur-plastik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/hysoung/",
+  "destination": "/portfolio/hysoung/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ic-mimarlik/",
+  "destination": "/ic-mimarlik-hizmeti/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ic-mimarlik/klinik-tasarimi/",
+  "destination": "/service/klinik-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ic-mimarlik/konut-villa-tasarim/",
+  "destination": "/konut-villa-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ic-mimarlik/magaza-tasarimi/",
+  "destination": "/service/magaza-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ic-mimarlik/ofis-tasarimi/",
+  "destination": "/ofis-tasarimi-ic-mimari-proje-ve-modern-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/inspark/",
+  "destination": "/portfolio/inspark/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/iran-tabriz-m-m-projesi/",
+  "destination": "/portfolio/iran-tabriz-m-m-projesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/kardemir-eurasia-rail-25/",
+  "destination": "/portfolio/kardemir-eurasia-rail-25/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/kardemir-eurasia-rail/",
+  "destination": "/portfolio/kardemir-eurasia-rail/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/kardemir-metal-expo/",
+  "destination": "/portfolio/kardemir-metal-expo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/kardemir-metalexpo25/",
+  "destination": "/portfolio/kardemir-metalexpo25/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/kelesler-plast/",
+  "destination": "/portfolio/kelesler-plast/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/klinik-tasarim/",
+  "destination": "/klinik-tasarim-klinik-alanlarda-ergonomi-iyilestirilmesi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/koluman-plastik/",
+  "destination": "/portfolio/koluman-plastik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/leuze/",
+  "destination": "/portfolio/leuze/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/m-b-konut-tasarimi/",
+  "destination": "/portfolio/m-b-konut-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/mexc-global/",
+  "destination": "/portfolio/mexc-global/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/midas-2024/",
+  "destination": "/portfolio/midas-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/midas/",
+  "destination": "/portfolio/midas/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/mutfak-dekorasyon/",
+  "destination": "/mutfak-dekorasyonunda-malzeme-secimi-lake-membran-akrilik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/naturel-2025-solarex/",
+  "destination": "/portfolio/naturel-2025-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/naturel-holding/",
+  "destination": "/portfolio/naturel-holding/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ode-yalitim-ish/",
+  "destination": "/portfolio/ode-yalitim-ish/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/odul-solar-23/",
+  "destination": "/portfolio/odul-solar-23/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/odul-solar-solarex-24/",
+  "destination": "/portfolio/odul-solar-solarex-24/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ofis-tasarimi/",
+  "destination": "/ofis-tasarimi-ic-mimari-proje-ve-modern-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/ormisan/",
+  "destination": "/portfolio/ormisan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/otantik-cafe-dekorasyon/",
+  "destination": "/portfolio/otantik-cafe-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/our-projects/",
+  "destination": "/en/our-projects/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/panali/",
+  "destination": "/portfolio/panali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/param-diamond-2023/",
+  "destination": "/portfolio/param-diamond-2023/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/param-diamond-2024/",
+  "destination": "/portfolio/param-diamond-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/pavo-group/",
+  "destination": "/portfolio/pavo-group/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/pilotcar/",
+  "destination": "/portfolio/pilotcar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/cafe-restaurant/",
+  "destination": "/en/service/cafe-restaurant-design-and-implementation/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/fuar-stand-tasarimi/",
+  "destination": "/fuar-stand-tasarimi-firmalari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/konut-villa/",
+  "destination": "/konut-villa-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/magaza/",
+  "destination": "/magaza-ic-mimarisi-firma-secimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/ofis/",
+  "destination": "/ofis-dekorasyonunda-akustik-panel/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-categories/wawa-interiors/",
+  "destination": "/wawa-interiors-ile-yaratici-fuar-standi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-category/clinic-design/",
+  "destination": "/en/portfolio-category/clinic-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-category/klinikdesign/",
+  "destination": "/de/portfolio-category/klinikdesign/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-category/maxima-stand-de/",
+  "destination": "/de/portfolio-category/maxima-stand-de/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio-category/store-design/",
+  "destination": "/en/portfolio-category/store-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio/acarkent-villa/",
+  "destination": "/en/portfolio/acarkent-villa-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio/fulya-clinic-design/",
+  "destination": "/en/portfolio/fulya-clinic-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio/fulya-klinik-entwurf/",
+  "destination": "/de/portfolio/fulya-klinik-entwurf/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio/iran-tabriz-m-m-projekt/",
+  "destination": "/de/portfolio/iran-tabriz-m-m-projekt/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/portfolio/tatarstan/",
+  "destination": "/de/portfolio/tatarstan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/acarkent-villa-tasarimi/",
+  "destination": "/portfolio/acarkent-villa-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/altahuna/",
+  "destination": "/portfolio/altahuna/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/altay-otomotiv/",
+  "destination": "/portfolio/altay-otomotiv/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/asas-batimat-2/",
+  "destination": "/portfolio/asas-batimat-2/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/banat-migros-festivali/",
+  "destination": "/portfolio/banat-migros-festivali/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/besenve/",
+  "destination": "/portfolio/besenve/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/cakirbay-iplik/",
+  "destination": "/portfolio/cakirbay-iplik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/dila-exclusive/",
+  "destination": "/portfolio/dila-exclusive/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/dubai-fuarstandi/",
+  "destination": "/portfolio/dubai-fuarstandi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/ekos-electric/",
+  "destination": "/portfolio/ekos-electric/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/electrip-intersolar/",
+  "destination": "/portfolio/electrip-intersolar/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/erdoganlar-aluminyum/",
+  "destination": "/portfolio/erdoganlar-aluminyum/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/fortis-energy/",
+  "destination": "/portfolio/fortis-energy/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/fulya-klinik-tasarim/",
+  "destination": "/portfolio/fulya-klinik-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/gazioglu-solar-eif/",
+  "destination": "/portfolio/gazioglu-solar-eif/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/gazioglu-solar-enerji-solarex/",
+  "destination": "/portfolio/gazioglu-solar-enerji-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/gca/",
+  "destination": "/portfolio/gca/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/golden-rose-yekta-avm/",
+  "destination": "/portfolio/golden-rose-yekta-avm/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/gurme-restoran/",
+  "destination": "/portfolio/gurme-restoran/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/halide-akinci-klinik-tasarim/",
+  "destination": "/portfolio/halide-akinci-klinik-tasarim/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/handiran/",
+  "destination": "/portfolio/handiran/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/huzur-2025/",
+  "destination": "/portfolio/huzur-2025/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/huzur-plastik/",
+  "destination": "/portfolio/huzur-plastik/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/iran-tabriz-m-m-projekt/",
+  "destination": "/de/portfolio/iran-tabriz-m-m-projekt/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/kardemir-eurasia-rail-25/",
+  "destination": "/portfolio/kardemir-eurasia-rail-25/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/kardemir-eurasia-rail/",
+  "destination": "/portfolio/kardemir-eurasia-rail/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/kardemir-metal-expo/",
+  "destination": "/portfolio/kardemir-metal-expo/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/kardemir-metalexpo25/",
+  "destination": "/portfolio/kardemir-metalexpo25/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/leuze/",
+  "destination": "/portfolio/leuze/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/m-b-konut-tasarimi/",
+  "destination": "/portfolio/m-b-konut-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/midas-2024/",
+  "destination": "/portfolio/midas-2024/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/midas/",
+  "destination": "/portfolio/midas/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/naturel-2025-solarex/",
+  "destination": "/portfolio/naturel-2025-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/otantik-cafe-dekorasyon/",
+  "destination": "/portfolio/otantik-cafe-dekorasyon/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/tatko/",
+  "destination": "/portfolio/tatko/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/projelerimiz/zes-solarex/",
+  "destination": "/portfolio/zes-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/rakepsa/",
+  "destination": "/portfolio/rakepsa/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/resadiye-villa-tasarimi/",
+  "destination": "/portfolio/resadiye-villa-tasarimi/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/buerodesign-und-umsetzung/",
+  "destination": "/de/service/buerodesign-und-umsetzung/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/cafe-restaurant-design-and-implementation/",
+  "destination": "/en/service/cafe-restaurant-design-and-implementation/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/clinic-design-and-implementation/",
+  "destination": "/en/service/clinic-design-and-implementation/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/congress-stand-design/",
+  "destination": "/en/service/congress-stand-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/expo-design/",
+  "destination": "/en/service/expo-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/housing-villa-design/",
+  "destination": "/en/service/housing-villa-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/klinikdesign-und-umsetzungen/",
+  "destination": "/de/service/klinikdesign-und-umsetzungen/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/kongress-stand-design/",
+  "destination": "/de/service/kongress-stand-design/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/laden-design-und-umsetzungen/",
+  "destination": "/de/service/laden-design-und-umsetzungen/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/messe-stand/",
+  "destination": "/de/service/messe-stand/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/store-design-and-implementation/",
+  "destination": "/en/service/store-design-and-implementation/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/service/wohnungs-villendesign/",
+  "destination": "/de/service/wohnungs-villendesign/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/startseite/",
+  "destination": "/de/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/tamek-gulfood/",
+  "destination": "/portfolio/tamek-gulfood/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/tataristan/",
+  "destination": "/portfolio/tataristan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/testimonial/john-david/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/testimonial/kane-williamson/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/testimonial/laura-wilburn/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/turkaylar-tekstil/",
+  "destination": "/portfolio/turkaylar-tekstil/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/uncategorized/",
+  "destination": "/en/blog-2/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/unsere-projekte/",
+  "destination": "/de/unsere-projekte/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/villa-tasarim/",
+  "destination": "/villa-tasarimi-ic-mekan-ve-dis-cephelerde/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/what-are-we-doing/",
+  "destination": "/en/what-are-we-doing/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/yanginci-tekstil/",
+  "destination": "/portfolio/yanginci-tekstil/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/yeni-huzur/",
+  "destination": "/portfolio/yeni-huzur/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/yurtdisi-fuar-stand-kurulum-firmasi-2/",
+  "destination": "/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/zes-euf-fuari/",
+  "destination": "/portfolio/zes-euf-fuari/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/zes-ev-charge/",
+  "destination": "/portfolio/zes-ev-charge/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/zes-perakende-gunleri/",
+  "destination": "/portfolio/zes-perakende-gunleri/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/zes-solarex/",
+  "destination": "/portfolio/zes-solarex/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/inoksan/",
+  "destination": "/portfolio/inoksan/",
+  "reason": "wp-301"
+ },
+ {
+  "source": "/category/cafe-dekorasyonlari/",
+  "destination": "/cafe-dekorasyon/",
+  "reason": "old-category"
+ },
+ {
+  "source": "/category/konut-villa-tasarimi/",
+  "destination": "/konut-villa-tasarim/",
+  "reason": "old-category"
+ },
+ {
+  "source": "/category/magaza-tasarimlari/",
+  "destination": "/service/magaza-tasarimi/",
+  "reason": "old-category"
+ },
+ {
+  "source": "/service/cafe-dekorasyon/",
+  "destination": "/cafe-dekorasyon/",
+  "reason": "google-canonical"
+ },
+ {
+  "source": "/service/konut-villa-tasarim/",
+  "destination": "/konut-villa-tasarim/",
+  "reason": "google-canonical"
+ },
+ {
+  "source": "/service/fuar-standi/",
+  "destination": "/fuar-standi/",
+  "reason": "google-canonical"
+ },
+ {
+  "source": "/service/ofis-tasarimi-ve-uygulama/",
+  "destination": "/ofis-tasarimi-ve-uygulama/",
+  "reason": "google-canonical"
+ }
+]

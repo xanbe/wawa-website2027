@@ -1,0 +1,33 @@
+{
+  "name": "WAWA Interiors - İç Mimarlık ve Fuar Standı",
+  "short_name": "WAWA",
+  "description": "İç mimarlık ve fuar standı projelerinde anahtar teslim hizmet. Tasarım, üretim, kurulum.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-01.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-01.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "design"],
+  "lang": "tr",
+  "dir": "ltr"
+}
+
+
+
+
+
+
