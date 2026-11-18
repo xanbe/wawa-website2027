@@ -180,7 +180,8 @@ export function checkPass(token: string): string | null {
 }
 
 // Doğrulanan talebi ekibe iletir; e-posta servisi tanımlı değilse günlüğe yalnızca maskeli özet yazılır
-export async function notifyLead(subject: string, text: string, logSummary: string) {
+// attachments: e-postaya eklenecek dosyalar (base64 içerik), ör. yapay zekanın ürettiği görsel
+export async function notifyLead(subject: string, text: string, logSummary: string, attachments: { filename: string; content: string }[] = []) {
   const key = process.env.RESEND_API_KEY;
   const to = process.env.LEAD_EMAIL_TO;
   if (!key || !to) {
@@ -190,7 +191,7 @@ export async function notifyLead(subject: string, text: string, logSummary: stri
   await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: process.env.LEAD_EMAIL_FROM ?? "WAWA Site <onboarding@resend.dev>", to, subject, text }),
+    body: JSON.stringify({ from: process.env.LEAD_EMAIL_FROM ?? "WAWA Site <onboarding@resend.dev>", to, subject, text, ...(attachments.length ? { attachments } : {}) }),
   }).catch(() => console.error("[lead] e-posta gönderilemedi"));
 }
 

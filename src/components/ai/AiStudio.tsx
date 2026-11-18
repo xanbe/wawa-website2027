@@ -731,10 +731,6 @@ export function AiStudio({
                         >
                           {C.edit}
                         </button>
-                        <Link href={offerHref} className="group mt-2 inline-flex h-14 items-center justify-center gap-3 bg-wawa-accent text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white">
-                          {C.offer}
-                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
-                        </Link>
                       </div>
                     </div>
                   )}

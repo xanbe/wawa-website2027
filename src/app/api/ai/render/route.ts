@@ -74,7 +74,12 @@ export async function POST(req: Request) {
     "",
     image ? "Görsel üretildi." : AI_CONFIGURED ? "Görsel üretilemedi (model hatası)." : "Görsel üretimi kapalı (GEMINI_API_KEY yok).",
   ];
-  await notifyLead(`Yapay zeka tasarım · ${name} · ${summary}`, lines.filter((l) => l !== null).join("\n").replace(/\n{3,}/g, "\n\n"), `ai · ${maskPhone(phone)} · ${brief.mode}`);
+  // Üretilen görsel ve gönderilen ölçülü taslak e-postaya eklenir: ekip müşterinin gördüğünü aynen görür
+  const files: { filename: string; content: string }[] = [];
+  const out = image?.match(/^data:image\/(png|jpeg|webp);base64,(.+)$/);
+  if (out) files.push({ filename: `tasarim.${out[1] === "jpeg" ? "jpg" : out[1]}`, content: out[2] });
+  files.push({ filename: `taslak.${sketch[1] === "image/png" ? "png" : "jpg"}`, content: sketch[2] });
+  await notifyLead(`Yapay zeka tasarım · ${name} · ${summary}`, lines.filter((l) => l !== null).join("\n").replace(/\n{3,}/g, "\n\n"), `ai · ${maskPhone(phone)} · ${brief.mode}`, files);
 
   return NextResponse.json({ ok: true, image, configured: AI_CONFIGURED, pass });
 }
