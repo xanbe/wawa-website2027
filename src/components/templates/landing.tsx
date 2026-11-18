@@ -161,6 +161,8 @@ function siblings(lang: Lang, path: string): { kind: "group" | "sector" | "areas
   const parent = parentService(lang, path)?.href;
   const group = nav.serviceGroups.find((g) => g.href === path || g.items.some((i) => i.href === path || i.href === parent));
   // Grup hizmetleri, alt hizmetleri (sektör sayfaları) üst hizmetin hemen altında olacak şekilde
+  // Grubun ana sayfasında (ör. İç Mimarlık) yalnızca ana türler listelenir; alt sektör sayfaları kendi üst hizmetinde görünür
+  if (group && group.href === path) return { kind: "group", items: group.items };
   if (group) return { kind: "group", items: group.items.flatMap((i) => [i, ...(lang === "tr" ? SUB_SERVICES[i.href] ?? [] : [])]) };
   const sector = sectorPages.find((p) => p.path === path);
   if (sector) return { kind: "sector", items: sectorPages.filter((p) => p.lang === lang).map((p) => ({ name: p.title, href: p.path })) };

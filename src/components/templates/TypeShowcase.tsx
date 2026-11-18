@@ -21,18 +21,15 @@ export function TypeShowcase({ title, items, viewLabel }: { title: string; items
   return (
     <section className="bg-white" aria-labelledby="svc-types">
       <div className="container-wide pt-14 pb-14 lg:pt-16 lg:pb-16">
-        <div className="flex items-end justify-between gap-6 border-t border-wawa-charcoal pt-6 lg:pt-8">
+        <div className="border-t border-wawa-charcoal pt-6 lg:pt-8">
           <h2 id="svc-types" className="font-heading text-[26px] leading-[1.2] font-normal text-wawa-charcoal lg:text-[38px]">
             {title}
           </h2>
-          <span className="hidden font-heading text-[15px] tabular-nums text-wawa-charcoal/40 lg:block">
-            {two(active + 1)} / {two(items.length)}
-          </span>
         </div>
 
-        {/* Masaüstü: liste + büyük görsel */}
-        <div className="mt-10 hidden gap-10 lg:grid lg:grid-cols-12">
-          <ol className="self-center lg:col-span-5" onMouseLeave={() => setActive(start)}>
+        {/* Masaüstü: sade liste + görsel. Ada gelince görsel o türe geçer. */}
+        <div className="mt-10 hidden items-start gap-12 lg:grid lg:grid-cols-12">
+          <ol className="lg:col-span-4" onMouseLeave={() => setActive(start)}>
             {items.map((it, i) => {
               const on = i === active;
               return (
@@ -42,25 +39,18 @@ export function TypeShowcase({ title, items, viewLabel }: { title: string; items
                     aria-current={it.current ? "page" : undefined}
                     onMouseEnter={() => setActive(i)}
                     onFocus={() => setActive(i)}
-                    className="group flex items-center gap-5 py-5"
+                    className="group flex items-center gap-4 py-3.5"
                   >
-                    <span className={`w-7 text-[12px] tabular-nums transition-colors ${on ? "text-wawa-charcoal" : "text-wawa-charcoal/35"}`}>{two(i + 1)}</span>
-                    <span
-                      className={`flex-1 font-heading text-[24px] leading-[1.15] transition-[color,transform] duration-300 xl:text-[30px] ${
-                        on ? "translate-x-2 text-wawa-charcoal" : "text-wawa-charcoal/30"
-                      }`}
-                    >
-                      {it.name}
-                    </span>
-                    {it.current && <span aria-hidden className="h-2.5 w-2.5 shrink-0 bg-wawa-accent outline outline-1 outline-wawa-charcoal" />}
-                    <ArrowUpRight className={`h-5 w-5 shrink-0 transition-[opacity,transform] duration-300 ${on ? "opacity-100" : "-translate-x-2 opacity-0"}`} aria-hidden />
+                    <span className={`w-6 text-[11px] tabular-nums transition-colors ${on ? "text-wawa-charcoal" : "text-wawa-charcoal/35"}`}>{two(i + 1)}</span>
+                    <span className={`flex-1 text-[17px] leading-snug transition-colors duration-200 ${on ? "font-medium text-wawa-charcoal" : "text-wawa-charcoal/55"}`}>{it.name}</span>
+                    <ArrowUpRight className={`h-4 w-4 shrink-0 transition-opacity duration-200 ${on ? "opacity-100" : "opacity-0"}`} aria-hidden />
                   </Link>
                 </li>
               );
             })}
           </ol>
-          <div className="lg:col-span-7">
-            <Link href={cur.href} tabIndex={-1} aria-hidden className="group relative block aspect-[4/3] overflow-hidden bg-[#F3F2EF]">
+          <div className="lg:col-span-8">
+            <Link href={cur.href} tabIndex={-1} aria-hidden className="group relative block aspect-[16/9] overflow-hidden bg-[#F3F2EF]">
               {items.map((it, i) => {
                 const src = it.image ?? fallback;
                 return src ? (
@@ -69,22 +59,14 @@ export function TypeShowcase({ title, items, viewLabel }: { title: string; items
                     src={src}
                     alt=""
                     fill
-                    sizes="(min-width: 1024px) 55vw, 100vw"
-                    className={`object-cover transition-[opacity,transform] duration-700 ease-out ${i === active ? "scale-100 opacity-100" : "scale-[1.06] opacity-0"}`}
+                    sizes="(min-width: 1024px) 60vw, 100vw"
+                    className={`object-cover transition-opacity duration-500 ease-out ${i === active ? "opacity-100" : "opacity-0"}`}
                   />
                 ) : null;
               })}
-              <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-              {/* Sarı köşe: sıra numarası */}
-              <span className="absolute top-0 left-0 grid h-20 w-20 place-items-center bg-wawa-accent font-heading text-[22px] tabular-nums text-wawa-charcoal">{two(active + 1)}</span>
-              <span className="absolute right-5 bottom-5 left-5 flex items-end justify-between gap-4">
-                <span key={active} className="font-heading text-[26px] leading-[1.15] text-white xl:text-[34px]" style={{ animation: "fadeIn .4s ease" }}>
-                  {cur.name}
-                </span>
-                <span className="inline-flex shrink-0 items-center gap-2 bg-white px-4 py-2.5 text-[14px] text-wawa-charcoal transition-colors group-hover:bg-wawa-accent">
-                  {viewLabel}
-                  <ArrowUpRight className="h-4 w-4" />
-                </span>
+              <span className="absolute right-4 bottom-4 inline-flex items-center gap-2 bg-white px-4 py-2.5 text-[14px] text-wawa-charcoal transition-colors group-hover:bg-wawa-accent">
+                {viewLabel}
+                <ArrowUpRight className="h-4 w-4" />
               </span>
             </Link>
           </div>
