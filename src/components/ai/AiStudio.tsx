@@ -3,7 +3,6 @@
 // Yapay zeka tasarım stüdyosu: proje türü → ölçü → içerik → stil → üret.
 // Sağda ölçüye göre canlı çizilen 3D taslak; üretimde bu taslak ve ölçüler yapay zekaya gönderilir.
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowRight, Check, Download, Hand, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
@@ -239,7 +238,6 @@ export function AiStudio({
   const upd = (p: Partial<StudioBrief>) => setBrief((b) => ({ ...b, ...p }));
   const updStand = (p: Partial<StudioBrief["stand"]>) => setBrief((b) => ({ ...b, stand: { ...b.stand, ...p } }));
   const updRoom = (p: Partial<StudioBrief["room"]>) => setBrief((b) => ({ ...b, room: { ...b.room, ...p } }));
-  const refs = brief.mode === "stand" ? references.stand : references.interior;
   const layoutKey = brief.mode === "stand" ? `s|${s.type}|${s.w}|${s.d}` : `r|${r.space}|${r.w}|${r.l}`;
   const moves = moveState.key === layoutKey ? moveState.map : NO_MOVES;
   const onMove = useCallback((id: string, m: Move) => setMoveState((prev) => ({ key: layoutKey, map: { ...(prev.key === layoutKey ? prev.map : NO_MOVES), [id]: m } })), [layoutKey]);
@@ -525,31 +523,6 @@ export function AiStudio({
                           <Choice key={st} active={on} onClick={() => upd({ styles: on ? brief.styles.filter((x) => x !== st) : [...brief.styles, st].slice(-2) })}>
                             {C.styles[st]}
                           </Choice>
-                        );
-                      })}
-                    </div>
-                  </Field>
-                  <Field label={C.refLabel}>
-                    <p className="-mt-1 mb-3 text-[13px] leading-relaxed text-wawa-charcoal/55">{C.refHint}</p>
-                    <div className="grid grid-cols-3 gap-2">
-                      {refs.map((p) => {
-                        const on = brief.refSrc === p.src;
-                        return (
-                          <button
-                            key={p.src}
-                            type="button"
-                            aria-pressed={on}
-                            title={p.title}
-                            onClick={() => upd({ refSrc: on ? null : p.src })}
-                            className={`relative aspect-square cursor-pointer overflow-hidden outline outline-2 -outline-offset-2 transition-[outline-color] ${on ? "outline-wawa-charcoal" : "outline-transparent hover:outline-wawa-charcoal/30"}`}
-                          >
-                            <Image src={p.src} alt={p.title} fill sizes="140px" className="object-cover" />
-                            {on && (
-                              <span className="absolute top-1.5 right-1.5 grid h-6 w-6 place-items-center bg-wawa-accent">
-                                <Check className="h-3.5 w-3.5 text-wawa-charcoal" aria-hidden />
-                              </span>
-                            )}
-                          </button>
                         );
                       })}
                     </div>
