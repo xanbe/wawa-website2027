@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowLeft, ArrowRight, Check, Download, Hand, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
+import { ArrowRight, Check, Download, Hand, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
 import {
   COPY,
   DEFAULT_BRIEF,
@@ -96,6 +96,49 @@ function Choice({ active, onClick, children, className = "" }: { active: boolean
   );
 }
 
+// Numaralı bölüm başlığı: form tek sayfada, bölümler alt alta
+function SecHead({ n, title, first = false }: { n: number; title: string; first?: boolean }) {
+  return (
+    <h2 className={`flex items-center gap-3 text-[17px] font-medium tracking-tight text-wawa-charcoal [&+*]:mt-5 ${first ? "" : "mt-10 border-t border-wawa-charcoal/15 pt-8"}`}>
+      <span className="grid h-6 w-6 shrink-0 place-items-center bg-wawa-charcoal text-[12px] font-medium tabular-nums text-white">{n}</span>
+      {title}
+    </h2>
+  );
+}
+
+// Hazır ölçüler (metre): tek tıkla genişlik ve derinlik dolar; kutulardan elle de değiştirilebilir
+const STAND_PRESETS: [number, number][] = [
+  [3, 3],
+  [4, 3],
+  [6, 4],
+  [6, 6],
+  [8, 6],
+  [10, 8],
+];
+const ROOM_PRESETS: [number, number][] = [
+  [3, 4],
+  [4, 5],
+  [5, 6],
+  [6, 8],
+  [8, 10],
+];
+const PRESET_T = { tr: "Hazır ölçüler", en: "Common sizes", de: "Gängige Größen" };
+
+function Presets({ label, list, active, onPick }: { label: string; list: [number, number][]; active: [number, number]; onPick: (a: number, b: number) => void }) {
+  return (
+    <div className="mt-7">
+      <p className="text-[13px] text-wawa-charcoal/60">{label}</p>
+      <div className="mt-2.5 flex flex-wrap gap-2">
+        {list.map(([a, b]) => (
+          <Choice key={`${a}x${b}`} active={active[0] === a && active[1] === b} onClick={() => onPick(a, b)} className="tabular-nums">
+            {a} × {b} m
+          </Choice>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // Metre girişi: eksi/artı düğmeleri ve elle yazılabilen kutu
 function MeterInput({ label, value, range, step, onChange }: { label: string; value: number; range: readonly [number, number]; step: number; onChange: (n: number) => void }) {
   const [draft, setDraft] = useState<string | null>(null);
@@ -174,7 +217,6 @@ export function AiStudio({
   offerHref: string;
 }) {
   const C = COPY[lang];
-  const [step, setStep] = useState(0);
   const [brief, setBrief] = useState<StudioBrief>(DEFAULT_BRIEF);
   const [lead, setLead] = useState({ name: "", phone: "", email: "", consent: false, website: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
@@ -233,7 +275,6 @@ export function AiStudio({
     upd({ mode: m, refSrc: null });
     setResult(null);
     setShow("3d");
-    setStep(1);
   };
 
   async function generate() {
@@ -269,73 +310,44 @@ export function AiStudio({
     }
   }
 
-  const canNext = step > 0 && step < 4;
-  const panelTitle = [C.modeTitle, C.dimsTitle, C.contentTitle, C.styleTitle, C.generateTitle][step];
 
   return (
     <section className="bg-white pt-20 lg:pt-[116px]" lang={lang}>
       <div className={`flex flex-col border-t lg:h-[calc(100svh-116px)] lg:min-h-[680px] lg:flex-row ${LINE}`}>
         {/* ------------------------------------------------ Panel */}
-        <div className={`order-2 flex flex-col border-wawa-charcoal/15 lg:order-1 lg:w-[460px] lg:shrink-0 lg:border-r xl:w-[500px]`}>
+        <div className={`order-2 flex flex-col border-wawa-charcoal/15 lg:order-1 lg:w-[500px] lg:shrink-0 lg:border-r xl:w-[560px]`}>
           <div className={`border-b px-5 pt-6 pb-5 sm:px-8 ${LINE}`}>
             <h1 className="font-heading text-[20px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[22px]">{title}</h1>
-            <ol className="mt-5 grid grid-cols-5 gap-1.5">
-              {C.steps.map((label, i) => {
-                const done = i < step;
-                const active = i === step;
-                const reachable = i === 0 || (i <= 4 && step >= 1);
-                return (
-                  <li key={label}>
-                    <button
-                      type="button"
-                      disabled={!reachable}
-                      onClick={() => reachable && setStep(i)}
-                      aria-current={active ? "step" : undefined}
-                      className="group w-full cursor-pointer text-left disabled:cursor-default"
-                    >
-                      <span className={`block h-1 transition-colors ${active ? "bg-wawa-charcoal" : done ? "bg-wawa-accent" : "bg-wawa-charcoal/12"}`} />
-                      <span className={`mt-2 block truncate text-[12px] ${active ? "text-wawa-charcoal" : "text-wawa-charcoal/50"}`}>{label}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ol>
           </div>
 
           <div className="flex-1 overflow-y-auto px-5 py-6 sm:px-8 lg:py-7">
-            <h2 className="text-[19px] tracking-tight text-wawa-charcoal">{panelTitle}</h2>
-            <div className="mt-6">
+            <div>
               {/* 1. Proje türü */}
-              {step === 0 && (
-                <div className="grid gap-3">
-                  {(["interior", "stand"] as const).map((m) => {
-                    const Icon = m === "interior" ? Sofa : Presentation;
-                    const active = brief.mode === m;
-                    return (
-                      <button
-                        key={m}
-                        type="button"
-                        onClick={() => chooseMode(m)}
-                        className={`group flex cursor-pointer items-start gap-5 border p-5 text-left transition-colors ${active ? "border-wawa-charcoal" : "border-wawa-charcoal/15 hover:border-wawa-charcoal"}`}
-                      >
-                        <span className={`grid h-12 w-12 shrink-0 place-items-center transition-colors ${active ? "bg-wawa-accent" : "bg-[#F3F2EF] group-hover:bg-wawa-accent"}`}>
-                          <Icon className="h-5 w-5 text-wawa-charcoal" strokeWidth={1.5} aria-hidden />
-                        </span>
-                        <span className="min-w-0 flex-1">
-                          <span className="flex items-center justify-between gap-3 text-[18px] tracking-tight text-wawa-charcoal">
-                            {C.modes[m].title}
-                            <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-1" aria-hidden />
-                          </span>
-                          <span className="mt-1.5 block text-[14px] leading-relaxed text-wawa-charcoal/65">{C.modes[m].text}</span>
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
+              <SecHead n={1} title={C.modeTitle} first />
+              <div className="grid grid-cols-2 gap-2">
+                {(["interior", "stand"] as const).map((m) => {
+                  const Icon = m === "interior" ? Sofa : Presentation;
+                  const active = brief.mode === m;
+                  return (
+                    <button
+                      key={m}
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => chooseMode(m)}
+                      className={`flex cursor-pointer items-center gap-3 border px-4 py-3.5 text-left text-[15px] transition-colors ${
+                        active ? "border-wawa-charcoal bg-wawa-charcoal text-white" : "border-wawa-charcoal/20 text-wawa-charcoal hover:border-wawa-charcoal"
+                      }`}
+                    >
+                      <Icon className="h-5 w-5 shrink-0" strokeWidth={1.5} aria-hidden />
+                      {C.modes[m].title}
+                    </button>
+                  );
+                })}
+              </div>
 
               {/* 2. Ölçüler */}
-              {step === 1 && brief.mode === "stand" && (
+              <SecHead n={2} title={C.dimsTitle} />
+              {brief.mode === "stand" && (
                 <>
                   <Field label={C.standType}>
                     <div className="grid grid-cols-4 gap-2">
@@ -356,7 +368,8 @@ export function AiStudio({
                       ))}
                     </div>
                   </Field>
-                  <div className="mt-7 grid grid-cols-2 gap-3">
+                  <Presets label={PRESET_T[lang]} list={STAND_PRESETS} active={[s.w, s.d]} onPick={(w, d) => updStand({ w, d })} />
+                  <div className="mt-5 grid grid-cols-2 gap-3">
                     <MeterInput label={C.width} value={s.w} range={LIMITS.stand.w} step={0.5} onChange={(w) => updStand({ w })} />
                     <MeterInput label={C.depth} value={s.d} range={LIMITS.stand.d} step={0.5} onChange={(d) => updStand({ d })} />
                     <MeterInput label={C.height} value={s.h} range={LIMITS.stand.h} step={0.1} onChange={(h) => updStand({ h })} />
@@ -369,7 +382,7 @@ export function AiStudio({
                   </div>
                 </>
               )}
-              {step === 1 && brief.mode === "interior" && (
+              {brief.mode === "interior" && (
                 <>
                   <Field label={C.space}>
                     <div className="flex flex-wrap gap-2">
@@ -380,7 +393,8 @@ export function AiStudio({
                       ))}
                     </div>
                   </Field>
-                  <div className="mt-7 grid grid-cols-2 gap-3">
+                  <Presets label={PRESET_T[lang]} list={ROOM_PRESETS} active={[r.w, r.l]} onPick={(w, l) => updRoom({ w, l })} />
+                  <div className="mt-5 grid grid-cols-2 gap-3">
                     <MeterInput label={C.width} value={r.w} range={LIMITS.room.w} step={0.5} onChange={(w) => updRoom({ w })} />
                     <MeterInput label={C.length} value={r.l} range={LIMITS.room.l} step={0.5} onChange={(l) => updRoom({ l })} />
                     <MeterInput label={C.ceiling} value={r.h} range={LIMITS.room.h} step={0.1} onChange={(h) => updRoom({ h })} />
@@ -413,7 +427,8 @@ export function AiStudio({
               )}
 
               {/* 3. İçerik */}
-              {step === 2 && brief.mode === "stand" && (
+              <SecHead n={3} title={C.contentTitle} />
+              {brief.mode === "stand" && (
                 <>
                   {dragHint}
                   <Field label={C.elementsLabel}>
@@ -484,8 +499,8 @@ export function AiStudio({
                   </Field>
                 </>
               )}
-              {step === 2 && brief.mode === "interior" && dragHint}
-              {step === 2 && brief.mode === "interior" && (
+              {brief.mode === "interior" && dragHint}
+              {brief.mode === "interior" && (
                 <Field label={C.tone}>
                   <div className="grid grid-cols-2 gap-2">
                     {TONES.map((t) => (
@@ -499,7 +514,8 @@ export function AiStudio({
               )}
 
               {/* 4. Stil ve referans */}
-              {step === 3 && (
+              <SecHead n={4} title={C.styleTitle} />
+              {
                 <>
                   <Field label={C.styleLabel}>
                     <div className="flex flex-wrap gap-2">
@@ -549,10 +565,11 @@ export function AiStudio({
                     />
                   </Field>
                 </>
-              )}
+              }
 
               {/* 5. Üret */}
-              {step === 4 && (
+              <SecHead n={5} title={C.generateTitle} />
+              {
                 <>
                   <p className="text-[15px] leading-relaxed text-wawa-charcoal/75">{C.generateLead}</p>
                   <p className="mt-5 bg-[#F3F2EF] px-4 py-3 text-[14px] text-wawa-charcoal">{summary}</p>
@@ -638,7 +655,6 @@ export function AiStudio({
                           onClick={() => {
                             setStatus("idle");
                             setShow("3d");
-                            setStep(1);
                           }}
                           className={`inline-flex h-12 cursor-pointer items-center justify-center border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}
                         >
@@ -652,33 +668,14 @@ export function AiStudio({
                     </div>
                   )}
                 </>
-              )}
+              }
             </div>
           </div>
 
-          {/* Alt gezinme */}
-          {step > 0 && (
-            <div className={`flex items-center justify-between gap-3 border-t px-5 py-4 sm:px-8 ${LINE}`}>
-              <button type="button" onClick={() => setStep((n) => Math.max(0, n - 1))} className="inline-flex h-11 cursor-pointer items-center gap-2 px-2 text-[15px] text-wawa-charcoal hover:underline">
-                <ArrowLeft className="h-4 w-4" aria-hidden />
-                {C.back}
-              </button>
-              {canNext && (
-                <button
-                  type="button"
-                  onClick={() => setStep((n) => Math.min(4, n + 1))}
-                  className="group inline-flex h-11 cursor-pointer items-center gap-3 bg-wawa-charcoal px-6 text-[15px] text-white transition-colors hover:bg-black"
-                >
-                  {C.next}
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
-                </button>
-              )}
-            </div>
-          )}
         </div>
 
         {/* ------------------------------------------------ Görünüm */}
-        <div className="relative order-1 h-[52svh] min-h-[340px] flex-1 bg-[#ECEAE5] lg:order-2 lg:h-auto">
+        <div className="sticky top-20 z-10 order-1 h-[38svh] min-h-[250px] flex-1 bg-[#ECEAE5] lg:relative lg:top-auto lg:z-auto lg:order-2 lg:h-auto">
           <div className={`absolute inset-0 ${show === "3d" ? "" : "invisible"}`}>
             <StudioScene mode={brief.mode} stand={s} room={r} lang={lang} onReady={onSceneReady} moves={moves} onMove={onMove} logo={brief.mode === "stand" ? logo : null} />
           </div>
