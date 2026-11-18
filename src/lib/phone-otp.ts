@@ -15,7 +15,10 @@ const MAX_ATTEMPTS = 5;
 
 // Test modu yalnızca geliştirmede: SMS gitmez, kod sabittir. Canlıda SMS sağlayıcısı yoksa kod gönderilmez.
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
-export const SMS_CONFIGURED = Boolean(process.env.NETGSM_USERCODE && process.env.NETGSM_PASSWORD);
+// SMS sağlayıcısı: önce Verimor (wawamobilya sitesiyle aynı hesap ve aynı ortam değişkenleri), yoksa Netgsm
+const VERIMOR_READY = Boolean(process.env.VERIMOR_SMS_USERNAME && process.env.VERIMOR_SMS_PASSWORD);
+const NETGSM_READY = Boolean(process.env.NETGSM_USERCODE && process.env.NETGSM_PASSWORD);
+export const SMS_CONFIGURED = VERIMOR_READY || NETGSM_READY;
 export const OTP_TEST_MODE = !IS_PRODUCTION && !SMS_CONFIGURED;
 const TEST_CODE = "1234";
 
@@ -109,6 +112,7 @@ export async function sendSms(phone: string, message: string) {
     console.info(`[otp:test] ${maskPhone(phone)} → ${message}`);
     return;
   }
+  if (VERIMOR_READY) return sendVerimor(phone, message);
   const params = new URLSearchParams({
     usercode: process.env.NETGSM_USERCODE ?? "",
     password: process.env.NETGSM_PASSWORD ?? "",
@@ -120,6 +124,59 @@ export async function sendSms(phone: string, message: string) {
   const body = (await res.text()).trim();
   // Netgsm başarıda "00 <görev no>" döndürür
   if (!res.ok || !body.startsWith("00")) throw new Error(`SMS gönderilemedi: ${body.slice(0, 40)}`);
+}
+
+// Verimor API'yi yalnızca izinli IP'den kabul eder; Vercel'in giden IP'si sabit değildir. SMS_RELAY_KEY varsa istek
+// sabit IP'li aktarıcıdan geçer (wawamobilya ile aynı kurulum). Metin ASCII gider: Türkçe karakter SMS boyunu yarıya indirir.
+const ASCII: Record<string, string> = { ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u", Ç: "C", Ğ: "G", İ: "I", Ö: "O", Ş: "S", Ü: "U" };
+async function sendVerimor(phone: string, message: string) {
+  const relay = process.env.SMS_RELAY_KEY;
+  const base = (process.env.VERIMOR_SMS_RELAY_URL || "https://46-101-177-125.sslip.io/verimor-sms").replace(/\/+$/, "");
+  const url = relay ? `${base}/v2/send.json` : "https://sms.verimor.com.tr/v2/send.json";
+  const h = (process.env.VERIMOR_SMS_HEADER ?? "").trim();
+  // Başlık reddedilirse önce hesabın varsayılan başlığı, sonra 90'lı biçim denenir
+  const heads = [...new Set([h || undefined, undefined, /^0\d{10}$/.test(h) ? `9${h}` : undefined])];
+  const msg = message.replace(/[çğıöşüÇĞİÖŞÜ]/g, (c) => ASCII[c] ?? c);
+  for (const source of heads) {
+    const r = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json", ...(relay ? { "x-relay-key": relay } : {}) },
+      body: JSON.stringify({
+        username: process.env.VERIMOR_SMS_USERNAME,
+        password: process.env.VERIMOR_SMS_PASSWORD,
+        ...(source ? { source_addr: source } : {}),
+        is_commercial: false, // doğrulama kodu ticari ileti değildir
+        valid_for: "00:10",
+        messages: [{ msg, dest: `90${phone}` }],
+      }),
+      signal: AbortSignal.timeout(10_000),
+    }).catch(() => null);
+    if (r?.ok) return;
+    const body = r ? (await r.text().catch(() => "")).slice(0, 120) : "";
+    if (!/NUMERIC_SOURCE_ADDRESS|SOURCE_ADDR/i.test(body)) throw new Error(`SMS gönderilemedi: ${r ? r.status : "ağ"} ${body.slice(0, 40)}`);
+  }
+  throw new Error("SMS gönderilemedi: başlık kabul edilmedi");
+}
+
+// Doğrulama geçişi: kodu doğrulanan telefon için kısa süreli, imzalı izin. Aynı kişi görseli yeniden
+// üretirken her seferinde SMS beklemez; üretim sayısı yine telefon ve IP sınırlarına tabidir.
+const PASS_TTL_MS = 2 * 60 * 60 * 1000;
+export function issuePass(phone: string) {
+  const payload = Buffer.from(JSON.stringify({ p: phone, e: Date.now() + PASS_TTL_MS, k: "pass" })).toString("base64url");
+  return `${payload}.${sign("pass:" + payload)}`;
+}
+export function checkPass(token: string): string | null {
+  const [payload, sig] = token.split(".");
+  if (!payload || !sig || sig.length > 64) return null;
+  const expected = Buffer.from(sign("pass:" + payload));
+  const given = Buffer.from(sig);
+  if (expected.length !== given.length || !timingSafeEqual(expected, given)) return null;
+  try {
+    const d = JSON.parse(Buffer.from(payload, "base64url").toString()) as { p?: string; e?: number; k?: string };
+    return d.k === "pass" && typeof d.p === "string" && typeof d.e === "number" && d.e > Date.now() ? d.p : null;
+  } catch {
+    return null;
+  }
 }
 
 // Doğrulanan talebi ekibe iletir; e-posta servisi tanımlı değilse günlüğe yalnızca maskeli özet yazılır

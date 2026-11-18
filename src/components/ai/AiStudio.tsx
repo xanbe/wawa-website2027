@@ -51,6 +51,14 @@ const SECTORS = {
 // 3D sahnedeki sürükleme ve logo yükleme metinleri
 const SCENE_T = {
   tr: {
+    sendCode: "Doğrulama kodu gönder",
+    sending: "Kod gönderiliyor…",
+    codeLabel: "Telefonunuza gelen 4 haneli kod",
+    codeSent: "Kodu telefonunuza SMS ile gönderdik.",
+    resend: "Kodu yeniden gönder",
+    codeNeed: "Telefonunuza gelen 4 haneli kodu girin.",
+    testHint: "Test modu: SMS gönderilmez, kod 1234.",
+    verified: "Telefonunuz doğrulandı.",
     free: "Alanınızın ölçülerini ve yüksekliğini girin; yapay zeka bu ölçülere sadık kalarak sektörünüze uygun tasarımı kendisi kurar.",
     logo: "Marka logosu (isteğe bağlı)",
     logoPick: "Logo yükleyin",
@@ -59,6 +67,14 @@ const SCENE_T = {
     logoError: "Dosya açılamadı. 2 MB'tan küçük bir PNG, JPG, SVG ya da WebP seçin.",
   },
   en: {
+    sendCode: "Send verification code",
+    sending: "Sending code…",
+    codeLabel: "4-digit code sent to your phone",
+    codeSent: "We sent the code to your phone by SMS.",
+    resend: "Resend code",
+    codeNeed: "Enter the 4-digit code sent to your phone.",
+    testHint: "Test mode: no SMS is sent, the code is 1234.",
+    verified: "Your phone is verified.",
     free: "Enter the size and height of your space; the AI keeps to those dimensions and designs freely for your industry.",
     logo: "Brand logo (optional)",
     logoPick: "Upload logo",
@@ -67,6 +83,14 @@ const SCENE_T = {
     logoError: "Could not open the file. Choose a PNG, JPG, SVG or WebP under 2 MB.",
   },
   de: {
+    sendCode: "Bestätigungscode senden",
+    sending: "Code wird gesendet…",
+    codeLabel: "4-stelliger Code auf Ihrem Telefon",
+    codeSent: "Wir haben den Code per SMS gesendet.",
+    resend: "Code erneut senden",
+    codeNeed: "Bitte den 4-stelligen Code eingeben.",
+    testHint: "Testmodus: Es wird keine SMS gesendet, der Code ist 1234.",
+    verified: "Ihre Telefonnummer ist bestätigt.",
     free: "Geben Sie Fläche und Höhe an; die KI hält diese Maße ein und entwirft frei, passend zu Ihrer Branche.",
     logo: "Markenlogo (optional)",
     logoPick: "Logo hochladen",
@@ -238,6 +262,10 @@ export function AiStudio({
   const [show, setShow] = useState<"3d" | "render">("3d");
   const [view, setView] = useState<View>("persp");
   const S = SCENE_T[lang];
+  // Telefon doğrulaması: kod gönderilir, girilen kod üretim isteğiyle birlikte sunucuda doğrulanır.
+  // pass: doğrulanmış telefon için sunucunun verdiği kısa süreli izin (yeniden üretimde SMS gerekmez)
+  const [otp, setOtp] = useState({ token: "", code: "", sent: false, test: false, busy: false });
+  const [pass, setPass] = useState<string | null>(null);
   const [logo, setLogo] = useState<string | null>(null);
   const [logoError, setLogoError] = useState(false);
   const api = useRef<SceneApi | null>(null);
@@ -276,10 +304,29 @@ export function AiStudio({
     setShow("3d");
   };
 
+  const leadValid = () => Boolean(lead.name.trim()) && lead.phone.replace(/\D/g, "").length >= 10 && lead.consent;
+
+  async function sendCode() {
+    setError(null);
+    if (!leadValid()) return setError(C.errors.invalid);
+    setOtp((o) => ({ ...o, busy: true }));
+    const res = await fetch("/api/fee/send-code/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ phone: lead.phone }) }).catch(() => null);
+    const json = (res ? await res.json().catch(() => ({})) : {}) as { token?: string; testMode?: boolean; error?: string };
+    if (!res?.ok || !json.token) {
+      setOtp((o) => ({ ...o, busy: false }));
+      return setError(json.error ?? C.errors.failed);
+    }
+    setOtp({ token: json.token, code: "", sent: true, test: Boolean(json.testMode), busy: false });
+  }
+
   async function generate() {
     setError(null);
-    if (!lead.name.trim() || lead.phone.replace(/\D/g, "").length < 10 || !lead.consent) {
+    if (!leadValid()) {
       setError(C.errors.invalid);
+      return;
+    }
+    if (!pass && otp.code.length !== 4) {
+      setError(S.codeNeed);
       return;
     }
     setStatus("loading");
@@ -292,12 +339,13 @@ export function AiStudio({
       const res = await fetch("/api/ai/render/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...lead, lang, brief: { ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } }, sketch }),
+        body: JSON.stringify({ ...lead, lang, token: otp.token, code: otp.code, pass, brief: { ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } }, sketch }),
       });
-      const json = (await res.json().catch(() => ({}))) as { image?: string | null; error?: string };
+      const json = (await res.json().catch(() => ({}))) as { image?: string | null; error?: string; message?: string; pass?: string };
+      if (json.pass) setPass(json.pass);
       if (!res.ok) {
         setStatus("error");
-        setError(json.error === "too_many" ? C.errors.too_many : json.error === "invalid" ? C.errors.invalid : C.errors.failed);
+        setError(json.error === "code" ? (json.message ?? S.codeNeed) : json.error === "too_many" ? C.errors.too_many : json.error === "invalid" ? C.errors.invalid : C.errors.failed);
         return;
       }
       setResult({ image: json.image ?? null });
@@ -558,7 +606,8 @@ export function AiStudio({
                       className="mt-6 grid gap-3"
                       onSubmit={(e) => {
                         e.preventDefault();
-                        generate();
+                        if (pass || otp.sent) generate();
+                        else sendCode();
                       }}
                     >
                       {(
@@ -574,7 +623,14 @@ export function AiStudio({
                             type={type}
                             autoComplete={ac}
                             value={lead[k]}
-                            onChange={(e) => setLead((l) => ({ ...l, [k]: e.target.value }))}
+                            onChange={(e) => {
+                              setLead((l) => ({ ...l, [k]: e.target.value }));
+                              // Numara değişince önceki kod ve doğrulama geçersiz olur
+                              if (k === "phone") {
+                                setOtp({ token: "", code: "", sent: false, test: false, busy: false });
+                                setPass(null);
+                              }
+                            }}
                             className={`mt-1.5 h-12 w-full border px-4 text-[15px] text-wawa-charcoal outline-none focus:border-wawa-charcoal ${LINE}`}
                           />
                         </label>
@@ -589,10 +645,39 @@ export function AiStudio({
                           </Link>
                         </span>
                       </label>
-                      {error && <p className="text-[14px] text-[#B42318]">{error}</p>}
+                      {pass ? (
+                        <p className="flex items-center gap-2 text-[14px] text-wawa-charcoal/75">
+                          <span aria-hidden className="grid h-5 w-5 place-items-center bg-wawa-accent text-[12px] text-wawa-charcoal">✓</span>
+                          {S.verified}
+                        </p>
+                      ) : (
+                        otp.sent && (
+                          <div className="bg-[#F3F2EF] p-4">
+                            <label className="block">
+                              <span className="text-[13px] text-wawa-charcoal/70">{S.codeLabel}</span>
+                              <input
+                                inputMode="numeric"
+                                autoComplete="one-time-code"
+                                maxLength={4}
+                                autoFocus
+                                value={otp.code}
+                                onChange={(e) => setOtp((o) => ({ ...o, code: e.target.value.replace(/\D/g, "").slice(0, 4) }))}
+                                className={`mt-1.5 h-12 w-40 border bg-white px-4 text-[20px] tracking-[0.4em] tabular-nums text-wawa-charcoal outline-none focus:border-wawa-charcoal ${LINE}`}
+                              />
+                            </label>
+                            <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-wawa-charcoal/65">
+                              {otp.test ? S.testHint : S.codeSent}
+                              <button type="button" disabled={otp.busy} onClick={sendCode} className="cursor-pointer underline underline-offset-4 hover:text-wawa-charcoal disabled:opacity-50">
+                                {S.resend}
+                              </button>
+                            </p>
+                          </div>
+                        )
+                      )}
+                      {error && <p role="alert" className="text-[14px] text-[#B42318]">{error}</p>}
                       <button
                         type="submit"
-                        disabled={status === "loading"}
+                        disabled={status === "loading" || otp.busy}
                         className="group mt-2 inline-flex h-14 cursor-pointer items-center justify-center gap-3 bg-wawa-accent px-7 text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white disabled:cursor-wait disabled:opacity-70"
                       >
                         {status === "loading" ? (
@@ -602,7 +687,7 @@ export function AiStudio({
                           </>
                         ) : (
                           <>
-                            {C.generate}
+                            {pass || otp.sent ? C.generate : otp.busy ? S.sending : S.sendCode}
                             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
                           </>
                         )}
