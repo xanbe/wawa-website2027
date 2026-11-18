@@ -95,10 +95,9 @@ const STYLE_EN = { minimal: "minimal", modern: "modern", luks: "luxury", dogal: 
 export function buildPrompt(b: StudioBrief, hasRef: boolean) {
   const styles = b.styles.map((s) => STYLE_EN[s]).join(", ") || "contemporary";
   const common = [
-    "The FIRST image is a 3D massing model drawn at exact real-world scale. Keep exactly the same footprint, wall positions, openings, proportions, element placement and camera angle. Replace the plain grey and white blocks with finished, high-quality real materials.",
+    "The FIRST image is a 3D model of the EMPTY space drawn at exact real-world scale: it fixes only the footprint, the closed and open sides, the openings and the height. Keep exactly that footprint, those proportions, wall positions, openings, height and camera angle. Everything inside the space is yours to design freely.",
     hasRef ? "The SECOND image is a reference project by WAWA Interiors: borrow only its material quality, lighting mood and level of detail, not its layout or size." : "",
-    "The plain grey human figures are scale references (the standing one is 1.75 m tall): keep everything at correct human scale and replace each with a realistic person in the same place and pose, or remove it.",
-    b.mode === "interior" ? "The plain blocks inside the room are furniture placeholders at real size: keep each piece in the same position, orientation and size, and render it as real furniture of that kind." : "",
+    "The plain grey human figure is a scale reference 1.75 m tall: size every element you design against it, and replace it with a realistic person or remove it.",
     b.mode === "stand" && b.stand.logo
       ? "The massing model shows the exhibitor's logo on the stand: reproduce that logo exactly as drawn, in the same places, with no changes to its shape, letters or colours. Add no other text, logos, watermarks or dimension labels."
       : "No text, no logos, no watermarks, no dimension labels.",
@@ -112,7 +111,9 @@ export function buildPrompt(b: StudioBrief, hasRef: boolean) {
       `Photorealistic photograph of a custom-built trade fair exhibition stand inside a modern exhibition hall.`,
       `EXACT DIMENSIONS, must be respected: footprint ${s.w} m wide by ${s.d} m deep (${area} m2), wall and structure height ${s.h} m.`,
       `Stand type: ${STAND_TYPE_EN[s.type]}; ${OPEN_SIDES[s.type]} open side(s).`,
-      s.elements.length ? `Include: ${s.elements.map((e) => ELEMENT_EN[e]).join("; ")}.` : "",
+      s.elements.length
+        ? `Include: ${s.elements.map((e) => ELEMENT_EN[e]).join("; ")}.`
+        : `Design the whole stand freely as an experienced exhibition stand designer would${s.sector ? ` for a company in this industry: ${s.sector}` : ""}: structure, counters, product displays, meeting or hospitality areas, screens, lighting and graphics that suit that industry and its visitors.`,
       `Main brand accent colour ${s.color}.`,
       s.sector ? `Exhibitor industry: ${s.sector}.` : "",
       `Design style: ${styles}.`,
@@ -128,7 +129,7 @@ export function buildPrompt(b: StudioBrief, hasRef: boolean) {
     `EXACT ROOM DIMENSIONS, must be respected: ${r.w} m wide by ${r.l} m long (${area} m2), ceiling height ${r.h} m. The front wall is removed to show the room.`,
     r.window !== "none" ? `A window on the ${WALL_EN[r.window]} wall, sill at 0.9 m.` : "No windows.",
     r.door !== "none" ? `A door 0.9 m wide and 2.1 m high on the ${WALL_EN[r.door]} wall.` : "",
-    `Furnish the room completely with furniture at correct real-world sizes (seat height 0.45 m, table height 0.75 m, kitchen worktop 0.9 m).`,
+    `Design and furnish the room freely as an experienced interior architect would for this kind of space, with furniture at correct real-world sizes (seat height 0.45 m, table height 0.75 m, kitchen worktop 0.9 m).`,
     `Colour palette: ${TONE_EN[r.tone]}. Design style: ${styles}.`,
     ...common,
   ]

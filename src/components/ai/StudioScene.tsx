@@ -590,10 +590,11 @@ function PieceMesh({ parts }: { parts: Part[] }) {
   );
 }
 
-function Room({ r, lang, ctx }: { r: RoomBrief; lang: string; ctx: DragCtx }) {
+function Room({ r, lang, ctx, bare }: { r: RoomBrief; lang: string; ctx: DragCtx; bare: boolean }) {
   const { w, l, h } = r;
   const floor = { sicak: "#C9AE8A", notr: "#C8C2B8", acik: "#E2DCD1", koyu: "#6E5B48" }[r.tone];
-  const pieces = useMemo(() => roomPieces(r.space, w, l), [r.space, w, l]);
+  // bare: yalnızca boş oda (yapay zeka mobilyayı kendisi kurar)
+  const pieces = useMemo(() => (bare ? [] : roomPieces(r.space, w, l)), [bare, r.space, w, l]);
   return (
     <group>
       <Box size={[w, 0.05, l]} pos={[0, -0.025, 0]} color={floor} cast={false} rough={0.7} />
@@ -680,6 +681,7 @@ export default function StudioScene({
   moves,
   onMove,
   logo = null,
+  bare = false,
 }: {
   mode: Mode;
   stand: StandBrief;
@@ -689,6 +691,7 @@ export default function StudioScene({
   moves: Moves;
   onMove?: (id: string, m: Move) => void;
   logo?: string | null;
+  bare?: boolean;
 }) {
   const size = useMemo<[number, number, number]>(() => (mode === "stand" ? [stand.w, stand.h, stand.d] : [room.w, room.h, room.l]), [mode, stand.w, stand.h, stand.d, room.w, room.h, room.l]);
   const span = Math.max(size[0], size[2]);
@@ -725,7 +728,7 @@ export default function StudioScene({
         <planeGeometry args={[400, 400]} />
         <meshStandardMaterial color="#E4E1DA" roughness={1} />
       </mesh>
-      {mode === "stand" ? <Stand b={stand} lang={lang} ctx={ctx} logo={logo} /> : <Room r={room} lang={lang} ctx={ctx} />}
+      {mode === "stand" ? <Stand b={stand} lang={lang} ctx={ctx} logo={logo} /> : <Room r={room} lang={lang} ctx={ctx} bare={bare} />}
       <Rig onReady={onReady} size={size} frontal={mode === "interior"} />
     </Canvas>
   );

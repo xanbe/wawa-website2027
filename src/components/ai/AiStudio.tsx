@@ -5,13 +5,12 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowRight, Check, Download, Hand, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
+import { ArrowRight, Download, Loader2, Minus, Plus, Presentation, RotateCcw, Sofa, Upload, X } from "lucide-react";
 import {
   COPY,
   DEFAULT_BRIEF,
   LIMITS,
   SPACES,
-  STAND_ELEMENTS,
   STAND_TYPES,
   STYLES,
   TONES,
@@ -24,7 +23,7 @@ import {
   type StudioBrief,
   type StudioLang,
 } from "./studio-data";
-import type { Move, Moves, SceneApi, View } from "./StudioScene";
+import type { Moves, SceneApi, View } from "./StudioScene";
 
 const StudioScene = dynamic(() => import("./StudioScene"), {
   ssr: false,
@@ -37,11 +36,16 @@ const StudioScene = dynamic(() => import("./StudioScene"), {
 
 const LINE = "border-wawa-charcoal/15";
 const NO_MOVES: Moves = {};
+// Sektör önerileri: yazarken listeden seçilebilir, listede olmayan da yazılabilir
+const SECTORS = {
+  tr: ["Enerji", "Gıda ve içecek", "Tekstil ve hazır giyim", "Otomotiv", "Makine ve metal", "Plastik ve ambalaj", "İnşaat ve yapı", "Mobilya ve dekorasyon", "Sağlık ve ilaç", "Kozmetik", "Teknoloji ve yazılım", "Lojistik", "Kuyum", "Savunma", "Turizm"],
+  en: ["Energy", "Food and beverage", "Textile and apparel", "Automotive", "Machinery and metal", "Plastics and packaging", "Construction", "Furniture and decoration", "Healthcare and pharma", "Cosmetics", "Technology and software", "Logistics", "Jewellery", "Defence", "Tourism"],
+  de: ["Energie", "Lebensmittel und Getränke", "Textil und Bekleidung", "Automobil", "Maschinenbau und Metall", "Kunststoff und Verpackung", "Bau", "Möbel und Einrichtung", "Gesundheit und Pharma", "Kosmetik", "Technologie und Software", "Logistik", "Schmuck", "Verteidigung", "Tourismus"],
+};
 // 3D sahnedeki sürükleme ve logo yükleme metinleri
 const SCENE_T = {
   tr: {
-    drag: "Parçaları 3D görünümde sürükleyerek taşıyın, çift tıklayarak döndürün.",
-    reset: "Yerleşimi sıfırla",
+    free: "Alanınızın ölçülerini ve yüksekliğini girin; yapay zeka bu ölçülere sadık kalarak sektörünüze uygun tasarımı kendisi kurar.",
     logo: "Marka logosu (isteğe bağlı)",
     logoPick: "Logo yükleyin",
     logoHint: "PNG, JPG, SVG ya da WebP · en fazla 2 MB",
@@ -49,8 +53,7 @@ const SCENE_T = {
     logoError: "Dosya açılamadı. 2 MB'tan küçük bir PNG, JPG, SVG ya da WebP seçin.",
   },
   en: {
-    drag: "Drag the pieces in the 3D view to move them, double-click to rotate.",
-    reset: "Reset layout",
+    free: "Enter the size and height of your space; the AI keeps to those dimensions and designs freely for your industry.",
     logo: "Brand logo (optional)",
     logoPick: "Upload logo",
     logoHint: "PNG, JPG, SVG or WebP · up to 2 MB",
@@ -58,8 +61,7 @@ const SCENE_T = {
     logoError: "Could not open the file. Choose a PNG, JPG, SVG or WebP under 2 MB.",
   },
   de: {
-    drag: "Elemente in der 3D-Ansicht ziehen, um sie zu verschieben; Doppelklick dreht sie.",
-    reset: "Anordnung zurücksetzen",
+    free: "Geben Sie Fläche und Höhe an; die KI hält diese Maße ein und entwirft frei, passend zu Ihrer Branche.",
     logo: "Markenlogo (optional)",
     logoPick: "Logo hochladen",
     logoHint: "PNG, JPG, SVG oder WebP · max. 2 MB",
@@ -224,8 +226,6 @@ export function AiStudio({
   const [show, setShow] = useState<"3d" | "render">("3d");
   const [view, setView] = useState<View>("persp");
   const S = SCENE_T[lang];
-  // Sürüklenen parçaların yeri: ölçü, stand tipi ya da mekân değişince yerleşim baştan kurulur
-  const [moveState, setMoveState] = useState<{ key: string; map: Moves }>({ key: "", map: NO_MOVES });
   const [logo, setLogo] = useState<string | null>(null);
   const [logoError, setLogoError] = useState(false);
   const api = useRef<SceneApi | null>(null);
@@ -234,13 +234,12 @@ export function AiStudio({
   }, []);
 
   const s = brief.stand;
+  // Yapay zekaya yalnızca alan ve yükseklik gider: taslakta stand elemanı çizilmez
+  const bareStand = useMemo(() => ({ ...s, elements: [] }), [s]);
   const r = brief.room;
   const upd = (p: Partial<StudioBrief>) => setBrief((b) => ({ ...b, ...p }));
   const updStand = (p: Partial<StudioBrief["stand"]>) => setBrief((b) => ({ ...b, stand: { ...b.stand, ...p } }));
   const updRoom = (p: Partial<StudioBrief["room"]>) => setBrief((b) => ({ ...b, room: { ...b.room, ...p } }));
-  const layoutKey = brief.mode === "stand" ? `s|${s.type}|${s.w}|${s.d}` : `r|${r.space}|${r.w}|${r.l}`;
-  const moves = moveState.key === layoutKey ? moveState.map : NO_MOVES;
-  const onMove = useCallback((id: string, m: Move) => setMoveState((prev) => ({ key: layoutKey, map: { ...(prev.key === layoutKey ? prev.map : NO_MOVES), [id]: m } })), [layoutKey]);
   const pickLogo = (file: File | undefined) => {
     if (!file) return;
     if (!/^image\/(png|jpeg|webp|svg\+xml)$/.test(file.type) || file.size > 2_000_000) return setLogoError(true);
@@ -252,17 +251,7 @@ export function AiStudio({
     reader.onerror = () => setLogoError(true);
     reader.readAsDataURL(file);
   };
-  const dragHint = (
-    <div className="mb-6 flex items-start gap-3 bg-[#F3F2EF] px-4 py-3 text-[13px] leading-relaxed text-wawa-charcoal/80">
-      <Hand className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-      <span className="flex-1">{S.drag}</span>
-      {moves !== NO_MOVES && (
-        <button type="button" onClick={() => setMoveState({ key: "", map: NO_MOVES })} className="shrink-0 cursor-pointer underline underline-offset-4 hover:text-wawa-charcoal">
-          {S.reset}
-        </button>
-      )}
-    </div>
-  );
+
 
   const summary = useMemo(() => {
     if (brief.mode === "stand") return `${fmtNum(s.w, lang)} × ${fmtNum(s.d, lang)} m · ${fmtNum(round1(s.w * s.d), lang)} m² · ${C.standTypes[s.type].title}`;
@@ -291,7 +280,7 @@ export function AiStudio({
       const res = await fetch("/api/ai/render/", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...lead, lang, brief: { ...brief, stand: { ...brief.stand, logo: Boolean(logo) } }, sketch }),
+        body: JSON.stringify({ ...lead, lang, brief: { ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } }, sketch }),
       });
       const json = (await res.json().catch(() => ({}))) as { image?: string | null; error?: string };
       if (!res.ok) {
@@ -311,14 +300,15 @@ export function AiStudio({
 
   return (
     <section className="bg-white pt-20 lg:pt-[116px]" lang={lang}>
-      <div className={`flex flex-col border-t lg:h-[calc(100svh-116px)] lg:min-h-[680px] lg:flex-row ${LINE}`}>
+      <div className="container-wide flex flex-col lg:flex-row lg:items-start lg:gap-14 lg:pt-12 lg:pb-20">
         {/* ------------------------------------------------ Panel */}
-        <div className={`order-2 flex flex-col border-wawa-charcoal/15 lg:order-1 lg:w-[500px] lg:shrink-0 lg:border-r xl:w-[560px]`}>
-          <div className={`border-b px-5 pt-6 pb-5 sm:px-8 ${LINE}`}>
-            <h1 className="font-heading text-[20px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[22px]">{title}</h1>
+        <div className="order-2 min-w-0 flex-1 lg:order-1">
+          <div className={`border-b pt-7 pb-6 lg:pt-0 ${LINE}`}>
+            <h1 className="font-heading text-[22px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[30px]">{title}</h1>
+            <p className="mt-4 max-w-[58ch] text-[15px] leading-relaxed text-wawa-charcoal/70">{S.free}</p>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-5 py-6 sm:px-8 lg:py-7">
+          <div className="py-8">
             <div>
               {/* 1. Proje türü */}
               <SecHead n={1} title={C.modeTitle} first />
@@ -428,39 +418,21 @@ export function AiStudio({
               <SecHead n={3} title={C.contentTitle} />
               {brief.mode === "stand" && (
                 <>
-                  {dragHint}
-                  <Field label={C.elementsLabel}>
-                    <div className="grid grid-cols-2 gap-2">
-                      {STAND_ELEMENTS.map((e) => {
-                        const on = s.elements.includes(e);
-                        return (
-                          <button
-                            key={e}
-                            type="button"
-                            aria-pressed={on}
-                            onClick={() => updStand({ elements: on ? s.elements.filter((x) => x !== e) : [...s.elements, e] })}
-                            className={`flex cursor-pointer items-center gap-3 border px-3.5 py-3 text-left text-[14px] transition-colors ${
-                              on ? "border-wawa-charcoal text-wawa-charcoal" : "border-wawa-charcoal/20 text-wawa-charcoal/75 hover:border-wawa-charcoal"
-                            }`}
-                          >
-                            <span className={`grid h-5 w-5 shrink-0 place-items-center border ${on ? "border-wawa-charcoal bg-wawa-accent" : "border-wawa-charcoal/30"}`}>
-                              {on && <Check className="h-3.5 w-3.5" aria-hidden />}
-                            </span>
-                            {C.elements[e]}
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </Field>
                   <Field label={C.sector}>
                     <input
                       value={s.sector}
                       maxLength={80}
                       onChange={(e) => updStand({ sector: e.target.value })}
                       placeholder={C.sectorPlaceholder}
+                      list="studio-sectors"
                       className={`h-12 w-full border px-4 text-[15px] text-wawa-charcoal outline-none placeholder:text-wawa-charcoal/40 focus:border-wawa-charcoal ${LINE}`}
                     />
                   </Field>
+                  <datalist id="studio-sectors">
+                    {SECTORS[lang].map((x) => (
+                      <option key={x} value={x} />
+                    ))}
+                  </datalist>
                   <Field label={C.brandColor}>
                     <div className={`flex h-12 items-center gap-3 border px-2 ${LINE}`}>
                       <input type="color" value={s.color} onChange={(e) => updStand({ color: e.target.value })} aria-label={C.brandColor} className="h-8 w-10 cursor-pointer border-0 bg-transparent p-0" />
@@ -497,7 +469,6 @@ export function AiStudio({
                   </Field>
                 </>
               )}
-              {brief.mode === "interior" && dragHint}
               {brief.mode === "interior" && (
                 <Field label={C.tone}>
                   <div className="grid grid-cols-2 gap-2">
@@ -648,9 +619,9 @@ export function AiStudio({
         </div>
 
         {/* ------------------------------------------------ Görünüm */}
-        <div className="sticky top-20 z-10 order-1 h-[38svh] min-h-[250px] flex-1 bg-[#ECEAE5] lg:relative lg:top-auto lg:z-auto lg:order-2 lg:h-auto">
+        <div className="sticky top-20 z-10 order-1 -mx-4 h-[34svh] min-h-[230px] bg-[#ECEAE5] sm:mx-0 lg:top-[140px] lg:order-2 lg:aspect-[4/3] lg:h-auto lg:min-h-0 lg:w-[44%] lg:shrink-0">
           <div className={`absolute inset-0 ${show === "3d" ? "" : "invisible"}`}>
-            <StudioScene mode={brief.mode} stand={s} room={r} lang={lang} onReady={onSceneReady} moves={moves} onMove={onMove} logo={brief.mode === "stand" ? logo : null} />
+            <StudioScene mode={brief.mode} stand={bareStand} room={r} lang={lang} onReady={onSceneReady} moves={NO_MOVES} bare logo={brief.mode === "stand" ? logo : null} />
           </div>
           {show === "render" && result?.image && (
             // Üretilen görsel (data URL); next/image yerine düz img
