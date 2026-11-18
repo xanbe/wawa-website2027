@@ -30,7 +30,7 @@ export function ProjectRail({
     el.scrollBy({ left: dir * ((card?.clientWidth ?? 300) + 24), behavior: "smooth" });
   };
   return (
-    <section id="projeler" className="scroll-mt-24 bg-white" aria-labelledby="svc-rail">
+    <section id="projeler" className="scroll-mt-24 lg:scroll-mt-32 bg-white" aria-labelledby="svc-rail">
       <div className="container-wide pt-14 pb-14 lg:pt-16 lg:pb-16">
         <div className="flex items-end justify-between gap-6 border-t border-wawa-charcoal pt-6 lg:pt-8">
           <h2 id="svc-rail" className="font-heading text-[26px] leading-[1.2] font-normal text-wawa-charcoal lg:text-[38px]">
@@ -83,6 +83,82 @@ export function ProjectRail({
             </li>
           ))}
         </ul>
+      </div>
+    </section>
+  );
+}
+
+// ---------------------------------------------------------------- Proje ızgarası (stand sayfaları)
+// 3 sütun, 16:9 kartlar. İlk 9 proje görünür; sıradaki satır bulanık bir önizleme olarak durur ve düğmeyle aşağı doğru açılır.
+type RailItem = { href: string; src: string; title: string; kicker?: string | null; meta?: string | null };
+
+function ProjectCard({ p }: { p: RailItem }) {
+  return (
+    <Link href={p.href} className="group block">
+      <div className="relative aspect-video overflow-hidden bg-[#F3F2EF]">
+        <Image src={p.src} alt={p.title} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+      </div>
+      <div className="mt-4 border-b border-wawa-charcoal/15 pb-4">
+        {p.kicker && <p className="text-[11px] tracking-[0.14em] text-wawa-charcoal/55 uppercase">{p.kicker}</p>}
+        <p className="mt-1.5 flex items-start justify-between gap-3 text-[16px] font-medium leading-snug text-wawa-charcoal">
+          {p.title}
+          <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 opacity-0 transition-opacity group-hover:opacity-100" aria-hidden />
+        </p>
+        {p.meta && <p className="mt-1 text-[12px] tracking-[0.1em] text-wawa-charcoal/50 uppercase">{p.meta}</p>}
+      </div>
+    </Link>
+  );
+}
+
+export function ProjectGrid({ title, items, allLabel, allHref, moreLabel, step = 9 }: { title: string; items: RailItem[]; allLabel: string; allHref?: string; moreLabel: string; step?: number }) {
+  const [shown, setShown] = useState(step);
+  const visible = items.slice(0, shown);
+  const peek = items.slice(shown, shown + 3);
+  const GRID = "grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3";
+  return (
+    <section id="projeler" className="scroll-mt-24 bg-white lg:scroll-mt-32" aria-labelledby="svc-rail">
+      <div className="container-wide pt-14 pb-14 lg:pt-16 lg:pb-16">
+        <div className="flex items-end justify-between gap-6 border-t border-wawa-charcoal pt-6 lg:pt-8">
+          <h2 id="svc-rail" className="font-heading text-[26px] leading-[1.2] font-normal text-wawa-charcoal lg:text-[38px]">
+            {title}
+          </h2>
+          {allHref && (
+            <Link href={allHref} className="shrink-0 text-[15px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal">
+              {allLabel}
+            </Link>
+          )}
+        </div>
+        <ul className={`mt-8 lg:mt-10 ${GRID}`}>
+          {visible.map((p, i) => (
+            <li key={p.href} className={shown > step && i >= shown - step ? "svc-grid-in" : undefined}>
+              <ProjectCard p={p} />
+            </li>
+          ))}
+        </ul>
+        {peek.length > 0 && (
+          <div className="relative mt-10">
+            {/* Sıradaki satırın bulanık önizlemesi: tıklanamaz, yalnızca devamı olduğunu gösterir */}
+            <ul aria-hidden inert className={`pointer-events-none max-h-[150px] overflow-hidden opacity-80 blur-[3px] select-none lg:max-h-[190px] ${GRID}`}>
+              {peek.map((p, i) => (
+                <li key={p.href} className={i === 1 ? "hidden sm:block" : i === 2 ? "hidden lg:block" : undefined}>
+                  <ProjectCard p={p} />
+                </li>
+              ))}
+            </ul>
+            <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/70 to-white" />
+            <div className="absolute inset-x-0 bottom-4 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setShown((n) => n + step)}
+                className="group inline-flex cursor-pointer items-center gap-3 bg-wawa-charcoal px-6 py-3.5 text-[14px] text-white transition-colors hover:bg-wawa-accent hover:text-wawa-charcoal"
+              >
+                {moreLabel}
+                <span className="text-[12px] tabular-nums opacity-60">+{items.length - shown}</span>
+                <ArrowRight className="h-4 w-4 rotate-90 transition-transform group-hover:translate-y-0.5" aria-hidden />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

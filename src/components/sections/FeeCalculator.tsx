@@ -118,7 +118,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
     <section aria-labelledby="fee-title" className="bg-white pt-20 lg:pt-24">
       <div className="container-wide grid gap-12 py-14 lg:grid-cols-12 lg:gap-10 lg:py-16">
         <div className="lg:col-span-5">
-          <div className="lg:sticky lg:top-28">
+          <div className="lg:sticky lg:top-32">
             <h1
               id="fee-title"
               className="font-heading text-[28px] leading-[1.2] font-normal tracking-[-0.01em] text-balance text-wawa-charcoal sm:text-[36px] lg:text-[44px]"

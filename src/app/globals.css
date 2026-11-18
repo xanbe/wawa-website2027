@@ -628,3 +628,11 @@ a, button {
     transform: none;
   }
 }
+
+/* Stand proje ızgarası: "Daha fazla görüntüle" ile açılan kartlar aşağıdan belirir */
+@keyframes svc-grid-in {
+  from { opacity: 0; transform: translateY(18px); filter: blur(4px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+.svc-grid-in { animation: svc-grid-in 0.6s ease both; }
+@media (prefers-reduced-motion: reduce) { .svc-grid-in { animation: none; } }

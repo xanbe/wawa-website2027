@@ -10,7 +10,7 @@ import { GlobalReach } from "@/components/sections/GlobalReach";
 import { SectionHeader, SectionLead } from "@/components/sections/SectionHeading";
 import { LINE } from "./parts";
 import { AiTeaser, BrandMarquee, FaqSplit, LeadHero, QuoteSection, ServiceTicker, TwoPaths, svcLang } from "./service-sections";
-import { CountStats, FairTimeline, ProjectRail, VideoPlaylist } from "./ServiceClient";
+import { CountStats, FairTimeline, ProjectGrid, ProjectRail, VideoPlaylist } from "./ServiceClient";
 import { TypeShowcase } from "./TypeShowcase";
 import { IntroBento } from "./IntroBento";
 import { StandHero } from "./StandHero";
@@ -82,6 +82,8 @@ export function relatedProjects(lang: Lang, categories: string[] = [], paths: st
   }
   return list.slice(0, limit);
 }
+
+const MORE_PROJECTS: Record<string, string> = { tr: "Daha fazla görüntüle", en: "Show more", de: "Mehr anzeigen", it: "Mostra altri", fr: "Afficher plus" };
 
 const TEXT = {
   tr: {
@@ -200,7 +202,10 @@ function typeItems(lang: Lang, path: string) {
 // Hizmet ve sektör sayfalarının ortak kurgusu (wawa fuar sitesinin bölüm sırası, WAWA teması ile):
 // açılış, markalar, proje türleri, tanıtım, projeler, rakamlar, iki yol, kapsam, süreç, yapay zeka, fuarlar, detay ve SSS, teklif
 export function LandingTemplate(props: LandingProps) {
-  const { lang, path, title, lead, heroImages, breadcrumb, landing, projects, projectsHref, detailsHtml, faq = [] } = props;
+  const { lang, path, title, lead, heroImages, breadcrumb, landing, projectsHref, detailsHtml, faq = [] } = props;
+  // Görseller ve kayan şerit ilk 6 projeyi kullanır; stand sayfalarındaki ızgara tüm listeyi (27'ye kadar) gösterir
+  const allProjects = props.projects;
+  const projects = allProjects.slice(0, 6);
   const T = TEXT[lang];
   const D = t(lang);
   const details = splitDetails(detailsHtml ?? "");
@@ -222,7 +227,7 @@ export function LandingTemplate(props: LandingProps) {
   const videos = isStand
     ? [...VIDEOS].sort((x, y) => Number(details.videoIds.includes(y.id)) - Number(details.videoIds.includes(x.id)))
     : VIDEOS.filter((v) => details.videoIds.includes(v.id));
-  const rail = projects
+  const rail = (isStand ? allProjects : projects)
     .filter((p) => p.featuredImage)
     .map((p) => ({ href: p.path, src: p.featuredImage!, title: p.title, kicker: projectCategory(p)?.name ?? null, meta: p.meta?.["Marka"] ?? null }));
 
@@ -256,7 +261,12 @@ export function LandingTemplate(props: LandingProps) {
       {landing && <IntroBento images={introImages} title={landing.intro.title} text={landing.intro.text} items={landing.highlights} offer={T.offer} />}
 
       {/* 5. Projeler: yatay kayan kartlar */}
-      {rail.length > 0 && <ProjectRail title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} wide={isStand} />}
+      {rail.length > 0 &&
+        (isStand ? (
+          <ProjectGrid title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} moreLabel={MORE_PROJECTS[lang] ?? MORE_PROJECTS.en} />
+        ) : (
+          <ProjectRail title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} />
+        ))}
 
       {/* 6. Rakamlar ve yurt dışı (küre, TR) */}
       <CountStats lang={k} stats={STATS.map((st) => ({ ...st, label: st.label[k] }))} />

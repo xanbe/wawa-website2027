@@ -166,8 +166,8 @@ export function BrandMarquee({ lang, stand }: { lang: Lang; stand: boolean }) {
       <div className="overflow-hidden border-y border-wawa-charcoal/10">
         <ul className="svc-marquee flex w-max" style={{ "--svc-dur": "90s" } as CSSProperties}>
           {list.map((b, i) => (
-            <li key={`${b.name}-${i}`} aria-hidden={i >= BRANDS.length} className="flex h-24 w-44 shrink-0 items-center justify-center border-r border-wawa-charcoal/10 px-6 lg:w-56">
-              <Image src={b.src} alt={i < BRANDS.length ? b.name : ""} width={150} height={56} className="h-auto max-h-10 w-auto object-contain opacity-70 grayscale" />
+            <li key={`${b.name}-${i}`} aria-hidden={i >= BRANDS.length} className="flex h-28 w-48 shrink-0 items-center justify-center border-r border-wawa-charcoal/10 px-5 lg:h-32 lg:w-60">
+              <Image src={b.src} alt={i < BRANDS.length ? b.name : ""} width={190} height={72} className="h-auto max-h-12 w-auto max-w-full object-contain opacity-70 grayscale lg:max-h-14" />
             </li>
           ))}
         </ul>
@@ -361,7 +361,7 @@ export function AiTeaser({ lang, stand }: { lang: Lang; stand: boolean }) {
 export function QuoteSection({ lang, stand }: { lang: Lang; stand: boolean }) {
   const t = T[svcLang(lang)];
   return (
-    <section id="teklif" className="scroll-mt-24 bg-[#141414] text-white">
+    <section id="teklif" className="scroll-mt-24 lg:scroll-mt-32 bg-[#141414] text-white">
       <div className="container-wide grid gap-12 py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
         <div className="lg:col-span-4">
           <h2 className="font-heading text-[32px] leading-[1.12] font-normal text-balance lg:text-[48px]">{stand ? t.quoteStand : t.quoteRoom}</h2>
@@ -411,20 +411,30 @@ export function ServiceTicker({ items }: { items: string[] }) {
 // ---------------------------------------------------------------- Merak edilenler ve SSS
 // Uzun SEO metni akordeona katlanır (metin sayfada kalır); solda görsel ve iletişim kutusu
 const FAQ_T = {
-  tr: { title: "Merak edilenler", faqTitle: "Sıkça sorulan sorular", boxTitle: "Sorularınıza yanıt bulamadınız mı?", box: "Bizimle iletişime geçin" },
-  en: { title: "Good to know", faqTitle: "Frequently asked questions", boxTitle: "Didn't find your answer?", box: "Get in touch" },
-  de: { title: "Wissenswertes", faqTitle: "Häufige Fragen", boxTitle: "Keine Antwort gefunden?", box: "Kontakt aufnehmen" },
+  tr: { title: "Merak edilenler", faqTitle: "Sıkça sorulan sorular", boxTitle: "Sorularınıza yanıt bulamadınız mı?", box: "Bizimle iletişime geçin", more: "Devamını okuyun", all: "Tüm konuları göster" },
+  en: { title: "Good to know", faqTitle: "Frequently asked questions", boxTitle: "Didn't find your answer?", box: "Get in touch", more: "Read more", all: "Show all topics" },
+  de: { title: "Wissenswertes", faqTitle: "Häufige Fragen", boxTitle: "Keine Antwort gefunden?", box: "Kontakt aufnehmen", more: "Weiterlesen", all: "Alle Themen anzeigen" },
 };
+
+const FAQ_VISIBLE = 6;
+const plainLength = (html: string) => html.replace(/<[^>]+>/g, " ").replace(/s+/g, " ").trim().length;
 
 export function FaqSplit({ lang, intro, items, image, hasDetails }: { lang: Lang; intro: string; items: { id: string; q: string; html: string }[]; image?: string; hasDetails: boolean }) {
   const t = FAQ_T[svcLang(lang)];
-  if (!items.length && !intro.trim()) return null;
+  // Yalnızca başlıktan ibaret, içeriği olmayan maddeler (eski siteden kalan boş başlıklar) listelenmez
+  const list = items.filter((it) => plainLength(it.html) >= 40);
+  if (!list.length && !intro.trim()) return null;
+  // Giriş metninin ilk paragrafı görünür, kalanı "Devamını okuyun" altında (metin sayfada kalır)
+  const cut = intro.indexOf("</p>");
+  const introHead = cut > -1 ? intro.slice(0, cut + 4) : intro;
+  const introRest = cut > -1 ? intro.slice(cut + 4) : "";
+  const extra = list.length - FAQ_VISIBLE;
   return (
     <section className="bg-white" aria-labelledby="svc-faq">
       <div className="container-wide grid gap-10 border-t border-wawa-charcoal/15 pt-14 pb-14 lg:grid-cols-12 lg:gap-10 lg:pt-16 lg:pb-16">
         <div className="lg:col-span-5">
-          <div className="relative lg:sticky lg:top-28">
-            <div className="relative aspect-[4/5] overflow-hidden bg-[#F3F2EF]">
+          <div className="relative lg:sticky lg:top-32">
+            <div className="relative aspect-[4/3] overflow-hidden bg-[#F3F2EF] lg:aspect-[4/5]">
               {image && <Image src={image} alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />}
             </div>
             <div className="absolute right-0 bottom-0 w-[78%] bg-wawa-accent p-6 sm:w-[62%] lg:p-7">
@@ -440,21 +450,41 @@ export function FaqSplit({ lang, intro, items, image, hasDetails }: { lang: Lang
           <h2 id="svc-faq" className="font-heading text-[26px] leading-[1.2] font-normal text-wawa-charcoal lg:text-[38px]">
             {hasDetails ? t.title : t.faqTitle}
           </h2>
-          {intro.trim() && <Prose html={intro} className="mt-6 text-[16px]" />}
-          <div className="mt-8 border-t border-wawa-charcoal/15">
-            {items.map((it, i) => (
-              <details key={it.id} id={it.id} open={i === 0} className="group scroll-mt-28 border-b border-wawa-charcoal/15">
-                <summary className="flex cursor-pointer list-none items-start gap-4 py-5 [&::-webkit-details-marker]:hidden">
-                  <span className="mt-1 w-6 shrink-0 text-[12px] tabular-nums text-wawa-charcoal/50">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="flex-1 text-[17px] leading-snug font-normal text-wawa-charcoal lg:text-[19px]">{it.q}</h3>
-                  <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center text-lg transition-colors group-open:bg-wawa-accent">
-                    <span className="transition-transform group-open:rotate-45">+</span>
+          {introHead.trim() && <Prose html={introHead} className="mt-6 text-[16px]" />}
+          {plainLength(introRest) > 0 && (
+            <details className="group/intro mt-3">
+              <summary className="inline-flex cursor-pointer list-none items-center gap-2 text-[14px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal group-open/intro:hidden [&::-webkit-details-marker]:hidden">
+                {t.more}
+                <span aria-hidden>+</span>
+              </summary>
+              <Prose html={introRest} className="text-[16px]" />
+            </details>
+          )}
+          {/* İlk 6 konu görünür; kalanı kutucuk işaretlenince açılır (JS gerektirmez, metin sayfada kalır) */}
+          <input type="checkbox" id="svc-faq-all" className="peer sr-only" />
+          <div className="mt-8 border-t border-wawa-charcoal/15 [&>details:nth-child(n+7)]:hidden [&>details:target]:block peer-checked:[&>details:nth-child(n+7)]:block">
+            {list.map((it, i) => (
+              <details key={it.id} id={it.id} name="svc-faq" open={i === 0} className="group scroll-mt-28 lg:scroll-mt-32 border-b border-wawa-charcoal/15">
+                <summary className="flex cursor-pointer list-none items-center gap-4 py-5 transition-colors hover:bg-[#F7F6F3] [&::-webkit-details-marker]:hidden">
+                  <span className="w-6 shrink-0 pl-1 text-[12px] tabular-nums text-wawa-charcoal/50">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="flex-1 text-[17px] leading-snug font-normal text-wawa-charcoal group-open:font-medium lg:text-[19px]">{it.q}</h3>
+                  <span aria-hidden className="mr-1 grid h-8 w-8 shrink-0 place-items-center border border-wawa-charcoal/15 text-lg transition-colors group-open:border-wawa-accent group-open:bg-wawa-accent">
+                    <span className="transition-transform duration-300 group-open:rotate-45">+</span>
                   </span>
                 </summary>
-                <Prose html={it.html} className="pb-6 pl-10 text-[15px]" />
+                <Prose html={it.html} className="pr-4 pb-7 pl-11 text-[15px] lg:pr-14" />
               </details>
             ))}
           </div>
+          {extra > 0 && (
+            <label
+              htmlFor="svc-faq-all"
+              className="mt-6 inline-flex cursor-pointer items-center gap-3 border border-wawa-charcoal/20 px-5 py-3 text-[14px] text-wawa-charcoal transition-colors hover:border-wawa-charcoal hover:bg-wawa-charcoal hover:text-white peer-checked:hidden peer-focus-visible:outline peer-focus-visible:outline-2"
+            >
+              {t.all}
+              <span className="text-[12px] tabular-nums opacity-60">+{extra}</span>
+            </label>
+          )}
         </div>
       </div>
     </section>

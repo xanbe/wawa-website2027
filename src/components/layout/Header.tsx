@@ -137,12 +137,8 @@ export function Header() {
         isScrolled || isMegaOpen ? "shadow-[0_8px_30px_rgba(0,0,0,0.06)]" : ""
       }`}
     >
-      {/* Üst iletişim şeridi */}
-      <div
-        className={`hidden overflow-hidden bg-[#F3F2EF] transition-all duration-300 lg:block ${
-          isScrolled ? "max-h-0 opacity-0" : "max-h-10 opacity-100"
-        }`}
-      >
+      {/* Üst iletişim şeridi: sayfa kayarken de menüyle birlikte görünür kalır */}
+      <div className="hidden bg-[#F3F2EF] lg:block">
         <div className="container-wide flex h-9 items-center justify-between text-[13px]">
           <div className="flex items-center gap-6 text-wawa-gray">
             <a href={contactInfo.phoneHref} className="flex items-center gap-2 hover:text-wawa-charcoal">

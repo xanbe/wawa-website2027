@@ -160,7 +160,7 @@ export function ServiceTemplate({ service, landingKey }: { service: Service; lan
       heroImages={[...new Set(heroImages)]}
       breadcrumb={{ label: t(lang).nav.services, href: ROUTES[lang].services }}
       landing={landing}
-      projects={relatedProjects(lang, categories, landing?.projectPaths)}
+      projects={relatedProjects(lang, categories, landing?.projectPaths, 27)}
       projectsHref={cat?.path ?? ROUTES[lang].projects}
       detailsHtml={details}
       faq={service.faq}
