@@ -30,6 +30,9 @@ type Nav = {
 
 // Alt hizmetler (yalnız TR sektör sayfaları): üst hizmet → alt sayfalar. Hizmet sayfalarındaki "Proje türleri" vitrininde
 // üst hizmetin hemen altında listelenir; alt sayfanın üst bağlantısı (breadcrumb) üst hizmettir. Böylece sektör sayfaları sitede yetim kalmaz.
+// İç mimarlık ana sayfası: eski sitedeki "İç Mimarlık Hizmeti" adresi (/ic-mimarlik/ buraya yönlenir)
+export const INTERIOR_HUB = "/ic-mimarlik-hizmeti/";
+
 export const SUB_SERVICES: Record<string, { name: string; href: string }[]> = {
   "/service/magaza-tasarimi/": [
     { name: "Kuyumcu İç Mimarisi", href: "/kuyumcu-ic-mimari/" },
@@ -61,7 +64,7 @@ export const NAV: Record<Lang, Nav> = {
         number: "01",
         title: "İç Mimarlık",
         description: "Konuttan ticari alana, anahtar teslim iç mimari.",
-        href: ROUTES.tr.services,
+        href: INTERIOR_HUB,
         items: [
           { name: "Konut & Villa Tasarımı", href: "/konut-villa-tasarim/" },
           { name: "Mağaza Tasarımı", href: "/service/magaza-tasarimi/" },

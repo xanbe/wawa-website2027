@@ -5,20 +5,40 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export function VideoBackdrop({ id, poster }: { id: string; poster?: string }) {
+export function VideoBackdrop({ id, poster, images = [] }: { id?: string; poster?: string; images?: string[] }) {
   const [mount, setMount] = useState(false);
   const [visible, setVisible] = useState(false);
+  // Video yoksa (iç mimarlık) fotoğraflar yavaşça birbirine geçer
+  const slides = id ? [] : images;
+  const [slide, setSlide] = useState(0);
+  useEffect(() => {
+    if (slides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const t = setInterval(() => setSlide((n) => (n + 1) % slides.length), 5500);
+    return () => clearInterval(t);
+  }, [slides.length]);
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!id || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setTimeout(() => setMount(true), 500);
     return () => clearTimeout(t);
-  }, []);
+  }, [id]);
 
   return (
     <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-wawa-charcoal [container-type:size]">
-      {poster && <Image src={poster} alt="" fill priority sizes="100vw" className="object-cover" />}
-      {mount && (
+      {slides.length > 0
+        ? slides.map((src, i) => (
+            <Image
+              key={src}
+              src={src}
+              alt=""
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className={`object-cover transition-[opacity,transform] duration-[1800ms] ease-out ${i === slide ? "scale-100 opacity-100" : "scale-[1.04] opacity-0"}`}
+            />
+          ))
+        : poster && <Image src={poster} alt="" fill priority sizes="100vw" className="object-cover" />}
+      {id && mount && (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3`}
           title=""

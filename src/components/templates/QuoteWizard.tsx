@@ -136,8 +136,60 @@ function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; chi
   );
 }
 
-export function QuoteWizard({ lang, k, service, fairs, privacyHref }: { lang: Lang; k: SvcLang; service: string; fairs: string[]; privacyHref: string }) {
-  const t = T[k];
+// İç mimarlık sayfasındaki sürüm: mekân türü → alan ve durum → hizmet kapsamı → iletişim
+const INTERIOR = {
+  tr: {
+    q: ["Nasıl bir mekân tasarlatmak istiyorsunuz?", "Mekânınız kaç metrekare?", "Hangi hizmete ihtiyacınız var?", "Teklifi kime gönderelim?"],
+    fair: "Mekân türü",
+    spaces: ["Konut / Villa", "Mağaza", "Klinik", "Cafe / Restoran", "Ofis", "Diğer"],
+    type: "Mekânın durumu",
+    types: ["Yeni / boş mekân", "Tadilat", "Kaba inşaat"],
+    systems: [
+      { v: "Tasarım ve uygulama", d: "Anahtar teslim; tasarım, üretim ve uygulama tek ekipte." },
+      { v: "Yalnızca tasarım", d: "Konsept, 3D görseller ve teknik proje." },
+      { v: "Yalnızca uygulama", d: "Hazır projenizi biz uygulayalım." },
+      { v: "Karar vermedim", d: "İhtiyacıma göre siz önerin." },
+    ],
+    needFair: "Bir mekân türü seçin.",
+    needArea: "Mekânın alanını m² olarak girin.",
+  },
+  en: {
+    q: ["What kind of space do you want designed?", "How large is the space?", "Which service do you need?", "Who should we send the offer to?"],
+    fair: "Space type",
+    spaces: ["Home / Villa", "Store", "Clinic", "Cafe / Restaurant", "Office", "Other"],
+    type: "Condition",
+    types: ["New / empty", "Renovation", "Shell"],
+    systems: [
+      { v: "Design and build", d: "Turnkey; design, production and build in one team." },
+      { v: "Design only", d: "Concept, 3D visuals and technical drawings." },
+      { v: "Build only", d: "We build your existing design." },
+      { v: "Not decided", d: "Suggest what fits my needs." },
+    ],
+    needFair: "Choose a space type.",
+    needArea: "Enter the area in m².",
+  },
+  de: {
+    q: ["Welchen Raum möchten Sie gestalten lassen?", "Wie groß ist der Raum?", "Welche Leistung benötigen Sie?", "An wen dürfen wir das Angebot senden?"],
+    fair: "Raumtyp",
+    spaces: ["Wohnung / Villa", "Laden", "Praxis", "Café / Restaurant", "Büro", "Sonstiges"],
+    type: "Zustand",
+    types: ["Neu / leer", "Renovierung", "Rohbau"],
+    systems: [
+      { v: "Planung und Ausführung", d: "Schlüsselfertig; alles aus einer Hand." },
+      { v: "Nur Planung", d: "Konzept, 3D-Visualisierung und Werkplanung." },
+      { v: "Nur Ausführung", d: "Wir setzen Ihren Entwurf um." },
+      { v: "Noch offen", d: "Empfehlen Sie, was zu mir passt." },
+    ],
+    needFair: "Bitte einen Raumtyp wählen.",
+    needArea: "Fläche in m² eingeben.",
+  },
+};
+const INTERIOR_AREAS = [60, 100, 150, 250, 500];
+
+export function QuoteWizard({ lang, k, service, fairs, privacyHref, variant = "stand" }: { lang: Lang; k: SvcLang; service: string; fairs: string[]; privacyHref: string; variant?: "stand" | "interior" }) {
+  const interior = variant === "interior";
+  const t = interior ? { ...T[k], ...INTERIOR[k] } : T[k];
+  const areas = interior ? INTERIOR_AREAS : AREAS;
   const [step, setStep] = useState(0);
   const [a, setA] = useState({ fair: "", undecided: false, area: "", type: "", system: "", name: "", company: "", phone: "", email: "", website: "" });
   const [error, setError] = useState<string | null>(null);
@@ -160,7 +212,11 @@ export function QuoteWizard({ lang, k, service, fairs, privacyHref }: { lang: La
     setState("busy");
     const fair = a.fair.trim() || t.undecidedText;
     // Ekibe giden özet her dilde Türkçe başlıklarla yazılır
-    const message = [`Hızlı teklif (${service})`, `Fuar: ${fair}`, `Alan: ${a.area} m²`, `Stand tipi: ${a.type || "-"}`, `Stand sistemi: ${a.system}`].join("\n");
+    const message = (
+      interior
+        ? [`Hızlı teklif (${service})`, `Mekân türü: ${fair}`, `Alan: ${a.area} m²`, `Mekânın durumu: ${a.type || "-"}`, `Hizmet kapsamı: ${a.system}`]
+        : [`Hızlı teklif (${service})`, `Fuar: ${fair}`, `Alan: ${a.area} m²`, `Stand tipi: ${a.type || "-"}`, `Stand sistemi: ${a.system}`]
+    ).join("\n");
     const res = await fetch("/api/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -224,7 +280,20 @@ export function QuoteWizard({ lang, k, service, fairs, privacyHref }: { lang: La
               {t.q[step]}
             </p>
 
-            {step === 0 && (
+            {step === 0 && interior && (
+              <div className="mt-5">
+                <span className={label}>{t.fair}</span>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {INTERIOR[k].spaces.map((x) => (
+                    <Chip key={x} on={a.fair === x} onClick={() => set({ fair: a.fair === x ? "" : x })}>
+                      {x}
+                    </Chip>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {step === 0 && !interior && (
               <div className="mt-5">
                 <label>
                   <span className={label}>{t.fair}</span>
@@ -247,7 +316,7 @@ export function QuoteWizard({ lang, k, service, fairs, privacyHref }: { lang: La
                 <span className={label}>{t.area}</span>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <input inputMode="decimal" aria-label={t.area} value={a.area} maxLength={6} onChange={(e) => set({ area: e.target.value.replace(/[^\d.,]/g, "") })} placeholder="m²" className={`${field} !h-10 !w-24`} />
-                  {AREAS.map((n) => (
+                  {areas.map((n) => (
                     <Chip key={n} on={a.area === String(n)} onClick={() => set({ area: String(n) })}>
                       {n}
                     </Chip>

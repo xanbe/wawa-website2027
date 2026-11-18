@@ -23,6 +23,7 @@ import {
   type Project,
   type Service,
 } from "./content";
+import { INTERIOR_HUB } from "@/components/layout/navigation";
 import { extraPages, getExtraPage, type ExtraPage } from "@/content/extra-pages";
 import { sectorPages } from "@/content/sector-pages";
 import { standPages } from "@/content/stand-pages";
@@ -98,6 +99,11 @@ export function resolve(path: string): Resolved | null {
   const extra = extraByPath(path);
   if (extra) return { type: "extra", page: extra };
 
+  // İç mimarlık ana sayfası: eski "İç Mimarlık Hizmeti" yazısının adresi hizmet açılış sayfası olarak gösterilir (metni sayfada kalır)
+  if (path === INTERIOR_HUB) {
+    const p = getPost(path);
+    if (p) return { type: "service", service: { path: p.path, lang: p.lang, slug: p.slug, title: "İç Mimarlık", featuredImage: p.featuredImage, images: [], html: p.html, faq: p.faq, alternates: { tr: p.path }, seo: p.seo } };
+  }
   const post = getPost(path);
   if (post) return { type: "post", post };
   const project = getProject(path);

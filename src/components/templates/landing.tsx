@@ -16,7 +16,7 @@ import { IntroBento } from "./IntroBento";
 import { StandHero } from "./StandHero";
 import { HERO_VIDEO, VIDEOS } from "@/content/videos";
 import { FAIRS } from "@/content/fairs";
-import { NAV, SUB_SERVICES, parentService } from "@/components/layout/navigation";
+import { INTERIOR_HUB, NAV, SUB_SERVICES, parentService } from "@/components/layout/navigation";
 import { sectorPages } from "@/content/sector-pages";
 import { FAQJsonLd } from "@/components/seo/JsonLd";
 
@@ -75,11 +75,14 @@ export function relatedProjects(lang: Lang, categories: string[] = [], paths: st
     const tr = getProject(trPath);
     add(lang === "tr" ? tr : tr?.alternates[lang] ? getProject(tr.alternates[lang]!) : undefined);
   }
+  const byCategory: Project[][] = [];
   for (const trPath of categories) {
     const tr = getCategory(trPath);
     const cat = lang === "tr" ? tr : tr?.alternates[lang] ? getCategory(tr.alternates[lang]!) : undefined;
-    if (cat) projectsInCategory(cat).forEach(add);
+    if (cat) byCategory.push(projectsInCategory(cat));
   }
+  // Birden çok kategori varsa projeler sırayla alınır; tek kategoride sıra değişmez
+  for (let i = 0; byCategory.some((c) => i < c.length); i++) byCategory.forEach((c) => add(c[i]));
   return list.slice(0, limit);
 }
 
@@ -156,7 +159,7 @@ export type LandingProps = {
 function siblings(lang: Lang, path: string): { kind: "group" | "sector" | "areas"; items: { name: string; href: string }[] } {
   const nav = NAV[lang];
   const parent = parentService(lang, path)?.href;
-  const group = nav.serviceGroups.find((g) => g.items.some((i) => i.href === path || i.href === parent));
+  const group = nav.serviceGroups.find((g) => g.href === path || g.items.some((i) => i.href === path || i.href === parent));
   // Grup hizmetleri, alt hizmetleri (sektör sayfaları) üst hizmetin hemen altında olacak şekilde
   if (group) return { kind: "group", items: group.items.flatMap((i) => [i, ...(lang === "tr" ? SUB_SERVICES[i.href] ?? [] : [])]) };
   const sector = sectorPages.find((p) => p.path === path);
@@ -221,13 +224,16 @@ export function LandingTemplate(props: LandingProps) {
   projects.forEach((p) => addImage(p.featuredImage, p.title));
   const k = svcLang(lang);
   const isStand = NAV[lang].serviceGroups[1]?.items.some((i) => i.href === path) ?? false;
+  // İç mimarlık ana sayfası fuar standı sayfasının kurgusunu kullanır: fotoğraflı açılış, hızlı teklif, proje ızgarası
+  const isInterior = path === INTERIOR_HUB;
+  const hub = isStand || isInterior;
   const types = typeItems(lang, path);
   // Tanıtım mozaiği: açılıştaki kapak görselinden farklı görseller
   const introImages = [...images.slice(1), ...images.slice(0, 1)].slice(0, 2);
   const videos = isStand
     ? [...VIDEOS].sort((x, y) => Number(details.videoIds.includes(y.id)) - Number(details.videoIds.includes(x.id)))
     : VIDEOS.filter((v) => details.videoIds.includes(v.id));
-  const rail = (isStand ? allProjects : projects)
+  const rail = (hub ? allProjects : projects)
     .filter((p) => p.featuredImage)
     .map((p) => ({ href: p.path, src: p.featuredImage!, title: p.title, kicker: projectCategory(p)?.name ?? null, meta: p.meta?.["Marka"] ?? null }));
 
@@ -245,6 +251,8 @@ export function LandingTemplate(props: LandingProps) {
           fairs={FAIRS.map((f) => `${f.name} · ${f.city}`)}
           hasProjects={rail.length > 0}
         />
+      ) : isInterior ? (
+        <StandHero lang={lang} title={title} lead={lead} breadcrumb={breadcrumb} images={heroImages.slice(0, 5)} variant="interior" hasProjects={rail.length > 0} />
       ) : (
         <LeadHero lang={lang} title={title} lead={lead} breadcrumb={breadcrumb} images={images.slice(0, 6).map((i) => i.src)} hasProjects={rail.length > 0} />
       )}
@@ -262,7 +270,7 @@ export function LandingTemplate(props: LandingProps) {
 
       {/* 5. Projeler: yatay kayan kartlar */}
       {rail.length > 0 &&
-        (isStand ? (
+        (hub ? (
           <ProjectGrid title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} moreLabel={MORE_PROJECTS[lang] ?? MORE_PROJECTS.en} />
         ) : (
           <ProjectRail title={T.ourProjects} items={rail} allLabel={D.cta.allProjects} allHref={projectsHref} />

@@ -17,16 +17,20 @@ export function StandHero({
   breadcrumb,
   videoId,
   poster,
-  fairs,
+  images,
+  fairs = [],
+  variant = "stand",
   hasProjects,
 }: {
   lang: Lang;
   title: string;
   lead: string;
   breadcrumb: { label: string; href: string };
-  videoId: string;
+  videoId?: string;
   poster?: string;
-  fairs: string[];
+  images?: string[]; // video yoksa arkada sırayla geçen fotoğraflar
+  fairs?: string[];
+  variant?: "stand" | "interior";
   hasProjects: boolean;
 }) {
   const k = svcLang(lang);
@@ -36,7 +40,7 @@ export function StandHero({
   const size = title.length <= 14 ? "text-[40px] sm:text-[60px] lg:text-[72px] xl:text-[80px]" : "text-[30px] sm:text-[42px] lg:text-[50px]";
   return (
     <section className="relative isolate overflow-hidden bg-wawa-charcoal pt-20 text-white lg:pt-[116px]">
-      <VideoBackdrop id={videoId} poster={poster} />
+      <VideoBackdrop id={videoId} poster={poster} images={images} />
       <div className="container-wide grid gap-10 py-10 lg:min-h-[calc(100svh-116px)] lg:grid-cols-12 lg:items-center lg:gap-10 lg:py-14">
         <div className="lg:col-span-6">
           <Link href={breadcrumb.href} className="text-[13px] tracking-[0.12em] text-white/70 uppercase underline-offset-4 hover:text-white hover:underline">
@@ -65,7 +69,7 @@ export function StandHero({
           )}
         </div>
         <div className="lg:col-span-5 lg:col-start-8">
-          <QuoteWizard lang={lang} k={k} service={title} fairs={fairs} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
+          <QuoteWizard lang={lang} k={k} service={title} fairs={fairs} variant={variant} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
         </div>
       </div>
     </section>

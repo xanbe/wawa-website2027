@@ -173,6 +173,29 @@ export const landings: Record<string, Landing> = {
     showBrands: true,
   },
 
+  "/ic-mimarlik-hizmeti/": {
+    kicker: "İç Mimarlık",
+    h1: "İç Mimarlık",
+    title: "Mekânınıza kimlik kazandıran iç mimarlık.",
+    lead: "Konut, mağaza, klinik, cafe ve ofis projelerinde tasarımı, özel mobilya üretimini ve uygulamayı tek ekiple, anahtar teslim yürütüyoruz.",
+    heroImages: ["/images/hero/halide-akinci-klinik.webp", "/images/hero/acarkent-villa.webp", "/images/hero/instreet-havalimani.webp", "/images/hero/caddebostan-konut.webp", "/images/hero/fulya-klinik.webp"],
+    highlights: INTERIOR_HIGHLIGHTS,
+    intro: {
+      title: "Tasarım, üretim ve uygulama tek çatı altında.",
+      text: "Mekânı yerinde inceliyor, ihtiyaç programını birlikte netleştiriyoruz. Yerleşim, malzeme ve ışık kurgusu 3D görsellerle karara bağlanır; mobilya ve sabit donatı kendi atölyemizde üretilir, inşaat ve montaj sahada tek ekiple yürür.",
+    },
+    projectCategories: [
+      "/portfolio-category/konut-villa/",
+      "/portfolio-category/magaza-tasarim/",
+      "/portfolio-category/klinik-tasarim/",
+      "/portfolio-category/cafe-restoran-tasarim/",
+      "/portfolio-category/ofis-tasarimi/",
+    ],
+    processTitle: "İç mimarlık projesi nasıl ilerler?",
+    process: INTERIOR_PROCESS,
+    scope: INTERIOR_SCOPE,
+    showBrands: true,
+  },
   "/konut-villa-tasarim/": {
     kicker: "Konut & Villa",
     title: "Yaşadığınız hayata göre tasarlanmış bir ev.",
