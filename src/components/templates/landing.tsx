@@ -203,7 +203,7 @@ function typeItems(lang: Lang, path: string) {
 // açılış, markalar, proje türleri, tanıtım, projeler, rakamlar, iki yol, kapsam, süreç, yapay zeka, fuarlar, detay ve SSS, teklif
 export function LandingTemplate(props: LandingProps) {
   const { lang, path, title, lead, heroImages, breadcrumb, landing, projectsHref, detailsHtml, faq = [] } = props;
-  // Görseller ve kayan şerit ilk 6 projeyi kullanır; stand sayfalarındaki ızgara tüm listeyi (27'ye kadar) gösterir
+  // Görseller ve kayan şerit ilk 6 projeyi kullanır; stand sayfalarındaki ızgara tüm listeyi (24'e kadar) gösterir
   const allProjects = props.projects;
   const projects = allProjects.slice(0, 6);
   const T = TEXT[lang];

@@ -35,7 +35,7 @@ export function ExtraServiceTemplate({ page }: { page: ExtraPage }) {
         return parent ? { label: parent.name, href: parent.href } : { label: t(lang).nav.services, href: ROUTES[lang].services };
       })()}
       landing={landing}
-      projects={relatedProjects(lang, page.projectCategories, page.projectPaths, 27)}
+      projects={relatedProjects(lang, page.projectCategories, page.projectPaths, 24)}
       projectsHref={ROUTES[lang].projects}
       faq={page.faq}
       detailsHtml={page.faq?.length ? "" : undefined}

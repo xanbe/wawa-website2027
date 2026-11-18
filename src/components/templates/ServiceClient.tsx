@@ -89,7 +89,7 @@ export function ProjectRail({
 }
 
 // ---------------------------------------------------------------- Proje ızgarası (stand sayfaları)
-// 3 sütun, 16:9 kartlar. İlk 9 proje görünür; sıradaki satır bulanık bir önizleme olarak durur ve düğmeyle aşağı doğru açılır.
+// 3 sütun, 16:9 kartlar. İlk 6 proje görünür; sıradaki satır bulanık bir önizleme olarak durur ve düğmeyle aşağı doğru açılır.
 type RailItem = { href: string; src: string; title: string; kicker?: string | null; meta?: string | null };
 
 function ProjectCard({ p }: { p: RailItem }) {
@@ -110,7 +110,7 @@ function ProjectCard({ p }: { p: RailItem }) {
   );
 }
 
-export function ProjectGrid({ title, items, allLabel, allHref, moreLabel, step = 9 }: { title: string; items: RailItem[]; allLabel: string; allHref?: string; moreLabel: string; step?: number }) {
+export function ProjectGrid({ title, items, allLabel, allHref, moreLabel, step = 6 }: { title: string; items: RailItem[]; allLabel: string; allHref?: string; moreLabel: string; step?: number }) {
   const [shown, setShown] = useState(step);
   const visible = items.slice(0, shown);
   const peek = items.slice(shown, shown + 3);
