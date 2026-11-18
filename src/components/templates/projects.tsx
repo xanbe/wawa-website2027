@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { t, ROUTES, type Lang } from "@/lib/i18n";
-import { projectCategories, projectCategory, projectsIn, type Category, type Project } from "@/lib/content";
+import { t, ROUTES, contentLang, type Lang } from "@/lib/i18n";
+import { PAGE_SIZE, projectCategories, projectCategory, projectsIn, projectsInCategory, type Category, type Project } from "@/lib/content";
+import { InfiniteGrid } from "./InfiniteGrid";
 import { CtaBand, LINE, PageIntro, Pagination, ProjectCard, Prose } from "./parts";
 
 const INTRO = {
@@ -55,6 +56,9 @@ export function ProjectListTemplate({
   category?: Category;
 }) {
   const intro = INTRO[lang];
+  // Sayfa aşağı indikçe sonraki projeler eklenir; sayfa numaraları arama motorları için kalır ama görünmez
+  const all = category ? projectsInCategory(category) : projectsIn(contentLang(lang));
+  const rest = all.slice(page * PAGE_SIZE.projects);
   return (
     <>
       <PageIntro lang={lang} title={category ? category.name : intro.title} lead={intro.lead}>
@@ -62,12 +66,14 @@ export function ProjectListTemplate({
       </PageIntro>
       <section className="bg-white" lang={lang}>
         <div className="container-wide pb-14 lg:pb-16">
-          <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.map((p) => (
+          <InfiniteGrid initial={projects.length} step={PAGE_SIZE.projects} className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {[...projects, ...rest].map((p) => (
               <ProjectCard key={p.path} project={p} category={category ? null : projectCategory(p)?.name} />
             ))}
+          </InfiniteGrid>
+          <div className="sr-only">
+            <Pagination base={base} page={page} pages={pages} lang={lang} />
           </div>
-          <Pagination base={base} page={page} pages={pages} lang={lang} />
         </div>
       </section>
       <CtaBand lang={lang} />
