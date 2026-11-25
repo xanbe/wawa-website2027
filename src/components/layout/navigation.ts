@@ -84,6 +84,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Maxima Stand", href: "/maxima-stand/" },
           { name: "Plus Stand", href: "/plus-stand/" },
           { name: "AVM Standı", href: "/avm-standi/" },
+          { name: "Fuar Takvimi", href: "/fuar-takvimi/" },
         ],
       },
     ],
