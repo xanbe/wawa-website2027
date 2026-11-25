@@ -6,13 +6,12 @@ import { PageIntro } from "@/components/templates/parts";
 import { PriceCalculator } from "@/components/templates/PriceCalculator";
 
 const title = `Fuar Standı Fiyatları ${PRICE_YEAR}: m² Başına Maliyet | WAWA Interiors`;
-const description = `Ahşap, Maxima ve kongre standı için ${PRICE_YEAR} metrekare fiyat aralıkları; Türkiye ve yurt dışı, örnek stand bütçeleri ve fiyatı etkileyen kalemler.`;
+const description = `Ahşap ve Maxima fuar standı için ${PRICE_YEAR} metrekare fiyat aralıkları; Türkiye ve yurt dışı, örnek stand bütçeleri ve fiyatı etkileyen kalemler.`;
 export const metadata: Metadata = { title: { absolute: title }, description, alternates: { canonical: "/fuar-standi-fiyatlari/" }, openGraph: { title, description } };
 
 const SYSTEM_TEXT: Record<StandSystem, string> = {
   ahsap: "Sıfırdan tasarlanır ve atölyemizde üretilir. Markaya özel biçim, malzeme ve detay isteyen katılımlar için.",
   maxima: "Hızlı kurulan, tekrar kullanılan modüler sistem. Satın alınabilir ya da kiralanabilir; sık fuara katılan markalar için ekonomik.",
-  kongre: "Tıp, ilaç ve finans gibi alanlarda küçük metrekarede yoğun ve prestijli sunum için.",
 };
 const EXAMPLES = [18, 36, 54];
 
