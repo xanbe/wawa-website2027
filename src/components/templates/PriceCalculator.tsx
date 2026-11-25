@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
-import { SYSTEM_LABEL, euroRange, estimate, type PriceRegion, type StandSystem } from "@/content/stand-prices";
+import { SYSTEM_LABEL, estimate, type PriceRegion, type StandSystem } from "@/content/stand-prices";
 
 const AREAS = [12, 18, 24, 36, 54, 100];
 
@@ -74,7 +74,16 @@ export function PriceCalculator() {
       <div className="flex flex-col justify-between gap-6 border-t border-wawa-charcoal/15 pt-6 lg:col-span-5 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
         <div aria-live="polite">
           <p className="text-[12px] tracking-[0.12em] text-wawa-charcoal/60 uppercase">Yaklaşık bütçe · KDV hariç</p>
-          <p className="mt-3 font-heading text-[28px] leading-tight tabular-nums text-wawa-charcoal sm:text-[34px]">{range ? euroRange(range) : "-"}</p>
+          <p className="mt-3 font-heading text-[28px] leading-tight tabular-nums text-wawa-charcoal sm:text-[34px]">{range
+              ? // Başlık yazı tipinde € işareti yok; işaret metin yazı tipiyle yazılır
+                range.map((n, i) => (
+                  <span key={i}>
+                    {i > 0 && " – "}
+                    <span className="font-sans font-medium">€</span>
+                    {n.toLocaleString("tr-TR")}
+                  </span>
+                ))
+              : "-"}</p>
           <p className="mt-3 text-[14px] leading-relaxed text-wawa-charcoal/65">
             {area} m² · {SYSTEM_LABEL[system]} · {region === "tr" ? "Türkiye" : "yurt dışı"}. Planlama tahminidir, teklif değildir.          </p>
         </div>
