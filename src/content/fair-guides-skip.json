@@ -1,3 +1,12 @@
 [
-  { "slug": "construct-canada", "reason": "constructcanada.com tüm sayfaları thebuildingsshow.com'a 301 veriyor; fuarlar.json adresi güncellenmeli (kullanıcı/oturum kararı)", "date": "2026-11-25" }
+  {
+    "slug": "construct-canada",
+    "reason": "constructcanada.com tüm sayfaları thebuildingsshow.com'a 301 veriyor; fuarlar.json adresi güncellenmeli (kullanıcı/oturum kararı)",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "sustainable-solutions",
+    "reason": "Messe Duesseldorf listing (organizer Xpo Messe Kontakt GmbH, 2-3 Dec 2026) links to www.solarsolutionsduesseldorf.de, a different domain and apparently the Solar Solutions fair; that host does not resolve in this session, so not enough verified info.",
+    "date": "2026-11-25"
+  }
 ]
