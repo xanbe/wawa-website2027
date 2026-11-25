@@ -223,8 +223,8 @@ function ProjectForm({ project, categories, onClose, onSaved }: { project: Proje
     setBusy(true);
     setError(null);
     try {
-      await call(body);
-      onSaved(msg);
+      const r = await call<{ note?: string }>(body);
+      onSaved(r.note ? `${msg} ${r.note}` : msg);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Kaydedilemedi.");
       setBusy(false);

@@ -5,6 +5,8 @@ import { clientIp } from "@/lib/phone-otp";
 import { allow } from "@/lib/rate-limit";
 import { categories, type Post, type Project } from "@/lib/content";
 import { resolve } from "@/lib/routes";
+import { needsTranslation, removeProject, syncProject, type SyncProject } from "@/lib/admin/sync";
+import { TRANSLATE_CONFIGURED, translateProject } from "@/lib/admin/translate";
 
 // Yönetim paneli ucu: giriş, içerik okuma, görsel yükleme, proje ve yazı kaydetme.
 // Her işlem oturum ister; içerik her zaman depodan taze okunur (derlemedeki kopyadan değil).
@@ -133,6 +135,7 @@ export async function POST(req: Request) {
       const { list, crlf } = await load<Project>(PROJECTS_FILE);
       let message = "";
       let result: Project | null = null;
+      let note = "";
 
       if (op === "projects.order") {
         // TR projeler verilen sıraya girer; diğer diller TR karşılığının sırasını izler
@@ -148,7 +151,8 @@ export async function POST(req: Request) {
         const i = list.findIndex((p) => p.path === str(body.path, 300) && p.lang === "tr");
         if (i < 0) return bad("Proje bulunamadı.", 404);
         message = `Panel: proje silindi (${list[i].title})`;
-        list.splice(i, 1);
+        // İngilizce ve Almanca sürümleri de kalkar
+        removeProject(list as unknown as SyncProject[], list[i].path);
       } else {
         const d = (body.data ?? {}) as Record<string, unknown>;
         const title = str(d.title, 160);
@@ -164,6 +168,7 @@ export async function POST(req: Request) {
         if (str(d.service, 120)) meta["Verilen Hizmet"] = str(d.service, 120);
         const seo = { title, fullTitle: `${title} | Wawa Interiors`, description, ogImage: g[0].src };
         const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
+        const prev = existing ? { title: existing.title, html: existing.html, description: existing.seo.description ?? "" } : null;
         if (existing) {
           Object.assign(existing, { title, featuredImage: g[0].src, gallery: g, html, meta: { ...existing.meta, ...meta }, seo: { ...existing.seo, ...seo } });
           if (!str(d.brand, 120)) delete existing.meta?.["Marka"];
@@ -180,9 +185,21 @@ export async function POST(req: Request) {
           list.splice(first < 0 ? list.length : first, 0, result);
           message = `Panel: yeni proje (${title})`;
         }
+        // Dil sürümleri: fotoğraflar her zaman eşitlenir; Türkçe metin değiştiyse İngilizce ve Almanca çevrilir
+        const all = list as unknown as SyncProject[];
+        const tr = result as unknown as SyncProject;
+        const want = needsTranslation(tr, prev, all);
+        const tx = want ? await translateProject({ title, description, html }) : null;
+        syncProject(all, tr, tx);
+        if (want && !tx)
+          note = TRANSLATE_CONFIGURED
+            ? "Çeviri yapılamadı; İngilizce ve Almanca metinler eski hâliyle kaldı (fotoğraflar güncellendi). Tekrar kaydederek yeniden deneyebilirsiniz."
+            : "Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil; İngilizce ve Almanca sayfalarda fotoğraflar güncellendi, metinler değişmedi.";
+        else if (tx) note = "İngilizce ve Almanca sürümler de çevrildi.";
+        else note = "İngilizce ve Almanca sürümlerde fotoğraflar güncellendi.";
       }
       await commit([{ path: PROJECTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message);
-      return NextResponse.json({ ok: true, project: result });
+      return NextResponse.json({ ok: true, project: result, note });
     }
 
     // ---------------------------------------------------------------- blog yazıları
