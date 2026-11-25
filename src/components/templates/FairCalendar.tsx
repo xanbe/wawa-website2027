@@ -4,7 +4,13 @@
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
-import { REGION_LABEL, REGIONS, SECTOR_GROUPS, SECTOR_LABEL, fairPath, type FairLite, type FairRegion, type SectorGroupId } from "@/content/fairs";
+import { REGIONS, REGION_LABELS, SECTOR_GROUPS, SECTOR_LABEL, SECTOR_LABELS, fairPathL, type FairLite, type FairRegion, type PageLang, type SectorGroupId } from "@/content/fair-meta";
+
+const UI = {
+  tr: { all: "Tümü", allSectors: "Tüm sektörler", region: "Bölge", sector: "Sektör", search: "Fuar ara", ph: "Fuar, şehir ya da sektör", count: "fuar", clear: "Filtreleri temizle", empty: "{u.empty}", days: "gün", live: "Devam ediyor", past: "Sona erdi", locale: "tr-TR" },
+  en: { all: "All", allSectors: "All sectors", region: "Region", sector: "Sector", search: "Search fairs", ph: "Fair, city or sector", count: "fairs", clear: "Clear filters", empty: "We could not find that fair. If it is not listed, you can still type its name in the offer form.", days: "days", live: "On now", past: "Ended", locale: "en-GB" },
+  de: { all: "Alle", allSectors: "Alle Branchen", region: "Region", sector: "Branche", search: "Messe suchen", ph: "Messe, Stadt oder Branche", count: "Messen", clear: "Filter zurücksetzen", empty: "Diese Messe haben wir nicht gefunden. Sie können ihren Namen trotzdem im Angebotsformular angeben.", days: "Tage", live: "Läuft", past: "Beendet", locale: "de-DE" },
+};
 
 const DAY = 86_400_000;
 const subscribe = (cb: () => void) => {
@@ -14,11 +20,14 @@ const subscribe = (cb: () => void) => {
 const nowMinute = () => Math.floor(Date.now() / 60_000) * 60_000;
 
 const norm = (s: string) => s.toLocaleLowerCase("tr-TR").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ı/g, "i");
-const dayMonth = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("tr-TR", { day: "numeric", month: "short", timeZone: "UTC" });
+const dayMonth = (iso: string, locale: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString(locale, { day: "numeric", month: "short", timeZone: "UTC" });
 const monthKey = (iso: string) => iso.slice(0, 7);
-const monthLabel = (key: string) => new Date(`${key}-15T12:00:00Z`).toLocaleDateString("tr-TR", { month: "long", year: "numeric", timeZone: "UTC" });
+const monthLabel = (key: string, locale: string) => new Date(`${key}-15T12:00:00Z`).toLocaleDateString(locale, { month: "long", year: "numeric", timeZone: "UTC" });
 
-export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
+export function FairCalendar({ fairs, lang = "tr" }: { fairs: FairLite[]; lang?: PageLang }) {
+  const u = UI[lang];
+  const regionLabel = REGION_LABELS[lang];
+  const sectorLabel = lang === "tr" ? SECTOR_LABEL : SECTOR_LABELS[lang];
   const now = useSyncExternalStore(subscribe, nowMinute, () => 0);
   const [region, setRegion] = useState<"all" | FairRegion>("all");
   const [q, setQ] = useState("");
@@ -39,7 +48,7 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
     for (const f of base) c[f.group] = (c[f.group] ?? 0) + 1;
     return c;
   }, [upcoming, region]);
-  const sectorOptions = [...SECTOR_GROUPS.map((g) => g.id), "diger" as const].sort((a, b) => SECTOR_LABEL[a].localeCompare(SECTOR_LABEL[b], "tr"));
+  const sectorOptions = [...SECTOR_GROUPS.map((g) => g.id), "diger" as const].sort((a, b) => sectorLabel[a].localeCompare(sectorLabel[b], u.locale));
   const list = useMemo(() => {
     const words = norm(q).split(/\s+/).filter(Boolean);
     return upcoming.filter((f) => {
@@ -59,7 +68,7 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
     <div>
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
         <div className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
-          <div className="flex w-max border border-wawa-charcoal/15" role="group" aria-label="Bölge">
+          <div className="flex w-max border border-wawa-charcoal/15" role="group" aria-label={u.region}>
             {(["all", ...REGIONS] as const).map((r, i) => (
               <button
                 key={r}
@@ -70,7 +79,7 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
                   region === r ? "bg-wawa-charcoal text-white" : "text-wawa-charcoal hover:bg-[#F3F2EF]"
                 }`}
               >
-                {r === "all" ? "Tümü" : REGION_LABEL[r]}
+                {r === "all" ? u.all : regionLabel[r]}
                 <span className={`text-[12px] tabular-nums ${region === r ? "text-white/60" : "text-wawa-charcoal/45"}`}>{counts[r]}</span>
               </button>
             ))}
@@ -78,28 +87,28 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:w-[560px]">
         <label className="block">
-          <span className="sr-only">Sektör</span>
+          <span className="sr-only">{u.sector}</span>
           <select
             value={sector}
             onChange={(e) => setSector(e.target.value as "all" | SectorGroupId)}
             className="h-12 w-full cursor-pointer border border-wawa-charcoal/15 bg-white px-4 text-[15px] text-wawa-charcoal outline-none focus:border-wawa-charcoal"
           >
-            <option value="all">Tüm sektörler ({sectorCounts.all ?? 0})</option>
+            <option value="all">{u.allSectors} ({sectorCounts.all ?? 0})</option>
             {sectorOptions.map((id) => (
               <option key={id} value={id} disabled={!sectorCounts[id]}>
-                {SECTOR_LABEL[id]} ({sectorCounts[id] ?? 0})
+                {sectorLabel[id]} ({sectorCounts[id] ?? 0})
               </option>
             ))}
           </select>
         </label>
         <label className="relative block">
-          <span className="sr-only">Fuar ara</span>
+          <span className="sr-only">{u.search}</span>
           <Search className="pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-wawa-charcoal/45" aria-hidden />
           <input
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Fuar, şehir ya da sektör"
+            placeholder={u.ph}
             className="h-12 w-full border border-wawa-charcoal/15 bg-white pr-4 pl-11 text-[15px] text-wawa-charcoal outline-none placeholder:text-wawa-charcoal/40 focus:border-wawa-charcoal"
           />
         </label>
@@ -107,10 +116,10 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
       </div>
 
       <p className="mt-4 text-[13px] text-wawa-charcoal/55" aria-live="polite">
-        {list.length} fuar
+        {list.length} {u.count}
         {(region !== "all" || sector !== "all" || q) && (
           <button type="button" onClick={() => (setRegion("all"), setSector("all"), setQ(""))} className="ml-3 cursor-pointer underline underline-offset-4 hover:text-wawa-charcoal">
-            Filtreleri temizle
+            {u.clear}
           </button>
         )}
       </p>
@@ -119,19 +128,19 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
         <p className="mt-8 bg-[#F3F2EF] p-6 text-[15px] text-wawa-charcoal">Aradığınız fuarı bulamadık. Listede yoksa da teklif formuna fuarın adını yazabilirsiniz.</p>
       ) : (
         groups.map(([key, items]) => (
-          <section key={key} className="mt-8" aria-label={monthLabel(key)}>
-            <h2 className="border-b border-wawa-charcoal pb-2 font-heading text-[18px] font-normal text-wawa-charcoal capitalize">{monthLabel(key)}</h2>
+          <section key={key} className="mt-8" aria-label={monthLabel(key, u.locale)}>
+            <h2 className="border-b border-wawa-charcoal pb-2 font-heading text-[18px] font-normal text-wawa-charcoal capitalize">{monthLabel(key, u.locale)}</h2>
             <ul>
               {items.map((f) => {
                 const s = new Date(`${f.start}T09:00:00Z`).getTime();
                 const e = new Date(`${f.end}T23:59:59Z`).getTime();
-                const status = !now ? "" : now > e ? "Sona erdi" : now >= s ? "Devam ediyor" : `${Math.ceil((s - now) / DAY)} gün`;
+                const status = !now ? "" : now > e ? u.past : now >= s ? u.live : `${Math.ceil((s - now) / DAY)} ${u.days}`;
                 return (
                   <li key={f.slug} className="border-b border-wawa-charcoal/15">
-                    <Link href={fairPath(f.slug)} className="group grid grid-cols-[72px_minmax(0,1fr)_auto] items-baseline gap-x-4 gap-y-1 py-4 sm:grid-cols-[96px_minmax(0,1fr)_minmax(0,220px)_90px_20px] sm:gap-x-6">
+                    <Link href={fairPathL(lang, f.slug)} className="group grid grid-cols-[72px_minmax(0,1fr)_auto] items-baseline gap-x-4 gap-y-1 py-4 sm:grid-cols-[96px_minmax(0,1fr)_minmax(0,220px)_90px_20px] sm:gap-x-6">
                       <span className="text-[14px] tabular-nums text-wawa-charcoal/70">
-                        {dayMonth(f.start)}
-                        {f.end !== f.start && <span className="block text-[12px] text-wawa-charcoal/45 sm:inline">–{dayMonth(f.end)}</span>}
+                        {dayMonth(f.start, u.locale)}
+                        {f.end !== f.start && <span className="block text-[12px] text-wawa-charcoal/45 sm:inline">–{dayMonth(f.end, u.locale)}</span>}
                       </span>
                       <span className="min-w-0">
                         <span className="text-[17px] font-medium text-wawa-charcoal group-hover:underline">{f.name}</span>

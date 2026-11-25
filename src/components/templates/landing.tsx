@@ -15,7 +15,7 @@ import { TypeShowcase } from "./TypeShowcase";
 import { IntroBento } from "./IntroBento";
 import { StandHero } from "./StandHero";
 import { HERO_VIDEO, VIDEOS } from "@/content/videos";
-import { FAIR_PICKS, FAIRS_LITE } from "@/content/fairs";
+import { fairPicks, fairsLite } from "@/content/fairs-i18n";
 import { INTERIOR_HUB, NAV, SUB_SERVICES, parentService } from "@/components/layout/navigation";
 import { sectorPages } from "@/content/sector-pages";
 import { FAQJsonLd } from "@/components/seo/JsonLd";
@@ -254,7 +254,7 @@ export function LandingTemplate(props: LandingProps) {
           breadcrumb={breadcrumb}
           videoId={landing?.heroVideo ?? HERO_VIDEO}
           poster={images[0]?.src}
-          fairs={FAIR_PICKS}
+          fairs={fairPicks(lang)}
           hasProjects={rail.length > 0}
         />
       ) : isInterior ? (
@@ -407,7 +407,7 @@ export function LandingTemplate(props: LandingProps) {
       <AiTeaser lang={lang} stand={isStand} />
 
       {/* 9. Yaklaşan fuarlar (stand sayfaları) */}
-      {isStand && <FairTimeline lang={k} fairs={FAIRS_LITE} />}
+      {isStand && <FairTimeline lang={k} fairs={fairsLite(lang)} />}
 
       {/* 10. Merak edilenler: eski SEO metni ve SSS tek akordeonda */}
       <FaqSplit

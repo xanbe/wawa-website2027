@@ -124,6 +124,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Cafe & Restaurant Design", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Office Design", href: "/en/service/office-design-and-implementation/" },
         ],
+        feature: { label: "Interior Prices", note: "Design and build", href: "/en/interior-design-prices/", icon: "price" },
       },
       {
         number: "02",
@@ -135,6 +136,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Congress Stand", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
         ],
+        feature: { label: "Fair Calendar 2027", note: "1000+ fairs · 5 regions", href: "/en/trade-fair-calendar/" },
       },
     ],
     singleServices: [
@@ -170,6 +172,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Café- & Restaurantdesign", href: "/de/service/cafe-restaurantdesign-und-umsetzungen/" },
           { name: "Bürodesign", href: "/de/service/buerodesign-und-umsetzung/" },
         ],
+        feature: { label: "Preisleitfaden", note: "Innenarchitektur", href: "/de/innenarchitektur-preise/", icon: "price" },
       },
       {
         number: "02",
@@ -181,6 +184,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Kongressstand", href: "/de/service/kongress-stand-design/" },
           { name: "Maxima Stand", href: "/de/service/maxima-stand/" },
         ],
+        feature: { label: "Messekalender 2027", note: "1000+ Messen · 5 Regionen", href: "/de/messekalender/" },
       },
     ],
     singleServices: [
@@ -217,6 +221,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Caffè e ristoranti", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Uffici", href: "/en/service/office-design-and-implementation/" },
         ],
+        feature: { label: "Guida ai prezzi", note: "Architettura d'interni", href: "/en/interior-design-prices/", icon: "price" },
       },
       {
         number: "02",
@@ -228,6 +233,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Stand per congressi", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
         ],
+        feature: { label: "Calendario fiere 2027", note: "Oltre 1000 fiere", href: "/en/trade-fair-calendar/" },
       },
     ],
     singleServices: [
@@ -263,6 +269,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Cafés et restaurants", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Bureaux", href: "/en/service/office-design-and-implementation/" },
         ],
+        feature: { label: "Guide des prix", note: "Architecture intérieure", href: "/en/interior-design-prices/", icon: "price" },
       },
       {
         number: "02",
@@ -274,6 +281,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Stand de congrès", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
         ],
+        feature: { label: "Agenda des salons", note: "2027 · plus de 1000 salons", href: "/en/trade-fair-calendar/" },
       },
     ],
     singleServices: [

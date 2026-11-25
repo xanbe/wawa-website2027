@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
+import { CALENDAR_PATH } from "@/content/fair-meta";
 import type { SvcLang } from "./service-sections";
 
 // ---------------------------------------------------------------- Kayan projeler
@@ -233,8 +234,8 @@ const TIMELINE_MAX = 12;
 
 const FAIR_TEXT = {
   tr: { title: "Yaklaşan fuarlar", note: "Tarihleri resmî siteden teyit edin", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", uk: "İngiltere", me: "Orta Doğu", am: "Amerika" }, all: "Tüm fuarlar", cta: "Fuar adına basın; bütçeyi ve o fuardaki işlerimizi görün." },
-  en: { title: "Upcoming fairs", note: "Confirm dates on the official site", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", uk: "UK", me: "Middle East", am: "Americas" }, all: "All fairs", cta: "Click a fair to go to the offer form." },
-  de: { title: "Kommende Messen", note: "Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", uk: "UK", me: "Nahost", am: "Amerika" }, all: "Alle Messen", cta: "Messe anklicken und zum Angebotsformular wechseln." },
+  en: { title: "Upcoming fairs", note: "Confirm dates on the official site", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", uk: "UK", me: "Middle East", am: "Americas" }, all: "All fairs", cta: "Click a fair to see the budget and our work at that fair." },
+  de: { title: "Kommende Messen", note: "Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", uk: "UK", me: "Nahost", am: "Amerika" }, all: "Alle Messen", cta: "Messe anklicken: Budget und unsere Projekte auf dieser Messe." },
 };
 
 // Dakikada bir yenilenen saat; sunucuda 0 döner (tarihler yalnızca tarayıcıda hesaplanır)
@@ -331,7 +332,7 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
               return (
                 <li key={f.name + f.start} className="relative h-9">
                   {/* Sağ yarıdaki fuarlarda yazı çubuğun soluna geçer; çubuk her zaman tarihinde durur */}
-                  <a href={lang === "tr" && f.slug ? `/fuar-takvimi/${f.slug}/` : "#teklif"} className="group absolute top-1/2 flex -translate-y-1/2 items-center gap-2 whitespace-nowrap" style={right ? { right: `${100 - x(e)}%` } : { left: `${left}%` }}>
+                  <a href={f.slug ? `${CALENDAR_PATH[lang]}${f.slug}/` : "#teklif"} className="group absolute top-1/2 flex -translate-y-1/2 items-center gap-2 whitespace-nowrap" style={right ? { right: `${100 - x(e)}%` } : { left: `${left}%` }}>
                     {!right && <span className="h-3.5 w-6 shrink-0 bg-wawa-charcoal transition-colors group-hover:bg-wawa-accent" />}
                     <span className="text-[14px] font-medium text-wawa-charcoal group-hover:underline">{f.name}</span>
                     <span className="text-[12px] text-wawa-charcoal/55">{f.city}</span>
@@ -345,8 +346,8 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
         </div>
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <p className="text-[12px] tracking-[0.1em] text-wawa-charcoal/50 uppercase">{t.cta}</p>
-          {lang === "tr" && (
-            <Link href="/fuar-takvimi/" className="inline-flex items-center gap-2 text-[15px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal">
+          {(
+            <Link href={CALENDAR_PATH[lang]} className="inline-flex items-center gap-2 text-[15px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal">
               {t.all} ({inRegion.length})
               <ArrowUpRight className="h-4 w-4" aria-hidden />
             </Link>

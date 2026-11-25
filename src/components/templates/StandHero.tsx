@@ -3,17 +3,17 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
-import type { FairPick } from "@/content/fairs";
+import { INTERIOR_PRICES_PATHS, STAND_PRICES_PATH, pageLang, type FairPick } from "@/content/fair-meta";
 import { kvkkPath, privacyPath } from "@/content/legal";
 import { svcLang } from "./service-sections";
 import { VideoBackdrop } from "./VideoBackdrop";
 import { QuoteWizard } from "./QuoteWizard";
 
 const PROJECTS = { tr: "Projeleri inceleyin", en: "See projects", de: "Projekte ansehen" };
-// Fiyat rehberleri yalnızca Türkçe
+// Fiyat rehberleri TR, EN ve DE; IT ve FR İngilizce rehbere gider
 const PRICES = {
-  stand: { label: "Fuar standı fiyatları", href: "/fuar-standi-fiyatlari/" },
-  interior: { label: "İç mimarlık fiyatları", href: "/ic-mimarlik-fiyatlari/" },
+  stand: { label: { tr: "Fuar standı fiyatları", en: "Exhibition stand prices", de: "Messestand Preise" }, href: STAND_PRICES_PATH },
+  interior: { label: { tr: "İç mimarlık fiyatları", en: "Interior design prices", de: "Innenarchitektur Preise" }, href: INTERIOR_PRICES_PATHS },
 };
 
 export function StandHero({
@@ -76,9 +76,9 @@ export function StandHero({
                 <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
               </a>
             )}
-            {lang === "tr" && (
-              <Link href={PRICES[variant].href} className="group inline-flex items-center gap-2 text-[15px] text-white/85 underline decoration-white/30 underline-offset-[6px] hover:text-white hover:decoration-white">
-                {PRICES[variant].label}
+            {(
+              <Link href={PRICES[variant].href[pageLang(lang)]} className="group inline-flex items-center gap-2 text-[15px] text-white/85 underline decoration-white/30 underline-offset-[6px] hover:text-white hover:decoration-white">
+                {PRICES[variant].label[pageLang(lang)]}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
               </Link>
             )}
