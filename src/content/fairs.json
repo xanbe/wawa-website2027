@@ -1,5 +1,22 @@
 [
  {
+  "slug": "nexus-sivil-robotik-fuari",
+  "name": "Nexus - Sivil Robotik Fuarı",
+  "city": "Ankara",
+  "country": "Türkiye",
+  "venue": "Intercontinental Grand Ankara",
+  "region": "tr",
+  "start": "2026-12-01",
+  "end": "2026-12-03",
+  "sector": "Robotik",
+  "url": "https://www.nexus-expo.org",
+  "verified": true,
+  "match": [
+   "nexus",
+   "sivil robotik"
+  ]
+ },
+ {
   "slug": "oman-agrofood",
   "name": "Oman AgroFood",
   "city": "Maskat",
@@ -14,6 +31,22 @@
   "match": [
    "agrofood",
    "oman agrofood"
+  ]
+ },
+ {
+  "slug": "sedec-guvenlik-ve-savunma-konferansi-ve-fuari",
+  "name": "SEDEC - Güvenlik ve Savunma Konferansı ve Fuarı",
+  "city": "Ankara",
+  "country": "Türkiye",
+  "venue": "Intercontinental Grand Ankara",
+  "region": "tr",
+  "start": "2026-12-01",
+  "end": "2026-12-03",
+  "sector": "Savunma ve güvenlik",
+  "url": "https://www.expointurkey.org/tr/fuar/sedec-2026",
+  "verified": false,
+  "match": [
+   "sedec"
   ]
  },
  {
@@ -49,6 +82,22 @@
   ]
  },
  {
+  "slug": "cruise-ship-interiors-design-expo-europe",
+  "name": "Cruise Ship Interiors Design Expo Europe",
+  "city": "Hamburg",
+  "country": "Almanya",
+  "venue": "Hamburg Messe",
+  "region": "eu",
+  "start": "2026-12-02",
+  "end": "2026-12-03",
+  "sector": "Gemi iç mekan tasarımı",
+  "url": "https://cruiseshipinteriors-europe.com/",
+  "verified": true,
+  "match": [
+   "cruise ship interiors"
+  ]
+ },
+ {
   "slug": "horeca-fair-izmir",
   "name": "Horeca Fair İzmir",
   "city": "İzmir",
@@ -63,6 +112,22 @@
   "match": [
    "horeca fair",
    "horeca izmir"
+  ]
+ },
+ {
+  "slug": "international-workboat-show",
+  "name": "International WorkBoat Show",
+  "city": "New Orleans",
+  "country": "ABD",
+  "venue": "Ernest N. Morial Convention Center",
+  "region": "am",
+  "start": "2026-12-02",
+  "end": "2026-12-04",
+  "sector": "Ticari denizcilik",
+  "url": "https://www.workboatshow.com/",
+  "verified": true,
+  "match": [
+   "workboat"
   ]
  },
  {
@@ -166,6 +231,22 @@
   ]
  },
  {
+  "slug": "imeef-istanbul-muzik-endustrileri-ve-ekipmanlari-fuari",
+  "name": "İMEEF - İstanbul Müzik Endüstrileri ve Ekipmanları Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2026-12-03",
+  "end": "2026-12-06",
+  "sector": "Müzik endüstrisi",
+  "url": "https://www.imeef.com",
+  "verified": true,
+  "match": [
+   "imeef"
+  ]
+ },
+ {
   "slug": "mijex-muscat-international-jewelry-exhibition",
   "name": "MIJEX (Muscat International Jewelry Exhibition)",
   "city": "Maskat",
@@ -197,6 +278,40 @@
   "match": [
    "inter leather",
    "cairo leather"
+  ]
+ },
+ {
+  "slug": "the-big-5-construct-syria",
+  "name": "The Big 5 Construct Syria",
+  "city": "Şam",
+  "country": "Suriye",
+  "venue": "Syrian Expo Center",
+  "region": "me",
+  "start": "2026-12-04",
+  "end": "2026-12-06",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.big5constructsyria.com",
+  "verified": true,
+  "match": [
+   "big 5 construct syria",
+   "big5 syria"
+  ]
+ },
+ {
+  "slug": "afrika-prime-gida-fuari",
+  "name": "Afrika Prime Gıda Fuarı",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Pine Beach Belek",
+  "region": "tr",
+  "start": "2026-12-05",
+  "end": "2026-12-07",
+  "sector": "Gıda",
+  "url": "https://www.partnerfuar.com",
+  "verified": true,
+  "match": [
+   "afrika prime",
+   "africa prime"
   ]
  },
  {
@@ -264,6 +379,22 @@
   ]
  },
  {
+  "slug": "horeca-saudi-arabia-riyad",
+  "name": "HORECA Saudi Arabia (Riyad)",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-09",
+  "sector": "Otel, restoran, gıda",
+  "url": "https://www.eventseye.com/fairs/f-horeca-saudi-arabia-riyadh-32434-1.html",
+  "verified": false,
+  "match": [
+   "horeca saudi"
+  ]
+ },
+ {
   "slug": "interpack-mea",
   "name": "interpack MEA",
   "city": "Kahire",
@@ -278,6 +409,53 @@
   "match": [
    "interpack",
    "pacprocess"
+  ]
+ },
+ {
+  "slug": "medtravelexpo",
+  "name": "MedTravelExpo",
+  "city": "Moskova",
+  "country": "Rusya",
+  "region": "eu",
+  "start": "2026-12-07",
+  "end": "2026-12-10",
+  "sector": "Sağlık turizmi",
+  "url": "https://www.fuartakip.com/fuarlar/fuarturdetay.asp?ID=24900",
+  "verified": false,
+  "match": [
+   "medtravelexpo"
+  ]
+ },
+ {
+  "slug": "saudi-horeca",
+  "name": "Saudi Horeca",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-09",
+  "sector": "Otelcilik ve horeca",
+  "url": "https://expotim.com/fuar/saudi-horeca-riyad-2026",
+  "verified": false,
+  "match": [
+   "saudi horeca"
+  ]
+ },
+ {
+  "slug": "saudi-stitch-and-tex",
+  "name": "Saudi Stitch & Tex",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "The Arena Riyadh",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-09",
+  "sector": "Tekstil makineleri",
+  "url": "https://www.eventseye.com/fairs/f-saudi-stitch-and-tex-32232-1.html",
+  "verified": false,
+  "match": [
+   "saudi stitch"
   ]
  },
  {
@@ -363,6 +541,38 @@
   ]
  },
  {
+  "slug": "seatrade-maritime-qatar",
+  "name": "Seatrade Maritime Qatar",
+  "city": "Doha",
+  "country": "Katar",
+  "venue": "Sheraton Grand Doha",
+  "region": "me",
+  "start": "2026-12-08",
+  "end": "2026-12-09",
+  "sector": "Denizcilik",
+  "url": "https://www.eventseye.com/fairs/f-seatrade-maritime-qatar-32922-1.html",
+  "verified": false,
+  "match": [
+   "seatrade qatar"
+  ]
+ },
+ {
+  "slug": "simi",
+  "name": "Simi",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2026-12-08",
+  "end": "2026-12-10",
+  "sector": "Gayrimenkul",
+  "url": "https://www.salonsimi.com",
+  "verified": true,
+  "match": [
+   "simi"
+  ]
+ },
+ {
   "slug": "surfex",
   "name": "Surfex",
   "city": "Şarika",
@@ -376,6 +586,22 @@
   "verified": true,
   "match": [
    "surfex"
+  ]
+ },
+ {
+  "slug": "istanbul-yerel-marketler-bulusmasi-ve-fuari",
+  "name": "İstanbul Yerel Marketler Buluşması ve Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Wow İstanbul Hotels and Convention Center",
+  "region": "tr",
+  "start": "2026-12-09",
+  "end": "2026-12-10",
+  "sector": "Perakende",
+  "url": "https://www.focusfairs.com",
+  "verified": true,
+  "match": [
+   "yerel marketler"
   ]
  },
  {
@@ -412,6 +638,57 @@
   ]
  },
  {
+  "slug": "pri-show-performance-racing-industry",
+  "name": "PRI Show (Performance Racing Industry)",
+  "city": "Indianapolis",
+  "country": "ABD",
+  "venue": "Indiana Convention Center",
+  "region": "am",
+  "start": "2026-12-10",
+  "end": "2026-12-12",
+  "sector": "Performans otomotiv",
+  "url": "https://www.performanceracing.com/tradeshow",
+  "verified": true,
+  "match": [
+   "pri show",
+   "performance racing"
+  ]
+ },
+ {
+  "slug": "tdk-deri-ve-kurk-moda-sov",
+  "name": "TDK Deri ve Kürk Moda Şov",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Kaya Palazzo Golf Resort",
+  "region": "tr",
+  "start": "2026-12-10",
+  "end": "2026-12-13",
+  "sector": "Deri ve kürk",
+  "url": "https://www.tdkfuarcilik.com",
+  "verified": true,
+  "match": [
+   "tdk deri",
+   "deri ve kürk"
+  ]
+ },
+ {
+  "slug": "yenikapi-boat-show",
+  "name": "Yenikapı Boat Show",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2026-12-12",
+  "end": "2026-12-20",
+  "sector": "Denizcilik",
+  "url": "https://www.artifuar.com",
+  "verified": true,
+  "match": [
+   "yenikapı boat show",
+   "yenikapi boat"
+  ]
+ },
+ {
   "slug": "oil-and-gas-technology-exhibition-bagdat",
   "name": "Oil and Gas Technology Exhibition (Bağdat)",
   "city": "Bağdat",
@@ -425,6 +702,55 @@
   "match": [
    "oil and gas technology",
    "baghdad oil"
+  ]
+ },
+ {
+  "slug": "gulf-4p",
+  "name": "Gulf 4P",
+  "city": "Dammam",
+  "country": "Suudi Arabistan",
+  "venue": "Dhahran International Exhibition Centre",
+  "region": "me",
+  "start": "2026-12-14",
+  "end": "2026-12-17",
+  "sector": "Ambalaj, plastik, baskı",
+  "url": "https://www.gulf4p.com/",
+  "verified": true,
+  "match": [
+   "gulf 4p"
+  ]
+ },
+ {
+  "slug": "mach-and-tools-saudi",
+  "name": "Mach & Tools Saudi",
+  "city": "Dammam",
+  "country": "Suudi Arabistan",
+  "venue": "Dhahran International Exhibition Centre",
+  "region": "me",
+  "start": "2026-12-14",
+  "end": "2026-12-17",
+  "sector": "Makine ve takım tezgahı",
+  "url": "https://www.machntools.com/",
+  "verified": true,
+  "match": [
+   "mach & tools",
+   "mach and tools"
+  ]
+ },
+ {
+  "slug": "china-homelife-dubai",
+  "name": "China Homelife Dubai",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2026-12-15",
+  "end": "2026-12-17",
+  "sector": "Ev ürünleri ve tekstil",
+  "url": "https://www.chinahomelife.ae/",
+  "verified": true,
+  "match": [
+   "china homelife"
   ]
  },
  {
@@ -458,6 +784,22 @@
   "verified": true,
   "match": [
    "gafshoes"
+  ]
+ },
+ {
+  "slug": "ihtisas-cami-yapi-ekipmanlari-fuari",
+  "name": "İhtisas Cami Yapı Ekipmanları Fuarı",
+  "city": "Ankara",
+  "country": "Türkiye",
+  "venue": "Anfa Altınpark Fuar Merkezi",
+  "region": "tr",
+  "start": "2026-12-17",
+  "end": "2026-12-20",
+  "sector": "Yapı ekipmanları",
+  "url": "https://www.proaktiffuarcilik.com",
+  "verified": true,
+  "match": [
+   "cami yapı"
   ]
  },
  {
@@ -506,6 +848,39 @@
   "match": [
    "icfe",
    "carpet and flooring"
+  ]
+ },
+ {
+  "slug": "surf-expo-ocak",
+  "name": "Surf Expo (Ocak)",
+  "city": "Orlando",
+  "country": "ABD",
+  "venue": "Orange County Convention Center",
+  "region": "am",
+  "start": "2027-01-06",
+  "end": "2027-01-08",
+  "sector": "Plaj ve su sporları",
+  "url": "https://www.surfexpo.com/",
+  "verified": true,
+  "match": [
+   "surf expo"
+  ]
+ },
+ {
+  "slug": "afro-plast-expo",
+  "name": "Afro Plast Expo",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-01-09",
+  "end": "2027-01-12",
+  "sector": "Plastik ve kauçuk",
+  "url": "https://afroplast.com/",
+  "verified": true,
+  "match": [
+   "afro plast",
+   "afroplast"
   ]
  },
  {
@@ -709,6 +1084,22 @@
   ]
  },
  {
+  "slug": "infratech",
+  "name": "InfraTech",
+  "city": "Rotterdam",
+  "country": "Hollanda",
+  "venue": "Rotterdam Ahoy",
+  "region": "eu",
+  "start": "2027-01-12",
+  "end": "2027-01-15",
+  "sector": "Altyapı",
+  "url": "https://www.eventseye.com/fairs/f-infratech-belgium-11463-1.html",
+  "verified": false,
+  "match": [
+   "infratech"
+  ]
+ },
+ {
   "slug": "interior-design-furnishing-expo",
   "name": "Interior Design Furnishing Expo",
   "city": "Maskat",
@@ -825,6 +1216,22 @@
   ]
  },
  {
+  "slug": "denimsandjeans-egypt",
+  "name": "Denimsandjeans Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "InterContinental Cairo Citystars",
+  "region": "me",
+  "start": "2027-01-13",
+  "end": "2027-01-14",
+  "sector": "Denim ve kot",
+  "url": "https://egypt.denimsandjeans.com/",
+  "verified": true,
+  "match": [
+   "denimsandjeans"
+  ]
+ },
+ {
   "slug": "marca-by-bolognafiere",
   "name": "MARCA by BolognaFiere",
   "city": "Bologna",
@@ -924,6 +1331,23 @@
   ]
  },
  {
+  "slug": "salon-international-de-la-lingerie-and-interfiliere-paris",
+  "name": "Salon International de la Lingerie & Interfilière Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-01-16",
+  "end": "2027-01-18",
+  "sector": "İç giyim",
+  "url": "https://saloninternationaldelalingerie.com/",
+  "verified": true,
+  "match": [
+   "salon international de la lingerie",
+   "interfiliere"
+  ]
+ },
+ {
   "slug": "who-s-next-paris",
   "name": "Who's Next Paris",
   "city": "Paris",
@@ -938,6 +1362,38 @@
   "match": [
    "who's next",
    "whos next"
+  ]
+ },
+ {
+  "slug": "hoga",
+  "name": "HOGA",
+  "city": "Nürnberg",
+  "country": "Almanya",
+  "venue": "Messe Nürnberg",
+  "region": "eu",
+  "start": "2027-01-17",
+  "end": "2027-01-19",
+  "sector": "Otelcilik ve gastronomi",
+  "url": "https://www.hoga-messe.de",
+  "verified": true,
+  "match": [
+   "hoga"
+  ]
+ },
+ {
+  "slug": "hoga-nurnberg",
+  "name": "HOGA Nürnberg",
+  "city": "Nürnberg",
+  "country": "Almanya",
+  "venue": "NürnbergMesse",
+  "region": "eu",
+  "start": "2027-01-17",
+  "end": "2027-01-19",
+  "sector": "Otel ve gastronomi",
+  "url": "https://www.hoga-messe.de/de/",
+  "verified": true,
+  "match": [
+   "hoga"
   ]
  },
  {
@@ -975,6 +1431,39 @@
   ]
  },
  {
+  "slug": "hdaw-heavy-duty-aftermarket-week",
+  "name": "HDAW (Heavy Duty Aftermarket Week)",
+  "city": "Grapevine",
+  "country": "ABD",
+  "venue": "Gaylord Texan Resort & Convention Center",
+  "region": "am",
+  "start": "2027-01-18",
+  "end": "2027-01-21",
+  "sector": "Ağır vasıta yedek parça",
+  "url": "https://www.hdaw.org/",
+  "verified": true,
+  "match": [
+   "hdaw"
+  ]
+ },
+ {
+  "slug": "powergen-international",
+  "name": "POWERGEN International",
+  "city": "Salt Lake City",
+  "country": "ABD",
+  "venue": "Salt Palace Convention Center",
+  "region": "am",
+  "start": "2027-01-18",
+  "end": "2027-01-21",
+  "sector": "Enerji üretimi",
+  "url": "https://www.powergen.com/",
+  "verified": true,
+  "match": [
+   "powergen",
+   "power-gen"
+  ]
+ },
+ {
   "slug": "aeedc-dubai",
   "name": "AEEDC Dubai",
   "city": "Dubai",
@@ -988,6 +1477,53 @@
   "verified": true,
   "match": [
    "aeedc"
+  ]
+ },
+ {
+  "slug": "content-americas",
+  "name": "Content Americas",
+  "city": "Miami",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-01-19",
+  "end": "2027-01-21",
+  "sector": "Dizi ve içerik",
+  "url": "https://www.ito.org.tr/tr/fuarlar/detay/content-americas-2027",
+  "verified": true,
+  "match": [
+   "content americas"
+  ]
+ },
+ {
+  "slug": "formex",
+  "name": "Formex",
+  "city": "Stockholm",
+  "country": "İsveç",
+  "venue": "Stockholmsmässan",
+  "region": "eu",
+  "start": "2027-01-19",
+  "end": "2027-01-21",
+  "sector": "Dekorasyon ve hediyelik",
+  "url": "https://formex.se/",
+  "verified": true,
+  "match": [
+   "formex"
+  ]
+ },
+ {
+  "slug": "hyvolution-paris",
+  "name": "Hyvolution Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-01-19",
+  "end": "2027-01-21",
+  "sector": "Hidrojen",
+  "url": "https://paris.hyvolution.com/en",
+  "verified": true,
+  "match": [
+   "hyvolution"
   ]
  },
  {
@@ -1025,6 +1561,23 @@
   ]
  },
  {
+  "slug": "intermoda-ayakkabi-fuari",
+  "name": "Intermoda Ayakkabı Fuarı",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "Fuarizmir",
+  "region": "tr",
+  "start": "2027-01-19",
+  "end": "2027-01-22",
+  "sector": "Ayakkabı",
+  "url": "https://www.intermodashoes.com",
+  "verified": true,
+  "match": [
+   "intermoda",
+   "intermoda shoes"
+  ]
+ },
+ {
   "slug": "imm-cologne",
   "name": "imm cologne",
   "city": "Köln",
@@ -1058,6 +1611,22 @@
   ]
  },
  {
+  "slug": "modexpo-hazir-giyim-ve-tekstil-fuari",
+  "name": "Modexpo Hazır Giyim ve Tekstil Fuarı",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "Fuarizmir",
+  "region": "tr",
+  "start": "2027-01-19",
+  "end": "2027-01-22",
+  "sector": "Hazır giyim",
+  "url": "https://www.akort.com",
+  "verified": true,
+  "match": [
+   "modexpo"
+  ]
+ },
+ {
   "slug": "perimeter-protection",
   "name": "Perimeter Protection",
   "city": "Nürnberg",
@@ -1071,6 +1640,22 @@
   "verified": true,
   "match": [
    "perimeter protection"
+  ]
+ },
+ {
+  "slug": "premiere-vision-new-york",
+  "name": "Première Vision New York",
+  "city": "New York",
+  "country": "ABD",
+  "venue": "Center 415",
+  "region": "am",
+  "start": "2027-01-19",
+  "end": "2027-01-20",
+  "sector": "Kumaş ve tekstil",
+  "url": "https://newyork.premierevision.com/",
+  "verified": true,
+  "match": [
+   "premiere vision new york"
   ]
  },
  {
@@ -1140,6 +1725,38 @@
   ]
  },
  {
+  "slug": "alanya-otel-restoran-kafe-ekipmanlari-fuari",
+  "name": "Alanya Otel, Restoran, Kafe Ekipmanları Fuarı",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Konaklı Kültür Merkezi",
+  "region": "tr",
+  "start": "2027-01-20",
+  "end": "2027-01-22",
+  "sector": "Otel ekipmanları",
+  "url": "https://www.basakfuar.com",
+  "verified": true,
+  "match": [
+   "alanya otel"
+  ]
+ },
+ {
+  "slug": "electricity-eurasia",
+  "name": "Electricity Eurasia",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-01-20",
+  "end": "2027-01-22",
+  "sector": "Elektrik",
+  "url": "https://www.expointurkey.org/tr/fuar/electricity-eurasia-2027",
+  "verified": false,
+  "match": [
+   "electricity eurasia"
+  ]
+ },
+ {
   "slug": "fitur",
   "name": "FITUR",
   "city": "Madrid",
@@ -1169,6 +1786,22 @@
   "verified": true,
   "match": [
    "icci"
+  ]
+ },
+ {
+  "slug": "lamma",
+  "name": "LAMMA",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-01-20",
+  "end": "2027-01-21",
+  "sector": "Tarım makineleri",
+  "url": "https://www.lammashow.com/visit",
+  "verified": true,
+  "match": [
+   "lamma"
   ]
  },
  {
@@ -1288,6 +1921,39 @@
   ]
  },
  {
+  "slug": "toronto-market-week",
+  "name": "Toronto Market Week",
+  "city": "Mississauga",
+  "country": "Kanada",
+  "venue": "The International Centre",
+  "region": "am",
+  "start": "2027-01-23",
+  "end": "2027-01-26",
+  "sector": "Hazır giyim",
+  "url": "https://www.torontomarketweek.ca/",
+  "verified": true,
+  "match": [
+   "toronto market week"
+  ]
+ },
+ {
+  "slug": "gift-home-market-toronto",
+  "name": "Gift + Home Market Toronto",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Toronto Congress Centre",
+  "region": "am",
+  "start": "2027-01-24",
+  "end": "2027-01-28",
+  "sector": "Hediyelik ve ev ürünleri",
+  "url": "https://cangift.org/toronto-spring-gift-home-market",
+  "verified": true,
+  "match": [
+   "gift + home market",
+   "cangift"
+  ]
+ },
+ {
   "slug": "january-furniture-show",
   "name": "January Furniture Show",
   "city": "Birmingham",
@@ -1350,6 +2016,23 @@
   "verified": true,
   "match": [
    "idex"
+  ]
+ },
+ {
+  "slug": "medlab-middle-east",
+  "name": "Medlab Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-01-25",
+  "end": "2027-01-28",
+  "sector": "Tıbbi laboratuvar",
+  "url": "https://www.medlabme.com/en/home.html",
+  "verified": true,
+  "match": [
+   "medlab middle east",
+   "medlab me"
   ]
  },
  {
@@ -1485,6 +2168,23 @@
   ]
  },
  {
+  "slug": "ifam-intronika-mte-slovenia",
+  "name": "IFAM / Intronika / MTE Slovenia",
+  "city": "Ljubljana",
+  "country": "Slovenya",
+  "venue": "Ljubljana Fuar ve Kongre Merkezi",
+  "region": "eu",
+  "start": "2027-01-26",
+  "end": "2027-01-28",
+  "sector": "Otomasyon ve metal işleme",
+  "url": "http://icm.si/our-events/",
+  "verified": true,
+  "match": [
+   "ifam",
+   "intronika"
+  ]
+ },
+ {
   "slug": "ipm-essen",
   "name": "IPM ESSEN",
   "city": "Essen",
@@ -1550,6 +2250,38 @@
   ]
  },
  {
+  "slug": "stone-poznan",
+  "name": "STONE Poznań",
+  "city": "Poznan",
+  "country": "Polonya",
+  "venue": "MTP Poznań",
+  "region": "eu",
+  "start": "2027-01-26",
+  "end": "2027-01-29",
+  "sector": "Doğal taş",
+  "url": "https://targistone.pl/en",
+  "verified": true,
+  "match": [
+   "stone poznan"
+  ]
+ },
+ {
+  "slug": "windoor-tech",
+  "name": "WINDOOR-TECH",
+  "city": "Poznan",
+  "country": "Polonya",
+  "venue": "MTP Poznań",
+  "region": "eu",
+  "start": "2027-01-26",
+  "end": "2027-01-29",
+  "sector": "Pencere ve kapı üretimi",
+  "url": "https://windoortech.pl/en",
+  "verified": true,
+  "match": [
+   "windoor-tech"
+  ]
+ },
+ {
   "slug": "world-of-coffee-dubai",
   "name": "World of Coffee Dubai",
   "city": "Dubai",
@@ -1563,6 +2295,22 @@
   "verified": true,
   "match": [
    "world of coffee"
+  ]
+ },
+ {
+  "slug": "agromashexpo",
+  "name": "AGROmashEXPO",
+  "city": "Budapeşte",
+  "country": "Macaristan",
+  "venue": "Hungexpo",
+  "region": "eu",
+  "start": "2027-01-27",
+  "end": "2027-01-30",
+  "sector": "Tarım makineleri",
+  "url": "https://agromashexpo.hu/en",
+  "verified": true,
+  "match": [
+   "agromashexpo"
   ]
  },
  {
@@ -1582,6 +2330,38 @@
   ]
  },
  {
+  "slug": "klimahouse",
+  "name": "Klimahouse",
+  "city": "Bolzano",
+  "country": "İtalya",
+  "venue": "Fiera Bolzano",
+  "region": "eu",
+  "start": "2027-01-27",
+  "end": "2027-01-30",
+  "sector": "Enerji verimli yapı",
+  "url": "https://www.fierabolzano.it/de/klimahouse/",
+  "verified": true,
+  "match": [
+   "klimahouse"
+  ]
+ },
+ {
+  "slug": "pharmapack-europe",
+  "name": "Pharmapack Europe",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-01-27",
+  "end": "2027-01-28",
+  "sector": "İlaç ambalajı",
+  "url": "https://www.pharmapackeurope.com/",
+  "verified": true,
+  "match": [
+   "pharmapack"
+  ]
+ },
+ {
   "slug": "atrax",
   "name": "Atrax",
   "city": "İstanbul",
@@ -1595,6 +2375,22 @@
   "verified": true,
   "match": [
    "atrax"
+  ]
+ },
+ {
+  "slug": "izmir-otel-kafe-restoran-ekipmanlari-fuari",
+  "name": "İzmir Otel, Kafe, Restoran Ekipmanları Fuarı",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "MMO Tepekule Kongre ve Sergi Merkezi",
+  "region": "tr",
+  "start": "2027-01-28",
+  "end": "2027-01-30",
+  "sector": "Otel ekipmanları",
+  "url": "https://www.basakfuar.com",
+  "verified": true,
+  "match": [
+   "izmir otel kafe"
   ]
  },
  {
@@ -1627,6 +2423,22 @@
   "verified": true,
   "match": [
    "ambiente"
+  ]
+ },
+ {
+  "slug": "athens-fashion-trade-show",
+  "name": "Athens Fashion Trade Show",
+  "city": "Atina",
+  "country": "Yunanistan",
+  "venue": "Athens Metropolitan Expo",
+  "region": "eu",
+  "start": "2027-01-29",
+  "end": "2027-01-31",
+  "sector": "Hazır giyim",
+  "url": "https://www.athensfashiontradeshow.gr/en/",
+  "verified": true,
+  "match": [
+   "athens fashion trade show"
   ]
  },
  {
@@ -1675,6 +2487,89 @@
   "verified": true,
   "match": [
    "opti"
+  ]
+ },
+ {
+  "slug": "organic-and-pure-expo",
+  "name": "Organic & Pure Expo",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Lütfi Kırdar Uluslararası Kongre ve Sergi Sarayı",
+  "region": "tr",
+  "start": "2027-01-29",
+  "end": "2027-01-31",
+  "sector": "Organik ürünler",
+  "url": "https://www.organicandpure.com.tr",
+  "verified": true,
+  "match": [
+   "organic & pure",
+   "organic and pure"
+  ]
+ },
+ {
+  "slug": "agri-expo-egypt",
+  "name": "Agri Expo Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-01-30",
+  "end": "2027-02-01",
+  "sector": "Tarım",
+  "url": "https://www.agriexpo-eg.com/",
+  "verified": true,
+  "match": [
+   "agri expo egypt"
+  ]
+ },
+ {
+  "slug": "expotrof",
+  "name": "Expotrof",
+  "city": "Atina",
+  "country": "Yunanistan",
+  "venue": "MEC Paiania",
+  "region": "eu",
+  "start": "2027-01-30",
+  "end": "2027-02-01",
+  "sector": "Gıda ve içecek",
+  "url": "https://expotrof.gr/en",
+  "verified": true,
+  "match": [
+   "expotrof"
+  ]
+ },
+ {
+  "slug": "kff-kayseri-mobilya-fuari",
+  "name": "KFF Kayseri Mobilya Fuarı",
+  "city": "Kayseri",
+  "country": "Türkiye",
+  "venue": "Kayseri OSB Uluslararası Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-01-30",
+  "end": "2027-02-03",
+  "sector": "Mobilya",
+  "url": "https://www.expointurkey.org/tr/fuar/kff-kayseri-mobilya-fuari-2027",
+  "verified": false,
+  "match": [
+   "kff",
+   "kayseri mobilya"
+  ]
+ },
+ {
+  "slug": "shoes-dusseldorf",
+  "name": "Shoes Düsseldorf",
+  "city": "Düsseldorf",
+  "country": "Almanya",
+  "venue": "Messe Düsseldorf",
+  "region": "eu",
+  "start": "2027-01-30",
+  "end": "2027-02-01",
+  "sector": "Ayakkabı",
+  "url": "https://www.eventseye.com/fairs/f-shoes-dusselsorf-1123-1.html",
+  "verified": false,
+  "match": [
+   "shoes düsseldorf",
+   "gallery shoes"
   ]
  },
  {
@@ -1776,6 +2671,22 @@
   ]
  },
  {
+  "slug": "bouwbeurs",
+  "name": "BouwBeurs",
+  "city": "Utrecht",
+  "country": "Hollanda",
+  "venue": "Jaarbeurs Utrecht",
+  "region": "eu",
+  "start": "2027-02-01",
+  "end": "2027-02-05",
+  "sector": "İnşaat",
+  "url": "https://www.bouwbeurs.nl/",
+  "verified": true,
+  "match": [
+   "bouwbeurs"
+  ]
+ },
+ {
   "slug": "cityscape-global",
   "name": "Cityscape Global",
   "city": "Riyad",
@@ -1806,6 +2717,22 @@
   "verified": true,
   "match": [
    "comex"
+  ]
+ },
+ {
+  "slug": "intertex-milano",
+  "name": "Intertex Milano",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Superstudio Maxi",
+  "region": "eu",
+  "start": "2027-02-01",
+  "end": "2027-02-03",
+  "sector": "Tekstil tedariki",
+  "url": "https://intertexmilano.com/",
+  "verified": true,
+  "match": [
+   "intertex milano"
   ]
  },
  {
@@ -1888,6 +2815,23 @@
   "match": [
    "gaziantep penye",
    "penye fuarı"
+  ]
+ },
+ {
+  "slug": "international-leather-show-subat",
+  "name": "International Leather Show (Şubat)",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-02-02",
+  "end": "2027-02-05",
+  "sector": "Deri ve ayakkabı",
+  "url": "https://corferias.com/es/calendario/2027",
+  "verified": true,
+  "match": [
+   "leather show",
+   "ifls"
   ]
  },
  {
@@ -1991,6 +2935,22 @@
   ]
  },
  {
+  "slug": "surface-design-show",
+  "name": "Surface Design Show",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "Business Design Centre",
+  "region": "uk",
+  "start": "2027-02-02",
+  "end": "2027-02-04",
+  "sector": "Yüzey malzemeleri",
+  "url": "https://www.surfacedesignshow.com/",
+  "verified": true,
+  "match": [
+   "surface design show"
+  ]
+ },
+ {
   "slug": "tise-the-international-surface-event",
   "name": "TISE - The International Surface Event",
   "city": "Las Vegas",
@@ -2006,6 +2966,22 @@
    "tise",
    "surfaces",
    "stonexpo"
+  ]
+ },
+ {
+  "slug": "ffcr-stockholm",
+  "name": "FFCR Stockholm",
+  "city": "Stokholm",
+  "country": "İsveç",
+  "venue": "Kistamässan",
+  "region": "eu",
+  "start": "2027-02-03",
+  "end": "2027-02-04",
+  "sector": "Yiyecek ve içecek",
+  "url": "https://www.ffcr.se",
+  "verified": true,
+  "match": [
+   "ffcr"
   ]
  },
  {
@@ -2139,6 +3115,22 @@
   ]
  },
  {
+  "slug": "afa-expo",
+  "name": "AFA Expo",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Toronto Congress Centre",
+  "region": "am",
+  "start": "2027-02-07",
+  "end": "2027-02-09",
+  "sector": "Ayakkabı ve giyim",
+  "url": "https://www.afacanada.com/",
+  "verified": true,
+  "match": [
+   "afa expo"
+  ]
+ },
+ {
   "slug": "magic-new-york",
   "name": "MAGIC New York",
   "city": "New York",
@@ -2185,6 +3177,24 @@
   "verified": true,
   "match": [
    "expo carnes"
+  ]
+ },
+ {
+  "slug": "ime-west-plastec-west-westpack-d-and-m-west",
+  "name": "IME West (PLASTEC West, WestPack, D&M West)",
+  "city": "Anaheim",
+  "country": "ABD",
+  "venue": "Anaheim Convention Center",
+  "region": "am",
+  "start": "2027-02-09",
+  "end": "2027-02-11",
+  "sector": "Plastik, ambalaj, imalat",
+  "url": "https://www.imengineeringwest.com/en/home.html",
+  "verified": true,
+  "match": [
+   "plastec west",
+   "westpack",
+   "ime west"
   ]
  },
  {
@@ -2237,6 +3247,22 @@
   ]
  },
  {
+  "slug": "canadian-concrete-expo",
+  "name": "Canadian Concrete Expo",
+  "city": "Mississauga",
+  "country": "Kanada",
+  "venue": "The International Centre",
+  "region": "am",
+  "start": "2027-02-10",
+  "end": "2027-02-11",
+  "sector": "Beton ve agrega",
+  "url": "https://canadianconcreteexpo.com/",
+  "verified": true,
+  "match": [
+   "canadian concrete expo"
+  ]
+ },
+ {
   "slug": "discover-boating-miami-international-boat-show",
   "name": "Discover Boating Miami International Boat Show",
   "city": "Miami",
@@ -2267,6 +3293,89 @@
   "verified": false,
   "match": [
    "nafem"
+  ]
+ },
+ {
+  "slug": "horeca-athens",
+  "name": "HORECA Athens",
+  "city": "Atina",
+  "country": "Yunanistan",
+  "venue": "Athens Metropolitan Expo",
+  "region": "eu",
+  "start": "2027-02-12",
+  "end": "2027-02-15",
+  "sector": "Otel ve restoran",
+  "url": "https://www.eventseye.com/fairs/f-ho.re.ca-10664-1.html",
+  "verified": false,
+  "match": [
+   "horeca athens"
+  ]
+ },
+ {
+  "slug": "styl-and-kabo",
+  "name": "STYL & KABO",
+  "city": "Brno",
+  "country": "Çekya",
+  "venue": "Brno Fuar Merkezi",
+  "region": "eu",
+  "start": "2027-02-12",
+  "end": "2027-02-14",
+  "sector": "Moda, ayakkabı ve deri",
+  "url": "https://www.bvv.cz/en/styl-kabo",
+  "verified": true,
+  "match": [
+   "styl",
+   "kabo"
+  ]
+ },
+ {
+  "slug": "batibouw",
+  "name": "Batibouw",
+  "city": "Brüksel",
+  "country": "Belçika",
+  "venue": "Brussels Expo",
+  "region": "eu",
+  "start": "2027-02-13",
+  "end": "2027-02-21",
+  "sector": "İnşaat ve yapı",
+  "url": "https://batibouw.com/fr",
+  "verified": true,
+  "match": [
+   "batibouw"
+  ]
+ },
+ {
+  "slug": "ilm-internationale-lederwarenmesse",
+  "name": "ILM – Internationale Lederwarenmesse",
+  "city": "Offenbach",
+  "country": "Almanya",
+  "venue": "Messe Offenbach",
+  "region": "eu",
+  "start": "2027-02-13",
+  "end": "2027-02-15",
+  "sector": "Deri ürünler ve çanta",
+  "url": "https://www.ilm-offenbach.de/en",
+  "verified": true,
+  "match": [
+   "ilm offenbach",
+   "lederwarenmesse"
+  ]
+ },
+ {
+  "slug": "abup-home-and-gift-and-textil",
+  "name": "ABUP Home & Gift & Têxtil",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-02-14",
+  "end": "2027-02-17",
+  "sector": "Ev tekstili ve dekorasyon",
+  "url": "https://www.abup.com.br/",
+  "verified": true,
+  "match": [
+   "abup",
+   "home & gift"
   ]
  },
  {
@@ -2303,6 +3412,23 @@
   ]
  },
  {
+  "slug": "anuga-select-iberica-intersicop",
+  "name": "Anuga Select Ibérica (Intersicop)",
+  "city": "Madrid",
+  "country": "İspanya",
+  "venue": "IFEMA Madrid",
+  "region": "eu",
+  "start": "2027-02-16",
+  "end": "2027-02-18",
+  "sector": "Gıda ve fırıncılık",
+  "url": "https://www.ifema.es/en/anuga-select-iberica",
+  "verified": true,
+  "match": [
+   "anuga select iberica",
+   "intersicop"
+  ]
+ },
+ {
   "slug": "biofach",
   "name": "BIOFACH",
   "city": "Nürnberg",
@@ -2332,6 +3458,22 @@
   "verified": true,
   "match": [
    "e-world"
+  ]
+ },
+ {
+  "slug": "elektrotechnik",
+  "name": "elektrotechnik",
+  "city": "Dortmund",
+  "country": "Almanya",
+  "venue": "Messe Dortmund",
+  "region": "eu",
+  "start": "2027-02-16",
+  "end": "2027-02-18",
+  "sector": "Elektroteknik",
+  "url": "https://www.messe-elektrotechnik.de/en/",
+  "verified": true,
+  "match": [
+   "elektrotechnik"
   ]
  },
  {
@@ -2381,6 +3523,38 @@
   "verified": true,
   "match": [
    "meat attraction"
+  ]
+ },
+ {
+  "slug": "offprice-show-las-vegas-subat",
+  "name": "OFFPRICE Show Las Vegas (Şubat)",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-02-16",
+  "end": "2027-02-18",
+  "sector": "Stok giyim ve aksesuar",
+  "url": "https://www.offpriceshow.com/lasvegas",
+  "verified": true,
+  "match": [
+   "off price",
+   "offprice"
+  ]
+ },
+ {
+  "slug": "smagua",
+  "name": "SMAGUA",
+  "city": "Zaragoza",
+  "country": "İspanya",
+  "venue": "Feria de Zaragoza",
+  "region": "eu",
+  "start": "2027-02-16",
+  "end": "2027-02-18",
+  "sector": "Su ve sulama teknolojisi",
+  "url": "https://www.feriazaragoza.es/smagua",
+  "verified": true,
+  "match": [
+   "smagua"
   ]
  },
  {
@@ -2498,6 +3672,38 @@
   ]
  },
  {
+  "slug": "milano-fashion-and-jewels",
+  "name": "Milano Fashion & Jewels",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Fiera Milano Rho",
+  "region": "eu",
+  "start": "2027-02-20",
+  "end": "2027-02-22",
+  "sector": "Moda aksesuar ve bijuteri",
+  "url": "https://www.eventseye.com/fairs/f-milano-fashion-jewels-32002-1.html",
+  "verified": false,
+  "match": [
+   "milano fashion & jewels"
+  ]
+ },
+ {
+  "slug": "theonemilano",
+  "name": "TheOneMilano",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Fiera Milano Rho",
+  "region": "eu",
+  "start": "2027-02-20",
+  "end": "2027-02-22",
+  "sector": "Kürk ve dış giyim",
+  "url": "https://www.eventseye.com/fairs/f-theonemilano-4521-1.html",
+  "verified": false,
+  "match": [
+   "theonemilano"
+  ]
+ },
+ {
   "slug": "toy-fair-new-york",
   "name": "Toy Fair New York",
   "city": "New York",
@@ -2530,6 +3736,38 @@
   ]
  },
  {
+  "slug": "mipel",
+  "name": "MIPEL",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Fiera Milano Rho",
+  "region": "eu",
+  "start": "2027-02-21",
+  "end": "2027-02-23",
+  "sector": "Çanta ve deri aksesuar",
+  "url": "https://mipel.com/en/",
+  "verified": true,
+  "match": [
+   "mipel"
+  ]
+ },
+ {
+  "slug": "trendset-winter",
+  "name": "TrendSet (Winter)",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-02-21",
+  "end": "2027-02-23",
+  "sector": "İç mekan ve yaşam",
+  "url": "https://trendset.de/en/",
+  "verified": true,
+  "match": [
+   "trendset"
+  ]
+ },
+ {
   "slug": "expo-revestir",
   "name": "Expo Revestir",
   "city": "São Paulo",
@@ -2543,6 +3781,38 @@
   "verified": true,
   "match": [
    "revestir"
+  ]
+ },
+ {
+  "slug": "wwett-show",
+  "name": "WWETT Show",
+  "city": "Indianapolis",
+  "country": "ABD",
+  "venue": "Indiana Convention Center",
+  "region": "am",
+  "start": "2027-02-22",
+  "end": "2027-02-25",
+  "sector": "Atık su ekipmanları",
+  "url": "https://www.wwettshow.com/en/home.html",
+  "verified": true,
+  "match": [
+   "wwett"
+  ]
+ },
+ {
+  "slug": "agra",
+  "name": "Agra",
+  "city": "Plovdiv",
+  "country": "Bulgaristan",
+  "venue": "Plovdiv Uluslararası Fuarı",
+  "region": "eu",
+  "start": "2027-02-23",
+  "end": "2027-02-27",
+  "sector": "Tarım",
+  "url": "https://www.fair.bg/en/event/2027/agra-2027",
+  "verified": true,
+  "match": [
+   "agra plovdiv"
   ]
  },
  {
@@ -2628,6 +3898,22 @@
   ]
  },
  {
+  "slug": "foodtech-plovdiv",
+  "name": "FOODTECH Plovdiv",
+  "city": "Plovdiv",
+  "country": "Bulgaristan",
+  "venue": "Plovdiv Uluslararası Fuarı",
+  "region": "eu",
+  "start": "2027-02-23",
+  "end": "2027-02-27",
+  "sector": "Gıda teknolojisi ve ambalaj",
+  "url": "https://www.fair.bg/en/event/2027/foodtech-2027",
+  "verified": true,
+  "match": [
+   "foodtech plovdiv"
+  ]
+ },
+ {
   "slug": "lineapelle",
   "name": "Lineapelle",
   "city": "Milano",
@@ -2660,6 +3946,56 @@
   ]
  },
  {
+  "slug": "pumps-and-valves-bilbao-industry",
+  "name": "Pumps & Valves Bilbao (+Industry)",
+  "city": "Bilbao",
+  "country": "İspanya",
+  "venue": "Bilbao Exhibition Centre",
+  "region": "eu",
+  "start": "2027-02-23",
+  "end": "2027-02-25",
+  "sector": "Pompa, vana, fason üretim",
+  "url": "https://www.pumpsvalves.nl/en/",
+  "verified": true,
+  "match": [
+   "pumps & valves bilbao",
+   "+industry",
+   "subcontratacion"
+  ]
+ },
+ {
+  "slug": "the-green-expo",
+  "name": "The Green Expo",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-02-23",
+  "end": "2027-02-25",
+  "sector": "Çevre ve su",
+  "url": "https://www.thegreenexpo.com.mx/en",
+  "verified": true,
+  "match": [
+   "green expo"
+  ]
+ },
+ {
+  "slug": "warsaw-hvac-expo",
+  "name": "Warsaw HVAC Expo",
+  "city": "Varşova",
+  "country": "Polonya",
+  "venue": "Ptak Warsaw Expo",
+  "region": "eu",
+  "start": "2027-02-23",
+  "end": "2027-02-25",
+  "sector": "HVAC",
+  "url": "https://warsawhvacexpo.com/en/",
+  "verified": true,
+  "match": [
+   "warsaw hvac expo"
+  ]
+ },
+ {
   "slug": "packaging-innovations-and-empack",
   "name": "Packaging Innovations & Empack",
   "city": "Birmingham",
@@ -2674,6 +4010,22 @@
   "match": [
    "packaging innovations",
    "empack"
+  ]
+ },
+ {
+  "slug": "pumps-and-valves-dortmund",
+  "name": "Pumps & Valves Dortmund",
+  "city": "Dortmund",
+  "country": "Almanya",
+  "venue": "Messe Dortmund",
+  "region": "eu",
+  "start": "2027-02-24",
+  "end": "2027-02-25",
+  "sector": "Pompa ve vana",
+  "url": "https://www.pumpsvalves-dortmund.de/",
+  "verified": true,
+  "match": [
+   "pumps & valves dortmund"
   ]
  },
  {
@@ -2693,6 +4045,38 @@
   ]
  },
  {
+  "slug": "cadeaux-leipzig",
+  "name": "Cadeaux Leipzig",
+  "city": "Leipzig",
+  "country": "Almanya",
+  "venue": "Leipziger Messe",
+  "region": "eu",
+  "start": "2027-02-27",
+  "end": "2027-03-01",
+  "sector": "Hediyelik eşya",
+  "url": "https://www.cadeaux-leipzig.de",
+  "verified": true,
+  "match": [
+   "cadeaux"
+  ]
+ },
+ {
+  "slug": "distributech",
+  "name": "DISTRIBUTECH",
+  "city": "Atlanta",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-03-01",
+  "end": "2027-03-04",
+  "sector": "Elektrik dağıtımı",
+  "url": "https://www.distributech.com/",
+  "verified": true,
+  "match": [
+   "distributech",
+   "dtech"
+  ]
+ },
+ {
   "slug": "enforce-tac",
   "name": "Enforce Tac",
   "city": "Nürnberg",
@@ -2706,6 +4090,38 @@
   "verified": true,
   "match": [
    "enforce tac"
+  ]
+ },
+ {
+  "slug": "fespa-brasil",
+  "name": "FESPA Brasil",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Expo Center Norte",
+  "region": "am",
+  "start": "2027-03-01",
+  "end": "2027-03-04",
+  "sector": "Dijital baskı",
+  "url": "https://www.fespabrasil.com.br/",
+  "verified": true,
+  "match": [
+   "fespa brasil"
+  ]
+ },
+ {
+  "slug": "hip-hospitality-innovation-planet",
+  "name": "HIP – Hospitality Innovation Planet",
+  "city": "Madrid",
+  "country": "İspanya",
+  "venue": "IFEMA Madrid",
+  "region": "eu",
+  "start": "2027-03-01",
+  "end": "2027-03-03",
+  "sector": "Otel ve restoran",
+  "url": "https://www.expohip.com/",
+  "verified": true,
+  "match": [
+   "hospitality innovation planet"
   ]
  },
  {
@@ -2723,6 +4139,22 @@
   "match": [
    "mwc",
    "mobile world congress"
+  ]
+ },
+ {
+  "slug": "asd-market-week",
+  "name": "ASD Market Week",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "venue": "Las Vegas Convention Center",
+  "region": "am",
+  "start": "2027-03-02",
+  "end": "2027-03-04",
+  "sector": "Hediyelik ve genel tüketim",
+  "url": "https://www.eventseye.com/fairs/f-asd-market-week-1688-1.html",
+  "verified": false,
+  "match": [
+   "asd market week"
   ]
  },
  {
@@ -2775,6 +4207,23 @@
   ]
  },
  {
+  "slug": "marmomac-brazil-vitoria-stone-fair",
+  "name": "Marmomac Brazil (Vitória Stone Fair)",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-03-02",
+  "end": "2027-03-04",
+  "sector": "Doğal taş ve mermer",
+  "url": "https://www.marmomacbrazil.com.br/",
+  "verified": true,
+  "match": [
+   "marmomac brazil",
+   "vitoria stone"
+  ]
+ },
+ {
   "slug": "tire-technology-expo",
   "name": "Tire Technology Expo",
   "city": "Hannover",
@@ -2789,6 +4238,23 @@
   "match": [
    "tire technology",
    "tire"
+  ]
+ },
+ {
+  "slug": "expo-cafe-and-gourmet",
+  "name": "Expo Café & Gourmet",
+  "city": "Guadalajara",
+  "country": "Meksika",
+  "venue": "Expo Guadalajara",
+  "region": "am",
+  "start": "2027-03-03",
+  "end": "2027-03-05",
+  "sector": "Kahve ve gurme gıda",
+  "url": "https://cafeygourmet.com/",
+  "verified": true,
+  "match": [
+   "expo cafe & gourmet",
+   "cafe y gourmet"
   ]
  },
  {
@@ -2905,6 +4371,22 @@
   ]
  },
  {
+  "slug": "premiere-classe",
+  "name": "Première Classe",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Jardin des Tuileries",
+  "region": "eu",
+  "start": "2027-03-05",
+  "end": "2027-03-08",
+  "sector": "Moda aksesuarları",
+  "url": "https://wsn-events.com/en/premiere-classe",
+  "verified": true,
+  "match": [
+   "premiere classe"
+  ]
+ },
+ {
   "slug": "jis-spring-miami",
   "name": "JIS Spring Miami",
   "city": "Miami",
@@ -2935,6 +4417,22 @@
   "match": [
    "restaurant show",
    "irfsny"
+  ]
+ },
+ {
+  "slug": "pdac-convention",
+  "name": "PDAC Convention",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Metro Toronto Convention Centre",
+  "region": "am",
+  "start": "2027-03-07",
+  "end": "2027-03-10",
+  "sector": "Madencilik",
+  "url": "https://www.eventseye.com/fairs/f-pdac-convention-12687-1.html",
+  "verified": false,
+  "match": [
+   "pdac"
   ]
  },
  {
@@ -2971,6 +4469,22 @@
   ]
  },
  {
+  "slug": "seafood-expo-north-america",
+  "name": "Seafood Expo North America",
+  "city": "Boston",
+  "country": "ABD",
+  "venue": "Boston Convention & Exhibition Center",
+  "region": "am",
+  "start": "2027-03-07",
+  "end": "2027-03-09",
+  "sector": "Su ürünleri",
+  "url": "https://www.seafoodexpo.com/north-america",
+  "verified": true,
+  "match": [
+   "seafood expo north america"
+  ]
+ },
+ {
   "slug": "aquatech-amsterdam",
   "name": "Aquatech Amsterdam",
   "city": "Amsterdam",
@@ -2984,6 +4498,54 @@
   "verified": true,
   "match": [
    "aquatech"
+  ]
+ },
+ {
+  "slug": "asia-pacific-sourcing",
+  "name": "Asia-Pacific Sourcing",
+  "city": "Köln",
+  "country": "Almanya",
+  "venue": "Koelnmesse",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Ev ve bahçe tedariki",
+  "url": "https://www.asia-pacificsourcing.com/",
+  "verified": true,
+  "match": [
+   "asia-pacific sourcing"
+  ]
+ },
+ {
+  "slug": "cce-international",
+  "name": "CCE International",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Oluklu mukavva ve karton",
+  "url": "https://www.eventseye.com/fairs/f-cce-international-17855-1.html",
+  "verified": false,
+  "match": [
+   "cce international"
+  ]
+ },
+ {
+  "slug": "cfia-rennes",
+  "name": "CFIA Rennes",
+  "city": "Rennes",
+  "country": "Fransa",
+  "venue": "Parc Expo Rennes Aéroport",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Gıda işleme teknolojisi",
+  "url": "https://www.rennes.cfiaexpo.com/",
+  "verified": true,
+  "match": [
+   "cfia"
   ]
  },
  {
@@ -3003,6 +4565,22 @@
   ]
  },
  {
+  "slug": "eurogastro",
+  "name": "EuroGastro",
+  "city": "Varşova",
+  "country": "Polonya",
+  "venue": "Ptak Warsaw Expo",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Otel ve restoran",
+  "url": "https://eurogastro.com.pl/en/",
+  "verified": true,
+  "match": [
+   "eurogastro"
+  ]
+ },
+ {
   "slug": "expoagro",
   "name": "Expoagro",
   "city": "San Nicolás",
@@ -3016,6 +4594,38 @@
   "verified": true,
   "match": [
    "expoagro"
+  ]
+ },
+ {
+  "slug": "fimec",
+  "name": "FIMEC",
+  "city": "Novo Hamburgo",
+  "country": "Brezilya",
+  "venue": "Fenac",
+  "region": "am",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Deri ve ayakkabı tedariki",
+  "url": "https://www.fimec.com.br/",
+  "verified": true,
+  "match": [
+   "fimec"
+  ]
+ },
+ {
+  "slug": "greentech-americas",
+  "name": "GreenTech Americas",
+  "city": "Querétaro",
+  "country": "Meksika",
+  "venue": "Querétaro Centro de Congresos",
+  "region": "am",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Seracılık",
+  "url": "https://www.greentech.nl/americas",
+  "verified": true,
+  "match": [
+   "greentech americas"
   ]
  },
  {
@@ -3036,6 +4646,38 @@
   ]
  },
  {
+  "slug": "ice-europe",
+  "name": "ICE Europe",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-11",
+  "sector": "Converting teknolojileri",
+  "url": "https://www.ice-x.com/",
+  "verified": true,
+  "match": [
+   "ice europe"
+  ]
+ },
+ {
+  "slug": "stocexpo",
+  "name": "StocExpo",
+  "city": "Rotterdam",
+  "country": "Hollanda",
+  "venue": "Rotterdam Ahoy",
+  "region": "eu",
+  "start": "2027-03-09",
+  "end": "2027-03-10",
+  "sector": "Tank depolama",
+  "url": "https://www.stocexpo.com/en/",
+  "verified": true,
+  "match": [
+   "stocexpo"
+  ]
+ },
+ {
   "slug": "the-inspired-home-show",
   "name": "The Inspired Home Show",
   "city": "Şikago",
@@ -3053,6 +4695,38 @@
   ]
  },
  {
+  "slug": "the-work-truck-show",
+  "name": "The Work Truck Show",
+  "city": "Indianapolis",
+  "country": "ABD",
+  "venue": "Indiana Convention Center",
+  "region": "am",
+  "start": "2027-03-09",
+  "end": "2027-03-12",
+  "sector": "Ticari araç ekipmanları",
+  "url": "https://www.worktruckweek.com/",
+  "verified": true,
+  "match": [
+   "work truck show"
+  ]
+ },
+ {
+  "slug": "futurmoda-mart",
+  "name": "Futurmoda (Mart)",
+  "city": "Alicante",
+  "country": "İspanya",
+  "venue": "Fira Alacant",
+  "region": "eu",
+  "start": "2027-03-10",
+  "end": "2027-03-11",
+  "sector": "Ayakkabı ve deri komponent",
+  "url": "https://futurmoda.es/",
+  "verified": true,
+  "match": [
+   "futurmoda"
+  ]
+ },
+ {
   "slug": "key-the-energy-transition-expo",
   "name": "KEY – The Energy Transition Expo",
   "city": "Rimini",
@@ -3067,6 +4741,37 @@
   "match": [
    "key energy",
    "key expo"
+  ]
+ },
+ {
+  "slug": "vision-expo",
+  "name": "Vision Expo",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-03-10",
+  "end": "2027-03-13",
+  "sector": "Optik ve gözlük",
+  "url": "https://www.visionexpo.com/",
+  "verified": true,
+  "match": [
+   "vision expo"
+  ]
+ },
+ {
+  "slug": "amberif",
+  "name": "AMBERIF",
+  "city": "Gdansk",
+  "country": "Polonya",
+  "venue": "AmberExpo",
+  "region": "eu",
+  "start": "2027-03-11",
+  "end": "2027-03-13",
+  "sector": "Kehribar ve mücevher",
+  "url": "https://amberif.pl/en",
+  "verified": true,
+  "match": [
+   "amberif"
   ]
  },
  {
@@ -3099,6 +4804,39 @@
   "verified": true,
   "match": [
    "internorga"
+  ]
+ },
+ {
+  "slug": "iwce-international-window-coverings-expo",
+  "name": "IWCE - International Window Coverings Expo",
+  "city": "Tampa",
+  "country": "ABD",
+  "venue": "Tampa Convention Center",
+  "region": "am",
+  "start": "2027-03-14",
+  "end": "2027-03-16",
+  "sector": "Perde ve stor",
+  "url": "https://www.iwce-vision.com/",
+  "verified": true,
+  "match": [
+   "window coverings",
+   "iwce"
+  ]
+ },
+ {
+  "slug": "ja-new-york-spring",
+  "name": "JA New York (Spring)",
+  "city": "New York",
+  "country": "ABD",
+  "venue": "Jacob K. Javits Convention Center",
+  "region": "am",
+  "start": "2027-03-14",
+  "end": "2027-03-16",
+  "sector": "Mücevher",
+  "url": "https://www.ja-newyork.com/",
+  "verified": true,
+  "match": [
+   "ja new york"
   ]
  },
  {
@@ -3199,6 +4937,55 @@
   ]
  },
  {
+  "slug": "europropre",
+  "name": "Europropre",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-03-16",
+  "end": "2027-03-18",
+  "sector": "Profesyonel temizlik",
+  "url": "https://www.europropre.com/en",
+  "verified": true,
+  "match": [
+   "europropre"
+  ]
+ },
+ {
+  "slug": "figan",
+  "name": "FIGAN",
+  "city": "Zaragoza",
+  "country": "İspanya",
+  "venue": "Feria de Zaragoza",
+  "region": "eu",
+  "start": "2027-03-16",
+  "end": "2027-03-19",
+  "sector": "Hayvancılık",
+  "url": "https://www.feriazaragoza.es/figan",
+  "verified": true,
+  "match": [
+   "figan"
+  ]
+ },
+ {
+  "slug": "hygiene-and-nonwoven-show-uae",
+  "name": "Hygiene & Nonwoven Show UAE",
+  "city": "Abu Dabi",
+  "country": "BAE",
+  "venue": "ADNEC",
+  "region": "me",
+  "start": "2027-03-16",
+  "end": "2027-03-18",
+  "sector": "Hijyen ve nonwoven",
+  "url": "https://www.hygieneandnonwoven.com/",
+  "verified": true,
+  "match": [
+   "hygiene & nonwoven",
+   "nonwoven"
+  ]
+ },
+ {
   "slug": "ids",
   "name": "IDS",
   "city": "Köln",
@@ -3293,6 +5080,22 @@
   "verified": true,
   "match": [
    "solar solutions"
+  ]
+ },
+ {
+  "slug": "the-cleaning-show-london",
+  "name": "The Cleaning Show London",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-03-16",
+  "end": "2027-03-18",
+  "sector": "Temizlik ve hijyen",
+  "url": "https://www.eventseye.com/fairs/f-the-cleaning-show-8481-1.html",
+  "verified": false,
+  "match": [
+   "cleaning show"
   ]
  },
  {
@@ -3428,6 +5231,54 @@
   ]
  },
  {
+  "slug": "performance-days-munich",
+  "name": "PERFORMANCE DAYS Munich",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-03-17",
+  "end": "2027-03-18",
+  "sector": "Fonksiyonel kumaş",
+  "url": "https://www.performancedays.com/",
+  "verified": true,
+  "match": [
+   "performance days"
+  ]
+ },
+ {
+  "slug": "renexpo-austria",
+  "name": "RENEXPO Austria",
+  "city": "Salzburg",
+  "country": "Avusturya",
+  "venue": "Messezentrum Salzburg",
+  "region": "eu",
+  "start": "2027-03-17",
+  "end": "2027-03-18",
+  "sector": "Yenilenebilir enerji",
+  "url": "https://www.renexpo.at/de/",
+  "verified": true,
+  "match": [
+   "renexpo"
+  ]
+ },
+ {
+  "slug": "bodrum-otel-kafe-restoran-ekipmanlari-fuari",
+  "name": "Bodrum Otel, Kafe, Restoran Ekipmanları Fuarı",
+  "city": "Muğla",
+  "country": "Türkiye",
+  "venue": "Herodot Kültür Merkezi",
+  "region": "tr",
+  "start": "2027-03-18",
+  "end": "2027-03-20",
+  "sector": "Otel ekipmanları",
+  "url": "https://www.basakfuar.com",
+  "verified": true,
+  "match": [
+   "bodrum otel"
+  ]
+ },
+ {
   "slug": "cairo-mother-and-la-pyjama-mart",
   "name": "Cairo Mother & La Pyjama (Mart)",
   "city": "Kahire",
@@ -3527,6 +5378,22 @@
   ]
  },
  {
+  "slug": "bar-and-restaurant-expo",
+  "name": "Bar & Restaurant Expo",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "venue": "Las Vegas Convention Center",
+  "region": "am",
+  "start": "2027-03-22",
+  "end": "2027-03-24",
+  "sector": "Bar ve restoran",
+  "url": "https://www.barandrestaurantexpo.com/",
+  "verified": true,
+  "match": [
+   "bar & restaurant expo"
+  ]
+ },
+ {
   "slug": "iraq-international-energy-expo-and-conference-iee",
   "name": "Iraq International Energy Expo & Conference (IEE)",
   "city": "Bağdat",
@@ -3557,6 +5424,22 @@
   "verified": true,
   "match": [
    "jeddah construct"
+  ]
+ },
+ {
+  "slug": "professional-beauty-gcc",
+  "name": "Professional Beauty GCC",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Festival Arena by InterContinental",
+  "region": "me",
+  "start": "2027-03-22",
+  "end": "2027-03-23",
+  "sector": "Profesyonel güzellik",
+  "url": "https://professionalbeauty.ae/",
+  "verified": true,
+  "match": [
+   "professional beauty"
   ]
  },
  {
@@ -3606,6 +5489,23 @@
   "verified": true,
   "match": [
    "elevator show"
+  ]
+ },
+ {
+  "slug": "the-uk-concrete-show",
+  "name": "The UK Concrete Show",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-03-23",
+  "end": "2027-03-24",
+  "sector": "Beton ve yapı",
+  "url": "https://concreteshow.co.uk/",
+  "verified": true,
+  "match": [
+   "concrete show",
+   "concrete expo"
   ]
  },
  {
@@ -3692,6 +5592,23 @@
   ]
  },
  {
+  "slug": "expo-toybir-oyuncak-ve-cocuk-gerecleri-fuari",
+  "name": "Expo Toybir - Oyuncak ve Çocuk Gereçleri Fuarı",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Sueno Hotels Deluxe Belek Kongre Merkezi",
+  "region": "tr",
+  "start": "2027-03-25",
+  "end": "2027-03-28",
+  "sector": "Oyuncak",
+  "url": "https://www.planbmice.com",
+  "verified": true,
+  "match": [
+   "toybir",
+   "expo toybir"
+  ]
+ },
+ {
   "slug": "kayseri-tarim-fuari",
   "name": "Kayseri Tarım Fuarı",
   "city": "Kayseri",
@@ -3725,6 +5642,38 @@
   ]
  },
  {
+  "slug": "optic-world-izmir",
+  "name": "Optic World İzmir",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "Fuarizmir",
+  "region": "tr",
+  "start": "2027-03-26",
+  "end": "2027-03-28",
+  "sector": "Optik",
+  "url": "https://www.izfas.com.tr",
+  "verified": true,
+  "match": [
+   "optic world"
+  ]
+ },
+ {
+  "slug": "livestock-future-expo",
+  "name": "Livestock Future Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Exhibition Centre",
+  "region": "me",
+  "start": "2027-03-28",
+  "end": "2027-03-30",
+  "sector": "Hayvancılık",
+  "url": "https://www.livestock-expo.com/en",
+  "verified": true,
+  "match": [
+   "livestock future"
+  ]
+ },
+ {
   "slug": "duphat",
   "name": "DUPHAT",
   "city": "Dubai",
@@ -3754,6 +5703,55 @@
   "verified": true,
   "match": [
    "egypes"
+  ]
+ },
+ {
+  "slug": "mosbuild",
+  "name": "MosBuild",
+  "city": "Moskova",
+  "country": "Rusya",
+  "venue": "Crocus Expo",
+  "region": "eu",
+  "start": "2027-03-30",
+  "end": "2027-04-02",
+  "sector": "Yapı ve inşaat",
+  "url": "https://mosbuild.com",
+  "verified": true,
+  "match": [
+   "mosbuild"
+  ]
+ },
+ {
+  "slug": "building-fair-brno-ibf",
+  "name": "Building Fair Brno (IBF)",
+  "city": "Brno",
+  "country": "Çekya",
+  "venue": "Brno Fuar Merkezi",
+  "region": "eu",
+  "start": "2027-03-31",
+  "end": "2027-04-03",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.bvv.cz/en/building-fair-brno",
+  "verified": true,
+  "match": [
+   "building fair brno",
+   "ibf brno"
+  ]
+ },
+ {
+  "slug": "isa-international-sign-expo",
+  "name": "ISA International Sign Expo",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "venue": "Mandalay Bay Convention Center",
+  "region": "am",
+  "start": "2027-03-31",
+  "end": "2027-04-02",
+  "sector": "Tabela ve reklam",
+  "url": "https://www.signexpo.org/",
+  "verified": true,
+  "match": [
+   "sign expo"
   ]
  },
  {
@@ -3857,6 +5855,22 @@
   ]
  },
  {
+  "slug": "hrc-hotel-restaurant-and-catering",
+  "name": "HRC – Hotel, Restaurant & Catering",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-04-05",
+  "end": "2027-04-07",
+  "sector": "Otel ve restoran ekipmanı",
+  "url": "https://www.hrc.co.uk/",
+  "verified": true,
+  "match": [
+   "hrc"
+  ]
+ },
+ {
   "slug": "ife-international-food-and-drink-event",
   "name": "IFE – International Food & Drink Event",
   "city": "Londra",
@@ -3887,6 +5901,22 @@
   "verified": true,
   "match": [
    "isc west"
+  ]
+ },
+ {
+  "slug": "speciality-and-fine-food-fair",
+  "name": "Speciality & Fine Food Fair",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-04-05",
+  "end": "2027-04-07",
+  "sector": "Özel gıda",
+  "url": "https://www.specialityandfinefoodfairs.co.uk/",
+  "verified": true,
+  "match": [
+   "speciality & fine food"
   ]
  },
  {
@@ -4005,6 +6035,39 @@
   ]
  },
  {
+  "slug": "fespa-global-print-expo-and-european-sign-expo",
+  "name": "FESPA Global Print Expo & European Sign Expo",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-04-06",
+  "end": "2027-04-09",
+  "sector": "Baskı ve tabela",
+  "url": "https://www.fespa.com/en/events/fespa-global-print-expo-2027/",
+  "verified": true,
+  "match": [
+   "fespa global print expo",
+   "european sign expo"
+  ]
+ },
+ {
+  "slug": "fruit-attraction-sao-paulo",
+  "name": "Fruit Attraction São Paulo",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Expo Center Norte",
+  "region": "am",
+  "start": "2027-04-06",
+  "end": "2027-04-08",
+  "sector": "Taze meyve sebze",
+  "url": "https://www.ifema.es/fruit-attraction-sao-paulo/en",
+  "verified": true,
+  "match": [
+   "fruit attraction"
+  ]
+ },
+ {
   "slug": "in-cosmetics-global",
   "name": "in-cosmetics Global",
   "city": "Barselona",
@@ -4055,6 +6118,39 @@
   ]
  },
  {
+  "slug": "passenger-terminal-expo-pte-world",
+  "name": "Passenger Terminal Expo (PTE World)",
+  "city": "Amsterdam",
+  "country": "Hollanda",
+  "venue": "RAI Amsterdam",
+  "region": "eu",
+  "start": "2027-04-06",
+  "end": "2027-04-08",
+  "sector": "Havalimanı terminali",
+  "url": "https://www.pte-world.com/",
+  "verified": true,
+  "match": [
+   "passenger terminal expo",
+   "pte world"
+  ]
+ },
+ {
+  "slug": "private-label-brazil",
+  "name": "Private Label Brazil",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-04-06",
+  "end": "2027-04-08",
+  "sector": "Özel marka ürünler",
+  "url": "https://privatelabelbrazil.com.br/",
+  "verified": true,
+  "match": [
+   "private label brazil"
+  ]
+ },
+ {
   "slug": "technomebel-and-expomebel",
   "name": "Technomebel & Expomebel",
   "city": "Sofya",
@@ -4069,6 +6165,23 @@
   "match": [
    "technomebel",
    "expomebel"
+  ]
+ },
+ {
+  "slug": "wtce-world-travel-catering-and-onboard-services-expo",
+  "name": "WTCE – World Travel Catering & Onboard Services Expo",
+  "city": "Hamburg",
+  "country": "Almanya",
+  "venue": "Hamburg Messe",
+  "region": "eu",
+  "start": "2027-04-06",
+  "end": "2027-04-08",
+  "sector": "Yolcu ikram hizmetleri",
+  "url": "https://www.worldtravelcateringexpo.com/",
+  "verified": true,
+  "match": [
+   "wtce",
+   "world travel catering"
   ]
  },
  {
@@ -4235,6 +6348,23 @@
   ]
  },
  {
+  "slug": "world-of-coffee-new-orleans",
+  "name": "World of Coffee New Orleans",
+  "city": "New Orleans",
+  "country": "ABD",
+  "venue": "Ernest N. Morial Convention Center",
+  "region": "am",
+  "start": "2027-04-09",
+  "end": "2027-04-11",
+  "sector": "Kahve",
+  "url": "https://www.worldofcoffee.org/",
+  "verified": true,
+  "match": [
+   "world of coffee new orleans",
+   "world of coffee usa"
+  ]
+ },
+ {
   "slug": "high-point-market-spring",
   "name": "High Point Market (Spring)",
   "city": "High Point",
@@ -4267,6 +6397,54 @@
   ]
  },
  {
+  "slug": "djazagro",
+  "name": "Djazagro",
+  "city": "Cezayir",
+  "country": "Cezayir",
+  "venue": "SAFEX Algiers Exhibition Palace",
+  "region": "me",
+  "start": "2027-04-12",
+  "end": "2027-04-15",
+  "sector": "Gıda ve gıda işleme",
+  "url": "https://www.djazagro.com/en",
+  "verified": true,
+  "match": [
+   "djazagro"
+  ]
+ },
+ {
+  "slug": "food-and-drink-expo",
+  "name": "Food & Drink Expo",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-04-12",
+  "end": "2027-04-14",
+  "sector": "Gıda ve içecek",
+  "url": "https://www.foodanddrinkexpo.co.uk/",
+  "verified": true,
+  "match": [
+   "food & drink expo"
+  ]
+ },
+ {
+  "slug": "foodex-manufacturing-solutions",
+  "name": "Foodex Manufacturing Solutions",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-04-12",
+  "end": "2027-04-14",
+  "sector": "Gıda işleme ve ambalaj",
+  "url": "https://www.foodex.co.uk/",
+  "verified": true,
+  "match": [
+   "foodex manufacturing"
+  ]
+ },
+ {
   "slug": "leap",
   "name": "LEAP",
   "city": "Riyad",
@@ -4283,6 +6461,38 @@
   ]
  },
  {
+  "slug": "pack-expo-southeast",
+  "name": "PACK EXPO Southeast",
+  "city": "Atlanta",
+  "country": "ABD",
+  "venue": "Georgia International Convention Center",
+  "region": "am",
+  "start": "2027-04-12",
+  "end": "2027-04-14",
+  "sector": "Ambalaj",
+  "url": "https://www.packexposoutheast.com/",
+  "verified": true,
+  "match": [
+   "pack expo southeast"
+  ]
+ },
+ {
+  "slug": "rapid-tct",
+  "name": "RAPID + TCT",
+  "city": "Detroit",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-04-12",
+  "end": "2027-04-15",
+  "sector": "Eklemeli imalat",
+  "url": "https://www.rapid3devent.com/",
+  "verified": true,
+  "match": [
+   "rapid + tct",
+   "rapid tct"
+  ]
+ },
+ {
   "slug": "dmea",
   "name": "DMEA",
   "city": "Münih",
@@ -4296,6 +6506,104 @@
   "verified": true,
   "match": [
    "dmea"
+  ]
+ },
+ {
+  "slug": "emitex",
+  "name": "Emitex",
+  "city": "Buenos Aires",
+  "country": "Arjantin",
+  "venue": "La Rural",
+  "region": "am",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Tekstil ve konfeksiyon tedariki",
+  "url": "https://www.emitex.com.ar/",
+  "verified": true,
+  "match": [
+   "emitex"
+  ]
+ },
+ {
+  "slug": "fast-textile",
+  "name": "Fast Textile",
+  "city": "Lodz",
+  "country": "Polonya",
+  "venue": "Ptak Expo Łódź",
+  "region": "eu",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Kumaş ve örme",
+  "url": "https://fasttextile.com/en",
+  "verified": true,
+  "match": [
+   "fast textile",
+   "fabrics expo"
+  ]
+ },
+ {
+  "slug": "interfresh-interfood-eurasia-spring-antalya",
+  "name": "Interfresh / Interfood Eurasia Spring Antalya",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Pine Beach Belek",
+  "region": "tr",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Taze meyve sebze",
+  "url": "https://www.euroasiainterfresh.com",
+  "verified": true,
+  "match": [
+   "interfresh spring",
+   "interfood antalya"
+  ]
+ },
+ {
+  "slug": "intermodal-south-america",
+  "name": "Intermodal South America",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Lojistik",
+  "url": "https://www.intermodal.com.br/",
+  "verified": true,
+  "match": [
+   "intermodal"
+  ]
+ },
+ {
+  "slug": "international-pizza-expo",
+  "name": "International Pizza Expo",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "venue": "Las Vegas Convention Center",
+  "region": "am",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Pizza ve restoran",
+  "url": "https://www.eventseye.com/fairs/f-international-pizza-expo-14056-1.html",
+  "verified": false,
+  "match": [
+   "pizza expo"
+  ]
+ },
+ {
+  "slug": "isaf-exclusive",
+  "name": "ISAF Exclusive",
+  "city": "Ankara",
+  "country": "Türkiye",
+  "venue": "Sheraton Hotel ve Kongre Merkezi",
+  "region": "tr",
+  "start": "2027-04-13",
+  "end": "2027-04-14",
+  "sector": "Güvenlik",
+  "url": "https://www.marmarafuar.com.tr",
+  "verified": true,
+  "match": [
+   "isaf exclusive"
   ]
  },
  {
@@ -4332,6 +6640,54 @@
   ]
  },
  {
+  "slug": "meica-expo",
+  "name": "MEICA Expo",
+  "city": "Kuveyt",
+  "country": "Kuveyt",
+  "venue": "Millennium Hotel & Convention Centre Kuwait",
+  "region": "me",
+  "start": "2027-04-13",
+  "end": "2027-04-14",
+  "sector": "Enstrümantasyon ve otomasyon",
+  "url": "https://www.meicaexpo.com/",
+  "verified": true,
+  "match": [
+   "meica"
+  ]
+ },
+ {
+  "slug": "omc-med-energy",
+  "name": "OMC Med Energy",
+  "city": "Ravenna",
+  "country": "İtalya",
+  "venue": "Pala de André",
+  "region": "eu",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Enerji",
+  "url": "https://www.omc.it/en",
+  "verified": true,
+  "match": [
+   "omc med energy"
+  ]
+ },
+ {
+  "slug": "rematec",
+  "name": "Rematec",
+  "city": "Amsterdam",
+  "country": "Hollanda",
+  "venue": "RAI Amsterdam",
+  "region": "eu",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Otomotiv yeniden üretim",
+  "url": "https://www.eventseye.com/fairs/f-rematec-21444-1.html",
+  "verified": false,
+  "match": [
+   "rematec"
+  ]
+ },
+ {
   "slug": "salone-del-mobile-milano",
   "name": "Salone del Mobile.Milano",
   "city": "Milano",
@@ -4365,6 +6721,22 @@
   ]
  },
  {
+  "slug": "worldfood-poland",
+  "name": "WorldFood Poland",
+  "city": "Varşova",
+  "country": "Polonya",
+  "venue": "EXPO XXI",
+  "region": "eu",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Gıda ve içecek",
+  "url": "https://www.worldfood.pl/en/",
+  "verified": true,
+  "match": [
+   "worldfood poland"
+  ]
+ },
+ {
   "slug": "aero",
   "name": "AERO",
   "city": "Friedrichshafen",
@@ -4381,6 +6753,22 @@
   ]
  },
  {
+  "slug": "exposanita",
+  "name": "Exposanità",
+  "city": "Bologna",
+  "country": "İtalya",
+  "venue": "BolognaFiere",
+  "region": "eu",
+  "start": "2027-04-14",
+  "end": "2027-04-16",
+  "sector": "Sağlık ve medikal",
+  "url": "https://www.exposanita.it/en/",
+  "verified": true,
+  "match": [
+   "exposanita"
+  ]
+ },
+ {
   "slug": "idex-istanbul",
   "name": "IDEX İstanbul",
   "city": "İstanbul",
@@ -4394,6 +6782,72 @@
   "verified": true,
   "match": [
    "idex"
+  ]
+ },
+ {
+  "slug": "solar-and-storage-live-london",
+  "name": "Solar & Storage Live London",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-04-14",
+  "end": "2027-04-15",
+  "sector": "Güneş enerjisi ve depolama",
+  "url": "https://www.eventseye.com/fairs/f-solar-storage-live-europe-uk-london-31016-1.html",
+  "verified": false,
+  "match": [
+   "solar & storage live london"
+  ]
+ },
+ {
+  "slug": "yenikapi-boat-show-nisan",
+  "name": "Yenikapı Boat Show (Nisan)",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-04-14",
+  "end": "2027-04-18",
+  "sector": "Denizcilik",
+  "url": "https://www.artifuar.com",
+  "verified": true,
+  "match": [
+   "yenikapı boat show",
+   "yenikapi boat"
+  ]
+ },
+ {
+  "slug": "construct-expo-and-romtherm",
+  "name": "Construct Expo & Romtherm",
+  "city": "Bükreş",
+  "country": "Romanya",
+  "venue": "Romexpo",
+  "region": "eu",
+  "start": "2027-04-15",
+  "end": "2027-04-18",
+  "sector": "İnşaat ve HVAC",
+  "url": "https://www.eventseye.com/fairs/f-construct-expo-8155-1.html",
+  "verified": false,
+  "match": [
+   "construct expo",
+   "romtherm"
+  ]
+ },
+ {
+  "slug": "cosmofarma",
+  "name": "Cosmofarma",
+  "city": "Bologna",
+  "country": "İtalya",
+  "venue": "BolognaFiere",
+  "region": "eu",
+  "start": "2027-04-15",
+  "end": "2027-04-17",
+  "sector": "Eczane ürünleri",
+  "url": "https://www.cosmofarma.com/",
+  "verified": true,
+  "match": [
+   "cosmofarma"
   ]
  },
  {
@@ -4427,6 +6881,22 @@
   "verified": true,
   "match": [
    "expomed"
+  ]
+ },
+ {
+  "slug": "mobila-expo",
+  "name": "Mobila Expo",
+  "city": "Bükreş",
+  "country": "Romanya",
+  "venue": "Romexpo",
+  "region": "eu",
+  "start": "2027-04-15",
+  "end": "2027-04-18",
+  "sector": "Mobilya",
+  "url": "http://mobila-expo.ro/info-vizitatori/",
+  "verified": true,
+  "match": [
+   "mobila expo"
   ]
  },
  {
@@ -4480,6 +6950,39 @@
   ]
  },
  {
+  "slug": "oman-design-and-build-week",
+  "name": "Oman Design & Build Week",
+  "city": "Maskat",
+  "country": "Umman",
+  "venue": "Oman Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-04-18",
+  "end": "2027-04-21",
+  "sector": "İnşaat ve tasarım",
+  "url": "https://omandesignandbuildweek.com/newfront",
+  "verified": true,
+  "match": [
+   "oman design & build",
+   "odbw"
+  ]
+ },
+ {
+  "slug": "aluminium-arabia",
+  "name": "ALUMINIUM Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "The Arena Riyadh",
+  "region": "me",
+  "start": "2027-04-19",
+  "end": "2027-04-21",
+  "sector": "Alüminyum",
+  "url": "https://www.aluminium-exhibition.com/arabia/en-gb.html",
+  "verified": true,
+  "match": [
+   "aluminium arabia"
+  ]
+ },
+ {
   "slug": "promat",
   "name": "ProMat",
   "city": "Şikago",
@@ -4509,6 +7012,22 @@
   "verified": true,
   "match": [
    "automec"
+  ]
+ },
+ {
+  "slug": "cityscape-kuwait",
+  "name": "Cityscape Kuwait",
+  "city": "Kuveyt",
+  "country": "Kuveyt",
+  "venue": "Kuwait International Fair (Mişref)",
+  "region": "me",
+  "start": "2027-04-20",
+  "end": "2027-04-22",
+  "sector": "Gayrimenkul",
+  "url": "https://www.cityscape-events.com/kuwait/",
+  "verified": true,
+  "match": [
+   "cityscape kuwait"
   ]
  },
  {
@@ -4545,6 +7064,54 @@
   ]
  },
  {
+  "slug": "fieravicola",
+  "name": "Fieravicola",
+  "city": "Rimini",
+  "country": "İtalya",
+  "venue": "Rimini Expo Centre",
+  "region": "eu",
+  "start": "2027-04-20",
+  "end": "2027-04-22",
+  "sector": "Kanatlı hayvancılık",
+  "url": "https://www.fieravicola.com/en",
+  "verified": true,
+  "match": [
+   "fieravicola"
+  ]
+ },
+ {
+  "slug": "interalpin",
+  "name": "INTERALPIN",
+  "city": "Innsbruck",
+  "country": "Avusturya",
+  "venue": "Messe Innsbruck",
+  "region": "eu",
+  "start": "2027-04-20",
+  "end": "2027-04-23",
+  "sector": "Teleferik ve dağ teknolojisi",
+  "url": "https://www.interalpin.at/",
+  "verified": true,
+  "match": [
+   "interalpin"
+  ]
+ },
+ {
+  "slug": "loupe-mexico-eski-labelexpo-mexico",
+  "name": "LOUPE Mexico (eski Labelexpo Mexico)",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "region": "am",
+  "start": "2027-04-20",
+  "end": "2027-04-22",
+  "sector": "Etiket ve ambalaj baskı",
+  "url": "https://www.labelexpo-mexico.com/",
+  "verified": true,
+  "match": [
+   "loupe mexico",
+   "labelexpo mexico"
+  ]
+ },
+ {
   "slug": "macfrut",
   "name": "Macfrut",
   "city": "Rimini",
@@ -4558,6 +7125,37 @@
   "verified": true,
   "match": [
    "macfrut"
+  ]
+ },
+ {
+  "slug": "middle-east-food-and-packaging-expo",
+  "name": "Middle East Food and Packaging Expo",
+  "city": "Şam",
+  "country": "Suriye",
+  "region": "me",
+  "start": "2027-04-20",
+  "end": "2027-04-23",
+  "sector": "Gıda ve ambalaj",
+  "url": "https://expotim.com/fuar/middle-east-food-and-packaging-expo-2027",
+  "verified": false,
+  "match": [
+   "middle east food and packaging"
+  ]
+ },
+ {
+  "slug": "mt-tsl",
+  "name": "MT TSL",
+  "city": "Varşova",
+  "country": "Polonya",
+  "venue": "Ptak Warsaw Expo",
+  "region": "eu",
+  "start": "2027-04-20",
+  "end": "2027-04-22",
+  "sector": "Taşımacılık ve lojistik",
+  "url": "https://mttsl.pl/en/",
+  "verified": true,
+  "match": [
+   "mt tsl"
   ]
  },
  {
@@ -4593,6 +7191,22 @@
   ]
  },
  {
+  "slug": "sebe-uluslararasi-yapi-fuari",
+  "name": "SEBE – Uluslararası Yapı Fuarı",
+  "city": "Belgrad",
+  "country": "Sırbistan",
+  "venue": "Belgrad Fuarı",
+  "region": "eu",
+  "start": "2027-04-20",
+  "end": "2027-04-23",
+  "sector": "İnşaat",
+  "url": "https://www.eventseye.com/fairs/f-sebe-international-building-trade-fair-8518-1.html",
+  "verified": false,
+  "match": [
+   "sebe"
+  ]
+ },
+ {
   "slug": "urban-steel-expo",
   "name": "Urban Steel Expo",
   "city": "Düsseldorf",
@@ -4607,6 +7221,22 @@
   "match": [
    "urban steel",
    "use"
+  ]
+ },
+ {
+  "slug": "warsaw-bus-expo",
+  "name": "Warsaw Bus Expo",
+  "city": "Varşova",
+  "country": "Polonya",
+  "venue": "Ptak Warsaw Expo",
+  "region": "eu",
+  "start": "2027-04-20",
+  "end": "2027-04-22",
+  "sector": "Otobüs ve toplu taşıma",
+  "url": "https://warsawbusexpo.eu/en/",
+  "verified": true,
+  "match": [
+   "warsaw bus expo"
   ]
  },
  {
@@ -4658,6 +7288,22 @@
   ]
  },
  {
+  "slug": "expocam",
+  "name": "ExpoCam",
+  "city": "Montreal",
+  "country": "Kanada",
+  "venue": "Palais des congrès de Montréal",
+  "region": "am",
+  "start": "2027-04-22",
+  "end": "2027-04-24",
+  "sector": "Kamyon ve ticari araç",
+  "url": "https://www.expocam.ca/",
+  "verified": true,
+  "match": [
+   "expocam"
+  ]
+ },
+ {
   "slug": "rising-city-and-yapi-ve-yasam-fuari",
   "name": "Rising City & Yapı ve Yaşam Fuarı",
   "city": "Bursa",
@@ -4674,6 +7320,22 @@
   ]
  },
  {
+  "slug": "sanliurfa-enerji-insaat-yapi-ve-dekorasyon-fuari",
+  "name": "Şanlıurfa Enerji, İnşaat, Yapı ve Dekorasyon Fuarı",
+  "city": "Şanlıurfa",
+  "country": "Türkiye",
+  "venue": "Şanlıurfa Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-04-22",
+  "end": "2027-04-25",
+  "sector": "İnşaat ve enerji",
+  "url": "https://www.usfuar.com",
+  "verified": true,
+  "match": [
+   "şanlıurfa enerji inşaat"
+  ]
+ },
+ {
   "slug": "tektonica",
   "name": "Tektónica",
   "city": "Lizbon",
@@ -4687,6 +7349,22 @@
   "verified": true,
   "match": [
    "tektonica"
+  ]
+ },
+ {
+  "slug": "egy-beauty-and-clean-expo",
+  "name": "Egy Beauty & Clean Expo",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-04-24",
+  "end": "2027-04-26",
+  "sector": "Güzellik ve temizlik",
+  "url": "https://www.eventseye.com/fairs/f-egy-beauty-clean-expo-29205-1.html",
+  "verified": false,
+  "match": [
+   "egy beauty"
   ]
  },
  {
@@ -4720,6 +7398,22 @@
   "verified": true,
   "match": [
    "agrishow"
+  ]
+ },
+ {
+  "slug": "cafex",
+  "name": "Caféx",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-04-26",
+  "end": "2027-04-28",
+  "sector": "Otelcilik ve kahve",
+  "url": "https://www.cafex-me.com/",
+  "verified": true,
+  "match": [
+   "cafex"
   ]
  },
  {
@@ -4871,6 +7565,22 @@
   ]
  },
  {
+  "slug": "cwieme-berlin",
+  "name": "CWIEME Berlin",
+  "city": "Berlin",
+  "country": "Almanya",
+  "venue": "Messe Berlin",
+  "region": "eu",
+  "start": "2027-04-27",
+  "end": "2027-04-29",
+  "sector": "Elektrik motoru ve bobin",
+  "url": "https://berlin.cwiemeevents.com/articles/cwieme-berlin-2027-save-the-date",
+  "verified": true,
+  "match": [
+   "cwieme"
+  ]
+ },
+ {
   "slug": "emv",
   "name": "EMV",
   "city": "Stuttgart",
@@ -4936,6 +7646,22 @@
   ]
  },
  {
+  "slug": "international-powder-and-bulk-solids",
+  "name": "International Powder & Bulk Solids",
+  "city": "Rosemont",
+  "country": "ABD",
+  "venue": "Donald E. Stephens Convention Center",
+  "region": "am",
+  "start": "2027-04-27",
+  "end": "2027-04-29",
+  "sector": "Toz ve dökme katı",
+  "url": "https://www.powderandbulkshow.com/en/home.html",
+  "verified": true,
+  "match": [
+   "powder & bulk solids"
+  ]
+ },
+ {
   "slug": "sial-canada",
   "name": "SIAL Canada",
   "city": "Toronto",
@@ -4950,6 +7676,38 @@
   "match": [
    "sial canada",
    "sial"
+  ]
+ },
+ {
+  "slug": "tecnotextil-brasil",
+  "name": "Tecnotêxtil Brasil",
+  "city": "Americana",
+  "country": "Brezilya",
+  "venue": "FIDAM",
+  "region": "am",
+  "start": "2027-04-27",
+  "end": "2027-04-30",
+  "sector": "Tekstil makineleri",
+  "url": "https://www.eventseye.com/fairs/f-tecnotextil-brasil-28640-1.html",
+  "verified": false,
+  "match": [
+   "tecnotextil"
+  ]
+ },
+ {
+  "slug": "the-fire-safety-event",
+  "name": "The Fire Safety Event",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-04-27",
+  "end": "2027-04-29",
+  "sector": "Yangın güvenliği",
+  "url": "https://www.firesafetyevent.com/",
+  "verified": true,
+  "match": [
+   "fire safety event"
   ]
  },
  {
@@ -5218,6 +7976,23 @@
   ]
  },
  {
+  "slug": "industry-days-mach-tech",
+  "name": "Industry Days (MACH-TECH)",
+  "city": "Budapeşte",
+  "country": "Macaristan",
+  "venue": "Hungexpo",
+  "region": "eu",
+  "start": "2027-05-04",
+  "end": "2027-05-07",
+  "sector": "Makine ve endüstri",
+  "url": "https://iparnapjai.hu/en",
+  "verified": true,
+  "match": [
+   "industry days",
+   "mach-tech"
+  ]
+ },
+ {
   "slug": "komatek-diyarbakir",
   "name": "Komatek Diyarbakır",
   "city": "Diyarbakır",
@@ -5268,6 +8043,22 @@
   ]
  },
  {
+  "slug": "electrolighting-fuari-antalya",
+  "name": "Electrolighting Fuarı Antalya",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Pine Beach Belek",
+  "region": "tr",
+  "start": "2027-05-05",
+  "end": "2027-05-07",
+  "sector": "Elektrik ve aydınlatma",
+  "url": "https://www.partnerfuar.com",
+  "verified": true,
+  "match": [
+   "electrolighting"
+  ]
+ },
+ {
   "slug": "ifat-eurasia",
   "name": "IFAT Eurasia",
   "city": "İstanbul",
@@ -5281,6 +8072,23 @@
   "verified": true,
   "match": [
    "ifat"
+  ]
+ },
+ {
+  "slug": "mast-izmir-boatshow",
+  "name": "MAST İzmir Boatshow",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "Fuarizmir",
+  "region": "tr",
+  "start": "2027-05-05",
+  "end": "2027-05-10",
+  "sector": "Denizcilik",
+  "url": "https://www.izfas.com.tr",
+  "verified": true,
+  "match": [
+   "mast izmir",
+   "izmir boatshow"
   ]
  },
  {
@@ -5368,6 +8176,55 @@
   ]
  },
  {
+  "slug": "stone-exposalao",
+  "name": "Stone Exposalão",
+  "city": "Batalha",
+  "country": "Portekiz",
+  "venue": "Exposalão",
+  "region": "eu",
+  "start": "2027-05-06",
+  "end": "2027-05-08",
+  "sector": "Doğal taş",
+  "url": "https://exposalao.pt/feira/stone",
+  "verified": true,
+  "match": [
+   "stone batalha",
+   "stone iberica"
+  ]
+ },
+ {
+  "slug": "windoorex",
+  "name": "Windoorex",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-05-06",
+  "end": "2027-05-08",
+  "sector": "Cam, alüminyum, cephe",
+  "url": "https://www.windoorex.com/",
+  "verified": true,
+  "match": [
+   "windoorex"
+  ]
+ },
+ {
+  "slug": "oroarezzo",
+  "name": "OROAREZZO",
+  "city": "Arezzo",
+  "country": "İtalya",
+  "venue": "Arezzo Fiere e Congressi",
+  "region": "eu",
+  "start": "2027-05-08",
+  "end": "2027-05-11",
+  "sector": "Mücevherat",
+  "url": "https://www.oroarezzo.it/it",
+  "verified": true,
+  "match": [
+   "oroarezzo"
+  ]
+ },
+ {
   "slug": "automate",
   "name": "Automate",
   "city": "Las Vegas",
@@ -5381,6 +8238,22 @@
   "verified": true,
   "match": [
    "automate"
+  ]
+ },
+ {
+  "slug": "iran-agrofood",
+  "name": "Iran Agrofood",
+  "city": "Tahran",
+  "country": "İran",
+  "venue": "Tehran International Permanent Fairground",
+  "region": "me",
+  "start": "2027-05-10",
+  "end": "2027-05-13",
+  "sector": "Tarım ve gıda",
+  "url": "https://iran-agrofood.com",
+  "verified": true,
+  "match": [
+   "iran agrofood"
   ]
  },
  {
@@ -5400,6 +8273,22 @@
   ]
  },
  {
+  "slug": "medex-sail-and-boat-show",
+  "name": "Medex Sail & Boat Show",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Cam Piramit Sabancı Kongre ve Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-05-10",
+  "end": "2027-05-14",
+  "sector": "Denizcilik",
+  "url": "https://medexshow.com",
+  "verified": true,
+  "match": [
+   "medex"
+  ]
+ },
+ {
   "slug": "project-qatar",
   "name": "Project Qatar",
   "city": "Doha",
@@ -5413,6 +8302,23 @@
   "verified": true,
   "match": [
    "project qatar"
+  ]
+ },
+ {
+  "slug": "sajam-tehnike-belgrad-teknik-fuari",
+  "name": "Sajam Tehnike – Belgrad Teknik Fuarı",
+  "city": "Belgrad",
+  "country": "Sırbistan",
+  "venue": "Belgrad Fuarı",
+  "region": "eu",
+  "start": "2027-05-10",
+  "end": "2027-05-13",
+  "sector": "Makine ve teknik",
+  "url": "https://sajamtehnike.rs/en/home/",
+  "verified": true,
+  "match": [
+   "sajam tehnike",
+   "belgrade technical fair"
   ]
  },
  {
@@ -5465,6 +8371,38 @@
   ]
  },
  {
+  "slug": "eastec",
+  "name": "EASTEC",
+  "city": "West Springfield",
+  "country": "ABD",
+  "venue": "Eastern States Exposition",
+  "region": "am",
+  "start": "2027-05-11",
+  "end": "2027-05-13",
+  "sector": "Üretim teknolojileri",
+  "url": "https://www.easteconline.com/",
+  "verified": true,
+  "match": [
+   "eastec"
+  ]
+ },
+ {
+  "slug": "elfack",
+  "name": "Elfack",
+  "city": "Göteborg",
+  "country": "İsveç",
+  "venue": "Svenska Mässan",
+  "region": "eu",
+  "start": "2027-05-11",
+  "end": "2027-05-14",
+  "sector": "Elektrik tesisat",
+  "url": "https://elfack.com/",
+  "verified": true,
+  "match": [
+   "elfack"
+  ]
+ },
+ {
   "slug": "expoconstruccion-y-expodiseno",
   "name": "Expoconstrucción y Expodiseño",
   "city": "Bogota",
@@ -5513,6 +8451,38 @@
   ]
  },
  {
+  "slug": "interleather-and-shoes-portugal",
+  "name": "Interleather & Shoes Portugal",
+  "city": "Porto",
+  "country": "Portekiz",
+  "venue": "Exponor",
+  "region": "eu",
+  "start": "2027-05-11",
+  "end": "2027-05-13",
+  "sector": "Deri ve ayakkabı",
+  "url": "https://www.eventseye.com/fairs/f-interleather-shoes-portugal-29300-1.html",
+  "verified": false,
+  "match": [
+   "interleather"
+  ]
+ },
+ {
+  "slug": "itf-intertex-portugal",
+  "name": "ITF – Intertex Portugal",
+  "city": "Porto",
+  "country": "Portekiz",
+  "venue": "Exponor",
+  "region": "eu",
+  "start": "2027-05-11",
+  "end": "2027-05-13",
+  "sector": "Tekstil",
+  "url": "https://intertexportugal.com/",
+  "verified": true,
+  "match": [
+   "intertex portugal"
+  ]
+ },
+ {
   "slug": "interzum",
   "name": "interzum",
   "city": "Köln",
@@ -5558,6 +8528,22 @@
   "verified": true,
   "match": [
    "made in steel"
+  ]
+ },
+ {
+  "slug": "metalloobrabotka",
+  "name": "Metalloobrabotka",
+  "city": "Moskova",
+  "country": "Rusya",
+  "venue": "Expocentre",
+  "region": "eu",
+  "start": "2027-05-11",
+  "end": "2027-05-14",
+  "sector": "Metal işleme",
+  "url": "https://www.metobr-expo.ru/en/",
+  "verified": true,
+  "match": [
+   "metalloobrabotka"
   ]
  },
  {
@@ -5610,6 +8596,57 @@
   ]
  },
  {
+  "slug": "sensor-test",
+  "name": "SENSOR+TEST",
+  "city": "Nürnberg",
+  "country": "Almanya",
+  "venue": "NürnbergMesse",
+  "region": "eu",
+  "start": "2027-05-11",
+  "end": "2027-05-13",
+  "sector": "Ölçüm ve sensör",
+  "url": "https://www.sensor-test.de/en",
+  "verified": true,
+  "match": [
+   "sensor+test",
+   "sensor test"
+  ]
+ },
+ {
+  "slug": "the-stone-and-surfaces-show",
+  "name": "The Stone & Surfaces Show",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-05-11",
+  "end": "2027-05-13",
+  "sector": "Doğal taş ve yüzeyler",
+  "url": "https://www.stoneandsurfacesshow.com/",
+  "verified": true,
+  "match": [
+   "stone & surfaces",
+   "natural stone show"
+  ]
+ },
+ {
+  "slug": "tyba-yacht-charter-show",
+  "name": "TYBA Yacht Charter Show",
+  "city": "Muğla",
+  "country": "Türkiye",
+  "venue": "Muttaş Marmaris Limanı",
+  "region": "tr",
+  "start": "2027-05-11",
+  "end": "2027-05-14",
+  "sector": "Yat kiralama",
+  "url": "https://www.tybachartershow.com",
+  "verified": true,
+  "match": [
+   "tyba",
+   "yacht charter"
+  ]
+ },
+ {
   "slug": "zoomark",
   "name": "Zoomark",
   "city": "Bologna",
@@ -5639,6 +8676,22 @@
   "verified": true,
   "match": [
    "iraq home expo"
+  ]
+ },
+ {
+  "slug": "plastteknik-nordic",
+  "name": "Plastteknik Nordic",
+  "city": "Malmö",
+  "country": "İsveç",
+  "venue": "Malmömässan",
+  "region": "eu",
+  "start": "2027-05-12",
+  "end": "2027-05-13",
+  "sector": "Plastik",
+  "url": "https://www.plasttekniknordic.com/en/",
+  "verified": true,
+  "match": [
+   "plastteknik nordic"
   ]
  },
  {
@@ -5722,6 +8775,54 @@
   ]
  },
  {
+  "slug": "feindef",
+  "name": "FEINDEF",
+  "city": "Madrid",
+  "country": "İspanya",
+  "venue": "IFEMA Madrid",
+  "region": "eu",
+  "start": "2027-05-18",
+  "end": "2027-05-20",
+  "sector": "Savunma ve güvenlik",
+  "url": "https://www.feindef.com/",
+  "verified": true,
+  "match": [
+   "feindef"
+  ]
+ },
+ {
+  "slug": "fit-show",
+  "name": "FIT Show",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-05-18",
+  "end": "2027-05-20",
+  "sector": "Pencere, kapı ve cephe",
+  "url": "https://www.fitshow.co.uk/",
+  "verified": true,
+  "match": [
+   "fit show"
+  ]
+ },
+ {
+  "slug": "fispal-food-service",
+  "name": "Fispal Food Service",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-05-18",
+  "end": "2027-05-21",
+  "sector": "Yiyecek içecek hizmetleri",
+  "url": "https://www.fispalfoodservice.com.br/",
+  "verified": true,
+  "match": [
+   "fispal food service"
+  ]
+ },
+ {
   "slug": "hospitalar",
   "name": "Hospitalar",
   "city": "São Paulo",
@@ -5735,6 +8836,22 @@
   "verified": true,
   "match": [
    "hospitalar"
+  ]
+ },
+ {
+  "slug": "packaging-premiere",
+  "name": "Packaging Première",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Allianz MiCo",
+  "region": "eu",
+  "start": "2027-05-18",
+  "end": "2027-05-20",
+  "sector": "Lüks ambalaj",
+  "url": "https://www.packagingpremiere.it/en/",
+  "verified": true,
+  "match": [
+   "packaging premiere"
   ]
  },
  {
@@ -5803,6 +8920,70 @@
   ]
  },
  {
+  "slug": "aluminium-usa",
+  "name": "ALUMINIUM USA",
+  "city": "Louisville",
+  "country": "ABD",
+  "venue": "Kentucky International Convention Center",
+  "region": "am",
+  "start": "2027-05-19",
+  "end": "2027-05-20",
+  "sector": "Alüminyum",
+  "url": "https://www.eventseye.com/fairs/f-aluminium-usa-24975-1.html",
+  "verified": false,
+  "match": [
+   "aluminium usa"
+  ]
+ },
+ {
+  "slug": "fastener-fair-usa",
+  "name": "Fastener Fair USA",
+  "city": "Louisville",
+  "country": "ABD",
+  "venue": "Kentucky International Convention Center",
+  "region": "am",
+  "start": "2027-05-19",
+  "end": "2027-05-20",
+  "sector": "Bağlantı elemanları",
+  "url": "https://www.fastenerfairusa.com/",
+  "verified": true,
+  "match": [
+   "fastener fair usa"
+  ]
+ },
+ {
+  "slug": "international-engineering-fair-nitra",
+  "name": "International Engineering Fair Nitra",
+  "city": "Nitra",
+  "country": "Slovakya",
+  "venue": "Agrokomplex Nitra",
+  "region": "eu",
+  "start": "2027-05-19",
+  "end": "2027-05-22",
+  "sector": "Makine mühendisliği",
+  "url": "https://www.eventseye.com/fairs/f-international-engineering-fair-15028-1.html",
+  "verified": false,
+  "match": [
+   "engineering fair nitra"
+  ]
+ },
+ {
+  "slug": "securex",
+  "name": "SECUREX",
+  "city": "Poznan",
+  "country": "Polonya",
+  "venue": "MTP Poznań",
+  "region": "eu",
+  "start": "2027-05-19",
+  "end": "2027-05-20",
+  "sector": "Güvenlik",
+  "url": "https://securex.pl/en",
+  "verified": true,
+  "match": [
+   "securex"
+  ]
+ },
+ {
   "slug": "national-restaurant-association-show",
   "name": "National Restaurant Association Show",
   "city": "Şikago",
@@ -5834,6 +9015,39 @@
   "match": [
    "big 5 construct saudi",
    "big 5 saudi"
+  ]
+ },
+ {
+  "slug": "chemspec-europe",
+  "name": "Chemspec Europe",
+  "city": "Basel",
+  "country": "İsviçre",
+  "venue": "Messe Basel",
+  "region": "eu",
+  "start": "2027-05-24",
+  "end": "2027-05-25",
+  "sector": "Özel kimyasallar",
+  "url": "https://www.chemspeceurope.com/",
+  "verified": true,
+  "match": [
+   "chemspec"
+  ]
+ },
+ {
+  "slug": "hvac-r-egypt",
+  "name": "HVAC-R Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-05-24",
+  "end": "2027-05-26",
+  "sector": "İklimlendirme ve soğutma",
+  "url": "https://hvacregypt.com/",
+  "verified": true,
+  "match": [
+   "hvac-r egypt",
+   "hvacr egypt"
   ]
  },
  {
@@ -5870,6 +9084,70 @@
   ]
  },
  {
+  "slug": "tdk-deri-ve-kurk-moda-sov-mayis",
+  "name": "TDK Deri ve Kürk Moda Şov (Mayıs)",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Kaya Palazzo Golf Resort",
+  "region": "tr",
+  "start": "2027-05-24",
+  "end": "2027-05-27",
+  "sector": "Deri ve kürk",
+  "url": "https://www.tdkfuarcilik.com",
+  "verified": true,
+  "match": [
+   "tdk deri",
+   "deri ve kürk"
+  ]
+ },
+ {
+  "slug": "clerkenwell-design-week",
+  "name": "Clerkenwell Design Week",
+  "city": "Londra",
+  "country": "İngiltere",
+  "region": "uk",
+  "start": "2027-05-25",
+  "end": "2027-05-27",
+  "sector": "Tasarım ve mobilya",
+  "url": "https://www.clerkenwelldesignweek.com",
+  "verified": true,
+  "match": [
+   "clerkenwell"
+  ]
+ },
+ {
+  "slug": "cphi-americas",
+  "name": "CPHI Americas",
+  "city": "Miami",
+  "country": "ABD",
+  "venue": "Miami Beach Convention Center",
+  "region": "am",
+  "start": "2027-05-25",
+  "end": "2027-05-26",
+  "sector": "İlaç hammaddeleri",
+  "url": "https://www.cphi.com/americas/en/home.html",
+  "verified": true,
+  "match": [
+   "cphi americas"
+  ]
+ },
+ {
+  "slug": "createx",
+  "name": "Createx",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-05-25",
+  "end": "2027-05-27",
+  "sector": "Tekstil tedariki",
+  "url": "https://corferias.com/es/calendario/2027",
+  "verified": true,
+  "match": [
+   "createx"
+  ]
+ },
+ {
   "slug": "hometex",
   "name": "Hometex",
   "city": "İstanbul",
@@ -5883,6 +9161,22 @@
   "verified": true,
   "match": [
    "hometex"
+  ]
+ },
+ {
+  "slug": "intertex-furniture",
+  "name": "Intertex Furniture",
+  "city": "Secaucus",
+  "country": "ABD",
+  "venue": "Meadowlands Exposition Center",
+  "region": "am",
+  "start": "2027-05-25",
+  "end": "2027-05-27",
+  "sector": "Mobilya",
+  "url": "https://www.intertexfurniture.com/",
+  "verified": true,
+  "match": [
+   "intertex furniture"
   ]
  },
  {
@@ -5919,6 +9213,54 @@
   ]
  },
  {
+  "slug": "print4all",
+  "name": "Print4All",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Fiera Milano Rho",
+  "region": "eu",
+  "start": "2027-05-25",
+  "end": "2027-05-28",
+  "sector": "Baskı ve etiket",
+  "url": "https://www.eventseye.com/fairs/f-print4all-7552-1.html",
+  "verified": false,
+  "match": [
+   "print4all"
+  ]
+ },
+ {
+  "slug": "santexpo",
+  "name": "SantExpo",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-05-25",
+  "end": "2027-05-27",
+  "sector": "Sağlık",
+  "url": "https://www.santexpo.com/",
+  "verified": true,
+  "match": [
+   "santexpo"
+  ]
+ },
+ {
+  "slug": "toc-europe",
+  "name": "TOC Europe",
+  "city": "Hamburg",
+  "country": "Almanya",
+  "venue": "Hamburg Messe",
+  "region": "eu",
+  "start": "2027-05-25",
+  "end": "2027-05-27",
+  "sector": "Konteyner lojistiği",
+  "url": "https://www.tocevents-europe.com/",
+  "verified": true,
+  "match": [
+   "toc europe"
+  ]
+ },
+ {
   "slug": "autopromotec",
   "name": "Autopromotec",
   "city": "Bologna",
@@ -5932,6 +9274,22 @@
   "verified": true,
   "match": [
    "autopromotec"
+  ]
+ },
+ {
+  "slug": "idet",
+  "name": "IDET",
+  "city": "Brno",
+  "country": "Çekya",
+  "venue": "Brno Fuar Merkezi",
+  "region": "eu",
+  "start": "2027-05-26",
+  "end": "2027-05-28",
+  "sector": "Savunma ve güvenlik",
+  "url": "https://www.bvv.cz/en/idet",
+  "verified": true,
+  "match": [
+   "idet"
   ]
  },
  {
@@ -5983,6 +9341,38 @@
   ]
  },
  {
+  "slug": "sanliurfa-anatolia-jewellery-show",
+  "name": "Şanlıurfa Anatolia Jewellery Show",
+  "city": "Şanlıurfa",
+  "country": "Türkiye",
+  "venue": "Şanlıurfa Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-05-28",
+  "end": "2027-05-30",
+  "sector": "Kuyumculuk",
+  "url": "https://usfuar.com",
+  "verified": true,
+  "match": [
+   "anatolia jewellery"
+  ]
+ },
+ {
+  "slug": "fithep-latam",
+  "name": "FITHEP Latam",
+  "city": "Buenos Aires",
+  "country": "Arjantin",
+  "venue": "La Rural",
+  "region": "am",
+  "start": "2027-05-30",
+  "end": "2027-06-02",
+  "sector": "Gıda üretim makineleri",
+  "url": "https://www.fithep-expoalimentaria.com/",
+  "verified": true,
+  "match": [
+   "fithep"
+  ]
+ },
+ {
   "slug": "black-hat-mea",
   "name": "Black Hat MEA",
   "city": "Riyad",
@@ -5996,6 +9386,23 @@
   "verified": true,
   "match": [
    "black hat"
+  ]
+ },
+ {
+  "slug": "saudi-arabia-coatings-show",
+  "name": "Saudi Arabia Coatings Show",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Exhibition Centre",
+  "region": "me",
+  "start": "2027-05-31",
+  "end": "2027-06-02",
+  "sector": "Boya ve kaplama",
+  "url": "https://www.coatings-group.com/",
+  "verified": true,
+  "match": [
+   "saudi arabia coatings",
+   "coatings show saudi"
   ]
  },
  {
@@ -6064,6 +9471,24 @@
   ]
  },
  {
+  "slug": "fi-africa-and-propak-mena-africa-food-manufacturing",
+  "name": "Fi Africa & ProPak MENA (Africa Food Manufacturing)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-06-01",
+  "end": "2027-06-03",
+  "sector": "Gıda işleme ve ambalaj",
+  "url": "https://www.figlobal.com/africa",
+  "verified": true,
+  "match": [
+   "fi africa",
+   "propak mena",
+   "africa food manufacturing"
+  ]
+ },
+ {
   "slug": "index-dubai",
   "name": "INDEX Dubai",
   "city": "Dubai",
@@ -6078,6 +9503,39 @@
   "match": [
    "index dubai",
    "index"
+  ]
+ },
+ {
+  "slug": "preventica-paris",
+  "name": "Préventica Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-06-01",
+  "end": "2027-06-03",
+  "sector": "İş sağlığı ve güvenliği",
+  "url": "https://www.preventica.com/",
+  "verified": true,
+  "match": [
+   "preventica"
+  ]
+ },
+ {
+  "slug": "saudi-light-and-sound-expo",
+  "name": "Saudi Light & Sound Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-06-01",
+  "end": "2027-06-03",
+  "sector": "Profesyonel ışık ve ses",
+  "url": "https://www.saudilightandsoundexpo.com/",
+  "verified": true,
+  "match": [
+   "saudi light & sound",
+   "sls expo"
   ]
  },
  {
@@ -6127,6 +9585,23 @@
   "verified": true,
   "match": [
    "hotel show"
+  ]
+ },
+ {
+  "slug": "cosmeticbusiness",
+  "name": "CosmeticBusiness",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "MOC München",
+  "region": "eu",
+  "start": "2027-06-02",
+  "end": "2027-06-03",
+  "sector": "Kozmetik tedarik ve ambalaj",
+  "url": "https://www.cosmetic-business.com/",
+  "verified": true,
+  "match": [
+   "cosmeticbusiness",
+   "cosmetic business"
   ]
  },
  {
@@ -6197,6 +9672,22 @@
   ]
  },
  {
+  "slug": "motobiex-ankara",
+  "name": "Motobiex Ankara",
+  "city": "Ankara",
+  "country": "Türkiye",
+  "venue": "Anfa Altınpark Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-06-03",
+  "end": "2027-06-06",
+  "sector": "Motosiklet ve bisiklet",
+  "url": "https://www.zumrutfuarcilik.com.tr",
+  "verified": true,
+  "match": [
+   "motobiex"
+  ]
+ },
+ {
   "slug": "jck-las-vegas",
   "name": "JCK Las Vegas",
   "city": "Las Vegas",
@@ -6210,6 +9701,37 @@
   "verified": true,
   "match": [
    "jck"
+  ]
+ },
+ {
+  "slug": "premiere-orlando",
+  "name": "Premiere Orlando",
+  "city": "Orlando",
+  "country": "ABD",
+  "venue": "Orange County Convention Center",
+  "region": "am",
+  "start": "2027-06-05",
+  "end": "2027-06-07",
+  "sector": "Profesyonel güzellik",
+  "url": "https://www.eventseye.com/fairs/f-premiere-orlando-20141-1.html",
+  "verified": false,
+  "match": [
+   "premiere orlando"
+  ]
+ },
+ {
+  "slug": "iddba-show",
+  "name": "IDDBA Show",
+  "city": "Atlanta",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-06-06",
+  "end": "2027-06-08",
+  "sector": "Süt, şarküteri, fırın",
+  "url": "https://www.iddba.org/iddba-show/about-the-show/registration-and-hotels",
+  "verified": true,
+  "match": [
+   "iddba"
   ]
  },
  {
@@ -6278,6 +9800,70 @@
   ]
  },
  {
+  "slug": "exposec",
+  "name": "Exposec",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Güvenlik",
+  "url": "https://www.exposec.tmp.br/",
+  "verified": true,
+  "match": [
+   "exposec"
+  ]
+ },
+ {
+  "slug": "fce-cosmetique",
+  "name": "FCE Cosmetique",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Kozmetik üretimi",
+  "url": "https://www.fcecosmetique.com.br/",
+  "verified": true,
+  "match": [
+   "fce cosmetique"
+  ]
+ },
+ {
+  "slug": "fce-pharma",
+  "name": "FCE Pharma",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "İlaç üretim teknolojisi",
+  "url": "https://fcepharma.com.br/en",
+  "verified": true,
+  "match": [
+   "fce pharma"
+  ]
+ },
+ {
+  "slug": "global-energy-show-canada",
+  "name": "Global Energy Show Canada",
+  "city": "Calgary",
+  "country": "Kanada",
+  "venue": "BMO Centre",
+  "region": "am",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Petrol, gaz, enerji",
+  "url": "https://www.eventseye.com/fairs/f-global-energy-show-calgary-17380-1.html",
+  "verified": false,
+  "match": [
+   "global energy show"
+  ]
+ },
+ {
   "slug": "global-infrastructure-expo-saudi",
   "name": "Global Infrastructure Expo (Saudi)",
   "city": "Riyad",
@@ -6292,6 +9878,70 @@
   "match": [
    "infrastructure expo",
    "global infrastructure"
+  ]
+ },
+ {
+  "slug": "infosecurity-europe",
+  "name": "Infosecurity Europe",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Siber güvenlik",
+  "url": "https://www.infosecurityeurope.com/",
+  "verified": true,
+  "match": [
+   "infosecurity europe"
+  ]
+ },
+ {
+  "slug": "intertraffic-americas",
+  "name": "Intertraffic Americas",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Trafik ve mobilite",
+  "url": "https://www.intertraffic.com/americas",
+  "verified": true,
+  "match": [
+   "intertraffic"
+  ]
+ },
+ {
+  "slug": "nor-shipping",
+  "name": "Nor-Shipping",
+  "city": "Lillestrøm",
+  "country": "Norveç",
+  "venue": "Nova Spektrum",
+  "region": "eu",
+  "start": "2027-06-08",
+  "end": "2027-06-11",
+  "sector": "Denizcilik",
+  "url": "https://nor-shipping.com/",
+  "verified": true,
+  "match": [
+   "nor-shipping"
+  ]
+ },
+ {
+  "slug": "saudi-warehousing-and-logistics-expo",
+  "name": "Saudi Warehousing & Logistics Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Depolama ve lojistik",
+  "url": "https://expotim.com/fuar/saudi-warehousing-and-logistics-2027",
+  "verified": false,
+  "match": [
+   "saudi warehousing"
   ]
  },
  {
@@ -6394,6 +10044,39 @@
   ]
  },
  {
+  "slug": "smart-manufacturing-week-drives-and-controls",
+  "name": "Smart Manufacturing Week (Drives & Controls)",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-06-09",
+  "end": "2027-06-10",
+  "sector": "Üretim ve otomasyon",
+  "url": "https://www.smartmanufacturingweek.com/",
+  "verified": true,
+  "match": [
+   "smart manufacturing week",
+   "drives & controls"
+  ]
+ },
+ {
+  "slug": "subcon",
+  "name": "Subcon",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-06-09",
+  "end": "2027-06-10",
+  "sector": "Fason üretim",
+  "url": "https://www.subconshow.co.uk/",
+  "verified": true,
+  "match": [
+   "subcon"
+  ]
+ },
+ {
   "slug": "viv-select-turkiye",
   "name": "VIV Select Türkiye",
   "city": "İstanbul",
@@ -6443,6 +10126,38 @@
   ]
  },
  {
+  "slug": "technoprint-egypt",
+  "name": "Technoprint Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-06-10",
+  "end": "2027-06-12",
+  "sector": "Matbaa ve baskı",
+  "url": "https://www.eventseye.com/fairs/f-technoprint-egypt-10282-1.html",
+  "verified": false,
+  "match": [
+   "technoprint"
+  ]
+ },
+ {
+  "slug": "workspace-expo-egypt",
+  "name": "Workspace Expo Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-06-10",
+  "end": "2027-06-12",
+  "sector": "Ofis mobilyası",
+  "url": "https://workspace-egypt.com/",
+  "verified": true,
+  "match": [
+   "workspace egypt"
+  ]
+ },
+ {
   "slug": "fsb-riyadh",
   "name": "FSB Riyadh",
   "city": "Riyad",
@@ -6457,6 +10172,56 @@
   "match": [
    "fsb riyadh",
    "fsb"
+  ]
+ },
+ {
+  "slug": "ihf-international-hardware-fair-saudi-arabia",
+  "name": "IHF - International Hardware Fair Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Convention & Exhibition Center",
+  "region": "me",
+  "start": "2027-06-13",
+  "end": "2027-06-15",
+  "sector": "Hırdavat",
+  "url": "https://www.hardwarefair-saudi.com",
+  "verified": true,
+  "match": [
+   "ihf saudi",
+   "hardware fair saudi"
+  ]
+ },
+ {
+  "slug": "international-hardware-fair-saudi-arabia",
+  "name": "International Hardware Fair Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Exhibition Centre",
+  "region": "me",
+  "start": "2027-06-13",
+  "end": "2027-06-15",
+  "sector": "Hırdavat ve el aletleri",
+  "url": "https://www.hardwarefair-saudi.com/",
+  "verified": true,
+  "match": [
+   "hardware fair saudi",
+   "ihf saudi"
+  ]
+ },
+ {
+  "slug": "middle-east-poultry-expo",
+  "name": "Middle East Poultry Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Convention & Exhibition Center",
+  "region": "me",
+  "start": "2027-06-13",
+  "end": "2027-06-15",
+  "sector": "Kanatlı hayvancılık",
+  "url": "https://www.mep-expo.com/",
+  "verified": true,
+  "match": [
+   "poultry expo"
   ]
  },
  {
@@ -6705,6 +10470,39 @@
   ]
  },
  {
+  "slug": "textiles-recycling-expo",
+  "name": "Textiles Recycling Expo",
+  "city": "Brüksel",
+  "country": "Belçika",
+  "venue": "Brussels Expo",
+  "region": "eu",
+  "start": "2027-06-16",
+  "end": "2027-06-17",
+  "sector": "Tekstil geri dönüşümü",
+  "url": "https://events.amiplastics.com/textiles-recycling-expo",
+  "verified": true,
+  "match": [
+   "textiles recycling expo"
+  ]
+ },
+ {
+  "slug": "vivatech",
+  "name": "VivaTech",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-06-16",
+  "end": "2027-06-19",
+  "sector": "Teknoloji",
+  "url": "https://vivatech.com/",
+  "verified": true,
+  "match": [
+   "vivatech",
+   "viva technology"
+  ]
+ },
+ {
   "slug": "whx-miami-fime",
   "name": "WHX Miami (FIME)",
   "city": "Miami",
@@ -6719,6 +10517,22 @@
   "match": [
    "fime",
    "whx miami"
+  ]
+ },
+ {
+  "slug": "umre-ve-turizm-profesyonelleri-fuari",
+  "name": "Umre ve Turizm Profesyonelleri Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Lütfi Kırdar Uluslararası Kongre ve Sergi Sarayı",
+  "region": "tr",
+  "start": "2027-06-19",
+  "end": "2027-06-20",
+  "sector": "Turizm",
+  "url": "https://www.huitm.org",
+  "verified": true,
+  "match": [
+   "umre ve turizm"
   ]
  },
  {
@@ -6867,6 +10681,22 @@
   ]
  },
  {
+  "slug": "energy-storage-europe",
+  "name": "Energy Storage Europe",
+  "city": "Stuttgart",
+  "country": "Almanya",
+  "venue": "Messe Stuttgart",
+  "region": "eu",
+  "start": "2027-06-22",
+  "end": "2027-06-24",
+  "sector": "Enerji depolama",
+  "url": "https://www.energystoragegermany.com/",
+  "verified": true,
+  "match": [
+   "energy storage europe"
+  ]
+ },
+ {
   "slug": "expo-seguridad-mexico",
   "name": "Expo Seguridad México",
   "city": "Meksiko",
@@ -6896,6 +10726,23 @@
   "verified": true,
   "match": [
    "fispal"
+  ]
+ },
+ {
+  "slug": "installershow",
+  "name": "InstallerSHOW",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-06-22",
+  "end": "2027-06-24",
+  "sector": "Isıtma ve tesisat",
+  "url": "https://www.installershow.com/",
+  "verified": true,
+  "match": [
+   "installershow",
+   "installer show"
   ]
  },
  {
@@ -6932,6 +10779,22 @@
   ]
  },
  {
+  "slug": "tecnocarne",
+  "name": "Tecnocarne",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-06-22",
+  "end": "2027-06-25",
+  "sector": "Et işleme",
+  "url": "https://www.tecnocarne.com.br/pt/home.html",
+  "verified": true,
+  "match": [
+   "tecnocarne"
+  ]
+ },
+ {
   "slug": "the-battery-show-europe",
   "name": "The Battery Show Europe",
   "city": "Stuttgart",
@@ -6945,6 +10808,22 @@
   "verified": true,
   "match": [
    "battery show"
+  ]
+ },
+ {
+  "slug": "utech-las-americas",
+  "name": "UTECH Las Americas",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-06-22",
+  "end": "2027-06-24",
+  "sector": "Poliüretan",
+  "url": "https://utechlasamericas.com/",
+  "verified": true,
+  "match": [
+   "utech"
   ]
  },
  {
@@ -6964,6 +10843,54 @@
   ]
  },
  {
+  "slug": "ifat-brasil",
+  "name": "IFAT Brasil",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-06-23",
+  "end": "2027-06-25",
+  "sector": "Çevre ve atık",
+  "url": "https://ifatbrasil.com.br/",
+  "verified": true,
+  "match": [
+   "ifat brasil"
+  ]
+ },
+ {
+  "slug": "esx-electronic-security-expo",
+  "name": "ESX - Electronic Security Expo",
+  "city": "Tampa",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-06-28",
+  "end": "2027-07-01",
+  "sector": "Elektronik güvenlik",
+  "url": "https://esxweb.com/",
+  "verified": true,
+  "match": [
+   "esx"
+  ]
+ },
+ {
+  "slug": "all4pack-emballage-paris",
+  "name": "ALL4PACK Emballage Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-06-29",
+  "end": "2027-07-01",
+  "sector": "Ambalaj ve intralojistik",
+  "url": "https://www.all4pack.com/",
+  "verified": true,
+  "match": [
+   "all4pack",
+   "allforpack"
+  ]
+ },
+ {
   "slug": "eurobike",
   "name": "EUROBIKE",
   "city": "Frankfurt",
@@ -6977,6 +10904,55 @@
   "verified": true,
   "match": [
    "eurobike"
+  ]
+ },
+ {
+  "slug": "expopartes",
+  "name": "Expopartes",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-06-30",
+  "end": "2027-07-02",
+  "sector": "Otomotiv yedek parça",
+  "url": "https://expopartes.co/",
+  "verified": true,
+  "match": [
+   "expopartes"
+  ]
+ },
+ {
+  "slug": "lift-city-expo-egypt",
+  "name": "Lift City Expo Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-07-01",
+  "end": "2027-07-03",
+  "sector": "Asansör ve yürüyen merdiven",
+  "url": "https://liftcityexpo.com/",
+  "verified": true,
+  "match": [
+   "lift city expo egypt",
+   "lift egypt"
+  ]
+ },
+ {
+  "slug": "rawmec",
+  "name": "RAWMEC",
+  "city": "Beyrut",
+  "country": "Lübnan",
+  "venue": "Seaside Arena",
+  "region": "me",
+  "start": "2027-07-06",
+  "end": "2027-07-08",
+  "sector": "Su, enerji ve çevre",
+  "url": "https://www.rawmec-lb.com/",
+  "verified": true,
+  "match": [
+   "rawmec"
   ]
  },
  {
@@ -6997,6 +10973,22 @@
   ]
  },
  {
+  "slug": "glasstech-mexico",
+  "name": "Glasstech Mexico",
+  "city": "Monterrey",
+  "country": "Meksika",
+  "venue": "Cintermex",
+  "region": "am",
+  "start": "2027-07-07",
+  "end": "2027-07-09",
+  "sector": "Cam, kapı, pencere",
+  "url": "https://www.glasstechmexico.com/en",
+  "verified": true,
+  "match": [
+   "glasstech mexico"
+  ]
+ },
+ {
   "slug": "ina-paace-automechanika-mexico-city",
   "name": "INA PAACE Automechanika Mexico City",
   "city": "Meksiko",
@@ -7014,6 +11006,22 @@
   ]
  },
  {
+  "slug": "trendset-summer",
+  "name": "TrendSet (Summer)",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-07-10",
+  "end": "2027-07-12",
+  "sector": "İç mekan ve yaşam",
+  "url": "https://trendset.de/en/",
+  "verified": true,
+  "match": [
+   "trendset"
+  ]
+ },
+ {
   "slug": "ift-first",
   "name": "IFT FIRST",
   "city": "Şikago",
@@ -7028,6 +11036,22 @@
   "match": [
    "ift first",
    "ift"
+  ]
+ },
+ {
+  "slug": "manchester-furniture-show",
+  "name": "Manchester Furniture Show",
+  "city": "Manchester",
+  "country": "İngiltere",
+  "venue": "Manchester Central",
+  "region": "uk",
+  "start": "2027-07-11",
+  "end": "2027-07-12",
+  "sector": "Mobilya",
+  "url": "https://thefurnitureshows.com/manchester",
+  "verified": true,
+  "match": [
+   "manchester furniture show"
   ]
  },
  {
@@ -7080,6 +11104,71 @@
   ]
  },
  {
+  "slug": "future-print",
+  "name": "Future Print",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-07-13",
+  "end": "2027-07-16",
+  "sector": "Dijital ve tekstil baskı",
+  "url": "https://www.feirafutureprint.com.br/en",
+  "verified": true,
+  "match": [
+   "future print"
+  ]
+ },
+ {
+  "slug": "home-and-gift",
+  "name": "Home & Gift",
+  "city": "Harrogate",
+  "country": "İngiltere",
+  "venue": "Harrogate Convention Centre",
+  "region": "uk",
+  "start": "2027-07-18",
+  "end": "2027-07-21",
+  "sector": "Ev ve hediyelik eşya",
+  "url": "https://homeandgift.co.uk/",
+  "verified": true,
+  "match": [
+   "home & gift"
+  ]
+ },
+ {
+  "slug": "fipan",
+  "name": "FIPAN",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Expo Center Norte",
+  "region": "am",
+  "start": "2027-07-20",
+  "end": "2027-07-23",
+  "sector": "Fırıncılık ve pastacılık",
+  "url": "https://www.eventseye.com/fairs/f-fipan-14332-1.html",
+  "verified": false,
+  "match": [
+   "fipan"
+  ]
+ },
+ {
+  "slug": "adlm-clinical-lab-expo",
+  "name": "ADLM Clinical Lab Expo",
+  "city": "Şikago",
+  "country": "ABD",
+  "venue": "McCormick Place",
+  "region": "am",
+  "start": "2027-07-25",
+  "end": "2027-07-29",
+  "sector": "Klinik laboratuvar",
+  "url": "https://www.eventseye.com/fairs/f-clinical-lab-expo-14948-1.html",
+  "verified": false,
+  "match": [
+   "clinical lab expo",
+   "adlm"
+  ]
+ },
+ {
   "slug": "las-vegas-market-summer",
   "name": "Las Vegas Market (Summer)",
   "city": "Las Vegas",
@@ -7110,6 +11199,39 @@
   "match": [
    "summer fancy food",
    "fancy food"
+  ]
+ },
+ {
+  "slug": "fi-south-america",
+  "name": "Fi South America",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-08-03",
+  "end": "2027-08-05",
+  "sector": "Gıda bileşenleri",
+  "url": "https://www.figlobal.com/southamerica/en/home.html",
+  "verified": true,
+  "match": [
+   "fi south america"
+  ]
+ },
+ {
+  "slug": "international-leather-show-agustos",
+  "name": "International Leather Show (Ağustos)",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-08-03",
+  "end": "2027-08-06",
+  "sector": "Deri ve ayakkabı",
+  "url": "https://corferias.com/es/calendario/2027",
+  "verified": true,
+  "match": [
+   "leather show",
+   "ifls"
   ]
  },
  {
@@ -7146,6 +11268,22 @@
   ]
  },
  {
+  "slug": "fenasucro-and-agrocana",
+  "name": "Fenasucro & Agrocana",
+  "city": "Sertãozinho",
+  "country": "Brezilya",
+  "venue": "Centro de Eventos Zanini",
+  "region": "am",
+  "start": "2027-08-10",
+  "end": "2027-08-13",
+  "sector": "Şeker ve biyoenerji",
+  "url": "https://www.fenasucro.com.br/en-us.html",
+  "verified": true,
+  "match": [
+   "fenasucro"
+  ]
+ },
+ {
   "slug": "formland-autumn",
   "name": "Formland Autumn",
   "city": "Herning",
@@ -7159,6 +11297,38 @@
   "verified": true,
   "match": [
    "formland"
+  ]
+ },
+ {
+  "slug": "outdoor-retailer",
+  "name": "Outdoor Retailer",
+  "city": "Minneapolis",
+  "country": "ABD",
+  "venue": "Minneapolis Convention Center",
+  "region": "am",
+  "start": "2027-08-18",
+  "end": "2027-08-20",
+  "sector": "Outdoor ekipman ve giyim",
+  "url": "https://outdoorretailer.com/summer",
+  "verified": true,
+  "match": [
+   "outdoor retailer"
+  ]
+ },
+ {
+  "slug": "tecno-mueble-internacional",
+  "name": "Tecno Mueble Internacional",
+  "city": "Guadalajara",
+  "country": "Meksika",
+  "venue": "Expo Guadalajara",
+  "region": "am",
+  "start": "2027-08-18",
+  "end": "2027-08-21",
+  "sector": "Mobilya üretim tedariki",
+  "url": "https://www.eventseye.com/fairs/f-tecno-mueble-internacional-29679-1.html",
+  "verified": false,
+  "match": [
+   "tecno mueble"
   ]
  },
  {
@@ -7195,6 +11365,23 @@
   ]
  },
  {
+  "slug": "e-s-s-feria-internacional-de-seguridad",
+  "name": "E+S+S Feria Internacional de Seguridad",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-08-25",
+  "end": "2027-08-27",
+  "sector": "Güvenlik",
+  "url": "https://securityfaircolombia.com/",
+  "verified": true,
+  "match": [
+   "e+s+s",
+   "seguridad colombia"
+  ]
+ },
+ {
   "slug": "f-istanbul",
   "name": "F İstanbul",
   "city": "İstanbul",
@@ -7209,6 +11396,22 @@
   "match": [
    "f istanbul",
    "f-istanbul"
+  ]
+ },
+ {
+  "slug": "fespa-mexico",
+  "name": "FESPA Mexico",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-08-25",
+  "end": "2027-08-27",
+  "sector": "Dijital baskı",
+  "url": "https://www.eventseye.com/fairs/f-fespa-mexico-22586-1.html",
+  "verified": false,
+  "match": [
+   "fespa mexico"
   ]
  },
  {
@@ -7229,6 +11432,38 @@
   ]
  },
  {
+  "slug": "oslo-design-fair",
+  "name": "Oslo Design Fair",
+  "city": "Lillestrøm",
+  "country": "Norveç",
+  "venue": "Nova Spektrum",
+  "region": "eu",
+  "start": "2027-08-29",
+  "end": "2027-08-31",
+  "sector": "İç mekan ve tasarım",
+  "url": "https://oslodesignfair.no/",
+  "verified": true,
+  "match": [
+   "oslo design fair"
+  ]
+ },
+ {
+  "slug": "farm-progress-show",
+  "name": "Farm Progress Show",
+  "city": "Decatur",
+  "country": "ABD",
+  "venue": "Progress City USA",
+  "region": "am",
+  "start": "2027-08-31",
+  "end": "2027-09-02",
+  "sector": "Tarım makineleri",
+  "url": "https://www.farmprogressshow.com/",
+  "verified": true,
+  "match": [
+   "farm progress"
+  ]
+ },
+ {
   "slug": "mspo",
   "name": "MSPO",
   "city": "Kielce",
@@ -7242,6 +11477,22 @@
   "verified": true,
   "match": [
    "mspo"
+  ]
+ },
+ {
+  "slug": "sindex",
+  "name": "SINDEX",
+  "city": "Bern",
+  "country": "İsviçre",
+  "venue": "BERNEXPO",
+  "region": "eu",
+  "start": "2027-08-31",
+  "end": "2027-09-02",
+  "sector": "Endüstriyel otomasyon",
+  "url": "https://sindex.ch/de",
+  "verified": true,
+  "match": [
+   "sindex"
   ]
  },
  {
@@ -7309,6 +11560,38 @@
   ]
  },
  {
+  "slug": "ethexpo-eurasia-turizm-ve-saglik-fuari",
+  "name": "Ethexpo Eurasia Turizm ve Sağlık Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-09-02",
+  "end": "2027-09-04",
+  "sector": "Sağlık turizmi",
+  "url": "https://www.aselexpo.com",
+  "verified": true,
+  "match": [
+   "ethexpo"
+  ]
+ },
+ {
+  "slug": "expohunt-antalya",
+  "name": "Expohunt Antalya",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Cam Piramit Sabancı Kongre ve Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-09-02",
+  "end": "2027-09-05",
+  "sector": "Av ve doğa sporları",
+  "url": "https://expohunt.com.tr",
+  "verified": true,
+  "match": [
+   "expohunt"
+  ]
+ },
+ {
   "slug": "ifa",
   "name": "IFA",
   "city": "Berlin",
@@ -7357,6 +11640,55 @@
   ]
  },
  {
+  "slug": "metal-and-steel-egypt-fabex-middle-east",
+  "name": "Metal & Steel Egypt + FABEX Middle East",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-04",
+  "end": "2027-09-06",
+  "sector": "Metal ve çelik",
+  "url": "https://www.metalsteelegy.com/",
+  "verified": true,
+  "match": [
+   "metal & steel",
+   "fabex middle east"
+  ]
+ },
+ {
+  "slug": "autumn-fair",
+  "name": "Autumn Fair",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-09-05",
+  "end": "2027-09-08",
+  "sector": "Ev, hediyelik eşya, takı",
+  "url": "https://www.autumnfair.com/",
+  "verified": true,
+  "match": [
+   "autumn fair"
+  ]
+ },
+ {
+  "slug": "glee",
+  "name": "Glee",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-09-06",
+  "end": "2027-09-08",
+  "sector": "Bahçe ürünleri",
+  "url": "https://www.gleebirmingham.com/",
+  "verified": true,
+  "match": [
+   "glee"
+  ]
+ },
+ {
   "slug": "interbuild-near-east",
   "name": "INTERBUILD Near East",
   "city": "Amman",
@@ -7370,6 +11702,22 @@
   "verified": true,
   "match": [
    "interbuild"
+  ]
+ },
+ {
+  "slug": "pharmaconex",
+  "name": "Pharmaconex",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-06",
+  "end": "2027-09-08",
+  "sector": "İlaç endüstrisi",
+  "url": "https://www.pharmaconex-exhibition.com/en/home.html",
+  "verified": true,
+  "match": [
+   "pharmaconex"
   ]
  },
  {
@@ -7387,6 +11735,53 @@
   "match": [
    "stonejo",
    "stone jo"
+  ]
+ },
+ {
+  "slug": "translogistica-romania",
+  "name": "Translogistica Romania",
+  "city": "Bükreş",
+  "country": "Romanya",
+  "venue": "Romexpo",
+  "region": "eu",
+  "start": "2027-09-06",
+  "end": "2027-09-08",
+  "sector": "Taşımacılık ve lojistik",
+  "url": "https://translogistica.ro/en/",
+  "verified": true,
+  "match": [
+   "translogistica"
+  ]
+ },
+ {
+  "slug": "aquatech-mexico",
+  "name": "Aquatech Mexico",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-09-07",
+  "end": "2027-09-09",
+  "sector": "Su teknolojileri",
+  "url": "https://www.aquatechtrade.com/mexico",
+  "verified": true,
+  "match": [
+   "aquatech mexico"
+  ]
+ },
+ {
+  "slug": "cedia-expo",
+  "name": "CEDIA Expo",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "region": "am",
+  "start": "2027-09-07",
+  "end": "2027-09-10",
+  "sector": "Akıllı ev teknolojileri",
+  "url": "https://www.cediaexpo.com/",
+  "verified": true,
+  "match": [
+   "cedia"
   ]
  },
  {
@@ -7573,6 +11968,22 @@
   ]
  },
  {
+  "slug": "lift-city-expo-saudi",
+  "name": "Lift City Expo Saudi",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "The Arena Riyadh",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-09",
+  "sector": "Asansör ve yürüyen merdiven",
+  "url": "https://liftcityexpo.com/",
+  "verified": true,
+  "match": [
+   "lift city expo saudi"
+  ]
+ },
+ {
   "slug": "middle-east-event-show",
   "name": "Middle East Event Show",
   "city": "Dubai",
@@ -7686,6 +12097,39 @@
   ]
  },
  {
+  "slug": "glass-south-america",
+  "name": "Glass South America",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Distrito Anhembi",
+  "region": "am",
+  "start": "2027-09-08",
+  "end": "2027-09-11",
+  "sector": "Cam ve doğrama",
+  "url": "https://home.glassexpo.com.br/",
+  "verified": true,
+  "match": [
+   "glass south america",
+   "esquadria"
+  ]
+ },
+ {
+  "slug": "habitare",
+  "name": "Habitare",
+  "city": "Helsinki",
+  "country": "Finlandiya",
+  "venue": "Messukeskus Helsinki",
+  "region": "eu",
+  "start": "2027-09-08",
+  "end": "2027-09-12",
+  "sector": "Mobilya ve iç mimari",
+  "url": "https://habitare.messukeskus.com/en/",
+  "verified": true,
+  "match": [
+   "habitare"
+  ]
+ },
+ {
   "slug": "ifco-istanbul-fashion-connection-eylul",
   "name": "IFCO İstanbul Fashion Connection (Eylül)",
   "city": "İstanbul",
@@ -7718,6 +12162,38 @@
    "iraq oil & gas",
    "iraq oil gas",
    "baghdad oil"
+  ]
+ },
+ {
+  "slug": "matexpo",
+  "name": "MATEXPO",
+  "city": "Kortrijk",
+  "country": "Belçika",
+  "venue": "Kortrijk Xpo",
+  "region": "eu",
+  "start": "2027-09-08",
+  "end": "2027-09-12",
+  "sector": "İş makineleri",
+  "url": "https://www.matexpo.com/en/home",
+  "verified": true,
+  "match": [
+   "matexpo"
+  ]
+ },
+ {
+  "slug": "perakende-zirvesi-yerel-zincirler-bulusuyor",
+  "name": "Perakende Zirvesi - Yerel Zincirler Buluşuyor",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Haliç Kongre Merkezi",
+  "region": "tr",
+  "start": "2027-09-08",
+  "end": "2027-09-09",
+  "sector": "Perakende",
+  "url": "https://www.perakendezirvesi.com.tr",
+  "verified": true,
+  "match": [
+   "perakende zirvesi"
   ]
  },
  {
@@ -7770,6 +12246,38 @@
   ]
  },
  {
+  "slug": "surf-expo-eylul",
+  "name": "Surf Expo (Eylül)",
+  "city": "Orlando",
+  "country": "ABD",
+  "venue": "Orange County Convention Center",
+  "region": "am",
+  "start": "2027-09-09",
+  "end": "2027-09-11",
+  "sector": "Plaj ve su sporları",
+  "url": "https://www.surfexpo.com/",
+  "verified": true,
+  "match": [
+   "surf expo"
+  ]
+ },
+ {
+  "slug": "world-sports-istanbul",
+  "name": "World Sports İstanbul",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-09-09",
+  "end": "2027-09-12",
+  "sector": "Spor ve fitness",
+  "url": "https://www.worldsportsistanbul.com",
+  "verified": true,
+  "match": [
+   "world sports"
+  ]
+ },
+ {
   "slug": "ibc",
   "name": "IBC",
   "city": "Amsterdam",
@@ -7803,6 +12311,72 @@
   ]
  },
  {
+  "slug": "index-saudi-arabia",
+  "name": "INDEX Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-09-11",
+  "end": "2027-09-13",
+  "sector": "Mobilya ve iç mekan",
+  "url": "https://www.index-saudi.com/",
+  "verified": true,
+  "match": [
+   "index saudi"
+  ]
+ },
+ {
+  "slug": "orgatec-workspace-saudi-arabia",
+  "name": "ORGATEC Workspace Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-09-11",
+  "end": "2027-09-13",
+  "sector": "Ofis mobilyası",
+  "url": "https://orgatec-workspace-saudi.com/",
+  "verified": true,
+  "match": [
+   "orgatec"
+  ]
+ },
+ {
+  "slug": "paper-middle-east-egypt",
+  "name": "Paper Middle East (Egypt)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-11",
+  "end": "2027-09-13",
+  "sector": "Kağıt ve karton",
+  "url": "https://www.papermideast.com/eg",
+  "verified": true,
+  "match": [
+   "paper middle east",
+   "paper me"
+  ]
+ },
+ {
+  "slug": "print2pack-egypt",
+  "name": "Print2Pack Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-11",
+  "end": "2027-09-13",
+  "sector": "Baskı ve ambalaj",
+  "url": "https://www.print2packexpo.com/eg",
+  "verified": true,
+  "match": [
+   "print2pack",
+   "print 2 pack"
+  ]
+ },
+ {
   "slug": "micam-milano-september",
   "name": "MICAM Milano (September)",
   "city": "Milano",
@@ -7816,6 +12390,22 @@
   "verified": true,
   "match": [
    "micam"
+  ]
+ },
+ {
+  "slug": "western-foodservice-and-hospitality-expo",
+  "name": "Western Foodservice & Hospitality Expo",
+  "city": "Anaheim",
+  "country": "ABD",
+  "venue": "Anaheim Convention Center",
+  "region": "am",
+  "start": "2027-09-12",
+  "end": "2027-09-14",
+  "sector": "Yiyecek içecek hizmetleri",
+  "url": "https://www.westernfoodexpo.com/",
+  "verified": true,
+  "match": [
+   "western foodservice"
   ]
  },
  {
@@ -7864,6 +12454,102 @@
   "verified": true,
   "match": [
    "saudi wood"
+  ]
+ },
+ {
+  "slug": "envase-alimentek",
+  "name": "Envase Alimentek",
+  "city": "Buenos Aires",
+  "country": "Arjantin",
+  "venue": "Costa Salguero",
+  "region": "am",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Ambalaj",
+  "url": "https://www.eventseye.com/fairs/f-envase-alimentek-23798-1.html",
+  "verified": false,
+  "match": [
+   "envase"
+  ]
+ },
+ {
+  "slug": "equipotel",
+  "name": "Equipotel",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "Expo Center Norte",
+  "region": "am",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Otel ekipmanları",
+  "url": "https://www.equipotel.com.br/",
+  "verified": true,
+  "match": [
+   "equipotel"
+  ]
+ },
+ {
+  "slug": "febrava",
+  "name": "Febrava",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "İklimlendirme ve soğutma",
+  "url": "https://www.febrava.com.br/",
+  "verified": true,
+  "match": [
+   "febrava"
+  ]
+ },
+ {
+  "slug": "fiee",
+  "name": "FIEE",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Elektrik ve enerji",
+  "url": "https://www.fiee.com.br/en-us.html",
+  "verified": true,
+  "match": [
+   "fiee"
+  ]
+ },
+ {
+  "slug": "husum-wind",
+  "name": "HUSUM WIND",
+  "city": "Husum",
+  "country": "Almanya",
+  "venue": "Messe Husum",
+  "region": "eu",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Rüzgar enerjisi",
+  "url": "https://www.husumwind.com/de",
+  "verified": true,
+  "match": [
+   "husum wind"
+  ]
+ },
+ {
+  "slug": "imhx",
+  "name": "IMHX",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-09-14",
+  "end": "2027-09-16",
+  "sector": "İstif ve depo lojistiği",
+  "url": "https://www.imhx.net/",
+  "verified": true,
+  "match": [
+   "imhx"
   ]
  },
  {
@@ -7996,6 +12682,38 @@
   ]
  },
  {
+  "slug": "worldfood-moscow",
+  "name": "WorldFood Moscow",
+  "city": "Moskova",
+  "country": "Rusya",
+  "venue": "Crocus Expo",
+  "region": "eu",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Gıda",
+  "url": "https://expotim.com/fuar/worldfood-moscow-2027",
+  "verified": false,
+  "match": [
+   "worldfood moscow",
+   "world food moscow"
+  ]
+ },
+ {
+  "slug": "zeps",
+  "name": "ZEPS",
+  "city": "Zenica",
+  "country": "Bosna-Hersek",
+  "region": "eu",
+  "start": "2027-09-14",
+  "end": "2027-09-17",
+  "sector": "Genel ticaret",
+  "url": "https://www.ito.org.tr/tr/fuarlar/detay/zeps-2027",
+  "verified": true,
+  "match": [
+   "zeps"
+  ]
+ },
+ {
   "slug": "big5-construct-turkiye",
   "name": "Big5 Construct Türkiye",
   "city": "İstanbul",
@@ -8010,6 +12728,23 @@
   "match": [
    "big5",
    "big 5 construct"
+  ]
+ },
+ {
+  "slug": "ess-expo-rwm",
+  "name": "ESS Expo (RWM)",
+  "city": "Birmingham",
+  "country": "İngiltere",
+  "venue": "NEC Birmingham",
+  "region": "uk",
+  "start": "2027-09-15",
+  "end": "2027-09-16",
+  "sector": "Atık ve geri dönüşüm",
+  "url": "https://www.ess-expo.co.uk/",
+  "verified": true,
+  "match": [
+   "ess expo",
+   "rwm"
   ]
  },
  {
@@ -8061,6 +12796,22 @@
   ]
  },
  {
+  "slug": "premium-sourcing",
+  "name": "Premium Sourcing",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Carrousel du Louvre",
+  "region": "eu",
+  "start": "2027-09-15",
+  "end": "2027-09-16",
+  "sector": "Promosyon ürünleri",
+  "url": "https://www.premium-sourcing.fr/",
+  "verified": true,
+  "match": [
+   "premium sourcing"
+  ]
+ },
+ {
   "slug": "rehacare",
   "name": "REHACARE",
   "city": "Düsseldorf",
@@ -8074,6 +12825,22 @@
   "verified": true,
   "match": [
    "rehacare"
+  ]
+ },
+ {
+  "slug": "seatrade-europe",
+  "name": "Seatrade Europe",
+  "city": "Hamburg",
+  "country": "Almanya",
+  "venue": "Hamburg Messe",
+  "region": "eu",
+  "start": "2027-09-15",
+  "end": "2027-09-17",
+  "sector": "Kruvaziyer endüstrisi",
+  "url": "https://www.seatrade-europe.com/",
+  "verified": true,
+  "match": [
+   "seatrade europe"
   ]
  },
  {
@@ -8109,6 +12876,23 @@
   ]
  },
  {
+  "slug": "bife-sim",
+  "name": "BIFE-SIM",
+  "city": "Bükreş",
+  "country": "Romanya",
+  "venue": "Romexpo",
+  "region": "eu",
+  "start": "2027-09-16",
+  "end": "2027-09-19",
+  "sector": "Mobilya ve iç mekan",
+  "url": "https://www.eventseye.com/fairs/f-bife-sim-283-1.html",
+  "verified": false,
+  "match": [
+   "bife-sim",
+   "bife sim"
+  ]
+ },
+ {
   "slug": "itma",
   "name": "ITMA",
   "city": "Hannover",
@@ -8122,6 +12906,23 @@
   "verified": true,
   "match": [
    "itma"
+  ]
+ },
+ {
+  "slug": "platform-gunleri",
+  "name": "Platform Günleri",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Autodrom İstanbul",
+  "region": "tr",
+  "start": "2027-09-16",
+  "end": "2027-09-18",
+  "sector": "Yükseltici platformlar",
+  "url": "https://www.platformgunleri.org",
+  "verified": true,
+  "match": [
+   "platform günleri",
+   "platform gunleri"
   ]
  },
  {
@@ -8139,6 +12940,38 @@
   "match": [
    "r+t",
    "r+t türkiye"
+  ]
+ },
+ {
+  "slug": "agro-show",
+  "name": "AGRO SHOW",
+  "city": "Bednary",
+  "country": "Polonya",
+  "venue": "Bednary",
+  "region": "eu",
+  "start": "2027-09-17",
+  "end": "2027-09-19",
+  "sector": "Tarım makineleri",
+  "url": "https://www.agroshow.pl/agroshow/",
+  "verified": true,
+  "match": [
+   "agro show"
+  ]
+ },
+ {
+  "slug": "egypt-projects",
+  "name": "Egypt Projects",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-18",
+  "end": "2027-09-20",
+  "sector": "İnşaat",
+  "url": "https://www.egypt-projects.com/",
+  "verified": true,
+  "match": [
+   "egypt projects"
   ]
  },
  {
@@ -8176,6 +13009,54 @@
   ]
  },
  {
+  "slug": "sahara-expo",
+  "name": "Sahara Expo",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-19",
+  "end": "2027-09-21",
+  "sector": "Tarım",
+  "url": "https://www.saharaexpo.com/en/home.html",
+  "verified": true,
+  "match": [
+   "sahara expo"
+  ]
+ },
+ {
+  "slug": "iaapa-expo-europe",
+  "name": "IAAPA Expo Europe",
+  "city": "Viyana",
+  "country": "Avusturya",
+  "venue": "Messe Wien",
+  "region": "eu",
+  "start": "2027-09-20",
+  "end": "2027-09-24",
+  "sector": "Eğlence parkı endüstrisi",
+  "url": "https://iaapa.org/expos/euro-attractions-show/home",
+  "verified": true,
+  "match": [
+   "iaapa expo europe"
+  ]
+ },
+ {
+  "slug": "oman-health-exhibition",
+  "name": "Oman Health Exhibition",
+  "city": "Maskat",
+  "country": "Umman",
+  "venue": "Oman Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-09-20",
+  "end": "2027-09-22",
+  "sector": "Sağlık ve medikal",
+  "url": "https://www.eventseye.com/fairs/f-oman-health-14750-1.html",
+  "verified": false,
+  "match": [
+   "oman health"
+  ]
+ },
+ {
   "slug": "perumin",
   "name": "PERUMIN",
   "city": "Arequipa",
@@ -8189,6 +13070,54 @@
   "verified": true,
   "match": [
    "perumin"
+  ]
+ },
+ {
+  "slug": "saudi-woodshow",
+  "name": "Saudi WoodShow",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Exhibition Centre",
+  "region": "me",
+  "start": "2027-09-20",
+  "end": "2027-09-22",
+  "sector": "Ahşap işleme makineleri",
+  "url": "https://www.woodshowglobal.com/saudi",
+  "verified": true,
+  "match": [
+   "saudi woodshow"
+  ]
+ },
+ {
+  "slug": "ahr-expo-mexico",
+  "name": "AHR Expo Mexico",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-09-21",
+  "end": "2027-09-23",
+  "sector": "İklimlendirme ve soğutma",
+  "url": "https://www.ahrexpomexico.com/en",
+  "verified": true,
+  "match": [
+   "ahr expo mexico"
+  ]
+ },
+ {
+  "slug": "cms-berlin",
+  "name": "CMS Berlin",
+  "city": "Berlin",
+  "country": "Almanya",
+  "venue": "Messe Berlin",
+  "region": "eu",
+  "start": "2027-09-21",
+  "end": "2027-09-24",
+  "sector": "Temizlik ve hijyen",
+  "url": "https://www.cms-berlin.de/en",
+  "verified": true,
+  "match": [
+   "cms berlin"
   ]
  },
  {
@@ -8221,6 +13150,22 @@
   "verified": true,
   "match": [
    "furniture manufacturing"
+  ]
+ },
+ {
+  "slug": "ilmac-basel",
+  "name": "Ilmac Basel",
+  "city": "Basel",
+  "country": "İsviçre",
+  "venue": "Messe Basel",
+  "region": "eu",
+  "start": "2027-09-21",
+  "end": "2027-09-23",
+  "sector": "Proses ve laboratuvar",
+  "url": "https://www.ilmac.ch/",
+  "verified": true,
+  "match": [
+   "ilmac"
   ]
  },
  {
@@ -8306,6 +13251,22 @@
   ]
  },
  {
+  "slug": "trako",
+  "name": "TRAKO",
+  "city": "Gdansk",
+  "country": "Polonya",
+  "venue": "AmberExpo",
+  "region": "eu",
+  "start": "2027-09-21",
+  "end": "2027-09-24",
+  "sector": "Demiryolu",
+  "url": "https://trakoexpo.com/",
+  "verified": true,
+  "match": [
+   "trako"
+  ]
+ },
+ {
   "slug": "dmexco",
   "name": "DMEXCO",
   "city": "Köln",
@@ -8338,6 +13299,23 @@
   ]
  },
  {
+  "slug": "ffcr-and-nordic-natural-food-malmo",
+  "name": "FFCR & Nordic Natural Food Malmö",
+  "city": "Malmö",
+  "country": "İsveç",
+  "venue": "Malmömässan",
+  "region": "eu",
+  "start": "2027-09-22",
+  "end": "2027-09-23",
+  "sector": "Yiyecek ve içecek",
+  "url": "https://www.ffcr.se",
+  "verified": true,
+  "match": [
+   "ffcr",
+   "nordic natural food"
+  ]
+ },
+ {
   "slug": "gaziantep-insaat-ve-yapi-fuari",
   "name": "Gaziantep İnşaat ve Yapı Fuarı",
   "city": "Gaziantep",
@@ -8352,6 +13330,38 @@
   "match": [
    "gaziantep inşaat",
    "gaziantep yapı"
+  ]
+ },
+ {
+  "slug": "london-packaging-week",
+  "name": "London Packaging Week",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-09-22",
+  "end": "2027-09-23",
+  "sector": "Ambalaj",
+  "url": "https://www.londonpackagingweek.com/",
+  "verified": true,
+  "match": [
+   "london packaging week"
+  ]
+ },
+ {
+  "slug": "nufam",
+  "name": "NUFAM",
+  "city": "Karlsruhe",
+  "country": "Almanya",
+  "venue": "Messe Karlsruhe",
+  "region": "eu",
+  "start": "2027-09-22",
+  "end": "2027-09-25",
+  "sector": "Ticari araçlar",
+  "url": "https://www.nufam.de/en/",
+  "verified": true,
+  "match": [
+   "nufam"
   ]
  },
  {
@@ -8437,6 +13447,22 @@
   ]
  },
  {
+  "slug": "gran-salon-ferretero",
+  "name": "Gran Salón Ferretero",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-09-23",
+  "end": "2027-09-25",
+  "sector": "Hırdavat",
+  "url": "https://corferias.com/es/calendario/2027",
+  "verified": true,
+  "match": [
+   "salon ferretero"
+  ]
+ },
+ {
   "slug": "how-hub-of-warehouse",
   "name": "HOW - Hub of Warehouse",
   "city": "İstanbul",
@@ -8451,6 +13477,22 @@
   "match": [
    "hub of warehouse",
    "how"
+  ]
+ },
+ {
+  "slug": "istanbul-turizm-fuari",
+  "name": "İstanbul Turizm Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-09-23",
+  "end": "2027-09-24",
+  "sector": "Turizm",
+  "url": "https://www.istanbulturizmfuari.com.tr",
+  "verified": true,
+  "match": [
+   "istanbul turizm fuarı"
   ]
  },
  {
@@ -8471,6 +13513,54 @@
   ]
  },
  {
+  "slug": "silmo-paris",
+  "name": "SILMO Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Nord Villepinte",
+  "region": "eu",
+  "start": "2027-09-24",
+  "end": "2027-09-27",
+  "sector": "Optik ve gözlük",
+  "url": "https://www.silmoparis.com/en",
+  "verified": true,
+  "match": [
+   "silmo paris"
+  ]
+ },
+ {
+  "slug": "vitahealth-saglik-turizmi-fuari",
+  "name": "Vitahealth Sağlık Turizmi Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Lütfi Kırdar Uluslararası Kongre ve Sergi Sarayı",
+  "region": "tr",
+  "start": "2027-09-24",
+  "end": "2027-09-26",
+  "sector": "Sağlık turizmi",
+  "url": "https://www.vitahealthfair.com",
+  "verified": true,
+  "match": [
+   "vitahealth"
+  ]
+ },
+ {
+  "slug": "natexpo",
+  "name": "Natexpo",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-09-26",
+  "end": "2027-09-28",
+  "sector": "Organik ürünler",
+  "url": "https://natexpo.com/en/",
+  "verified": true,
+  "match": [
+   "natexpo"
+  ]
+ },
+ {
   "slug": "cersaie",
   "name": "Cersaie",
   "city": "Bologna",
@@ -8484,6 +13574,22 @@
   "verified": true,
   "match": [
    "cersaie"
+  ]
+ },
+ {
+  "slug": "cmts",
+  "name": "CMTS",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Toronto Congress Centre",
+  "region": "am",
+  "start": "2027-09-27",
+  "end": "2027-09-30",
+  "sector": "Üretim teknolojileri",
+  "url": "https://www.cmts.ca/",
+  "verified": true,
+  "match": [
+   "cmts"
   ]
  },
  {
@@ -8535,6 +13641,54 @@
   ]
  },
  {
+  "slug": "alihankinta",
+  "name": "Alihankinta",
+  "city": "Tampere",
+  "country": "Finlandiya",
+  "venue": "Tampere Fuar Merkezi",
+  "region": "eu",
+  "start": "2027-09-28",
+  "end": "2027-09-30",
+  "sector": "Fason üretim",
+  "url": "https://alihankinta.fi/home",
+  "verified": true,
+  "match": [
+   "alihankinta"
+  ]
+ },
+ {
+  "slug": "analitica-latin-america",
+  "name": "Analitica Latin America",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-09-28",
+  "end": "2027-09-30",
+  "sector": "Laboratuvar ve analiz",
+  "url": "https://www.fuartakip.com/fuarlar/fuarturdetay.asp?ID=20337",
+  "verified": false,
+  "match": [
+   "analitica"
+  ]
+ },
+ {
+  "slug": "brand-licensing-europe",
+  "name": "Brand Licensing Europe",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-09-28",
+  "end": "2027-09-30",
+  "sector": "Marka lisanslama",
+  "url": "https://www.brandlicensing.eu/",
+  "verified": true,
+  "match": [
+   "brand licensing europe"
+  ]
+ },
+ {
   "slug": "expo-ferroviaria",
   "name": "EXPO Ferroviaria",
   "city": "Milano",
@@ -8551,6 +13705,22 @@
   ]
  },
  {
+  "slug": "expopharm",
+  "name": "expopharm",
+  "city": "Düsseldorf",
+  "country": "Almanya",
+  "venue": "Messe Düsseldorf",
+  "region": "eu",
+  "start": "2027-09-28",
+  "end": "2027-09-30",
+  "sector": "Eczacılık",
+  "url": "https://www.expopharm.de/messe/apotheken/event.php",
+  "verified": true,
+  "match": [
+   "expopharm"
+  ]
+ },
+ {
   "slug": "marmomac",
   "name": "Marmomac",
   "city": "Verona",
@@ -8564,6 +13734,22 @@
   "verified": true,
   "match": [
    "marmomac"
+  ]
+ },
+ {
+  "slug": "metal-expo-paris",
+  "name": "Métal Expo Paris",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Expo Porte de Versailles",
+  "region": "eu",
+  "start": "2027-09-28",
+  "end": "2027-09-30",
+  "sector": "Metal işleme",
+  "url": "https://www.metal-pro.org/metal-expo",
+  "verified": true,
+  "match": [
+   "métal expo paris"
   ]
  },
  {
@@ -8665,6 +13851,22 @@
   ]
  },
  {
+  "slug": "egpex-eurasia-emlak-fuari",
+  "name": "Egpex Eurasia Emlak Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-09-29",
+  "end": "2027-10-02",
+  "sector": "Gayrimenkul",
+  "url": "https://www.aselexpo.com",
+  "verified": true,
+  "match": [
+   "egpex"
+  ]
+ },
+ {
   "slug": "helal-expo",
   "name": "Helal Expo",
   "city": "İstanbul",
@@ -8698,6 +13900,22 @@
   ]
  },
  {
+  "slug": "parcel-post-expo",
+  "name": "Parcel+Post Expo",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris",
+  "region": "eu",
+  "start": "2027-09-29",
+  "end": "2027-09-30",
+  "sector": "Kargo ve posta lojistiği",
+  "url": "https://parcelandpostexpo.com/en",
+  "verified": true,
+  "match": [
+   "parcel+post expo"
+  ]
+ },
+ {
   "slug": "watch-and-jewellery-middle-east-show-eylul",
   "name": "Watch & Jewellery Middle East Show (Eylül)",
   "city": "Şarika",
@@ -8712,6 +13930,22 @@
   "match": [
    "watch & jewellery",
    "jewellery middle east"
+  ]
+ },
+ {
+  "slug": "egypt-home-tex",
+  "name": "Egypt Home Tex",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-09-30",
+  "end": "2027-10-03",
+  "sector": "Ev tekstili",
+  "url": "https://www.egypthometex.com/",
+  "verified": true,
+  "match": [
+   "egypt home tex"
   ]
  },
  {
@@ -8748,6 +13982,22 @@
   ]
  },
  {
+  "slug": "build-your-house-exhibition",
+  "name": "Build Your House Exhibition",
+  "city": "Doha",
+  "country": "Katar",
+  "venue": "Doha Exhibition & Convention Center",
+  "region": "me",
+  "start": "2027-10-03",
+  "end": "2027-10-06",
+  "sector": "İnşaat ve iç mimari",
+  "url": "https://buildyourhouseqatar.com/home",
+  "verified": true,
+  "match": [
+   "build your house"
+  ]
+ },
+ {
   "slug": "tfwa-world-exhibition-and-conference",
   "name": "TFWA World Exhibition & Conference",
   "city": "Cannes",
@@ -8761,6 +14011,22 @@
   "verified": true,
   "match": [
    "tfwa"
+  ]
+ },
+ {
+  "slug": "bcb-bar-convent-berlin",
+  "name": "BCB – Bar Convent Berlin",
+  "city": "Berlin",
+  "country": "Almanya",
+  "venue": "Messe Berlin",
+  "region": "eu",
+  "start": "2027-10-04",
+  "end": "2027-10-05",
+  "sector": "Bar ve içecek",
+  "url": "https://www.barconvent.com/berlin/en-gb.html",
+  "verified": true,
+  "match": [
+   "bar convent"
   ]
  },
  {
@@ -8797,6 +14063,38 @@
   ]
  },
  {
+  "slug": "baltexpo",
+  "name": "BALTEXPO",
+  "city": "Gdansk",
+  "country": "Polonya",
+  "venue": "AmberExpo",
+  "region": "eu",
+  "start": "2027-10-05",
+  "end": "2027-10-07",
+  "sector": "Denizcilik",
+  "url": "https://baltexpo.eu/",
+  "verified": true,
+  "match": [
+   "baltexpo"
+  ]
+ },
+ {
+  "slug": "conxemar",
+  "name": "Conxemar",
+  "city": "Vigo",
+  "country": "İspanya",
+  "venue": "IFEVI",
+  "region": "eu",
+  "start": "2027-10-05",
+  "end": "2027-10-07",
+  "sector": "Dondurulmuş deniz ürünleri",
+  "url": "https://www.eventseye.com/fairs/f-conxemar-12804-1.html",
+  "verified": false,
+  "match": [
+   "conxemar"
+  ]
+ },
+ {
   "slug": "fruit-attraction",
   "name": "Fruit Attraction",
   "city": "Madrid",
@@ -8810,6 +14108,23 @@
   "verified": true,
   "match": [
    "fruit attraction"
+  ]
+ },
+ {
+  "slug": "hi-tech-and-industry-scandinavia",
+  "name": "HI Tech & Industry Scandinavia",
+  "city": "Herning",
+  "country": "Danimarka",
+  "venue": "MCH Messecenter Herning",
+  "region": "eu",
+  "start": "2027-10-05",
+  "end": "2027-10-07",
+  "sector": "Endüstri ve makine",
+  "url": "https://www.hi-industri.dk/",
+  "verified": true,
+  "match": [
+   "hi tech & industry",
+   "hi-industri"
   ]
  },
  {
@@ -8842,6 +14157,40 @@
   "verified": true,
   "match": [
    "it-sa"
+  ]
+ },
+ {
+  "slug": "loupe-europe-eski-labelexpo-europe",
+  "name": "LOUPE Europe (eski Labelexpo Europe)",
+  "city": "Barselona",
+  "country": "İspanya",
+  "venue": "Fira Gran Via",
+  "region": "eu",
+  "start": "2027-10-05",
+  "end": "2027-10-08",
+  "sector": "Etiket ve ambalaj baskı",
+  "url": "https://www.loupe-europe.com/",
+  "verified": true,
+  "match": [
+   "loupe europe",
+   "labelexpo europe"
+  ]
+ },
+ {
+  "slug": "loupe-europe-labelexpo-europe",
+  "name": "LOUPE Europe (Labelexpo Europe)",
+  "city": "Barselona",
+  "country": "İspanya",
+  "venue": "Fira Gran Via",
+  "region": "eu",
+  "start": "2027-10-05",
+  "end": "2027-10-08",
+  "sector": "Etiket ve baskı",
+  "url": "https://www.labelexpo-europe.com",
+  "verified": true,
+  "match": [
+   "labelexpo",
+   "loupe europe"
   ]
  },
  {
@@ -8977,6 +14326,38 @@
   ]
  },
  {
+  "slug": "pumps-and-valves-rotterdam",
+  "name": "Pumps & Valves Rotterdam",
+  "city": "Rotterdam",
+  "country": "Hollanda",
+  "venue": "Rotterdam Ahoy",
+  "region": "eu",
+  "start": "2027-10-06",
+  "end": "2027-10-07",
+  "sector": "Pompa ve vana",
+  "url": "https://www.pumpsvalves.nl/en/",
+  "verified": true,
+  "match": [
+   "pumps & valves rotterdam"
+  ]
+ },
+ {
+  "slug": "agrilevante",
+  "name": "Agrilevante",
+  "city": "Bari",
+  "country": "İtalya",
+  "venue": "Fiera del Levante",
+  "region": "eu",
+  "start": "2027-10-07",
+  "end": "2027-10-10",
+  "sector": "Tarım makineleri",
+  "url": "https://www.agrilevante.eu/en/index.php",
+  "verified": true,
+  "match": [
+   "agrilevante"
+  ]
+ },
+ {
   "slug": "baby-and-kids-expo",
   "name": "Baby & Kids Expo",
   "city": "Dubai",
@@ -9060,6 +14441,22 @@
   ]
  },
  {
+  "slug": "autotech-egypt",
+  "name": "Autotech Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-10-08",
+  "end": "2027-10-10",
+  "sector": "Otomotiv yan sanayi",
+  "url": "https://www.autotechegypt.com/en/home.html",
+  "verified": true,
+  "match": [
+   "autotech egypt"
+  ]
+ },
+ {
   "slug": "anuga",
   "name": "Anuga",
   "city": "Köln",
@@ -9108,6 +14505,54 @@
   ]
  },
  {
+  "slug": "decorex",
+  "name": "Decorex",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "Olympia London",
+  "region": "uk",
+  "start": "2027-10-10",
+  "end": "2027-10-13",
+  "sector": "İç mimari ve dekorasyon",
+  "url": "https://www.decorex.com/",
+  "verified": true,
+  "match": [
+   "decorex"
+  ]
+ },
+ {
+  "slug": "fabex-saudi-arabia",
+  "name": "FABEX Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Exhibition Centre",
+  "region": "me",
+  "start": "2027-10-10",
+  "end": "2027-10-13",
+  "sector": "Çelik ve metal işleme",
+  "url": "https://www.fabxsaudi.com/",
+  "verified": true,
+  "match": [
+   "fabex saudi"
+  ]
+ },
+ {
+  "slug": "professional-beauty-london",
+  "name": "Professional Beauty London",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "ExCeL London",
+  "region": "uk",
+  "start": "2027-10-10",
+  "end": "2027-10-11",
+  "sector": "Güzellik",
+  "url": "https://www.eventseye.com/fairs/f-professional-beauty-london-16049-1.html",
+  "verified": false,
+  "match": [
+   "professional beauty london"
+  ]
+ },
+ {
   "slug": "achema-middle-east",
   "name": "ACHEMA Middle East",
   "city": "Riyad",
@@ -9121,6 +14566,22 @@
   "verified": true,
   "match": [
    "achema"
+  ]
+ },
+ {
+  "slug": "arablab",
+  "name": "ArabLab",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-10-11",
+  "end": "2027-10-13",
+  "sector": "Laboratuvar ekipmanları",
+  "url": "https://www.arablab.com/",
+  "verified": true,
+  "match": [
+   "arablab"
   ]
  },
  {
@@ -9156,6 +14617,22 @@
   ]
  },
  {
+  "slug": "danfish-international",
+  "name": "DanFish International",
+  "city": "Aalborg",
+  "country": "Danimarka",
+  "venue": "Aalborg Kongres & Kultur Center",
+  "region": "eu",
+  "start": "2027-10-12",
+  "end": "2027-10-14",
+  "sector": "Balıkçılık teknolojisi",
+  "url": "https://danfish.com/",
+  "verified": true,
+  "match": [
+   "danfish"
+  ]
+ },
+ {
   "slug": "equip-auto-paris",
   "name": "EQUIP AUTO Paris",
   "city": "Paris",
@@ -9172,6 +14649,54 @@
   ]
  },
  {
+  "slug": "intergeo",
+  "name": "INTERGEO",
+  "city": "Frankfurt",
+  "country": "Almanya",
+  "venue": "Messe Frankfurt",
+  "region": "eu",
+  "start": "2027-10-12",
+  "end": "2027-10-14",
+  "sector": "Jeodezi ve coğrafi bilgi",
+  "url": "https://dvw.de/intergeo/de",
+  "verified": true,
+  "match": [
+   "intergeo"
+  ]
+ },
+ {
+  "slug": "inter-airport-europe",
+  "name": "inter airport Europe",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Fiera Milano Rho",
+  "region": "eu",
+  "start": "2027-10-12",
+  "end": "2027-10-14",
+  "sector": "Havalimanı ekipmanı",
+  "url": "https://www.interairportglobal.com/",
+  "verified": true,
+  "match": [
+   "inter airport europe"
+  ]
+ },
+ {
+  "slug": "interlift",
+  "name": "interlift",
+  "city": "Nürnberg",
+  "country": "Almanya",
+  "venue": "NürnbergMesse",
+  "region": "eu",
+  "start": "2027-10-12",
+  "end": "2027-10-15",
+  "sector": "Asansör teknolojisi",
+  "url": "https://www.interlift.de/en",
+  "verified": true,
+  "match": [
+   "interlift"
+  ]
+ },
+ {
   "slug": "modef-expo-ekim",
   "name": "Modef Expo (Ekim)",
   "city": "Bursa",
@@ -9185,6 +14710,22 @@
   "verified": true,
   "match": [
    "modef"
+  ]
+ },
+ {
+  "slug": "obra-blanca-expo",
+  "name": "Obra Blanca Expo",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Expo Santa Fe México",
+  "region": "am",
+  "start": "2027-10-12",
+  "end": "2027-10-14",
+  "sector": "İnşaat ince işler",
+  "url": "https://www.obrablancaexpo.com/en/home-en",
+  "verified": true,
+  "match": [
+   "obra blanca"
   ]
  },
  {
@@ -9220,6 +14761,38 @@
   ]
  },
  {
+  "slug": "bioexpo-yasam-bilimleri-fuari",
+  "name": "Bioexpo Yaşam Bilimleri Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Lütfi Kırdar Uluslararası Kongre ve Sergi Sarayı",
+  "region": "tr",
+  "start": "2027-10-13",
+  "end": "2027-10-15",
+  "sector": "Laboratuvar ve yaşam bilimleri",
+  "url": "https://bioexpo.com.tr",
+  "verified": true,
+  "match": [
+   "bioexpo"
+  ]
+ },
+ {
+  "slug": "cosmetic-360",
+  "name": "COSMETIC 360",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Carrousel du Louvre",
+  "region": "eu",
+  "start": "2027-10-13",
+  "end": "2027-10-14",
+  "sector": "Kozmetik inovasyon",
+  "url": "https://www.cosmetic-360.com/",
+  "verified": true,
+  "match": [
+   "cosmetic 360"
+  ]
+ },
+ {
   "slug": "expo-cihac",
   "name": "Expo CIHAC",
   "city": "Meksiko",
@@ -9236,6 +14809,55 @@
   ]
  },
  {
+  "slug": "expo-plasticos",
+  "name": "Expo Plásticos",
+  "city": "Guadalajara",
+  "country": "Meksika",
+  "venue": "Expo Guadalajara",
+  "region": "am",
+  "start": "2027-10-13",
+  "end": "2027-10-15",
+  "sector": "Plastik",
+  "url": "https://www.expoplasticos.com.mx/",
+  "verified": true,
+  "match": [
+   "expo plasticos"
+  ]
+ },
+ {
+  "slug": "inout-the-hospitality-community",
+  "name": "InOut – The Hospitality Community",
+  "city": "Rimini",
+  "country": "İtalya",
+  "venue": "Rimini Expo Centre",
+  "region": "eu",
+  "start": "2027-10-13",
+  "end": "2027-10-15",
+  "sector": "Otel iç mekan donanımı",
+  "url": "https://www.inoutexpo.it/it",
+  "verified": true,
+  "match": [
+   "inout",
+   "sia hospitality"
+  ]
+ },
+ {
+  "slug": "imeak-dto-bodrum-boat-show",
+  "name": "İMEAK DTO Bodrum Boat Show",
+  "city": "Muğla",
+  "country": "Türkiye",
+  "venue": "Muttaş Bodrum Limanı",
+  "region": "tr",
+  "start": "2027-10-13",
+  "end": "2027-10-17",
+  "sector": "Denizcilik",
+  "url": "https://www.bodrumboatshow.com.tr",
+  "verified": true,
+  "match": [
+   "bodrum boat show"
+  ]
+ },
+ {
   "slug": "bayim-olur-musun",
   "name": "Bayim Olur musun?",
   "city": "İstanbul",
@@ -9249,6 +14871,70 @@
   "verified": true,
   "match": [
    "bayim olur musun"
+  ]
+ },
+ {
+  "slug": "koneagria",
+  "name": "KoneAgria",
+  "city": "Tampere",
+  "country": "Finlandiya",
+  "venue": "Tampere Fuar Merkezi",
+  "region": "eu",
+  "start": "2027-10-14",
+  "end": "2027-10-16",
+  "sector": "Tarım ve orman makineleri",
+  "url": "https://www.koneagria.fi/",
+  "verified": true,
+  "match": [
+   "koneagria"
+  ]
+ },
+ {
+  "slug": "semana-de-la-madera",
+  "name": "Semana de la Madera",
+  "city": "Santiago",
+  "country": "Şili",
+  "venue": "Parque Bicentenario de Vitacura",
+  "region": "am",
+  "start": "2027-10-14",
+  "end": "2027-10-17",
+  "sector": "Ahşap yapı",
+  "url": "https://www.semanadelamadera.cl/",
+  "verified": true,
+  "match": [
+   "semana de la madera"
+  ]
+ },
+ {
+  "slug": "bosphorus-boat-show-ekim",
+  "name": "Bosphorus Boat Show (Ekim)",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Ataköy Marina",
+  "region": "tr",
+  "start": "2027-10-16",
+  "end": "2027-10-24",
+  "sector": "Denizcilik",
+  "url": "https://bosphorusboatshow.com",
+  "verified": true,
+  "match": [
+   "bosphorus boat show"
+  ]
+ },
+ {
+  "slug": "busworld-europe",
+  "name": "Busworld Europe",
+  "city": "Brüksel",
+  "country": "Belçika",
+  "venue": "Brussels Expo",
+  "region": "eu",
+  "start": "2027-10-16",
+  "end": "2027-10-21",
+  "sector": "Otobüs ve yolcu taşımacılığı",
+  "url": "https://www.busworldeurope.org/",
+  "verified": true,
+  "match": [
+   "busworld"
   ]
  },
  {
@@ -9318,6 +15004,38 @@
   ]
  },
  {
+  "slug": "equip-expo",
+  "name": "Equip Expo",
+  "city": "Louisville",
+  "country": "ABD",
+  "venue": "Kentucky Exposition Center",
+  "region": "am",
+  "start": "2027-10-19",
+  "end": "2027-10-22",
+  "sector": "Peyzaj ekipmanları",
+  "url": "https://www.equipexposition.com/",
+  "verified": true,
+  "match": [
+   "equip expo"
+  ]
+ },
+ {
+  "slug": "hydrogen-technology-expo-europe",
+  "name": "Hydrogen Technology Expo Europe",
+  "city": "Hamburg",
+  "country": "Almanya",
+  "venue": "Hamburg Messe",
+  "region": "eu",
+  "start": "2027-10-19",
+  "end": "2027-10-21",
+  "sector": "Hidrojen teknolojileri",
+  "url": "https://www.hydrogen-worldexpo.com/",
+  "verified": true,
+  "match": [
+   "hydrogen technology expo"
+  ]
+ },
+ {
   "slug": "isk-sodex",
   "name": "ISK-SODEX",
   "city": "İstanbul",
@@ -9348,6 +15066,22 @@
   "verified": true,
   "match": [
    "sicam"
+  ]
+ },
+ {
+  "slug": "transport-and-logistics-antwerp",
+  "name": "Transport & Logistics Antwerp",
+  "city": "Anvers",
+  "country": "Belçika",
+  "venue": "Antwerp Expo",
+  "region": "eu",
+  "start": "2027-10-19",
+  "end": "2027-10-21",
+  "sector": "Taşımacılık ve lojistik",
+  "url": "https://www.transport-logistics.be/fr/",
+  "verified": true,
+  "match": [
+   "transport & logistics antwerp"
   ]
  },
  {
@@ -9399,6 +15133,22 @@
   "match": [
    "avrasya ambalaj",
    "eurasia packaging"
+  ]
+ },
+ {
+  "slug": "bygg-reis-deg",
+  "name": "Bygg Reis Deg",
+  "city": "Lillestrøm",
+  "country": "Norveç",
+  "venue": "Nova Spektrum",
+  "region": "eu",
+  "start": "2027-10-20",
+  "end": "2027-10-23",
+  "sector": "İnşaat",
+  "url": "https://byggreisdeg.no/en/home",
+  "verified": true,
+  "match": [
+   "bygg reis deg"
   ]
  },
  {
@@ -9468,6 +15218,54 @@
   ]
  },
  {
+  "slug": "saie-bari",
+  "name": "SAIE Bari",
+  "city": "Bari",
+  "country": "İtalya",
+  "venue": "Fiera del Levante",
+  "region": "eu",
+  "start": "2027-10-21",
+  "end": "2027-10-23",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.saiebari.it/it/",
+  "verified": true,
+  "match": [
+   "saie"
+  ]
+ },
+ {
+  "slug": "100-hotel-show",
+  "name": "100% Hotel Show",
+  "city": "Atina",
+  "country": "Yunanistan",
+  "venue": "MEC Paiania",
+  "region": "eu",
+  "start": "2027-10-22",
+  "end": "2027-10-24",
+  "sector": "Otel tasarım ve donanım",
+  "url": "https://www.hotelshow.gr/en",
+  "verified": true,
+  "match": [
+   "100% hotel show"
+  ]
+ },
+ {
+  "slug": "futurmoda-ekim",
+  "name": "Futurmoda (Ekim)",
+  "city": "Alicante",
+  "country": "İspanya",
+  "venue": "Fira Alacant",
+  "region": "eu",
+  "start": "2027-10-22",
+  "end": "2027-10-23",
+  "sector": "Ayakkabı ve deri komponent",
+  "url": "https://futurmoda.es/",
+  "verified": true,
+  "match": [
+   "futurmoda"
+  ]
+ },
+ {
   "slug": "hostmilano",
   "name": "HostMilano",
   "city": "Milano",
@@ -9482,6 +15280,22 @@
   "match": [
    "hostmilano",
    "host milano"
+  ]
+ },
+ {
+  "slug": "expo-beauty-show",
+  "name": "Expo Beauty Show",
+  "city": "Meksiko",
+  "country": "Meksika",
+  "venue": "Centro Citibanamex",
+  "region": "am",
+  "start": "2027-10-23",
+  "end": "2027-10-25",
+  "sector": "Güzellik ve kuaför",
+  "url": "https://www.expobeautyshow.com/en-us.html",
+  "verified": true,
+  "match": [
+   "expo beauty show"
   ]
  },
  {
@@ -9501,6 +15315,22 @@
   ]
  },
  {
+  "slug": "iba",
+  "name": "iba",
+  "city": "Münih",
+  "country": "Almanya",
+  "venue": "Messe München",
+  "region": "eu",
+  "start": "2027-10-24",
+  "end": "2027-10-28",
+  "sector": "Fırıncılık ve pastacılık",
+  "url": "https://www.iba-tradefair.com/en",
+  "verified": true,
+  "match": [
+   "iba"
+  ]
+ },
+ {
   "slug": "euroshop-middle-east",
   "name": "EuroShop Middle East",
   "city": "Dubai",
@@ -9514,6 +15344,22 @@
   "verified": true,
   "match": [
    "euroshop"
+  ]
+ },
+ {
+  "slug": "exposolar-colombia",
+  "name": "Exposolar Colombia",
+  "city": "Bogota",
+  "country": "Kolombiya",
+  "venue": "Corferias",
+  "region": "am",
+  "start": "2027-10-25",
+  "end": "2027-10-27",
+  "sector": "Güneş enerjisi",
+  "url": "https://corferias.com/es/calendario/2027",
+  "verified": true,
+  "match": [
+   "exposolar"
   ]
  },
  {
@@ -9533,6 +15379,22 @@
   ]
  },
  {
+  "slug": "ofsec",
+  "name": "OFSEC",
+  "city": "Maskat",
+  "country": "Umman",
+  "venue": "Oman Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-10-25",
+  "end": "2027-10-26",
+  "sector": "Yangın ve güvenlik",
+  "url": "https://www.ofsecevent.com/",
+  "verified": true,
+  "match": [
+   "ofsec"
+  ]
+ },
+ {
   "slug": "aquanale",
   "name": "aquanale",
   "city": "Köln",
@@ -9546,6 +15408,22 @@
   "verified": true,
   "match": [
    "aquanale"
+  ]
+ },
+ {
+  "slug": "atf-antalya-turizm-fuari",
+  "name": "ATF - Antalya Turizm Fuarı",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "region": "tr",
+  "start": "2027-10-26",
+  "end": "2027-10-28",
+  "sector": "Turizm",
+  "url": "https://www.expointurkey.org/tr/fuar/antalya-turizm-fuari-2027",
+  "verified": false,
+  "match": [
+   "antalya turizm fuarı",
+   "atf"
   ]
  },
  {
@@ -9630,6 +15508,54 @@
   ]
  },
  {
+  "slug": "hygienalia",
+  "name": "Hygienalia",
+  "city": "Madrid",
+  "country": "İspanya",
+  "venue": "IFEMA Madrid",
+  "region": "eu",
+  "start": "2027-10-26",
+  "end": "2027-10-28",
+  "sector": "Profesyonel temizlik",
+  "url": "https://www.hygienalia.com/",
+  "verified": true,
+  "match": [
+   "hygienalia"
+  ]
+ },
+ {
+  "slug": "md-and-m-minneapolis",
+  "name": "MD&M Minneapolis",
+  "city": "Minneapolis",
+  "country": "ABD",
+  "venue": "Minneapolis Convention Center",
+  "region": "am",
+  "start": "2027-10-26",
+  "end": "2027-10-28",
+  "sector": "Medikal cihaz üretimi",
+  "url": "https://www.advancedmanufacturingminneapolis.com/en/show-brands/mdm-minneapolis.html",
+  "verified": true,
+  "match": [
+   "md&m minneapolis"
+  ]
+ },
+ {
+  "slug": "scanpack",
+  "name": "Scanpack",
+  "city": "Göteborg",
+  "country": "İsveç",
+  "venue": "Svenska Mässan",
+  "region": "eu",
+  "start": "2027-10-26",
+  "end": "2027-10-29",
+  "sector": "Ambalaj",
+  "url": "https://en.scanpack.se/",
+  "verified": true,
+  "match": [
+   "scanpack"
+  ]
+ },
+ {
   "slug": "schweisstec",
   "name": "Schweisstec",
   "city": "Stuttgart",
@@ -9679,6 +15605,23 @@
   ]
  },
  {
+  "slug": "nov-naturel-organik-vegan-urunler-fuari",
+  "name": "NOV - Naturel Organik Vegan Ürünler Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-10-27",
+  "end": "2027-10-30",
+  "sector": "Organik ve vegan",
+  "url": "https://aselexpo.com",
+  "verified": true,
+  "match": [
+   "nov naturel",
+   "organik vegan"
+  ]
+ },
+ {
   "slug": "private-label-expo",
   "name": "Private Label Expo",
   "city": "İstanbul",
@@ -9692,6 +15635,38 @@
   "verified": true,
   "match": [
    "private label"
+  ]
+ },
+ {
+  "slug": "viscom-italia",
+  "name": "Viscom Italia",
+  "city": "Milano",
+  "country": "İtalya",
+  "venue": "Allianz MiCo",
+  "region": "eu",
+  "start": "2027-10-27",
+  "end": "2027-10-28",
+  "sector": "Görsel iletişim ve tabela",
+  "url": "https://www.viscomitalia.it/en-gb.html",
+  "verified": true,
+  "match": [
+   "viscom"
+  ]
+ },
+ {
+  "slug": "wire-brasil",
+  "name": "Wire Brasil",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-10-27",
+  "end": "2027-10-29",
+  "sector": "Tel ve kablo",
+  "url": "https://wirebrasil.com.br/",
+  "verified": true,
+  "match": [
+   "wire brasil"
   ]
  },
  {
@@ -9824,6 +15799,22 @@
   ]
  },
  {
+  "slug": "houstex",
+  "name": "HOUSTEX",
+  "city": "Houston",
+  "country": "ABD",
+  "venue": "George R. Brown Convention Center",
+  "region": "am",
+  "start": "2027-11-02",
+  "end": "2027-11-04",
+  "sector": "Metal işleme",
+  "url": "https://www.houstexonline.com/",
+  "verified": true,
+  "match": [
+   "houstex"
+  ]
+ },
+ {
   "slug": "sema-show",
   "name": "SEMA Show",
   "city": "Las Vegas",
@@ -9922,6 +15913,22 @@
   ]
  },
  {
+  "slug": "decor-hotel",
+  "name": "Decor Hotel",
+  "city": "Lizbon",
+  "country": "Portekiz",
+  "venue": "FIL Lizbon",
+  "region": "eu",
+  "start": "2027-11-03",
+  "end": "2027-11-05",
+  "sector": "Otel donanımı",
+  "url": "https://exposalao.pt/feira/decor_hotel",
+  "verified": true,
+  "match": [
+   "decor hotel"
+  ]
+ },
+ {
   "slug": "eurasian-food-ingredients-show-efis",
   "name": "Eurasian Food Ingredients Show (EFIS)",
   "city": "İstanbul",
@@ -9988,6 +15995,22 @@
   ]
  },
  {
+  "slug": "phci-personal-home-care-ingredients",
+  "name": "PHCI Personal Home Care Ingredients",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "İstanbul Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-11-03",
+  "end": "2027-11-05",
+  "sector": "Kozmetik hammadde",
+  "url": "https://phcieurasia.com",
+  "verified": true,
+  "match": [
+   "phci"
+  ]
+ },
+ {
   "slug": "powder-and-dosing-expo",
   "name": "Powder & Dosing Expo",
   "city": "İstanbul",
@@ -10002,6 +16025,22 @@
   "match": [
    "powder & dosing",
    "powder dosing"
+  ]
+ },
+ {
+  "slug": "silicone-solutions-expo",
+  "name": "Silicone Solutions Expo",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "İstanbul Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-11-03",
+  "end": "2027-11-05",
+  "sector": "Silikon",
+  "url": "https://siliconeexpoeurasia.com",
+  "verified": true,
+  "match": [
+   "silicone solutions"
   ]
  },
  {
@@ -10104,6 +16143,23 @@
   ]
  },
  {
+  "slug": "cphi-frankfurt",
+  "name": "CPHI Frankfurt",
+  "city": "Frankfurt",
+  "country": "Almanya",
+  "venue": "Messe Frankfurt",
+  "region": "eu",
+  "start": "2027-11-09",
+  "end": "2027-11-11",
+  "sector": "İlaç endüstrisi",
+  "url": "https://www.cphi.com/europe/",
+  "verified": true,
+  "match": [
+   "cphi frankfurt",
+   "cphi europe"
+  ]
+ },
+ {
   "slug": "ecomondo",
   "name": "Ecomondo",
   "city": "Rimini",
@@ -10133,6 +16189,23 @@
   "verified": true,
   "match": [
    "issa"
+  ]
+ },
+ {
+  "slug": "packex-and-plast-ex-toronto",
+  "name": "PACKEX & PLAST-EX Toronto",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Toronto Congress Centre",
+  "region": "am",
+  "start": "2027-11-09",
+  "end": "2027-11-11",
+  "sector": "Ambalaj ve plastik",
+  "url": "https://admtoronto.com/plastex",
+  "verified": true,
+  "match": [
+   "packex",
+   "plast-ex"
   ]
  },
  {
@@ -10251,6 +16324,22 @@
   ]
  },
  {
+  "slug": "refrigera",
+  "name": "REFRIGERA",
+  "city": "Bologna",
+  "country": "İtalya",
+  "venue": "BolognaFiere",
+  "region": "eu",
+  "start": "2027-11-10",
+  "end": "2027-11-12",
+  "sector": "Soğutma teknolojisi",
+  "url": "https://refrigera.show/en/",
+  "verified": true,
+  "match": [
+   "refrigera"
+  ]
+ },
+ {
   "slug": "tentexpo-world",
   "name": "Tentexpo World",
   "city": "İstanbul",
@@ -10267,6 +16356,38 @@
   ]
  },
  {
+  "slug": "concreta",
+  "name": "+Concreta",
+  "city": "Porto",
+  "country": "Portekiz",
+  "venue": "Alfândega do Porto",
+  "region": "eu",
+  "start": "2027-11-11",
+  "end": "2027-11-12",
+  "sector": "Yapı ve iç mimari",
+  "url": "https://exponor.pt/maisconcreta/",
+  "verified": true,
+  "match": [
+   "concreta"
+  ]
+ },
+ {
+  "slug": "ege-next-saglik-turizm-ve-spa-fuari",
+  "name": "Ege Next - Sağlık, Turizm ve Spa Fuarı",
+  "city": "İzmir",
+  "country": "Türkiye",
+  "venue": "MMO Tepekule Kongre ve Sergi Merkezi",
+  "region": "tr",
+  "start": "2027-11-11",
+  "end": "2027-11-13",
+  "sector": "Sağlık turizmi",
+  "url": "https://www.antexpo.info",
+  "verified": true,
+  "match": [
+   "ege next"
+  ]
+ },
+ {
   "slug": "ev-charge-show",
   "name": "EV Charge Show",
   "city": "İstanbul",
@@ -10280,6 +16401,22 @@
   "verified": true,
   "match": [
    "ev charge"
+  ]
+ },
+ {
+  "slug": "souvenir-expo-turkiye",
+  "name": "Souvenir Expo Türkiye",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-11-11",
+  "end": "2027-11-14",
+  "sector": "Hediyelik eşya",
+  "url": "https://www.rotaexhibitions.com.tr",
+  "verified": true,
+  "match": [
+   "souvenir expo"
   ]
  },
  {
@@ -10397,6 +16534,23 @@
   ]
  },
  {
+  "slug": "firex-egypt",
+  "name": "Firex Egypt",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center (EIEC)",
+  "region": "me",
+  "start": "2027-11-15",
+  "end": "2027-11-17",
+  "sector": "Yangın güvenliği",
+  "url": "https://www.firexegypt.com/en/home.html",
+  "verified": true,
+  "match": [
+   "firex egypt",
+   "iftec"
+  ]
+ },
+ {
   "slug": "medica",
   "name": "MEDICA",
   "city": "Düsseldorf",
@@ -10410,6 +16564,23 @@
   "verified": true,
   "match": [
    "medica"
+  ]
+ },
+ {
+  "slug": "piscina-and-wellness-barcelona",
+  "name": "Piscina & Wellness Barcelona",
+  "city": "Barselona",
+  "country": "İspanya",
+  "venue": "Fira Gran Via",
+  "region": "eu",
+  "start": "2027-11-15",
+  "end": "2027-11-18",
+  "sector": "Havuz ve wellness",
+  "url": "https://www.piscinabarcelona.es/",
+  "verified": true,
+  "match": [
+   "piscina barcelona",
+   "piscina & wellness"
   ]
  },
  {
@@ -10477,6 +16648,22 @@
   "verified": true,
   "match": [
    "global food week"
+  ]
+ },
+ {
+  "slug": "m-and-t-expo",
+  "name": "M&T Expo",
+  "city": "São Paulo",
+  "country": "Brezilya",
+  "venue": "São Paulo Expo",
+  "region": "am",
+  "start": "2027-11-16",
+  "end": "2027-11-19",
+  "sector": "İş ve maden makineleri",
+  "url": "https://www.mtexpo.com.br/en",
+  "verified": true,
+  "match": [
+   "m&t expo"
   ]
  },
  {
@@ -10561,6 +16748,22 @@
   ]
  },
  {
+  "slug": "stainless-steel-world-conference-and-exhibition",
+  "name": "Stainless Steel World Conference & Exhibition",
+  "city": "Maastricht",
+  "country": "Hollanda",
+  "venue": "MECC Maastricht",
+  "region": "eu",
+  "start": "2027-11-16",
+  "end": "2027-11-18",
+  "sector": "Paslanmaz çelik",
+  "url": "https://www.eventseye.com/fairs/f-stainless-12716-1.html",
+  "verified": false,
+  "match": [
+   "stainless steel world"
+  ]
+ },
+ {
   "slug": "vitrum",
   "name": "VITRUM",
   "city": "Milano",
@@ -10574,6 +16777,22 @@
   "verified": true,
   "match": [
    "vitrum"
+  ]
+ },
+ {
+  "slug": "westec",
+  "name": "WESTEC",
+  "city": "Long Beach",
+  "country": "ABD",
+  "venue": "Long Beach Convention Center",
+  "region": "am",
+  "start": "2027-11-16",
+  "end": "2027-11-18",
+  "sector": "Metal işleme",
+  "url": "https://www.westeconline.com/",
+  "verified": true,
+  "match": [
+   "westec"
   ]
  },
  {
@@ -10690,6 +16909,54 @@
   ]
  },
  {
+  "slug": "supplyside-global",
+  "name": "SupplySide Global",
+  "city": "Las Vegas",
+  "country": "ABD",
+  "venue": "Mandalay Bay Convention Center",
+  "region": "am",
+  "start": "2027-11-17",
+  "end": "2027-11-19",
+  "sector": "Gıda takviyesi hammaddeleri",
+  "url": "https://www.supplysideglobal.com/en/home.html",
+  "verified": true,
+  "match": [
+   "supplyside"
+  ]
+ },
+ {
+  "slug": "wms-woodworking-machinery-and-supply",
+  "name": "WMS (Woodworking Machinery & Supply)",
+  "city": "Toronto",
+  "country": "Kanada",
+  "venue": "Toronto Congress Centre",
+  "region": "am",
+  "start": "2027-11-17",
+  "end": "2027-11-19",
+  "sector": "Ahşap işleme makineleri",
+  "url": "https://www.woodworkingnetwork.com/events-contests/wms",
+  "verified": true,
+  "match": [
+   "wms woodworking"
+  ]
+ },
+ {
+  "slug": "gastromasa",
+  "name": "Gastromasa",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Haliç Kongre Merkezi",
+  "region": "tr",
+  "start": "2027-11-18",
+  "end": "2027-11-19",
+  "sector": "Gastronomi",
+  "url": "https://gastromasa.com",
+  "verified": true,
+  "match": [
+   "gastromasa"
+  ]
+ },
+ {
   "slug": "travel-expo-ankara",
   "name": "Travel Expo Ankara",
   "city": "Ankara",
@@ -10758,6 +17025,22 @@
   ]
  },
  {
+  "slug": "myplant-and-garden-middle-east",
+  "name": "myPlant & Garden Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-11-22",
+  "end": "2027-11-24",
+  "sector": "Bahçe ve peyzaj",
+  "url": "https://myplantgardenme.com/",
+  "verified": true,
+  "match": [
+   "myplant"
+  ]
+ },
+ {
   "slug": "growtech",
   "name": "Growtech",
   "city": "Antalya",
@@ -10807,6 +17090,39 @@
   ]
  },
  {
+  "slug": "viv-mea",
+  "name": "VIV MEA",
+  "city": "Abu Dabi",
+  "country": "BAE",
+  "venue": "ADNEC",
+  "region": "me",
+  "start": "2027-11-23",
+  "end": "2027-11-25",
+  "sector": "Hayvancılık ve yem",
+  "url": "https://www.viv.net/",
+  "verified": true,
+  "match": [
+   "viv mea"
+  ]
+ },
+ {
+  "slug": "adhesive-and-bonding-eurasia",
+  "name": "Adhesive & Bonding Eurasia",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "İstanbul Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-11-24",
+  "end": "2027-11-26",
+  "sector": "Yapıştırıcı",
+  "url": "https://www.artkim.com.tr",
+  "verified": true,
+  "match": [
+   "adhesive",
+   "bonding eurasia"
+  ]
+ },
+ {
   "slug": "eurasian-composites-show",
   "name": "Eurasian Composites Show",
   "city": "İstanbul",
@@ -10820,6 +17136,38 @@
   "verified": true,
   "match": [
    "composites show"
+  ]
+ },
+ {
+  "slug": "foam-nextexpo",
+  "name": "Foam Nextexpo",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "İstanbul Fuar Merkezi",
+  "region": "tr",
+  "start": "2027-11-24",
+  "end": "2027-11-26",
+  "sector": "Köpük ve poliüretan",
+  "url": "https://www.artkim.com.tr",
+  "verified": true,
+  "match": [
+   "foam nextexpo"
+  ]
+ },
+ {
+  "slug": "international-security-expo",
+  "name": "International Security Expo",
+  "city": "Londra",
+  "country": "İngiltere",
+  "venue": "Olympia London",
+  "region": "uk",
+  "start": "2027-11-24",
+  "end": "2027-11-25",
+  "sector": "Güvenlik",
+  "url": "https://www.internationalsecurityexpo.com/",
+  "verified": true,
+  "match": [
+   "international security expo"
   ]
  },
  {
@@ -10888,6 +17236,23 @@
   ]
  },
  {
+  "slug": "elf-elektrik-elektronik-ve-aydinlatma-fuari",
+  "name": "ELF Elektrik, Elektronik ve Aydınlatma Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-11-25",
+  "end": "2027-11-27",
+  "sector": "Elektrik ve elektronik",
+  "url": "https://www.elffuar.com",
+  "verified": true,
+  "match": [
+   "elf fuarı",
+   "elf teknoloji"
+  ]
+ },
+ {
   "slug": "igef-ic-guvenlik-ekipmanlari-fuari",
   "name": "IGEF - İç Güvenlik Ekipmanları Fuarı",
   "city": "Ankara",
@@ -10917,6 +17282,22 @@
   "verified": true,
   "match": [
    "industrial transformation"
+  ]
+ },
+ {
+  "slug": "saudi-international-medlab-expo",
+  "name": "Saudi International Medlab Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-11-29",
+  "end": "2027-12-01",
+  "sector": "Tıbbi laboratuvar",
+  "url": "https://www.saudimedlabexpo.com/",
+  "verified": true,
+  "match": [
+   "saudi medlab"
   ]
  },
  {
@@ -10951,6 +17332,38 @@
   "match": [
    "gaziantep penye",
    "penye fuarı"
+  ]
+ },
+ {
+  "slug": "paysalia",
+  "name": "Paysalia",
+  "city": "Lyon",
+  "country": "Fransa",
+  "venue": "Eurexpo Lyon",
+  "region": "eu",
+  "start": "2027-11-30",
+  "end": "2027-12-02",
+  "sector": "Peyzaj ve bahçe",
+  "url": "https://www.paysalia.com/fr",
+  "verified": true,
+  "match": [
+   "paysalia"
+  ]
+ },
+ {
+  "slug": "sitevi",
+  "name": "SITEVI",
+  "city": "Montpellier",
+  "country": "Fransa",
+  "venue": "Parc des Expositions de Montpellier",
+  "region": "eu",
+  "start": "2027-11-30",
+  "end": "2027-12-02",
+  "sector": "Bağcılık ekipmanı",
+  "url": "https://www.eventseye.com/fairs/f-sitevi-2512-1.html",
+  "verified": false,
+  "match": [
+   "sitevi"
   ]
  },
  {
@@ -11003,6 +17416,23 @@
   ]
  },
  {
+  "slug": "solids-and-recycling-technik-dortmund",
+  "name": "SOLIDS & RECYCLING-TECHNIK Dortmund",
+  "city": "Dortmund",
+  "country": "Almanya",
+  "venue": "Messe Dortmund",
+  "region": "eu",
+  "start": "2027-12-01",
+  "end": "2027-12-02",
+  "sector": "Dökme katı, geri dönüşüm",
+  "url": "https://www.solids-recycling-technik.de/",
+  "verified": true,
+  "match": [
+   "solids dortmund",
+   "recycling-technik"
+  ]
+ },
+ {
   "slug": "tti-izmir-2027",
   "name": "TTI İzmir",
   "city": "İzmir",
@@ -11017,6 +17447,70 @@
   "match": [
    "tti izmir",
    "turizm ticaret fuarı"
+  ]
+ },
+ {
+  "slug": "egypt-stitch-and-tex-garment-processing",
+  "name": "Egypt Stitch & Tex (Garment Processing)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2027-12-02",
+  "end": "2027-12-05",
+  "sector": "Konfeksiyon makineleri",
+  "url": "https://egystitchandtex.com/garments",
+  "verified": true,
+  "match": [
+   "egypt stitch"
+  ]
+ },
+ {
+  "slug": "interpackprint-portugal",
+  "name": "Interpackprint Portugal",
+  "city": "Porto",
+  "country": "Portekiz",
+  "venue": "Exponor",
+  "region": "eu",
+  "start": "2027-12-02",
+  "end": "2027-12-04",
+  "sector": "Ambalaj ve baskı",
+  "url": "https://interpackprint.com/portugal",
+  "verified": true,
+  "match": [
+   "interpackprint"
+  ]
+ },
+ {
+  "slug": "interplastpoint-portugal",
+  "name": "Interplastpoint Portugal",
+  "city": "Porto",
+  "country": "Portekiz",
+  "venue": "Exponor",
+  "region": "eu",
+  "start": "2027-12-02",
+  "end": "2027-12-04",
+  "sector": "Plastik",
+  "url": "https://interplastpoint.com/portugal",
+  "verified": true,
+  "match": [
+   "interplastpoint"
+  ]
+ },
+ {
+  "slug": "imeef-istanbul-muzik-endustrileri-ve-ekipmanlari-fuari-2027",
+  "name": "İMEEF - İstanbul Müzik Endüstrileri ve Ekipmanları Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-12-02",
+  "end": "2027-12-05",
+  "sector": "Müzik endüstrisi",
+  "url": "https://www.imeef.com",
+  "verified": true,
+  "match": [
+   "imeef"
   ]
  },
  {
@@ -11036,6 +17530,22 @@
   ]
  },
  {
+  "slug": "wne-world-nuclear-exhibition",
+  "name": "WNE – World Nuclear Exhibition",
+  "city": "Paris",
+  "country": "Fransa",
+  "venue": "Paris Nord Villepinte",
+  "region": "eu",
+  "start": "2027-12-07",
+  "end": "2027-12-09",
+  "sector": "Nükleer enerji",
+  "url": "https://www.world-nuclear-exhibition.com/",
+  "verified": true,
+  "match": [
+   "world nuclear exhibition"
+  ]
+ },
+ {
   "slug": "agribex",
   "name": "Agribex",
   "city": "Brüksel",
@@ -11049,6 +17559,22 @@
   "verified": true,
   "match": [
    "agribex"
+  ]
+ },
+ {
+  "slug": "istanbul-yerel-marketler-bulusmasi-ve-fuari-2027",
+  "name": "İstanbul Yerel Marketler Buluşması ve Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Wow İstanbul Hotels and Convention Center",
+  "region": "tr",
+  "start": "2027-12-08",
+  "end": "2027-12-09",
+  "sector": "Perakende",
+  "url": "https://www.focusfairs.com",
+  "verified": true,
+  "match": [
+   "yerel marketler"
   ]
  },
  {
@@ -11098,6 +17624,56 @@
   "verified": true,
   "match": [
    "hoteltech"
+  ]
+ },
+ {
+  "slug": "tdk-deri-ve-kurk-moda-sov-aralik",
+  "name": "TDK Deri ve Kürk Moda Şov (Aralık)",
+  "city": "Antalya",
+  "country": "Türkiye",
+  "venue": "Kaya Palazzo Golf Resort",
+  "region": "tr",
+  "start": "2027-12-09",
+  "end": "2027-12-12",
+  "sector": "Deri ve kürk",
+  "url": "https://www.tdkfuarcilik.com",
+  "verified": true,
+  "match": [
+   "tdk deri",
+   "deri ve kürk"
+  ]
+ },
+ {
+  "slug": "virtualist-fuari",
+  "name": "Virtualist Fuarı",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Lütfi Kırdar Uluslararası Kongre ve Sergi Sarayı",
+  "region": "tr",
+  "start": "2027-12-09",
+  "end": "2027-12-11",
+  "sector": "Sanal gerçeklik",
+  "url": "https://www.virtualistexpo.com",
+  "verified": true,
+  "match": [
+   "virtualist"
+  ]
+ },
+ {
+  "slug": "yenikapi-boat-show-aralik",
+  "name": "Yenikapı Boat Show (Aralık)",
+  "city": "İstanbul",
+  "country": "Türkiye",
+  "venue": "Dr. Mimar Kadir Topbaş Gösteri ve Sanat Merkezi",
+  "region": "tr",
+  "start": "2027-12-11",
+  "end": "2027-12-19",
+  "sector": "Denizcilik",
+  "url": "https://www.artifuar.com",
+  "verified": true,
+  "match": [
+   "yenikapı boat show",
+   "yenikapi boat"
   ]
  },
  {
