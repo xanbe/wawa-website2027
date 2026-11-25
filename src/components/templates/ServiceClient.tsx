@@ -228,12 +228,13 @@ export function CountStats({ lang, stats }: { lang: SvcLang; stats: { value: num
 }
 
 // ---------------------------------------------------------------- Yaklaşan fuarlar
-type Fair = { name: string; city: string; region: "tr" | "eu" | "me"; start: string; end: string; slug?: string };
+type Fair = { name: string; city: string; region: "tr" | "eu" | "uk" | "me" | "am"; start: string; end: string; slug?: string };
+const TIMELINE_MAX = 12;
 
 const FAIR_TEXT = {
-  tr: { title: "Yaklaşan fuarlar", note: "Örnek liste · tarihler kesin değil", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" }, cta: "Fuar adına basın; bütçeyi ve o fuardaki işlerimizi görün." },
-  en: { title: "Upcoming fairs", note: "Sample list · dates not confirmed", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", me: "Middle East" }, cta: "Click a fair to go to the offer form." },
-  de: { title: "Kommende Messen", note: "Beispielliste · Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", me: "Nahost" }, cta: "Messe anklicken und zum Angebotsformular wechseln." },
+  tr: { title: "Yaklaşan fuarlar", note: "Tarihleri resmî siteden teyit edin", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", uk: "İngiltere", me: "Orta Doğu", am: "Amerika" }, all: "Tüm fuarlar", cta: "Fuar adına basın; bütçeyi ve o fuardaki işlerimizi görün." },
+  en: { title: "Upcoming fairs", note: "Confirm dates on the official site", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", uk: "UK", me: "Middle East", am: "Americas" }, all: "All fairs", cta: "Click a fair to go to the offer form." },
+  de: { title: "Kommende Messen", note: "Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", uk: "UK", me: "Nahost", am: "Amerika" }, all: "Alle Messen", cta: "Messe anklicken und zum Angebotsformular wechseln." },
 };
 
 // Dakikada bir yenilenen saat; sunucuda 0 döner (tarihler yalnızca tarayıcıda hesaplanır)
@@ -251,10 +252,12 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
   const DAY = 86_400_000;
 
   const upcoming = now ? fairs.filter((f) => new Date(f.end).getTime() + DAY > now) : [];
-  const list = upcoming.filter((f) => region === "all" || f.region === region);
+  const inRegion = upcoming.filter((f) => region === "all" || f.region === region);
   const t0 = now ? new Date(new Date(now).getFullYear(), new Date(now).getMonth(), 1).getTime() : 0;
   const t1 = t0 + 7 * 30.5 * DAY;
   const x = (ms: number) => Math.min(100, Math.max(0, ((ms - t0) / (t1 - t0)) * 100));
+  // Çizelgede pencere içindeki ilk fuarlar; tamamı fuar takvimi sayfasında
+  const list = inRegion.filter((f) => new Date(f.start).getTime() < t1).slice(0, TIMELINE_MAX);
   const months = now ? Array.from({ length: 7 }, (_, i) => new Date(new Date(t0).getFullYear(), new Date(t0).getMonth() + i, 1)) : [];
   const nextFair = upcoming[0];
   const diff = nextFair ? Math.max(0, new Date(nextFair.start).getTime() - now) : 0;
@@ -285,7 +288,7 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
             <span />
           )}
           <div className="flex" role="group">
-            {(["all", "tr", "eu", "me"] as const).map((r) => (
+            {(["all", "tr", "eu", "uk", "me", "am"] as const).map((r) => (
               <button
                 key={r}
                 type="button"
@@ -340,7 +343,15 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
             })}
           </ul>
         </div>
-        <p className="mt-3 text-[12px] tracking-[0.1em] text-wawa-charcoal/50 uppercase">{t.cta}</p>
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-[12px] tracking-[0.1em] text-wawa-charcoal/50 uppercase">{t.cta}</p>
+          {lang === "tr" && (
+            <Link href="/fuar-takvimi/" className="inline-flex items-center gap-2 text-[15px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal">
+              {t.all} ({inRegion.length})
+              <ArrowUpRight className="h-4 w-4" aria-hidden />
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );

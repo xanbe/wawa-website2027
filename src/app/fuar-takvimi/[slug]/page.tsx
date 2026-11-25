@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FAIRS, FAIRS_PATH, fairPath, getFair, type Fair } from "@/content/fairs";
+import { FAIRS, FAIRS_PATH, REGION_LABEL, fairPath, getFair, type Fair } from "@/content/fairs";
 import { STAND_PRICES, euroRange, estimate } from "@/content/stand-prices";
 import { isStandProject, projectCategory, projectsIn, type Project } from "@/lib/content";
 import { ProjectCard } from "@/components/templates/parts";
@@ -12,11 +12,11 @@ import { FairCountdown } from "@/components/templates/FairLive";
 export const dynamicParams = false;
 export const generateStaticParams = () => FAIRS.map((f) => ({ slug: f.slug }));
 
-const REGION = { tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" } as const;
 const dateRange = (f: Fair) => {
   const s = new Date(`${f.start}T12:00:00Z`);
   const e = new Date(`${f.end}T12:00:00Z`);
   const month = (d: Date) => d.toLocaleDateString("tr-TR", { month: "long", timeZone: "UTC" });
+  if (s.getUTCFullYear() !== e.getUTCFullYear()) return `${s.getUTCDate()} ${month(s)} ${s.getUTCFullYear()} – ${e.getUTCDate()} ${month(e)} ${e.getUTCFullYear()}`;
   return s.getUTCMonth() === e.getUTCMonth()
     ? `${s.getUTCDate()}–${e.getUTCDate()} ${month(e)} ${e.getUTCFullYear()}`
     : `${s.getUTCDate()} ${month(s)} – ${e.getUTCDate()} ${month(e)} ${e.getUTCFullYear()}`;
@@ -45,7 +45,10 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
   const { list, exact } = fairProjects(fair);
   const region = fair.region === "tr" ? "tr" : "abroad";
   const offerHref = `/teklif-al/?tur=stand&fuar=${encodeURIComponent(`${fair.name} · ${fair.city}`)}`;
-  const others = FAIRS.filter((f) => f.slug !== fair.slug).slice(0, 4);
+  // Aynı bölgede bu fuardan sonraki fuarlar; yetmezse diğer bölgelerden
+  const later = FAIRS.filter((f) => f.slug !== fair.slug && f.start >= fair.start);
+  const others = [...later.filter((f) => f.region === fair.region), ...later.filter((f) => f.region !== fair.region)].slice(0, 6);
+  const host = fair.url ? new URL(fair.url).hostname.replace(/^www\./, "") : null;
   const examples = [18, 36, 54];
 
   return (
@@ -72,12 +75,23 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
               ["Şehir", `${fair.city}, ${fair.country}`],
               ...(fair.venue ? [["Fuar alanı", fair.venue]] : []),
               ["Sektör", fair.sector],
+              ["Bölge", REGION_LABEL[fair.region]],
             ].map(([k, v]) => (
               <div key={k} className="grid grid-cols-[96px_minmax(0,1fr)] gap-3">
                 <dt className="text-wawa-charcoal/55">{k}</dt>
                 <dd className="text-wawa-charcoal">{v}</dd>
               </div>
             ))}
+            {host && (
+              <div className="grid grid-cols-[96px_minmax(0,1fr)] gap-3">
+                <dt className="text-wawa-charcoal/55">{fair.verified === false || /tobb\.org\.tr$/.test(host) ? "Kaynak" : "Resmî site"}</dt>
+                <dd>
+                  <a href={fair.url} target="_blank" rel="noopener noreferrer nofollow" className="inline-flex items-center gap-1.5 break-all text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-4 hover:decoration-wawa-charcoal">
+                    {host} <ArrowUpRight className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  </a>
+                </dd>
+              </div>
+            )}
             <div className="grid grid-cols-[96px_minmax(0,1fr)] gap-3">
               <dt className="text-wawa-charcoal/55">Durum</dt>
               <dd className="text-wawa-charcoal">
@@ -86,7 +100,7 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
             </div>
           </dl>
         </div>
-        <p className="mt-6 text-[12px] tracking-[0.1em] text-wawa-charcoal/45 uppercase">Tarihler kesin değildir; fuarın resmî sitesinden doğrulayın.</p>
+        <p className="mt-6 text-[12px] tracking-[0.1em] text-wawa-charcoal/45 uppercase">{fair.verified === false ? "Tarihler henüz organizatörün sitesinde doğrulanamadı; katılım öncesinde teyit edin." : "Tarihler organizatörün duyurusundan alınmıştır; katılım öncesinde resmî siteden teyit edin."}</p>
       </header>
 
       {/* Bu fuardaki işlerimiz */}
@@ -163,7 +177,7 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
                 <span>
                   <span className="text-[16px] font-medium text-wawa-charcoal group-hover:underline">{f.name}</span>
                   <span className="ml-2 text-[13px] text-wawa-charcoal/55">
-                    {f.city} · {REGION[f.region]}
+                    {f.city} · {REGION_LABEL[f.region]}
                   </span>
                 </span>
                 <span className="shrink-0 text-[13px] tabular-nums text-wawa-charcoal/60">{dateRange(f)}</span>

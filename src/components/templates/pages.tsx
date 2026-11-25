@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { OfferWizard } from "./OfferWizard";
-import { FAIRS } from "@/content/fairs";
+import { FAIR_OPTIONS } from "@/content/fairs";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { ROUTES, contentLang, t, type Lang } from "@/lib/i18n";
@@ -114,7 +114,7 @@ export function OfferTemplate({ lang }: { lang: Lang }) {
       <section className="bg-white" lang={lang}>
         <div className={`container-wide grid gap-12 border-t pt-10 pb-14 lg:grid-cols-12 lg:gap-10 lg:pt-14 lg:pb-12 ${LINE}`}>
           {/* Yönlendirmeli teklif formu: solda adımlar, sağda canlı özet ve hızlı iletişim */}
-          <OfferWizard lang={lang} fairs={FAIRS.map((x) => `${x.name} · ${x.city}`)} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
+          <OfferWizard lang={lang} fairs={FAIR_OPTIONS} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
         </div>
         {lang === "tr" && (
           <div className="container-wide pb-14 lg:pb-16">
