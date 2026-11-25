@@ -3,9 +3,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FAIRS, type Fair } from "@/content/fairs";
+import { FAIRS, sectorGroup, type Fair } from "@/content/fairs";
+import { SECTOR_TIPS } from "@/content/fair-sector-tips";
+import { getFairGuide } from "@/content/fair-guides";
 import { CALENDAR_PATH, REGION_LABELS, STAND_PRICES_PATH, cityL, countryL, fairPathL, sectorL, type PageLang } from "@/content/fairs-i18n";
-import { STAND_PRICES, SYSTEM_LABELS, estimate, euroRangeL } from "@/content/stand-prices";
+import { PRICE_YEAR, STAND_PRICES, SYSTEM_LABELS, estimate, euroRangeL } from "@/content/stand-prices";
 import { ROUTES } from "@/lib/i18n";
 import { isStandProject, projectCategory, projectsIn, type Project } from "@/lib/content";
 import { ProjectCard } from "@/components/templates/parts";
@@ -39,6 +41,17 @@ const T = {
     system: "Sistem",
     maxima: "Maxima (modüler, kiralık da olur)",
     others: "Diğer fuarlar",
+    sameSector: "Bu sektördeki yaklaşan fuarlar",
+    about: (n: string) => `${n} hakkında`,
+    sources: "Kaynak",
+    guideTitle: (n: string, y: string) => `${n} ${y}: Tarihler, Fuar Alanı ve Stand Rehberi | WAWA Interiors`,
+    faq: "Sık sorulan sorular",
+    qWhen: (n: string) => `${n} ne zaman?`,
+    aWhen: (n: string, d: string, ok: boolean) => `${n}, ${d} tarihlerinde düzenleniyor. ${ok ? "Tarihler organizatörün duyurusundan alınmıştır; katılım öncesinde resmî siteden teyit edin." : "Tarihler henüz organizatörün sitesinde doğrulanmadı; katılım öncesinde teyit edin."}`,
+    qWhere: (n: string) => `${n} nerede yapılıyor?`,
+    aWhere: (n: string, place: string) => `${n} ${place} adresinde yapılıyor.`,
+    qCost: (n: string) => `${n} için fuar standı ne kadar tutar?`,
+    aCost: (tr: boolean, a: string, m: string) => `${tr ? "Türkiye'deki" : "Yurt dışındaki"} fuarlar için özel tasarım ahşap stand m² başına ${a} €, Maxima modüler stand ${m} € aralığındadır (KDV hariç, ${PRICE_YEAR} planlama tahmini). Kesin fiyat stand alanı, tasarım ve kapsama göre teklifle netleşir.`,
     metaTitle: (n: string, y: string) => `${n} ${y} Fuar Standı | WAWA Interiors`,
     metaDesc: (n: string, city: string, d: string) => `${n} (${city}, ${d}) için fuar standı tasarımı, üretimi ve kurulumu. Bütçe aralığı ve bu fuarda yaptığımız standlar.`,
   },
@@ -66,6 +79,17 @@ const T = {
     system: "System",
     maxima: "Maxima (modular, also for rent)",
     others: "Other fairs",
+    sameSector: "Upcoming fairs in this sector",
+    about: (n: string) => `About ${n}`,
+    sources: "Sources",
+    guideTitle: (n: string, y: string) => `${n} ${y}: Dates, Venue and Exhibitor Guide | WAWA Interiors`,
+    faq: "Frequently asked questions",
+    qWhen: (n: string) => `When is ${n}?`,
+    aWhen: (n: string, d: string, ok: boolean) => `${n} takes place on ${d}. ${ok ? "Dates are taken from the organiser's announcement; please confirm on the official site before you plan." : "Dates have not yet been confirmed on the organiser's site; please check before you plan."}`,
+    qWhere: (n: string) => `Where is ${n} held?`,
+    aWhere: (n: string, place: string) => `${n} is held at ${place}.`,
+    qCost: (n: string) => `How much does an exhibition stand for ${n} cost?`,
+    aCost: (tr: boolean, a: string, m: string) => `For fairs ${tr ? "in Türkiye" : "outside Türkiye"}, a custom-built wooden stand costs €${a} per m² and a Maxima modular stand €${m} per m² (excluding VAT, ${PRICE_YEAR} planning estimate). The exact price follows from stand size, design and scope in our offer.`,
     metaTitle: (n: string, y: string) => `${n} ${y} Exhibition Stand | WAWA Interiors`,
     metaDesc: (n: string, city: string, d: string) => `Exhibition stand design, production and installation for ${n} (${city}, ${d}). Budget range and our stands at this fair.`,
   },
@@ -93,6 +117,17 @@ const T = {
     system: "System",
     maxima: "Maxima (modular, auch zur Miete)",
     others: "Weitere Messen",
+    sameSector: "Kommende Messen dieser Branche",
+    about: (n: string) => `Über ${n}`,
+    sources: "Quellen",
+    guideTitle: (n: string, y: string) => `${n} ${y}: Termine, Gelände und Aussteller-Leitfaden | WAWA Interiors`,
+    faq: "Häufige Fragen",
+    qWhen: (n: string) => `Wann findet ${n} statt?`,
+    aWhen: (n: string, d: string, ok: boolean) => `${n} findet am ${d} statt. ${ok ? "Termine laut Veranstalter; bitte vor der Planung auf der offiziellen Website prüfen." : "Die Termine sind auf der Website des Veranstalters noch nicht bestätigt; bitte vor der Planung prüfen."}`,
+    qWhere: (n: string) => `Wo findet ${n} statt?`,
+    aWhere: (n: string, place: string) => `${n} findet in ${place} statt.`,
+    qCost: (n: string) => `Was kostet ein Messestand für ${n}?`,
+    aCost: (tr: boolean, a: string, m: string) => `Für Messen ${tr ? "in der Türkei" : "außerhalb der Türkei"} kostet ein individueller Holzstand ${a} € pro m², ein modularer Maxima-Stand ${m} € pro m² (zzgl. MwSt., Planungsschätzung ${PRICE_YEAR}). Der genaue Preis ergibt sich aus Standfläche, Design und Umfang im Angebot.`,
     metaTitle: (n: string, y: string) => `${n} ${y} Messestand | WAWA Interiors`,
     metaDesc: (n: string, city: string, d: string) => `Messestand-Design, Fertigung und Aufbau für ${n} (${city}, ${d}). Budgetrahmen und unsere Stände auf dieser Messe.`,
   },
@@ -121,7 +156,8 @@ function fairProjects(fair: Fair, lang: PageLang): { list: Project[]; exact: boo
 export function fairMetadata(fair: Fair | undefined, lang: PageLang): Metadata {
   if (!fair) return {};
   const t = T[lang];
-  const title = t.metaTitle(fair.name, fair.start.slice(0, 4));
+  const guide = getFairGuide(fair.slug);
+  const title = guide ? t.guideTitle(guide.name, fair.start.slice(0, 4)) : t.metaTitle(fair.name, fair.start.slice(0, 4));
   const description = t.metaDesc(fair.name, cityL(fair.city, lang), fairDateRange(fair, lang));
   const url = fairPathL(lang, fair.slug);
   return {
@@ -138,9 +174,49 @@ export function FairDetail({ fair, lang }: { fair: Fair; lang: PageLang }) {
   const region = fair.region === "tr" ? "tr" : "abroad";
   const city = cityL(fair.city, lang);
   const offerHref = `${ROUTES[lang].offer}?tur=stand&fuar=${encodeURIComponent(`${fair.name} · ${city}`)}`;
-  // Aynı bölgede bu fuardan sonraki fuarlar; yetmezse diğer bölgelerden
+  // Bu fuardan sonraki fuarlar: önce aynı sektör grubundakiler, sonra aynı bölgedekiler, sonra diğerleri
+  const guide = getFairGuide(fair.slug);
+  const guideText = guide?.[lang];
+  const group = sectorGroup(fair);
+  const tip = SECTOR_TIPS[lang][group];
   const later = FAIRS.filter((f) => f.slug !== fair.slug && f.start >= fair.start);
-  const others = [...later.filter((f) => f.region === fair.region), ...later.filter((f) => f.region !== fair.region)].slice(0, 6);
+  const sameSector = later.filter((f) => sectorGroup(f) === group);
+  const rest = later.filter((f) => sectorGroup(f) !== group);
+  const others = [...sameSector, ...rest.filter((f) => f.region === fair.region), ...rest.filter((f) => f.region !== fair.region)].slice(0, 6);
+  // Sık sorulan sorular: yalnız fuarın kendi verisinden (tarih, yer) ve sitedeki fiyat aralıklarından
+  const place = [fair.venue, `${city}, ${countryL(fair.country, lang)}`].filter(Boolean).join(", ");
+  const priceRegion = fair.region === "tr" ? "tr" : "abroad";
+  const faqs = [
+    { q: t.qWhen(fair.name), a: t.aWhen(fair.name, fairDateRange(fair, lang), fair.verified !== false) },
+    { q: t.qWhere(fair.name), a: t.aWhere(fair.name, place) },
+    { q: t.qCost(fair.name), a: t.aCost(fair.region === "tr", STAND_PRICES.ahsap[priceRegion].join("–"), STAND_PRICES.maxima[priceRegion].join("–")) },
+  ];
+  // Google etkinlik işaretlemesi: yalnız tarihi organizatörden doğrulanmış fuarlar
+  const eventLd =
+    fair.verified === false
+      ? null
+      : {
+          "@context": "https://schema.org",
+          "@type": "ExhibitionEvent",
+          name: fair.name,
+          startDate: fair.start,
+          endDate: fair.end,
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+          location: {
+            "@type": "Place",
+            name: fair.venue ?? city,
+            address: { "@type": "PostalAddress", addressLocality: city, addressCountry: countryL(fair.country, lang) },
+          },
+          ...(fair.url ? { url: fair.url } : {}),
+          description: t.metaDesc(fair.name, city, fairDateRange(fair, lang)),
+        };
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
+  const ld = (o: object) => ({ __html: JSON.stringify(o).replace(/</g, "\\u003c") });
   const host = fair.url ? new URL(fair.url).hostname.replace(/^www\./, "") : null;
   const examples = [18, 36, 54];
   const allStandsHref = lang === "tr" ? "/portfolio-category/fuar-stand-tasarimi/" : ROUTES[lang].projects;
@@ -196,6 +272,42 @@ export function FairDetail({ fair, lang }: { fair: Fair; lang: PageLang }) {
         </div>
         <p className="mt-6 text-[12px] tracking-[0.1em] text-wawa-charcoal/45 uppercase">{fair.verified === false ? t.unverified : t.verified}</p>
       </header>
+      {eventLd && <script type="application/ld+json" dangerouslySetInnerHTML={ld(eventLd)} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={ld(faqLd)} />
+
+      {/* Fuar rehberi: fuarın resmî sitesinden araştırılmış özgün metin */}
+      {guide && guideText && (
+        <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-about">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+            <h2 id="fair-about" className="font-heading text-[24px] leading-[1.25] font-normal text-wawa-charcoal lg:col-span-4 lg:text-[30px]">
+              {t.about(guide.name)}
+            </h2>
+            <div className="max-w-[68ch] space-y-6 lg:col-span-8">
+              <p className="text-[18px] leading-relaxed text-wawa-charcoal">{guideText.intro}</p>
+              {guideText.sections.map((sec) => (
+                <div key={sec.h}>
+                  <h3 className="text-[19px] font-medium text-wawa-charcoal">{sec.h}</h3>
+                  <p className="mt-2 text-[16px] leading-relaxed text-wawa-charcoal/80">{sec.p}</p>
+                </div>
+              ))}
+              <p className="text-[12px] leading-relaxed text-wawa-charcoal/50">
+                {t.sources}:{" "}
+                {[...new Set(guide.sources.map((u) => new URL(u).hostname.replace(/^www\./, "")))].join(", ")} · {guide.updated}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Sektöre göre stand notu */}
+      <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-sector">
+        <div className="grid gap-6 lg:grid-cols-12 lg:gap-10">
+          <h2 id="fair-sector" className="font-heading text-[24px] leading-[1.25] font-normal text-wawa-charcoal lg:col-span-4 lg:text-[30px]">
+            {tip.title}
+          </h2>
+          <p className="max-w-[68ch] text-[17px] leading-relaxed text-wawa-charcoal/80 lg:col-span-8">{tip.text}</p>
+        </div>
+      </section>
 
       {/* Bu fuardaki işlerimiz */}
       {list.length > 0 && (
@@ -262,7 +374,7 @@ export function FairDetail({ fair, lang }: { fair: Fair; lang: PageLang }) {
       {/* Diğer fuarlar */}
       <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-others">
         <h2 id="fair-others" className="font-heading text-[22px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[26px]">
-          {t.others}
+          {sameSector.length >= 3 ? t.sameSector : t.others}
         </h2>
         <ul className="mt-6 grid border-t border-wawa-charcoal/15 sm:grid-cols-2">
           {others.map((f) => (
@@ -279,6 +391,21 @@ export function FairDetail({ fair, lang }: { fair: Fair; lang: PageLang }) {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Sık sorulan sorular */}
+      <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-faq">
+        <h2 id="fair-faq" className="font-heading text-[22px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[26px]">
+          {t.faq}
+        </h2>
+        <dl className="mt-6 grid gap-6 border-t border-wawa-charcoal/15 pt-6 lg:grid-cols-3 lg:gap-10">
+          {faqs.map((f) => (
+            <div key={f.q}>
+              <dt className="text-[17px] font-medium text-wawa-charcoal">{f.q}</dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-wawa-charcoal/75">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </article>
   );

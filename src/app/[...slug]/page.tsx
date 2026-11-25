@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ROUTES, OG_LOCALE, t, type Lang } from "@/lib/i18n";
 import { allPaths, canonicalOf, resolve, type Resolved } from "@/lib/routes";
-import { getLegacyPage, type Seo } from "@/lib/content";
+import { excerpt, getLegacyPage, type Seo } from "@/lib/content";
 import { BlogListTemplate, PostTemplate } from "@/components/templates/blog";
 import { ProjectListTemplate, ProjectTemplate } from "@/components/templates/projects";
 import { ServiceTemplate, ServicesIndexTemplate } from "@/components/templates/services";
@@ -94,6 +94,35 @@ function seoOf(r: Resolved, path: string): Seo | null {
   }
 }
 
+// Eski sitede açıklaması olmayan sayfalar (proje, proje kategorisi, sayfalı listeler, IT/FR sayfaları) için açıklama:
+// önce sayfanın kendi metninden özet, yoksa sayfa türüne göre kısa bir cümle. WordPress'ten kalan kısa kod (ör. {"cpt":"blog"…}) açıklama sayılmaz.
+const FALLBACK_DESC: Record<string, Record<Lang, string>> = {
+  home: { tr: "", en: "Interior architecture and exhibition stand design, production and installation from Istanbul — turnkey projects in Türkiye and abroad.", de: "Innenarchitektur sowie Messestand-Design, Produktion und Aufbau aus Istanbul — schlüsselfertige Projekte in der Türkei und im Ausland.", it: "Architettura d'interni e stand fieristici da Istanbul: progettazione, produzione e allestimento chiavi in mano, in Turchia e all'estero.", fr: "Architecture intérieure et stands d'exposition depuis Istanbul : conception, fabrication et montage clés en main, en Turquie et à l'étranger." },
+  projects: { tr: "Wawa Interiors projeleri: iç mimarlık ve fuar standı tasarım ve uygulama örnekleri.", en: "Wawa Interiors projects: interior architecture and exhibition stand design and build examples.", de: "Projekte von Wawa Interiors: Beispiele für Innenarchitektur und Messestände, geplant und umgesetzt.", it: "Progetti di Wawa Interiors: esempi di architettura d'interni e stand fieristici, progettati e realizzati.", fr: "Projets de Wawa Interiors : exemples d'architecture intérieure et de stands d'exposition, conçus et réalisés." },
+  blog: { tr: "Wawa Interiors blogu: iç mimarlık, fuar standı, malzeme ve proje süreçleri üzerine rehber yazılar.", en: "Wawa Interiors blog: guides on interior architecture, exhibition stands, materials and project processes.", de: "Wawa Interiors Blog: Ratgeber zu Innenarchitektur, Messeständen, Materialien und Projektabläufen.", it: "Blog di Wawa Interiors: guide su architettura d'interni, stand fieristici e processi di progetto.", fr: "Blog de Wawa Interiors : guides sur l'architecture intérieure, les stands d'exposition et les projets." },
+  services: { tr: "Wawa Interiors hizmetleri: iç mimarlık, fuar standı, inşaat taahhüt ve mobilya üretimi tek ekipte.", en: "Wawa Interiors services: interior architecture, exhibition stands, construction and furniture production in one team.", de: "Leistungen von Wawa Interiors: Innenarchitektur, Messestände, Bauausführung und Möbelproduktion aus einer Hand.", it: "Servizi di Wawa Interiors: architettura d'interni, stand fieristici, costruzione e produzione di arredi in un unico team.", fr: "Services de Wawa Interiors : architecture intérieure, stands d'exposition, construction et fabrication de mobilier." },
+  about: { tr: "Wawa Interiors hakkında: İstanbul merkezli iç mimarlık ve fuar standı ekibi; tasarım, üretim ve uygulama aynı çatı altında.", en: "About Wawa Interiors: an Istanbul-based interior architecture and exhibition stand team — design, production and installation under one roof.", de: "Über Wawa Interiors: Innenarchitektur- und Messebau-Team aus Istanbul — Design, Produktion und Aufbau unter einem Dach.", it: "Chi siamo: team di Istanbul per architettura d'interni e stand fieristici — progettazione, produzione e allestimento.", fr: "À propos de Wawa Interiors : équipe d'architecture intérieure et de stands basée à Istanbul — conception, fabrication et montage." },
+  contact: { tr: "Wawa Interiors iletişim: İstanbul Zeytinburnu ofisimiz, telefon ve e-posta; projenizi konuşalım.", en: "Contact Wawa Interiors: our office in Zeytinburnu, Istanbul, phone and e-mail — let's talk about your project.", de: "Kontakt zu Wawa Interiors: unser Büro in Zeytinburnu, Istanbul, Telefon und E-Mail.", it: "Contatti Wawa Interiors: il nostro ufficio a Zeytinburnu, Istanbul, telefono ed e-mail.", fr: "Contacter Wawa Interiors : notre bureau à Zeytinburnu, Istanbul, téléphone et e-mail." },
+  offer: { tr: "İç mimarlık ya da fuar standı projeniz için Wawa Interiors'tan teklif alın.", en: "Request a quote from Wawa Interiors for your interior or exhibition stand project.", de: "Fordern Sie ein Angebot von Wawa Interiors für Ihr Innenarchitektur- oder Messestandprojekt an.", it: "Richiedi un preventivo a Wawa Interiors per il tuo progetto d'interni o stand fieristico.", fr: "Demandez un devis à Wawa Interiors pour votre projet d'intérieur ou de stand." },
+};
+const CATEGORY_DESC: Record<Lang, (name: string) => string> = {
+  tr: (n) => `${n}: Wawa Interiors'ın tasarlayıp uyguladığı projeler.`,
+  en: (n) => `${n}: projects designed and built by Wawa Interiors.`,
+  de: (n) => `${n}: von Wawa Interiors geplante und umgesetzte Projekte.`,
+  it: (n) => `${n}: progetti ideati e realizzati da Wawa Interiors.`,
+  fr: (n) => `${n} : projets conçus et réalisés par Wawa Interiors.`,
+};
+function descriptionOf(r: Resolved, seo: Seo | null, lang: Lang): string | undefined {
+  const own = seo?.description?.trim();
+  if (own && !own.startsWith("{")) return own;
+  const fromHtml =
+    r.type === "post" ? excerpt(r.post.html, 155) : r.type === "project" ? excerpt(r.project.html, 155) : r.type === "page" ? excerpt(r.page.html, 155) : "";
+  if (fromHtml.length > 60) return fromHtml;
+  if (r.type === "project") return CATEGORY_DESC[lang](r.project.title);
+  if (r.type === "projectCategory") return CATEGORY_DESC[lang](r.category.name);
+  return FALLBACK_DESC[r.type]?.[lang] || undefined;
+}
+
 const FALLBACK_TITLE: Record<string, Record<Lang, string>> = {
   home: { tr: "WAWA Interiors", en: "Interior Architecture & Exhibition Stands | WAWA Interiors", de: "Innenarchitektur & Messestände | WAWA Interiors", it: "Architettura d'interni e stand fieristici | WAWA Interiors", fr: "Architecture intérieure et stands d'exposition | WAWA Interiors" },
   projects: { tr: "Projelerimiz | WAWA Interiors", en: "Our Projects | WAWA Interiors", de: "Unsere Projekte | WAWA Interiors", it: "Progetti | WAWA Interiors", fr: "Nos projets | WAWA Interiors" },
@@ -123,20 +152,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const languages: Record<string, string> = {};
   for (const [l, p] of Object.entries(alts)) if (p) languages[l] = p;
   if (languages.tr) languages["x-default"] = languages.tr;
+  // Paylaşım görseli: sayfanın kendi görseli; yoksa sitenin genel paylaşım görseli (/opengraph-image)
   const image =
     seo?.ogImage ??
-    (r.type === "post" ? r.post.featuredImage : r.type === "project" ? r.project.featuredImage : r.type === "service" ? r.service.featuredImage : null);
+    (r.type === "post" ? r.post.featuredImage : r.type === "project" ? r.project.featuredImage : r.type === "service" ? r.service.featuredImage : null) ??
+    "/opengraph-image";
+  const description = descriptionOf(r, seo, lang);
   return {
     title: { absolute: title + pageNo },
-    description: seo?.description ?? undefined,
+    description: description ? description + (pageNo && description.length < 140 ? pageNo : "") : undefined,
     alternates: { canonical: encodeURI(canonicalOf(path, r)), languages },
     openGraph: {
       type: r.type === "post" ? "article" : "website",
       locale: OG_LOCALE[lang],
       url: encodeURI(path),
       title,
-      description: seo?.description ?? undefined,
-      ...(image ? { images: [{ url: encodeURI(image) }] } : {}),
+      description,
+      images: [{ url: encodeURI(image) }],
     },
   };
 }

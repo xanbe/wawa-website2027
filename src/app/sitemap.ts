@@ -1,12 +1,17 @@
 import type { MetadataRoute } from "next";
-import { allPaths } from "@/lib/routes";
+import { allPaths, canonicalOf, resolve } from "@/lib/routes";
 import { getPost, getProject } from "@/lib/content";
 
 const BASE = "https://wawainteriors.com";
 
-// Tüm sayfalar tek site haritasında; sayfalı liste sayfaları (page/N) dışarıda bırakılır
+// Tüm sayfalar tek site haritasında; sayfalı liste sayfaları (page/N) ve asıl sayfası başka adres olan takma adresler
+// (ör. /service/ → /hizmetler/, /portfolio/ → /projelerimiz/) dışarıda bırakılır — haritada yalnız canonical adresler olur
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["/", "/butce-planlama/", ...allPaths().filter((p) => !/\/page\/\d+\/$/.test(p))];
+  const isCanonical = (p: string) => {
+    const r = resolve(p);
+    return !r || canonicalOf(p, r) === p;
+  };
+  const paths = ["/", "/butce-planlama/", ...allPaths().filter((p) => !/\/page\/\d+\/$/.test(p) && isCanonical(p))];
   return paths.map((p) => {
     const post = getPost(p);
     const project = getProject(p);

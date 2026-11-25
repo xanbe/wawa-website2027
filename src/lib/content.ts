@@ -74,19 +74,24 @@ export type Category = {
   seo: Seo;
 };
 
-export const posts = postsData as Post[];
-export const projects = projectsData as Project[];
-export const services = servicesData as Service[];
-export const legacyPages = pagesData as LegacyPage[];
-export const categories = categoriesData as Category[];
-
-// Anahtar kelime düzeltmeleri (src/content/seo-overrides.ts): başlık, açıklama ve H1, adres değişmeden
-for (const item of [...posts, ...services, ...legacyPages] as { path: string; title: string; seo: Seo }[]) {
+// Anahtar kelime düzeltmeleri (src/content/seo-overrides.ts): başlık, açıklama ve H1, adres değişmeden.
+// Kopya üretir; içe aktarılan JSON nesnesi değiştirilmez (geliştirme sunucusu yeniden yüklediğinde eski değer kalmasın).
+const today = new Date().toISOString().slice(0, 10);
+function withOverride<T extends { path: string; title: string; seo: Seo }>(item: T): T {
   const o = seoOverrides[item.path];
-  if (!o) continue;
-  item.seo = { ...item.seo, ...(o.fullTitle && { fullTitle: o.fullTitle }), ...(o.description && { description: o.description }) };
-  if (o.h1) item.title = o.h1;
+  if (!o || (o.notBefore && today < o.notBefore)) return item;
+  return {
+    ...item,
+    title: o.h1 ?? item.title,
+    seo: { ...item.seo, ...(o.fullTitle && { fullTitle: o.fullTitle }), ...(o.description && { description: o.description }) },
+  };
 }
+
+export const posts = (postsData as Post[]).map(withOverride);
+export const projects = projectsData as Project[];
+export const services = (servicesData as Service[]).map(withOverride);
+export const legacyPages = (pagesData as LegacyPage[]).map(withOverride);
+export const categories = categoriesData as Category[];
 
 const byPath = <T extends { path: string }>(list: T[]) => new Map(list.map((x) => [x.path, x]));
 const postMap = byPath(posts);

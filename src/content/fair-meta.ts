@@ -42,7 +42,7 @@ export const SECTOR_GROUPS = [
   { id: "enerji", label: "Enerji ve elektrik", re: /enerji|güneş|rüzgar|hidrojen|batarya|elektrik|aydınlatma|güç elektroniği/ },
   { id: "lojistik", label: "Lojistik", re: /lojisti|taşımacılık|depolama|kargo|malzeme taşıma/ },
   { id: "makine", label: "Makine, metal ve endüstri", re: /makine|tezgah|metal|\bsac\b|kaynak|döküm|metalurji|çelik|alüminyum|otomasyon|robot|imalat|endüstri|sanayi|kalıp|bağlantı eleman|hassas|ısıl işlem|lazer|vana|kalite|\btest\b|proses|mühendislik|maden|iş makine|cam işleme|üretim|yüzey işlem|platform|dökme|tel|kablo/ },
-  { id: "cevre", label: "Çevre ve su", re: /çevre|\bsu\b|atık|geri dönüşüm|temizlik|hijyen/ },
+  { id: "cevre", label: "Çevre ve su", re: /çevre|\bsu\b(?! spor)|atık|geri dönüşüm|temizlik|hijyen/ },
   { id: "tuketici", label: "Tüketici ürünleri ve perakende", re: /perakende|tüketici|oyuncak|kırtasiye|hobi|bebek|çocuk|anne|promosyon|özel etiket|özel marka|private label|franchise|lisans|evcil|spor|fitness|outdoor|tütün|el işi/ },
   { id: "teknoloji", label: "Elektronik ve teknoloji", re: /teknoloji|bilişim|elektronik|yazılım|yapay zeka|siber|dijital|telekom|iletişim|görsel|ses-görüntü|yayıncılık|gömülü|yarı iletken|fiber|e-ticaret|ödeme|veri merkez|drone|fotoğraf|oyun|uydu|telsiz|elektroteknik|elektromanyetik|pazarlama|sanal gerçeklik|müşteri hizmet|jeodezi|coğrafi|ışık ve ses/ },
 ] as const;

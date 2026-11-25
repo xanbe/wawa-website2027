@@ -4,6 +4,7 @@ import { FeeCalculator } from "@/components/sections/FeeCalculator";
 export const metadata: Metadata = {
   title: "Bütçe Planlama | WAWA Interiors",
   description: "Mekânınızın türüne ve alanına göre iç mimari tasarım bütçenizi önceden planlayın.",
+  alternates: { canonical: "/butce-planlama/" },
 };
 
 // Anasayfadaki bütçe adımları ?tur=…&alan=… ile gelir; hesaplayıcı bu değerlerle dolu açılır
