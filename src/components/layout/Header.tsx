@@ -10,6 +10,7 @@ import {
   Sparkles,
   ChevronDown,
   ArrowRight,
+  CalendarDays,
   Phone,
   Mail,
   MessageCircle,
@@ -66,7 +67,7 @@ export function Header() {
   // Menü, bulunulan sayfanın dilinde gösterilir
   const lang = langFromPath(pathname);
   const { main, servicesLabel, serviceGroups, singleServices, menuInvite, start, ai, strip, allProjects, menu } = NAV[lang];
-  const servicePaths = [...serviceGroups.flatMap((g) => [g.href, ...g.items.map((i) => i.href)]), "/service/"];
+  const servicePaths = [...serviceGroups.flatMap((g) => [g.href, ...g.items.map((i) => i.href), ...(g.feature ? [g.feature.href] : [])]), "/service/"];
   // "Neler Yapıyoruz?" menüsü Hakkımızda'dan sonra gelir
   const navBefore = main.slice(0, 2);
   const navAfter = main.slice(2);
@@ -279,6 +280,20 @@ export function Header() {
                                 </li>
                               ))}
                             </ul>
+                            {group.feature && (
+                              <Link
+                                href={group.feature.href}
+                                onClick={closeMenus}
+                                className="mt-3 flex items-center gap-3 border border-wawa-charcoal px-4 py-3 text-wawa-charcoal"
+                              >
+                                <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />
+                                <span className="min-w-0 flex-1">
+                                  <span className="block text-[15px] font-semibold">{group.feature.label}</span>
+                                  <span className="block text-[13px] text-wawa-gray">{group.feature.note}</span>
+                                </span>
+                                <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
+                              </Link>
+                            )}
                           </div>
                         ))}
 
@@ -390,6 +405,20 @@ export function Header() {
                   </li>
                 ))}
               </ul>
+              {group.feature && (
+                <Link
+                  href={group.feature.href}
+                  onClick={closeMenus}
+                  className="group/feature mt-4 ml-9 flex items-center gap-3 border border-wawa-charcoal px-4 py-3 text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white"
+                >
+                  <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[15px] font-semibold leading-tight">{group.feature.label}</span>
+                    <span className="mt-0.5 block text-[13px] text-wawa-gray transition-colors group-hover/feature:text-white/70">{group.feature.note}</span>
+                  </span>
+                  <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover/feature:translate-x-1" aria-hidden />
+                </Link>
+              )}
             </div>
           ))}
 

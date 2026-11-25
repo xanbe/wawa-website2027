@@ -12,6 +12,8 @@ export interface ServiceGroup {
   description: string;
   href: string;
   items: NavLink[];
+  // Grubun altında ayrı duran öne çıkan bağlantı (ör. fuar takvimi)
+  feature?: { label: string; note: string; href: string };
 }
 
 // Menü her dilde aynı yapıda; adresler eski sitedeki gerçek sayfalardır (SEO için değişmez)
@@ -84,8 +86,8 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Maxima Stand", href: "/maxima-stand/" },
           { name: "Plus Stand", href: "/plus-stand/" },
           { name: "AVM Standı", href: "/avm-standi/" },
-          { name: "Fuar Takvimi", href: "/fuar-takvimi/" },
         ],
+        feature: { label: "Fuar Takvimi 2027", note: "1000+ fuar · 5 bölge", href: "/fuar-takvimi/" },
       },
     ],
     singleServices: [
