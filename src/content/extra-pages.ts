@@ -2,6 +2,8 @@
 // Metinler eski sitedeki ifadelere dayanır: kendi mobilya atölyesi, inşaat ve müteahhitlik hizmeti,
 // ruhsat hariç anahtar teslim yönetim. Sayı ve iddia uydurulmaz.
 import type { Lang } from "@/lib/i18n";
+import { sectorPages } from "./sector-pages";
+import { standPages } from "./stand-pages";
 
 export type ExtraPage = {
   key: "construction" | "furniture" | "sector" | "stand";
@@ -16,6 +18,7 @@ export type ExtraPage = {
   projectPaths?: string[]; // doğrudan ilgili projeler
   faq?: { q: string; a: string }[];
   seo: { title: string; description: string };
+  group?: string; // sektör ve stand sayfalarında dil sürümlerini bağlayan anahtar: Türkçe sayfanın adresi
 };
 
 const ALT = {
@@ -23,8 +26,17 @@ const ALT = {
   furniture: { tr: "/mobilya-uretim/", en: "/en/furniture-production/", de: "/de/moebelproduktion/" },
 } as const;
 
-export const extraAlternates = (page: ExtraPage): Partial<Record<Lang, string>> =>
-  page.key === "sector" || page.key === "stand" ? { [page.lang]: page.path } : { ...ALT[page.key] };
+export const extraAlternates = (page: ExtraPage): Partial<Record<Lang, string>> => {
+  if (page.key !== "sector" && page.key !== "stand") return { ...ALT[page.key] };
+  const group = page.group ?? page.path;
+  const out: Partial<Record<Lang, string>> = {};
+  for (const x of [...sectorPages, ...standPages]) if ((x.group ?? x.path) === group) out[x.lang] = x.path;
+  if (out.en) {
+    out.it = out.en;
+    out.fr = out.en;
+  }
+  return out;
+};
 
 export const extraPages: ExtraPage[] = [
   {

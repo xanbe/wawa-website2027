@@ -45,6 +45,25 @@ export const SUB_SERVICES: Record<string, { name: string; href: string }[]> = {
     { name: "Diş Kliniği Tasarımı", href: "/dis-klinigi-ic-mimari/" },
     { name: "Güzellik Salonu İç Mimarisi", href: "/guzellik-salonu-ic-mimari/" },
   ],
+  // İngilizce (IT ve FR menüleri de İngilizce sayfalara bağlanır) ve Almanca
+  "/en/service/store-design-and-implementation/": [
+    { name: "Jewellery Store Interior Design", href: "/en/jewellery-store-interior-design/" },
+    { name: "Pharmacy Interior Design", href: "/en/pharmacy-interior-design/" },
+    { name: "Showroom Interior Design", href: "/en/showroom-interior-design/" },
+  ],
+  "/en/service/clinic-design-and-implementation/": [
+    { name: "Dental Clinic Design", href: "/en/dental-clinic-design/" },
+    { name: "Beauty Salon Interior Design", href: "/en/beauty-salon-interior-design/" },
+  ],
+  "/de/service/laden-design-und-umsetzungen/": [
+    { name: "Innenarchitektur für Juweliere", href: "/de/juwelier-innenarchitektur/" },
+    { name: "Innenarchitektur für Apotheken", href: "/de/apotheken-innenarchitektur/" },
+    { name: "Showroom-Innenarchitektur", href: "/de/showroom-innenarchitektur/" },
+  ],
+  "/de/service/klinikdesign-und-umsetzungen/": [
+    { name: "Zahnarztpraxis-Design", href: "/de/zahnarztpraxis-design/" },
+    { name: "Innenarchitektur für Kosmetikstudios", href: "/de/kosmetikstudio-innenarchitektur/" },
+  ],
 };
 export const parentService = (lang: Lang, path: string) => {
   const parent = Object.entries(SUB_SERVICES).find(([, subs]) => subs.some((s) => s.href === path))?.[0];
@@ -135,6 +154,8 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Exhibition Stand", href: "/en/service/expo-design/" },
           { name: "Congress Stand", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
+          { name: "Plus Stand", href: "/en/plus-stand/" },
+          { name: "Mall Stand", href: "/en/mall-stand/" },
         ],
         feature: { label: "Fair Calendar 2027", note: "1000+ fairs · 5 regions", href: "/en/trade-fair-calendar/" },
       },
@@ -183,6 +204,8 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Messestand", href: "/de/service/messe-stand/" },
           { name: "Kongressstand", href: "/de/service/kongress-stand-design/" },
           { name: "Maxima Stand", href: "/de/service/maxima-stand/" },
+          { name: "Plus Stand", href: "/de/plus-stand/" },
+          { name: "Mall-Stand", href: "/de/mall-stand/" },
         ],
         feature: { label: "Messekalender 2027", note: "1000+ Messen · 5 Regionen", href: "/de/messekalender/" },
       },
@@ -232,6 +255,8 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Stand fieristico", href: "/en/service/expo-design/" },
           { name: "Stand per congressi", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
+          { name: "Plus Stand", href: "/en/plus-stand/" },
+          { name: "Stand per centri commerciali", href: "/en/mall-stand/" },
         ],
         feature: { label: "Calendario fiere 2027", note: "Oltre 1000 fiere", href: "/en/trade-fair-calendar/" },
       },
@@ -280,6 +305,8 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Stand d'exposition", href: "/en/service/expo-design/" },
           { name: "Stand de congrès", href: "/en/service/congress-stand-design/" },
           { name: "Maxima Stand", href: "/en/service/maxima-stand/" },
+          { name: "Plus Stand", href: "/en/plus-stand/" },
+          { name: "Stand de centre commercial", href: "/en/mall-stand/" },
         ],
         feature: { label: "Agenda des salons", note: "2027 · plus de 1000 salons", href: "/en/trade-fair-calendar/" },
       },

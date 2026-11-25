@@ -1,9 +1,10 @@
-// Fuar standı grubuna eklenen yeni sayfalar (yalnızca TR).
+// Fuar standı grubuna eklenen yeni sayfalar (TR; İngilizce ve Almanca sürümleri extra-intl.ts içinde).
 // AVM Standı: eski sitedeki AVM standı projeleri ve AVM blog yazılarındaki ifadelere dayanır.
 // Plus Stand: Maxima modüler sistemin büyük ölçekli sürümü olarak anlatılır. Sayı ve teknik ölçü verilmez.
 import type { ExtraPage } from "./extra-pages";
+import { standPagesIntl } from "./extra-intl";
 
-export const standPages: ExtraPage[] = [
+const standPagesTr: ExtraPage[] = [
   {
     key: "stand",
     path: "/plus-stand/",
@@ -97,3 +98,5 @@ export const standPages: ExtraPage[] = [
     },
   },
 ];
+
+export const standPages: ExtraPage[] = [...standPagesTr, ...standPagesIntl];

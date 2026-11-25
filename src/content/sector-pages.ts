@@ -1,11 +1,12 @@
 // Sektörel iç mimari sayfaları (TR). Her sektörün kendine özgü ihtiyaçları anlatılır;
 // WAWA'ya dair yalnızca eski sitede de yazan gerçekler kullanılır (kendi atölyesi, ruhsat hariç anahtar teslim).
 import type { ExtraPage } from "./extra-pages";
+import { sectorPagesIntl } from "./extra-intl";
 
 const WORKSHOP =
   "Tasarım ve teknik çizimleri kendi bünyemizde hazırlıyor; inşaat, mobilya üretimi ve uygulamayı tek elden yönetiyoruz. Mobilya ve sabit donatı kendi atölyemizde üretilir, sahada monte edilir.";
 
-export const sectorPages: ExtraPage[] = [
+const sectorPagesTr: ExtraPage[] = [
   {
     key: "sector",
     path: "/kuyumcu-ic-mimari/",
@@ -190,5 +191,8 @@ export const sectorPages: ExtraPage[] = [
     },
   },
 ];
+
+// İngilizce ve Almanca sürümleri extra-intl.ts içinde
+export const sectorPages: ExtraPage[] = [...sectorPagesTr, ...sectorPagesIntl];
 
 export const SECTOR_WORKSHOP_NOTE = WORKSHOP;

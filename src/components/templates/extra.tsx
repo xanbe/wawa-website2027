@@ -1,6 +1,7 @@
 import { t, ROUTES } from "@/lib/i18n";
 import type { ExtraPage } from "@/content/extra-pages";
 import { INTERIOR_PROCESS, INTERIOR_SCOPE, STAND_PROCESS, type Landing } from "@/content/landings";
+import { INTERIOR_PROCESS_L, INTERIOR_SCOPE_L, STAND_PROCESS_L } from "@/content/landings-intl";
 import { LandingTemplate, relatedProjects } from "./landing";
 import { parentService } from "@/components/layout/navigation";
 
@@ -10,6 +11,9 @@ const FOCUS = { tr: "Neye dikkat ediyoruz?", en: "What we focus on", de: "Worauf
 export function ExtraServiceTemplate({ page }: { page: ExtraPage }) {
   const lang = page.lang;
   const [first, ...rest] = page.sections;
+  // Süreç ve kapsam metinleri TR, EN ve DE; IT ve FR İngilizceyi kullanır
+  const tr = lang === "tr";
+  const l = lang === "de" ? "de" : "en";
   const landing: Landing = {
     kicker: page.title,
     title: page.title,
@@ -17,8 +21,8 @@ export function ExtraServiceTemplate({ page }: { page: ExtraPage }) {
     heroImages: [page.image],
     highlights: page.points.map((p) => ({ title: p, text: "" })),
     intro: { title: first.h, text: first.p },
-    process: page.key === "stand" ? STAND_PROCESS : lang === "tr" ? INTERIOR_PROCESS : [],
-    scope: lang === "tr" && page.key === "sector" ? INTERIOR_SCOPE : undefined,
+    process: page.key === "stand" ? (tr ? STAND_PROCESS : STAND_PROCESS_L[l]) : tr ? INTERIOR_PROCESS : INTERIOR_PROCESS_L[l],
+    scope: page.key === "sector" ? (tr ? INTERIOR_SCOPE : INTERIOR_SCOPE_L[l]) : undefined,
     blocks: rest.length ? [{ title: FOCUS[lang], items: rest.map((s) => ({ title: s.h, text: s.p })) }] : [],
     showBrands: lang === "tr",
   };

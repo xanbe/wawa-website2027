@@ -163,7 +163,7 @@ function siblings(lang: Lang, path: string): { kind: "group" | "sector" | "areas
   // Grup hizmetleri, alt hizmetleri (sektör sayfaları) üst hizmetin hemen altında olacak şekilde
   // Grubun ana sayfasında (ör. İç Mimarlık) yalnızca ana türler listelenir; alt sektör sayfaları kendi üst hizmetinde görünür
   if (group && group.href === path) return { kind: "group", items: group.items };
-  if (group) return { kind: "group", items: group.items.flatMap((i) => [i, ...(lang === "tr" ? SUB_SERVICES[i.href] ?? [] : [])]) };
+  if (group) return { kind: "group", items: group.items.flatMap((i) => [i, ...(SUB_SERVICES[i.href] ?? [])]) };
   const sector = sectorPages.find((p) => p.path === path);
   if (sector) return { kind: "sector", items: sectorPages.filter((p) => p.lang === lang).map((p) => ({ name: p.title, href: p.path })) };
   return {
@@ -366,7 +366,7 @@ export function LandingTemplate(props: LandingProps) {
       {landing && landing.process.length > 0 && (
         <section className={landing.offerings || landing.scope ? "bg-white" : STONE}>
           <div className="container-wide pt-14 pb-14 lg:pt-16 lg:pb-16">
-            <SectionHeader id={`l-${no()}`} title={landing.processTitle ?? (lang === "tr" ? "Süreç nasıl ilerler?" : "How it works")} />
+            <SectionHeader id={`l-${no()}`} title={landing.processTitle ?? (lang === "tr" ? "Süreç nasıl ilerler?" : lang === "de" ? "So läuft es ab" : "How it works")} />
             <ol className={`mt-10 grid border-t sm:grid-cols-2 lg:mt-14 ${landing.process.length > 5 ? "lg:grid-cols-3" : "lg:grid-cols-5"} ${LINE}`}>
               {landing.process.map((s, i) => (
                 <li key={s.title} className={`border-b py-6 pr-6 ${LINE}`}>

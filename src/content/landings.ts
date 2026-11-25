@@ -2,6 +2,8 @@
 // Metinler eski sitenin hizmet sayfalarındaki bilgilere dayanır; sayı ve doğrulanamayan iddia yoktur.
 // Eski SEO metni sayfanın "Detaylı bilgi" bölümünde aynen korunur.
 
+import { landingsIntl } from "./landings-intl";
+
 export type Landing = {
   kicker: string;
   title: string;
@@ -55,7 +57,7 @@ export const INTERIOR_SCOPE = [
   { title: "Anahtar teslim uygulama", text: "Tasarımı gerçeğe dönüştürüyoruz; tüm uygulama sürecini tek ekiple yönetiyoruz.", features: ["İnşaat yönetimi", "Mobilya montajı", "Dekorasyon"] },
 ];
 
-export const landings: Record<string, Landing> = {
+const landingsTr: Record<string, Landing> = {
   "/fuar-standi/": {
     kicker: "Fuar Standı",
     h1: "Fuar Standı",
@@ -273,3 +275,6 @@ export const landings: Record<string, Landing> = {
     showBrands: true,
   },
 };
+
+// İngilizce ve Almanca hizmet sayfaları landings-intl.ts içinde
+export const landings: Record<string, Landing> = { ...landingsTr, ...landingsIntl };
