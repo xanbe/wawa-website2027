@@ -7,6 +7,8 @@ import { useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Check, Loader2 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import type { SvcLang } from "./service-sections";
+import { FairCombobox } from "./FairCombobox";
+import type { FairPick } from "@/content/fairs";
 
 const T = {
   tr: {
@@ -198,7 +200,7 @@ export function QuoteWizard({
   lang: Lang;
   k: SvcLang;
   service: string;
-  fairs: string[];
+  fairs: FairPick[];
   privacyHref: string;
   variant?: "stand" | "interior";
   space?: number;
@@ -311,15 +313,22 @@ export function QuoteWizard({
 
             {step === 0 && !interior && (
               <div className="mt-5">
-                <label>
-                  <span className={label}>{t.fair}</span>
-                  <input list="svc-fairs-list" value={a.fair} disabled={a.undecided} maxLength={110} onChange={(e) => set({ fair: e.target.value })} placeholder={t.fairPh} className={`mt-2 ${field} disabled:opacity-40`} />
+                <label htmlFor="svc-fair" className={label}>
+                  {t.fair}
                 </label>
-                <datalist id="svc-fairs-list">
-                  {fairs.map((f) => (
-                    <option key={f} value={f} />
-                  ))}
-                </datalist>
+                <div className="mt-2">
+                  <FairCombobox
+                    id="svc-fair"
+                    lang={lang}
+                    theme="dark"
+                    picks={fairs}
+                    value={a.fair}
+                    disabled={a.undecided}
+                    onChange={(v) => set({ fair: v })}
+                    placeholder={t.fairPh}
+                    className={`${field} disabled:opacity-40`}
+                  />
+                </div>
                 <label className="mt-4 flex cursor-pointer items-center gap-3 text-[14px] text-white/80">
                   <input type="checkbox" checked={a.undecided} onChange={(e) => set({ undecided: e.target.checked, fair: e.target.checked ? "" : a.fair })} className="h-4 w-4 accent-[#E7E864]" />
                   {t.undecided}

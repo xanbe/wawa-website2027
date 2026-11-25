@@ -63,8 +63,20 @@ export const getFair = (slug: string): Fair | undefined => FAIRS.find((f) => f.s
 export type FairLite = Pick<Fair, "slug" | "name" | "city" | "country" | "region" | "start" | "end" | "sector"> & { group: SectorGroupId };
 export const FAIRS_LITE: FairLite[] = FAIRS.map(({ slug, name, city, country, region, start, end, sector }) => ({ slug, name, city, country, region, start, end, sector, group: sectorGroup({ sector, name }) }));
 
-// Fuar seçim kutuları için tekrarsız "Ad · Şehir" listesi (aynı fuarın iki baskısı tek satır)
-export const FAIR_OPTIONS: string[] = [...new Set(FAIRS.map((f) => `${f.name} · ${f.city}`))];
+// Fuar seçim kutuları için tekrarsız liste (aynı fuarın iki baskısı tek satır, ilk baskı kalır).
+// v: "Ad · Şehir" (forma yazılan değer), c: "Şehir, Ülke", d: başlangıç, s: sektör, r: bölge
+export type FairPick = { v: string; c: string; d: string; s: string; r: FairRegion };
+export const FAIR_PICKS: FairPick[] = (() => {
+  const seen = new Set<string>();
+  const out: FairPick[] = [];
+  for (const f of FAIRS) {
+    const v = `${f.name} · ${f.city}`;
+    if (seen.has(v)) continue;
+    seen.add(v);
+    out.push({ v, c: `${f.city}, ${f.country}`, d: f.start, s: f.sector, r: f.region });
+  }
+  return out;
+})();
 
 export const fairPath = (slug: string) => `/fuar-takvimi/${slug}/`;
 export const FAIRS_PATH = "/fuar-takvimi/";

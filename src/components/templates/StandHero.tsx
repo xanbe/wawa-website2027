@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import type { FairPick } from "@/content/fairs";
 import { kvkkPath, privacyPath } from "@/content/legal";
 import { svcLang } from "./service-sections";
 import { VideoBackdrop } from "./VideoBackdrop";
@@ -35,7 +36,7 @@ export function StandHero({
   videoId?: string;
   poster?: string;
   images?: string[]; // video yoksa arkada sırayla geçen fotoğraflar
-  fairs?: string[];
+  fairs?: FairPick[];
   variant?: "stand" | "interior";
   space?: number; // iç mimarlık alt sayfasında önceden seçili mekân türü (menüdeki sırası)
   hasProjects: boolean;

@@ -8,7 +8,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Check, Loader2, MessageCircle, Paperclip, Phone, Presentation, Sofa, X } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { contactInfo } from "@/components/layout/navigation";
-import { FAIRS } from "@/content/fairs";
+import type { FairPick } from "@/content/fairs";
+import { FairCombobox } from "./FairCombobox";
 import { estimate, euroRange, type PriceRegion, type StandSystem } from "@/content/stand-prices";
 
 const FILE_EXT = /\.(pdf|jpe?g|png|webp|dwg|dxf|zip)$/i;
@@ -305,7 +306,7 @@ function slotDays() {
 
 const EMPTY = { ownership: "", space: "", areaRange: "", area: "", state: "", scope: [] as string[], fair: "", standType: "", system: "", location: "", when: "", fairDate: "", budget: "", note: "", name: "", company: "", phone: "", email: "", prefer: "", consent: false, website: "" };
 
-export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: string[]; privacyHref: string }) {
+export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: FairPick[]; privacyHref: string }) {
   const k: L = lang === "tr" || lang === "de" ? lang : "en";
   const t = T[k];
   const [kind, setKind] = useState<Kind | null>(null);
@@ -363,8 +364,9 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: s
     if (kind !== "stand") return null;
     const b = areaBounds(a.area, a.areaRange);
     if (!b) return null;
-    const known = FAIRS.find((x) => a.fair.toLocaleLowerCase("tr-TR").includes(x.name.toLocaleLowerCase("tr-TR")));
-    const region: PriceRegion = known ? (known.region === "tr" ? "tr" : "abroad") : !a.fair.trim() || TR_CITIES.test(a.fair) ? "tr" : "abroad";
+    const typed = a.fair.toLocaleLowerCase("tr-TR");
+    const known = typed ? fairs.find((x) => typed.includes(x.v.split(" · ")[0].toLocaleLowerCase("tr-TR"))) : undefined;
+    const region: PriceRegion = known ? (known.r === "tr" ? "tr" : "abroad") : !a.fair.trim() || TR_CITIES.test(a.fair) ? "tr" : "abroad";
     const systems: StandSystem[] = a.system === t.systems[0] ? ["ahsap"] : a.system === t.systems[1] ? ["maxima"] : ["ahsap", "maxima"];
     return systems.map((sys) => ({ sys, range: estimate(sys, region, b[0], b[1])! }));
   })();
@@ -656,12 +658,9 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: s
                   <label htmlFor="offer-fair" className="text-[14px] text-wawa-charcoal/70">
                     {t.fair}
                   </label>
-                  <input id="offer-fair" list="offer-fairs" maxLength={110} placeholder={t.fairPh} value={a.fair} onChange={(e) => set({ fair: e.target.value })} className={`mt-2.5 ${field}`} />
-                  <datalist id="offer-fairs">
-                    {fairs.map((f) => (
-                      <option key={f} value={f} />
-                    ))}
-                  </datalist>
+                  <div className="mt-2.5">
+                    <FairCombobox id="offer-fair" lang={lang} picks={fairs} value={a.fair} onChange={(v) => set({ fair: v })} placeholder={t.fairPh} className={field} />
+                  </div>
                 </div>
                 <Group label={t.area}>
                   {t.areasStand.map((x) => (
