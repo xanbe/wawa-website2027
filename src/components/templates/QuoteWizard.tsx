@@ -186,12 +186,28 @@ const INTERIOR = {
 };
 const INTERIOR_AREAS = [60, 100, 150, 250, 500];
 
-export function QuoteWizard({ lang, k, service, fairs, privacyHref, variant = "stand" }: { lang: Lang; k: SvcLang; service: string; fairs: string[]; privacyHref: string; variant?: "stand" | "interior" }) {
+export function QuoteWizard({
+  lang,
+  k,
+  service,
+  fairs,
+  privacyHref,
+  variant = "stand",
+  space,
+}: {
+  lang: Lang;
+  k: SvcLang;
+  service: string;
+  fairs: string[];
+  privacyHref: string;
+  variant?: "stand" | "interior";
+  space?: number;
+}) {
   const interior = variant === "interior";
   const t = interior ? { ...T[k], ...INTERIOR[k] } : T[k];
   const areas = interior ? INTERIOR_AREAS : AREAS;
   const [step, setStep] = useState(0);
-  const [a, setA] = useState({ fair: "", undecided: false, area: "", type: "", system: "", name: "", company: "", phone: "", email: "", website: "" });
+  const [a, setA] = useState({ fair: interior && space !== undefined && space >= 0 ? (INTERIOR[k].spaces[space] ?? "") : "", undecided: false, area: "", type: "", system: "", name: "", company: "", phone: "", email: "", website: "" });
   const [error, setError] = useState<string | null>(null);
   const [state, setState] = useState<"idle" | "busy" | "done">("idle");
   const set = (p: Partial<typeof a>) => {

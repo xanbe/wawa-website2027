@@ -11,6 +11,7 @@ import {
   ChevronDown,
   ArrowRight,
   CalendarDays,
+  Calculator,
   Phone,
   Mail,
   MessageCircle,
@@ -286,7 +287,7 @@ export function Header() {
                                 onClick={closeMenus}
                                 className="mt-3 flex items-center gap-3 border border-wawa-charcoal px-4 py-3 text-wawa-charcoal"
                               >
-                                <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />
+                                {group.feature.icon === "price" ? <Calculator className="h-5 w-5 shrink-0" aria-hidden /> : <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />}
                                 <span className="min-w-0 flex-1">
                                   <span className="block text-[15px] font-semibold">{group.feature.label}</span>
                                   <span className="block text-[13px] text-wawa-gray">{group.feature.note}</span>
@@ -411,7 +412,7 @@ export function Header() {
                   onClick={closeMenus}
                   className="group/feature mt-4 ml-9 flex items-center gap-3 border border-wawa-charcoal px-4 py-3 text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white"
                 >
-                  <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />
+                  {group.feature.icon === "price" ? <Calculator className="h-5 w-5 shrink-0" aria-hidden /> : <CalendarDays className="h-5 w-5 shrink-0" aria-hidden />}
                   <span className="min-w-0 flex-1">
                     <span className="block text-[15px] font-semibold leading-tight">{group.feature.label}</span>
                     <span className="mt-0.5 block text-[13px] text-wawa-gray transition-colors group-hover/feature:text-white/70">{group.feature.note}</span>

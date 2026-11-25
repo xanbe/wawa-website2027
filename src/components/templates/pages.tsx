@@ -197,7 +197,7 @@ export function ContentPageTemplate({ page }: { page: LegacyPage }) {
         heroImages={landing.heroImages}
         breadcrumb={{ label: t(lang).nav.services, href: ROUTES[lang].services }}
         landing={landing}
-        projects={relatedProjects(lang, landing.projectCategories, landing.projectPaths)}
+        projects={relatedProjects(lang, landing.projectCategories, landing.projectPaths, 24)}
         projectsHref={ROUTES[lang].projects}
         detailsHtml={html.split("\n").filter((l) => !l.startsWith("<img")).join("\n")}
       />

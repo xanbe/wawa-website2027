@@ -13,7 +13,7 @@ export interface ServiceGroup {
   href: string;
   items: NavLink[];
   // Grubun altında ayrı duran öne çıkan bağlantı (ör. fuar takvimi)
-  feature?: { label: string; note: string; href: string };
+  feature?: { label: string; note: string; href: string; icon?: "calendar" | "price" };
 }
 
 // Menü her dilde aynı yapıda; adresler eski sitedeki gerçek sayfalardır (SEO için değişmez)
@@ -74,6 +74,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Cafe & Restoran Tasarımı", href: "/cafe-dekorasyon/" },
           { name: "Ofis Tasarımı", href: "/ofis-tasarimi-ve-uygulama/" },
         ],
+        feature: { label: "İç Mimarlık Fiyatları", note: "Bütçe neye göre belirlenir?", href: "/ic-mimarlik-fiyatlari/", icon: "price" },
       },
       {
         number: "02",

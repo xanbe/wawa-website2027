@@ -226,8 +226,12 @@ export function LandingTemplate(props: LandingProps) {
   projects.forEach((p) => addImage(p.featuredImage, p.title));
   const k = svcLang(lang);
   const isStand = NAV[lang].serviceGroups[1]?.items.some((i) => i.href === path) ?? false;
-  // İç mimarlık ana sayfası fuar standı sayfasının kurgusunu kullanır: fotoğraflı açılış, hızlı teklif, proje ızgarası
-  const isInterior = path === INTERIOR_HUB;
+  // İç mimarlık ana sayfası ve alt sayfaları (Konut, Mağaza, Klinik, Cafe, Ofis ve sektör sayfaları) fuar standı
+  // sayfasının kurgusunu kullanır: fotoğraflı açılış, hızlı teklif, proje ızgarası
+  const interiorItems = NAV[lang].serviceGroups[0]?.items ?? [];
+  const parentHref = parentService(lang, path)?.href;
+  const spaceIndex = interiorItems.findIndex((i) => i.href === path || i.href === parentHref);
+  const isInterior = path === INTERIOR_HUB || spaceIndex >= 0;
   const hub = isStand || isInterior;
   const types = typeItems(lang, path);
   // Tanıtım mozaiği: açılıştaki kapak görselinden farklı görseller
@@ -254,7 +258,16 @@ export function LandingTemplate(props: LandingProps) {
           hasProjects={rail.length > 0}
         />
       ) : isInterior ? (
-        <StandHero lang={lang} title={title} lead={lead} breadcrumb={breadcrumb} images={heroImages.slice(0, 5)} variant="interior" hasProjects={rail.length > 0} />
+        <StandHero
+          lang={lang}
+          title={title}
+          lead={lead}
+          breadcrumb={breadcrumb}
+          images={images.slice(0, 5).map((i) => i.src)}
+          variant="interior"
+          space={spaceIndex}
+          hasProjects={rail.length > 0}
+        />
       ) : (
         <LeadHero lang={lang} title={title} lead={lead} breadcrumb={breadcrumb} images={images.slice(0, 6).map((i) => i.src)} hasProjects={rail.length > 0} />
       )}

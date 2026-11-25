@@ -1,7 +1,7 @@
 // Stand sayfalarının açılışı: arkada sessiz YouTube videosu, solda başlık, sağda aşamalı hızlı teklif.
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
 import { kvkkPath, privacyPath } from "@/content/legal";
 import { svcLang } from "./service-sections";
@@ -9,6 +9,11 @@ import { VideoBackdrop } from "./VideoBackdrop";
 import { QuoteWizard } from "./QuoteWizard";
 
 const PROJECTS = { tr: "Projeleri inceleyin", en: "See projects", de: "Projekte ansehen" };
+// Fiyat rehberleri yalnızca Türkçe
+const PRICES = {
+  stand: { label: "Fuar standı fiyatları", href: "/fuar-standi-fiyatlari/" },
+  interior: { label: "İç mimarlık fiyatları", href: "/ic-mimarlik-fiyatlari/" },
+};
 
 export function StandHero({
   lang,
@@ -20,6 +25,7 @@ export function StandHero({
   images,
   fairs = [],
   variant = "stand",
+  space,
   hasProjects,
 }: {
   lang: Lang;
@@ -31,6 +37,7 @@ export function StandHero({
   images?: string[]; // video yoksa arkada sırayla geçen fotoğraflar
   fairs?: string[];
   variant?: "stand" | "interior";
+  space?: number; // iç mimarlık alt sayfasında önceden seçili mekân türü (menüdeki sırası)
   hasProjects: boolean;
 }) {
   const k = svcLang(lang);
@@ -61,15 +68,23 @@ export function StandHero({
             </span>
           </h1>
           <p className="mt-6 max-w-[48ch] text-[17px] leading-relaxed text-white/85 lg:mt-8">{lead}</p>
-          {hasProjects && (
-            <a href="#projeler" className="group mt-8 inline-flex items-center gap-3 border border-white/40 px-5 py-3.5 text-[15px] text-white transition-colors hover:border-white hover:bg-white hover:text-wawa-charcoal">
-              {PROJECTS[k]}
-              <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
-            </a>
-          )}
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+            {hasProjects && (
+              <a href="#projeler" className="group inline-flex items-center gap-3 border border-white/40 px-5 py-3.5 text-[15px] text-white transition-colors hover:border-white hover:bg-white hover:text-wawa-charcoal">
+                {PROJECTS[k]}
+                <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden />
+              </a>
+            )}
+            {lang === "tr" && (
+              <Link href={PRICES[variant].href} className="group inline-flex items-center gap-2 text-[15px] text-white/85 underline decoration-white/30 underline-offset-[6px] hover:text-white hover:decoration-white">
+                {PRICES[variant].label}
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+              </Link>
+            )}
+          </div>
         </div>
         <div className="lg:col-span-5 lg:col-start-8">
-          <QuoteWizard lang={lang} k={k} service={title} fairs={fairs} variant={variant} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
+          <QuoteWizard lang={lang} k={k} service={title} fairs={fairs} variant={variant} space={space} privacyHref={lang === "tr" ? kvkkPath : privacyPath(lang)} />
         </div>
       </div>
     </section>
