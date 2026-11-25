@@ -1578,23 +1578,6 @@
   ]
  },
  {
-  "slug": "imm-cologne",
-  "name": "imm cologne",
-  "city": "Köln",
-  "country": "Almanya",
-  "venue": "Koelnmesse",
-  "region": "eu",
-  "start": "2027-01-19",
-  "end": "2027-01-22",
-  "sector": "Mobilya ve iç mekan",
-  "url": "https://www.koelnmesse.com/current-dates/all-trade-fairs/",
-  "verified": true,
-  "match": [
-   "imm",
-   "imm cologne"
-  ]
- },
- {
   "slug": "junioshow-bursa",
   "name": "Junioshow Bursa",
   "city": "Bursa",
@@ -2116,22 +2099,6 @@
   "verified": true,
   "match": [
    "budma"
-  ]
- },
- {
-  "slug": "colombiatex-de-las-americas",
-  "name": "Colombiatex de las Américas",
-  "city": "Medellin",
-  "country": "Kolombiya",
-  "venue": "Plaza Mayor Medellín",
-  "region": "am",
-  "start": "2027-01-26",
-  "end": "2027-01-28",
-  "sector": "Tekstil ve kumaş",
-  "url": "https://colombiatex.inexmoda.org.co/",
-  "verified": true,
-  "match": [
-   "colombiatex"
   ]
  },
  {
@@ -9068,22 +9035,6 @@
   ]
  },
  {
-  "slug": "seamless-middle-east",
-  "name": "Seamless Middle East",
-  "city": "Dubai",
-  "country": "BAE",
-  "venue": "Dubai World Trade Centre",
-  "region": "me",
-  "start": "2027-05-24",
-  "end": "2027-05-26",
-  "sector": "Ödeme ve e-ticaret",
-  "url": "https://www.dwtc.com/en/events/seamless-middle-east-2027/",
-  "verified": true,
-  "match": [
-   "seamless"
-  ]
- },
- {
   "slug": "tdk-deri-ve-kurk-moda-sov-mayis",
   "name": "TDK Deri ve Kürk Moda Şov (Mayıs)",
   "city": "Antalya",
@@ -9420,38 +9371,6 @@
   "match": [
    "anga com",
    "anga"
-  ]
- },
- {
-  "slug": "automotive-interiors-expo",
-  "name": "Automotive Interiors Expo",
-  "city": "Stuttgart",
-  "country": "Almanya",
-  "venue": "Messe Stuttgart",
-  "region": "eu",
-  "start": "2027-06-01",
-  "end": "2027-06-03",
-  "sector": "Otomotiv iç donanım",
-  "url": "https://www.messe-stuttgart.de/en/events-tickets/",
-  "verified": true,
-  "match": [
-   "automotive interiors"
-  ]
- },
- {
-  "slug": "automotive-testing-expo-europe",
-  "name": "Automotive Testing Expo Europe",
-  "city": "Stuttgart",
-  "country": "Almanya",
-  "venue": "Messe Stuttgart",
-  "region": "eu",
-  "start": "2027-06-01",
-  "end": "2027-06-03",
-  "sector": "Otomotiv test",
-  "url": "https://www.messe-stuttgart.de/en/events-tickets/",
-  "verified": true,
-  "match": [
-   "automotive testing"
   ]
  },
  {
@@ -16176,22 +16095,6 @@
   ]
  },
  {
-  "slug": "issa-show-north-america",
-  "name": "ISSA Show North America",
-  "city": "Las Vegas",
-  "country": "ABD",
-  "venue": "Mandalay Bay Convention Center",
-  "region": "am",
-  "start": "2027-11-09",
-  "end": "2027-11-11",
-  "sector": "Temizlik ürünleri",
-  "url": "https://www.issashow.com/",
-  "verified": true,
-  "match": [
-   "issa"
-  ]
- },
- {
   "slug": "packex-and-plast-ex-toronto",
   "name": "PACKEX & PLAST-EX Toronto",
   "city": "Toronto",
@@ -16793,22 +16696,6 @@
   "verified": true,
   "match": [
    "westec"
-  ]
- },
- {
-  "slug": "cbme-turkiye",
-  "name": "CBME Türkiye",
-  "city": "İstanbul",
-  "country": "Türkiye",
-  "venue": "İstanbul Fuar Merkezi (IFM)",
-  "region": "tr",
-  "start": "2027-11-17",
-  "end": "2027-11-20",
-  "sector": "Anne bebek çocuk ürünleri",
-  "url": "https://fuarlar.tobb.org.tr/FuarTakvimi",
-  "verified": true,
-  "match": [
-   "cbme"
   ]
  },
  {
