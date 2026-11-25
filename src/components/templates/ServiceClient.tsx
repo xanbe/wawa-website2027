@@ -228,10 +228,10 @@ export function CountStats({ lang, stats }: { lang: SvcLang; stats: { value: num
 }
 
 // ---------------------------------------------------------------- Yaklaşan fuarlar
-type Fair = { name: string; city: string; region: "tr" | "eu" | "me"; start: string; end: string };
+type Fair = { name: string; city: string; region: "tr" | "eu" | "me"; start: string; end: string; slug?: string };
 
 const FAIR_TEXT = {
-  tr: { title: "Yaklaşan fuarlar", note: "Örnek liste · tarihler kesin değil", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" }, cta: "Fuar adına basın; teklif formuna geçin." },
+  tr: { title: "Yaklaşan fuarlar", note: "Örnek liste · tarihler kesin değil", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" }, cta: "Fuar adına basın; son sipariş tarihlerini ve o fuardaki işlerimizi görün." },
   en: { title: "Upcoming fairs", note: "Sample list · dates not confirmed", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", me: "Middle East" }, cta: "Click a fair to go to the offer form." },
   de: { title: "Kommende Messen", note: "Beispielliste · Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", me: "Nahost" }, cta: "Messe anklicken und zum Angebotsformular wechseln." },
 };
@@ -328,7 +328,7 @@ export function FairTimeline({ lang, fairs }: { lang: SvcLang; fairs: Fair[] }) 
               return (
                 <li key={f.name + f.start} className="relative h-9">
                   {/* Sağ yarıdaki fuarlarda yazı çubuğun soluna geçer; çubuk her zaman tarihinde durur */}
-                  <a href="#teklif" className="group absolute top-1/2 flex -translate-y-1/2 items-center gap-2 whitespace-nowrap" style={right ? { right: `${100 - x(e)}%` } : { left: `${left}%` }}>
+                  <a href={lang === "tr" && f.slug ? `/fuar-takvimi/${f.slug}/` : "#teklif"} className="group absolute top-1/2 flex -translate-y-1/2 items-center gap-2 whitespace-nowrap" style={right ? { right: `${100 - x(e)}%` } : { left: `${left}%` }}>
                     {!right && <span className="h-3.5 w-6 shrink-0 bg-wawa-charcoal transition-colors group-hover:bg-wawa-accent" />}
                     <span className="text-[14px] font-medium text-wawa-charcoal group-hover:underline">{f.name}</span>
                     <span className="text-[12px] text-wawa-charcoal/55">{f.city}</span>

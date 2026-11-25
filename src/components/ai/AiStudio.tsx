@@ -24,6 +24,7 @@ import {
   type StudioLang,
 } from "./studio-data";
 import type { Moves, SceneApi, View } from "./StudioScene";
+import { estimate, euroRange } from "@/content/stand-prices";
 
 const StudioScene = dynamic(() => import("./StudioScene"), {
   ssr: false,
@@ -38,9 +39,9 @@ const LINE = "border-wawa-charcoal/15";
 const NO_MOVES: Moves = {};
 // Üç aşama: alan ve ölçüler → sektör ve stil → iletişim ve üretim
 const STAGE_T = {
-  tr: { names: ["Alan ve ölçüler", "Sektör ve stil", "İletişim ve üretim"], next: "Devam", back: "Geri" },
-  en: { names: ["Space and size", "Industry and style", "Contact and render"], next: "Continue", back: "Back" },
-  de: { names: ["Fläche und Maße", "Branche und Stil", "Kontakt und Entwurf"], next: "Weiter", back: "Zurück" },
+  tr: { names: ["Alan ve ölçüler", "Sektör ve stil", "Görsel"], next: "Devam", back: "Geri" },
+  en: { names: ["Space and size", "Industry and style", "Image"], next: "Continue", back: "Back" },
+  de: { names: ["Fläche und Maße", "Branche und Stil", "Bild"], next: "Weiter", back: "Zurück" },
 };
 // Sektör önerileri: yazarken listeden seçilebilir, listede olmayan da yazılabilir
 const SECTORS = {
@@ -51,6 +52,22 @@ const SECTORS = {
 // 3D sahnedeki sürükleme ve logo yükleme metinleri
 const SCENE_T = {
   tr: {
+    previewLead: "Görseli ücretsiz üretin. Beğenirseniz telefonunuzu doğrulayarak yüksek çözünürlüklü halini alın; tasarımınız ekibimize de ulaşır.",
+    budgetTitle: "Yaklaşık bütçe · Türkiye, KDV hariç",
+    budgetNote: "Planlama tahminidir; yurt dışı fuarlarda aralık yükselir.",
+    priceGuide: "Fiyat rehberi",
+    feeLink: "İç mimari tasarım bütçenizi hesaplayın",
+    systems: { ahsap: "Ahşap (özel tasarım)", maxima: "Maxima (modüler, kiralık da olur)" },
+    previewBadge: "Önizleme",
+    unlockCta: "Yüksek çözünürlüklü görseli alın",
+    unlockTitle: "Yüksek çözünürlüklü görsel",
+    unlockLead: "Telefonunuza gelen kodla doğrulayın; filigransız görsel ekranda açılır ve tasarımınız ekibimize iletilir.",
+    verifyAndGet: "Doğrula ve görseli al",
+    toOffer: "Bu tasarımla teklif alın",
+    limitPreview: "Bugünkü 2 ücretsiz önizleme hakkınız doldu. Telefonunuzu doğrulayarak üretmeye devam edebilirsiniz.",
+    expired: "Önizlemenin süresi doldu. Görseli yeniden üretin.",
+    testNote: "Test modu: yapay zekâ kapalı olduğu için görsel yerine 3D taslak gösteriliyor.",
+    offNote: "Görsel üretimi şu an kapalı. Ölçülerinizle doğrudan teklif alabilirsiniz.",
     sendCode: "Doğrulama kodu gönder",
     sending: "Kod gönderiliyor…",
     codeLabel: "Telefonunuza gelen 4 haneli kod",
@@ -67,6 +84,22 @@ const SCENE_T = {
     logoError: "Dosya açılamadı. 2 MB'tan küçük bir PNG, JPG, SVG ya da WebP seçin.",
   },
   en: {
+    previewLead: "Generate the image for free. If you like it, verify your phone to get the high-resolution version; your design also reaches our team.",
+    budgetTitle: "Estimated budget · Türkiye, excl. VAT",
+    budgetNote: "A planning estimate; ranges are higher for fairs abroad.",
+    priceGuide: "Price guide",
+    feeLink: "Estimate your interior design budget",
+    systems: { ahsap: "Wooden (custom)", maxima: "Maxima (modular, also for rent)" },
+    previewBadge: "Preview",
+    unlockCta: "Get the high-resolution image",
+    unlockTitle: "High-resolution image",
+    unlockLead: "Verify with the code sent to your phone; the image opens without watermark and your design is sent to our team.",
+    verifyAndGet: "Verify and get the image",
+    toOffer: "Get an offer for this design",
+    limitPreview: "You have used today's 2 free previews. Verify your phone to keep generating.",
+    expired: "The preview has expired. Please generate the image again.",
+    testNote: "Test mode: AI is off, so the 3D sketch is shown instead of an image.",
+    offNote: "Image generation is currently off. You can request an offer with your dimensions.",
     sendCode: "Send verification code",
     sending: "Sending code…",
     codeLabel: "4-digit code sent to your phone",
@@ -83,6 +116,22 @@ const SCENE_T = {
     logoError: "Could not open the file. Choose a PNG, JPG, SVG or WebP under 2 MB.",
   },
   de: {
+    previewLead: "Erstellen Sie das Bild kostenlos. Gefällt es Ihnen, bestätigen Sie Ihre Telefonnummer und erhalten Sie die hochauflösende Version; Ihr Entwurf geht auch an unser Team.",
+    budgetTitle: "Geschätztes Budget · Türkei, zzgl. MwSt.",
+    budgetNote: "Planungswert; für Messen im Ausland liegen die Spannen höher.",
+    priceGuide: "Preisleitfaden",
+    feeLink: "Planungsbudget berechnen",
+    systems: { ahsap: "Holz (individuell)", maxima: "Maxima (modular, auch zur Miete)" },
+    previewBadge: "Vorschau",
+    unlockCta: "Hochauflösendes Bild erhalten",
+    unlockTitle: "Hochauflösendes Bild",
+    unlockLead: "Bestätigen Sie mit dem Code auf Ihrem Telefon; das Bild öffnet sich ohne Wasserzeichen und Ihr Entwurf geht an unser Team.",
+    verifyAndGet: "Bestätigen und Bild erhalten",
+    toOffer: "Angebot für diesen Entwurf",
+    limitPreview: "Die 2 kostenlosen Vorschauen für heute sind aufgebraucht. Bestätigen Sie Ihre Telefonnummer, um weiterzumachen.",
+    expired: "Die Vorschau ist abgelaufen. Bitte das Bild neu erstellen.",
+    testNote: "Testmodus: KI ist aus, daher wird die 3D-Skizze statt eines Bildes gezeigt.",
+    offNote: "Die Bilderstellung ist derzeit aus. Sie können mit Ihren Maßen ein Angebot anfordern.",
     sendCode: "Bestätigungscode senden",
     sending: "Code wird gesendet…",
     codeLabel: "4-stelliger Code auf Ihrem Telefon",
@@ -258,7 +307,10 @@ export function AiStudio({
   const [lead, setLead] = useState({ name: "", phone: "", email: "", consent: false, website: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<{ image: string | null } | null>(null);
+  // Sonuç: önizleme (filigranlı) + mühür ya da doğrulama sonrası tam görsel
+  const [result, setResult] = useState<{ preview: string | null; sealed: string | null; image: string | null; test: boolean } | null>(null);
+  const [unlockOpen, setUnlockOpen] = useState(false);
+  const lastSketch = useRef<string | null>(null);
   const [show, setShow] = useState<"3d" | "render">("3d");
   const [view, setView] = useState<View>("persp");
   const S = SCENE_T[lang];
@@ -319,43 +371,86 @@ export function AiStudio({
     setOtp({ token: json.token, code: "", sent: true, test: Boolean(json.testMode), busy: false });
   }
 
+  const payloadBrief = () => ({ ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } });
+  type Reply = { image?: string | null; preview?: string | null; sealed?: string | null; test?: boolean; error?: string; message?: string; pass?: string };
+  const errorText = (j: Reply) =>
+    j.error === "code" ? (j.message ?? S.codeNeed) : j.error === "too_many_preview" ? S.limitPreview : j.error === "expired" ? S.expired : j.error === "too_many" ? C.errors.too_many : j.error === "invalid" ? C.errors.invalid : C.errors.failed;
+  async function post(body: Record<string, unknown>) {
+    const res = await fetch("/api/ai/render/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ lang, website: lead.website, ...body }) }).catch(() => null);
+    const json = ((res ? await res.json().catch(() => ({})) : {}) ?? {}) as Reply;
+    if (json.pass) setPass(json.pass);
+    return { ok: Boolean(res?.ok), json };
+  }
+  async function captureSketch() {
+    const raw = api.current?.capture();
+    if (!raw) throw new Error("capture");
+    lastSketch.current = await shrink(raw);
+    return lastSketch.current;
+  }
+
+  // Görsel üret: doğrulanmamış kişiye filigranlı önizleme, doğrulanmış kişiye doğrudan tam görsel
   async function generate() {
     setError(null);
-    if (!leadValid()) {
-      setError(C.errors.invalid);
-      return;
-    }
-    if (!pass && otp.code.length !== 4) {
-      setError(S.codeNeed);
-      return;
-    }
     setStatus("loading");
     try {
-      setShow("3d");
-      setView("persp");
-      const raw = api.current?.capture();
-      if (!raw) throw new Error("capture");
-      const sketch = await shrink(raw);
-      const res = await fetch("/api/ai/render/", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...lead, lang, token: otp.token, code: otp.code, pass, brief: { ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } }, sketch }),
-      });
-      const json = (await res.json().catch(() => ({}))) as { image?: string | null; error?: string; message?: string; pass?: string };
-      if (json.pass) setPass(json.pass);
-      if (!res.ok) {
+      const sketch = await captureSketch();
+      const auth = pass ? { pass, name: lead.name, email: lead.email, consent: lead.consent } : {};
+      const { ok, json } = await post({ brief: payloadBrief(), sketch, ...auth });
+      if (!ok) {
         setStatus("error");
-        setError(json.error === "code" ? (json.message ?? S.codeNeed) : json.error === "too_many" ? C.errors.too_many : json.error === "invalid" ? C.errors.invalid : C.errors.failed);
+        setError(errorText(json));
+        if (json.error === "too_many_preview") setUnlockOpen(true);
         return;
       }
-      setResult({ image: json.image ?? null });
+      setResult({ preview: json.preview ?? null, sealed: json.sealed ?? null, image: json.image ?? null, test: Boolean(json.test) });
+      setUnlockOpen(false);
       setStatus("done");
-      if (json.image) setShow("render");
     } catch {
       setStatus("error");
       setError(C.errors.failed);
     }
   }
+
+  // Telefonu doğrula: önizleme varsa mührü açar, yoksa (günlük sınır) doğrulanmış olarak üretir
+  async function unlock() {
+    setError(null);
+    if (!leadValid()) return setError(C.errors.invalid);
+    if (!pass && otp.code.length !== 4) return setError(S.codeNeed);
+    setStatus("loading");
+    try {
+      const auth = pass ? { pass } : { token: otp.token, code: otp.code };
+      const common = { brief: payloadBrief(), name: lead.name, email: lead.email, consent: lead.consent, ...auth };
+      const { ok, json } = result?.sealed
+        ? await post({ op: "unlock", sealed: result.sealed, sketch: lastSketch.current, ...common })
+        : await post({ sketch: await captureSketch(), ...common });
+      if (!ok) {
+        setStatus(result ? "done" : "error");
+        setError(errorText(json));
+        return;
+      }
+      setResult((prev) => ({ preview: prev?.preview ?? null, sealed: null, image: json.image ?? null, test: Boolean(json.test ?? prev?.test) }));
+      setUnlockOpen(false);
+      setStatus("done");
+    } catch {
+      setStatus(result ? "done" : "error");
+      setError(C.errors.failed);
+    }
+  }
+
+  // Bu tasarımla teklif al: teklif formu ölçüler ve tasarım notuyla dolu açılır
+  const SPACE_TO_OFFER: Record<string, number> = { salon: 0, mutfak: 0, yatak: 0, magaza: 1, klinik: 2, cafe: 3, ofis: 4 };
+  const goOffer = () => {
+    const stand = brief.mode === "stand";
+    const prefill = stand
+      ? { kind: "stand", area: String(round1(s.w * s.d)), standTypeIndex: STAND_TYPES.indexOf(s.type), note: `Yapay zekâ stüdyosu: ${summary}${s.sector ? ` · ${s.sector}` : ""}${result?.image ? " · görsel ekibe iletildi" : ""}` }
+      : { kind: "interior", area: String(round1(r.w * r.l)), spaceIndex: SPACE_TO_OFFER[r.space] ?? 6, note: `Yapay zekâ stüdyosu: ${summary}${result?.image ? " · görsel ekibe iletildi" : ""}` };
+    try {
+      sessionStorage.setItem("wawa-offer-prefill", JSON.stringify(prefill));
+    } catch {
+      /* depolama kapalıysa form boş açılır */
+    }
+    window.location.assign(offerHref);
+  };
 
 
   return (
@@ -595,18 +690,123 @@ export function AiStudio({
 
               </div>
               <div className={stage === 2 ? "" : "hidden"}>
-              {/* 5. Üret */}
+              {/* 5. Görsel: önce ücretsiz önizleme, SMS ile tam görsel */}
               <SecHead n={5} title={C.generateTitle} first />
-              {
-                <>
-                  <p className="text-[15px] leading-relaxed text-wawa-charcoal/75">{C.generateLead}</p>
-                  <p className="mt-5 bg-[#F3F2EF] px-4 py-3 text-[14px] text-wawa-charcoal">{summary}</p>
-                  {status !== "done" ? (
+              <p className="text-[15px] leading-relaxed text-wawa-charcoal/75">{S.previewLead}</p>
+              <p className="mt-5 bg-[#F3F2EF] px-4 py-3 text-[14px] text-wawa-charcoal">{summary}</p>
+              {brief.mode === "stand" ? (
+                <div className={`mt-3 border px-4 py-4 ${LINE}`}>
+                  <p className="text-[12px] tracking-[0.12em] text-wawa-charcoal/55 uppercase">{S.budgetTitle}</p>
+                  <dl className="mt-2 grid gap-1 text-[15px] text-wawa-charcoal">
+                    {(["ahsap", "maxima"] as const).map((sys) => {
+                      const range = estimate(sys, "tr", round1(s.w * s.d));
+                      return range ? (
+                        <div key={sys} className="flex flex-wrap justify-between gap-x-4">
+                          <dt>{S.systems[sys]}</dt>
+                          <dd className="tabular-nums">{euroRange(range)}</dd>
+                        </div>
+                      ) : null;
+                    })}
+                  </dl>
+                  <p className="mt-2 text-[13px] text-wawa-charcoal/60">
+                    {S.budgetNote}{" "}
+                    {lang === "tr" && (
+                      <Link href="/fuar-standi-fiyatlari/" className="underline underline-offset-2">
+                        {S.priceGuide}
+                      </Link>
+                    )}
+                  </p>
+                </div>
+              ) : (
+                lang === "tr" && (
+                  <Link href="/butce-planlama/" className={`group mt-3 flex items-center justify-between gap-4 border px-4 py-3 text-[14px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}>
+                    {S.feeLink}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                  </Link>
+                )
+              )}
+
+              {!result && (
+                <button
+                  type="button"
+                  onClick={generate}
+                  disabled={status === "loading"}
+                  className="group mt-6 inline-flex h-14 w-full cursor-pointer items-center justify-center gap-3 bg-wawa-accent px-7 text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white disabled:cursor-wait disabled:opacity-70"
+                >
+                  {status === "loading" && !unlockOpen ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" aria-hidden />
+                      {C.generating}
+                    </>
+                  ) : (
+                    <>
+                      {C.generate}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                    </>
+                  )}
+                </button>
+              )}
+
+              {result && (
+                <div className="mt-6" aria-live="polite">
+                  {result.image || result.preview ? (
+                    <figure className="relative">
+                      {/* Üretilen görsel (data URL); görünce sayfa ona kayar */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={(result.image ?? result.preview)!} alt={C.resultTitle} ref={(el) => el?.scrollIntoView({ block: "center", behavior: "smooth" })} className="w-full bg-wawa-charcoal" />
+                      {!result.image && <span className="absolute top-0 left-0 bg-wawa-accent px-2.5 py-1 text-[12px] font-medium text-wawa-charcoal">{S.previewBadge}</span>}
+                    </figure>
+                  ) : (
+                    <p className="bg-[#F3F2EF] p-4 text-[14px] text-wawa-charcoal">{S.offNote}</p>
+                  )}
+                  {result.test && <p className="mt-2 text-[12px] text-wawa-charcoal/55">{S.testNote}</p>}
+                  {result.image && <p className="mt-3 text-[14px] leading-relaxed text-wawa-charcoal/70">{C.sentNote}</p>}
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                    {result.image ? (
+                      <a href={result.image} download="wawa-tasarim.jpg" className={`inline-flex h-12 cursor-pointer items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal disabled:cursor-wait disabled:opacity-60 ${LINE}`}>
+                        <Download className="h-4 w-4" aria-hidden />
+                        {C.download}
+                      </a>
+                    ) : (
+                      result.preview && (
+                        <button type="button" onClick={() => setUnlockOpen(true)} className="inline-flex h-12 cursor-pointer items-center justify-center gap-3 bg-wawa-accent px-5 text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white">
+                          {S.unlockCta}
+                        </button>
+                      )
+                    )}
+                    <button type="button" onClick={goOffer} className="group inline-flex h-12 cursor-pointer items-center justify-center gap-3 bg-wawa-charcoal px-5 text-[15px] text-white transition-colors hover:bg-black">
+                      {S.toOffer}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+                    </button>
+                    <button type="button" disabled={status === "loading"} onClick={generate} className={`inline-flex h-12 cursor-pointer items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal disabled:cursor-wait disabled:opacity-60 ${LINE}`}>
+                      {status === "loading" && !unlockOpen ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <RotateCcw className="h-4 w-4" aria-hidden />}
+                      {C.regenerate}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setResult(null);
+                        setStatus("idle");
+                        setShow("3d");
+                        goStage(0);
+                      }}
+                      className={`inline-flex h-12 cursor-pointer items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal disabled:cursor-wait disabled:opacity-60 ${LINE}`}
+                    >
+                      {C.edit}
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {unlockOpen && !result?.image && (
+                <div className={`mt-8 border-t pt-6 ${LINE}`}>
+                  <h3 className="text-[17px] font-medium tracking-tight text-wawa-charcoal">{S.unlockTitle}</h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-wawa-charcoal/70">{S.unlockLead}</p>
                     <form
-                      className="mt-6 grid gap-3"
+                      className="mt-5 grid gap-3"
                       onSubmit={(e) => {
                         e.preventDefault();
-                        if (pass || otp.sent) generate();
+                        if (pass || otp.sent) unlock();
                         else sendCode();
                       }}
                     >
@@ -674,7 +874,6 @@ export function AiStudio({
                           </div>
                         )
                       )}
-                      {error && <p role="alert" className="text-[14px] text-[#B42318]">{error}</p>}
                       <button
                         type="submit"
                         disabled={status === "loading" || otp.busy}
@@ -687,59 +886,23 @@ export function AiStudio({
                           </>
                         ) : (
                           <>
-                            {pass || otp.sent ? C.generate : otp.busy ? S.sending : S.sendCode}
+                            {pass || otp.sent ? S.verifyAndGet : otp.busy ? S.sending : S.sendCode}
                             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
                           </>
                         )}
                       </button>
                     </form>
-                  ) : (
-                    <div className="mt-6" aria-live="polite">
-                      <p className="text-[18px] tracking-tight text-wawa-charcoal">{C.resultTitle}</p>
-                      <p className="mt-2 text-[14px] leading-relaxed text-wawa-charcoal/70">{result?.image ? C.sentNote : C.resultPending}</p>
-                      {result?.image && (
-                        // Üretilen görsel (data URL); görünce sayfa ona kayar
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={result.image} alt={C.resultTitle} ref={(el) => el?.scrollIntoView({ block: "center", behavior: "smooth" })} className="mt-5 w-full bg-wawa-charcoal" />
-                      )}
-                      <div className="mt-6 grid gap-2">
-                        {result?.image && (
-                          <a href={result.image} download="wawa-tasarim.png" className={`inline-flex h-12 items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}>
-                            <Download className="h-4 w-4" aria-hidden />
-                            {C.download}
-                          </a>
-                        )}
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setStatus("idle");
-                            generate();
-                          }}
-                          className={`inline-flex h-12 cursor-pointer items-center justify-center gap-3 border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}
-                        >
-                          <RotateCcw className="h-4 w-4" aria-hidden />
-                          {C.regenerate}
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => {
-                            setStatus("idle");
-                            setShow("3d");
-                            goStage(0);
-                          }}
-                          className={`inline-flex h-12 cursor-pointer items-center justify-center border text-[15px] text-wawa-charcoal hover:border-wawa-charcoal ${LINE}`}
-                        >
-                          {C.edit}
-                        </button>
-                      </div>
-                    </div>
-                  )}
-                </>
-              }
+                </div>
+              )}
+              {error && (
+                <p role="alert" className="mt-4 text-[14px] text-[#B42318]">
+                  {error}
+                </p>
+              )}
               </div>
 
               {/* Aşamalar arası gezinme; son aşamada üretim düğmesi formun kendisindedir */}
-              {(stage > 0 || stage < 2) && status !== "done" && (
+              {(stage < 2 || !result) && (
                 <div className={`mt-10 flex items-center justify-between gap-3 border-t pt-6 ${LINE}`}>
                   {stage > 0 ? (
                     <button type="button" onClick={() => goStage(stage - 1)} className="inline-flex h-12 cursor-pointer items-center gap-2 px-1 text-[15px] text-wawa-charcoal hover:underline">

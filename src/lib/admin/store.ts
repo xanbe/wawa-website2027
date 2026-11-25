@@ -33,7 +33,7 @@ async function gh<T>(url: string, init: RequestInit = {}, raw = false): Promise<
 export async function readText(file: string): Promise<string> {
   if (!allowed(file)) throw new Error("izin verilmeyen dosya");
   if (storeMode() === "github") return gh<string>(`/contents/${file}?ref=${encodeURIComponent(GH.branch)}`, {}, true);
-  if (storeMode() === "local") return readFile(path.join(process.cwd(), file), "utf8");
+  if (storeMode() === "local") return readFile(path.join(/* turbopackIgnore: true */ process.cwd(), file), "utf8");
   throw new Error("depo kapalı");
 }
 
@@ -46,7 +46,7 @@ export async function putBinary(file: string, base64: string): Promise<{ path: s
     return { path: file, sha: blob.sha };
   }
   if (storeMode() === "local") {
-    const full = path.join(process.cwd(), file);
+    const full = path.join(/* turbopackIgnore: true */ process.cwd(), file);
     await mkdir(path.dirname(full), { recursive: true });
     await writeFile(full, Buffer.from(base64, "base64"));
     return { path: file };
@@ -74,7 +74,7 @@ export async function commit(changes: Change[], message: string) {
     return;
   }
   if (storeMode() === "local") {
-    for (const f of files) if (f.text !== undefined) await writeFile(path.join(process.cwd(), f.path), f.text);
+    for (const f of files) if (f.text !== undefined) await writeFile(path.join(/* turbopackIgnore: true */ process.cwd(), f.path), f.text);
     return;
   }
   throw new Error("depo kapalı");
