@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { ArrowUpRight, Search } from "lucide-react";
-import { REGION_LABEL, REGIONS, fairPath, type FairLite, type FairRegion } from "@/content/fairs";
+import { REGION_LABEL, REGIONS, SECTOR_GROUPS, SECTOR_LABEL, fairPath, type FairLite, type FairRegion, type SectorGroupId } from "@/content/fairs";
 
 const DAY = 86_400_000;
 const subscribe = (cb: () => void) => {
@@ -22,22 +22,33 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
   const now = useSyncExternalStore(subscribe, nowMinute, () => 0);
   const [region, setRegion] = useState<"all" | FairRegion>("all");
   const [q, setQ] = useState("");
+  const [sector, setSector] = useState<"all" | SectorGroupId>("all");
 
   // Sunucuda (now = 0) tüm liste çizilir; tarayıcıda geçmiş fuarlar düşer
   const upcoming = useMemo(() => (now ? fairs.filter((f) => new Date(`${f.end}T23:59:59Z`).getTime() + DAY > now) : fairs), [fairs, now]);
+  // Bölge sayıları seçili sektöre, sektör sayıları seçili bölgeye göre
   const counts = useMemo(() => {
-    const c = { all: upcoming.length } as Record<"all" | FairRegion, number>;
-    for (const r of REGIONS) c[r] = upcoming.filter((f) => f.region === r).length;
+    const base = upcoming.filter((f) => sector === "all" || f.group === sector);
+    const c = { all: base.length } as Record<"all" | FairRegion, number>;
+    for (const r of REGIONS) c[r] = base.filter((f) => f.region === r).length;
     return c;
-  }, [upcoming]);
+  }, [upcoming, sector]);
+  const sectorCounts = useMemo(() => {
+    const base = upcoming.filter((f) => region === "all" || f.region === region);
+    const c: Record<string, number> = { all: base.length };
+    for (const f of base) c[f.group] = (c[f.group] ?? 0) + 1;
+    return c;
+  }, [upcoming, region]);
+  const sectorOptions = [...SECTOR_GROUPS.map((g) => g.id), "diger" as const].sort((a, b) => SECTOR_LABEL[a].localeCompare(SECTOR_LABEL[b], "tr"));
   const list = useMemo(() => {
     const words = norm(q).split(/\s+/).filter(Boolean);
     return upcoming.filter((f) => {
       if (region !== "all" && f.region !== region) return false;
+      if (sector !== "all" && f.group !== sector) return false;
       const hay = norm(`${f.name} ${f.city} ${f.country} ${f.sector}`);
       return words.every((w) => hay.includes(w));
     });
-  }, [upcoming, region, q]);
+  }, [upcoming, region, sector, q]);
   const groups = useMemo(() => {
     const m = new Map<string, FairLite[]>();
     for (const f of list) m.set(monthKey(f.start), [...(m.get(monthKey(f.start)) ?? []), f]);
@@ -46,7 +57,7 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
 
   return (
     <div>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between lg:gap-6">
         <div className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
           <div className="flex w-max border border-wawa-charcoal/15" role="group" aria-label="Bölge">
             {(["all", ...REGIONS] as const).map((r, i) => (
@@ -65,7 +76,23 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
             ))}
           </div>
         </div>
-        <label className="relative block lg:w-[340px]">
+        <div className="grid gap-2 sm:grid-cols-2 lg:w-[560px]">
+        <label className="block">
+          <span className="sr-only">Sektör</span>
+          <select
+            value={sector}
+            onChange={(e) => setSector(e.target.value as "all" | SectorGroupId)}
+            className="h-12 w-full cursor-pointer border border-wawa-charcoal/15 bg-white px-4 text-[15px] text-wawa-charcoal outline-none focus:border-wawa-charcoal"
+          >
+            <option value="all">Tüm sektörler ({sectorCounts.all ?? 0})</option>
+            {sectorOptions.map((id) => (
+              <option key={id} value={id} disabled={!sectorCounts[id]}>
+                {SECTOR_LABEL[id]} ({sectorCounts[id] ?? 0})
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="relative block">
           <span className="sr-only">Fuar ara</span>
           <Search className="pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-wawa-charcoal/45" aria-hidden />
           <input
@@ -76,10 +103,16 @@ export function FairCalendar({ fairs }: { fairs: FairLite[] }) {
             className="h-12 w-full border border-wawa-charcoal/15 bg-white pr-4 pl-11 text-[15px] text-wawa-charcoal outline-none placeholder:text-wawa-charcoal/40 focus:border-wawa-charcoal"
           />
         </label>
+        </div>
       </div>
 
       <p className="mt-4 text-[13px] text-wawa-charcoal/55" aria-live="polite">
         {list.length} fuar
+        {(region !== "all" || sector !== "all" || q) && (
+          <button type="button" onClick={() => (setRegion("all"), setSector("all"), setQ(""))} className="ml-3 cursor-pointer underline underline-offset-4 hover:text-wawa-charcoal">
+            Filtreleri temizle
+          </button>
+        )}
       </p>
 
       {groups.length === 0 ? (
