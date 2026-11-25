@@ -94,7 +94,7 @@ export default function StandPricesPage() {
           </div>
 
           <p className="text-[15px] text-wawa-charcoal/75">
-            Belirli bir fuar için son sipariş tarihlerine <Link href={FAIRS_PATH} className="underline underline-offset-4">fuar takviminden</Link> bakabilir ya da{" "}
+            Katılacağınız fuarı <Link href={FAIRS_PATH} className="underline underline-offset-4">fuar takviminde</Link> bulabilir ya da{" "}
             <Link href="/teklif-al/?tur=stand" className="underline underline-offset-4">
               doğrudan teklif alabilirsiniz
             </Link>

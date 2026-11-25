@@ -16,20 +16,5 @@ export const FAIRS = [
 
 export const getFair = (slug: string): Fair | undefined => (FAIRS as readonly Fair[]).find((f) => f.slug === slug);
 
-// Önerilen son sipariş tarihleri: fuarın açılışından kaç hafta önce (tasarım hazırsa / tasarım da yapılacaksa).
-// Varsayılan değerlerdir; WAWA'nın üretim ve lojistik süreleriyle güncellenmelidir.
-export const ORDER_LEAD_WEEKS: Record<FairRegion, { ready: number; design: number }> = {
-  tr: { ready: 4, design: 7 },
-  eu: { ready: 6, design: 9 },
-  me: { ready: 6, design: 9 },
-};
-
-const DAY = 86_400_000;
-export function orderDeadlines(fair: Pick<Fair, "region" | "start">) {
-  const start = new Date(`${fair.start}T09:00:00+03:00`).getTime();
-  const lead = ORDER_LEAD_WEEKS[fair.region];
-  return { ready: new Date(start - lead.ready * 7 * DAY), design: new Date(start - lead.design * 7 * DAY) };
-}
-
 export const fairPath = (slug: string) => `/fuar-takvimi/${slug}/`;
 export const FAIRS_PATH = "/fuar-takvimi/";

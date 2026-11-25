@@ -6,8 +6,8 @@ import { PageIntro } from "@/components/templates/parts";
 import { FairCountdown, UpcomingOnly } from "@/components/templates/FairLive";
 
 export const metadata: Metadata = {
-  title: { absolute: "Fuar Takvimi | Fuar Standı Son Sipariş Tarihleri | WAWA Interiors" },
-  description: "Türkiye, Avrupa ve Orta Doğu'da yaklaşan fuarlar: tarihler, şehirler ve stand için önerilen son sipariş tarihleri.",
+  title: { absolute: "Fuar Takvimi 2026–2027 | Fuar Standı | WAWA Interiors" },
+  description: "Türkiye, Avrupa ve Orta Doğu'da yaklaşan fuarlar: tarihler, şehirler, stand bütçeleri ve bu fuarlarda kurduğumuz standlar.",
   alternates: { canonical: FAIRS_PATH },
 };
 
@@ -18,7 +18,7 @@ const fmt = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("tr
 export default function FairCalendarPage() {
   return (
     <>
-      <PageIntro lang="tr" title="Fuar takvimi" lead="Stand yaptığımız fuarlar ve önerilen son sipariş tarihleri. Fuara basın; tarihleri, bütçeyi ve o fuardaki işlerimizi görün." />
+      <PageIntro lang="tr" title="Fuar takvimi" lead="Stand yaptığımız fuarlar. Fuara basın; tarihleri, bütçeyi ve o fuardaki işlerimizi görün." />
       <section className="bg-white" lang="tr">
         <div className="container-wide pb-16">
           <ul className="border-t border-wawa-charcoal">

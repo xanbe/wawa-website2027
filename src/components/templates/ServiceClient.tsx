@@ -231,7 +231,7 @@ export function CountStats({ lang, stats }: { lang: SvcLang; stats: { value: num
 type Fair = { name: string; city: string; region: "tr" | "eu" | "me"; start: string; end: string; slug?: string };
 
 const FAIR_TEXT = {
-  tr: { title: "Yaklaşan fuarlar", note: "Örnek liste · tarihler kesin değil", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" }, cta: "Fuar adına basın; son sipariş tarihlerini ve o fuardaki işlerimizi görün." },
+  tr: { title: "Yaklaşan fuarlar", note: "Örnek liste · tarihler kesin değil", next: "En yakın", opens: "açılışa", d: "gün", h: "sa", m: "dk", days: "gün", today: "Bugün", filters: { all: "Tümü", tr: "Türkiye", eu: "Avrupa", me: "Orta Doğu" }, cta: "Fuar adına basın; bütçeyi ve o fuardaki işlerimizi görün." },
   en: { title: "Upcoming fairs", note: "Sample list · dates not confirmed", next: "Next", opens: "until opening", d: "days", h: "h", m: "min", days: "days", today: "Today", filters: { all: "All", tr: "Türkiye", eu: "Europe", me: "Middle East" }, cta: "Click a fair to go to the offer form." },
   de: { title: "Kommende Messen", note: "Beispielliste · Termine ohne Gewähr", next: "Nächste", opens: "bis zur Eröffnung", d: "Tage", h: "Std", m: "Min", days: "Tage", today: "Heute", filters: { all: "Alle", tr: "Türkei", eu: "Europa", me: "Nahost" }, cta: "Messe anklicken und zum Angebotsformular wechseln." },
 };

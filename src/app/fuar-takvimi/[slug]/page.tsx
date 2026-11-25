@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { FAIRS, FAIRS_PATH, fairPath, getFair, orderDeadlines, type Fair } from "@/content/fairs";
+import { FAIRS, FAIRS_PATH, fairPath, getFair, type Fair } from "@/content/fairs";
 import { STAND_PRICES, euroRange, estimate } from "@/content/stand-prices";
 import { isStandProject, projectCategory, projectsIn, type Project } from "@/lib/content";
 import { ProjectCard } from "@/components/templates/parts";
-import { FairCountdown, FairDeadlines } from "@/components/templates/FairLive";
+import { FairCountdown } from "@/components/templates/FairLive";
 
-// Fuar sayfası: tarih ve salon, son sipariş tarihleri, WAWA'nın o fuardaki projeleri, fuar adı dolu teklif bağlantısı
+// Fuar sayfası: tarih ve salon, WAWA'nın o fuardaki projeleri, fuar adı dolu teklif bağlantısı
 export const dynamicParams = false;
 export const generateStaticParams = () => FAIRS.map((f) => ({ slug: f.slug }));
 
@@ -35,14 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const fair = getFair((await params).slug);
   if (!fair) return {};
   const title = `${fair.name} ${fair.start.slice(0, 4)} Fuar Standı | WAWA Interiors`;
-  const description = `${fair.name} (${fair.city}, ${dateRange(fair)}) için fuar standı tasarımı, üretimi ve kurulumu. Son sipariş tarihleri, bütçe aralığı ve bu fuarda yaptığımız standlar.`;
+  const description = `${fair.name} (${fair.city}, ${dateRange(fair)}) için fuar standı tasarımı, üretimi ve kurulumu. Bütçe aralığı ve bu fuarda yaptığımız standlar.`;
   return { title: { absolute: title }, description, alternates: { canonical: fairPath(fair.slug) }, openGraph: { title, description, url: fairPath(fair.slug) } };
 }
 
 export default async function FairPage({ params }: { params: Promise<{ slug: string }> }) {
   const fair = getFair((await params).slug);
   if (!fair) notFound();
-  const deadlines = orderDeadlines(fair);
   const { list, exact } = fairProjects(fair);
   const region = fair.region === "tr" ? "tr" : "abroad";
   const offerHref = `/teklif-al/?tur=stand&fuar=${encodeURIComponent(`${fair.name} · ${fair.city}`)}`;
@@ -60,8 +59,12 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
           <div className="lg:col-span-8">
             <h1 className="font-heading text-[30px] leading-[1.15] font-normal tracking-[-0.01em] text-balance text-wawa-charcoal sm:text-[42px] lg:text-[56px]">{fair.name} fuar standı</h1>
             <p className="mt-5 max-w-[56ch] text-[17px] leading-relaxed text-wawa-charcoal/75">
-              {fair.name} için standınızı İstanbul&apos;daki atölyemizde üretiyor, {fair.city === "İstanbul" ? "fuar alanında" : `${fair.city}'ya taşıyıp`} kurulumunu ve sökümünü yapıyoruz.
+              {fair.name} için standınızı İstanbul&apos;daki atölyemizde üretiyor, {fair.city === "İstanbul" ? "fuar alanında" : "fuar şehrine taşıyıp"} kurulumunu ve sökümünü yapıyoruz.
             </p>
+            <Link href={offerHref} className="group mt-8 inline-flex h-14 items-center gap-4 bg-wawa-accent px-7 text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white">
+              {fair.name} için teklif alın
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
+            </Link>
           </div>
           <dl className="grid content-start gap-4 border-t border-wawa-charcoal pt-5 text-[15px] lg:col-span-4">
             {[
@@ -86,32 +89,11 @@ export default async function FairPage({ params }: { params: Promise<{ slug: str
         <p className="mt-6 text-[12px] tracking-[0.1em] text-wawa-charcoal/45 uppercase">Tarihler kesin değildir; fuarın resmî sitesinden doğrulayın.</p>
       </header>
 
-      {/* Son sipariş tarihleri */}
-      <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-deadline">
-        <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-4">
-            <h2 id="fair-deadline" className="font-heading text-[24px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[30px]">
-              Ne zamana kadar sipariş vermeli?
-            </h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-wawa-charcoal/70">
-              Tasarım, üretim, {fair.region === "tr" ? "" : "nakliye, "}kurulum ve fuar onayları için önerdiğimiz son tarihler. Daha geç kaldıysanız da yazın; takvimi birlikte değerlendirelim.
-            </p>
-          </div>
-          <div className="lg:col-span-8">
-            <FairDeadlines ready={deadlines.ready.toISOString()} design={deadlines.design.toISOString()} />
-            <Link href={offerHref} className="group mt-6 inline-flex h-14 items-center gap-4 bg-wawa-accent px-7 text-[15px] font-medium text-wawa-charcoal transition-colors hover:bg-wawa-charcoal hover:text-white">
-              {fair.name} için teklif alın
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Bu fuardaki işlerimiz */}
       <section className="container-wide border-t border-wawa-charcoal/15 py-12 lg:py-14" aria-labelledby="fair-projects">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 id="fair-projects" className="font-heading text-[24px] leading-[1.25] font-normal text-wawa-charcoal lg:text-[30px]">
-            {exact ? `${fair.name}'da kurduğumuz standlar` : "Son fuar standı projelerimiz"}
+            {exact ? `${fair.name} fuarında kurduğumuz standlar` : "Son fuar standı projelerimiz"}
           </h2>
           <Link href="/portfolio-category/fuar-stand-tasarimi/" className="text-[15px] text-wawa-charcoal underline decoration-wawa-charcoal/30 underline-offset-[6px] hover:decoration-wawa-charcoal">
             Tüm fuar standları
