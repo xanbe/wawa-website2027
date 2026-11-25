@@ -925,5 +925,298 @@
         }
       ]
     }
+  },
+  {
+    "name": "MEBAA Show",
+    "slugs": [
+      "mebaa-show"
+    ],
+    "updated": "2026-11-25",
+    "sources": [
+      "https://www.mebaa.aero/"
+    ],
+    "tr": {
+      "intro": "MEBAA Show, Orta Doğu ve Kuzey Afrika'nın iş havacılığı fuarıdır. 2026 baskısı 8–10 Aralık tarihlerinde Dubai'de, DWC'deki Dubai Airshow alanında yapılıyor. Fuar, Middle East & North Africa Business Aviation Association (MEBAA) ve Informa Markets markalarıyla duyuruluyor ve H.H. Sheikh Ahmed bin Saeed Al Maktoum'un himayesinde düzenleniyor.",
+      "sections": [
+        {
+          "h": "MEBAA Show'da neler sergileniyor?",
+          "p": "Fuarda statik sergide uçaklar ile üreticilerin, operatörlerin ve havacılık hizmet sağlayıcılarının çözümleri yer alıyor. Katılımcılar arasında Airbus, Boeing, Bombardier, Dassault, Honeywell ve Jet Aviation sayılıyor. Program BizAv Talks konferansı, Luxury Boulevard, Operators Lounge, Wellness Zone ve MRO ile uçak iç mekânları bölümünü de içeriyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 8, 9 ve 10 Aralık 2026 günlerinde 10:00–17:00 saatleri arasında açık. Runway Party 8 Aralık'ta 16:00–20:00 arasında yapılıyor. Alan, DWC'deki Dubai Airshow sahası."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Fuar iş havacılığı profesyonellerine yönelik: uçak sahipleri, operatörler, üreticiler, brokerlar, tedarikçiler, yatırımcılar ve karar vericiler. Organizatör yapay zekâ destekli bir eşleştirme uygulaması ve operatör görüşme programı sunuyor."
+        },
+        {
+          "h": "MEBAA Show'da stand açmak",
+          "p": "Katılım isteyen firmalar sitedeki Book a Stand bağlantısıyla iletişim sayfasına yönleniyor; site ayrıca katılımcı kaynak merkezi, sponsorluk seçenekleri ve kat planı sunuyor. Burada stand, uçak ve premium hizmet markaları arasında öne çıkmak zorunda: açık bir kat planı, ağırlandığı misafirler için sakin bir görüşme alanı ve ürünü ya da hizmeti ilk bakışta anlatan sade bir tasarım işe yarar."
+        }
+      ]
+    },
+    "en": {
+      "intro": "MEBAA Show is the business aviation exhibition of the Middle East and North Africa. The 2026 edition runs on 8–10 December in Dubai at the Dubai Airshow site in DWC. The show is presented under the Middle East & North Africa Business Aviation Association (MEBAA) and Informa Markets brands, under the patronage of H.H. Sheikh Ahmed bin Saeed Al Maktoum.",
+      "sections": [
+        {
+          "h": "What is on show at MEBAA Show?",
+          "p": "The static display features aircraft alongside solutions from manufacturers, operators and aviation service providers. Listed exhibitors include Airbus, Boeing, Bombardier, Dassault, Honeywell and Jet Aviation. The programme also includes the BizAv Talks conference, Luxury Boulevard, an Operators Lounge, a Wellness Zone and an MRO and aircraft interiors area."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show is open on 8, 9 and 10 December 2026 from 10:00 to 17:00. The Runway Party takes place on 8 December from 16:00 to 20:00. The venue is the Dubai Airshow site at DWC."
+        },
+        {
+          "h": "Who attends",
+          "p": "The show is aimed at business aviation professionals: aircraft owners, operators, manufacturers, brokers, suppliers, investors and decision-makers. The organiser offers an AI-powered matchmaking app and an operators' meetings programme."
+        },
+        {
+          "h": "Exhibiting at MEBAA Show",
+          "p": "Companies that want to take part use the Book a Stand link, which leads to the contact page. The site also lists an exhibitor resource centre, sponsorship options and a floorplan. A stand here sits among aircraft and premium service brands, so an open layout, a quiet meeting area for guests and a clean design that explains the offer at first glance all help."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die MEBAA Show ist die Fachmesse für Geschäftsluftfahrt im Nahen Osten und Nordafrika. Die Ausgabe 2026 findet vom 8. bis 10. Dezember in Dubai auf dem Gelände der Dubai Airshow in DWC statt. Die Messe wird unter den Marken der Middle East & North Africa Business Aviation Association (MEBAA) und von Informa Markets präsentiert und steht unter der Schirmherrschaft von H.H. Sheikh Ahmed bin Saeed Al Maktoum.",
+      "sections": [
+        {
+          "h": "Was wird auf der MEBAA Show gezeigt?",
+          "p": "In der statischen Ausstellung stehen Flugzeuge neben Lösungen von Herstellern, Betreibern und Luftfahrtdienstleistern. Zu den genannten Ausstellern gehören Airbus, Boeing, Bombardier, Dassault, Honeywell und Jet Aviation. Das Programm umfasst außerdem die Konferenz BizAv Talks, Luxury Boulevard, eine Operators Lounge, eine Wellness Zone sowie einen Bereich für MRO und Flugzeuginnenausbau."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe ist am 8., 9. und 10. Dezember 2026 jeweils von 10:00 bis 17:00 Uhr geöffnet. Die Runway Party findet am 8. Dezember von 16:00 bis 20:00 Uhr statt. Veranstaltungsort ist das Gelände der Dubai Airshow in DWC."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Die Messe richtet sich an Fachleute der Geschäftsluftfahrt: Flugzeugeigner, Betreiber, Hersteller, Broker, Zulieferer, Investoren und Entscheider. Der Veranstalter bietet eine KI-gestützte Matchmaking-App und ein Meetingprogramm für Betreiber."
+        },
+        {
+          "h": "Ausstellen auf der MEBAA Show",
+          "p": "Interessierte Unternehmen nutzen den Link Book a Stand, der zur Kontaktseite führt. Die Website nennt außerdem ein Ausstellerportal, Sponsoringoptionen und einen Hallenplan. Der Stand steht hier zwischen Flugzeugen und Premium-Dienstleistern: Ein offener Grundriss, ein ruhiger Besprechungsbereich für Gäste und ein klares Design, das das Angebot auf den ersten Blick erklärt, zahlen sich aus."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Expand North Star",
+    "slugs": [
+      "expand-north-star"
+    ],
+    "updated": "2026-11-25",
+    "sources": [
+      "https://www.expandnorthstar.com/"
+    ],
+    "tr": {
+      "intro": "Expand North Star, kendini dünyanın en büyük girişim ve yatırımcı buluşma etkinliği olarak tanıtıyor. 2026 baskısı 8–10 Aralık tarihlerinde Dubai'de, Expo City Dubai'de GITEX GLOBAL ile aynı alanda yeniden bir araya geliyor. Girişimleri, yatırımcıları, kurumsal firmaları ve hükümetleri buluşturuyor.",
+      "sections": [
+        {
+          "h": "Expand North Star'da neler var?",
+          "p": "Program girişim pitch yarışması Supernova 0X'i, The Founders Academy'yi, Scale.iT ve ScaleX'i, GITEX HealthTech ve LivX'i, YouthX ile GITEX PADEL'i, The Backers Pitch'i ve NorthStar by Night yan etkinliğini içeriyor. Organizatöre göre 2026'daki Supernova 0X'te 60 girişim canlı pitch yapıyor, 9 finalist ve 3 kazanan belirleniyor; toplam ödül 115.000 ABD doları ve hisse karşılığı değil."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Etkinlik 8–10 Aralık 2026 tarihlerinde Expo City Dubai'de. GITEX TechCation 7–11 Aralık 2026 arasında sürüyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Katılımcılar girişimler, yatırımcılar, kurumsal firmalar ve hükümetler. Kurucular Founder's Pass için başvurabiliyor; bu bilet sahadaki girişim kabininde bir günlük yer sağlıyor. Organizatöre göre 2025 baskısında yaklaşık 2.000 girişim, 1.200 yatırımcı ve 40 küresel unicorn yer aldı; girişimler 100'den fazla ülkeden geldi."
+        },
+        {
+          "h": "Expand North Star'da stand açmak",
+          "p": "Katılmak isteyen firmalar sitedeki Enquire to Exhibit veya Book a Stand bağlantısını kullanıyor; yan etkinlikler ayrı bir formla önerilebiliyor. Girişim fuarında stand kısa görüşmelere göre kurulur: ürün demosu için tek bir net ekran, yatırımcı ve ortak görüşmeleri için oturma noktası ve markayı uzaktan okutan sade bir üst grafik."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Expand North Star presents itself as the world's largest startup and investor connector event. The 2026 edition runs on 8–10 December in Dubai at Expo City Dubai, reunited with GITEX GLOBAL. It brings together startups, investors, enterprises and governments.",
+      "sections": [
+        {
+          "h": "What is on at Expand North Star?",
+          "p": "The programme includes the Supernova 0X startup pitch competition, The Founders Academy, Scale.iT and ScaleX, GITEX HealthTech and LivX, YouthX and GITEX PADEL, The Backers Pitch and the NorthStar by Night side event. According to the organiser, 60 startups pitch live at Supernova 0X in 2026, with 9 finalists and 3 winners sharing USD 115,000 in equity-free cash prizes."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The event takes place on 8–10 December 2026 at Expo City Dubai. GITEX TechCation runs from 7 to 11 December 2026."
+        },
+        {
+          "h": "Who attends",
+          "p": "Attendees are startups, investors, enterprises and governments. Founders can apply for a Founder's Pass, which provides a one-day startup pod on the show floor. According to the organiser, the 2025 edition brought together about 2,000 startups, 1,200 investors and 40 global unicorns, with startups from more than 100 countries."
+        },
+        {
+          "h": "Exhibiting at Expand North Star",
+          "p": "Companies use the Enquire to Exhibit or Book a Stand link, and side events can be submitted through a separate form. A stand at a startup show is built for short conversations: one clear screen for the product demo, a seating point for investor and partner meetings, and a simple top graphic that makes the brand readable from a distance."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Expand North Star bezeichnet sich als weltweit größtes Treffen von Startups und Investoren. Die Ausgabe 2026 findet vom 8. bis 10. Dezember in Dubai in der Expo City Dubai statt, erneut gemeinsam mit der GITEX GLOBAL. Sie bringt Startups, Investoren, Unternehmen und Regierungen zusammen.",
+      "sections": [
+        {
+          "h": "Was bietet Expand North Star?",
+          "p": "Das Programm umfasst den Startup-Pitch-Wettbewerb Supernova 0X, The Founders Academy, Scale.iT und ScaleX, GITEX HealthTech und LivX, YouthX und GITEX PADEL, The Backers Pitch sowie das Nebenevent NorthStar by Night. Laut Veranstalter pitchen 2026 bei Supernova 0X 60 Startups live; es gibt 9 Finalisten und 3 Gewinner, die zusammen 115.000 US-Dollar an beteiligungsfreien Preisgeldern erhalten."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Veranstaltung findet vom 8. bis 10. Dezember 2026 in der Expo City Dubai statt. GITEX TechCation läuft vom 7. bis 11. Dezember 2026."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Teilnehmer sind Startups, Investoren, Unternehmen und Regierungen. Gründer können einen Founder's Pass beantragen, der einen Startup-Pod auf der Messefläche für einen Tag bietet. Laut Veranstalter kamen 2025 rund 2.000 Startups, 1.200 Investoren und 40 globale Unicorns zusammen; die Startups stammten aus mehr als 100 Ländern."
+        },
+        {
+          "h": "Ausstellen auf der Expand North Star",
+          "p": "Unternehmen nutzen den Link Enquire to Exhibit oder Book a Stand; Nebenveranstaltungen lassen sich über ein separates Formular einreichen. Ein Stand auf einer Startup-Messe ist auf kurze Gespräche ausgelegt: ein klarer Bildschirm für die Produktdemo, eine Sitzgelegenheit für Investoren- und Partnergespräche und eine schlichte Oberkante, die die Marke aus der Ferne lesbar macht."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Sign & Graphic Imaging Middle East (SGI Dubai)",
+    "slugs": [
+      "sign-and-graphic-imaging-middle-east-sgi-dubai"
+    ],
+    "updated": "2026-11-25",
+    "sources": [
+      "https://www.dwtc.com/en/events/sign-graphic-imaging-me-exhibition-2026/",
+      "https://www.signmiddleeast.com/"
+    ],
+    "tr": {
+      "intro": "SGI Dubai, reklam ve medya sektörüne yönelik tabela, baskı ve dijital ekran fuarıdır. 2026 baskısı 7–9 Aralık tarihlerinde Dubai World Trade Centre'da, Hall 2-3'te düzenleniyor. Organizatör Global Links Exhibition Organisers; fuar kendini 29 yıllık sektör güveniyle tanıtıyor.",
+      "sections": [
+        {
+          "h": "SGI Dubai'de hangi ürünler sergileniyor?",
+          "p": "Fuar tabela, baskı, LED, dijital ekran, profesyonel ses ve ışık teknolojilerini kapsıyor. Organizatör altı alıcı pazarı tanımlıyor: tabela ve ekran, ses ve ışık, baskı ve ambalaj, perakende ve etkinlik markalama, LED ve dijital ekran, akıllı teknoloji. Program sektör konferansları, uygulamalı atölyeler, canlı yarışmalar ve SGI MENA Vehicle Graphics Championship ile online B2B pazar yerini de anıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 7–9 Aralık 2026 tarihlerinde Dubai World Trade Centre, Hall 2-3'te yapılıyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Fuar ticari ziyaretçilere açık; DWTC sayfası yalnızca ticari ziyaret yazıyor, organizatör sitesinde ücretsiz ziyaretçi kaydı var. Hedef kitle perakende, etkinlik, ticari alanlar, otelcilik ve kamusal mekânlarda çalışan alıcılar."
+        },
+        {
+          "h": "SGI Dubai'de stand açmak",
+          "p": "Katılım için organizatör sitesindeki Book Your Stand bağlantısı iletişim sayfasına götürüyor. Tabela ve baskı fuarında stand ürünün kendisiyle konuşur: ışıklı ve basılı örnekler gerçek ölçekte, doğru ışıkta görünmeli, ziyaretçi malzemeye yaklaşıp dokunabilmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "SGI Dubai is the sign, print and digital display show for the advertising and media industry. The 2026 edition takes place on 7–9 December at Dubai World Trade Centre, Hall 2-3. The organiser is Global Links Exhibition Organisers, and the show describes itself as built on 29 years of industry trust.",
+      "sections": [
+        {
+          "h": "What is on show at SGI Dubai?",
+          "p": "The show covers sign, print, LED, digital display, professional audio and lighting technologies. The organiser defines six buyer markets: sign and display, audio and lighting, print and packaging, retail and event branding, LED and digital display, and smart technology. The programme also mentions industry conferences, hands-on workshops, live competitions, the SGI MENA Vehicle Graphics Championship and an online B2B marketplace."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs on 7–9 December 2026 at Dubai World Trade Centre, Hall 2-3."
+        },
+        {
+          "h": "Who attends",
+          "p": "The show is open to trade visitors; the DWTC page lists it as trade only, and the organiser's site offers free visitor registration. The target audience is buyers in retail, events, commercial, hospitality and public spaces."
+        },
+        {
+          "h": "Exhibiting at SGI Dubai",
+          "p": "The Book Your Stand link on the organiser's site leads to the contact page. At a sign and print show the stand speaks through the product itself: lit and printed samples need to be shown at real scale and under good light, and visitors should be able to step close to the material and touch it."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die SGI Dubai ist die Messe für Schilder, Druck und digitale Displays der Werbe- und Medienbranche. Die Ausgabe 2026 findet vom 7. bis 9. Dezember im Dubai World Trade Centre, Halle 2-3, statt. Veranstalter ist Global Links Exhibition Organisers; die Messe beschreibt sich als auf 29 Jahre Branchenvertrauen gebaut.",
+      "sections": [
+        {
+          "h": "Was wird auf der SGI Dubai gezeigt?",
+          "p": "Die Messe deckt Schilder-, Druck-, LED-, Digital-Display-, professionelle Audio- und Lichttechnik ab. Der Veranstalter definiert sechs Käufermärkte: Schilder und Displays, Audio und Licht, Druck und Verpackung, Retail- und Event-Branding, LED und digitale Displays sowie Smart Technology. Das Programm nennt außerdem Fachkonferenzen, praktische Workshops, Live-Wettbewerbe, die SGI MENA Vehicle Graphics Championship und einen Online-B2B-Marktplatz."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 7. bis 9. Dezember 2026 im Dubai World Trade Centre, Halle 2-3, statt."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Die Messe steht Fachbesuchern offen; die DWTC-Seite führt sie als reine Fachmesse, auf der Website des Veranstalters gibt es eine kostenlose Besucherregistrierung. Zielgruppe sind Einkäufer aus Handel, Events, Gewerbe, Hotellerie und öffentlichen Räumen."
+        },
+        {
+          "h": "Ausstellen auf der SGI Dubai",
+          "p": "Der Link Book Your Stand auf der Website des Veranstalters führt zur Kontaktseite. Auf einer Schilder- und Druckmesse spricht der Stand durch das Produkt selbst: beleuchtete und gedruckte Muster müssen in echter Größe und unter gutem Licht gezeigt werden, und Besucher sollten das Material aus der Nähe ansehen und berühren können."
+        }
+      ]
+    }
+  },
+  {
+    "name": "SIMI",
+    "slugs": [
+      "simi"
+    ],
+    "updated": "2026-11-25",
+    "sources": [
+      "https://www.salonsimi.com"
+    ],
+    "tr": {
+      "intro": "SIMI, Paris'te gayrimenkul sektörüne yönelik fuardır. 2026 baskısı 8–10 Aralık tarihlerinde Porte de Versailles'da yapılıyor. Fuar üç tema etrafında kurulu: mevcut binaları dönüştürmek, değer yaratmak ve altyapı olarak gayrimenkulün ekonomiye katkısı.",
+      "sections": [
+        {
+          "h": "SIMI'de hangi alanlar yer alıyor?",
+          "p": "Sektör grupları şunlar: geliştirme ve planlama, yatırımcılar ve mülk sahipleri, varlık ve mülk yönetimi, mühendislik, teknik danışmanlık ve proje yönetimi, bölgeler, inşaat ve uygulama, yenileme ve karbonsuzlaşma, operatörler ve tesis yönetimi, strateji ve dönüşüm danışmanlığı, lojistik ve üretken gayrimenkul, sanayi, enerji ve veri merkezleri ile yeniden sanayileşme."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 8–10 Aralık 2026 tarihlerinde Paris'te Porte de Versailles'da. Organizatörün sayfalarına göre fuar konferans programı da içeriyor; 2025 baskısında yaklaşık 150 konuşma oturumu yapıldı."
+        },
+        {
+          "h": "Eş zamanlı etkinlikler",
+          "p": "Sitenin alt bölümü dört fuara bağlantı veriyor: Salon des Sports et Parasports, Salon de la Biodiversité et du Génie écologique, Salon des Maires et des Collectivités Locales ve Drive to Zero."
+        },
+        {
+          "h": "SIMI'de stand açmak",
+          "p": "Site katılımcı alanı, neden katılmalı bölümü, sponsorluk, konuşma formatları ve özel alanlar sunuyor; başvuru adımları katılımcı girişinin arkasında. Gayrimenkul fuarında stand sunum ve toplantı için kuruluyor: projenin maketi ya da ekranı, kapalı veya yarı kapalı bir görüşme alanı ve tema grupları içinde tanınan bir marka yüzeyi."
+        }
+      ]
+    },
+    "en": {
+      "intro": "SIMI is the real estate exhibition held in Paris. The 2026 edition takes place on 8–10 December at Porte de Versailles. The show is built around three themes: transforming existing buildings, creating value, and the contribution of real estate as infrastructure to the economy.",
+      "sections": [
+        {
+          "h": "Which sectors does SIMI cover?",
+          "p": "The sector groups are development and planning, investors and owners, asset and property management, engineering, technical consulting and project management, territories, construction and execution, renovation and decarbonisation, operators and facility management, strategy and transformation consulting, logistics and productive real estate, industry, energy and data centres, and reindustrialisation."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs on 8–10 December 2026 at Porte de Versailles, Paris. According to the organiser's pages it includes a conference programme; the 2025 edition held nearly 150 speaking sessions."
+        },
+        {
+          "h": "Co-located events",
+          "p": "The footer of the site links to four other shows: the Salon des Sports et Parasports, the Salon de la Biodiversité et du Génie écologique, the Salon des Maires et des Collectivités Locales and Drive to Zero."
+        },
+        {
+          "h": "Exhibiting at SIMI",
+          "p": "The site offers an exhibitor area, a why-exhibit section, sponsorship, speaking formats and private spaces; the application steps sit behind the exhibitor login. A stand at a real estate show is built for presentation and meetings: a model or screen of the project, a closed or semi-closed meeting area and a brand surface that is recognisable within the sector groups."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die SIMI ist die Immobilienmesse in Paris. Die Ausgabe 2026 findet vom 8. bis 10. Dezember am Porte de Versailles statt. Die Messe ist um drei Themen aufgebaut: Bestandsgebäude transformieren, Wert schaffen und der Beitrag der Immobilie als Infrastruktur zur Wirtschaft.",
+      "sections": [
+        {
+          "h": "Welche Bereiche deckt die SIMI ab?",
+          "p": "Die Branchengruppen sind Entwicklung und Planung, Investoren und Eigentümer, Asset- und Property-Management, Ingenieurwesen, technische Beratung und Projektsteuerung, Gebietskörperschaften, Bau und Ausführung, Sanierung und Dekarbonisierung, Betreiber und Facility Management, Strategie- und Transformationsberatung, Logistik und produktive Immobilien, Industrie, Energie und Rechenzentren sowie Reindustrialisierung."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 8. bis 10. Dezember 2026 am Porte de Versailles in Paris statt. Laut den Seiten des Veranstalters gehört ein Konferenzprogramm dazu; 2025 gab es fast 150 Vortragssitzungen."
+        },
+        {
+          "h": "Parallele Veranstaltungen",
+          "p": "Die Fußzeile der Website verweist auf vier weitere Messen: Salon des Sports et Parasports, Salon de la Biodiversité et du Génie écologique, Salon des Maires et des Collectivités Locales und Drive to Zero."
+        },
+        {
+          "h": "Ausstellen auf der SIMI",
+          "p": "Die Website bietet einen Ausstellerbereich, einen Abschnitt zu den Gründen für eine Teilnahme, Sponsoring, Vortragsformate und private Räume; die Anmeldeschritte liegen hinter dem Ausstellerlogin. Ein Stand auf einer Immobilienmesse ist für Präsentation und Gespräche gebaut: ein Modell oder Bildschirm des Projekts, ein geschlossener oder halbgeschlossener Besprechungsbereich und eine Markenfläche, die innerhalb der Branchengruppen wiedererkannt wird."
+        }
+      ]
+    }
   }
 ]

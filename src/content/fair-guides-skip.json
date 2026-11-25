@@ -8,5 +8,35 @@
     "slug": "sustainable-solutions",
     "reason": "Messe Duesseldorf listing (organizer Xpo Messe Kontakt GmbH, 2-3 Dec 2026) links to www.solarsolutionsduesseldorf.de, a different domain and apparently the Solar Solutions fair; that host does not resolve in this session, so not enough verified info.",
     "date": "2026-11-25"
+  },
+  {
+    "slug": "afrika-prime-gida-fuari",
+    "reason": "Resmî site (partnerfuar.com) iki denemede HTTP 503 verdi",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "beauty-erbil-expo",
+    "reason": "Site beautyexpoiraq.com'a yönleniyor; organizatör, ürün grupları ve ziyaretçi bilgisi yok",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "interpack-mea",
+    "reason": "Resmî site (foodafrica-expo.com) iki denemede HTTP 503 verdi",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "logistex-oman",
+    "reason": "Bağlantı yalnız mekân sitesi (ocec.om); etkinlik ayrıntısı yok",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "surfex",
+    "reason": "Resmî sayfada organizatör, ziyaretçi ve katılım süreci bilgisi yok; surfex.ae içerik vermedi",
+    "date": "2026-11-25"
+  },
+  {
+    "slug": "istanbul-yerel-marketler-bulusmasi-ve-fuari",
+    "reason": "focusfairs.com bu fuarı anmıyor",
+    "date": "2026-11-25"
   }
 ]
