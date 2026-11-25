@@ -74,7 +74,7 @@ export const NAV: Record<Lang, Nav> = {
           { name: "Cafe & Restoran Tasarımı", href: "/cafe-dekorasyon/" },
           { name: "Ofis Tasarımı", href: "/ofis-tasarimi-ve-uygulama/" },
         ],
-        feature: { label: "İç Mimarlık Fiyatları", note: "Bütçe neye göre belirlenir?", href: "/ic-mimarlik-fiyatlari/", icon: "price" },
+        feature: { label: "İç Mimarlık Fiyatları", note: "Tasarım ve Uygulama", href: "/ic-mimarlik-fiyatlari/", icon: "price" },
       },
       {
         number: "02",
