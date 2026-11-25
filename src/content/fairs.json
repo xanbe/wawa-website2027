@@ -166,6 +166,72 @@
   ]
  },
  {
+  "slug": "mijex-muscat-international-jewelry-exhibition",
+  "name": "MIJEX (Muscat International Jewelry Exhibition)",
+  "city": "Maskat",
+  "country": "Umman",
+  "venue": "Oman Convention & Exhibition Centre",
+  "region": "me",
+  "start": "2026-12-03",
+  "end": "2026-12-07",
+  "sector": "Mücevher",
+  "url": "https://www.ocec.om/",
+  "verified": true,
+  "match": [
+   "mijex",
+   "muscat jewelry"
+  ]
+ },
+ {
+  "slug": "cairo-inter-leather-aralik",
+  "name": "Cairo Inter Leather (Aralık)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2026-12-04",
+  "end": "2026-12-06",
+  "sector": "Deri ve ayakkabı",
+  "url": "https://www.cairointerleather.com/",
+  "verified": true,
+  "match": [
+   "inter leather",
+   "cairo leather"
+  ]
+ },
+ {
+  "slug": "beauty-erbil-expo",
+  "name": "Beauty Erbil Expo",
+  "city": "Erbil",
+  "country": "Irak",
+  "venue": "Dedeman Hotel Erbil",
+  "region": "me",
+  "start": "2026-12-05",
+  "end": "2026-12-07",
+  "sector": "Kozmetik ve güzellik",
+  "url": "https://www.beautyerbilexpo.com/",
+  "verified": true,
+  "match": [
+   "beauty erbil"
+  ]
+ },
+ {
+  "slug": "building-iraq-expo",
+  "name": "Building Iraq Expo",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-10",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.showsbee.com/fairs/85668-Building-Iraq-2026.html",
+  "verified": false,
+  "match": [
+   "building iraq"
+  ]
+ },
+ {
   "slug": "food-africa",
   "name": "Food Africa",
   "city": "Kahire",
@@ -195,6 +261,40 @@
   "verified": true,
   "match": [
    "gitex"
+  ]
+ },
+ {
+  "slug": "interpack-mea",
+  "name": "interpack MEA",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Egypt International Exhibition Center",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-10",
+  "sector": "Proses ve ambalaj",
+  "url": "https://www.foodafrica-expo.com/",
+  "verified": true,
+  "match": [
+   "interpack",
+   "pacprocess"
+  ]
+ },
+ {
+  "slug": "sign-and-graphic-imaging-middle-east-sgi-dubai",
+  "name": "Sign & Graphic Imaging Middle East (SGI Dubai)",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2026-12-07",
+  "end": "2026-12-09",
+  "sector": "Tabela ve reklam baskı",
+  "url": "https://www.dwtc.com/en/events/sign-graphic-imaging-me-exhibition-2026/",
+  "verified": true,
+  "match": [
+   "sgi dubai",
+   "sign & graphic"
   ]
  },
  {
@@ -312,6 +412,22 @@
   ]
  },
  {
+  "slug": "oil-and-gas-technology-exhibition-bagdat",
+  "name": "Oil and Gas Technology Exhibition (Bağdat)",
+  "city": "Bağdat",
+  "country": "Irak",
+  "region": "me",
+  "start": "2026-12-13",
+  "end": "2026-12-16",
+  "sector": "Petrol ve gaz",
+  "url": "https://ticaret.gov.tr/ihracat/fuarlar/2026-2027-yillarinda-destek-kapsamina-alinan-yurtdisi-fuarlar",
+  "verified": true,
+  "match": [
+   "oil and gas technology",
+   "baghdad oil"
+  ]
+ },
+ {
   "slug": "worldfood-istanbul",
   "name": "Worldfood İstanbul",
   "city": "İstanbul",
@@ -342,6 +458,21 @@
   "verified": true,
   "match": [
    "gafshoes"
+  ]
+ },
+ {
+  "slug": "mactech-egypt-and-handling-expo",
+  "name": "MACTECH Egypt & Handling Expo",
+  "city": "Kahire",
+  "country": "Mısır",
+  "region": "me",
+  "start": "2026-12-17",
+  "end": "2026-12-20",
+  "sector": "Makine ve elektrik",
+  "url": "https://ticaret.gov.tr/ihracat/fuarlar/2026-2027-yillarinda-destek-kapsamina-alinan-yurtdisi-fuarlar",
+  "verified": true,
+  "match": [
+   "mactech"
   ]
  },
  {
@@ -827,6 +958,23 @@
   ]
  },
  {
+  "slug": "deal-entertainment-and-leisure-mena",
+  "name": "DEAL Entertainment & Leisure MENA",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-01-18",
+  "end": "2027-01-20",
+  "sector": "Eğlence ve lunapark",
+  "url": "https://www.dwtc.com/en/events/entertainment-leisure-mena-2027/",
+  "verified": true,
+  "match": [
+   "entertainment & leisure",
+   "deal"
+  ]
+ },
+ {
   "slug": "aeedc-dubai",
   "name": "AEEDC Dubai",
   "city": "Dubai",
@@ -1090,6 +1238,24 @@
   ]
  },
  {
+  "slug": "bagdat-uluslararasi-fuari-50",
+  "name": "Bağdat Uluslararası Fuarı (50.)",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-01-23",
+  "end": "2027-01-29",
+  "sector": "Genel ticaret",
+  "url": "https://ticaret.gov.tr/ihracat/fuarlar/2026-2027-yillarinda-destek-kapsamina-alinan-yurtdisi-fuarlar",
+  "verified": true,
+  "match": [
+   "baghdad international fair",
+   "bağdat fuarı",
+   "baghdad fair"
+  ]
+ },
+ {
   "slug": "boot-dusseldorf",
   "name": "boot Düsseldorf",
   "city": "Düsseldorf",
@@ -1303,6 +1469,22 @@
   ]
  },
  {
+  "slug": "foodex-saudi-riyad",
+  "name": "Foodex Saudi (Riyad)",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "The Arena, Riyadh",
+  "region": "me",
+  "start": "2027-01-26",
+  "end": "2027-01-28",
+  "sector": "Gıda ve içecek",
+  "url": "https://foodexsaudiexpo.com/",
+  "verified": true,
+  "match": [
+   "foodex"
+  ]
+ },
+ {
   "slug": "ipm-essen",
   "name": "IPM ESSEN",
   "city": "Essen",
@@ -1381,6 +1563,22 @@
   "verified": true,
   "match": [
    "world of coffee"
+  ]
+ },
+ {
+  "slug": "jewels-of-emirates-show-al-ain",
+  "name": "Jewels of Emirates Show Al Ain",
+  "city": "El Ayn",
+  "country": "BAE",
+  "venue": "ADNEC Centre Al Ain",
+  "region": "me",
+  "start": "2027-01-27",
+  "end": "2027-01-31",
+  "sector": "Mücevher",
+  "url": "https://ticaret.gov.tr/ihracat/fuarlar/2026-2027-yillarinda-destek-kapsamina-alinan-yurtdisi-fuarlar",
+  "verified": true,
+  "match": [
+   "jewels of emirates"
   ]
  },
  {
@@ -1624,6 +1822,23 @@
   "verified": true,
   "match": [
    "agroexpo"
+  ]
+ },
+ {
+  "slug": "aircraft-interiors-me-and-mro-middle-east",
+  "name": "Aircraft Interiors ME & MRO Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-02-02",
+  "end": "2027-02-03",
+  "sector": "Havacılık bakım",
+  "url": "https://www.dwtc.com/en/events/aircraft-interiors-middle-east-aime-maintenance-repair-and-overhaul-mro-me-2027/",
+  "verified": true,
+  "match": [
+   "aircraft interiors",
+   "mro middle east"
   ]
  },
  {
@@ -3213,6 +3428,23 @@
   ]
  },
  {
+  "slug": "cairo-mother-and-la-pyjama-mart",
+  "name": "Cairo Mother & La Pyjama (Mart)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2027-03-18",
+  "end": "2027-03-20",
+  "sector": "Anne-bebek ve pijama tekstili",
+  "url": "http://www.pyramidsfair.com/fair/79th-cairo-motherla-pyjama-4248",
+  "verified": true,
+  "match": [
+   "mother & la pyjama",
+   "la pyjama"
+  ]
+ },
+ {
   "slug": "cosmoprof-worldwide-bologna",
   "name": "Cosmoprof Worldwide Bologna",
   "city": "Bologna",
@@ -3292,6 +3524,39 @@
   "verified": true,
   "match": [
    "food expo"
+  ]
+ },
+ {
+  "slug": "iraq-international-energy-expo-and-conference-iee",
+  "name": "Iraq International Energy Expo & Conference (IEE)",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-03-22",
+  "end": "2027-03-24",
+  "sector": "Enerji",
+  "url": "https://exposale.net/en/exhibition/iee",
+  "verified": false,
+  "match": [
+   "iraq energy expo",
+   "iee"
+  ]
+ },
+ {
+  "slug": "jeddah-construct",
+  "name": "Jeddah Construct",
+  "city": "Cidde",
+  "country": "Suudi Arabistan",
+  "venue": "Jeddah International Exhibition & Convention Center",
+  "region": "me",
+  "start": "2027-03-22",
+  "end": "2027-03-24",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.jeddahconstruct.com/",
+  "verified": true,
+  "match": [
+   "jeddah construct"
   ]
  },
  {
@@ -3410,6 +3675,23 @@
   ]
  },
  {
+  "slug": "cairo-fashiontex-mart",
+  "name": "Cairo Fashiontex (Mart)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2027-03-25",
+  "end": "2027-03-27",
+  "sector": "Tekstil ve hazır giyim",
+  "url": "http://www.pyramidsfair.com/fair/83rd-cairo-fashiontex-4247",
+  "verified": true,
+  "match": [
+   "cairo fashiontex",
+   "fashiontex"
+  ]
+ },
+ {
   "slug": "kayseri-tarim-fuari",
   "name": "Kayseri Tarım Fuarı",
   "city": "Kayseri",
@@ -3440,6 +3722,22 @@
   "verified": true,
   "match": [
    "pet izmir"
+  ]
+ },
+ {
+  "slug": "duphat",
+  "name": "DUPHAT",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-03-30",
+  "end": "2027-04-01",
+  "sector": "İlaç",
+  "url": "https://www.dwtc.com/en/events/dubai-international-pharmaceuticals-and-technologies-conference-and-exhibition-duphat-2027/",
+  "verified": true,
+  "match": [
+   "duphat"
   ]
  },
  {
@@ -3490,6 +3788,23 @@
   "verified": true,
   "match": [
    "coffex"
+  ]
+ },
+ {
+  "slug": "erbil-autoshow",
+  "name": "Erbil Autoshow",
+  "city": "Erbil",
+  "country": "Irak",
+  "venue": "Erbil International Fair Grounds",
+  "region": "me",
+  "start": "2027-04-01",
+  "end": "2027-04-04",
+  "sector": "Otomotiv ve yedek parça",
+  "url": "https://www.erbilautoshow.net/",
+  "verified": true,
+  "match": [
+   "erbil autoshow",
+   "autoshow"
   ]
  },
  {
@@ -3984,6 +4299,22 @@
   ]
  },
  {
+  "slug": "lubricant-expo-middle-east",
+  "name": "Lubricant Expo Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-04-13",
+  "end": "2027-04-15",
+  "sector": "Madeni yağ",
+  "url": "https://www.dwtc.com/en/events/lubricant-expo-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "lubricant expo"
+  ]
+ },
+ {
   "slug": "marble-izmir",
   "name": "Marble İzmir",
   "city": "İzmir",
@@ -4130,6 +4461,22 @@
   "match": [
    "world of mobility",
    "wom"
+  ]
+ },
+ {
+  "slug": "iqdex",
+  "name": "IQDEX",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-04-17",
+  "end": "2027-04-20",
+  "sector": "Savunma ve güvenlik",
+  "url": "https://iqdex.iq/",
+  "verified": true,
+  "match": [
+   "iqdex"
   ]
  },
  {
@@ -4340,6 +4687,23 @@
   "verified": true,
   "match": [
    "tektonica"
+  ]
+ },
+ {
+  "slug": "visionplus-expo",
+  "name": "VisionPlus Expo",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-04-24",
+  "end": "2027-04-25",
+  "sector": "Optik",
+  "url": "https://www.dwtc.com/en/events/visionplus-expo-2027/",
+  "verified": true,
+  "match": [
+   "visionplus",
+   "vision plus"
   ]
  },
  {
@@ -4556,6 +4920,22 @@
   ]
  },
  {
+  "slug": "fespa-middle-east",
+  "name": "FESPA Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-04-27",
+  "end": "2027-04-29",
+  "sector": "Dijital baskı",
+  "url": "https://www.dwtc.com/en/events/fespa-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "fespa"
+  ]
+ },
+ {
   "slug": "sial-canada",
   "name": "SIAL Canada",
   "city": "Toronto",
@@ -4686,6 +5066,23 @@
   "verified": true,
   "match": [
    "idef"
+  ]
+ },
+ {
+  "slug": "make-it-in-the-emirates",
+  "name": "Make it in the Emirates",
+  "city": "Abu Dabi",
+  "country": "BAE",
+  "venue": "ADNEC Centre Abu Dhabi",
+  "region": "me",
+  "start": "2027-05-03",
+  "end": "2027-05-06",
+  "sector": "Sanayi ve imalat",
+  "url": "https://www.moiat.gov.ae/en/media-center/news/2026/05/20/make-it-in-the-emirates-concludes-largest-edition-yet",
+  "verified": true,
+  "match": [
+   "make it in the emirates",
+   "miite"
   ]
  },
  {
@@ -4838,6 +5235,22 @@
   ]
  },
  {
+  "slug": "seatrade-maritime-and-logistics-middle-east",
+  "name": "Seatrade Maritime & Logistics Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-05-04",
+  "end": "2027-05-06",
+  "sector": "Denizcilik ve lojistik",
+  "url": "https://www.dwtc.com/en/events/seatrade-maritime-2027/",
+  "verified": true,
+  "match": [
+   "seatrade"
+  ]
+ },
+ {
   "slug": "anfas-fresh-antalya",
   "name": "Anfaş Fresh Antalya",
   "city": "Antalya",
@@ -4919,6 +5332,39 @@
   "match": [
    "çin ihraç ürünleri",
    "china expo"
+  ]
+ },
+ {
+  "slug": "erbil-build-expo",
+  "name": "Erbil Build Expo",
+  "city": "Erbil",
+  "country": "Irak",
+  "venue": "Erbil International Fair Grounds",
+  "region": "me",
+  "start": "2027-05-06",
+  "end": "2027-05-09",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.erbilbuilding.com/",
+  "verified": true,
+  "match": [
+   "erbil build",
+   "erbil building"
+  ]
+ },
+ {
+  "slug": "erbil-energy-expo",
+  "name": "Erbil Energy Expo",
+  "city": "Erbil",
+  "country": "Irak",
+  "venue": "Erbil International Fair Grounds",
+  "region": "me",
+  "start": "2027-05-06",
+  "end": "2027-05-09",
+  "sector": "Enerji",
+  "url": "http://www.pyramidsfair.com/fair/17th-erbil-energy-expo-6271",
+  "verified": true,
+  "match": [
+   "erbil energy"
   ]
  },
  {
@@ -5180,6 +5626,22 @@
   ]
  },
  {
+  "slug": "iraq-home-expo",
+  "name": "Iraq Home Expo",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-05-12",
+  "end": "2027-05-15",
+  "sector": "Mobilya ve ev ürünleri",
+  "url": "https://iraqhomeexpo.com/",
+  "verified": true,
+  "match": [
+   "iraq home expo"
+  ]
+ },
+ {
   "slug": "witex",
   "name": "WiTEX",
   "city": "Düsseldorf",
@@ -5209,6 +5671,22 @@
   "verified": true,
   "match": [
    "worldef"
+  ]
+ },
+ {
+  "slug": "bipec-expo",
+  "name": "BIPEC Expo",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-05-15",
+  "end": "2027-05-18",
+  "sector": "Petrol, gaz ve enerji",
+  "url": "https://bipec.iq/",
+  "verified": true,
+  "match": [
+   "bipec"
   ]
  },
  {
@@ -5356,6 +5834,39 @@
   "match": [
    "big 5 construct saudi",
    "big 5 saudi"
+  ]
+ },
+ {
+  "slug": "os-h-middle-east",
+  "name": "OS+H Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-05-24",
+  "end": "2027-05-26",
+  "sector": "İş sağlığı ve güvenliği",
+  "url": "https://www.dwtc.com/en/events/osh-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "os+h",
+   "osh middle east"
+  ]
+ },
+ {
+  "slug": "seamless-middle-east",
+  "name": "Seamless Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-05-24",
+  "end": "2027-05-26",
+  "sector": "Ödeme ve e-ticaret",
+  "url": "https://www.dwtc.com/en/events/seamless-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "seamless"
   ]
  },
  {
@@ -5570,6 +6081,22 @@
   ]
  },
  {
+  "slug": "saudi-signage-and-labelling-expo",
+  "name": "Saudi Signage & Labelling Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-06-01",
+  "end": "2027-06-03",
+  "sector": "Tabela, etiket ve ambalaj",
+  "url": "https://www.saudisignageexpo.com/",
+  "verified": true,
+  "match": [
+   "saudi signage"
+  ]
+ },
+ {
   "slug": "sea-expo-saudi-entertainment-and-amusement",
   "name": "SEA Expo (Saudi Entertainment & Amusement)",
   "city": "Riyad",
@@ -5751,6 +6278,39 @@
   ]
  },
  {
+  "slug": "global-infrastructure-expo-saudi",
+  "name": "Global Infrastructure Expo (Saudi)",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Altyapı",
+  "url": "https://www.globalinfrastructureexpo.com/",
+  "verified": true,
+  "match": [
+   "infrastructure expo",
+   "global infrastructure"
+  ]
+ },
+ {
+  "slug": "smart-cities-saudi-expo",
+  "name": "Smart Cities Saudi Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-06-08",
+  "end": "2027-06-10",
+  "sector": "Akıllı şehirler",
+  "url": "https://www.smartcitiessaudiexpo.com/",
+  "verified": true,
+  "match": [
+   "smart cities saudi"
+  ]
+ },
+ {
   "slug": "the-smarter-e-europe-intersolar-europe",
   "name": "The smarter E Europe / Intersolar Europe",
   "city": "Münih",
@@ -5883,6 +6443,23 @@
   ]
  },
  {
+  "slug": "fsb-riyadh",
+  "name": "FSB Riyadh",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Convention & Exhibition Center",
+  "region": "me",
+  "start": "2027-06-13",
+  "end": "2027-06-15",
+  "sector": "Spor ve rekreasyon tesisleri",
+  "url": "https://www.fsb-riyadh.com/",
+  "verified": true,
+  "match": [
+   "fsb riyadh",
+   "fsb"
+  ]
+ },
+ {
   "slug": "neocon",
   "name": "NeoCon",
   "city": "Şikago",
@@ -5932,6 +6509,38 @@
   ]
  },
  {
+  "slug": "jimex",
+  "name": "JIMEX",
+  "city": "Amman",
+  "country": "Ürdün",
+  "venue": "Jordan International Exhibition Center (JIEC)",
+  "region": "me",
+  "start": "2027-06-14",
+  "end": "2027-06-17",
+  "sector": "Makine, elektrik ve enerji",
+  "url": "https://www.jordanfairs.com/",
+  "verified": true,
+  "match": [
+   "jimex"
+  ]
+ },
+ {
+  "slug": "jopex",
+  "name": "JOPEX",
+  "city": "Amman",
+  "country": "Ürdün",
+  "venue": "Jordan International Exhibition Center (JIEC)",
+  "region": "me",
+  "start": "2027-06-14",
+  "end": "2027-06-17",
+  "sector": "Ambalaj ve matbaa",
+  "url": "https://www.jordanfairs.com/",
+  "verified": true,
+  "match": [
+   "jopex"
+  ]
+ },
+ {
   "slug": "paris-air-show",
   "name": "Paris Air Show",
   "city": "Paris",
@@ -5946,6 +6555,22 @@
   "match": [
    "paris air show",
    "le bourget"
+  ]
+ },
+ {
+  "slug": "sonex",
+  "name": "SONEX",
+  "city": "Amman",
+  "country": "Ürdün",
+  "venue": "Jordan International Exhibition Center (JIEC)",
+  "region": "me",
+  "start": "2027-06-14",
+  "end": "2027-06-17",
+  "sector": "Güneş enerjisi",
+  "url": "https://www.jordanfairs.com/",
+  "verified": true,
+  "match": [
+   "sonex"
   ]
  },
  {
@@ -6716,6 +7341,55 @@
   ]
  },
  {
+  "slug": "ifat-saudi-arabia",
+  "name": "IFAT Saudi Arabia",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh Front Exhibition & Conference Center",
+  "region": "me",
+  "start": "2027-09-04",
+  "end": "2027-09-06",
+  "sector": "Su ve atık yönetimi",
+  "url": "https://www.ifat-saudiarabia.com/",
+  "verified": true,
+  "match": [
+   "ifat"
+  ]
+ },
+ {
+  "slug": "interbuild-near-east",
+  "name": "INTERBUILD Near East",
+  "city": "Amman",
+  "country": "Ürdün",
+  "venue": "Jordan International Exhibition Center (JIEC)",
+  "region": "me",
+  "start": "2027-09-06",
+  "end": "2027-09-09",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.jordanfairs.com/",
+  "verified": true,
+  "match": [
+   "interbuild"
+  ]
+ },
+ {
+  "slug": "stonejo",
+  "name": "StoneJo",
+  "city": "Amman",
+  "country": "Ürdün",
+  "venue": "Jordan International Exhibition Center (JIEC)",
+  "region": "me",
+  "start": "2027-09-06",
+  "end": "2027-09-09",
+  "sector": "Doğal taş ve mermer",
+  "url": "https://www.jordanfairs.com/",
+  "verified": true,
+  "match": [
+   "stonejo",
+   "stone jo"
+  ]
+ },
+ {
   "slug": "drema",
   "name": "DREMA",
   "city": "Poznan",
@@ -6778,6 +7452,22 @@
   "match": [
    "eskişehir tarım",
    "eskisehir tarim"
+  ]
+ },
+ {
+  "slug": "ev-live-middle-east",
+  "name": "EV Live Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-08",
+  "sector": "Elektrikli araçlar",
+  "url": "https://www.dwtc.com/en/events/ev-live-2027/",
+  "verified": true,
+  "match": [
+   "ev live"
   ]
  },
  {
@@ -6883,6 +7573,54 @@
   ]
  },
  {
+  "slug": "middle-east-event-show",
+  "name": "Middle East Event Show",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-08",
+  "sector": "Etkinlik ve fuarcılık",
+  "url": "https://www.dwtc.com/en/events/middle-east-event-show-2027/",
+  "verified": true,
+  "match": [
+   "event show"
+  ]
+ },
+ {
+  "slug": "middle-east-rail",
+  "name": "Middle East Rail",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-08",
+  "sector": "Demiryolu",
+  "url": "https://www.dwtc.com/en/events/middle-east-rail-2027/",
+  "verified": true,
+  "match": [
+   "middle east rail"
+  ]
+ },
+ {
+  "slug": "move-middle-east",
+  "name": "MOVE Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-08",
+  "sector": "Mobilite ve ulaşım",
+  "url": "https://www.dwtc.com/en/events/move-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "move middle east"
+  ]
+ },
+ {
   "slug": "premiere-vision-paris-september",
   "name": "Première Vision Paris (September)",
   "city": "Paris",
@@ -6896,6 +7634,23 @@
   "verified": true,
   "match": [
    "premiere vision"
+  ]
+ },
+ {
+  "slug": "solar-and-storage-live-mea",
+  "name": "Solar & Storage Live MEA",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-07",
+  "end": "2027-09-08",
+  "sector": "Güneş enerjisi ve depolama",
+  "url": "https://www.dwtc.com/en/events/solar-storage-live-2027/",
+  "verified": true,
+  "match": [
+   "solar & storage",
+   "solar storage live"
   ]
  },
  {
@@ -6945,6 +7700,24 @@
   "match": [
    "ifco",
    "fashion connection"
+  ]
+ },
+ {
+  "slug": "iraq-oil-and-gas",
+  "name": "Iraq Oil & Gas",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-09-08",
+  "end": "2027-09-11",
+  "sector": "Petrol ve gaz",
+  "url": "https://baghdadoilgasfair.com/",
+  "verified": true,
+  "match": [
+   "iraq oil & gas",
+   "iraq oil gas",
+   "baghdad oil"
   ]
  },
  {
@@ -7062,6 +7835,38 @@
   ]
  },
  {
+  "slug": "saudi-industrial-expo",
+  "name": "Saudi Industrial Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Convention & Exhibition Center",
+  "region": "me",
+  "start": "2027-09-13",
+  "end": "2027-09-15",
+  "sector": "Sanayi ve imalat",
+  "url": "https://www.saudiindustrialexpo.com/",
+  "verified": true,
+  "match": [
+   "saudi industrial"
+  ]
+ },
+ {
+  "slug": "saudi-wood-expo",
+  "name": "Saudi Wood Expo",
+  "city": "Riyad",
+  "country": "Suudi Arabistan",
+  "venue": "Riyadh International Convention & Exhibition Center",
+  "region": "me",
+  "start": "2027-09-13",
+  "end": "2027-09-15",
+  "sector": "Ahşap ve mobilya makineleri",
+  "url": "https://www.saudiwoodexpo.com/",
+  "verified": true,
+  "match": [
+   "saudi wood"
+  ]
+ },
+ {
   "slug": "intertabac",
   "name": "InterTabac",
   "city": "Dortmund",
@@ -7075,6 +7880,22 @@
   "verified": true,
   "match": [
    "intertabac"
+  ]
+ },
+ {
+  "slug": "ism-middle-east",
+  "name": "ISM Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-14",
+  "end": "2027-09-16",
+  "sector": "Şekerleme ve atıştırmalık",
+  "url": "https://www.dwtc.com/en/events/ism-2027/",
+  "verified": true,
+  "match": [
+   "ism middle east"
   ]
  },
  {
@@ -7124,6 +7945,22 @@
   "match": [
    "msv brno",
    "msv"
+  ]
+ },
+ {
+  "slug": "private-label-and-licensing-middle-east",
+  "name": "Private Label & Licensing Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-14",
+  "end": "2027-09-16",
+  "sector": "Özel marka (private label)",
+  "url": "https://www.dwtc.com/en/events/private-label-2027/",
+  "verified": true,
+  "match": [
+   "private label"
   ]
  },
  {
@@ -7371,6 +8208,87 @@
   ]
  },
  {
+  "slug": "furniture-manufacturing-expo",
+  "name": "Furniture Manufacturing Expo",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-21",
+  "end": "2027-09-23",
+  "sector": "Mobilya üretimi",
+  "url": "https://www.dwtc.com/en/events/furniture-manufacturing-expo-2027/",
+  "verified": true,
+  "match": [
+   "furniture manufacturing"
+  ]
+ },
+ {
+  "slug": "middle-east-composites-and-advanced-materials-expo",
+  "name": "Middle East Composites & Advanced Materials Expo",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-21",
+  "end": "2027-09-23",
+  "sector": "Kompozit malzemeler",
+  "url": "https://www.dwtc.com/en/events/middle-east-composites-advanced-materials-expo-2027/",
+  "verified": true,
+  "match": [
+   "composites"
+  ]
+ },
+ {
+  "slug": "middle-east-foam-and-polyurethane-expo",
+  "name": "Middle East Foam & Polyurethane Expo",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-21",
+  "end": "2027-09-24",
+  "sector": "Köpük ve poliüretan",
+  "url": "https://www.dwtc.com/en/events/middle-east-foam-polyurethane-adhesives-sealants-and-bonding-expo-2027/",
+  "verified": true,
+  "match": [
+   "foam expo",
+   "polyurethane"
+  ]
+ },
+ {
+  "slug": "plastics-recycling-show-middle-east-and-africa",
+  "name": "Plastics Recycling Show Middle East & Africa",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-21",
+  "end": "2027-09-24",
+  "sector": "Plastik geri dönüşüm",
+  "url": "https://www.dwtc.com/en/events/plastics-recycling-show-middle-east-and-africa-2027/",
+  "verified": true,
+  "match": [
+   "plastics recycling"
+  ]
+ },
+ {
+  "slug": "sleep-expo-middle-east",
+  "name": "Sleep Expo Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-09-21",
+  "end": "2027-09-23",
+  "sector": "Yatak ve uyku ürünleri",
+  "url": "https://www.dwtc.com/en/events/sleep-expo-2027/",
+  "verified": true,
+  "match": [
+   "sleep expo"
+  ]
+ },
+ {
   "slug": "solar-and-storage-live-uk",
   "name": "Solar & Storage Live UK",
   "city": "Birmingham",
@@ -7485,6 +8403,23 @@
   ]
  },
  {
+  "slug": "cairo-inter-leather-eylul",
+  "name": "Cairo Inter Leather (Eylül)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2027-09-23",
+  "end": "2027-09-25",
+  "sector": "Deri ve ayakkabı",
+  "url": "http://www.pyramidsfair.com/fair/22nd-cairo-inter-leather-4249",
+  "verified": true,
+  "match": [
+   "inter leather",
+   "cairo leather"
+  ]
+ },
+ {
   "slug": "fdi-furnishings-and-design-istanbul",
   "name": "FDI - Furnishings and Design İstanbul",
   "city": "İstanbul",
@@ -7565,6 +8500,38 @@
   "verified": true,
   "match": [
    "pack expo"
+  ]
+ },
+ {
+  "slug": "saudi-fashiontex-expo",
+  "name": "Saudi Fashiontex Expo",
+  "city": "Cidde",
+  "country": "Suudi Arabistan",
+  "region": "me",
+  "start": "2027-09-27",
+  "end": "2027-09-30",
+  "sector": "Tekstil ve hazır giyim",
+  "url": "http://www.pyramidsfair.com/fair/5th-saudi-fashiontex-expo-6267",
+  "verified": true,
+  "match": [
+   "saudi fashiontex",
+   "fashiontex"
+  ]
+ },
+ {
+  "slug": "saudi-hometex-expo",
+  "name": "Saudi Hometex Expo",
+  "city": "Cidde",
+  "country": "Suudi Arabistan",
+  "region": "me",
+  "start": "2027-09-27",
+  "end": "2027-09-30",
+  "sector": "Ev tekstili",
+  "url": "http://www.pyramidsfair.com/fair/5th-saudi-hometex-expo-6269",
+  "verified": true,
+  "match": [
+   "saudi hometex",
+   "hometex"
   ]
  },
  {
@@ -7761,6 +8728,23 @@
   "verified": true,
   "match": [
    "expo 3d"
+  ]
+ },
+ {
+  "slug": "cairo-mother-and-la-pyjama-ekim",
+  "name": "Cairo Mother & La Pyjama (Ekim)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2027-10-01",
+  "end": "2027-10-03",
+  "sector": "Anne-bebek ve pijama tekstili",
+  "url": "http://www.pyramidsfair.com/fair/80th-cairo-motherla-pyjama-5256",
+  "verified": true,
+  "match": [
+   "mother & la pyjama",
+   "la pyjama"
   ]
  },
  {
@@ -7993,6 +8977,22 @@
   ]
  },
  {
+  "slug": "baby-and-kids-expo",
+  "name": "Baby & Kids Expo",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-10-07",
+  "end": "2027-10-09",
+  "sector": "Anne-bebek ürünleri",
+  "url": "https://www.dwtc.com/en/events/baby-kids-expo-2027/",
+  "verified": true,
+  "match": [
+   "baby & kids"
+  ]
+ },
+ {
   "slug": "bakery-plus",
   "name": "Bakery Plus",
   "city": "Ankara",
@@ -8006,6 +9006,57 @@
   "verified": true,
   "match": [
    "bakery plus"
+  ]
+ },
+ {
+  "slug": "cairo-fashiontex-ekim",
+  "name": "Cairo Fashiontex (Ekim)",
+  "city": "Kahire",
+  "country": "Mısır",
+  "venue": "Cairo International Convention Center",
+  "region": "me",
+  "start": "2027-10-07",
+  "end": "2027-10-09",
+  "sector": "Tekstil ve hazır giyim",
+  "url": "http://www.pyramidsfair.com/fair/84th-cairo-fashiontex-5257",
+  "verified": true,
+  "match": [
+   "cairo fashiontex",
+   "fashiontex"
+  ]
+ },
+ {
+  "slug": "iraq-buildex",
+  "name": "Iraq Buildex",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-10-07",
+  "end": "2027-10-10",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.iraqbuildex.com/",
+  "verified": true,
+  "match": [
+   "iraq buildex",
+   "buildex"
+  ]
+ },
+ {
+  "slug": "iraq-home-and-hotel-expo",
+  "name": "Iraq Home & Hotel Expo",
+  "city": "Bağdat",
+  "country": "Irak",
+  "venue": "Baghdad International Fair Grounds",
+  "region": "me",
+  "start": "2027-10-07",
+  "end": "2027-10-10",
+  "sector": "İç mimari ve otel ekipmanları",
+  "url": "https://www.iraqhomehotel.com/",
+  "verified": true,
+  "match": [
+   "iraq home & hotel",
+   "home & hotel expo"
   ]
  },
  {
@@ -8300,6 +9351,23 @@
   ]
  },
  {
+  "slug": "wetex-and-dubai-solar-show",
+  "name": "WETEX & Dubai Solar Show",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-10-19",
+  "end": "2027-10-21",
+  "sector": "Su, enerji ve çevre",
+  "url": "https://www.dwtc.com/en/events/water-energy-technology-and-environment-exhibition-wetex-2027/",
+  "verified": true,
+  "match": [
+   "wetex",
+   "dubai solar show"
+  ]
+ },
+ {
   "slug": "agrogreen-bursa",
   "name": "Agrogreen Bursa",
   "city": "Bursa",
@@ -8430,6 +9498,22 @@
   "verified": true,
   "match": [
    "high point"
+  ]
+ },
+ {
+  "slug": "euroshop-middle-east",
+  "name": "EuroShop Middle East",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai World Trade Centre",
+  "region": "me",
+  "start": "2027-10-25",
+  "end": "2027-10-27",
+  "sector": "Perakende ve mağaza ekipmanı",
+  "url": "https://www.dwtc.com/en/events/euroshop-middle-east-2027/",
+  "verified": true,
+  "match": [
+   "euroshop"
   ]
  },
  {
@@ -9653,6 +10737,24 @@
   "match": [
    "avrasya pencere",
    "avrasya kapı"
+  ]
+ },
+ {
+  "slug": "big-5-global",
+  "name": "Big 5 Global",
+  "city": "Dubai",
+  "country": "BAE",
+  "venue": "Dubai Exhibition Centre (Expo City Dubai)",
+  "region": "me",
+  "start": "2027-11-22",
+  "end": "2027-11-25",
+  "sector": "Yapı ve inşaat",
+  "url": "https://www.windowsdoorsandfacadeevent.com/",
+  "verified": true,
+  "match": [
+   "big 5 global",
+   "big 5",
+   "big5"
   ]
  },
  {
