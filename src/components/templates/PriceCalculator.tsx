@@ -76,9 +76,7 @@ export function PriceCalculator() {
           <p className="text-[12px] tracking-[0.12em] text-wawa-charcoal/60 uppercase">Yaklaşık bütçe · KDV hariç</p>
           <p className="mt-3 font-heading text-[28px] leading-tight tabular-nums text-wawa-charcoal sm:text-[34px]">{range ? euroRange(range) : "-"}</p>
           <p className="mt-3 text-[14px] leading-relaxed text-wawa-charcoal/65">
-            {area} m² · {SYSTEM_LABEL[system]} · {region === "tr" ? "Türkiye" : "yurt dışı"}. Planlama tahminidir, teklif değildir.
-            {system === "maxima" && region === "abroad" ? " Yurt dışında nakliye ve ekip giderleri ayrıca hesaplanır." : ""}
-          </p>
+            {area} m² · {SYSTEM_LABEL[system]} · {region === "tr" ? "Türkiye" : "yurt dışı"}. Planlama tahminidir, teklif değildir.          </p>
         </div>
         <Link href={`/teklif-al/?tur=stand&alan=${area}`} className="group inline-flex h-12 items-center justify-center gap-3 bg-wawa-charcoal px-6 text-[15px] text-white transition-colors hover:bg-black">
           Bu stand için teklif alın

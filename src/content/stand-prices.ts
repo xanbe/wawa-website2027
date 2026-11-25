@@ -1,6 +1,6 @@
 // Fuar standı fiyat aralıkları (€/m², KDV hariç). Teklif formu, yapay zeka stüdyosu, fiyat rehberi ve fuar sayfaları
-// bu tek kaynağı kullanır. Şimdilik 2026 piyasa aralıkları kullanılıyor; WAWA'nın kendi rakamları gelince yalnızca
-// buradaki sayılar güncellenir.
+// bu tek kaynağı kullanır. Ahşap ve Maxima aralıkları WAWA'nın kendi rakamlarıdır (Kasım 2026);
+// kongre standı aralığı henüz piyasa ortalamasıdır.
 
 export type StandSystem = "ahsap" | "maxima" | "kongre";
 export type PriceRegion = "tr" | "abroad";
@@ -9,8 +9,8 @@ export const PRICE_YEAR = 2026;
 
 // [en düşük, en yüksek] €/m²
 export const STAND_PRICES: Record<StandSystem, Record<PriceRegion, [number, number]>> = {
-  ahsap: { tr: [150, 400], abroad: [300, 500] },
-  maxima: { tr: [100, 150], abroad: [100, 150] },
+  ahsap: { tr: [200, 500], abroad: [400, 750] },
+  maxima: { tr: [80, 200], abroad: [150, 300] },
   kongre: { tr: [400, 550], abroad: [400, 550] },
 };
 
