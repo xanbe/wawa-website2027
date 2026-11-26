@@ -1,6 +1,15 @@
 import type { MetadataRoute } from "next";
 import { allPaths, canonicalOf, resolve } from "@/lib/routes";
 import { getPost, getProject } from "@/lib/content";
+import { FAIRS } from "@/content/fairs";
+import { CALENDAR_PATH, INTERIOR_PRICES_PATHS, STAND_PRICES_PATH, fairPathL, type PageLang } from "@/content/fair-meta";
+
+// Kendi rotası olan sayfalar (içerik dosyalarından değil): fuar takvimi ve fuar sayfaları, fiyat rehberleri (TR, EN, DE)
+const LANGS: PageLang[] = ["tr", "en", "de"];
+const ROUTE_PAGES = [
+  ...LANGS.flatMap((l) => [CALENDAR_PATH[l], STAND_PRICES_PATH[l], INTERIOR_PRICES_PATHS[l]]),
+  ...LANGS.flatMap((l) => FAIRS.map((f) => fairPathL(l, f.slug))),
+];
 
 const BASE = "https://wawainteriors.com";
 
@@ -11,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const r = resolve(p);
     return !r || canonicalOf(p, r) === p;
   };
-  const paths = ["/", "/butce-planlama/", ...allPaths().filter((p) => !/\/page\/\d+\/$/.test(p) && isCanonical(p))];
+  const paths = ["/", "/butce-planlama/", ...ROUTE_PAGES, ...allPaths().filter((p) => !/\/page\/\d+\/$/.test(p) && isCanonical(p))];
   return paths.map((p) => {
     const post = getPost(p);
     const project = getProject(p);
