@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { useTurnstile } from "@/components/ui/useTurnstile";
 
 const TEXT = {
   tr: {
@@ -140,15 +141,18 @@ export function ContactForm({ lang, kind, tone = "light" }: { lang: Lang; kind: 
   const S = STYLES[tone];
   const { input, label } = S;
   const [state, setState] = useState<"idle" | "busy" | "done" | "error" | "tooMany">("idle");
+  const { ref: humanRef, getToken: humanToken } = useTurnstile(lang);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
     setState("busy");
+    const turnstile = await humanToken();
     const res = await fetch("/api/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, kind, lang }),
+      // notice: aydınlatma metni formun altında gösterildi
+      body: JSON.stringify({ ...data, kind, lang, notice: true, turnstile }),
     }).catch(() => null);
     setState(res?.ok ? "done" : res?.status === 429 ? "tooMany" : "error");
   };
@@ -224,6 +228,7 @@ export function ContactForm({ lang, kind, tone = "light" }: { lang: Lang; kind: 
           className={`mt-2 ${S.area}`}
         />
       </label>
+      <div ref={humanRef} className="empty:hidden sm:col-span-2" />
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
         <p className={S.note}>
           {T.kvkk}{" "}

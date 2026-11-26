@@ -58,12 +58,15 @@ export function PostForm({ path, canTranslate, onClose, onSaved }: { path: strin
   const [auto, setAuto] = useState(true);
   const [createLangs, setCreateLangs] = useState(false);
   const [blobs] = useState<Blob[]>(() => []);
+  // Açıldığı andaki sürüm: kayıtta başkası bu arada değiştirdiyse uyarı verilir
+  const [rev, setRev] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!path) return;
-    get<{ item: PostItem; langs: LangState }>(`post=${encodeURIComponent(path)}`)
-      .then(({ item, langs }) => {
+    get<{ item: PostItem; langs: LangState; rev?: string }>(`post=${encodeURIComponent(path)}`)
+      .then(({ item, langs, rev }) => {
+        setRev(rev ?? null);
         setF({ title: item.title, description: item.seo.description ?? "", html: item.html, featuredImage: item.featuredImage ?? "", draft: Boolean(item.draft) });
         setLangs(langs);
       })
@@ -137,7 +140,7 @@ export function PostForm({ path, canTranslate, onClose, onSaved }: { path: strin
           Taslak (sitede görünmesin)
         </label>
       </div>
-      <SaveBar busy={busy} error={error} label={path ? "Kaydet" : f.draft ? "Taslak olarak kaydet" : "Yayınla"} onSave={() => act({ op: "post.save", path, data: f, langs: manual, translate: auto, createLangs, blobs }, path ? "Yazı güncellendi." : f.draft ? "Taslak kaydedildi." : "Yazı yayınlandı.")}>
+      <SaveBar busy={busy} error={error} label={path ? "Kaydet" : f.draft ? "Taslak olarak kaydet" : "Yayınla"} onSave={() => act({ op: "post.save", path, base: rev, data: f, langs: manual, translate: auto, createLangs, blobs }, path ? "Yazı güncellendi." : f.draft ? "Taslak kaydedildi." : "Yazı yayınlandı.")}>
         {path && (
           <button type="button" disabled={busy} onClick={() => window.confirm(`"${f.title}" silinsin mi? Dil sürümleri de kalkar. Gerekirse Geçmiş'ten geri alınabilir.`) && act({ op: "post.delete", path }, "Yazı silindi.")} className={`${btn} text-[#B42318] hover:underline`}>
             <Trash2 className="h-4 w-4" /> Yazıyı sil

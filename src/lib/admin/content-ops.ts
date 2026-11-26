@@ -2,7 +2,8 @@
 // Her içerik kendi JSON dosyasındadır; panel dosyayı okur, gelen veriyi şemaya göre temizler ve kaydeder.
 // Metinler dillere göre ayrı kayıtlardır (TR, EN, DE); "Türkçeden çevir" yapılandırılmış içeriği aynı yapıda çevirir.
 import { getLegacyPage, getService, categories } from "@/lib/content";
-import { PANEL_PREFIX, readText, transact } from "./store";
+import { PANEL_PREFIX, UPLOAD_RE, readText, transact, type Change } from "./store";
+import { checkBlobToken } from "./auth";
 import { TRANSLATE_CONFIGURED } from "./translate";
 
 export const LANDINGS_FILE = "src/content/landings.json";
@@ -35,10 +36,24 @@ const img = (v: unknown) => {
   const s = str(v, 300);
   return IMG.test(s) ? s : "";
 };
-const href = (v: unknown) => {
+// Bağlantı: site içi yol ("//" ile başlayan başka siteye giden adres değil) ya da https adresi
+export const href = (v: unknown) => {
   const s = str(v, 300);
-  return /^\/[\w\-./%#?=&]*$/.test(s) || /^https:\/\//.test(s) ? s : "";
+  return /^\/(?!\/)[\w\-./%#?=&]*$/.test(s) || /^https:\/\/[\w.-]+(\/[^\s"'<>]*)?$/.test(s) ? s : "";
 };
+// Video: YouTube kimliği ya da bu sitenin Vercel Blob deposundaki MP4/WebM
+// Depo adresi BLOB_READ_WRITE_TOKEN'dan çıkarılır (vercel_blob_rw_<depo>_...); başka bir depoya bağlantı kabul edilmez
+export function blobHost() {
+  const id = (process.env.BLOB_READ_WRITE_TOKEN ?? "").match(/^vercel_blob_rw_([a-z0-9]+)_/i)?.[1];
+  return id ? `${id.toLowerCase()}.public.blob.vercel-storage.com` : "";
+}
+export function videoUrl(s: string) {
+  if (!/^https:\/\/[\w.-]+\.public\.blob\.vercel-storage\.com\/videos\/[\w\-./%]+\.(mp4|webm)$/i.test(s)) return "";
+  const host = blobHost();
+  return !host || new URL(s).hostname === host ? s : "";
+}
+// SSS cevapları düz metindir (etiket kabul edilmez)
+const answer = (v: unknown) => str(v, 1500).replace(/<[^>]*>?/g, "").replace(/[<>]/g, "");
 const strs = (v: unknown, max: number, n: number) => (Array.isArray(v) ? v.map((x) => str(x, max)).filter(Boolean).slice(0, n) : []);
 const tt = (v: unknown) => arr(v).map((x) => ({ title: str(x.title, 160), text: str(x.text, 1200) })).filter((x) => x.title).slice(0, 24);
 const catPaths = new Set(categories.filter((c) => c.kind === "portfolio-category" && c.lang === "tr").map((c) => c.path));
@@ -75,7 +90,7 @@ function landing(v: Obj) {
   if (!out.title || !(out.heroImages as string[]).length) fail("Başlık ve en az bir açılış görseli gerekli.");
   if (str(v.h1, 120)) out.h1 = str(v.h1, 120);
   const video = str(v.heroVideo, 400);
-  if (/^[\w-]{11}$/.test(video) || /^https:\/\/[\w.-]+\.public\.blob\.vercel-storage\.com\/[\w\-./%]+\.(mp4|webm)$/i.test(video)) out.heroVideo = video;
+  if (/^[\w-]{11}$/.test(video) || videoUrl(video)) out.heroVideo = video;
   const offerings = arr(v.offerings)
     .map((o) => ({ title: str(o.title, 120), text: str(o.text, 600), image: img(o.image), ...(href(o.href) ? { href: href(o.href) } : {}) }))
     .filter((o) => o.title && o.image)
@@ -116,13 +131,18 @@ function extraPage(v: Obj, existing: Obj) {
   if (!out.title || !out.image || !(out.sections as unknown[]).length) fail("Başlık, görsel ve en az bir bölüm gerekli.");
   Object.assign(out, optional(strs(v.projectCategories, 200, 10).filter((c) => catPaths.has(c)), "projectCategories"));
   Object.assign(out, optional(strs(v.projectPaths, 200, 24).filter((p) => /^\/portfolio\/[\w-]+\/$/.test(p)), "projectPaths"));
-  const faq = arr(v.faq).map((f) => ({ q: str(f.q, 240), a: str(f.a, 1500) })).filter((f) => f.q && f.a).slice(0, 16);
+  const faq = qa(v.faq);
   Object.assign(out, optional(faq, "faq"));
   out.seo = { title: str(seo.title, 120) || `${out.title} | WAWA Interiors`, description: str(seo.description, 300) };
   return out;
 }
 
-const qa = (v: unknown) => arr(v).map((f) => ({ q: str(f.q, 240), a: str(f.a, 1500) })).filter((f) => f.q && f.a).slice(0, 16);
+function qa(v: unknown) {
+  return arr(v)
+    .map((f) => ({ q: answer(f.q).slice(0, 240), a: answer(f.a) }))
+    .filter((f) => f.q && f.a)
+    .slice(0, 16);
+}
 function prices(v: Obj, old: Obj) {
   const stand = obj(v.stand);
   const ranges = obj(stand.ranges);
@@ -253,7 +273,7 @@ export async function contentGet(q: (k: string) => string | null) {
   const lp = q("landing");
   if (lp) {
     const landings = parse<Record<string, Obj>>(await readText(LANDINGS_FILE)).value;
-    if (!landings[lp]) fail("Sayfa bulunamadı.", 404);
+    if (!Object.hasOwn(landings, lp)) fail("Sayfa bulunamadı.", 404);
     return { item: landings[lp], path: lp };
   }
   const ep = q("extra");
@@ -274,7 +294,7 @@ export async function contentPost(op: string, body: Obj): Promise<Obj | null> {
     const path = str(body.path, 300);
     await transact([LANDINGS_FILE], (t) => {
       const { value, f } = parse<Record<string, Obj>>(t[LANDINGS_FILE]);
-      if (!value[path]) fail("Sayfa bulunamadı.", 404);
+      if (!/^\/(en\/|de\/)?[\w\-/]+\/$/.test(path) || !Object.hasOwn(value, path)) fail("Sayfa bulunamadı.", 404);
       value[path] = keepOrder(landing(obj(body.item)), value[path]);
       return { changes: [{ path: LANDINGS_FILE, text: dump(value, f) }, ...blobChanges(body.blobs)], message: `${PANEL_PREFIX} hizmet sayfası güncellendi (${path})`, result: null };
     });
@@ -339,19 +359,23 @@ export async function contentPost(op: string, body: Obj): Promise<Obj | null> {
   return null;
 }
 
-// Yeni yüklenen görsellerin depo kayıtları (route.ts ile aynı kural)
-function blobChanges(v: unknown) {
+// Yeni yüklenen görsellerin depo kayıtları: yalnızca bu panelin yükleme ucunun imzaladığı yol + içerik kimliği kabul edilir
+export function blobChanges(v: unknown): Change[] {
   return arr(v)
-    .map((b) => ({ path: str(b.path, 300), sha: str(b.sha, 64) }))
-    .filter((b) => b.path && /^[0-9a-f]{40}$/.test(b.sha));
+    .slice(0, 200)
+    .map((b) => ({ path: str(b.path, 300), sha: str(b.sha, 64), token: str(b.token, 100) }))
+    .filter((b) => UPLOAD_RE.test(b.path) && /^[0-9a-f]{40}$/.test(b.sha) && checkBlobToken(b.path, b.sha, b.token))
+    .map(({ path, sha }) => ({ path, sha }));
 }
 
 // ---------------------------------------------------------------- yapılandırılmış çeviri
 // Çevrilmeyecek alanlar: adresler, görseller, kimlikler
 const SKIP = new Set(["href", "image", "heroImages", "heroVideo", "projectCategories", "projectPaths", "path", "key", "lang", "group", "src", "slug"]);
+// Bir çeviri isteğinde en fazla 400 metin / 80.000 karakter (model maliyeti sınırlı kalsın)
+export const TEXT_LIMIT = { count: 400, chars: 80_000 };
 export function collectText(v: unknown, out: string[] = []): string[] {
   if (typeof v === "string") {
-    if (v.trim()) out.push(v);
+    if (v.trim()) out.push(v.slice(0, 5000));
   } else if (Array.isArray(v)) v.forEach((x) => collectText(x, out));
   else if (v && typeof v === "object") for (const [k, x] of Object.entries(v)) if (!SKIP.has(k)) collectText(x, out);
   return out;

@@ -118,12 +118,15 @@ export function ProjectForm({ path, categories, canTranslate, onClose, onSaved }
   const [dirty, setDirty] = useState<Partial<Record<Lang, boolean>>>({});
   const [auto, setAuto] = useState(true);
   const [blobs] = useState<Blob[]>(() => []);
+  // Açıldığı andaki sürüm: kayıtta başkası bu arada değiştirdiyse uyarı verilir
+  const [rev, setRev] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!path) return;
-    get<{ item: ProjectItem; langs: LangState }>(`project=${encodeURIComponent(path)}`)
-      .then(({ item, langs }) => {
+    get<{ item: ProjectItem; langs: LangState; rev?: string }>(`project=${encodeURIComponent(path)}`)
+      .then(({ item, langs, rev }) => {
+        setRev(rev ?? null);
         setF({
           title: item.title,
           category: item.meta?.["Kategori"] ?? "",
@@ -214,7 +217,7 @@ export function ProjectForm({ path, categories, canTranslate, onClose, onSaved }
         <input type="checkbox" checked={f.draft} onChange={(e) => setF({ ...f, draft: e.target.checked })} className="h-4 w-4 accent-[#1f1f1f]" />
         Taslak (sitede görünmesin)
       </label>
-      <SaveBar busy={busy} error={error} onSave={() => act({ op: "project.save", path, data: f, langs: manual, translate: auto, blobs }, path ? "Proje güncellendi." : "Proje eklendi.")}>
+      <SaveBar busy={busy} error={error} onSave={() => act({ op: "project.save", path, base: rev, data: f, langs: manual, translate: auto, blobs }, path ? "Proje güncellendi." : "Proje eklendi.")}>
         {path && (
           <button
             type="button"

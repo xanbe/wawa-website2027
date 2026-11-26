@@ -52,6 +52,9 @@ const slug = (text: string) =>
     .replace(/^-|-$/g, "")
     .slice(0, 60);
 
+// SSS cevapları düz metindir: HTML olarak yorumlanmaz
+const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
 function splitDetails(html: string) {
   const videoIds: string[] = [];
   const clean = html.replace(/<div data-youtube="([\w-]{11})"><\/div>/g, (_m, id: string) => {
@@ -416,7 +419,7 @@ export function LandingTemplate(props: LandingProps) {
         intro={details.intro}
         hasDetails={details.items.length > 0}
         image={(images[2] ?? images[0])?.src}
-        items={[...details.items, ...faq.map((f, i) => ({ id: `sss-${i + 1}`, q: f.q, html: `<p>${f.a}</p>` }))]}
+        items={[...details.items, ...faq.map((f, i) => ({ id: `sss-${i + 1}`, q: f.q, html: `<p>${escapeHtml(f.a)}</p>` }))]}
       />
       {/* Soru biçimindeki SSS maddeleri arama motorlarına FAQPage olarak da verilir (eski sitedeki SSS'ler) */}
       {faq.some((f) => f.q.trim().endsWith("?")) && (

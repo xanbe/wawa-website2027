@@ -16,8 +16,9 @@ export const POSTS_FILE = "src/content/posts.json";
 export const HOME_FILE = "src/content/home.json";
 export const VIDEOS_FILE = "src/content/videos.json";
 // Faz 2: hizmet açılışları, sektör/stand sayfaları, fiyatlar, süreç adımları, fuar takvimi (content-ops.ts)
-const DATA_FILES = [PROJECTS_FILE, POSTS_FILE, HOME_FILE, VIDEOS_FILE, "src/content/landings.json", "src/content/extra-pages.json", "src/content/stand-prices.json", "src/content/interior-prices.json", "src/content/process.json", "src/content/fairs.json"];
-export const UPLOAD_RE = /^public\/wp-content\/uploads\/\d{4}\/\d{2}\/[a-z0-9][a-z0-9-]{0,80}\.(jpg|png|webp|svg)$/;
+export const DATA_FILES = [PROJECTS_FILE, POSTS_FILE, HOME_FILE, VIDEOS_FILE, "src/content/landings.json", "src/content/extra-pages.json", "src/content/stand-prices.json", "src/content/interior-prices.json", "src/content/process.json", "src/content/fairs.json"];
+// Panelden yüklenebilen görseller: yalnızca JPG, PNG, WebP (SVG betik taşıyabilir, yüklenemez)
+export const UPLOAD_RE = /^public\/wp-content\/uploads\/\d{4}\/\d{2}\/[a-z0-9][a-z0-9-]{0,80}\.(jpg|png|webp)$/;
 // Kütüphanede listelenen görsel klasörleri; silme yalnızca yükleme klasöründe yapılabilir
 export const MEDIA_DIRS = ["public/wp-content/uploads/", "public/images/", "public/logos/"];
 const MEDIA_RE = /\.(jpe?g|png|webp|svg|gif|avif)$/i;
@@ -72,11 +73,18 @@ export async function putBinary(file: string, base64: string): Promise<{ path: s
 }
 
 // text: yeni içerik, sha: önceden yüklenmiş içerik (görsel), remove: dosyayı sil
-export type Change = { path: string; text?: string; sha?: string; remove?: boolean };
+// internal: sunucunun kendi ürettiği değişiklik (geri alma); istemciden gelen kayıtlar hiçbir zaman internal değildir
+export type Change = { path: string; text?: string; sha?: string; remove?: boolean; internal?: boolean };
+
+// Kayda girebilecek değişiklikler:
+//  - metin: yalnızca içerik dosyaları
+//  - içerik kimliği (sha): yalnızca yükleme klasörüne yeni görsel; geri almada önceki dosya hâli
+//  - silme: yalnızca yükleme klasöründeki görseller
+const permitted = (c: Change) =>
+  c.remove ? deletable(c.path) : c.text !== undefined ? DATA_FILES.includes(c.path) : c.sha ? UPLOAD_RE.test(c.path) || (c.internal === true && (allowed(c.path) || deletable(c.path))) : false;
 
 async function writeCommit(changes: Change[], message: string, parent: string) {
-  // Silinen eski bir yüklemeyi geri getirirken (sha ile) yükleme klasöründeki her görsel adına izin verilir
-  const files = changes.filter((c) => (c.remove ? deletable(c.path) : (allowed(c.path) && (c.text !== undefined || c.sha)) || (Boolean(c.sha) && deletable(c.path))));
+  const files = changes.filter(permitted);
   if (!files.length) return;
   const head = await gh<{ tree: { sha: string } }>(`/git/commits/${parent}`);
   const tree = await gh<{ sha: string }>("/git/trees", {
@@ -161,6 +169,8 @@ export async function history(): Promise<HistoryItem[]> {
 // Aynı dosya daha sonra yeniden değiştiyse geri alma reddedilir (sonraki değişiklik kaybolmasın).
 export async function revert(sha: string): Promise<string> {
   if (storeMode() !== "github") throw new Error("Geri alma yalnızca canlı sitede çalışır.");
+  // Yalnızca dalın son panel kayıtlarından biri geri alınabilir (başka daldaki ya da eski bir kayıt değil)
+  if (!(await history()).some((h) => h.sha === sha)) throw new Error("Geri alınacak kayıt bulunamadı.");
   const c = await gh<{ commit: { message: string }; parents: { sha: string }[]; files?: { filename: string; status: string }[] }>(`/commits/${sha}`);
   if (!c.commit.message.startsWith(PANEL_PREFIX)) throw new Error("Yalnızca panelden yapılan değişiklikler geri alınabilir.");
   const parent = c.parents[0]?.sha;
@@ -178,7 +188,7 @@ export async function revert(sha: string): Promise<string> {
       else {
         // Önceki içerik (görsel ya da metin) blob kimliğiyle geri yazılır
         const prev = await gh<{ sha: string }>(`/contents/${f.filename}?ref=${parent}`);
-        changes.push({ path: f.filename, sha: prev.sha });
+        changes.push({ path: f.filename, sha: prev.sha, internal: true });
       }
     }
     return { changes, message: `${PANEL_PREFIX} geri alındı (${title})`, result: undefined };

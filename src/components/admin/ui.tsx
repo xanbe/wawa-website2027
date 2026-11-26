@@ -5,7 +5,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowDown, ArrowLeft, ArrowUp, Bold, Heading2, ImagePlus, Images, Italic, Languages, Link2, List, Loader2, Plus, Search, Trash2, X } from "lucide-react";
 
 export type Img = { src: string; alt: string };
-export type Blob = { path: string; sha: string };
+// token: sunucunun yükleme anında verdiği imza; kayıtta yalnızca imzalı yüklemeler kabul edilir
+export type Blob = { path: string; sha: string; token?: string };
 export type Text = { title: string; description: string; html: string };
 export type Lang = "en" | "de";
 export const LANGS: Lang[] = ["en", "de"];

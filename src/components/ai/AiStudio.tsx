@@ -24,6 +24,7 @@ import {
   type StudioLang,
 } from "./studio-data";
 import type { Moves, SceneApi, View } from "./StudioScene";
+import { useTurnstile } from "@/components/ui/useTurnstile";
 import { estimate, euroRange } from "@/content/stand-prices";
 
 const StudioScene = dynamic(() => import("./StudioScene"), {
@@ -70,11 +71,11 @@ const SCENE_T = {
     offNote: "Görsel üretimi şu an kapalı. Ölçülerinizle doğrudan teklif alabilirsiniz.",
     sendCode: "Doğrulama kodu gönder",
     sending: "Kod gönderiliyor…",
-    codeLabel: "Telefonunuza gelen 4 haneli kod",
+    codeLabel: "Telefonunuza gelen 6 haneli kod",
     codeSent: "Kodu telefonunuza SMS ile gönderdik.",
     resend: "Kodu yeniden gönder",
-    codeNeed: "Telefonunuza gelen 4 haneli kodu girin.",
-    testHint: "Test modu: SMS gönderilmez, kod 1234.",
+    codeNeed: "Telefonunuza gelen 6 haneli kodu girin.",
+    testHint: "Test modu: SMS gönderilmez, kod 123456.",
     verified: "Telefonunuz doğrulandı.",
     free: "Alanınızın ölçülerini ve yüksekliğini girin; yapay zeka bu ölçülere sadık kalarak sektörünüze uygun tasarımı kendisi kurar.",
     logo: "Marka logosu (isteğe bağlı)",
@@ -102,11 +103,11 @@ const SCENE_T = {
     offNote: "Image generation is currently off. You can request an offer with your dimensions.",
     sendCode: "Send verification code",
     sending: "Sending code…",
-    codeLabel: "4-digit code sent to your phone",
+    codeLabel: "6-digit code sent to your phone",
     codeSent: "We sent the code to your phone by SMS.",
     resend: "Resend code",
-    codeNeed: "Enter the 4-digit code sent to your phone.",
-    testHint: "Test mode: no SMS is sent, the code is 1234.",
+    codeNeed: "Enter the 6-digit code sent to your phone.",
+    testHint: "Test mode: no SMS is sent, the code is 123456.",
     verified: "Your phone is verified.",
     free: "Enter the size and height of your space; the AI keeps to those dimensions and designs freely for your industry.",
     logo: "Brand logo (optional)",
@@ -134,11 +135,11 @@ const SCENE_T = {
     offNote: "Die Bilderstellung ist derzeit aus. Sie können mit Ihren Maßen ein Angebot anfordern.",
     sendCode: "Bestätigungscode senden",
     sending: "Code wird gesendet…",
-    codeLabel: "4-stelliger Code auf Ihrem Telefon",
+    codeLabel: "6-stelliger Code auf Ihrem Telefon",
     codeSent: "Wir haben den Code per SMS gesendet.",
     resend: "Code erneut senden",
-    codeNeed: "Bitte den 4-stelligen Code eingeben.",
-    testHint: "Testmodus: Es wird keine SMS gesendet, der Code ist 1234.",
+    codeNeed: "Bitte den 6-stelligen Code eingeben.",
+    testHint: "Testmodus: Es wird keine SMS gesendet, der Code ist 123456.",
     verified: "Ihre Telefonnummer ist bestätigt.",
     free: "Geben Sie Fläche und Höhe an; die KI hält diese Maße ein und entwirft frei, passend zu Ihrer Branche.",
     logo: "Markenlogo (optional)",
@@ -281,6 +282,11 @@ async function shrink(url: string, max = 1600): Promise<string> {
   return c.toDataURL("image/jpeg", 0.88);
 }
 
+// Sunucuya giden brif (referans görseli ve ekipman listesi gönderilmez)
+function payloadBriefOf(brief: StudioBrief, logo: boolean) {
+  return { ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo } };
+}
+
 // ---------------------------------------------------------------- Stüdyo
 export function AiStudio({
   lang,
@@ -311,6 +317,9 @@ export function AiStudio({
   const [result, setResult] = useState<{ preview: string | null; sealed: string | null; image: string | null; test: boolean } | null>(null);
   const [unlockOpen, setUnlockOpen] = useState(false);
   const lastSketch = useRef<string | null>(null);
+  // Önizlemenin üretildiği brif: mühür bu brife bağlıdır, açarken aynısı gönderilir
+  const lastBrief = useRef<ReturnType<typeof payloadBriefOf> | null>(null);
+  const { ref: humanRef, getToken: humanToken } = useTurnstile(lang);
   const [show, setShow] = useState<"3d" | "render">("3d");
   const [view, setView] = useState<View>("persp");
   const S = SCENE_T[lang];
@@ -362,7 +371,8 @@ export function AiStudio({
     setError(null);
     if (!leadValid()) return setError(C.errors.invalid);
     setOtp((o) => ({ ...o, busy: true }));
-    const res = await fetch("/api/fee/send-code/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ phone: lead.phone }) }).catch(() => null);
+    const turnstile = await humanToken();
+    const res = await fetch("/api/fee/send-code/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ phone: lead.phone, consent: lead.consent, turnstile }) }).catch(() => null);
     const json = (res ? await res.json().catch(() => ({})) : {}) as { token?: string; testMode?: boolean; error?: string };
     if (!res?.ok || !json.token) {
       setOtp((o) => ({ ...o, busy: false }));
@@ -371,10 +381,10 @@ export function AiStudio({
     setOtp({ token: json.token, code: "", sent: true, test: Boolean(json.testMode), busy: false });
   }
 
-  const payloadBrief = () => ({ ...brief, refSrc: null, stand: { ...brief.stand, elements: [], logo: Boolean(logo) } });
+  const payloadBrief = () => payloadBriefOf(brief, Boolean(logo));
   type Reply = { image?: string | null; preview?: string | null; sealed?: string | null; test?: boolean; error?: string; message?: string; pass?: string };
   const errorText = (j: Reply) =>
-    j.error === "code" ? (j.message ?? S.codeNeed) : j.error === "too_many_preview" ? S.limitPreview : j.error === "expired" ? S.expired : j.error === "too_many" ? C.errors.too_many : j.error === "invalid" ? C.errors.invalid : C.errors.failed;
+    j.error === "code" ? (j.message ?? S.codeNeed) : j.error === "bot" ? C.errors.failed : j.error === "too_many_preview" ? S.limitPreview : j.error === "expired" ? S.expired : j.error === "too_many" ? C.errors.too_many : j.error === "invalid" ? C.errors.invalid : C.errors.failed;
   async function post(body: Record<string, unknown>) {
     const res = await fetch("/api/ai/render/", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ lang, website: lead.website, ...body }) }).catch(() => null);
     const json = ((res ? await res.json().catch(() => ({})) : {}) ?? {}) as Reply;
@@ -394,8 +404,9 @@ export function AiStudio({
     setStatus("loading");
     try {
       const sketch = await captureSketch();
-      const auth = pass ? { pass, name: lead.name, email: lead.email, consent: lead.consent } : {};
-      const { ok, json } = await post({ brief: payloadBrief(), sketch, ...auth });
+      const auth = pass ? { pass, name: lead.name, email: lead.email, consent: lead.consent } : { turnstile: await humanToken() };
+      lastBrief.current = payloadBrief();
+      const { ok, json } = await post({ brief: lastBrief.current, sketch, ...auth });
       if (!ok) {
         setStatus("error");
         setError(errorText(json));
@@ -415,14 +426,14 @@ export function AiStudio({
   async function unlock() {
     setError(null);
     if (!leadValid()) return setError(C.errors.invalid);
-    if (!pass && otp.code.length !== 4) return setError(S.codeNeed);
+    if (!pass && otp.code.length !== 6) return setError(S.codeNeed);
     setStatus("loading");
     try {
       const auth = pass ? { pass } : { token: otp.token, code: otp.code };
-      const common = { brief: payloadBrief(), name: lead.name, email: lead.email, consent: lead.consent, ...auth };
+      const common = { name: lead.name, email: lead.email, consent: lead.consent, ...auth };
       const { ok, json } = result?.sealed
-        ? await post({ op: "unlock", sealed: result.sealed, sketch: lastSketch.current, ...common })
-        : await post({ sketch: await captureSketch(), ...common });
+        ? await post({ op: "unlock", sealed: result.sealed, sketch: lastSketch.current, brief: lastBrief.current ?? payloadBrief(), ...common })
+        : await post({ sketch: await captureSketch(), brief: payloadBrief(), ...common });
       if (!ok) {
         setStatus(result ? "done" : "error");
         setError(errorText(json));
@@ -859,10 +870,10 @@ export function AiStudio({
                               <input
                                 inputMode="numeric"
                                 autoComplete="one-time-code"
-                                maxLength={4}
+                                maxLength={6}
                                 autoFocus
                                 value={otp.code}
-                                onChange={(e) => setOtp((o) => ({ ...o, code: e.target.value.replace(/\D/g, "").slice(0, 4) }))}
+                                onChange={(e) => setOtp((o) => ({ ...o, code: e.target.value.replace(/\D/g, "").slice(0, 6) }))}
                                 className={`mt-1.5 h-12 w-40 border bg-white px-4 text-[20px] tracking-[0.4em] tabular-nums text-wawa-charcoal outline-none focus:border-wawa-charcoal ${LINE}`}
                               />
                             </label>
@@ -895,6 +906,7 @@ export function AiStudio({
                     </form>
                 </div>
               )}
+              <div ref={humanRef} className="mt-4 empty:hidden" />
               {error && (
                 <p role="alert" className="mt-4 text-[14px] text-[#B42318]">
                   {error}

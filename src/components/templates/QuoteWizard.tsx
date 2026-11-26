@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Check, Loader2 } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { useTurnstile } from "@/components/ui/useTurnstile";
 import type { SvcLang } from "./service-sections";
 import { FairCombobox } from "./FairCombobox";
 import type { FairPick } from "@/content/fairs";
@@ -212,6 +213,7 @@ export function QuoteWizard({
   const [a, setA] = useState({ fair: interior && space !== undefined && space >= 0 ? (INTERIOR[k].spaces[space] ?? "") : "", undecided: false, area: "", type: "", system: "", name: "", company: "", phone: "", email: "", website: "" });
   const [error, setError] = useState<string | null>(null);
   const [state, setState] = useState<"idle" | "busy" | "done">("idle");
+  const { ref: humanRef, getToken: humanToken } = useTurnstile(lang);
   const set = (p: Partial<typeof a>) => {
     setA((v) => ({ ...v, ...p }));
     setError(null);
@@ -235,10 +237,11 @@ export function QuoteWizard({
         ? [`Hızlı teklif (${service})`, `Mekân türü: ${fair}`, `Alan: ${a.area} m²`, `Mekânın durumu: ${a.type || "-"}`, `Hizmet kapsamı: ${a.system}`]
         : [`Hızlı teklif (${service})`, `Fuar: ${fair}`, `Alan: ${a.area} m²`, `Stand tipi: ${a.type || "-"}`, `Stand sistemi: ${a.system}`]
     ).join("\n");
+    const turnstile = await humanToken();
     const res = await fetch("/api/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ kind: "offer", lang, name: a.name, company: a.company, phone: a.phone, email: a.email, service, area: a.area, location: fair, message, website: a.website }),
+      body: JSON.stringify({ kind: "offer", lang, name: a.name, company: a.company, phone: a.phone, email: a.email, service, area: a.area, location: fair, message, website: a.website, notice: true, turnstile }),
     }).catch(() => null);
     if (res?.ok) setState("done");
     else {
@@ -385,6 +388,7 @@ export function QuoteWizard({
                 <input aria-label={t.phone} placeholder={`${t.phone} *`} type="tel" inputMode="tel" autoComplete="tel" maxLength={30} value={a.phone} onChange={(e) => set({ phone: e.target.value })} className={field} />
                 <input aria-label={t.email} placeholder={t.email} type="email" autoComplete="email" maxLength={160} value={a.email} onChange={(e) => set({ email: e.target.value })} className={field} />
                 <input tabIndex={-1} autoComplete="off" aria-hidden className="hidden" value={a.website} onChange={(e) => set({ website: e.target.value })} />
+                <div ref={humanRef} className="empty:hidden sm:col-span-2" />
                 <p className="text-[12px] leading-relaxed text-white/50 sm:col-span-2">
                   {t.kvkk}{" "}
                   <Link href={privacyHref} target="_blank" className="underline underline-offset-2 hover:text-white">

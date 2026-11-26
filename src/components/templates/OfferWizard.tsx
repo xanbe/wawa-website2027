@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowLeft, ArrowRight, Check, Loader2, MessageCircle, Paperclip, Phone, Presentation, Sofa, X } from "lucide-react";
 import type { Lang } from "@/lib/i18n";
+import { useTurnstile } from "@/components/ui/useTurnstile";
 import { contactInfo } from "@/components/layout/navigation";
 import type { FairPick } from "@/content/fairs";
 import { FairCombobox } from "./FairCombobox";
@@ -314,6 +315,8 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: F
   const [a, setA] = useState(EMPTY);
   const [error, setError] = useState<string | null>(null);
   const [state, setState] = useState<"idle" | "busy" | "done">("idle");
+  const { ref: humanRef, getToken: humanToken } = useTurnstile(lang);
+  const { ref: meetRef, getToken: meetToken } = useTurnstile(lang);
   const top = useRef<HTMLDivElement>(null);
   const [files, setFiles] = useState<Attach[]>([]);
   const [meet, setMeet] = useState<{ slot: string; state: "idle" | "busy" | "sent" | "error" }>({ slot: "", state: "idle" });
@@ -409,11 +412,12 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: F
   const submit = async () => {
     if (!a.name.trim() || a.phone.replace(/\D/g, "").length < 10 || !a.consent) return setError(t.needContact);
     setState("busy");
+    const turnstile = await humanToken();
     const message = [...rows.map(([l, v]) => `${l}: ${v}`), a.prefer && `${t.prefer.replace(/\?$/, "")}: ${a.prefer}`, a.note && `\n${a.note}`].filter(Boolean).join("\n");
     const res = await fetch("/api/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ kind: "offer", lang, name: a.name, company: a.company, phone: a.phone, email: a.email, service: kind ? T.tr.kinds[kind].title : "", area: a.area || a.areaRange, location: a.location || a.fair, date: a.fairDate || a.when, message, website: a.website, files: files.map((x) => ({ name: x.name, data: x.data })) }),
+      body: JSON.stringify({ kind: "offer", lang, name: a.name, company: a.company, phone: a.phone, email: a.email, service: kind ? T.tr.kinds[kind].title : "", area: a.area || a.areaRange, location: a.location || a.fair, date: a.fairDate || a.when, message, website: a.website, consent: a.consent, turnstile, files: files.map((x) => ({ name: x.name, data: x.data })) }),
     }).catch(() => null);
     if (res?.ok) {
       setState("done");
@@ -520,16 +524,18 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: F
                 ))}
               </div>
               {meet.state === "error" && <p className="mt-3 text-[14px] text-[#B42318]">{t.meetError}</p>}
+              <div ref={meetRef} className="mt-3 empty:hidden" />
               <div className="mt-5 flex flex-wrap gap-2">
                 <button
                   type="button"
                   disabled={!meet.slot || meet.state === "busy"}
                   onClick={async () => {
                     setMeet((m) => ({ ...m, state: "busy" }));
+                    const turnstile = await meetToken();
                     const res = await fetch("/api/contact/", {
                       method: "POST",
                       headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ kind: "meeting", lang, name: a.name, phone: a.phone, slot: meet.slot, message: rows.map(([l, v]) => `${l}: ${v}`).join("\n") }),
+                      body: JSON.stringify({ kind: "meeting", lang, name: a.name, phone: a.phone, slot: meet.slot, consent: a.consent, turnstile, message: rows.map(([l, v]) => `${l}: ${v}`).join("\n") }),
                     }).catch(() => null);
                     setMeet((m) => ({ ...m, state: res?.ok ? "sent" : "error" }));
                   }}
@@ -780,6 +786,7 @@ export function OfferWizard({ lang, fairs, privacyHref }: { lang: Lang; fairs: F
                     </ul>
                   )}
                 </div>
+                <div ref={humanRef} className="mt-5 empty:hidden" />
                 <label className="mt-7 flex cursor-pointer items-start gap-3 text-[14px] leading-relaxed text-wawa-charcoal/75">
                   <input type="checkbox" checked={a.consent} onChange={(e) => set({ consent: e.target.checked })} className="mt-0.5 h-4 w-4 accent-[#1A1A1A]" />
                   <span>

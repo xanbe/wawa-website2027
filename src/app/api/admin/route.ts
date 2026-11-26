@@ -1,8 +1,10 @@
+import { createHash } from "node:crypto";
 import { NextResponse } from "next/server";
-import { SESSION_COOKIE, SESSION_TTL_MS, adminEnabled, checkPassword, isAdmin, makeSession } from "@/lib/admin/auth";
-import { HOME_FILE, PANEL_PREFIX, POSTS_FILE, PROJECTS_FILE, VIDEOS_FILE, canDelete, history, listMedia, putBinary, readText, revert, storeMode, transact, type Change } from "@/lib/admin/store";
+import { adminEnabled, blobToken, checkPassword, clearSession, isAdmin, isJson, renewSession, sameOrigin, setSession } from "@/lib/admin/auth";
+import { DATA_FILES, HOME_FILE, PANEL_PREFIX, POSTS_FILE, PROJECTS_FILE, VIDEOS_FILE, canDelete, history, listMedia, putBinary, readText, revert, storeMode, transact } from "@/lib/admin/store";
 import { clientIp } from "@/lib/phone-otp";
-import { allow } from "@/lib/rate-limit";
+import { allow, hit, peek } from "@/lib/rate-limit";
+import { cleanHtml } from "@/lib/sanitize";
 import { categories, legacyPages, services } from "@/lib/content";
 import { landings } from "@/content/landings";
 import { extraPages } from "@/content/extra-pages";
@@ -13,7 +15,7 @@ import { PROTECTED_MEDIA } from "@/lib/admin/protected-media";
 import { resolve } from "@/lib/routes";
 import { SYNC_LANGS, findAlt, needsTranslation, removeItem, syncItem, textOf, type ItemText, type SyncItem, type SyncKind, type SyncLang } from "@/lib/admin/sync";
 import { TRANSLATE_CONFIGURED, translateList, translateProject } from "@/lib/admin/translate";
-import { OpError, applyText, collectText, contentGet, contentPost } from "@/lib/admin/content-ops";
+import { OpError, TEXT_LIMIT, applyText, blobChanges, collectText, contentGet, contentPost, href, videoUrl } from "@/lib/admin/content-ops";
 
 // Yönetim paneli ucu: giriş, içerik okuma, görsel yükleme, proje/yazı/anasayfa/video kaydı, medya, geçmiş ve geri alma.
 // Her işlem oturum ister; içerik her zaman depodan taze okunur (derlemedeki kopyadan değil).
@@ -42,19 +44,7 @@ const slugify = (s: string) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 70) || "icerik";
 
-// Panelden gelen metin: betik ve olay öznitelikleri ayıklanır (panel yalnızca yöneticiye açık olsa da)
-const cleanHtml = (html: string) =>
-  html
-    .replace(/<\s*(script|style|iframe|object|embed)[\s\S]*?<\s*\/\s*\1\s*>/gi, "")
-    .replace(/<\s*(script|style|iframe|object|embed)[^>]*>/gi, "")
-    .replace(/\son\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, "")
-    .replace(/(href|src)\s*=\s*(["'])\s*javascript:[^"']*\2/gi, '$1="#"')
-    .replace(/\sstyle\s*=\s*("[^"]*"|'[^']*')/gi, "")
-    .replace(/<\/?(span|font)[^>]*>/gi, "")
-    .replace(/<div>/gi, "<p>")
-    .replace(/<\/div>/gi, "</p>")
-    .replace(/&nbsp;/g, " ")
-    .trim();
+// Panelden gelen metin izin listeli temizleyiciden geçer (src/lib/sanitize.ts)
 const plain = (html: string, max: number) => {
   const t = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   return t.length <= max ? t : t.slice(0, t.lastIndexOf(" ", max)).trim();
@@ -78,13 +68,19 @@ const video = (v: unknown) => {
   const s = str(v, 400);
   const yt = s.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/)?.[1] ?? (/^[\w-]{11}$/.test(s) ? s : "");
   if (yt) return yt;
-  return /^https:\/\/[\w.-]+\.public\.blob\.vercel-storage\.com\/[\w\-./%]+\.(mp4|webm)$/i.test(s) ? s : "";
+  return videoUrl(s);
 };
-// Yeni yüklenen görsellerin depo kayıtları (GitHub'da içerik kimliği; yerelde dosya zaten yazılıdır)
-const blobs = (v: unknown): Change[] =>
-  Array.isArray(v)
-    ? v.map((b) => ({ path: str((b as { path?: unknown })?.path, 300), sha: str((b as { sha?: unknown })?.sha, 64) })).filter((b) => b.path && /^[0-9a-f]{40}$/.test(b.sha ?? ""))
-    : [];
+// Yeni yüklenen görsellerin depo kayıtları (GitHub'da içerik kimliği; yerelde dosya zaten yazılıdır).
+// Yalnızca yükleme ucunun imzaladığı kayıtlar geçer (content-ops.ts → blobChanges)
+const blobs = blobChanges;
+// İçeriğin sürüm özeti: düzenleyici açıldığından beri başkası değiştirdi mi?
+const revOf = (item: unknown) => createHash("sha256").update(JSON.stringify(item)).digest("base64url").slice(0, 22);
+const checkBase = (item: SyncItem, base: unknown) => {
+  if (typeof base === "string" && base && base !== revOf(item)) throw new Error("409:Bu içerik siz düzenlerken başka bir oturumda değiştirildi. Değişikliklerinizi kopyalayıp sayfayı yenileyin.");
+};
+// Okunan HTML de temizlenerek döner (düzenleyicide innerHTML ile açılır)
+const safeText = <T extends { html?: string | null }>(t: T): T => ({ ...t, html: cleanHtml(t.html ?? "") });
+const HOUR = 60 * 60 * 1000;
 // Dil sekmelerinden gelen metinler
 const langTexts = (v: unknown): Partial<Record<SyncLang, ItemText>> => {
   const out: Partial<Record<SyncLang, ItemText>> = {};
@@ -102,16 +98,28 @@ const langTexts = (v: unknown): Partial<Record<SyncLang, ItemText>> => {
 const projectCats = () => categories.filter((c) => c.kind === "portfolio-category" && c.lang === "tr").map((c) => c.name);
 const now = () => new Date().toISOString().replace(/\.\d+Z$/, "+00:00");
 
+// Aynı istek içinde (kayıt çakışıp yeniden denendiğinde) aynı metin ikinci kez çevrilmez
+type Translated = Awaited<ReturnType<typeof translateProject>>;
+const memoTranslate = () => {
+  const cache = new Map<string, Promise<Translated>>();
+  return (src: ItemText) => {
+    const key = JSON.stringify(src);
+    if (!cache.has(key)) cache.set(key, translateProject(src));
+    return cache.get(key)!;
+  };
+};
+
 // Çeviri: elle yazılan dil metinleri önce gelir; istenen diğer diller otomatik çevrilir
-async function texts(kind: SyncKind, list: SyncItem[], tr: SyncItem, prev: ItemText | null, manual: Partial<Record<SyncLang, ItemText>>, auto: boolean) {
+async function texts(kind: SyncKind, list: SyncItem[], tr: SyncItem, prev: ItemText | null, manual: Partial<Record<SyncLang, ItemText>>, auto: boolean, translate: (src: ItemText) => Promise<Translated>) {
   const missing = SYNC_LANGS.filter((l) => !manual[l]);
   let tx: Partial<Record<SyncLang, ItemText>> = { ...manual };
   let note = "";
   const want = auto && missing.length > 0 && (needsTranslation(tr, prev, list) || missing.some((l) => !findAlt(list, tr, l)));
   if (want) {
-    const got = await translateProject(textOf(tr));
+    const got = await translate(textOf(tr));
     if (got) {
-      for (const l of missing) tx[l] = got[l];
+      // Model çıktısı da temizleyiciden geçer
+      for (const l of missing) tx[l] = { title: str(got[l].title, 180), description: str(got[l].description, 300), html: cleanHtml(str(got[l].html, 200_000)) };
       note = "İngilizce ve Almanca sürümler çevrildi.";
     } else
       note = TRANSLATE_CONFIGURED
@@ -147,8 +155,8 @@ export async function GET(req: Request) {
       const list = parse<SyncItem[]>(await readText(file)).value;
       const tr = list.find((p) => p.path === path && p.lang === "tr");
       if (!tr) return bad("İçerik bulunamadı.", 404);
-      const langs = Object.fromEntries(SYNC_LANGS.map((l) => [l, findAlt(list, tr, l) ? { ...textOf(findAlt(list, tr, l)!), path: findAlt(list, tr, l)!.path } : null]));
-      return NextResponse.json({ item: tr, langs });
+      const langs = Object.fromEntries(SYNC_LANGS.map((l) => [l, findAlt(list, tr, l) ? { ...safeText(textOf(findAlt(list, tr, l)!)), path: findAlt(list, tr, l)!.path } : null]));
+      return NextResponse.json({ item: safeText(tr), langs, rev: revOf(tr) });
     }
     if (q("home")) {
       const [home, projects] = await Promise.all([readText(HOME_FILE), readText(PROJECTS_FILE)]);
@@ -184,7 +192,8 @@ export async function GET(req: Request) {
     const trProjects = projects.filter((p) => p.lang === "tr");
     const untranslated = trProjects.filter((p) => SYNC_LANGS.some((l) => !findAlt(projects, p, l))).map((p) => ({ path: p.path, title: p.title }));
     const noAlt = trProjects.filter((p) => (p.gallery ?? []).some((g) => !g.alt || /^[\w-]+$/.test(g.alt))).length;
-    return NextResponse.json({
+    // Panel açık kaldıkça oturum yenilenir
+    return renewSession(NextResponse.json({
       enabled: true,
       authed: true,
       mode: storeMode(),
@@ -194,7 +203,7 @@ export async function GET(req: Request) {
       projects: trProjects.map((p) => ({ path: p.path, title: p.title, featuredImage: p.featuredImage, category: p.meta?.["Kategori"] ?? "", draft: Boolean(p.draft), video: Boolean(p.video) })),
       posts: posts.filter((p) => p.lang === "tr").map((p) => ({ path: p.path, title: p.title, date: p.date ?? null, featuredImage: p.featuredImage, draft: Boolean(p.draft), langs: SYNC_LANGS.filter((l) => findAlt(posts, p, l)) })),
       checks: { untranslated, noAlt },
-    });
+    }));
   } catch (e) {
     if (e instanceof OpError) return bad(e.message, e.status);
     console.error("[admin] okuma", e instanceof Error ? e.message : e);
@@ -204,23 +213,30 @@ export async function GET(req: Request) {
 
 export async function POST(req: Request) {
   if (!adminEnabled()) return bad("Panel kapalı.", 503);
+  // Yalnızca panelin kendi sayfasından gelen JSON istekleri (başka siteden gönderilen form isteği kabul edilmez)
+  if (!sameOrigin(req) || !isJson(req)) return bad("Geçersiz istek.", 403);
   const body = (await req.json().catch(() => null)) as Record<string, unknown> | null;
   if (!body) return bad("Geçersiz istek.");
   const op = str(body.op, 40);
 
   if (op === "login") {
-    if (!allow(`admin:login:${clientIp(req)}`, 8, 15 * 60 * 1000)) return bad("Çok fazla deneme yapıldı. Biraz sonra tekrar deneyin.", 429);
-    if (!checkPassword(str(body.password, 200))) return bad("Parola hatalı.", 401);
-    const res = NextResponse.json({ ok: true });
-    res.cookies.set(SESSION_COOKIE, makeSession(), { httpOnly: true, sameSite: "strict", secure: process.env.NODE_ENV === "production", path: "/", maxAge: SESSION_TTL_MS / 1000 });
-    return res;
+    const ip = clientIp(req);
+    // Sınırlar: IP başına 15 dakikada 8 hatalı deneme; tüm site için saatte 30 hatalı denemeden sonra giriş bir süre kapanır
+    if ((await peek(`admin:loginfail:${ip}`)) >= 8 || (await peek("admin:loginfail:all")) >= 30) return bad("Çok fazla deneme yapıldı. Biraz sonra tekrar deneyin.", 429);
+    if (!checkPassword(str(body.password, 200))) {
+      await hit(`admin:loginfail:${ip}`, 15 * 60 * 1000);
+      if ((await hit("admin:loginfail:all", HOUR)) === 30) console.error("[admin] çok sayıda hatalı giriş denemesi; giriş bir saatliğine kapandı");
+      return bad("Parola hatalı.", 401);
+    }
+    return setSession(NextResponse.json({ ok: true }));
   }
-  if (op === "logout") {
-    const res = NextResponse.json({ ok: true });
-    res.cookies.delete(SESSION_COOKIE);
-    return res;
-  }
+  if (op === "logout") return clearSession(NextResponse.json({ ok: true }));
   if (!(await isAdmin())) return bad("Oturum süresi doldu, yeniden giriş yapın.", 401);
+  // Ücretli ya da ağır işlemler oturumdan bağımsız olarak da sınırlıdır
+  const LIMITS: Record<string, [number, number]> = { upload: [400, HOUR], translate: [80, HOUR], "translate.page": [40, HOUR], "youtube.info": [120, HOUR] };
+  const savesTranslate = (op === "project.save" || op === "post.save") && body.translate !== false;
+  const lim = LIMITS[op] ?? (savesTranslate ? LIMITS.translate : null);
+  if (lim && !(await allow(`admin:op:${lim === LIMITS.translate ? "translate" : op}`, lim[0], lim[1]))) return bad("Kısa sürede çok fazla işlem yapıldı. Biraz sonra tekrar deneyin.", 429);
   if (storeMode() === "off") return bad("İçerik deposu bağlı değil (GITHUB_TOKEN ve GITHUB_REPO gerekli).", 503);
 
   try {
@@ -229,11 +245,15 @@ export async function POST(req: Request) {
       const data = typeof body.data === "string" ? body.data : "";
       const m = str(body.type, 20).match(/^image\/(jpeg|png|webp)$/);
       if (!m || !/^[A-Za-z0-9+/=]+$/.test(data) || data.length > 5_500_000) return bad("Görsel yüklenemedi (en fazla 4 MB; JPG, PNG ya da WebP).");
+      // Dosyanın içeriği bildirilen türle eşleşmeli
+      const head = Buffer.from(data.slice(0, 24), "base64");
+      const real = head[0] === 0xff && head[1] === 0xd8 ? "jpeg" : head.subarray(1, 4).toString("latin1") === "PNG" ? "png" : head.subarray(8, 12).toString("latin1") === "WEBP" ? "webp" : "";
+      if (real !== m[1]) return bad("Görsel yüklenemedi: dosya içeriği JPG, PNG ya da WebP değil.");
       const d = new Date();
       const name = `${slugify(str(body.name, 80).replace(/\.[a-z0-9]+$/i, ""))}-${Math.random().toString(36).slice(2, 6)}.${m[1] === "jpeg" ? "jpg" : m[1]}`;
       const file = `public/wp-content/uploads/${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, "0")}/${name}`;
       const saved = await putBinary(file, data);
-      return NextResponse.json({ src: file.replace(/^public/, ""), blob: saved.sha ? { path: saved.path, sha: saved.sha } : null });
+      return NextResponse.json({ src: file.replace(/^public/, ""), blob: saved.sha ? { path: saved.path, sha: saved.sha, token: blobToken(saved.path, saved.sha) } : null });
     }
 
     // ---------------------------------------------------------------- çeviri önizlemesi (dil sekmesindeki "Türkçeden çevir")
@@ -242,8 +262,11 @@ export async function POST(req: Request) {
       if (!src.title) return bad("Önce Türkçe başlığı yazın.");
       if (!TRANSLATE_CONFIGURED) return bad("Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil.", 503);
       const got = await translateProject(src);
-      return got ? NextResponse.json(got) : bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
+      if (!got) return bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
+      return NextResponse.json(Object.fromEntries(SYNC_LANGS.map((l) => [l, { title: str(got[l].title, 180), description: str(got[l].description, 300), html: cleanHtml(str(got[l].html, 200_000)) }])));
     }
+
+    const translate = memoTranslate();
 
     // ---------------------------------------------------------------- projeler
     if (op === "projects.order" || op === "project.save" || op === "project.delete") {
@@ -283,6 +306,7 @@ export async function POST(req: Request) {
           const seo = { title, fullTitle: `${title} | Wawa Interiors`, description, ogImage: g[0].src };
           const v = video(d.video);
           const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
+          if (existing) checkBase(existing, body.base);
           const prev = existing ? textOf(existing) : null;
           if (existing) {
             Object.assign(existing, { title, featuredImage: g[0].src, gallery: g, html, meta: { ...existing.meta, ...meta }, seo: { ...existing.seo, ...seo } });
@@ -304,7 +328,7 @@ export async function POST(req: Request) {
           else delete result.video;
           if (bool(d.draft)) result.draft = true;
           else delete result.draft;
-          const { tx, note: n } = await texts("project", list, result, prev, langTexts(body.langs), body.translate !== false);
+          const { tx, note: n } = await texts("project", list, result, prev, langTexts(body.langs), body.translate !== false, translate);
           const fallback = syncItem("project", list, result, tx, true);
           // Çeviri olmadan açılan dil sürümleri Türkçe metinle başlar; panelde açıkça söylenir
           note = fallback.length ? `İngilizce ve Almanca sayfalar Türkçe metinle açıldı; projeyi açıp dil sekmelerinden düzeltebilir ya da çeviri anahtarı (GEMINI_API_KEY) tanımlandıktan sonra yeniden kaydedebilirsiniz.` : n;
@@ -337,6 +361,7 @@ export async function POST(req: Request) {
           const description = str(d.description, 300) || plain(html, 155);
           const stamp = now();
           const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
+          if (existing) checkBase(existing, body.base);
           const prev = existing ? textOf(existing) : null;
           if (existing) {
             Object.assign(existing, { title, html, featuredImage: cover || null, modified: stamp, seo: { ...existing.seo, title, fullTitle: title, description, ogImage: cover || null } });
@@ -357,7 +382,7 @@ export async function POST(req: Request) {
           const create = bool(body.createLangs);
           const hasAlt = SYNC_LANGS.some((l) => findAlt(list, result!, l));
           const manual = langTexts(body.langs);
-          const r = await texts("post", list, result, prev, manual, body.translate !== false && (create || hasAlt));
+          const r = await texts("post", list, result, prev, manual, body.translate !== false && (create || hasAlt), translate);
           const fallback = syncItem("post", list, result, r.tx, create);
           note = fallback.length ? "İngilizce ve Almanca sürümler Türkçe metinle açıldı; dil sekmelerinden düzeltebilir ya da çeviri anahtarı tanımlandıktan sonra yeniden kaydedebilirsiniz." : r.note;
         }
@@ -372,11 +397,11 @@ export async function POST(req: Request) {
       const arr = (v: unknown) => (Array.isArray(v) ? (v as Record<string, unknown>[]) : []);
       const home = {
         slides: arr(h.slides)
-          .map((s) => ({ sector: str(s.sector, 40), project: str(s.project, 80), image: img(s.image), alt: str(s.alt, 200), href: str(s.href, 300) }))
+          .map((s) => ({ sector: str(s.sector, 40), project: str(s.project, 80), image: img(s.image), alt: str(s.alt, 200), href: href(s.href) }))
           .filter((s) => s.image && s.sector)
           .slice(0, 12),
         featured: arr(h.featured)
-          .map((f) => ({ path: str(f.path, 300), title: str(f.title, 80), location: str(f.location, 60) || null, image: img(f.image), category: str(f.category, 60), filter: ["residential", "commercial", "stand"].includes(String(f.filter)) ? String(f.filter) : "commercial" }))
+          .map((f) => ({ path: /^\/(en\/|de\/)?portfolio\/[\w-]+\/$/.test(str(f.path, 300)) ? str(f.path, 300) : "", title: str(f.title, 80), location: str(f.location, 60) || null, image: img(f.image), category: str(f.category, 60), filter: ["residential", "commercial", "stand"].includes(String(f.filter)) ? String(f.filter) : "commercial" }))
           .filter((f) => f.path && f.title && f.image)
           .slice(0, 24),
         brands: arr(h.brands).map((b) => ({ name: str(b.name, 60), src: img(b.src) })).filter((b) => b.name && b.src).slice(0, 80),
@@ -458,8 +483,11 @@ export async function POST(req: Request) {
       const src = str(body.src, 300);
       const file = `public${src}`;
       if (!canDelete(file)) return bad("Bu görsel panelden silinemez.");
-      if ((await usage()).get(src)) return bad("Görsel bir içerikte kullanılıyor; önce oradan kaldırın.");
-      await transact([], () => ({ changes: [{ path: file, remove: true }], message: `${PANEL_PREFIX} görsel silindi (${src.split("/").pop()})`, result: null }));
+      // Kullanım kontrolü kaydın kendisiyle aynı anda, tüm içerik dosyalarının güncel hâli üzerinden yapılır
+      await transact(DATA_FILES, (t) => {
+        if ([BUILT, ...Object.values(t)].some((text) => text.includes(src))) throw new Error("409:Görsel bir içerikte kullanılıyor; önce oradan kaldırın.");
+        return { changes: [{ path: file, remove: true }], message: `${PANEL_PREFIX} görsel silindi (${src.split("/").pop()})`, result: null };
+      });
       return NextResponse.json({ ok: true });
     }
 
@@ -473,6 +501,7 @@ export async function POST(req: Request) {
       const item = body.item;
       const list = collectText(item);
       if (!list.length) return bad("Çevrilecek metin yok.");
+      if (list.length > TEXT_LIMIT.count || list.join("").length > TEXT_LIMIT.chars) return bad("Sayfa tek seferde çevrilemeyecek kadar uzun.");
       const [en, de] = await Promise.all([translateList(list, "en"), translateList(list, "de")]);
       if (!en || !de) return bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
       return NextResponse.json({ en: applyText(item, en), de: applyText(item, de) });
@@ -488,7 +517,7 @@ export async function POST(req: Request) {
   } catch (e) {
     if (e instanceof OpError) return bad(e.message, e.status);
     const msg = e instanceof Error ? e.message : String(e);
-    const m = msg.match(/^(400|404):(.*)$/);
+    const m = msg.match(/^(400|404|409):(.*)$/);
     if (m) return bad(m[2], Number(m[1]));
     if (/yeniden düzenlenmiş|Yalnızca panelden|yalnızca canlı|Geri alınacak/.test(msg)) return bad(msg, 409);
     console.error("[admin] yazma", msg);

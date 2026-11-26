@@ -1,5 +1,6 @@
 import { createCipheriv, createDecipheriv, createHash, randomBytes } from "node:crypto";
 import sharp from "sharp";
+import { purposeKey } from "@/lib/phone-otp";
 
 // Önizleme ve kilitli tam görsel.
 // Üretilen görselin önizlemesi küçük ve filigranlı döner; tam çözünürlüklü görsel şifrelenip ("mühür") istemciye verilir.
@@ -7,30 +8,34 @@ import sharp from "sharp";
 
 const SEAL_TTL_MS = 2 * 60 * 60 * 1000;
 
-function key() {
-  const s = process.env.OTP_SECRET || (process.env.NODE_ENV !== "production" ? "wawa-otp-test-secret" : "");
-  if (!s) throw new Error("OTP_SECRET tanımlı değil");
-  return createHash("sha256").update(`ai-seal:${s}`).digest();
-}
+// Mühür anahtarı ana gizli anahtardan ayrı türetilir (SMS kodu ve geçiş imzalarıyla paylaşılmaz)
+const key = () => purposeKey("ai-seal");
 
-export function seal(data: Buffer) {
+// Mühür, üretildiği isteğe (brif + taslak) bağlanır: başka bir istekle ya da değiştirilmiş taslakla açılamaz
+export const sealContext = (brief: unknown, sketch: string) => createHash("sha256").update(JSON.stringify(brief)).update("|").update(sketch).digest();
+
+export function seal(data: Buffer, context: Buffer) {
   const iv = randomBytes(12);
   const c = createCipheriv("aes-256-gcm", key(), iv);
+  c.setAAD(context);
   const head = Buffer.alloc(8);
   head.writeBigUInt64BE(BigInt(Date.now() + SEAL_TTL_MS));
   const body = Buffer.concat([c.update(Buffer.concat([head, data])), c.final()]);
   return Buffer.concat([iv, c.getAuthTag(), body]).toString("base64url");
 }
 
-export function unseal(token: string): Buffer | null {
+export function unseal(token: string, context: Buffer): { image: Buffer; id: string; exp: number } | null {
   try {
     const raw = Buffer.from(token, "base64url");
     if (raw.length < 40) return null;
     const d = createDecipheriv("aes-256-gcm", key(), raw.subarray(0, 12));
+    d.setAAD(context);
     d.setAuthTag(raw.subarray(12, 28));
     const out = Buffer.concat([d.update(raw.subarray(28)), d.final()]);
-    if (Number(out.readBigUInt64BE(0)) < Date.now()) return null;
-    return out.subarray(8);
+    const exp = Number(out.readBigUInt64BE(0));
+    if (exp < Date.now()) return null;
+    // id: mührün tek kullanımlık olması için (rastgele IV)
+    return { image: out.subarray(8), id: raw.subarray(0, 12).toString("base64url"), exp };
   } catch {
     return null;
   }

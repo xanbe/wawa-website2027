@@ -7,6 +7,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+// Node 22.18+/24: TypeScript dosyası doğrudan içe aktarılır (tür bilgileri ayıklanır)
+import { cleanHtml } from "../src/lib/sanitize.ts";
 
 const WP = "https://wawainteriors.com";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -25,10 +27,24 @@ const decode = (s) =>
 const meta = (html, re) => decode((html.match(re) || [])[1] || "").trim();
 const UPLOAD = /https?:\/\/(?:www\.)?wawainteriors\.com(\/wp-content\/uploads\/[^"'\s)<>,]+)/g;
 
+// Görseller yalnızca public/wp-content/uploads/YYYY/MM/ altına, yalnızca görsel uzantısıyla yazılır.
+// Adres WordPress içeriğinden geldiği için güvenilmez: "..", sorgu dizesi ya da klasör dışına çıkan yol atlanır.
+const UPLOADS = path.join(ROOT, "public", "wp-content", "uploads") + path.sep;
+const SAFE_UPLOAD = /^\/wp-content\/uploads\/\d{4}\/\d{2}\/[\w.-]+\.(jpe?g|png|webp|gif|avif)$/i;
 async function download(rel) {
-  const dst = path.join(ROOT, "public", decodeURIComponent(rel));
+  let u;
+  try {
+    u = new URL(rel, WP);
+  } catch {
+    return console.warn(`  geçersiz görsel adresi atlandı: ${rel}`);
+  }
+  const p = decodeURIComponent(u.pathname);
+  if (u.origin !== WP || u.search || p.includes("..") || !SAFE_UPLOAD.test(p)) return console.warn(`  güvenli olmayan görsel adresi atlandı: ${rel}`);
+  const dst = path.resolve(ROOT, "public", "." + p);
+  if (!dst.startsWith(UPLOADS)) return console.warn(`  klasör dışına çıkan görsel atlandı: ${rel}`);
   if (fs.existsSync(dst)) return;
-  const r = await fetch(WP + rel);
+  const r = await fetch(u.origin + u.pathname, { redirect: "error" }).catch(() => null);
+  if (!r) return console.warn(`  görsel indirilemedi: ${rel}`);
   if (!r.ok) return console.warn(`  görsel indirilemedi (${r.status}): ${rel}`);
   fs.mkdirSync(path.dirname(dst), { recursive: true });
   fs.writeFileSync(dst, Buffer.from(await r.arrayBuffer()));
@@ -41,14 +57,21 @@ console.log(`posts.json en yeni: ${latest} · WordPress'te sonrası: ${list.leng
 
 for (const p of fresh.reverse()) {
   const pathname = decodeURIComponent(new URL(p.link).pathname);
+  // Yazı adresi tek düzeyli kısa ad olmalı (ör. /ofis-tasarimi/); başka bir şey gelirse yazı atlanır
+  if (new URL(p.link).origin !== WP || !/^\/[\p{L}\p{N}-]{1,120}\/$/u.test(pathname)) {
+    console.warn(`  beklenmeyen yazı adresi atlandı: ${p.link}`);
+    continue;
+  }
   const page = await (await fetch(p.link)).text();
   const title = decode(p.title.rendered);
   const fullTitle = meta(page, /<title>([^<]*)<\/title>/i).replace(/\s*[|–-]\s*Wawa Interiors.*$/i, "") || title;
   const description = meta(page, /<meta name="description" content="([^"]*)"/i);
   const feat = p._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "";
-  const featuredImage = feat.replace(/^https?:\/\/(?:www\.)?wawainteriors\.com/, "");
-  // Başlık şablonda basılır: WordPress'te içeriğe eklenen H1 (wawa-post-title) çıkarılır
-  let html = p.content.rendered.replace(/^\s*<h1[^>]*class="wawa-post-title"[^>]*>[\s\S]*?<\/h1>\s*/i, "");
+  const featRel = feat.replace(/^https?:\/\/(?:www\.)?wawainteriors\.com/, "");
+  const featuredImage = SAFE_UPLOAD.test(featRel) ? featRel : "";
+  // Başlık şablonda basılır: WordPress'te içeriğe eklenen H1 (wawa-post-title) çıkarılır.
+  // İçerik sitedeki aynı izin listeli temizleyiciden geçer (betik, olay özniteliği, iframe vb. atılır)
+  let html = cleanHtml(p.content.rendered.replace(/^\s*<h1[^>]*class="wawa-post-title"[^>]*>[\s\S]*?<\/h1>\s*/i, ""));
   const files = new Set([...html.matchAll(UPLOAD)].map((m) => m[1]));
   if (featuredImage) files.add(featuredImage);
   html = html.replace(UPLOAD, "$1").trim();

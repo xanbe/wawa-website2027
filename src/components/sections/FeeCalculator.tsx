@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTurnstile } from "@/components/ui/useTurnstile";
 import {
   AREA_MAX,
   AREA_MIN,
   PROJECT_TYPES,
   STAGES,
-  computeFee,
   feeRange,
   type FeeInput,
   type FeeResult,
@@ -63,13 +63,30 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
   const [testMode, setTestMode] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [pass, setPass] = useState("");
+  const [result, setResult] = useState<FeeResult | null>(null);
+  const { ref: humanRef, getToken: humanToken } = useTurnstile();
 
   const type = PROJECT_TYPES.find((t) => t.id === typeId) ?? PROJECT_TYPES[0];
   const areaNum = Number(area.replace(",", "."));
   const input: FeeInput = { typeId, variantId, area: areaNum, stages: ALL_STAGES, control: false, renders: 0 };
   const ready = Number.isFinite(areaNum) && areaNum >= AREA_MIN && areaNum <= AREA_MAX;
-  // Numara bir kez doğrulandıktan sonra sonuç, bilgiler değiştikçe yerinde güncellenir
-  const result = phase === "done" && ready ? computeFee(input) : null;
+  // Numara bir kez doğrulandıktan sonra sonuç, bilgiler değiştikçe sunucudan yeniden istenir (hesap tabloları tarayıcıya gelmez)
+  const key = JSON.stringify(input);
+  useEffect(() => {
+    if (phase !== "done" || !pass || !ready) return;
+    const t = window.setTimeout(async () => {
+      const res = await fetch("/api/fee/verify/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ pass, input: JSON.parse(key) }) }).catch(() => null);
+      const data = res ? await res.json().catch(() => ({})) : {};
+      if (res?.ok && data.result) setResult(data.result);
+      else if (data.expired) {
+        setPass("");
+        setPhase("form");
+        setError(data.error);
+      }
+    }, 350);
+    return () => window.clearTimeout(t);
+  }, [key, pass, phase, ready]);
 
   const chooseType = (id: string) => {
     const t = PROJECT_TYPES.find((p) => p.id === id);
@@ -100,7 +117,9 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
       setError(`Alanı ${AREA_MIN}–${AREA_MAX.toLocaleString("tr-TR")} m² arasında girin.`);
       return;
     }
-    const data = await post("/api/fee/send-code/", { phone });
+    setBusy(true);
+    const turnstile = await humanToken();
+    const data = await post("/api/fee/send-code/", { phone, notice: true, turnstile });
     if (!data) return;
     setToken(data.token);
     setTestMode(Boolean(data.testMode));
@@ -111,7 +130,11 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
   const verify = async (e: React.FormEvent) => {
     e.preventDefault();
     const data = await post("/api/fee/verify/", { token, code, input });
-    if (data?.result) setPhase("done");
+    if (data?.result) {
+      setResult(data.result);
+      setPass(data.pass ?? "");
+      setPhase("done");
+    }
   };
 
   return (
@@ -219,6 +242,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
                     <ArrowRight className="h-4 w-4 text-wawa-accent transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
+                <div ref={humanRef} className="mt-3 empty:hidden" />
                 {/* KVKK aydınlatma: numaranın hangi amaçla kullanıldığı */}
                 <p className="mt-3 text-[13px] leading-relaxed text-wawa-charcoal/60">
                   Numaranızı yalnızca bütçe bilgisi ve teklif için sizinle iletişime geçmek amacıyla kullanırız.{" "}
@@ -232,7 +256,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
             {phase === "code" && (
               <form onSubmit={verify}>
                 <label htmlFor="fee-code" className={labelClass}>
-                  {phone} numarasına gelen 4 haneli kod
+                  {phone} numarasına gelen 6 haneli kod
                 </label>
                 <div className="mt-3 flex flex-col gap-3 sm:flex-row">
                   <input
@@ -240,8 +264,8 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
                     type="text"
                     inputMode="numeric"
                     autoComplete="one-time-code"
-                    maxLength={4}
-                    placeholder="••••"
+                    maxLength={6}
+                    placeholder="••••••"
                     value={code}
                     onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
                     required
@@ -249,7 +273,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
                   />
                   <button
                     type="submit"
-                    disabled={busy || code.length !== 4}
+                    disabled={busy || code.length !== 6}
                     className="group inline-flex shrink-0 cursor-pointer items-center justify-between gap-4 bg-wawa-charcoal px-7 py-3 text-[15px] text-white transition-colors duration-300 hover:bg-black disabled:opacity-60"
                   >
                     {busy ? "Doğrulanıyor" : "Sonucu göster"}
@@ -257,7 +281,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
                   </button>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-wawa-charcoal/65">
-                  {testMode && <span>Test modu: kod 1234</span>}
+                  {testMode && <span>Test modu: kod 123456</span>}
                   <button
                     type="button"
                     onClick={() => {
@@ -273,7 +297,7 @@ export function FeeCalculator({ initialType, initialArea }: { initialType?: stri
             )}
 
             {phase === "done" &&
-              (result ? (
+              (result && ready ? (
                 <>
                   <Estimate result={result} />
                   <Link

@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { ROUTES, t, type Lang } from "@/lib/i18n";
+import { cleanHtml } from "@/lib/sanitize";
 import { excerpt, type Post, type Project } from "@/lib/content";
 
 const LINE = "border-wawa-charcoal/15";
@@ -24,15 +25,16 @@ export function PageIntro({ title, lead, children, lang }: { title: string; lead
   );
 }
 
-// Eski siteden taşınan HTML: YouTube yer tutucuları gömülü videoya, görseller tembel yüklemeye çevrilir
+// Eski siteden taşınan ve panelden girilen HTML: önce izin listesiyle temizlenir (derleme anında, sunucuda),
+// sonra YouTube yer tutucuları gömülü videoya, görseller tembel yüklemeye çevrilir
 function enhance(html: string) {
-  return html
+  return cleanHtml(html)
     .replace(
       /<div data-youtube="([\w-]{11})"><\/div>/g,
       (_m, id) =>
         `<div class="wawa-video"><iframe src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
     )
-    .replace(/<img /g, '<img loading="lazy" decoding="async" ');
+    .replace(/<img (?![^>]*\sloading=)/g, '<img loading="lazy" decoding="async" ');
 }
 
 export function Prose({ html, className = "" }: { html: string; className?: string }) {
