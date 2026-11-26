@@ -73,5 +73,25 @@
     "slug": "mactech-egypt-and-handling-expo",
     "reason": "fuarlar.json adresi Ticaret Bakanlığı destek listesi, fuarın resmî sitesi değil; organizatör sitesi doğrulanamadı",
     "date": "2026-11-26"
+  },
+  {
+    "slug": "anfas-food-product",
+    "reason": "anfas.com.tr fuar sayfasında yalnız tarih, sektör ve organizatör var; katılımcı süreci ve ürün grupları yok",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "future-minerals-forum",
+    "reason": "katılımcı/stand süreci olmayan hükümet-yatırım forumu; organizatör sitede adlandırılmamış",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "gulf-print-and-pack",
+    "reason": "gulfprintpack.com HTTP 403 verdi; doğrulanabilir bilgi okunamadı",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "interior-design-furnishing-expo",
+    "reason": "ocec.om sayfasında yalnız ad ve tarih var; organizatör, alan ve ürün grupları yok",
+    "date": "2026-11-26"
   }
 ]
