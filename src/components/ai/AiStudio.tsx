@@ -438,12 +438,13 @@ export function AiStudio({
   }
 
   // Bu tasarımla teklif al: teklif formu ölçüler ve tasarım notuyla dolu açılır
-  const SPACE_TO_OFFER: Record<string, number> = { salon: 0, mutfak: 0, yatak: 0, magaza: 1, klinik: 2, cafe: 3, ofis: 4 };
+  // Teklif formundaki mekân türü sırası: konut, ofis, mağaza, kafe, klinik, otel, güzellik, spor, diğer
+  const SPACE_TO_OFFER: Record<string, number> = { salon: 0, mutfak: 0, yatak: 0, ofis: 1, magaza: 2, cafe: 3, klinik: 4 };
   const goOffer = () => {
     const stand = brief.mode === "stand";
     const prefill = stand
       ? { kind: "stand", area: String(round1(s.w * s.d)), standTypeIndex: STAND_TYPES.indexOf(s.type), note: `Yapay zekâ stüdyosu: ${summary}${s.sector ? ` · ${s.sector}` : ""}${result?.image ? " · görsel ekibe iletildi" : ""}` }
-      : { kind: "interior", area: String(round1(r.w * r.l)), spaceIndex: SPACE_TO_OFFER[r.space] ?? 6, note: `Yapay zekâ stüdyosu: ${summary}${result?.image ? " · görsel ekibe iletildi" : ""}` };
+      : { kind: "interior", area: String(round1(r.w * r.l)), spaceIndex: SPACE_TO_OFFER[r.space] ?? 8, note: `Yapay zekâ stüdyosu: ${summary}${result?.image ? " · görsel ekibe iletildi" : ""}` };
     try {
       sessionStorage.setItem("wawa-offer-prefill", JSON.stringify(prefill));
     } catch {

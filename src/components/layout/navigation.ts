@@ -43,7 +43,6 @@ export const SUB_SERVICES: Record<string, { name: string; href: string }[]> = {
   ],
   "/service/klinik-tasarimi/": [
     { name: "Diş Kliniği Tasarımı", href: "/dis-klinigi-ic-mimari/" },
-    { name: "Güzellik Salonu İç Mimarisi", href: "/guzellik-salonu-ic-mimari/" },
   ],
   // İngilizce (IT ve FR menüleri de İngilizce sayfalara bağlanır) ve Almanca
   "/en/service/store-design-and-implementation/": [
@@ -53,7 +52,6 @@ export const SUB_SERVICES: Record<string, { name: string; href: string }[]> = {
   ],
   "/en/service/clinic-design-and-implementation/": [
     { name: "Dental Clinic Design", href: "/en/dental-clinic-design/" },
-    { name: "Beauty Salon Interior Design", href: "/en/beauty-salon-interior-design/" },
   ],
   "/de/service/laden-design-und-umsetzungen/": [
     { name: "Innenarchitektur für Juweliere", href: "/de/juwelier-innenarchitektur/" },
@@ -62,7 +60,6 @@ export const SUB_SERVICES: Record<string, { name: string; href: string }[]> = {
   ],
   "/de/service/klinikdesign-und-umsetzungen/": [
     { name: "Zahnarztpraxis-Design", href: "/de/zahnarztpraxis-design/" },
-    { name: "Innenarchitektur für Kosmetikstudios", href: "/de/kosmetikstudio-innenarchitektur/" },
   ],
 };
 export const parentService = (lang: Lang, path: string) => {
@@ -88,10 +85,13 @@ export const NAV: Record<Lang, Nav> = {
         href: INTERIOR_HUB,
         items: [
           { name: "Konut & Villa Tasarımı", href: "/konut-villa-tasarim/" },
-          { name: "Mağaza Tasarımı", href: "/service/magaza-tasarimi/" },
-          { name: "Klinik Tasarımı", href: "/service/klinik-tasarimi/" },
-          { name: "Cafe & Restoran Tasarımı", href: "/cafe-dekorasyon/" },
           { name: "Ofis Tasarımı", href: "/ofis-tasarimi-ve-uygulama/" },
+          { name: "Mağaza & Showroom Tasarımı", href: "/service/magaza-tasarimi/" },
+          { name: "Kafe & Restoran Tasarımı", href: "/cafe-dekorasyon/" },
+          { name: "Klinik & Sağlık Mekânları Tasarımı", href: "/service/klinik-tasarimi/" },
+          { name: "Otel & Konaklama Tasarımı", href: "/otel-ic-mimari/" },
+          { name: "Güzellik Merkezi & Spa Tasarımı", href: "/guzellik-salonu-ic-mimari/" },
+          { name: "Spor Salonu & Stüdyo Tasarımı", href: "/spor-salonu-ic-mimari/" },
         ],
         feature: { label: "İç Mimarlık Fiyatları", note: "Tasarım ve Uygulama", href: "/ic-mimarlik-fiyatlari/", icon: "price" },
       },
@@ -138,10 +138,13 @@ export const NAV: Record<Lang, Nav> = {
         href: ROUTES.en.services,
         items: [
           { name: "Residential & Villa Design", href: "/en/service/housing-villa-design/" },
-          { name: "Store Design", href: "/en/service/store-design-and-implementation/" },
-          { name: "Clinic Design", href: "/en/service/clinic-design-and-implementation/" },
-          { name: "Cafe & Restaurant Design", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Office Design", href: "/en/service/office-design-and-implementation/" },
+          { name: "Store & Showroom Design", href: "/en/service/store-design-and-implementation/" },
+          { name: "Cafe & Restaurant Design", href: "/en/service/cafe-restaurant-design-and-implementation/" },
+          { name: "Clinic & Healthcare Design", href: "/en/service/clinic-design-and-implementation/" },
+          { name: "Hotel & Hospitality Design", href: "/en/hotel-interior-design/" },
+          { name: "Beauty Centre & Spa Design", href: "/en/beauty-salon-interior-design/" },
+          { name: "Gym & Studio Design", href: "/en/gym-studio-interior-design/" },
         ],
         feature: { label: "Interior Prices", note: "Design and build", href: "/en/interior-design-prices/", icon: "price" },
       },
@@ -188,10 +191,13 @@ export const NAV: Record<Lang, Nav> = {
         href: ROUTES.de.services,
         items: [
           { name: "Wohnungs- & Villendesign", href: "/de/service/wohnungs-villendesign/" },
-          { name: "Ladendesign", href: "/de/service/laden-design-und-umsetzungen/" },
-          { name: "Klinikdesign", href: "/de/service/klinikdesign-und-umsetzungen/" },
-          { name: "Café- & Restaurantdesign", href: "/de/service/cafe-restaurantdesign-und-umsetzungen/" },
           { name: "Bürodesign", href: "/de/service/buerodesign-und-umsetzung/" },
+          { name: "Laden- & Showroomdesign", href: "/de/service/laden-design-und-umsetzungen/" },
+          { name: "Café- & Restaurantdesign", href: "/de/service/cafe-restaurantdesign-und-umsetzungen/" },
+          { name: "Klinik- & Praxisdesign", href: "/de/service/klinikdesign-und-umsetzungen/" },
+          { name: "Hotel- & Gastgewerbedesign", href: "/de/hotel-innenarchitektur/" },
+          { name: "Beauty- & Spa-Design", href: "/de/kosmetikstudio-innenarchitektur/" },
+          { name: "Fitness- & Studiodesign", href: "/de/fitnessstudio-innenarchitektur/" },
         ],
         feature: { label: "Preisleitfaden", note: "Innenarchitektur", href: "/de/innenarchitektur-preise/", icon: "price" },
       },
@@ -239,10 +245,13 @@ export const NAV: Record<Lang, Nav> = {
         href: ROUTES.it.services,
         items: [
           { name: "Residenze e ville", href: "/en/service/housing-villa-design/" },
-          { name: "Negozi", href: "/en/service/store-design-and-implementation/" },
-          { name: "Cliniche", href: "/en/service/clinic-design-and-implementation/" },
-          { name: "Caffè e ristoranti", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Uffici", href: "/en/service/office-design-and-implementation/" },
+          { name: "Negozi e showroom", href: "/en/service/store-design-and-implementation/" },
+          { name: "Caffè e ristoranti", href: "/en/service/cafe-restaurant-design-and-implementation/" },
+          { name: "Cliniche e spazi sanitari", href: "/en/service/clinic-design-and-implementation/" },
+          { name: "Hotel e ospitalità", href: "/en/hotel-interior-design/" },
+          { name: "Centri estetici e spa", href: "/en/beauty-salon-interior-design/" },
+          { name: "Palestre e studi", href: "/en/gym-studio-interior-design/" },
         ],
         feature: { label: "Guida ai prezzi", note: "Architettura d'interni", href: "/en/interior-design-prices/", icon: "price" },
       },
@@ -289,10 +298,13 @@ export const NAV: Record<Lang, Nav> = {
         href: ROUTES.fr.services,
         items: [
           { name: "Logements et villas", href: "/en/service/housing-villa-design/" },
-          { name: "Boutiques", href: "/en/service/store-design-and-implementation/" },
-          { name: "Cliniques", href: "/en/service/clinic-design-and-implementation/" },
-          { name: "Cafés et restaurants", href: "/en/service/cafe-restaurant-design-and-implementation/" },
           { name: "Bureaux", href: "/en/service/office-design-and-implementation/" },
+          { name: "Boutiques et showrooms", href: "/en/service/store-design-and-implementation/" },
+          { name: "Cafés et restaurants", href: "/en/service/cafe-restaurant-design-and-implementation/" },
+          { name: "Cliniques et espaces de santé", href: "/en/service/clinic-design-and-implementation/" },
+          { name: "Hôtels et hébergement", href: "/en/hotel-interior-design/" },
+          { name: "Instituts de beauté et spas", href: "/en/beauty-salon-interior-design/" },
+          { name: "Salles de sport et studios", href: "/en/gym-studio-interior-design/" },
         ],
         feature: { label: "Guide des prix", note: "Architecture intérieure", href: "/en/interior-design-prices/", icon: "price" },
       },

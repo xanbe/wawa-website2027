@@ -136,8 +136,8 @@ const sectorPagesTr: ExtraPage[] = [
     key: "sector",
     path: "/guzellik-salonu-ic-mimari/",
     lang: "tr",
-    title: "Güzellik Salonu İç Mimarisi",
-    lead: "Bakım odalarından bekleme alanına, misafirin kendini iyi hissettiği güzellik ve estetik salonları tasarlıyoruz.",
+    title: "Güzellik Merkezi & Spa Tasarımı",
+    lead: "Bakım odalarından bekleme alanına, misafirin kendini iyi hissettiği güzellik merkezleri, estetik salonları ve spa alanları tasarlıyoruz.",
     image: "/images/hero/fulya-klinik.webp",
     sections: [
       {
@@ -189,6 +189,52 @@ const sectorPagesTr: ExtraPage[] = [
       description:
         "Showroomlar için iç mimari: marka kimliğine uygun konsept, esnek teşhir sistemleri ve aydınlatma. Tasarım, üretim ve uygulama tek elden.",
     },
+  },
+  {
+    key: "sector",
+    group: "/otel-ic-mimari/",
+    path: "/otel-ic-mimari/",
+    lang: "tr",
+    title: "Otel & Konaklama Tasarımı",
+    lead: "Lobiden odalara, restorandan ortak alanlara: misafirin konforunu ve işletmenin günlük düzenini birlikte düşünen otel ve konaklama mekânları tasarlıyor, uyguluyoruz.",
+    image: "/images/hero/acarkent-villa.webp",
+    sections: [
+      { h: "Misafirin ilk izlenimi", p: "Giriş, lobi ve resepsiyon otelin karakterini belirler. Karşılama, bekleme ve yönlendirme alanlarını misafirin rahatça yolunu bulacağı, markanın kimliğini taşıyan bir bütün olarak kurgularız." },
+      { h: "Odalar ve tekrar eden detaylar", p: "Oda tiplerini örnek bir oda üzerinden çözer; mobilya, aydınlatma, ıslak hacim ve depolama detaylarını her odada aynı kaliteyle tekrarlanacak şekilde planlarız. Sabit mobilyalar kendi atölyemizde üretilir." },
+      { h: "Ortak alanlar ve işletme akışı", p: "Restoran, kafe, toplantı ve dinlenme alanları ile personel ve servis yolları birlikte ele alınır. Misafirin gördüğü yüzeyler ile işletmenin arka planı birbirini aksatmaz." },
+      { h: "Dayanıklılık ve bakım", p: "Yoğun kullanılan alanlarda kolay temizlenen, uzun ömürlü malzemeler seçilir. Yenileme projelerinde işler, otelin açık kalan bölümlerini etkilemeyecek etaplara bölünür." },
+    ],
+    points: ["Lobi ve resepsiyon", "Oda ve suit tasarımı", "Restoran ve ortak alanlar", "Etaplı yenileme"],
+    projectCategories: ["/portfolio-category/konut-villa/", "/portfolio-category/cafe-restoran-tasarim/"],
+    faq: [
+      { q: "Otel açıkken yenileme yapılabilir mi?", a: "Evet. İşler kat, blok ya da alan bazında etaplara bölünür; misafirin kullandığı bölümler etkilenmeyecek şekilde planlanır." },
+      { q: "Oda mobilyalarını siz mi üretiyorsunuz?", a: "Evet. Sabit mobilya ve projeye özel üniteler kendi atölyemizde üretilir, sahada monte edilir." },
+      { q: "Butik otel ve pansiyon projeleri de yapıyor musunuz?", a: "Evet. Küçük ölçekli butik otellerden daha büyük konaklama tesislerine kadar ihtiyaç programına göre çalışıyoruz." },
+    ],
+    seo: { title: "Otel İç Mimarisi ve Konaklama Tasarımı | WAWA Interiors", description: "Otel ve konaklama tesisleri için iç mimari: lobi, odalar, restoran ve ortak alanlar. Tasarım, özel mobilya üretimi ve uygulama tek ekipte." },
+  },
+  {
+    key: "sector",
+    group: "/spor-salonu-ic-mimari/",
+    path: "/spor-salonu-ic-mimari/",
+    lang: "tr",
+    title: "Spor Salonu & Stüdyo Tasarımı",
+    lead: "Fitness salonları, pilates ve yoga stüdyoları ile butik antrenman alanları için kullanımı kolay, dayanıklı ve markayı yansıtan mekânlar tasarlıyor, uyguluyoruz.",
+    image: "/images/process/konsept.webp",
+    sections: [
+      { h: "Alanın doğru bölünmesi", p: "Kardiyo, ağırlık, fonksiyonel antrenman ve grup ders alanları; ekipman ölçülerine ve ders düzenine göre yerleştirilir. Üyelerin dolaşımı ile antrenman alanları birbirini kesmez." },
+      { h: "Zemin, akustik ve havalandırma", p: "Darbeye dayanıklı zemin, ses yalıtımı ve yeterli hava değişimi antrenman alanlarının temelidir. Bu kararlar tasarımın başında tesisatla birlikte verilir." },
+      { h: "Soyunma ve ıslak hacimler", p: "Soyunma odaları, duşlar ve dolaplar yoğun kullanıma ve kolay temizliğe göre planlanır; malzemeler neme dayanıklı seçilir." },
+      { h: "Marka deneyimi", p: "Karşılama, bekleme ve satış alanları stüdyonun kimliğini taşır. Aydınlatma, renk ve grafik kullanımıyla her alanın atmosferi ayrı ayrı kurulur." },
+    ],
+    points: ["Antrenman alanı yerleşimi", "Grup ders stüdyoları", "Soyunma ve ıslak hacimler", "Zemin, akustik ve havalandırma"],
+    projectCategories: ["/portfolio-category/ofis-tasarimi/", "/portfolio-category/magaza-tasarim/"],
+    faq: [
+      { q: "Pilates ya da yoga stüdyosu gibi küçük alanlar için de çalışıyor musunuz?", a: "Evet. Tek salonlu butik stüdyolardan çok bölümlü spor salonlarına kadar ihtiyaç programına göre çalışıyoruz." },
+      { q: "Ekipman yerleşimini siz mi planlıyorsunuz?", a: "Seçtiğiniz ya da seçeceğiniz ekipmanın ölçülerine göre yerleşimi planlıyor, elektrik ve zemin detaylarını buna göre çözüyoruz." },
+      { q: "Mevcut bir salonu yenileyebilir misiniz?", a: "Evet. İşler, salonun açık kalan bölümlerini etkilemeyecek etaplara bölünebilir." },
+    ],
+    seo: { title: "Spor Salonu ve Stüdyo İç Mimarisi | WAWA Interiors", description: "Fitness salonları, pilates ve yoga stüdyoları için iç mimari: alan yerleşimi, zemin, akustik, soyunma alanları. Tasarımdan uygulamaya tek ekip." },
   },
 ];
 

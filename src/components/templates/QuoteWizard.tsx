@@ -143,7 +143,7 @@ const INTERIOR = {
   tr: {
     q: ["Nasıl bir mekân tasarlatmak istiyorsunuz?", "Mekânınız kaç metrekare?", "Hangi hizmete ihtiyacınız var?", "Teklifi kime gönderelim?"],
     fair: "Mekân türü",
-    spaces: ["Konut / Villa", "Mağaza", "Klinik", "Cafe / Restoran", "Ofis", "Diğer"],
+    spaces: ["Konut / Villa", "Ofis", "Mağaza / Showroom", "Kafe / Restoran", "Klinik / Sağlık", "Otel / Konaklama", "Güzellik / Spa", "Spor Salonu / Stüdyo", "Diğer"],
     type: "Mekânın durumu",
     types: ["Yeni / boş mekân", "Tadilat", "Kaba inşaat"],
     systems: [
@@ -158,7 +158,7 @@ const INTERIOR = {
   en: {
     q: ["What kind of space do you want designed?", "How large is the space?", "Which service do you need?", "Who should we send the offer to?"],
     fair: "Space type",
-    spaces: ["Home / Villa", "Store", "Clinic", "Cafe / Restaurant", "Office", "Other"],
+    spaces: ["Home / Villa", "Office", "Store / Showroom", "Cafe / Restaurant", "Clinic / Healthcare", "Hotel", "Beauty / Spa", "Gym / Studio", "Other"],
     type: "Condition",
     types: ["New / empty", "Renovation", "Shell"],
     systems: [
@@ -173,7 +173,7 @@ const INTERIOR = {
   de: {
     q: ["Welchen Raum möchten Sie gestalten lassen?", "Wie groß ist der Raum?", "Welche Leistung benötigen Sie?", "An wen dürfen wir das Angebot senden?"],
     fair: "Raumtyp",
-    spaces: ["Wohnung / Villa", "Laden", "Praxis", "Café / Restaurant", "Büro", "Sonstiges"],
+    spaces: ["Wohnung / Villa", "Büro", "Laden / Showroom", "Café / Restaurant", "Praxis / Klinik", "Hotel", "Beauty / Spa", "Fitness / Studio", "Sonstiges"],
     type: "Zustand",
     types: ["Neu / leer", "Renovierung", "Rohbau"],
     systems: [
