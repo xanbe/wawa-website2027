@@ -16,7 +16,7 @@ import { IntroBento } from "./IntroBento";
 import { StandHero } from "./StandHero";
 import { HERO_VIDEO, VIDEOS } from "@/content/videos";
 import { fairPicks, fairsLite } from "@/content/fairs-i18n";
-import { INTERIOR_HUB, NAV, SUB_SERVICES, parentService } from "@/components/layout/navigation";
+import { INTERIOR_HUB, NAV, parentService } from "@/components/layout/navigation";
 import { sectorPages } from "@/content/sector-pages";
 import { FAQJsonLd } from "@/components/seo/JsonLd";
 
@@ -163,7 +163,8 @@ function siblings(lang: Lang, path: string): { kind: "group" | "sector" | "areas
   // Grup hizmetleri, alt hizmetleri (sektör sayfaları) üst hizmetin hemen altında olacak şekilde
   // Grubun ana sayfasında (ör. İç Mimarlık) yalnızca ana türler listelenir; alt sektör sayfaları kendi üst hizmetinde görünür
   if (group && group.href === path) return { kind: "group", items: group.items };
-  if (group) return { kind: "group", items: group.items.flatMap((i) => [i, ...(SUB_SERVICES[i.href] ?? [])]) };
+  // Alt sektör sayfaları (kuyumcu, eczane vb.) listeye girmez; her sayfada menüdeki ana başlıklar görünür
+  if (group) return { kind: "group", items: group.items };
   const sector = sectorPages.find((p) => p.path === path);
   if (sector) return { kind: "sector", items: sectorPages.filter((p) => p.lang === lang).map((p) => ({ name: p.title, href: p.path })) };
   return {
