@@ -436,7 +436,7 @@ export async function POST(req: Request) {
     // ---------------------------------------------------------------- YouTube videosunun başlığı (oEmbed)
     if (op === "youtube.info") {
       const id = video(body.url);
-      if (!/^[w-]{11}$/.test(id)) return bad("Geçerli bir YouTube bağlantısı yapıştırın.");
+      if (!/^[\w-]{11}$/.test(id)) return bad("Geçerli bir YouTube bağlantısı yapıştırın.");
       const r = await fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${id}`)}`, { signal: AbortSignal.timeout(10_000) }).catch(() => null);
       const j = r?.ok ? ((await r.json().catch(() => null)) as { title?: string } | null) : null;
       if (!j?.title) return bad("Video bulunamadı ya da herkese açık değil.", 404);
@@ -446,7 +446,7 @@ export async function POST(req: Request) {
     // ---------------------------------------------------------------- yüklenmiş videoyu depodan silme
     if (op === "blob.delete") {
       const src = video(body.src);
-      if (!src || /^[w-]{11}$/.test(src)) return bad("Geçersiz video.");
+      if (!src || /^[\w-]{11}$/.test(src)) return bad("Geçersiz video.");
       if (!process.env.BLOB_READ_WRITE_TOKEN) return bad("Video deposu bağlı değil.", 503);
       const { del } = await import("@vercel/blob");
       await del(src);

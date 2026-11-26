@@ -83,7 +83,8 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: https: blob:",
               "font-src 'self' data: https://fonts.gstatic.com",
               "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://maps.google.com",
-              "connect-src 'self' https://www.youtube.com",
+              // Panelden MP4 yükleme: tarayıcı dosyayı doğrudan Vercel Blob'a gönderir
+              "connect-src 'self' https://www.youtube.com https://vercel.com https://*.blob.vercel-storage.com",
               "media-src 'self' https:",
               "object-src 'none'",
               "base-uri 'self'",
