@@ -93,5 +93,30 @@
     "slug": "interior-design-furnishing-expo",
     "reason": "ocec.om sayfasında yalnız ad ve tarih var; organizatör, alan ve ürün grupları yok",
     "date": "2026-11-26"
+  },
+  {
+    "slug": "the-london-textile-fair",
+    "reason": "Resmî site (thelondontextilefair.co.uk) HTTP 403 verdi; bilgi okunamadı",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "vicenzaoro-january",
+    "reason": "Resmî site (vicenzaoro.com) HTTP 403 verdi; bilgi okunamadı",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "maison-and-objet-paris",
+    "reason": "Resmî site sayfaları içerik döndürmedi (boş yanıt); bilgi okunamadı",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "bijorhca-paris",
+    "reason": "bijorhca.com whosnext.com alanına 301 ile yönleniyor; fuarlar.json adresi güncellenmeli",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "denimsandjeans-egypt",
+    "reason": "Sitede ürün grupları, ziyaretçi profili ve katılım süreci yok; yalnız tarih ve mekan var",
+    "date": "2026-11-26"
   }
 ]
