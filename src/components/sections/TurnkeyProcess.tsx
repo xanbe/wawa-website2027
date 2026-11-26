@@ -4,33 +4,10 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { useInView, useReducedMotion } from "motion/react";
 import { SectionHeader, SectionLead } from "./SectionHeading";
+import { HOME } from "@/content/home";
 
-const STEPS = [
-  {
-    title: "Keşif ve İhtiyaç Analizi",
-    text: "Mekânı yerinde inceliyor; kullanım senaryosunu, ihtiyaç programını, bütçeyi ve takvimi birlikte netleştiriyoruz.",
-    points: ["Yerinde keşif ve rölöve", "İhtiyaç programı ve bütçe", "Takvim planı"],
-    image: "/images/process/kesif.webp",
-    position: "50% 50%",
-    alt: "Boş tarihi salonda pencere ölçüsü alan iç mimar",
-  },
-  {
-    title: "Konsept ve Tasarım",
-    text: "Mekânsal planlamayı, malzeme ve ışık kurgusunu konsepte dönüştürüyor; 3D görselleştirme ve uygulama projesiyle detayları çözüyoruz.",
-    points: ["Mekânsal planlama", "Malzeme ve ışık kurgusu", "Detay çözümleri ve uygulama projesi"],
-    image: "/images/process/konsept.webp",
-    position: "50% 50%",
-    alt: "Salon görseli, kapı çizimi ve mermer, kadife, pirinç malzeme numuneleri",
-  },
-  {
-    title: "Uygulama ve Teslim",
-    text: "Saha ekibimizle uygulamayı yürütüyor, detayları yerinde kontrol edip mekânı kullanıma hazır teslim ediyoruz.",
-    points: ["Saha yönetimi", "Nakliye ve montaj", "Anahtar teslim"],
-    image: "/images/process/teslim.webp",
-    position: "50% 50%",
-    alt: "Mermer şömine ve kadife perdelerle tamamlanmış salon",
-  },
-];
+// Süreç adımları yönetim panelinden (src/content/home.json) düzenlenir
+const STEPS = HOME.process;
 
 const INTERVAL = 5000;
 

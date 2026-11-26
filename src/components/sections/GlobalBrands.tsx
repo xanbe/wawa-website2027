@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { useDragMarquee } from "./useDragMarquee";
-import { BRANDS } from "./brands-data";
+import { HOME } from "@/content/home";
+
+const BRANDS = HOME.brands;
 
 
 

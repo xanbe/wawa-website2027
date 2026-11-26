@@ -1,11 +1,11 @@
-// Panelde kaydedilen Türkçe proje metninin İngilizce ve Almanca çevirisi (Google Gemini metin modeli).
+// Panelde kaydedilen Türkçe proje ve yazı metninin İngilizce ve Almanca çevirisi (Google Gemini metin modeli).
 // Anahtar yoksa ya da çeviri başarısız olursa null döner; kayıt yine yapılır, metin eski hâliyle kalır.
 import type { ProjectText, SyncLang } from "./sync";
 
 const MODEL = process.env.AI_TEXT_MODEL || "gemini-2.5-flash";
 export const TRANSLATE_CONFIGURED = Boolean(process.env.GEMINI_API_KEY);
 
-const PROMPT = `You translate project pages of WAWA Interiors, an interior architecture and exhibition stand company in Istanbul, from Turkish into English and German.
+const PROMPT = `You translate project pages and blog articles of WAWA Interiors, an interior architecture and exhibition stand company in Istanbul, from Turkish into English and German.
 Rules:
 - Natural, concise website copy; English in international/British spelling, German in the Sie form.
 - Keep brand, company, fair and place names exactly as written.
@@ -28,7 +28,7 @@ export async function translateProject(src: ProjectText): Promise<Record<SyncLan
         contents: [{ role: "user", parts: [{ text: JSON.stringify(src) }] }],
         generationConfig: { responseMimeType: "application/json", temperature: 0.2 },
       }),
-      signal: AbortSignal.timeout(40_000),
+      signal: AbortSignal.timeout(50_000),
     });
     if (!res.ok) {
       console.error(`[admin] çeviri model hatası ${res.status}`);

@@ -4,34 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "./SectionHeading";
+import { HOME } from "@/content/home";
 
-const faqs: { question: string; answer: string }[] = [
-  {
-    question: "Tasarım süreci ne kadar sürer?",
-    answer:
-      "Proje türüne, metrekareye ve teslim tarihine göre değişir. İlk görüşmede kapsamı netleştirir, size baştan net bir takvim paylaşırız.",
-  },
-  {
-    question: "Üretim ve kurulum hangi ülkelerde?",
-    answer:
-      "Üretim İstanbul'daki atölyemizde yapılır. Avrupa, Birleşik Krallık, Amerika, Ortadoğu ve Afrika'da kurulumu kendi ekibimiz ve lojistik planla yönetiriz.",
-  },
-  {
-    question: "İç mimar ücreti nasıl belirlenir?",
-    answer:
-      "Ücret metrekareye ve proje kapsamına göre belirlenir: tasarım karmaşıklığı, malzeme seviyesi, özel imalatlar ve teslim tarihi. İlk görüşmede kapsamı ve bütçe aralığını netleştiririz.",
-  },
-  {
-    question: "Nakliye ve montaj dahil mi?",
-    answer:
-      "Anahtar teslim projelerde üretim, nakliye ve montaj tek elden yönetilir. Dahil olan kalemler proje başında yazılı olarak netleşir.",
-  },
-  {
-    question: "Başlamak için neye ihtiyacınız var?",
-    answer:
-      "Proje türü, ölçüler, lokasyon, teslim ya da fuar tarihi ve beğendiğiniz referanslar yeterli. Gerisini birlikte kurgularız.",
-  },
-];
+// Sorular yönetim panelinden (src/content/home.json) düzenlenir; görünen sekmeler ve FAQPage yapısal verisi aynı listeden üretilir
+const faqs = HOME.faq;
 
 const LINE = "border-wawa-charcoal/15";
 const EASE = "ease-[cubic-bezier(0.16,1,0.3,1)]";
@@ -50,7 +26,7 @@ export function FAQAlt() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
+            mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
           }).replace(/</g, "\\u003c"),
         }}
       />
@@ -71,7 +47,7 @@ export function FAQAlt() {
             {faqs.map((f, i) => {
               const isActive = i === active;
               return (
-                <li key={f.question}>
+                <li key={f.q}>
                   <button
                     type="button"
                     role="tab"
@@ -96,7 +72,7 @@ export function FAQAlt() {
                         isActive ? "text-wawa-charcoal" : "text-wawa-charcoal/50 group-hover:text-wawa-charcoal"
                       }`}
                     >
-                      {f.question}
+                      {f.q}
                     </span>
                   </button>
                 </li>
@@ -119,7 +95,7 @@ export function FAQAlt() {
               hidden={i !== active}
               className="animate-fade-in text-[20px] leading-relaxed text-wawa-charcoal lg:col-span-7 lg:text-[24px]"
             >
-              {f.answer}
+              {f.a}
             </p>
           ))}
           <Link

@@ -5,7 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, ArrowUpRight, Pause, Play } from "lucide-react";
-import { heroSlides } from "./hero-slides";
+import { HOME } from "@/content/home";
+
+// Her slayt bir sektör; içerik yönetim panelinden (src/content/home.json) düzenlenir. Görseller public/images/hero altında.
+const heroSlides = HOME.slides;
 
 const SLIDE_DURATION = 7000; // ms — her sektörün ekranda kalma süresi
 const WIPE_DURATION = 1.4; // s — cetvel çizgisinin ekranı geçme süresi

@@ -24,6 +24,7 @@ export type Post = {
   faq: { q: string; a: string }[];
   alternates: Alternates;
   seo: Seo;
+  draft?: boolean; // panelde taslak: sitede görünmez
 };
 
 export type Project = {
@@ -37,6 +38,8 @@ export type Project = {
   html: string;
   alternates: Alternates;
   seo: Seo;
+  draft?: boolean; // panelde taslak: sitede görünmez
+  video?: string; // YouTube kimliği ya da yüklenmiş MP4 adresi
 };
 
 export type Service = {
@@ -87,8 +90,9 @@ function withOverride<T extends { path: string; title: string; seo: Seo }>(item:
   };
 }
 
-export const posts = (postsData as Post[]).map(withOverride);
-export const projects = projectsData as Project[];
+// Panelde taslak olarak kaydedilenler sitede (liste, sayfa, site haritası) yer almaz
+export const posts = (postsData as Post[]).filter((p) => !p.draft).map(withOverride);
+export const projects = (projectsData as Project[]).filter((p) => !p.draft);
 export const services = (servicesData as Service[]).map(withOverride);
 export const legacyPages = (pagesData as LegacyPage[]).map(withOverride);
 export const categories = categoriesData as Category[];

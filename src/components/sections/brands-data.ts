@@ -1,30 +1,5 @@
 // Referans marka logoları (anasayfa ve hizmet sayfalarındaki şeritler)
-export const BRANDS = [
-  { name: "Koç", src: "/logos/brands/koc-logosu-300x113.webp" },
-  { name: "Zorlu", src: "/logos/brands/zorlu-logosu-300x113.webp" },
-  { name: "Kardemir", src: "/logos/brands/kardemir-logosu-300x113.webp" },
-  { name: "Hyosung", src: "/logos/brands/hysoung-logo-300x113.webp" },
-  { name: "Leuze", src: "/logos/brands/leuze-logo-300x113.webp" },
-  { name: "Bitget", src: "/logos/brands/bitget-logosu-300x113.webp" },
-  { name: "MEXC Global", src: "/logos/brands/mexc-logo-300x113.webp" },
-  { name: "Golden Rose", src: "/logos/brands/goldenrose-logo-300x113.webp" },
-  { name: "Tamek", src: "/logos/brands/tamek-logo-300x113.webp" },
-  { name: "İnoksan", src: "/logos/brands/inoksan-logo-300x113.webp" },
-  { name: "Midas", src: "/logos/brands/midas-logo-300x113.webp" },
-  { name: "ZES", src: "/logos/brands/zeslogo-300x113.webp" },
-  { name: "Asaş", src: "/logos/brands/asas-logou-300x113.webp" },
-  { name: "Banat", src: "/logos/brands/banat-logos-300x113.webp" },
-  { name: "Gazioğlu Solar Enerji", src: "/logos/brands/gazioglu-logo-300x113.webp" },
-  { name: "Ödül Solar", src: "/logos/brands/odulsolar-logo-300x113.webp" },
-  { name: "Fortis Energy", src: "/logos/brands/fortisenerji-logo-300x113.webp" },
-  { name: "Naturel Enerji", src: "/logos/brands/naten-logo-300x113.webp" },
-  { name: "Entek", src: "/logos/brands/entek-logo-300x113.webp" },
-  { name: "LastikPark", src: "/logos/brands/lastikpark-logo-300x113.webp" },
-  { name: "Gardrops", src: "/logos/brands/gardrops-logo-300x113.webp" },
-  { name: "Comfytex", src: "/logos/brands/comfytex-logo-300x113.webp" },
-  { name: "Huzur Plastik", src: "/logos/brands/huzurplastik-logo-300x113.webp" },
-  { name: "GCA", src: "/logos/brands/gca-logosu-300x113.webp" },
-  { name: "Tatko", src: "/logos/brands/tatko-logosu-300x113.webp" },
-  { name: "Balmy", src: "/logos/brands/balmy-logo-300x113.webp" },
-  { name: "Electrip", src: "/logos/brands/electrip-logo-300x113.webp" },
-];
+// Liste yönetim panelinden (src/content/home.json) düzenlenir; mevcut içe aktarmalar bozulmasın diye buradan da verilir
+import { HOME } from "@/content/home";
+
+export const BRANDS = HOME.brands;

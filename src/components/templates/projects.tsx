@@ -3,6 +3,7 @@ import Link from "next/link";
 import { t, ROUTES, contentLang, type Lang } from "@/lib/i18n";
 import { PAGE_SIZE, projectCategories, projectCategory, projectsIn, projectsInCategory, type Category, type Project } from "@/lib/content";
 import { InfiniteGrid } from "./InfiniteGrid";
+import { isVideoFile } from "@/content/videos";
 import { CtaBand, LINE, PageIntro, Pagination, ProjectCard, Prose } from "./parts";
 
 const INTRO = {
@@ -125,6 +126,25 @@ export function ProjectTemplate({ project }: { project: Project }) {
             </div>
           )}
         </header>
+
+        {project.video && (
+          <div className="container-wide mt-8">
+            <div className="relative aspect-[16/9] overflow-hidden bg-wawa-charcoal">
+              {isVideoFile(project.video) ? (
+                <video src={project.video} controls playsInline preload="metadata" poster={project.featuredImage ?? undefined} className="absolute inset-0 h-full w-full object-cover" />
+              ) : (
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${project.video}?rel=0&modestbranding=1`}
+                  title={project.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full border-0"
+                />
+              )}
+            </div>
+          </div>
+        )}
 
         {project.html && (
           <div className="container-wide grid gap-10 py-12 lg:grid-cols-12 lg:py-16">

@@ -1,0 +1,408 @@
+{
+ "slides": [
+  {
+   "sector": "Klinik",
+   "project": "Halide Akıncı Klinik",
+   "image": "/images/hero/halide-akinci-klinik.webp",
+   "alt": "Halide Akıncı klinik bekleme alanı ve resepsiyon tasarımı",
+   "href": "/portfolio/halide-akinci-klinik-tasarim/"
+  },
+  {
+   "sector": "Villa",
+   "project": "Acarkent Villa",
+   "image": "/images/hero/acarkent-villa.webp",
+   "alt": "Acarkent villa dış cephe ve havuz tasarımı",
+   "href": "/portfolio/acarkent-villa-tasarimi/"
+  },
+  {
+   "sector": "Muayene",
+   "project": "Fulya Klinik",
+   "image": "/images/hero/fulya-klinik.webp",
+   "alt": "Fulya klinik muayene odası tasarımı",
+   "href": "/portfolio/fulya-klinik-tasarim/"
+  },
+  {
+   "sector": "Konut",
+   "project": "Caddebostan Konut",
+   "image": "/images/hero/caddebostan-konut.webp",
+   "alt": "Caddebostan konut projesi salon ve mutfak tasarımı",
+   "href": "/portfolio/caddebostan-konut-projesi/"
+  },
+  {
+   "sector": "Mağaza",
+   "project": "Instreet · İstanbul Havalimanı",
+   "image": "/images/hero/instreet-havalimani.webp",
+   "alt": "Instreet İstanbul Havalimanı mağaza tasarımı",
+   "href": "/service/magaza-tasarimi/"
+  }
+ ],
+ "featured": [
+  {
+   "path": "/portfolio/acarkent-villa-tasarimi/",
+   "title": "Acarkent Villa",
+   "location": "İstanbul",
+   "image": "/images/hero/acarkent-villa.webp",
+   "category": "Konut & Villa",
+   "filter": "residential"
+  },
+  {
+   "path": "/portfolio/instreet-istanbul-havalimani-dis-hatlar/",
+   "title": "Instreet İstanbul Havalimanı",
+   "location": "İstanbul",
+   "image": "/images/hero/instreet-havalimani.webp",
+   "category": "Mağaza",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/caddebostan-konut-projesi/",
+   "title": "Caddebostan Konut",
+   "location": "İstanbul",
+   "image": "/images/hero/caddebostan-konut.webp",
+   "category": "Konut",
+   "filter": "residential"
+  },
+  {
+   "path": "/portfolio/electrip-intersolar/",
+   "title": "Electrip · Intersolar",
+   "location": "Hannover",
+   "image": "/images/projects/electrip-intersolar.webp",
+   "category": "Fuar Standı",
+   "filter": "stand"
+  },
+  {
+   "path": "/portfolio/halide-akinci-klinik-tasarim/",
+   "title": "Halide Akıncı Klinik",
+   "location": null,
+   "image": "/images/hero/halide-akinci-klinik.webp",
+   "category": "Klinik",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/acik-ofis-tasarimlari/",
+   "title": "Tatbik-i Ofis",
+   "location": "İstanbul",
+   "image": "/images/projects/acik-ofis-tasarimlari.webp",
+   "category": "Ofis",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/gurme-restoran/",
+   "title": "Gurme Restoran",
+   "location": null,
+   "image": "/images/projects/gurme-restoran.webp",
+   "category": "Restoran",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/fulya-klinik-tasarim/",
+   "title": "Fulya Klinik",
+   "location": "İstanbul",
+   "image": "/images/hero/fulya-klinik.webp",
+   "category": "Klinik",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/golden-rose-bursa/",
+   "title": "Golden Rose",
+   "location": "Bursa",
+   "image": "/images/projects/golden-rose-bursa.webp",
+   "category": "Mağaza",
+   "filter": "commercial"
+  },
+  {
+   "path": "/portfolio/dubai-fuarstandi/",
+   "title": "Ofton · Dubai Cityscape",
+   "location": "Dubai",
+   "image": "/images/projects/dubai-fuarstandi.webp",
+   "category": "Fuar Standı",
+   "filter": "stand"
+  },
+  {
+   "path": "/portfolio/dila-exclusive/",
+   "title": "Dila Exclusive",
+   "location": null,
+   "image": "/images/projects/dila-exclusive.jpg",
+   "category": "Kuyum Fuarı",
+   "filter": "stand"
+  },
+  {
+   "path": "/portfolio/kardemir-metal-expo/",
+   "title": "Kardemir · Metal Expo",
+   "location": null,
+   "image": "/images/projects/kardemir-metal-expo.webp",
+   "category": "Fuar Standı",
+   "filter": "stand"
+  }
+ ],
+ "brands": [
+  {
+   "name": "Koç",
+   "src": "/logos/brands/koc-logosu-300x113.webp"
+  },
+  {
+   "name": "Zorlu",
+   "src": "/logos/brands/zorlu-logosu-300x113.webp"
+  },
+  {
+   "name": "Kardemir",
+   "src": "/logos/brands/kardemir-logosu-300x113.webp"
+  },
+  {
+   "name": "Hyosung",
+   "src": "/logos/brands/hysoung-logo-300x113.webp"
+  },
+  {
+   "name": "Leuze",
+   "src": "/logos/brands/leuze-logo-300x113.webp"
+  },
+  {
+   "name": "Bitget",
+   "src": "/logos/brands/bitget-logosu-300x113.webp"
+  },
+  {
+   "name": "MEXC Global",
+   "src": "/logos/brands/mexc-logo-300x113.webp"
+  },
+  {
+   "name": "Golden Rose",
+   "src": "/logos/brands/goldenrose-logo-300x113.webp"
+  },
+  {
+   "name": "Tamek",
+   "src": "/logos/brands/tamek-logo-300x113.webp"
+  },
+  {
+   "name": "İnoksan",
+   "src": "/logos/brands/inoksan-logo-300x113.webp"
+  },
+  {
+   "name": "Midas",
+   "src": "/logos/brands/midas-logo-300x113.webp"
+  },
+  {
+   "name": "ZES",
+   "src": "/logos/brands/zeslogo-300x113.webp"
+  },
+  {
+   "name": "Asaş",
+   "src": "/logos/brands/asas-logou-300x113.webp"
+  },
+  {
+   "name": "Banat",
+   "src": "/logos/brands/banat-logos-300x113.webp"
+  },
+  {
+   "name": "Gazioğlu Solar Enerji",
+   "src": "/logos/brands/gazioglu-logo-300x113.webp"
+  },
+  {
+   "name": "Ödül Solar",
+   "src": "/logos/brands/odulsolar-logo-300x113.webp"
+  },
+  {
+   "name": "Fortis Energy",
+   "src": "/logos/brands/fortisenerji-logo-300x113.webp"
+  },
+  {
+   "name": "Naturel Enerji",
+   "src": "/logos/brands/naten-logo-300x113.webp"
+  },
+  {
+   "name": "Entek",
+   "src": "/logos/brands/entek-logo-300x113.webp"
+  },
+  {
+   "name": "LastikPark",
+   "src": "/logos/brands/lastikpark-logo-300x113.webp"
+  },
+  {
+   "name": "Gardrops",
+   "src": "/logos/brands/gardrops-logo-300x113.webp"
+  },
+  {
+   "name": "Comfytex",
+   "src": "/logos/brands/comfytex-logo-300x113.webp"
+  },
+  {
+   "name": "Huzur Plastik",
+   "src": "/logos/brands/huzurplastik-logo-300x113.webp"
+  },
+  {
+   "name": "GCA",
+   "src": "/logos/brands/gca-logosu-300x113.webp"
+  },
+  {
+   "name": "Tatko",
+   "src": "/logos/brands/tatko-logosu-300x113.webp"
+  },
+  {
+   "name": "Balmy",
+   "src": "/logos/brands/balmy-logo-300x113.webp"
+  },
+  {
+   "name": "Electrip",
+   "src": "/logos/brands/electrip-logo-300x113.webp"
+  }
+ ],
+ "press": [
+  {
+   "source": "Mynet Haber",
+   "date": "8 Kasım 2024",
+   "title": "2025'te Fuar Standları Akıllanıyor, Dijitalleşme Tam Gaz Devam Ediyor",
+   "href": "https://haber.mynet.com/2025-te-fuar-standlari-akillaniyor-dijitallesme-tam-gaz-devam-ediyor-110107190241",
+   "logo": {
+    "src": "/images/press/mynet-w.webp",
+    "w": 480,
+    "h": 249,
+    "cls": "max-h-11"
+   }
+  },
+  {
+   "source": "Tele1",
+   "date": "10 Aralık 2024",
+   "title": "Fuar Standları Değişiyor, 2025 Fuar Standı Modelleri Akıllı Oluyor",
+   "href": "https://www.tele1.com.tr/fuar-standlari-degisiyor-2025-fuar-standi-modelleri-akilli-oluyor",
+   "logo": {
+    "src": "/images/press/tele1-w.webp",
+    "w": 480,
+    "h": 223,
+    "cls": "max-h-9"
+   }
+  },
+  {
+   "source": "Karamandan",
+   "date": "2024",
+   "title": "Villa Tasarımında Önemli Kriterler",
+   "href": "https://www.karamandan.com/haber/6473815/villa-tasariminda-onemli-kriterler",
+   "logo": {
+    "src": "/images/press/karamandan-w.webp",
+    "w": 479,
+    "h": 84,
+    "cls": "max-h-6"
+   }
+  },
+  {
+   "source": "Esgazete",
+   "date": "6 Mayıs 2022",
+   "title": "Wawa Interiors İç Mimarlık Çalışmaları",
+   "href": "https://www.esgazete.com/wawa-interiors-ic-mimarlik-calismalari",
+   "logo": {
+    "src": "/images/press/esgazete-w.webp",
+    "w": 466,
+    "h": 81,
+    "cls": "max-h-6"
+   }
+  },
+  {
+   "source": "Nehaber24",
+   "date": "2024",
+   "title": "Neden Özel Tasarım Ahşap Fuar Standı Tercih Etmelisiniz?",
+   "href": "https://www.nehaber24.com/neden-ozel-tasarim-ahsap-fuar-standi-tercih-etmelisiniz",
+   "logo": {
+    "src": "/images/press/nehaber24-w.webp",
+    "w": 460,
+    "h": 136,
+    "cls": "max-h-8"
+   }
+  },
+  {
+   "source": "Aydınpost",
+   "date": "10 Eylül 2021",
+   "title": "İç Mimar ile Ofis Tasarımı",
+   "href": "https://www.aydinpost.com/ic-mimar-ile-ofis-tasarimi",
+   "logo": {
+    "src": "/images/press/aydinpost-w.webp",
+    "w": 480,
+    "h": 120,
+    "cls": "max-h-7"
+   }
+  }
+ ],
+ "reviews": {
+  "rating": 5,
+  "count": 13,
+  "url": "https://share.google/2p2QdWjkltdph3n3J",
+  "items": [
+   {
+    "author": "Nazlı Öztürk",
+    "when": "8 ay önce",
+    "text": "Fuar standımız için birlikte çalıştık ve gerçekten memnun kaldık. Süreç boyunca iletişimde hiçbir problem yaşamadık, her şey hızlı ve planlı ilerledi. Kurulum ve operasyon kısmı da oldukça sorunsuzdu. Standın kalitesi çok iyiydi, fuar boyunca birçok kişiden tasarımla ilgili güzel yorumlar aldık. Emeği geçen herkese teşekkür ederiz."
+   },
+   {
+    "author": "Kerim Yeşilyurt",
+    "when": "8 ay önce",
+    "text": "Kuyumculuk fuarı için 3 yıldır işbirliği yapıyoruz. Deneyimli ve yenilikçi tasarımlar sunan bir ekip. İşin başlangıcından bitimine kadar titizlikle ilgileniyorlar. Gönül rahatlığıyla tavsiye ediyorum!"
+   },
+   {
+    "author": "Murat Boylu",
+    "when": "bir yıl önce",
+    "text": "Tasarım ve yeni trend standlar konusunda işini titizlikle ve hakkıyla yapan genç, dinamik bir ekip. Gönül rahatlığıyla tavsiye ediyorum!"
+   },
+   {
+    "author": "Bela Brons",
+    "when": "bir yıl önce",
+    "text": "It was a pleasue working with Wawa Interiors. Clear and quick communication. Very happy with manager Zehra, she made our exhibition experience very comfortable and professional. Will be glad to work together again"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "q": "Tasarım süreci ne kadar sürer?",
+   "a": "Proje türüne, metrekareye ve teslim tarihine göre değişir. İlk görüşmede kapsamı netleştirir, size baştan net bir takvim paylaşırız."
+  },
+  {
+   "q": "Üretim ve kurulum hangi ülkelerde?",
+   "a": "Üretim İstanbul'daki atölyemizde yapılır. Avrupa, Birleşik Krallık, Amerika, Ortadoğu ve Afrika'da kurulumu kendi ekibimiz ve lojistik planla yönetiriz."
+  },
+  {
+   "q": "İç mimar ücreti nasıl belirlenir?",
+   "a": "Ücret metrekareye ve proje kapsamına göre belirlenir: tasarım karmaşıklığı, malzeme seviyesi, özel imalatlar ve teslim tarihi. İlk görüşmede kapsamı ve bütçe aralığını netleştiririz."
+  },
+  {
+   "q": "Nakliye ve montaj dahil mi?",
+   "a": "Anahtar teslim projelerde üretim, nakliye ve montaj tek elden yönetilir. Dahil olan kalemler proje başında yazılı olarak netleşir."
+  },
+  {
+   "q": "Başlamak için neye ihtiyacınız var?",
+   "a": "Proje türü, ölçüler, lokasyon, teslim ya da fuar tarihi ve beğendiğiniz referanslar yeterli. Gerisini birlikte kurgularız."
+  }
+ ],
+ "process": [
+  {
+   "title": "Keşif ve İhtiyaç Analizi",
+   "text": "Mekânı yerinde inceliyor; kullanım senaryosunu, ihtiyaç programını, bütçeyi ve takvimi birlikte netleştiriyoruz.",
+   "points": [
+    "Yerinde keşif ve rölöve",
+    "İhtiyaç programı ve bütçe",
+    "Takvim planı"
+   ],
+   "image": "/images/process/kesif.webp",
+   "position": "50% 50%",
+   "alt": "Boş tarihi salonda pencere ölçüsü alan iç mimar"
+  },
+  {
+   "title": "Konsept ve Tasarım",
+   "text": "Mekânsal planlamayı, malzeme ve ışık kurgusunu konsepte dönüştürüyor; 3D görselleştirme ve uygulama projesiyle detayları çözüyoruz.",
+   "points": [
+    "Mekânsal planlama",
+    "Malzeme ve ışık kurgusu",
+    "Detay çözümleri ve uygulama projesi"
+   ],
+   "image": "/images/process/konsept.webp",
+   "position": "50% 50%",
+   "alt": "Salon görseli, kapı çizimi ve mermer, kadife, pirinç malzeme numuneleri"
+  },
+  {
+   "title": "Uygulama ve Teslim",
+   "text": "Saha ekibimizle uygulamayı yürütüyor, detayları yerinde kontrol edip mekânı kullanıma hazır teslim ediyoruz.",
+   "points": [
+    "Saha yönetimi",
+    "Nakliye ve montaj",
+    "Anahtar teslim"
+   ],
+   "image": "/images/process/teslim.webp",
+   "position": "50% 50%",
+   "alt": "Mermer şömine ve kadife perdelerle tamamlanmış salon"
+  }
+ ]
+}

@@ -1,6 +1,10 @@
 import { ArrowUpRight, MapPin, Star } from "lucide-react";
-import { GOOGLE_MAPS_URL, GOOGLE_RATING, GOOGLE_REVIEWS_URL, GOOGLE_REVIEW_COUNT, REVIEWS } from "./google-reviews-data";
+import { HOME } from "@/content/home";
+import { GOOGLE_MAPS_URL } from "./google-reviews-data";
 import { SectionHeader } from "./SectionHeading";
+
+// Puan, yorum sayısı ve yorumlar yönetim panelinden (src/content/home.json) gelir; harita adresi kodda sabittir
+const { rating: GOOGLE_RATING, count: GOOGLE_REVIEW_COUNT, url: GOOGLE_REVIEWS_URL, items: REVIEWS } = HOME.reviews;
 
 const LINE = "border-wawa-charcoal/15";
 // Google Haritalar gömme görünümü; siyah beyaz gösterilir, tıklanınca işletme sayfası açılır

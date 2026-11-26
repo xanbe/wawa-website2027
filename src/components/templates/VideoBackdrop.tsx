@@ -1,9 +1,10 @@
 "use client";
 
-// Açılışın arkasında sessiz, döngülü YouTube videosu. Önce kapak görseli gelir; video sayfa açıldıktan sonra
+// Açılışın arkasında sessiz, döngülü video (YouTube ya da panelden yüklenen MP4). Önce kapak görseli gelir; video sayfa açıldıktan sonra
 // yüklenir ve oynamaya başlayınca yavaşça görünür. Hareket azaltma tercihinde yalnızca kapak görseli kalır.
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { isVideoFile } from "@/content/videos";
 
 export function VideoBackdrop({ id, poster, images = [] }: { id?: string; poster?: string; images?: string[] }) {
   const [mount, setMount] = useState(false);
@@ -38,7 +39,19 @@ export function VideoBackdrop({ id, poster, images = [] }: { id?: string; poster
             />
           ))
         : poster && <Image src={poster} alt="" fill priority sizes="100vw" className="object-cover" />}
-      {id && mount && (
+      {id && mount && isVideoFile(id) && (
+        <video
+          src={id}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onPlaying={() => setVisible(true)}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ${visible ? "opacity-100" : "opacity-0"}`}
+        />
+      )}
+      {id && mount && !isVideoFile(id) && (
         <iframe
           src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&playsinline=1&rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3`}
           title=""

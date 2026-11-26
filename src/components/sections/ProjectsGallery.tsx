@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useInView } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionHeader, SectionLead } from "./SectionHeading";
+import { HOME, type HomeFeatured } from "@/content/home";
 
 export interface ProjectItem {
   id: string;
@@ -21,20 +22,23 @@ export interface ProjectItem {
 // Ziyaretçi kendi segmentini seçer: konut sahibi ile kurumsal müşteri aynı şeridi görmek zorunda kalmaz
 type FilterType = "all" | "residential" | "commercial" | "stand";
 
-const fallbackProjects: ProjectItem[] = [
-  { id: "1", title: "Acarkent Villa", slug: "acarkent-villa-tasarimi", location: "İstanbul", category: "Konut & Villa", category_slug: "konut", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/hero/acarkent-villa.webp" },
-  { id: "2", title: "Instreet İstanbul Havalimanı", slug: "instreet-istanbul-havalimani-dis-hatlar", location: "İstanbul", category: "Mağaza", category_slug: "magaza", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/hero/instreet-havalimani.webp" },
-  { id: "3", title: "Caddebostan Konut", slug: "caddebostan-konut-projesi", location: "İstanbul", category: "Konut", category_slug: "konut", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/hero/caddebostan-konut.webp" },
-  { id: "4", title: "Electrip · Intersolar", slug: "electrip-intersolar", location: "Hannover", category: "Fuar Standı", category_slug: "fuar", parent_category_slug: "fuar-standi", featured_image_url: "/images/projects/electrip-intersolar.webp" },
-  { id: "5", title: "Halide Akıncı Klinik", slug: "halide-akinci-klinik-tasarim", location: null, category: "Klinik", category_slug: "klinik", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/hero/halide-akinci-klinik.webp" },
-  { id: "6", title: "Tatbik-i Ofis", slug: "acik-ofis-tasarimlari", location: "İstanbul", category: "Ofis", category_slug: "ofis", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/projects/acik-ofis-tasarimlari.webp" },
-  { id: "7", title: "Gurme Restoran", slug: "gurme-restoran", location: null, category: "Restoran", category_slug: "restoran", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/projects/gurme-restoran.webp" },
-  { id: "8", title: "Fulya Klinik", slug: "fulya-klinik-tasarim", location: "İstanbul", category: "Klinik", category_slug: "klinik", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/hero/fulya-klinik.webp" },
-  { id: "9", title: "Golden Rose", slug: "golden-rose-bursa", location: "Bursa", category: "Mağaza", category_slug: "magaza", parent_category_slug: "ic-mimarlik", featured_image_url: "/images/projects/golden-rose-bursa.webp" },
-  { id: "10", title: "Ofton · Dubai Cityscape", slug: "dubai-fuarstandi", location: "Dubai", category: "Fuar Standı", category_slug: "fuar", parent_category_slug: "fuar-standi", featured_image_url: "/images/projects/dubai-fuarstandi.webp" },
-  { id: "11", title: "Dila Exclusive", slug: "dila-exclusive", location: null, category: "Kuyum Fuarı", category_slug: "fuar", parent_category_slug: "fuar-standi", featured_image_url: "/images/projects/dila-exclusive.jpg" },
-  { id: "12", title: "Kardemir · Metal Expo", slug: "kardemir-metal-expo", location: null, category: "Fuar Standı", category_slug: "fuar", parent_category_slug: "fuar-standi", featured_image_url: "/images/projects/kardemir-metal-expo.webp" },
-];
+// Anasayfadaki seçilmiş projeler yönetim panelinden (src/content/home.json) düzenlenir.
+// Sekme (filter) değeri, aşağıdaki filtrelemenin beklediği kategori alanlarına çevrilir.
+const FILTER_SLUGS: Record<HomeFeatured["filter"], { category_slug: string | null; parent_category_slug: string }> = {
+  residential: { category_slug: "konut", parent_category_slug: "ic-mimarlik" },
+  commercial: { category_slug: null, parent_category_slug: "ic-mimarlik" },
+  stand: { category_slug: "fuar", parent_category_slug: "fuar-standi" },
+};
+
+const fallbackProjects: ProjectItem[] = HOME.featured.map((p, i) => ({
+  id: String(i + 1),
+  title: p.title,
+  slug: p.path.replace(/^\/portfolio\//, "").replace(/\/$/, ""),
+  location: p.location,
+  category: p.category,
+  ...FILTER_SLUGS[p.filter],
+  featured_image_url: p.image,
+}));
 
 const filters: { value: FilterType; label: string }[] = [
   { value: "all", label: "Tümü" },

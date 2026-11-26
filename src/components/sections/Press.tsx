@@ -4,53 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { HOME } from "@/content/home";
 
 // Basından: WAWA hakkında çıkan haberler (önceki sitedeki "Basında Biz" sayfasından; bağlantılar yayınların kendi sayfalarıdır).
 // Koyu, dar bir bant: solda seçili haberin başlığı, sağda yayın logoları. Kendiliğinden dönmez; logoya gelince değişir.
-const PRESS = [
-  {
-    source: "Mynet Haber",
-    date: "8 Kasım 2024",
-    title: "2025'te Fuar Standları Akıllanıyor, Dijitalleşme Tam Gaz Devam Ediyor",
-    href: "https://haber.mynet.com/2025-te-fuar-standlari-akillaniyor-dijitallesme-tam-gaz-devam-ediyor-110107190241",
-    logo: { src: "/images/press/mynet-w.webp", w: 480, h: 249, cls: "max-h-11" },
-  },
-  {
-    source: "Tele1",
-    date: "10 Aralık 2024",
-    title: "Fuar Standları Değişiyor, 2025 Fuar Standı Modelleri Akıllı Oluyor",
-    href: "https://www.tele1.com.tr/fuar-standlari-degisiyor-2025-fuar-standi-modelleri-akilli-oluyor",
-    logo: { src: "/images/press/tele1-w.webp", w: 480, h: 223, cls: "max-h-9" },
-  },
-  {
-    source: "Karamandan",
-    date: "2024",
-    title: "Villa Tasarımında Önemli Kriterler",
-    href: "https://www.karamandan.com/haber/6473815/villa-tasariminda-onemli-kriterler",
-    logo: { src: "/images/press/karamandan-w.webp", w: 479, h: 84, cls: "max-h-6" },
-  },
-  {
-    source: "Esgazete",
-    date: "6 Mayıs 2022",
-    title: "Wawa Interiors İç Mimarlık Çalışmaları",
-    href: "https://www.esgazete.com/wawa-interiors-ic-mimarlik-calismalari",
-    logo: { src: "/images/press/esgazete-w.webp", w: 466, h: 81, cls: "max-h-6" },
-  },
-  {
-    source: "Nehaber24",
-    date: "2024",
-    title: "Neden Özel Tasarım Ahşap Fuar Standı Tercih Etmelisiniz?",
-    href: "https://www.nehaber24.com/neden-ozel-tasarim-ahsap-fuar-standi-tercih-etmelisiniz",
-    logo: { src: "/images/press/nehaber24-w.webp", w: 460, h: 136, cls: "max-h-8" },
-  },
-  {
-    source: "Aydınpost",
-    date: "10 Eylül 2021",
-    title: "İç Mimar ile Ofis Tasarımı",
-    href: "https://www.aydinpost.com/ic-mimar-ile-ofis-tasarimi",
-    logo: { src: "/images/press/aydinpost-w.webp", w: 480, h: 120, cls: "max-h-7" },
-  },
-];
+const PRESS = HOME.press;
 
 export function Press() {
   const [active, setActive] = useState(0);

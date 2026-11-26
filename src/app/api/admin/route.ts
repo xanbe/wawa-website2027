@@ -1,29 +1,35 @@
 import { NextResponse } from "next/server";
 import { SESSION_COOKIE, SESSION_TTL_MS, adminEnabled, checkPassword, isAdmin, makeSession } from "@/lib/admin/auth";
-import { POSTS_FILE, PROJECTS_FILE, commit, putBinary, readText, storeMode, type Change } from "@/lib/admin/store";
+import { HOME_FILE, PANEL_PREFIX, POSTS_FILE, PROJECTS_FILE, VIDEOS_FILE, canDelete, history, listMedia, putBinary, readText, revert, storeMode, transact, type Change } from "@/lib/admin/store";
 import { clientIp } from "@/lib/phone-otp";
 import { allow } from "@/lib/rate-limit";
-import { categories, type Post, type Project } from "@/lib/content";
+import { categories, legacyPages, services } from "@/lib/content";
+import { landings } from "@/content/landings";
+import { extraPages } from "@/content/extra-pages";
+import { sectorPages } from "@/content/sector-pages";
+import { standPages } from "@/content/stand-pages";
+import { INTERIOR_PRICES } from "@/content/interior-prices";
+import { PROTECTED_MEDIA } from "@/lib/admin/protected-media";
 import { resolve } from "@/lib/routes";
-import { needsTranslation, removeProject, syncProject, type SyncProject } from "@/lib/admin/sync";
+import { SYNC_LANGS, findAlt, needsTranslation, removeItem, syncItem, textOf, type ItemText, type SyncItem, type SyncKind, type SyncLang } from "@/lib/admin/sync";
 import { TRANSLATE_CONFIGURED, translateProject } from "@/lib/admin/translate";
 
-// Yönetim paneli ucu: giriş, içerik okuma, görsel yükleme, proje ve yazı kaydetme.
+// Yönetim paneli ucu: giriş, içerik okuma, görsel yükleme, proje/yazı/anasayfa/video kaydı, medya, geçmiş ve geri alma.
 // Her işlem oturum ister; içerik her zaman depodan taze okunur (derlemedeki kopyadan değil).
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
 const bad = (error: string, status = 400) => NextResponse.json({ error }, { status });
 const str = (v: unknown, max: number) => (typeof v === "string" ? v.replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, "").trim().slice(0, max) : "");
+const bool = (v: unknown) => v === true;
 
-// --- dosya okuma / yazma (girinti ve satır sonu korunur ki kayıt farkları küçük kalsın)
-async function load<T>(file: string) {
-  const text = await readText(file);
-  return { list: JSON.parse(text) as T[], crlf: text.includes("\r\n") };
-}
-const dump = (list: unknown, crlf: boolean) => {
-  const out = JSON.stringify(list, null, 1);
-  return crlf ? out.replace(/\n/g, "\r\n") : out;
+// --- dosya biçimi (girinti ve satır sonu korunur ki kayıt farkları küçük kalsın)
+// Biçim: satır sonu (CRLF/LF) ve dosya sonundaki boş satır olduğu gibi korunur
+type Format = { crlf: boolean; nl: boolean };
+const parse = <T,>(text: string) => ({ value: JSON.parse(text) as T, crlf: { crlf: text.includes("\r\n"), nl: /\n$/.test(text) } as Format });
+const dump = (value: unknown, f: Format) => {
+  const out = JSON.stringify(value, null, 1) + (f.nl ? "\n" : "");
+  return f.crlf ? out.replace(/\n/g, "\r\n") : out;
 };
 
 const TR_MAP: Record<string, string> = { ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u", Ç: "c", Ğ: "g", İ: "i", Ö: "o", Ş: "s", Ü: "u" };
@@ -53,42 +59,136 @@ const plain = (html: string, max: number) => {
   return t.length <= max ? t : t.slice(0, t.lastIndexOf(" ", max)).trim();
 };
 
-const IMG = /^\/wp-content\/uploads\/[\w\-./%]+\.(jpe?g|png|webp)$/i;
+const IMG = /^\/(wp-content\/uploads|images|logos)\/[\w\-./%]+\.(jpe?g|png|webp|svg)$/i;
+const img = (v: unknown) => {
+  const s = str(v, 300);
+  return IMG.test(s) ? s : "";
+};
 type Gallery = { src: string; alt: string }[];
 const gallery = (v: unknown, title: string): Gallery =>
   Array.isArray(v)
     ? v
-        .map((g) => ({ src: str((g as { src?: unknown })?.src, 300), alt: str((g as { alt?: unknown })?.alt, 200) || title }))
-        .filter((g) => IMG.test(g.src))
+        .map((g) => ({ src: img((g as { src?: unknown })?.src), alt: str((g as { alt?: unknown })?.alt, 200) || title }))
+        .filter((g) => g.src)
         .slice(0, 60)
     : [];
+// YouTube kimliği ya da Vercel Blob'a yüklenmiş video adresi
+const video = (v: unknown) => {
+  const s = str(v, 400);
+  const yt = s.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/)?.[1] ?? (/^[\w-]{11}$/.test(s) ? s : "");
+  if (yt) return yt;
+  return /^https:\/\/[\w.-]+\.public\.blob\.vercel-storage\.com\/[\w\-./%]+\.(mp4|webm)$/i.test(s) ? s : "";
+};
 // Yeni yüklenen görsellerin depo kayıtları (GitHub'da içerik kimliği; yerelde dosya zaten yazılıdır)
 const blobs = (v: unknown): Change[] =>
   Array.isArray(v)
     ? v.map((b) => ({ path: str((b as { path?: unknown })?.path, 300), sha: str((b as { sha?: unknown })?.sha, 64) })).filter((b) => b.path && /^[0-9a-f]{40}$/.test(b.sha ?? ""))
     : [];
+// Dil sekmelerinden gelen metinler
+const langTexts = (v: unknown): Partial<Record<SyncLang, ItemText>> => {
+  const out: Partial<Record<SyncLang, ItemText>> = {};
+  if (!v || typeof v !== "object") return out;
+  for (const l of SYNC_LANGS) {
+    const t = (v as Record<string, unknown>)[l] as Record<string, unknown> | undefined;
+    if (!t) continue;
+    const title = str(t.title, 180);
+    const html = cleanHtml(str(t.html, 200_000));
+    if (title) out[l] = { title, html, description: str(t.description, 300) || plain(html, 155) || title };
+  }
+  return out;
+};
 
 const projectCats = () => categories.filter((c) => c.kind === "portfolio-category" && c.lang === "tr").map((c) => c.name);
+const now = () => new Date().toISOString().replace(/\.\d+Z$/, "+00:00");
+
+// Çeviri: elle yazılan dil metinleri önce gelir; istenen diğer diller otomatik çevrilir
+async function texts(kind: SyncKind, list: SyncItem[], tr: SyncItem, prev: ItemText | null, manual: Partial<Record<SyncLang, ItemText>>, auto: boolean) {
+  const missing = SYNC_LANGS.filter((l) => !manual[l]);
+  let tx: Partial<Record<SyncLang, ItemText>> = { ...manual };
+  let note = "";
+  const want = auto && missing.length > 0 && (needsTranslation(tr, prev, list) || missing.some((l) => !findAlt(list, tr, l)));
+  if (want) {
+    const got = await translateProject(textOf(tr));
+    if (got) {
+      for (const l of missing) tx[l] = got[l];
+      note = "İngilizce ve Almanca sürümler çevrildi.";
+    } else
+      note = TRANSLATE_CONFIGURED
+        ? "Otomatik çeviri yapılamadı; çevrilmeyen dillerde metin eski hâliyle kaldı. Tekrar kaydederek yeniden deneyebilirsiniz."
+        : "Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil; diğer dillerde yalnızca görseller güncellendi.";
+  }
+  if (Object.keys(manual).length) note = `${note} Elle yazılan dil metinleri kaydedildi.`.trim();
+  if (!Object.keys(tx).length) tx = {};
+  return { tx, note: note || (kind === "project" ? "Diğer dillerde görseller güncellendi." : "") };
+}
+
+// İçerikte kullanılan görsel ve video adresleri (medya kütüphanesinde "kullanılıyor" işareti için)
+// Panelin düzenlemediği, derlemeye gömülü içerik (hizmet ve eski sayfalar, açılış metinleri, stand/sektör sayfaları,
+// fiyat rehberi) ve kodda adıyla geçen görseller de taranır; yalnızca panel dosyalarına bakmak yanlış "kullanılmıyor" verirdi
+const BUILT = JSON.stringify([services, legacyPages, landings, extraPages, sectorPages, standPages, INTERIOR_PRICES, PROTECTED_MEDIA]);
+async function usage(): Promise<Map<string, number>> {
+  const all = [BUILT, ...(await Promise.all([PROJECTS_FILE, POSTS_FILE, HOME_FILE].map((f) => readText(f).catch(() => ""))))];
+  const count = new Map<string, number>();
+  for (const text of all) for (const m of text.matchAll(/\/(?:wp-content\/uploads|images|logos)\/[^"'\s)<>]+?\.(?:jpe?g|png|webp|svg|gif|avif)/gi)) count.set(m[0], (count.get(m[0]) ?? 0) + 1);
+  return count;
+}
 
 export async function GET(req: Request) {
   if (!adminEnabled()) return NextResponse.json({ enabled: false });
   if (!(await isAdmin())) return NextResponse.json({ enabled: true, authed: false });
   const url = new URL(req.url);
+  const q = (k: string) => url.searchParams.get(k);
   try {
-    const postPath = url.searchParams.get("post");
-    if (postPath) {
-      const { list } = await load<Post>(POSTS_FILE);
-      const post = list.find((p) => p.path === postPath);
-      return post ? NextResponse.json({ post }) : bad("Yazı bulunamadı.", 404);
+    // Tek içerik: Türkçe ve dil sürümlerinin metni
+    for (const [key, file] of [["project", PROJECTS_FILE], ["post", POSTS_FILE]] as const) {
+      const path = q(key);
+      if (!path) continue;
+      const list = parse<SyncItem[]>(await readText(file)).value;
+      const tr = list.find((p) => p.path === path && p.lang === "tr");
+      if (!tr) return bad("İçerik bulunamadı.", 404);
+      const langs = Object.fromEntries(SYNC_LANGS.map((l) => [l, findAlt(list, tr, l) ? { ...textOf(findAlt(list, tr, l)!), path: findAlt(list, tr, l)!.path } : null]));
+      return NextResponse.json({ item: tr, langs });
     }
-    const [pr, po] = await Promise.all([load<Project>(PROJECTS_FILE), load<Post>(POSTS_FILE)]);
+    if (q("home")) {
+      const [home, projects] = await Promise.all([readText(HOME_FILE), readText(PROJECTS_FILE)]);
+      const options = parse<SyncItem[]>(projects)
+        .value.filter((p) => p.lang === "tr" && !p.draft)
+        .map((p) => ({ path: p.path, title: p.title, image: p.featuredImage, category: p.meta?.["Kategori"] ?? "" }));
+      return NextResponse.json({ home: JSON.parse(home), projects: options });
+    }
+    if (q("videos")) return NextResponse.json({ videos: JSON.parse(await readText(VIDEOS_FILE)), blob: Boolean(process.env.BLOB_READ_WRITE_TOKEN) });
+    if (q("media")) {
+      const [files, used] = await Promise.all([listMedia(), usage()]);
+      const items = files.map((f) => {
+        const src = f.path.replace(/^public/, "");
+        // legacy: 2026 öncesi (eski WordPress) yüklemesi; silinmeden önce panel ayrıca uyarır
+        const year = Number(src.match(/^\/wp-content\/uploads\/(\d{4})\//)?.[1] ?? 0);
+        return { src, size: f.size, used: used.get(src) ?? 0, deletable: canDelete(f.path), legacy: year > 0 && year < 2026 };
+      });
+      // Önce panelden ve WordPress'ten yüklenenler (en yeni klasör üstte), sonra sitenin sabit görselleri
+      const up = (x: { src: string }) => (x.src.startsWith("/wp-content/uploads/") ? 0 : 1);
+      items.sort((a, b) => up(a) - up(b) || b.src.localeCompare(a.src));
+      return NextResponse.json({ items });
+    }
+    if (q("history")) return NextResponse.json({ items: await history(), mode: storeMode() });
+
+    // Genel bakış: listeler ve gösterge
+    const [pr, po] = await Promise.all([readText(PROJECTS_FILE), readText(POSTS_FILE)]);
+    const projects = parse<SyncItem[]>(pr).value;
+    const posts = parse<SyncItem[]>(po).value;
+    const trProjects = projects.filter((p) => p.lang === "tr");
+    const untranslated = trProjects.filter((p) => SYNC_LANGS.some((l) => !findAlt(projects, p, l))).map((p) => ({ path: p.path, title: p.title }));
+    const noAlt = trProjects.filter((p) => (p.gallery ?? []).some((g) => !g.alt || /^[\w-]+$/.test(g.alt))).length;
     return NextResponse.json({
       enabled: true,
       authed: true,
       mode: storeMode(),
+      translate: TRANSLATE_CONFIGURED,
+      blob: Boolean(process.env.BLOB_READ_WRITE_TOKEN),
       categories: projectCats(),
-      projects: pr.list.filter((p) => p.lang === "tr"),
-      posts: po.list.filter((p) => p.lang === "tr").map((p) => ({ path: p.path, title: p.title, date: p.date, featuredImage: p.featuredImage })),
+      projects: trProjects.map((p) => ({ path: p.path, title: p.title, featuredImage: p.featuredImage, category: p.meta?.["Kategori"] ?? "", draft: Boolean(p.draft), video: Boolean(p.video) })),
+      posts: posts.filter((p) => p.lang === "tr").map((p) => ({ path: p.path, title: p.title, date: p.date ?? null, featuredImage: p.featuredImage, draft: Boolean(p.draft), langs: SYNC_LANGS.filter((l) => findAlt(posts, p, l)) })),
+      checks: { untranslated, noAlt },
     });
   } catch (e) {
     console.error("[admin] okuma", e instanceof Error ? e.message : e);
@@ -123,125 +223,253 @@ export async function POST(req: Request) {
       const data = typeof body.data === "string" ? body.data : "";
       const m = str(body.type, 20).match(/^image\/(jpeg|png|webp)$/);
       if (!m || !/^[A-Za-z0-9+/=]+$/.test(data) || data.length > 5_500_000) return bad("Görsel yüklenemedi (en fazla 4 MB; JPG, PNG ya da WebP).");
-      const now = new Date();
+      const d = new Date();
       const name = `${slugify(str(body.name, 80).replace(/\.[a-z0-9]+$/i, ""))}-${Math.random().toString(36).slice(2, 6)}.${m[1] === "jpeg" ? "jpg" : m[1]}`;
-      const file = `public/wp-content/uploads/${now.getUTCFullYear()}/${String(now.getUTCMonth() + 1).padStart(2, "0")}/${name}`;
+      const file = `public/wp-content/uploads/${d.getUTCFullYear()}/${String(d.getUTCMonth() + 1).padStart(2, "0")}/${name}`;
       const saved = await putBinary(file, data);
       return NextResponse.json({ src: file.replace(/^public/, ""), blob: saved.sha ? { path: saved.path, sha: saved.sha } : null });
     }
 
+    // ---------------------------------------------------------------- çeviri önizlemesi (dil sekmesindeki "Türkçeden çevir")
+    if (op === "translate") {
+      const src = { title: str(body.title, 180), description: str(body.description, 300), html: cleanHtml(str(body.html, 200_000)) };
+      if (!src.title) return bad("Önce Türkçe başlığı yazın.");
+      if (!TRANSLATE_CONFIGURED) return bad("Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil.", 503);
+      const got = await translateProject(src);
+      return got ? NextResponse.json(got) : bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
+    }
+
     // ---------------------------------------------------------------- projeler
     if (op === "projects.order" || op === "project.save" || op === "project.delete") {
-      const { list, crlf } = await load<Project>(PROJECTS_FILE);
-      let message = "";
-      let result: Project | null = null;
-      let note = "";
-
-      if (op === "projects.order") {
-        // TR projeler verilen sıraya girer; diğer diller TR karşılığının sırasını izler
-        const order = new Map((Array.isArray(body.paths) ? body.paths : []).map((p, i) => [String(p), i]));
-        const rank = (p: Project) => order.get(p.lang === "tr" ? p.path : (p.alternates.tr ?? "")) ?? 1e6;
-        for (const lang of ["tr", "en", "de"] as const) {
-          const slots = list.map((p, i) => (p.lang === lang ? i : -1)).filter((i) => i >= 0);
-          const sorted = slots.map((i) => list[i]).sort((a, b) => rank(a) - rank(b));
-          slots.forEach((slot, k) => (list[slot] = sorted[k]));
-        }
-        message = "Panel: proje sırası güncellendi";
-      } else if (op === "project.delete") {
-        const i = list.findIndex((p) => p.path === str(body.path, 300) && p.lang === "tr");
-        if (i < 0) return bad("Proje bulunamadı.", 404);
-        message = `Panel: proje silindi (${list[i].title})`;
-        // İngilizce ve Almanca sürümleri de kalkar
-        removeProject(list as unknown as SyncProject[], list[i].path);
-      } else {
-        const d = (body.data ?? {}) as Record<string, unknown>;
-        const title = str(d.title, 160);
-        const category = str(d.category, 80);
-        if (!title) return bad("Proje adı gerekli.");
-        if (!projectCats().includes(category)) return bad("Kategori seçin.");
-        const g = gallery(d.gallery, title);
-        if (!g.length) return bad("En az bir fotoğraf ekleyin.");
-        const html = cleanHtml(str(d.html, 60_000));
-        const description = str(d.description, 300) || plain(html, 155) || title;
-        const meta: Record<string, string> = { Kategori: category };
-        if (str(d.brand, 120)) meta["Marka"] = str(d.brand, 120);
-        if (str(d.service, 120)) meta["Verilen Hizmet"] = str(d.service, 120);
-        const seo = { title, fullTitle: `${title} | Wawa Interiors`, description, ogImage: g[0].src };
-        const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
-        const prev = existing ? { title: existing.title, html: existing.html, description: existing.seo.description ?? "" } : null;
-        if (existing) {
-          Object.assign(existing, { title, featuredImage: g[0].src, gallery: g, html, meta: { ...existing.meta, ...meta }, seo: { ...existing.seo, ...seo } });
-          if (!str(d.brand, 120)) delete existing.meta?.["Marka"];
-          if (!str(d.service, 120)) delete existing.meta?.["Verilen Hizmet"];
-          result = existing;
-          message = `Panel: proje güncellendi (${title})`;
+      const out = await transact([PROJECTS_FILE], async (t) => {
+        const { value: list, crlf } = parse<SyncItem[]>(t[PROJECTS_FILE]);
+        let message = "";
+        let result: SyncItem | null = null;
+        let note = "";
+        if (op === "projects.order") {
+          // TR projeler verilen sıraya girer; diğer diller TR karşılığının sırasını izler
+          const order = new Map((Array.isArray(body.paths) ? body.paths : []).map((p, i) => [String(p), i]));
+          const rank = (p: SyncItem) => order.get(p.lang === "tr" ? p.path : (p.alternates.tr ?? "")) ?? 1e6;
+          for (const lang of ["tr", "en", "de"] as const) {
+            const slots = list.map((p, i) => (p.lang === lang ? i : -1)).filter((i) => i >= 0);
+            const sorted = slots.map((i) => list[i]).sort((a, b) => rank(a) - rank(b));
+            slots.forEach((slot, k) => (list[slot] = sorted[k]));
+          }
+          message = `${PANEL_PREFIX} proje sırası güncellendi`;
+        } else if (op === "project.delete") {
+          const p = list.find((x) => x.path === str(body.path, 300) && x.lang === "tr");
+          if (!p) throw new Error("404:Proje bulunamadı.");
+          message = `${PANEL_PREFIX} proje silindi (${p.title})`;
+          removeItem(list, p.path);
         } else {
-          let slug = slugify(title);
-          for (let n = 2; resolve(`/portfolio/${slug}/`) || list.some((p) => p.path === `/portfolio/${slug}/`); n++) slug = `${slugify(title)}-${n}`;
-          const p = `/portfolio/${slug}/`;
-          result = { path: p, lang: "tr", alternates: { tr: p }, seo, slug, title, featuredImage: g[0].src, meta, gallery: g, html } as unknown as Project;
-          // Yeni proje TR listesinin başına eklenir (sitede en üstte görünür)
-          const first = list.findIndex((x) => x.lang === "tr");
-          list.splice(first < 0 ? list.length : first, 0, result);
-          message = `Panel: yeni proje (${title})`;
+          const d = (body.data ?? {}) as Record<string, unknown>;
+          const title = str(d.title, 160);
+          const category = str(d.category, 80);
+          if (!title) throw new Error("400:Proje adı gerekli.");
+          if (!projectCats().includes(category)) throw new Error("400:Kategori seçin.");
+          const g = gallery(d.gallery, title);
+          if (!g.length) throw new Error("400:En az bir fotoğraf ekleyin.");
+          const html = cleanHtml(str(d.html, 60_000));
+          const description = str(d.description, 300) || plain(html, 155) || title;
+          const meta: Record<string, string> = { Kategori: category };
+          if (str(d.brand, 120)) meta["Marka"] = str(d.brand, 120);
+          if (str(d.service, 120)) meta["Verilen Hizmet"] = str(d.service, 120);
+          const seo = { title, fullTitle: `${title} | Wawa Interiors`, description, ogImage: g[0].src };
+          const v = video(d.video);
+          const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
+          const prev = existing ? textOf(existing) : null;
+          if (existing) {
+            Object.assign(existing, { title, featuredImage: g[0].src, gallery: g, html, meta: { ...existing.meta, ...meta }, seo: { ...existing.seo, ...seo } });
+            if (!str(d.brand, 120)) delete existing.meta?.["Marka"];
+            if (!str(d.service, 120)) delete existing.meta?.["Verilen Hizmet"];
+            result = existing;
+            message = `${PANEL_PREFIX} proje güncellendi (${title})`;
+          } else {
+            let slug = slugify(title);
+            for (let n = 2; resolve(`/portfolio/${slug}/`) || list.some((p) => p.path === `/portfolio/${slug}/`); n++) slug = `${slugify(title)}-${n}`;
+            const path = `/portfolio/${slug}/`;
+            result = { path, lang: "tr", alternates: { tr: path }, seo, slug, title, featuredImage: g[0].src, meta, gallery: g, html };
+            // Yeni proje TR listesinin başına eklenir (sitede en üstte görünür)
+            const first = list.findIndex((x) => x.lang === "tr");
+            list.splice(first < 0 ? list.length : first, 0, result);
+            message = `${PANEL_PREFIX} yeni proje (${title})`;
+          }
+          if (v) result.video = v;
+          else delete result.video;
+          if (bool(d.draft)) result.draft = true;
+          else delete result.draft;
+          const { tx, note: n } = await texts("project", list, result, prev, langTexts(body.langs), body.translate !== false);
+          const fallback = syncItem("project", list, result, tx, true);
+          // Çeviri olmadan açılan dil sürümleri Türkçe metinle başlar; panelde açıkça söylenir
+          note = fallback.length ? `İngilizce ve Almanca sayfalar Türkçe metinle açıldı; projeyi açıp dil sekmelerinden düzeltebilir ya da çeviri anahtarı (GEMINI_API_KEY) tanımlandıktan sonra yeniden kaydedebilirsiniz.` : n;
         }
-        // Dil sürümleri: fotoğraflar her zaman eşitlenir; Türkçe metin değiştiyse İngilizce ve Almanca çevrilir
-        const all = list as unknown as SyncProject[];
-        const tr = result as unknown as SyncProject;
-        const want = needsTranslation(tr, prev, all);
-        const tx = want ? await translateProject({ title, description, html }) : null;
-        syncProject(all, tr, tx);
-        if (want && !tx)
-          note = TRANSLATE_CONFIGURED
-            ? "Çeviri yapılamadı; İngilizce ve Almanca metinler eski hâliyle kaldı (fotoğraflar güncellendi). Tekrar kaydederek yeniden deneyebilirsiniz."
-            : "Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil; İngilizce ve Almanca sayfalarda fotoğraflar güncellendi, metinler değişmedi.";
-        else if (tx) note = "İngilizce ve Almanca sürümler de çevrildi.";
-        else note = "İngilizce ve Almanca sürümlerde fotoğraflar güncellendi.";
-      }
-      await commit([{ path: PROJECTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message);
-      return NextResponse.json({ ok: true, project: result, note });
+        return { changes: [{ path: PROJECTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message, result: { project: result, note } };
+      });
+      return NextResponse.json({ ok: true, ...out });
     }
 
     // ---------------------------------------------------------------- blog yazıları
     if (op === "post.save" || op === "post.delete") {
-      const { list, crlf } = await load<Post>(POSTS_FILE);
-      let message = "";
-      let result: Post | null = null;
-      if (op === "post.delete") {
-        const i = list.findIndex((p) => p.path === str(body.path, 300) && p.lang === "tr");
-        if (i < 0) return bad("Yazı bulunamadı.", 404);
-        message = `Panel: yazı silindi (${list[i].title})`;
-        list.splice(i, 1);
-      } else {
-        const d = (body.data ?? {}) as Record<string, unknown>;
-        const title = str(d.title, 180);
-        const html = cleanHtml(str(d.html, 200_000));
-        const cover = str(d.featuredImage, 300);
-        if (!title) return bad("Başlık gerekli.");
-        if (plain(html, 100).length < 20) return bad("Yazı metni çok kısa.");
-        if (cover && !IMG.test(cover)) return bad("Kapak görseli geçersiz.");
-        const description = str(d.description, 300) || plain(html, 155);
-        const now = new Date().toISOString().replace(/\.\d+Z$/, "+00:00");
-        const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
-        if (existing) {
-          Object.assign(existing, { title, html, featuredImage: cover || null, modified: now, seo: { ...existing.seo, title, fullTitle: title, description, ogImage: cover || null } });
-          result = existing;
-          message = `Panel: yazı güncellendi (${title})`;
+      const out = await transact([POSTS_FILE], async (t) => {
+        const { value: list, crlf } = parse<SyncItem[]>(t[POSTS_FILE]);
+        let message = "";
+        let result: SyncItem | null = null;
+        let note = "";
+        if (op === "post.delete") {
+          const p = list.find((x) => x.path === str(body.path, 300) && x.lang === "tr");
+          if (!p) throw new Error("404:Yazı bulunamadı.");
+          message = `${PANEL_PREFIX} yazı silindi (${p.title})`;
+          removeItem(list, p.path);
         } else {
-          let slug = slugify(title);
-          for (let n = 2; resolve(`/${slug}/`) || list.some((p) => p.path === `/${slug}/`); n++) slug = `${slugify(title)}-${n}`;
-          const p = `/${slug}/`;
-          result = { path: p, lang: "tr", alternates: { tr: p }, seo: { title, fullTitle: title, description, ogImage: cover || null }, slug, title, date: now, modified: now, featuredImage: cover || null, categories: ["Blog"], html, faq: [] } as unknown as Post;
-          // Yeni yazı en başa eklenir (blogda en üstte görünür)
-          list.unshift(result);
-          message = `Panel: yeni yazı (${title})`;
+          const d = (body.data ?? {}) as Record<string, unknown>;
+          const title = str(d.title, 180);
+          const html = cleanHtml(str(d.html, 200_000));
+          const cover = str(d.featuredImage, 300);
+          if (!title) throw new Error("400:Başlık gerekli.");
+          if (plain(html, 100).length < 20) throw new Error("400:Yazı metni çok kısa.");
+          if (cover && !IMG.test(cover)) throw new Error("400:Kapak görseli geçersiz.");
+          const description = str(d.description, 300) || plain(html, 155);
+          const stamp = now();
+          const existing = list.find((p) => p.path === str(body.path, 300) && p.lang === "tr");
+          const prev = existing ? textOf(existing) : null;
+          if (existing) {
+            Object.assign(existing, { title, html, featuredImage: cover || null, modified: stamp, seo: { ...existing.seo, title, fullTitle: title, description, ogImage: cover || null } });
+            result = existing;
+            message = `${PANEL_PREFIX} yazı güncellendi (${title})`;
+          } else {
+            let slug = slugify(title);
+            for (let n = 2; resolve(`/${slug}/`) || list.some((p) => p.path === `/${slug}/`); n++) slug = `${slugify(title)}-${n}`;
+            const path = `/${slug}/`;
+            result = { path, lang: "tr", alternates: { tr: path }, seo: { title, fullTitle: title, description, ogImage: cover || null }, slug, title, date: stamp, modified: stamp, featuredImage: cover || null, categories: ["Blog"], html, faq: [] };
+            // Yeni yazı en başa eklenir (blogda en üstte görünür)
+            list.unshift(result);
+            message = `${PANEL_PREFIX} yeni yazı (${title})`;
+          }
+          if (bool(d.draft)) result.draft = true;
+          else delete result.draft;
+          // Yazılarda dil sürümü yalnızca istenirse açılır; var olan sürümler her zaman eşitlenir
+          const create = bool(body.createLangs);
+          const hasAlt = SYNC_LANGS.some((l) => findAlt(list, result!, l));
+          const manual = langTexts(body.langs);
+          const r = await texts("post", list, result, prev, manual, body.translate !== false && (create || hasAlt));
+          const fallback = syncItem("post", list, result, r.tx, create);
+          note = fallback.length ? "İngilizce ve Almanca sürümler Türkçe metinle açıldı; dil sekmelerinden düzeltebilir ya da çeviri anahtarı tanımlandıktan sonra yeniden kaydedebilirsiniz." : r.note;
         }
-      }
-      await commit([{ path: POSTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message);
-      return NextResponse.json({ ok: true, post: result });
+        return { changes: [{ path: POSTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message, result: { post: result, note } };
+      });
+      return NextResponse.json({ ok: true, ...out });
+    }
+
+    // ---------------------------------------------------------------- anasayfa
+    if (op === "home.save") {
+      const h = (body.home ?? {}) as Record<string, unknown>;
+      const arr = (v: unknown) => (Array.isArray(v) ? (v as Record<string, unknown>[]) : []);
+      const home = {
+        slides: arr(h.slides)
+          .map((s) => ({ sector: str(s.sector, 40), project: str(s.project, 80), image: img(s.image), alt: str(s.alt, 200), href: str(s.href, 300) }))
+          .filter((s) => s.image && s.sector)
+          .slice(0, 12),
+        featured: arr(h.featured)
+          .map((f) => ({ path: str(f.path, 300), title: str(f.title, 80), location: str(f.location, 60) || null, image: img(f.image), category: str(f.category, 60), filter: ["residential", "commercial", "stand"].includes(String(f.filter)) ? String(f.filter) : "commercial" }))
+          .filter((f) => f.path && f.title && f.image)
+          .slice(0, 24),
+        brands: arr(h.brands).map((b) => ({ name: str(b.name, 60), src: img(b.src) })).filter((b) => b.name && b.src).slice(0, 80),
+        press: arr(h.press)
+          .map((p) => {
+            const logo = (p.logo ?? {}) as Record<string, unknown>;
+            return { source: str(p.source, 60), date: str(p.date, 40), title: str(p.title, 200), href: /^https:\/\//.test(str(p.href, 400)) ? str(p.href, 400) : "", logo: { src: img(logo.src), w: Number(logo.w) || 480, h: Number(logo.h) || 160, cls: str(logo.cls, 40) || "max-h-8" } };
+          })
+          .filter((p) => p.source && p.title && p.href && p.logo.src)
+          .slice(0, 20),
+        reviews: (() => {
+          const r = (h.reviews ?? {}) as Record<string, unknown>;
+          return {
+            rating: Math.min(5, Math.max(1, Number(r.rating) || 5)),
+            count: Math.max(0, Math.round(Number(r.count) || 0)),
+            url: /^https:\/\//.test(str(r.url, 300)) ? str(r.url, 300) : "",
+            items: arr(r.items).map((i) => ({ author: str(i.author, 80), when: str(i.when, 40), text: str(i.text, 1500) })).filter((i) => i.author && i.text).slice(0, 30),
+          };
+        })(),
+        faq: arr(h.faq).map((f) => ({ q: str(f.q, 200), a: str(f.a, 1500) })).filter((f) => f.q && f.a).slice(0, 20),
+        process: arr(h.process)
+          .map((p) => ({ title: str(p.title, 80), text: str(p.text, 600), points: (Array.isArray(p.points) ? p.points : []).map((x) => str(x, 80)).filter(Boolean).slice(0, 6), image: img(p.image), position: str(p.position, 20) || "50% 50%", alt: str(p.alt, 200) }))
+          .filter((p) => p.title && p.image)
+          .slice(0, 6),
+      };
+      if (!home.slides.length) return bad("En az bir açılış slaytı olmalı.");
+      await transact([HOME_FILE], (t) => ({ changes: [{ path: HOME_FILE, text: dump(home, parse(t[HOME_FILE]).crlf) }, ...blobs(body.blobs)], message: `${PANEL_PREFIX} anasayfa güncellendi`, result: null }));
+      return NextResponse.json({ ok: true });
+    }
+
+    // ---------------------------------------------------------------- videolar
+    if (op === "videos.save") {
+      const v = (body.videos ?? {}) as Record<string, unknown>;
+      const youtube = (Array.isArray(v.youtube) ? v.youtube : [])
+        .map((x) => x as Record<string, unknown>)
+        .map((x) => ({ id: video(x.id), title: str(x.title, 120), duration: str(x.duration, 10) }))
+        .filter((x) => /^[\w-]{11}$/.test(x.id) && x.title)
+        .slice(0, 100);
+      const files = (Array.isArray(v.files) ? v.files : [])
+        .map((x) => x as Record<string, unknown>)
+        .map((x) => ({ src: video(x.src), title: str(x.title, 120), size: Number(x.size) || undefined }))
+        .filter((x) => x.src && !/^[\w-]{11}$/.test(x.src) && x.title)
+        .slice(0, 50);
+      const standHero = video(v.standHero) || youtube[0]?.id || "";
+      await transact([VIDEOS_FILE], (t) => ({ changes: [{ path: VIDEOS_FILE, text: dump({ youtube, files, standHero }, parse(t[VIDEOS_FILE]).crlf) }], message: `${PANEL_PREFIX} videolar güncellendi`, result: null }));
+      return NextResponse.json({ ok: true });
+    }
+
+    // ---------------------------------------------------------------- kütüphaneye görsel ekleme (yüklenenler tek kayıtta)
+    if (op === "media.commit") {
+      const list = blobs(body.blobs);
+      if (storeMode() === "github" && !list.length) return bad("Yüklenen görsel yok.");
+      if (list.length) await transact([], () => ({ changes: list, message: `${PANEL_PREFIX} ${list.length} görsel yüklendi`, result: null }));
+      return NextResponse.json({ ok: true });
+    }
+
+    // ---------------------------------------------------------------- YouTube videosunun başlığı (oEmbed)
+    if (op === "youtube.info") {
+      const id = video(body.url);
+      if (!/^[w-]{11}$/.test(id)) return bad("Geçerli bir YouTube bağlantısı yapıştırın.");
+      const r = await fetch(`https://www.youtube.com/oembed?format=json&url=${encodeURIComponent(`https://www.youtube.com/watch?v=${id}`)}`, { signal: AbortSignal.timeout(10_000) }).catch(() => null);
+      const j = r?.ok ? ((await r.json().catch(() => null)) as { title?: string } | null) : null;
+      if (!j?.title) return bad("Video bulunamadı ya da herkese açık değil.", 404);
+      return NextResponse.json({ id, title: j.title.slice(0, 120) });
+    }
+
+    // ---------------------------------------------------------------- yüklenmiş videoyu depodan silme
+    if (op === "blob.delete") {
+      const src = video(body.src);
+      if (!src || /^[w-]{11}$/.test(src)) return bad("Geçersiz video.");
+      if (!process.env.BLOB_READ_WRITE_TOKEN) return bad("Video deposu bağlı değil.", 503);
+      const { del } = await import("@vercel/blob");
+      await del(src);
+      return NextResponse.json({ ok: true });
+    }
+
+    // ---------------------------------------------------------------- medya silme (yalnız kullanılmayan yüklemeler)
+    if (op === "media.delete") {
+      const src = str(body.src, 300);
+      const file = `public${src}`;
+      if (!canDelete(file)) return bad("Bu görsel panelden silinemez.");
+      if ((await usage()).get(src)) return bad("Görsel bir içerikte kullanılıyor; önce oradan kaldırın.");
+      await transact([], () => ({ changes: [{ path: file, remove: true }], message: `${PANEL_PREFIX} görsel silindi (${src.split("/").pop()})`, result: null }));
+      return NextResponse.json({ ok: true });
+    }
+
+    // ---------------------------------------------------------------- geri alma
+    if (op === "revert") {
+      const sha = str(body.sha, 40);
+      if (!/^[0-9a-f]{40}$/.test(sha)) return bad("Geçersiz kayıt.");
+      const title = await revert(sha);
+      return NextResponse.json({ ok: true, title });
     }
   } catch (e) {
-    console.error("[admin] yazma", e instanceof Error ? e.message : e);
+    const msg = e instanceof Error ? e.message : String(e);
+    const m = msg.match(/^(400|404):(.*)$/);
+    if (m) return bad(m[2], Number(m[1]));
+    if (/yeniden düzenlenmiş|Yalnızca panelden|yalnızca canlı|Geri alınacak/.test(msg)) return bad(msg, 409);
+    console.error("[admin] yazma", msg);
     return bad("Kaydedilemedi. Biraz sonra tekrar deneyin.", 502);
   }
   return bad("Bilinmeyen işlem.");
