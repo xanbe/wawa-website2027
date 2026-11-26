@@ -2223,5 +2223,280 @@
   "source": "/service/ofis-tasarimi-ve-uygulama/",
   "destination": "/ofis-tasarimi-ve-uygulama/",
   "reason": "google-canonical"
+ },
+ {
+  "source": "/avm-stand/",
+  "destination": "/avm-stand-fiyatlari/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/projelerimiz/caddebostan-konut-projesi/",
+  "destination": "/portfolio/caddebostan-konut-projesi/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/projelerimiz/almanya-f-h-konut-projesi/",
+  "destination": "/portfolio/almanya-f-h-konut-projesi/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/projelerimiz/zes-ev-charge/",
+  "destination": "/portfolio/zes-ev-charge/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/fuar-standi/ahsap-fuar-standi/",
+  "destination": "/ahsap-fuar-standi-ile-pratik-tanitim-alanlari/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/genel/page/1/",
+  "destination": "/genel/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/uncategorized-tr/page/1/",
+  "destination": "/uncategorized-tr/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio-category/fuar-stand-tasarimi/page/1/",
+  "destination": "/portfolio-category/fuar-stand-tasarimi/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/service/office-design-and-implementation/",
+  "destination": "/en/service/office-design-and-implementation/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/service/cafe-restaurantdesign-und-umsetzungen/",
+  "destination": "/de/service/cafe-restaurantdesign-und-umsetzungen/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/page/1/",
+  "destination": "/portfolio/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/resadiye-villenentwurf/",
+  "destination": "/de/portfolio/resadiye-villenentwurf/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/tatbik-i-office-project/",
+  "destination": "/en/portfolio/tatbik-i-office-project/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/tatbik-i-bueroprojekt/",
+  "destination": "/de/portfolio/tatbik-i-bueroprojekt/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio-category/cafe-restaurant-design/",
+  "destination": "/en/portfolio-category/cafe-restaurant-design/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/maddies-cucina/",
+  "destination": "/de/portfolio/maddies-cucina/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/golden-rose-yekta-mall/",
+  "destination": "/en/portfolio/golden-rose-yekta-mall/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/golden-rose-yekta-einkaufszentrum/",
+  "destination": "/de/portfolio/golden-rose-yekta-einkaufszentrum/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/gurme-restaurant/",
+  "destination": "/de/portfolio/gurme-restaurant/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/eroglu-construction/",
+  "destination": "/en/portfolio/eroglu-construction/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio-category/maxima-stand-en/",
+  "destination": "/en/portfolio-category/maxima-stand-en/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/gazioglu-solar-energy-solarex/",
+  "destination": "/en/portfolio/gazioglu-solar-energy-solarex/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ode-mce-trade-fair/",
+  "destination": "/en/portfolio/ode-mce-trade-fair/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ofton-dubai-cityscape/",
+  "destination": "/de/portfolio/ofton-dubai-cityscape/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/bas-industrial/",
+  "destination": "/en/portfolio/bas-industrial/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/oeduel-solar-solarex-2024/",
+  "destination": "/de/portfolio/oeduel-solar-solarex-2024/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/essel-usa-miami-messe-stand/",
+  "destination": "/de/portfolio/essel-usa-miami-messe-stand/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/odul-solar-solarex-2024/",
+  "destination": "/en/portfolio/odul-solar-solarex-2024/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/oeduel-solar-solarex-2023/",
+  "destination": "/de/portfolio/oeduel-solar-solarex-2023/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/yanginci-textil/",
+  "destination": "/de/portfolio/yanginci-textil/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/gazioglu-solar-energy-eif/",
+  "destination": "/en/portfolio/gazioglu-solar-energy-eif/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/altay-automobil/",
+  "destination": "/de/portfolio/altay-automobil/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/zes-euef-messe/",
+  "destination": "/de/portfolio/zes-euef-messe/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/eroglu-konstruktion/",
+  "destination": "/de/portfolio/eroglu-konstruktion/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ormisan-textile/",
+  "destination": "/en/portfolio/ormisan-textile/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/bas-enduestriyel/",
+  "destination": "/de/portfolio/bas-enduestriyel/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/midas-2023/",
+  "destination": "/de/portfolio/midas-2023/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/guenoez-garnmesse-2023/",
+  "destination": "/de/portfolio/guenoez-garnmesse-2023/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ode-isolierung-ish/",
+  "destination": "/de/portfolio/ode-isolierung-ish/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/cakirbay-yarn/",
+  "destination": "/en/portfolio/cakirbay-yarn/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/tuerkaylar-textil/",
+  "destination": "/de/portfolio/tuerkaylar-textil/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/zes-wohnladung/",
+  "destination": "/de/portfolio/zes-wohnladung/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/gunoz-iplik-2023-yarn-fair/",
+  "destination": "/en/portfolio/gunoz-iplik-2023-yarn-fair/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/altay-automotive/",
+  "destination": "/en/portfolio/altay-automotive/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ode-mce-messe/",
+  "destination": "/de/portfolio/ode-mce-messe/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/zes-euf-fair/",
+  "destination": "/en/portfolio/zes-euf-fair/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/endeks-it/",
+  "destination": "/de/portfolio/endeks-it/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/essel-usa-miami-trade-fair-stand/",
+  "destination": "/en/portfolio/essel-usa-miami-trade-fair-stand/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/odul-solar-solarex-2023/",
+  "destination": "/en/portfolio/odul-solar-solarex-2023/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/gazioglu-solar-enerji-eif/",
+  "destination": "/de/portfolio/gazioglu-solar-enerji-eif/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/banat-migros-festival/",
+  "destination": "/de/portfolio/banat-migros-festival/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/portfolio/ormisan-textil/",
+  "destination": "/de/portfolio/ormisan-textil/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/blog/page/1/",
+  "destination": "/blog/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/service-category/services/",
+  "destination": "/en/service-category/services/",
+  "reason": "wp-301-backlink"
+ },
+ {
+  "source": "/service-category/dienstleistungen/",
+  "destination": "/de/service-category/dienstleistungen/",
+  "reason": "wp-301-backlink"
  }
 ]
