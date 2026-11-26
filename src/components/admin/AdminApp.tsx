@@ -4,13 +4,16 @@
 // Kaydedilen her değişiklik sitenin içerik dosyalarına yazılır; canlıda site birkaç dakika içinde yeniden derlenir.
 import Link from "next/link";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
-import { AlertTriangle, CheckCircle2, ExternalLink, FileText, FolderKanban, History, Home, Image as ImageIcon, LayoutDashboard, Loader2, LogOut, Menu, X } from "lucide-react";
+import { AlertTriangle, CalendarDays, CheckCircle2, ExternalLink, FileText, FolderKanban, History, Home, Image as ImageIcon, LayoutDashboard, Layers, Loader2, LogOut, Menu, Tag, X } from "lucide-react";
 import { ERR, LINE, Label, Notice, PageHead, btnDark, call, input, toTop } from "./ui";
 import { ProjectForm, ProjectList, type ProjectRow } from "./Projects";
 import { PostForm, PostList, type PostRow } from "./Posts";
 import { MediaPage } from "./Media";
 import { HomeEditor } from "./HomeEditor";
 import { HistoryPage } from "./History";
+import { PagesPage } from "./Pages";
+import { PricesPage } from "./Prices";
+import { FairsPage } from "./Fairs";
 
 type Data = {
   mode: "github" | "local" | "off";
@@ -21,7 +24,7 @@ type Data = {
   posts: PostRow[];
   checks: { untranslated: { path: string; title: string }[]; noAlt: number };
 };
-type View = "dashboard" | "projects" | "posts" | "media" | "home" | "history";
+type View = "dashboard" | "projects" | "posts" | "media" | "home" | "pages" | "prices" | "fairs" | "history";
 
 const NAV: [View, string, typeof LayoutDashboard][] = [
   ["dashboard", "Gösterge", LayoutDashboard],
@@ -29,6 +32,9 @@ const NAV: [View, string, typeof LayoutDashboard][] = [
   ["posts", "Blog", FileText],
   ["media", "Medya", ImageIcon],
   ["home", "Anasayfa", Home],
+  ["pages", "Sayfalar", Layers],
+  ["prices", "Fiyatlar", Tag],
+  ["fairs", "Fuar takvimi", CalendarDays],
   ["history", "Geçmiş", History],
 ];
 
@@ -181,6 +187,9 @@ export function AdminApp() {
     else if (view === "media") page = <MediaPage blobEnabled={data.blob} />;
     else if (view === "home") page = <HomeEditor />;
     else if (view === "history") page = <HistoryPage />;
+    else if (view === "pages") page = <PagesPage />;
+    else if (view === "prices") page = <PricesPage />;
+    else if (view === "fairs") page = <FairsPage />;
     else
       page = (
         <Dashboard
@@ -247,7 +256,7 @@ export function AdminApp() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 px-3 text-[12px] leading-relaxed text-wawa-charcoal/50">Hizmet sayfaları, fiyatlar, fuarlar, talepler ve site ayarları sonraki aşamada eklenecek.</p>
+            <p className="mt-6 px-3 text-[12px] leading-relaxed text-wawa-charcoal/50">Talepler, site ayarları, SEO ve yönlendirmeler sonraki aşamada eklenecek.</p>
           </nav>
         )}
         <main className="min-w-0 flex-1 px-4 py-8 sm:px-8">

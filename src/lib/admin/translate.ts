@@ -44,3 +44,36 @@ export async function translateProject(src: ProjectText): Promise<Record<SyncLan
     return null;
   }
 }
+
+// Yapılandırılmış sayfalar (hizmet, sektör, fiyat rehberi) için: metin listesi aynı sırayla çevrilir
+const LIST_PROMPT = `You translate website copy of WAWA Interiors, an interior architecture and exhibition stand company in Istanbul, from Turkish into one target language.
+You get a JSON array of strings. Return a JSON array with exactly the same number of items, in the same order, each item translated.
+Rules: natural, concise website copy; English in international/British spelling, German in the Sie form; keep brand, company, fair and place names as written; keep any HTML tags unchanged; add nothing.
+"Fuar standı" = "exhibition stand" / "Messestand"; "anahtar teslim" = "turnkey" / "schlüsselfertig"; "AVM" = "shopping mall" / "Einkaufszentrum".`;
+
+export async function translateList(list: string[], lang: SyncLang): Promise<string[] | null> {
+  if (!TRANSLATE_CONFIGURED || !list.length) return null;
+  try {
+    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(MODEL)}:generateContent`, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-goog-api-key": process.env.GEMINI_API_KEY! },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: `${LIST_PROMPT}\nTarget language: ${lang === "en" ? "English" : "German"}.` }] },
+        contents: [{ role: "user", parts: [{ text: JSON.stringify(list) }] }],
+        generationConfig: { responseMimeType: "application/json", temperature: 0.2 },
+      }),
+      signal: AbortSignal.timeout(55_000),
+    });
+    if (!res.ok) {
+      console.error(`[admin] çeviri model hatası ${res.status}`);
+      return null;
+    }
+    const json = (await res.json().catch(() => null)) as { candidates?: { content?: { parts?: { text?: string }[] } }[] } | null;
+    const raw = json?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("") ?? "";
+    const out = JSON.parse(raw.replace(/^```(?:json)?\s*|\s*```$/g, "")) as unknown;
+    return Array.isArray(out) && out.length === list.length && out.every((x) => typeof x === "string") ? (out as string[]) : null;
+  } catch (e) {
+    console.error("[admin] çeviri", e instanceof Error ? e.message : e);
+    return null;
+  }
+}

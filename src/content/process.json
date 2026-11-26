@@ -1,0 +1,239 @@
+{
+ "standProcess": {
+  "tr": [
+   {
+    "title": "Brief ve fuar bilgisi",
+    "text": "Fuar, salon, stand numarası, metrekare ve açık cephe sayısı; markanızın hedefi ve teşhir edilecek ürünler netleşir."
+   },
+   {
+    "title": "Konsept ve 3D tasarım",
+    "text": "Kurumsal renkleriniz ve hedef kitleniz analiz edilerek size özel stand konsepti ve 3D görseller hazırlanır."
+   },
+   {
+    "title": "Teknik proje ve onay",
+    "text": "Fuar kurallarına uygun teknik çizimler, elektrik ve aydınlatma planı hazırlanır; organizatör onayı alınır."
+   },
+   {
+    "title": "Atölyede üretim",
+    "text": "Stand elemanları ve teşhir üniteleri kendi atölyemizde üretilir, montaj öncesi kontrol edilir."
+   },
+   {
+    "title": "Lojistik ve kurulum",
+    "text": "Yurt içi ve yurt dışı nakliye, kurulum ve fuar boyunca teknik destek tek elden yönetilir."
+   },
+   {
+    "title": "Söküm ve depolama",
+    "text": "Fuar sonunda stand sökülür; tekrar kullanılabilir elemanlar sonraki katılımlar için değerlendirilir."
+   }
+  ],
+  "en": [
+   {
+    "title": "Brief and fair details",
+    "text": "The fair, hall, stand number, floor area and number of open sides are defined, along with your brand's goals and the products to be displayed."
+   },
+   {
+    "title": "Concept and 3D design",
+    "text": "We analyse your corporate colours and target audience to create a bespoke stand concept and 3D visuals."
+   },
+   {
+    "title": "Technical drawings and approval",
+    "text": "Technical drawings and electrical and lighting plans are prepared in line with the fair's regulations, and the organiser's approval is obtained."
+   },
+   {
+    "title": "Workshop production",
+    "text": "Stand elements and display units are built in our own workshop and checked before installation."
+   },
+   {
+    "title": "Logistics and installation",
+    "text": "Domestic and international transport, installation and technical support throughout the fair are managed by a single team."
+   },
+   {
+    "title": "Dismantling and storage",
+    "text": "After the fair the stand is dismantled; reusable elements are kept for your next participations."
+   }
+  ],
+  "de": [
+   {
+    "title": "Briefing und Messedaten",
+    "text": "Messe, Halle, Standnummer, Fläche und Anzahl der offenen Seiten werden geklärt, ebenso die Ziele Ihrer Marke und die auszustellenden Produkte."
+   },
+   {
+    "title": "Konzept und 3D-Design",
+    "text": "Wir analysieren Ihre Unternehmensfarben und Zielgruppe und entwickeln ein individuelles Standkonzept mit 3D-Visualisierungen."
+   },
+   {
+    "title": "Technische Planung und Freigabe",
+    "text": "Technische Zeichnungen sowie Elektro- und Beleuchtungspläne werden nach den Messerichtlinien erstellt und vom Veranstalter freigegeben."
+   },
+   {
+    "title": "Fertigung in der Werkstatt",
+    "text": "Standelemente und Präsentationsmodule werden in unserer eigenen Werkstatt gefertigt und vor der Montage geprüft."
+   },
+   {
+    "title": "Logistik und Aufbau",
+    "text": "Transport im In- und Ausland, Aufbau und technischer Support während der Messe kommen aus einer Hand."
+   },
+   {
+    "title": "Abbau und Lagerung",
+    "text": "Nach der Messe wird der Stand abgebaut; wiederverwendbare Elemente werden für Ihre nächsten Messeauftritte genutzt."
+   }
+  ]
+ },
+ "interiorProcess": {
+  "tr": [
+   {
+    "title": "Keşif ve ihtiyaç analizi",
+    "text": "Mekân yerinde incelenir, ölçü alınır; kullanım senaryosu, ihtiyaç programı ve takvim birlikte netleşir."
+   },
+   {
+    "title": "Konsept ve tasarım",
+    "text": "Mekânsal planlama, malzeme ve ışık kurgusu konsepte dönüşür; 3D görsellerle karar verilir."
+   },
+   {
+    "title": "Teknik proje",
+    "text": "Uygulama projeleri, detay çizimleri, mahal listesi ve iş programı hazırlanır."
+   },
+   {
+    "title": "Üretim ve uygulama",
+    "text": "Mobilya ve sabit donatı kendi atölyemizde üretilir; inşaat ve montaj sahada tek ekiple yürür."
+   },
+   {
+    "title": "Kontrol ve teslim",
+    "text": "Detaylar yerinde kontrol edilir, mekân kullanıma hazır teslim edilir. Ruhsat hariç tüm süreçler bizdedir."
+   }
+  ],
+  "en": [
+   {
+    "title": "Site survey and needs analysis",
+    "text": "We inspect the space on site and take measurements; together we define how it will be used, the brief and the schedule."
+   },
+   {
+    "title": "Concept and design",
+    "text": "Space planning, materials and lighting come together in a concept; decisions are made with 3D visuals."
+   },
+   {
+    "title": "Technical project",
+    "text": "Construction drawings, detail drawings, room schedules and the work programme are prepared."
+   },
+   {
+    "title": "Production and implementation",
+    "text": "Furniture and fixed joinery are made in our own workshop; construction and installation are carried out on site by one team."
+   },
+   {
+    "title": "Inspection and handover",
+    "text": "Details are checked on site and the space is handed over ready to use. We handle every step except permits."
+   }
+  ],
+  "de": [
+   {
+    "title": "Besichtigung und Bedarfsanalyse",
+    "text": "Wir besichtigen die Räume vor Ort und nehmen Maß; Nutzung, Raumprogramm und Zeitplan legen wir gemeinsam fest."
+   },
+   {
+    "title": "Konzept und Design",
+    "text": "Raumplanung, Materialien und Lichtkonzept werden zu einem Gesamtkonzept; Entscheidungen treffen Sie anhand von 3D-Visualisierungen."
+   },
+   {
+    "title": "Technische Planung",
+    "text": "Ausführungspläne, Detailzeichnungen, Raumbuch und Arbeitsplan werden erstellt."
+   },
+   {
+    "title": "Fertigung und Umsetzung",
+    "text": "Möbel und Einbauten werden in unserer eigenen Werkstatt gefertigt; Bau und Montage vor Ort übernimmt ein einziges Team."
+   },
+   {
+    "title": "Abnahme und Übergabe",
+    "text": "Details werden vor Ort geprüft, die Räume werden bezugsfertig übergeben. Außer Genehmigungen übernehmen wir alle Schritte."
+   }
+  ]
+ },
+ "interiorScope": {
+  "tr": [
+   {
+    "title": "Konsept tasarım",
+    "text": "İhtiyaçlarınıza ve yaşam tarzınıza uygun özgün konsept tasarımları geliştiriyoruz.",
+    "features": [
+     "Mood board",
+     "Renk paleti",
+     "Malzeme seçimi"
+    ]
+   },
+   {
+    "title": "Teknik proje",
+    "text": "Uygulamaya hazır, detaylı teknik çizimler ve 3D görselleştirmeler hazırlıyoruz.",
+    "features": [
+     "AutoCAD çizimler",
+     "3D modelleme",
+     "Detay projeleri"
+    ]
+   },
+   {
+    "title": "Anahtar teslim uygulama",
+    "text": "Tasarımı gerçeğe dönüştürüyoruz; tüm uygulama sürecini tek ekiple yönetiyoruz.",
+    "features": [
+     "İnşaat yönetimi",
+     "Mobilya montajı",
+     "Dekorasyon"
+    ]
+   }
+  ],
+  "en": [
+   {
+    "title": "Concept design",
+    "text": "We develop original design concepts tailored to your needs and lifestyle.",
+    "features": [
+     "Mood board",
+     "Colour palette",
+     "Material selection"
+    ]
+   },
+   {
+    "title": "Technical project",
+    "text": "We prepare detailed, ready-to-build technical drawings and 3D visualisations.",
+    "features": [
+     "AutoCAD drawings",
+     "3D modelling",
+     "Detail drawings"
+    ]
+   },
+   {
+    "title": "Turnkey implementation",
+    "text": "We bring the design to life and manage the entire implementation with one team.",
+    "features": [
+     "Construction management",
+     "Furniture installation",
+     "Decoration"
+    ]
+   }
+  ],
+  "de": [
+   {
+    "title": "Konzeptdesign",
+    "text": "Wir entwickeln individuelle Designkonzepte, die zu Ihren Bedürfnissen und Ihrem Lebensstil passen.",
+    "features": [
+     "Moodboard",
+     "Farbpalette",
+     "Materialauswahl"
+    ]
+   },
+   {
+    "title": "Technische Planung",
+    "text": "Wir erstellen detaillierte, ausführungsreife technische Zeichnungen und 3D-Visualisierungen.",
+    "features": [
+     "AutoCAD-Zeichnungen",
+     "3D-Modellierung",
+     "Detailplanung"
+    ]
+   },
+   {
+    "title": "Schlüsselfertige Umsetzung",
+    "text": "Wir machen den Entwurf Wirklichkeit und steuern die gesamte Umsetzung mit einem Team.",
+    "features": [
+     "Bauleitung",
+     "Möbelmontage",
+     "Dekoration"
+    ]
+   }
+  ]
+ }
+}

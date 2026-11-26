@@ -12,7 +12,8 @@ import { INTERIOR_PRICES } from "@/content/interior-prices";
 import { PROTECTED_MEDIA } from "@/lib/admin/protected-media";
 import { resolve } from "@/lib/routes";
 import { SYNC_LANGS, findAlt, needsTranslation, removeItem, syncItem, textOf, type ItemText, type SyncItem, type SyncKind, type SyncLang } from "@/lib/admin/sync";
-import { TRANSLATE_CONFIGURED, translateProject } from "@/lib/admin/translate";
+import { TRANSLATE_CONFIGURED, translateList, translateProject } from "@/lib/admin/translate";
+import { OpError, applyText, collectText, contentGet, contentPost } from "@/lib/admin/content-ops";
 
 // Yönetim paneli ucu: giriş, içerik okuma, görsel yükleme, proje/yazı/anasayfa/video kaydı, medya, geçmiş ve geri alma.
 // Her işlem oturum ister; içerik her zaman depodan taze okunur (derlemedeki kopyadan değil).
@@ -172,6 +173,10 @@ export async function GET(req: Request) {
     }
     if (q("history")) return NextResponse.json({ items: await history(), mode: storeMode() });
 
+    // Faz 2 içerikleri (hizmet sayfaları, sektör sayfaları, fiyatlar, fuarlar)
+    const c = await contentGet(q);
+    if (c) return NextResponse.json(c);
+
     // Genel bakış: listeler ve gösterge
     const [pr, po] = await Promise.all([readText(PROJECTS_FILE), readText(POSTS_FILE)]);
     const projects = parse<SyncItem[]>(pr).value;
@@ -191,6 +196,7 @@ export async function GET(req: Request) {
       checks: { untranslated, noAlt },
     });
   } catch (e) {
+    if (e instanceof OpError) return bad(e.message, e.status);
     console.error("[admin] okuma", e instanceof Error ? e.message : e);
     return bad("İçerik okunamadı. Depo bağlantısını kontrol edin.", 502);
   }
@@ -457,6 +463,21 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true });
     }
 
+    // ---------------------------------------------------------------- Faz 2 içerikleri
+    const c = await contentPost(op, body);
+    if (c) return NextResponse.json(c);
+
+    // Yapılandırılmış sayfanın Türkçe metinleri İngilizce ve Almancaya (aynı yapıda) çevrilir
+    if (op === "translate.page") {
+      if (!TRANSLATE_CONFIGURED) return bad("Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil.", 503);
+      const item = body.item;
+      const list = collectText(item);
+      if (!list.length) return bad("Çevrilecek metin yok.");
+      const [en, de] = await Promise.all([translateList(list, "en"), translateList(list, "de")]);
+      if (!en || !de) return bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
+      return NextResponse.json({ en: applyText(item, en), de: applyText(item, de) });
+    }
+
     // ---------------------------------------------------------------- geri alma
     if (op === "revert") {
       const sha = str(body.sha, 40);
@@ -465,6 +486,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: true, title });
     }
   } catch (e) {
+    if (e instanceof OpError) return bad(e.message, e.status);
     const msg = e instanceof Error ? e.message : String(e);
     const m = msg.match(/^(400|404):(.*)$/);
     if (m) return bad(m[2], Number(m[1]));

@@ -15,7 +15,8 @@ export const PROJECTS_FILE = "src/content/projects.json";
 export const POSTS_FILE = "src/content/posts.json";
 export const HOME_FILE = "src/content/home.json";
 export const VIDEOS_FILE = "src/content/videos.json";
-const DATA_FILES = [PROJECTS_FILE, POSTS_FILE, HOME_FILE, VIDEOS_FILE];
+// Faz 2: hizmet açılışları, sektör/stand sayfaları, fiyatlar, süreç adımları, fuar takvimi (content-ops.ts)
+const DATA_FILES = [PROJECTS_FILE, POSTS_FILE, HOME_FILE, VIDEOS_FILE, "src/content/landings.json", "src/content/extra-pages.json", "src/content/stand-prices.json", "src/content/interior-prices.json", "src/content/process.json", "src/content/fairs.json"];
 export const UPLOAD_RE = /^public\/wp-content\/uploads\/\d{4}\/\d{2}\/[a-z0-9][a-z0-9-]{0,80}\.(jpg|png|webp|svg)$/;
 // Kütüphanede listelenen görsel klasörleri; silme yalnızca yükleme klasöründe yapılabilir
 export const MEDIA_DIRS = ["public/wp-content/uploads/", "public/images/", "public/logos/"];
