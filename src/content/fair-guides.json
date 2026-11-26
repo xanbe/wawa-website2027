@@ -1526,5 +1526,497 @@
         }
       ]
     }
+  },
+  {
+    "name": "CES",
+    "slugs": [
+      "ces"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.ces.tech/",
+      "https://www.ces.tech/about/"
+    ],
+    "tr": {
+      "intro": "CES, Las Vegas'ta 6–9 Ocak 2027 tarihlerinde yapılacak tüketici teknolojisi fuarıdır. Fuarın sahibi ve yapımcısı Consumer Technology Association (CTA).",
+      "sections": [
+        {
+          "h": "CES'te hangi alanlar var?",
+          "p": "Organizatörün sitesindeki kategori listesi yapay zekâ, ses, giyilebilir ve sağlık teknolojileri, akıllı ev ve cihazlar, robotik, dronlar, oyun ve e-spor, araç teknolojisi ve ileri mobilite, perakende ve e-ticaret, uzay teknolojisi, kuantum ve start-up'lar dahil çok geniş bir yelpazeyi kapsıyor. Öne çıkan başlıklar yapay zekâ, içerik ve eğlence ile araç teknolojisi. Fuar alanında Eureka Park, C Space, CES Foundry ve CES Health Hub bölümleri yer alıyor."
+        },
+        {
+          "h": "Tarihler ve katılım",
+          "p": "CES 2027, 6–9 Ocak tarihleri arasında Las Vegas'ta düzenleniyor. Organizatör uluslararası katılımcılar, basın ve konuşmacılar için ayrı katılım kılavuzları yayımlıyor; kayıt resmî siteden yapılıyor. Sonraki fuar tarihleri CES 2028 için 11–14 Ocak, CES 2029 için 9–12 Ocak olarak duyurulmuş."
+        },
+        {
+          "h": "CES'te stand açmak",
+          "p": "Stand başvurusu sitedeki Apply to Exhibit düğmesi üzerinden satış ekibine iletiliyor; katılımcılar için ayrıca katılımcı kılavuzları, kılavuz el kitapları ve katılımcı paneli kılavuzu bulunuyor. Teknoloji fuarlarında stand, ürünün canlı gösterildiği bir sahne gibi çalışır: demo alanı, ekran ve elektrik altyapısı ile görüşme alanı baştan planlanmalı, kurulum kuralları katılımcı el kitabından kontrol edilmelidir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "CES is the consumer technology trade show held in Las Vegas on 6–9 January 2027. It is owned and produced by the Consumer Technology Association (CTA).",
+      "sections": [
+        {
+          "h": "What does CES cover?",
+          "p": "The organiser's category list is very wide: artificial intelligence, audio, wearables and health tech, smart home and appliances, robotics, drones, gaming and esports, vehicle tech and advanced mobility, retail and e-commerce, space tech, quantum and startups, among others. Featured topics are artificial intelligence, content and entertainment, and vehicle tech and advanced mobility. The show floor includes Eureka Park, C Space, CES Foundry and CES Health Hub."
+        },
+        {
+          "h": "Dates and attendance",
+          "p": "CES 2027 runs from 6 to 9 January in Las Vegas. The organiser publishes separate attendee guides for international visitors, media and speakers, and registration is done on the official site. Later dates are announced as 11–14 January for CES 2028 and 9–12 January for CES 2029."
+        },
+        {
+          "h": "Exhibiting at CES",
+          "p": "Stand enquiries go to the sales team through the Apply to Exhibit button on the site, and exhibitors have access to exhibitor guides, manuals and a dashboard quick guide. At a technology show the stand works as a live stage for the product: the demo area, screens, power supply and meeting space need to be planned from the start, and build rules checked in the exhibitor manual."
+        }
+      ]
+    },
+    "de": {
+      "intro": "CES ist die Messe für Unterhaltungselektronik und Verbrauchertechnologie, die vom 6. bis 9. Januar 2027 in Las Vegas stattfindet. Eigentümer und Veranstalter ist die Consumer Technology Association (CTA).",
+      "sections": [
+        {
+          "h": "Welche Bereiche deckt die CES ab?",
+          "p": "Die Kategorienliste des Veranstalters ist sehr breit: künstliche Intelligenz, Audio, Wearables und Health-Tech, Smart Home und Haushaltsgeräte, Robotik, Drohnen, Gaming und E-Sport, Fahrzeugtechnik und moderne Mobilität, Handel und E-Commerce, Raumfahrttechnik, Quantentechnologie und Start-ups. Im Mittelpunkt stehen künstliche Intelligenz, Content und Entertainment sowie Fahrzeugtechnik. Auf dem Gelände gibt es unter anderem Eureka Park, C Space, CES Foundry und CES Health Hub."
+        },
+        {
+          "h": "Termine und Teilnahme",
+          "p": "Die CES 2027 findet vom 6. bis 9. Januar in Las Vegas statt. Der Veranstalter bietet eigene Leitfäden für internationale Besucher, Presse und Redner an; die Anmeldung läuft über die offizielle Website. Die nächsten Termine sind für die CES 2028 der 11. bis 14. Januar und für die CES 2029 der 9. bis 12. Januar."
+        },
+        {
+          "h": "Als Aussteller auf der CES",
+          "p": "Standanfragen laufen über die Schaltfläche Apply to Exhibit an das Vertriebsteam; Aussteller erhalten außerdem Leitfäden, Handbücher und eine Kurzanleitung für das Ausstellerportal. Auf einer Technikmesse ist der Stand eine Bühne für die Live-Vorführung: Demobereich, Bildschirme, Stromversorgung und Gesprächszone sollten von Anfang an eingeplant und die Aufbauregeln im Ausstellerhandbuch geprüft werden."
+        }
+      ]
+    }
+  },
+  {
+    "name": "ICFE",
+    "slugs": [
+      "icfe-international-carpet-and-flooring-expo"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.tuyap.com.tr/fuarlar/international-carpet-and-flooring-expo"
+    ],
+    "tr": {
+      "intro": "ICFE (International Carpet and Flooring Expo), 6–9 Ocak 2027 tarihlerinde İstanbul Fuar Merkezi'nde düzenlenen halı ve zemin kaplamaları fuarıdır. Organizatörü Tüyap Tüm Fuarcılık Yapım A.Ş.",
+      "sections": [
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 6–9 Ocak 2027 arasında İstanbul Fuar Merkezi'nde yapılıyor; takvimde ziyaret saatleri 10:00–18:00 olarak görünüyor. Ziyaretçiler fuar sayfasından e-bilet alıyor. Fuar sayfasında Tüyap'ın ilgili fuarlar bölümünde 6–9 Mayıs tarihli Asansör İstanbul da listeleniyor; bu fuar ICFE ile aynı günlerde değil, ayrı bir etkinlik olarak yer alıyor."
+        },
+        {
+          "h": "Ziyaretçi ve katılımcı başvurusu",
+          "p": "Katılımcı olmak isteyenler fuar sayfasındaki Katılımcı Olmak İstiyorum düğmesiyle katılım formunu dolduruyor. Başvuru sonrası stand ve hizmet detayları organizatörle netleştiriliyor."
+        },
+        {
+          "h": "ICFE'de stand açmak",
+          "p": "Halı ve zemin kaplaması standında ürünün dokusu ve deseni öne çıkar: numune panoları, yere serilmiş uygulama alanları ve ışık, ürünün gerçek görünümünü yansıtacak biçimde tasarlanmalı. Zemin ürünleri ağır olduğundan stand içi ürün taşıma ve depolama alanı da baştan planlanmalı; kurulum kuralları için organizatörün katılımcı el kitabı esas alınır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "ICFE (International Carpet and Flooring Expo) is the carpet and flooring trade show held at the Istanbul Expo Center from 6 to 9 January 2027. It is organised by Tüyap Tüm Fuarcılık Yapım A.Ş.",
+      "sections": [
+        {
+          "h": "Dates and venue",
+          "p": "The show runs from 6 to 9 January 2027 at the Istanbul Expo Center, with visiting hours of 10:00 to 18:00 in the event calendar. Visitors obtain an e-ticket through the fair page."
+        },
+        {
+          "h": "Visitor and exhibitor registration",
+          "p": "Companies that want to exhibit fill in the participation form behind the Katılımcı Olmak İstiyorum button on the fair page. Stand and service details are then agreed with the organiser."
+        },
+        {
+          "h": "Exhibiting at ICFE",
+          "p": "At a carpet and flooring stand the texture and pattern of the product come first: sample boards, laid floor areas and lighting should show the material as it really looks. Flooring is heavy, so handling and storage space inside the stand should be planned early, and build rules taken from the organiser's exhibitor manual."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die ICFE (International Carpet and Flooring Expo) ist die Messe für Teppiche und Bodenbeläge, die vom 6. bis 9. Januar 2027 im Istanbul Expo Center stattfindet. Veranstalter ist Tüyap Tüm Fuarcılık Yapım A.Ş.",
+      "sections": [
+        {
+          "h": "Termine und Messegelände",
+          "p": "Die Messe läuft vom 6. bis 9. Januar 2027 im Istanbul Expo Center; im Veranstaltungskalender sind Besuchszeiten von 10:00 bis 18:00 Uhr angegeben. Besucher erhalten ihr E-Ticket über die Messeseite."
+        },
+        {
+          "h": "Anmeldung für Besucher und Aussteller",
+          "p": "Unternehmen, die ausstellen möchten, füllen über die Schaltfläche Katılımcı Olmak İstiyorum das Teilnahmeformular auf der Messeseite aus. Stand- und Leistungsdetails werden anschließend mit dem Veranstalter geklärt."
+        },
+        {
+          "h": "Als Aussteller auf der ICFE",
+          "p": "Auf einem Teppich- und Bodenbelagsstand stehen Struktur und Muster im Vordergrund: Musterwände, verlegte Bodenflächen und Licht sollten das Material so zeigen, wie es wirklich aussieht. Bodenbeläge sind schwer, deshalb sollten Handling und Lagerfläche im Stand früh eingeplant und die Aufbauregeln im Ausstellerhandbuch des Veranstalters beachtet werden."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Nordstil Winter",
+    "slugs": [
+      "nordstil-winter"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://nordstil.messefrankfurt.com/hamburg/en.html"
+    ],
+    "tr": {
+      "intro": "Nordstil Winter, 9–11 Ocak 2027 tarihlerinde Hamburg'da düzenlenen yaşam tarzı ve ev ürünleri fuarıdır. Organizatör Messe Frankfurt Exhibition GmbH.",
+      "sections": [
+        {
+          "h": "Fuarda hangi ürünler var?",
+          "p": "Organizatöre göre fuar markalı üreticilerin, start-up'ların, üreticilerin ve genç tasarımcıların ürünlerini her tarzda bir araya getiriyor. Bölgesel perakendeciler ve diğer alıcılar için bir buluşma noktası olarak tanıtılıyor. 10–11 Ocak 2027'de GenussGipfel adlı eş zamanlı bir etkinlik de yapılıyor."
+        },
+        {
+          "h": "Tarihler",
+          "p": "Nordstil Winter 9–11 Ocak 2027 tarihleri arasında Hamburg'da yapılıyor. Ziyaretçi bilgisi ve bilet satışı organizatörün sitesinde ayrı sayfalarda duruyor; giriş koşulları için resmî siteden teyit edilmesi gerekiyor."
+        },
+        {
+          "h": "Nordstil Winter'da stand açmak",
+          "p": "Katılım için sitedeki Nordstil Winter 2027 katılım niyeti formu dolduruluyor; katılımcı kontrol listesi, çevrim içi reklam seçenekleri, salon planı ve hizmetler listesi aynı sitede bulunuyor. Perakendecilere yönelik bir yaşam tarzı fuarında stand, ürünün raf ve mağaza düzeninde nasıl duracağını gösterecek şekilde kurulmalı: ürün grupları ayrı bölgelerde, sipariş görüşmesi için sakin bir masa ile."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Nordstil Winter is the lifestyle and home products fair held in Hamburg from 9 to 11 January 2027. It is organised by Messe Frankfurt Exhibition GmbH.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "According to the organiser, the fair brings together products from brand manufacturers, start-ups, manufacturers and young designers in all styles. It is presented as a meeting point for regional retailers and other buyers. A concurrent event, GenussGipfel, takes place on 10 and 11 January 2027."
+        },
+        {
+          "h": "Dates",
+          "p": "Nordstil Winter takes place from 9 to 11 January 2027 in Hamburg. Visitor information and ticket sales sit on separate pages of the organiser's site, so admission conditions should be confirmed on the official site."
+        },
+        {
+          "h": "Exhibiting at Nordstil Winter",
+          "p": "Exhibitors register through the intention-to-exhibit form for Nordstil Winter 2027; an exhibitor checklist, online advertising options, the hall plan and a services overview are on the same site. At a lifestyle fair for retailers the stand should show how the product will sit on a shelf or in a shop: product groups in separate zones, with a quiet table for order talks."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Nordstil Winter ist die Lifestyle- und Wohnaccessoires-Messe, die vom 9. bis 11. Januar 2027 in Hamburg stattfindet. Veranstalter ist die Messe Frankfurt Exhibition GmbH.",
+      "sections": [
+        {
+          "h": "Was wird gezeigt?",
+          "p": "Laut Veranstalter vereint die Messe Produkte von Markenherstellern, Start-ups, Manufakturen und jungen Designern in allen Stilrichtungen. Sie wird als Treffpunkt für regionale Einzelhändler und weitere Einkäufer beschrieben. Am 10. und 11. Januar 2027 findet parallel der GenussGipfel statt."
+        },
+        {
+          "h": "Termine",
+          "p": "Die Nordstil Winter läuft vom 9. bis 11. Januar 2027 in Hamburg. Besucherinformationen und Ticketverkauf liegen auf eigenen Seiten der Veranstalter-Website; die Zutrittsbedingungen sollten auf der offiziellen Seite geprüft werden."
+        },
+        {
+          "h": "Als Aussteller auf der Nordstil Winter",
+          "p": "Die Anmeldung erfolgt über das Formular zur Ausstellungsabsicht für die Nordstil Winter 2027; Ausstellercheckliste, Online-Werbemöglichkeiten, Hallenplan und Serviceübersicht finden sich auf derselben Seite. Auf einer Lifestyle-Messe für den Handel sollte der Stand zeigen, wie das Produkt im Regal oder im Laden wirkt: Produktgruppen in getrennten Zonen und ein ruhiger Tisch für Bestellgespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Egypt Coatings Show",
+    "slugs": [
+      "egypt-coatings-show"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.middleeastcoatingsshow.com/",
+      "https://www.egyptcoatingsshow.com/"
+    ],
+    "tr": {
+      "intro": "Egypt Coatings Show, 10–12 Ocak 2027 tarihlerinde Kahire'deki Egypt International Exhibition Center'da (EIEC) yapılan boya ve kaplama sektörü fuarıdır. Coatings Group etkinlikleri arasında yer alıyor ve dmg events markasıyla duyuruluyor.",
+      "sections": [
+        {
+          "h": "Ürün grupları",
+          "p": "Organizatörün sitesinde sergi kategorileri kimyasallar ve hammaddeler, laboratuvar ve ambalaj ekipmanları, test ve ölçüm ekipmanları, tesis ve makineler ile diğer kaplama ürünleri olarak sıralanıyor. Katılımcılar üreticiler, hammadde tedarikçileri, alıcılar, formülatörler ve kimyagerlerle görüşebiliyor."
+        },
+        {
+          "h": "Tarihler ve ziyaretçi",
+          "p": "Fuar 10–12 Ocak 2027 tarihlerinde EIEC, Kahire'de yapılıyor. Giriş sektör profesyonelleri için ücretsiz; 18 yaş altı ziyaretçi kabul edilmiyor. Organizatörün sayfalarında ziyaret saatleri tutarsız göründüğünden saatleri resmî siteden teyit edin."
+        },
+        {
+          "h": "Egypt Coatings Show'da stand açmak",
+          "p": "Stand için sitedeki Book a stand bağlantısı, satış broşürü ve sponsorluk talebi kullanılıyor; 2027 katılımcı listesi çevrim içi yayımlanıyor. Boya ve kaplama standında ürünün rengi ve yüzey kalitesi anlatılır: renk kartelası, numune panoları ve test sonuçlarını gösteren bir bölüm, teknik görüşmeler için ayrı bir masa ile birlikte düşünülmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Egypt Coatings Show is the paint and coatings industry show held from 10 to 12 January 2027 at the Egypt International Exhibition Center (EIEC) in Cairo. It is one of the Coatings Group events and carries dmg events branding.",
+      "sections": [
+        {
+          "h": "Product groups",
+          "p": "The organiser lists the exhibition sectors as chemicals and raw materials, laboratory and packaging equipment, testing and measuring equipment, plant and machinery, and other coatings products. Exhibitors can meet manufacturers, raw material suppliers, buyers, formulators and chemists."
+        },
+        {
+          "h": "Dates and visitors",
+          "p": "The show takes place from 10 to 12 January 2027 at the EIEC in Cairo. Admission is free for trade and industry professionals, and visitors under 18 are not admitted. The opening hours differ between pages of the organiser's site, so confirm them on the official site."
+        },
+        {
+          "h": "Exhibiting at Egypt Coatings Show",
+          "p": "Stand booking uses the Book a stand link, the sales brochure and a sponsorship enquiry form on the site, and the 2027 exhibitor list is published online. A coatings stand talks about colour and surface quality: a colour chart, sample panels and a section showing test results should be planned together with a separate table for technical talks."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Egypt Coatings Show ist die Fachmesse der Farben- und Lackbranche, die vom 10. bis 12. Januar 2027 im Egypt International Exhibition Center (EIEC) in Kairo stattfindet. Sie gehört zu den Veranstaltungen der Coatings Group und läuft unter der Marke dmg events.",
+      "sections": [
+        {
+          "h": "Produktgruppen",
+          "p": "Auf der Veranstalter-Website sind die Ausstellungsbereiche Chemikalien und Rohstoffe, Labor- und Verpackungsausrüstung, Prüf- und Messtechnik, Anlagen und Maschinen sowie weitere Beschichtungsprodukte genannt. Aussteller treffen dort Hersteller, Rohstofflieferanten, Einkäufer, Formulierer und Chemiker."
+        },
+        {
+          "h": "Termine und Besucher",
+          "p": "Die Messe findet vom 10. bis 12. Januar 2027 im EIEC in Kairo statt. Der Eintritt ist für Fachleute der Branche kostenlos; Besucher unter 18 Jahren werden nicht zugelassen. Die Öffnungszeiten weichen auf den Seiten des Veranstalters voneinander ab und sollten auf der offiziellen Website geprüft werden."
+        },
+        {
+          "h": "Als Aussteller auf der Egypt Coatings Show",
+          "p": "Die Standbuchung läuft über den Link Book a stand, die Verkaufsbroschüre und eine Sponsoring-Anfrage; die Ausstellerliste 2027 wird online veröffentlicht. Ein Lackstand erzählt von Farbe und Oberflächenqualität: Farbkarte, Musterplatten und ein Bereich für Prüfergebnisse gehören zusammen mit einem eigenen Tisch für Fachgespräche geplant."
+        }
+      ]
+    }
+  },
+  {
+    "name": "NRF Retail's Big Show",
+    "slugs": [
+      "nrf-retail-s-big-show"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://nrfbigshow.nrf.com/"
+    ],
+    "tr": {
+      "intro": "NRF Retail's Big Show, 10–12 Ocak 2027 tarihlerinde New York'taki Jacob K. Javits Convention Center'da yapılan perakende sektörü etkinliğidir. Organizatör National Retail Federation (NRF).",
+      "sections": [
+        {
+          "h": "Programda neler var?",
+          "p": "Etkinlik öğrenme oturumları, Expo bölümündeki perakende teknolojisi, hizmet ve deneyim çözümleri ile sektör profesyonelleriyle ağ kurma fırsatlarından oluşuyor. Expo içinde ters lojistik, tedarik zinciri stratejisi, gelir geri kazanımı, sürdürülebilirlik ve döngüsellik konularını ele alan Reverse Logistics Pavilion yer alıyor."
+        },
+        {
+          "h": "Tarihler, alan ve ziyaretçi",
+          "p": "Etkinlik 10–12 Ocak 2027'de Javits Center'da yapılıyor; 9 Ocak 2027'de Times Square'deki Marriott Marquis'te bir açılış partisi düzenleniyor. Organizatöre göre her yıl 41.000'den fazla perakende profesyoneli katılıyor; katılımcı ve sponsorlar 100'den fazla ülkeden perakende karar vericilerine ulaşıyor."
+        },
+        {
+          "h": "NRF Big Show'da stand açmak",
+          "p": "Katılımcı ve sponsorlar çözümlerini Expo'da sergiliyor; marka görünürlüğü seçenekleri için organizatörün satış ekibiyle iletişime geçiliyor ve sitede Exhibit/Sponsor Information bölümü bulunuyor. Perakende teknolojisi standında çözümün mağaza akışında nasıl çalıştığını gösteren bir demo alanı ve karar vericilerle yapılan randevulu görüşmeler için kapalı bir köşe öne çıkar."
+        }
+      ]
+    },
+    "en": {
+      "intro": "NRF Retail's Big Show is the retail industry event held from 10 to 12 January 2027 at the Jacob K. Javits Convention Center in New York. It is organised by the National Retail Federation (NRF).",
+      "sections": [
+        {
+          "h": "What is on the programme?",
+          "p": "The event combines learning sessions, retail technology, services and experiences in the Expo, and networking with retail peers and vendors. The Expo includes the Reverse Logistics Pavilion, covering reverse logistics, supply chain strategy, revenue recovery, and sustainability and circularity."
+        },
+        {
+          "h": "Dates, venue and visitors",
+          "p": "The event runs from 10 to 12 January 2027 at the Javits Center, with an opening party on 9 January 2027 at the Marriott Marquis in Times Square. According to the organiser, more than 41,000 retail professionals attend each year, and exhibitors and sponsors reach retail decision-makers from more than 100 countries."
+        },
+        {
+          "h": "Exhibiting at NRF Big Show",
+          "p": "Exhibitors and sponsors showcase their solutions in the Expo; branding options are discussed with the organiser's sales team, and the site has an Exhibit/Sponsor Information section. A retail technology stand works best with a demo area showing how the solution fits into store operations and a closed corner for scheduled talks with decision-makers."
+        }
+      ]
+    },
+    "de": {
+      "intro": "NRF Retail's Big Show ist die Branchenveranstaltung des Einzelhandels, die vom 10. bis 12. Januar 2027 im Jacob K. Javits Convention Center in New York stattfindet. Veranstalter ist die National Retail Federation (NRF).",
+      "sections": [
+        {
+          "h": "Was bietet das Programm?",
+          "p": "Die Veranstaltung verbindet Lernsessions, Handelstechnologie, Services und Erlebnisse in der Expo sowie Networking mit Branchenkollegen und Anbietern. Zur Expo gehört der Reverse Logistics Pavilion mit den Themen Rücklogistik, Lieferkettenstrategie, Wertrückgewinnung sowie Nachhaltigkeit und Kreislaufwirtschaft."
+        },
+        {
+          "h": "Termine, Ort und Besucher",
+          "p": "Die Veranstaltung läuft vom 10. bis 12. Januar 2027 im Javits Center; am 9. Januar 2027 gibt es eine Eröffnungsparty im Marriott Marquis am Times Square. Laut Veranstalter nehmen jedes Jahr mehr als 41.000 Fachleute des Einzelhandels teil, und Aussteller und Sponsoren erreichen Entscheider aus mehr als 100 Ländern."
+        },
+        {
+          "h": "Als Aussteller auf der NRF Big Show",
+          "p": "Aussteller und Sponsoren zeigen ihre Lösungen in der Expo; Markenpräsenz wird mit dem Vertriebsteam des Veranstalters besprochen, und die Website enthält einen Bereich Exhibit/Sponsor Information. Ein Stand für Handelstechnologie funktioniert am besten mit einer Demofläche, die den Einsatz im Ladenalltag zeigt, und einer geschlossenen Ecke für vereinbarte Gespräche mit Entscheidern."
+        }
+      ]
+    }
+  },
+  {
+    "name": "BAU",
+    "slugs": [
+      "bau"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://messe-muenchen.de/en/events/bau-2027.html",
+      "https://bau-muenchen.com/en/"
+    ],
+    "tr": {
+      "intro": "BAU, 11–15 Ocak 2027 tarihlerinde Münih'te yapılan mimari, malzeme ve sistemler fuarıdır. Organizatör Messe München GmbH; fuar iki yılda bir düzenleniyor.",
+      "sections": [
+        {
+          "h": "Ana başlıklar",
+          "p": "Organizatör fuarın temalarını malzeme ve kaynaklar, iklim koruma ve iklime uyum, değişen yaşam alanı ile dijitalleşme ve verimlilik olarak sıralıyor. Sektör listesi ve fuar alanı haritası resmî sitede ayrı sayfalarda yer alıyor."
+        },
+        {
+          "h": "Tarihler ve ziyaretçi",
+          "p": "BAU 11–15 Ocak 2027 arasında Münih'te yapılıyor. Organizatör ziyaretçi gruplarını mimarlar, planlamacılar ve mühendisler, zanaatkârlar, geliştiriciler ve yatırımcılar ile perakendeciler olarak sıralıyor."
+        },
+        {
+          "h": "BAU'da stand açmak",
+          "p": "Sitede katılım gerekçeleri, başvuru ve fiyatlar, ipuçları ve son tarihler, stand yapımı, lojistik ve sık sorulan sorular bölümleri bulunuyor. Mimarlara ve yapı profesyonellerine yönelik bir fuarda stand, malzemenin dokusunu ve detayını yakından göstermeli: numune duvarı, ürünün uygulandığı gerçek ölçekli bir köşe ve teknik görüşmeler için ayrı bir alan planlanmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "BAU is the trade fair for architecture, materials and systems held in Munich from 11 to 15 January 2027. It is organised by Messe München GmbH and takes place every two years.",
+      "sections": [
+        {
+          "h": "Main themes",
+          "p": "The organiser names the themes as materials and resources, climate protection and climate adaptation, changing living space, and digitalisation and productivity. The sector list and the fairgrounds map are on separate pages of the official site."
+        },
+        {
+          "h": "Dates and visitors",
+          "p": "BAU takes place in Munich from 11 to 15 January 2027. The organiser lists visitor groups as architects, planners and engineers, tradespeople, developers and investors, and retailers."
+        },
+        {
+          "h": "Exhibiting at BAU",
+          "p": "The site has sections on why to exhibit, application and prices, tips and deadlines, stand building, logistics and FAQs. At a fair aimed at architects and building professionals, the stand should show material texture and detail up close: a sample wall, a full-scale corner showing the product in use, and a separate area for technical talks."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die BAU ist die Weltleitmesse für Architektur, Materialien und Systeme und findet vom 11. bis 15. Januar 2027 in München statt. Veranstalter ist die Messe München GmbH; die Messe wird alle zwei Jahre durchgeführt.",
+      "sections": [
+        {
+          "h": "Leitthemen",
+          "p": "Der Veranstalter nennt als Themen Material und Ressourcen, Klimaschutz und Klimaanpassung, veränderten Lebensraum sowie Digitalisierung und Produktivität. Die Branchenliste und der Geländeplan stehen auf eigenen Seiten der offiziellen Website."
+        },
+        {
+          "h": "Termine und Besucher",
+          "p": "Die BAU findet vom 11. bis 15. Januar 2027 in München statt. Der Veranstalter nennt als Besuchergruppen Architekten, Planer und Ingenieure, Handwerker, Bauträger und Investoren sowie Händler."
+        },
+        {
+          "h": "Als Aussteller auf der BAU",
+          "p": "Die Website bietet Bereiche zu Gründen für die Teilnahme, Anmeldung und Preisen, Tipps und Fristen, Standbau, Logistik und FAQ. Auf einer Messe für Architekten und Baufachleute sollte der Stand Materialstruktur und Detail aus der Nähe zeigen: eine Musterwand, eine Ecke im Maßstab 1:1 mit dem Produkt im Einsatz und ein eigener Bereich für Fachgespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Horecava",
+    "slugs": [
+      "horecava"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.horecava.nl/en"
+    ],
+    "tr": {
+      "intro": "Horecava, 11–14 Ocak 2027 tarihlerinde Amsterdam'daki RAI'de yapılan konaklama ve yeme-içme sektörü fuarıdır. Fuar 1957'den beri düzenleniyor; 2027 yılı fuarın 70. yıl dönümü.",
+      "sections": [
+        {
+          "h": "Fuarda neler var?",
+          "p": "Organizatör fuarın tüm sektörü kapsadığını belirtiyor: fast casual, yiyecek ve şarap, teknoloji ve hizmetler ile iç mekân ve tasarım. Program interaktif sempozyumlar, şefler veya baristalarla yapılan yarışmalar, gösteriler ve tadımlardan oluşuyor."
+        },
+        {
+          "h": "Tarihler, alan ve ziyaretçi",
+          "p": "Horecava 11–14 Ocak 2027 (pazartesi–perşembe) tarihlerinde RAI Amsterdam'da yapılıyor; alana tramvay, metro, otobüs ve RAI'nin kendi tren istasyonu ile ulaşılıyor. Organizatöre göre her yıl 30.000'den fazla şirketten yaklaşık 60.000 konaklama sektörü profesyoneli fuarı ziyaret ediyor; bu sayı 2027'ye özgü değil. Sektörde çalışan, sektör için çalışan veya sektörle çalışan herkes davet ediliyor."
+        },
+        {
+          "h": "Horecava'da stand açmak",
+          "p": "Süreç sitedeki katılımcı olma bilgisi, satış broşürü, salon planı ve stand fiyatlarıyla başlıyor, stand rezervasyonu sitedeki bağlantıdan yapılıyor. Organizatör, sabit fiyata stand ve elektriği kapsayan Plug & Play konseptleri de sunuyor; katılımcı yalnızca döşemeden sorumlu. Restoran ve otel sektörüne yönelik bir standda ürünün gerçek mekânda nasıl görüneceği öne çıkar: mobilya, aydınlatma ve servis ekipmanı bir salon düzeni gibi kurulur, tadım ve görüşme için oturma alanı ayrılır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Horecava is the hospitality trade fair held at RAI Amsterdam from 11 to 14 January 2027. The fair has run since 1957, and 2027 is its 70th anniversary.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The organiser says the fair covers the whole industry: fast casual, food and wine, tech and services, and interior and design. The programme includes interactive symposia, competitions with chefs or baristas, demonstrations and tastings."
+        },
+        {
+          "h": "Dates, venue and visitors",
+          "p": "Horecava runs from Monday 11 to Thursday 14 January 2027 at RAI Amsterdam, reachable by tram, metro, bus and the venue's own train station. According to the organiser, around 60,000 hospitality professionals from more than 30,000 companies visit each year; this is not a 2027 figure. Anyone who works in, for or with the hospitality industry is invited."
+        },
+        {
+          "h": "Exhibiting at Horecava",
+          "p": "The process starts with the become-an-exhibitor information, the sales brochure, the floor plan and the stand rates, and stands are booked through the link on the site. The organiser also offers Plug & Play concepts at a fixed price covering the stand and power supply, with the exhibitor responsible only for furnishing. At a stand aimed at restaurants and hotels, how the product looks in a real venue matters: furniture, lighting and service equipment set up like a dining room, with seating for tastings and meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Horecava ist die Fachmesse für Gastronomie und Hotellerie, die vom 11. bis 14. Januar 2027 in der RAI Amsterdam stattfindet. Die Messe wird seit 1957 durchgeführt; 2027 ist ihr 70. Jubiläum.",
+      "sections": [
+        {
+          "h": "Was wird gezeigt?",
+          "p": "Der Veranstalter beschreibt die Messe als Überblick über die gesamte Branche: Fast Casual, Food und Wein, Technik und Services sowie Interior und Design. Das Programm umfasst interaktive Symposien, Wettbewerbe mit Köchen oder Baristas, Vorführungen und Verkostungen."
+        },
+        {
+          "h": "Termine, Ort und Besucher",
+          "p": "Die Horecava läuft von Montag, 11., bis Donnerstag, 14. Januar 2027 in der RAI Amsterdam, erreichbar mit Straßenbahn, U-Bahn, Bus und dem eigenen Bahnhof des Geländes. Laut Veranstalter besuchen jedes Jahr rund 60.000 Fachleute aus mehr als 30.000 Unternehmen die Messe; die Zahl bezieht sich nicht auf 2027. Eingeladen ist, wer in, für oder mit der Gastgewerbebranche arbeitet."
+        },
+        {
+          "h": "Als Aussteller auf der Horecava",
+          "p": "Der Ablauf beginnt mit den Informationen für Aussteller, der Verkaufsbroschüre, dem Hallenplan und den Standpreisen; gebucht wird über den Link auf der Website. Der Veranstalter bietet außerdem Plug-&-Play-Konzepte zum Festpreis an, die Stand und Stromversorgung umfassen; der Aussteller kümmert sich nur um die Einrichtung. Auf einem Stand für Restaurants und Hotels zählt, wie das Produkt in einem echten Lokal wirkt: Möbel, Beleuchtung und Servicezubehör wie ein Gastraum aufgebaut, mit Sitzplätzen für Verkostungen und Gespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Afro Plast Expo",
+    "slugs": [
+      "afro-plast-expo"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://afroplast.com/",
+      "https://afroplast.com/about"
+    ],
+    "tr": {
+      "intro": "Afro Plast Expo (AFROPLAST), 9–12 Ocak 2027 tarihlerinde Yeni Kahire'deki Egypt International Exhibition Center'da yapılan plastik sektörü fuarıdır. Organizatör Vision Fairs.",
+      "sections": [
+        {
+          "h": "Ürün grupları",
+          "p": "Fuar plastik, kauçuk ve dokunmamış kumaş sektörlerini kapsıyor; odak plastik teknolojileri. Organizatörün sitesinde ayrıca bir alıcı programı ve ülke pavilyonları yer alıyor."
+        },
+        {
+          "h": "Tarihler ve ziyaretçi",
+          "p": "Fuar 9–12 Ocak 2027'de EIEC, Yeni Kahire'de dört salonda yapılıyor. Organizatör fuarı Mısır, Ortadoğu-Kuzey Afrika ve Afrika'dan ticari ziyaretçilere, alıcılara, distribütörlere ve karar vericilere yönelik stratejik bir B2B fuarı olarak tanıtıyor. Ziyaretçi kaydı ve ziyaretçi profili sayfaları resmî sitede."
+        },
+        {
+          "h": "Afro Plast Expo'da stand açmak",
+          "p": "Sitede Book Your Stand bağlantısı, katılımcı profili, broşür ve önceki fuarın sonuç raporu yer alıyor; başvuru adımları sayfada ayrıntılandırılmamış, bu yüzden organizatörle iletişime geçilmeli. Makine ve hammadde fuarlarında stand, ürünün çalışır halini veya numune ürün sıralarını gösterir: makine ağırlığı ve elektrik gereksinimi, zemin yükü ve kurulum izinleri baştan netleştirilmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Afro Plast Expo (AFROPLAST) is the plastics trade show held from 9 to 12 January 2027 at the Egypt International Exhibition Center in New Cairo. It is organised by Vision Fairs.",
+      "sections": [
+        {
+          "h": "Product groups",
+          "p": "The show covers the plastics, rubber and non-woven industries, with a focus on plastic technologies. The organiser's site also lists a buyer programme and country pavilions."
+        },
+        {
+          "h": "Dates and visitors",
+          "p": "The show runs from 9 to 12 January 2027 at the EIEC in New Cairo, across four halls. The organiser presents it as a strategic B2B show for trade visitors, buyers, distributors and decision-makers from Egypt, the MENA region and Africa. Visitor registration and visitor profile pages are on the official site."
+        },
+        {
+          "h": "Exhibiting at Afro Plast Expo",
+          "p": "The site offers a Book Your Stand link, an exhibitor profile, a brochure and the post-show report of the previous edition; the application steps are not detailed on the page, so the organiser should be contacted. At machinery and raw material fairs the stand shows the machine running or rows of sample products: machine weight, power needs, floor load and build permissions should be settled early."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Afro Plast Expo (AFROPLAST) ist die Kunststoffmesse, die vom 9. bis 12. Januar 2027 im Egypt International Exhibition Center in Neu-Kairo stattfindet. Veranstalter ist Vision Fairs.",
+      "sections": [
+        {
+          "h": "Produktgruppen",
+          "p": "Die Messe deckt die Kunststoff-, Kautschuk- und Vliesstoffindustrie ab, mit Schwerpunkt auf Kunststofftechnologien. Auf der Website des Veranstalters sind außerdem ein Buyer-Programm und Länderpavillons aufgeführt."
+        },
+        {
+          "h": "Termine und Besucher",
+          "p": "Die Messe läuft vom 9. bis 12. Januar 2027 im EIEC in Neu-Kairo und belegt vier Hallen. Der Veranstalter beschreibt sie als strategische B2B-Messe für Fachbesucher, Einkäufer, Distributoren und Entscheider aus Ägypten, der MENA-Region und Afrika. Besucherregistrierung und Besucherprofil stehen auf der offiziellen Website."
+        },
+        {
+          "h": "Als Aussteller auf der Afro Plast Expo",
+          "p": "Die Website bietet einen Link Book Your Stand, ein Ausstellerprofil, eine Broschüre und den Nachbericht der letzten Ausgabe; die Anmeldeschritte sind nicht näher beschrieben, daher sollte der Veranstalter kontaktiert werden. Auf Maschinen- und Rohstoffmessen zeigt der Stand die laufende Maschine oder Reihen von Musterprodukten: Maschinengewicht, Strombedarf, Bodenlast und Aufbaugenehmigungen sollten früh geklärt werden."
+        }
+      ]
+    }
   }
 ]

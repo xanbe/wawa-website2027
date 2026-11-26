@@ -63,5 +63,15 @@
     "slug": "china-homelife-dubai",
     "reason": "chinahomelife.ae tradechina.com'a 301 ile yönleniyor; farklı alan adı, doğrulanmış bilgi yok",
     "date": "2026-11-26"
+  },
+  {
+    "slug": "ihtisas-cami-yapi-ekipmanlari-fuari",
+    "reason": "proaktiffuarcilik.com yanıt vermedi (HTTP 500 / boş içerik); doğrulanabilir bilgi yok",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "mactech-egypt-and-handling-expo",
+    "reason": "fuarlar.json adresi Ticaret Bakanlığı destek listesi, fuarın resmî sitesi değil; organizatör sitesi doğrulanamadı",
+    "date": "2026-11-26"
   }
 ]
