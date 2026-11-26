@@ -38,5 +38,30 @@
     "slug": "istanbul-yerel-marketler-bulusmasi-ve-fuari",
     "reason": "focusfairs.com bu fuarı anmıyor",
     "date": "2026-11-25"
+  },
+  {
+    "slug": "iraq-vortex-beauty-expo",
+    "reason": "Erbil International Fair sayfasında ürün grubu, katılım süreci ve rakam yok; ayrı site iraqvortexbeautyexpo.com okunamadı",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "tdk-deri-ve-kurk-moda-sov",
+    "reason": "Resmî sitede başlık 10–13 Aralık 2026 Antalya, gövde metni 21–24 Mayıs 2026 Belek diyor; tarih ve yer çelişkili",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "yenikapi-boat-show",
+    "reason": "artifuar.com HTTP 503 verdi",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "oil-and-gas-technology-exhibition-bagdat",
+    "reason": "Kayıtlı adres fuarın resmî sitesi değil, Ticaret Bakanlığı destek listesi",
+    "date": "2026-11-26"
+  },
+  {
+    "slug": "china-homelife-dubai",
+    "reason": "chinahomelife.ae tradechina.com'a 301 ile yönleniyor; farklı alan adı, doğrulanmış bilgi yok",
+    "date": "2026-11-26"
   }
 ]

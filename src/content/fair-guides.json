@@ -1218,5 +1218,313 @@
         }
       ]
     }
+  },
+  {
+    "name": "Oman Plast",
+    "slugs": [
+      "oman-plast"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.ocec.om/",
+      "https://ocec.om/event/10th-oman-plast-2026/"
+    ],
+    "tr": {
+      "intro": "Oman Plast, Maskat'taki Oman Convention & Exhibition Centre'de (OCEC) düzenlenen plastik, kauçuk ve petrokimya fuarıdır. 10. baskı 8–10 Aralık 2026 tarihlerinde, her gün 10:00–18:00 saatleri arasında açık.",
+      "sections": [
+        {
+          "h": "Oman Plast'te hangi ürünler sergileniyor?",
+          "p": "Fuarın kapsamı plastik, kauçuk, petrokimya, kimyasallar, gübreler, plastik geri dönüşümü, baskı ve ambalajdır. Odak, plastik ve petrokimya üretiminde kullanılan en yeni teknoloji ve makineleri göstermek."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "10. Oman Plast 8–10 Aralık 2026 tarihlerinde, OCEC'in 3 numaralı sergi salonunda yapılıyor. Ziyaretçi kaydı fuarın kendi sitesi omanplast.net üzerinden alınıyor. Fuar OCEC'in etkinlik takviminde yer alıyor; aynı takvimde 8–9 Aralık için LOGISTEX de listeleniyor. Sorular için info@omanplast.net adresine yazılabiliyor."
+        },
+        {
+          "h": "Oman Plast'te stand açmak",
+          "p": "Fuara özgü başvuru adımları OCEC sayfasında yer almıyor; stand talepleri için omanplast.net'teki iletişim adreslerine yazmak gerekiyor. Makine ve ekipman fuarlarında stand, ürünün çalışır halde ya da net biçimde görülebilmesi, zemin yükü ve elektrik ihtiyacı düşünülerek planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Oman Plast is the plastics, rubber and petrochemicals exhibition held at the Oman Convention & Exhibition Centre (OCEC) in Muscat. The 10th edition runs on 8–10 December 2026, daily from 10:00 to 18:00.",
+      "sections": [
+        {
+          "h": "What is on show at Oman Plast?",
+          "p": "The show covers plastics, rubber, petrochemicals, chemicals, fertilisers, plastics recycling, printing and packaging. Its focus is the latest technology and machinery for manufacturing plastics and petrochemicals."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The 10th Oman Plast takes place on 8–10 December 2026 in Exhibition Hall 3 of OCEC. Visitor registration is handled on the show's own site, omanplast.net. The show is listed in the OCEC events calendar, where LOGISTEX is also listed for 8–9 December. Questions can be sent to info@omanplast.net."
+        },
+        {
+          "h": "Exhibiting at Oman Plast",
+          "p": "Show-specific application steps are not on the OCEC page; stand enquiries go to the contact addresses on omanplast.net. At machinery and equipment shows a stand is planned around showing the product clearly or in operation, with floor load and power supply in mind."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Oman Plast ist die Fachmesse für Kunststoff, Kautschuk und Petrochemie im Oman Convention & Exhibition Centre (OCEC) in Maskat. Die 10. Ausgabe findet vom 8. bis 10. Dezember 2026 statt, täglich von 10:00 bis 18:00 Uhr.",
+      "sections": [
+        {
+          "h": "Was wird auf der Oman Plast gezeigt?",
+          "p": "Die Messe deckt Kunststoffe, Kautschuk, Petrochemie, Chemikalien, Düngemittel, Kunststoffrecycling, Druck und Verpackung ab. Im Mittelpunkt stehen neueste Technologien und Maschinen für die Herstellung von Kunststoffen und Petrochemikalien."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die 10. Oman Plast findet vom 8. bis 10. Dezember 2026 in Ausstellungshalle 3 des OCEC statt. Die Besucherregistrierung läuft über die Messeseite omanplast.net. Die Messe steht im Veranstaltungskalender des OCEC, in dem für den 8. und 9. Dezember auch die LOGISTEX aufgeführt ist. Fragen können an info@omanplast.net gerichtet werden."
+        },
+        {
+          "h": "Als Aussteller auf der Oman Plast",
+          "p": "Messespezifische Anmeldeschritte nennt die OCEC-Seite nicht; Standanfragen gehen an die Kontaktadressen auf omanplast.net. Bei Maschinen- und Anlagenmessen wird der Stand so geplant, dass das Produkt klar oder im Betrieb zu sehen ist, mit Blick auf Bodenlast und Stromversorgung."
+        }
+      ]
+    }
+  },
+  {
+    "name": "PRI Show",
+    "slugs": [
+      "pri-show-performance-racing-industry"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.performanceracing.com/tradeshow",
+      "https://www.performanceracing.com/trade-show/exhibit",
+      "https://www.performanceracing.com/trade-show/need-to-know"
+    ],
+    "tr": {
+      "intro": "PRI Show, motorsporları sektörünün Performance Racing Industry tarafından Indianapolis'te düzenlenen fuarıdır. 2026 baskısı 10–12 Aralık tarihlerinde Indiana Convention Center'da yapılıyor; organizatör fuarı dünyanın en büyük yarış ticaret fuarı olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "PRI Show'da neler var?",
+          "p": "Sitede öne çıkan bölümler arasında atölye işleme ekipmanlarının yer aldığı Machinery Row, yarış treylerleri ve resmî PRI giyim ürünleri var. Fuarın yanında konferanslar, seminerler ve PRI Education oturumları düzenleniyor."
+        },
+        {
+          "h": "Tarihler, alan ve rakamlar",
+          "p": "Fuar 10–12 Aralık 2026 tarihlerinde Indianapolis'te. Organizatöre göre fuarda 1.100 katılımcı firma ve 40.000 katılımcı ziyaretçi bulunuyor; treylerle sergilenenler Lucas Oil Stadium sahasında yer alıyor ve stadyum kongre merkeziyle bağlantılı."
+        },
+        {
+          "h": "PRI Show'da stand açmak",
+          "p": "Stand satın alma portalı ve katılımcı kılavuzu açık. Standart doğrusal stand, ada stand, iki katlı ada stand ve treyler sergisi seçenekleri var. Stand tasarımının ve sigorta sertifikasının fuara sunulması gerekiyor; kurallar, Good Neighbor Policy ve Machinery Row yönergeleri sitede yayımlı. Halı, mobilya, elektrik, görsel-işitsel ve güvenlik hizmetleri resmî tedarikçilerden sipariş ediliyor. Yarış fuarında stand ürünün ve aracın öne çıktığı, ziyaretçi akışına açık bir yapı gerektirir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "PRI Show is the motorsports industry trade show run by Performance Racing Industry in Indianapolis. The 2026 edition takes place on 10–12 December at the Indiana Convention Center; the organiser presents it as the world's largest racing trade show.",
+      "sections": [
+        {
+          "h": "What is at the PRI Show?",
+          "p": "The site highlights Machinery Row, where race shop machining equipment is shown, racing trailers and official PRI gear. Alongside the show floor there are conferences, seminars and PRI Education sessions."
+        },
+        {
+          "h": "Dates, venue and figures",
+          "p": "The show runs on 10–12 December 2026 in Indianapolis. According to the organiser it brings together 1,100 exhibitors and 40,000 attendees; trailer exhibits are on the Lucas Oil Stadium field, which connects to the convention center."
+        },
+        {
+          "h": "Exhibiting at the PRI Show",
+          "p": "A booth purchase portal and an exhibitor kit are available. Booth formats include standard linear booths, peninsulas, two-story peninsulas and trailer exhibits. Booth design and a certificate of insurance must be submitted; regulations, a Good Neighbor Policy and Machinery Row guidelines are published. Carpet, furniture, electrical, audio-visual and security services are ordered from official vendors. At a racing show a stand needs to put the product or vehicle forward and stay open to visitor flow."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die PRI Show ist die Fachmesse der Motorsportbranche, veranstaltet von Performance Racing Industry in Indianapolis. Die Ausgabe 2026 findet vom 10. bis 12. Dezember im Indiana Convention Center statt; der Veranstalter bezeichnet sie als die weltweit größte Rennsport-Fachmesse.",
+      "sections": [
+        {
+          "h": "Was gibt es auf der PRI Show?",
+          "p": "Hervorgehoben werden die Machinery Row mit Bearbeitungsmaschinen für Rennwerkstätten, Renntrailer und offizielle PRI-Bekleidung. Neben der Ausstellung gibt es Konferenzen, Seminare und PRI-Education-Sessions."
+        },
+        {
+          "h": "Termin, Ort und Zahlen",
+          "p": "Die Messe findet vom 10. bis 12. Dezember 2026 in Indianapolis statt. Laut Veranstalter kommen 1.100 Aussteller und 40.000 Besucher zusammen; Trailer-Exponate stehen auf dem Spielfeld des Lucas Oil Stadium, das mit dem Convention Center verbunden ist."
+        },
+        {
+          "h": "Als Aussteller auf der PRI Show",
+          "p": "Ein Portal für den Standkauf und ein Ausstellerhandbuch stehen bereit. Es gibt Standardstände, Peninsula-Stände, zweistöckige Peninsulas und Trailer-Ausstellungen. Standdesign und Versicherungsnachweis sind einzureichen; Regeln, eine Good-Neighbor-Policy und Richtlinien für die Machinery Row sind veröffentlicht. Teppich, Mobiliar, Elektrik, Audio-Visuelles und Sicherheit werden bei offiziellen Dienstleistern bestellt. Auf einer Rennsportmesse muss der Stand Produkt oder Fahrzeug in den Vordergrund stellen und für den Besucherfluss offen bleiben."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Gulf 4P",
+    "slugs": [
+      "gulf-4p"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.gulf4p.com/"
+    ],
+    "tr": {
+      "intro": "Gulf 4P, Suudi Arabistan'ın Dammam kentinde plastik, baskı, ambalaj ve petrokimya sektörlerine yönelik B2B fuardır. Sitenin alt bölümünde tarih 14–17 Aralık 2026, yer Dhahran International Exhibition Centre olarak veriliyor.",
+      "sections": [
+        {
+          "h": "Gulf 4P'de hangi ürünler sergileniyor?",
+          "p": "Fuar plastik, baskı, ambalaj ve petrokimya ürünlerini kapsıyor. Organizatör fuarı en yeni ürün, teknoloji ve yeniliklerin gösterildiği bir B2B platformu olarak anlatıyor."
+        },
+        {
+          "h": "Tarihler, alan ve eş zamanlı fuarlar",
+          "p": "Fuar Dammam'daki Dhahran International Exhibition Centre'da 14–17 Aralık 2026 tarihlerinde; sayfa başlığındaki yıl bilgisi farklı olduğundan tarihleri resmî siteden teyit edin. Aynı sırada CIDEX ve Mach & Tools Saudi de düzenleniyor. Site, Suudi Arabistan'ın GCC petrokimya kapasitesinin yüzde 67'sinden fazlasına sahip olduğunu ve ambalaj ile baskı sektörlerinin yıllık yüzde 12 büyüdüğünü belirtiyor."
+        },
+        {
+          "h": "Gulf 4P'de stand açmak",
+          "p": "Sitede Book a Stand sayfası ve stand talep formu var; Why Exhibit sayfası katılım gerekçelerini anlatıyor. Fuar için ayrıca konuşmacı ve ortaklık başvuruları açık. Ambalaj ve baskı fuarlarında stand, örnek ürünlerin elle incelenebildiği, kısa toplantılara uygun bir yapı olarak kurulur."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Gulf 4P is a B2B exhibition for the plastics, printing, packaging and petrochemicals industries in Dammam, Saudi Arabia. The footer of the site gives 14–17 December 2026 at the Dhahran International Exhibition Centre.",
+      "sections": [
+        {
+          "h": "What is on show at Gulf 4P?",
+          "p": "The show covers plastics, printing, packaging and petrochemicals. The organiser describes it as a B2B platform to showcase the latest products, technologies and innovations."
+        },
+        {
+          "h": "Dates, venue and co-located shows",
+          "p": "The show takes place at the Dhahran International Exhibition Centre in Dammam on 14–17 December 2026; as the year in the page header differs, confirm the dates on the official site. CIDEX and Mach & Tools Saudi run alongside it. The site states that Saudi Arabia holds more than 67 percent of total GCC petrochemicals capacity and that packaging and printing are growing at 12 percent a year."
+        },
+        {
+          "h": "Exhibiting at Gulf 4P",
+          "p": "The site has a Book a Stand page and a stand enquiry form, and a Why Exhibit page explains the case for taking part. Speaker and partnership applications are open as well. At packaging and printing shows a stand is built so that sample products can be handled and short meetings can take place."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Gulf 4P ist eine B2B-Messe für Kunststoff, Druck, Verpackung und Petrochemie in Dammam, Saudi-Arabien. Laut Fußzeile der Website findet sie vom 14. bis 17. Dezember 2026 im Dhahran International Exhibition Centre statt.",
+      "sections": [
+        {
+          "h": "Was wird auf der Gulf 4P gezeigt?",
+          "p": "Die Messe deckt Kunststoffe, Druck, Verpackung und Petrochemie ab. Der Veranstalter beschreibt sie als B2B-Plattform für neueste Produkte, Technologien und Innovationen."
+        },
+        {
+          "h": "Termin, Ort und parallele Messen",
+          "p": "Die Messe findet vom 14. bis 17. Dezember 2026 im Dhahran International Exhibition Centre in Dammam statt; da das Jahr im Seitenkopf abweicht, sollten die Termine auf der offiziellen Seite bestätigt werden. Parallel laufen CIDEX und Mach & Tools Saudi. Die Seite nennt, dass Saudi-Arabien über 67 Prozent der petrochemischen Kapazität des GCC hält und Verpackung sowie Druck jährlich um 12 Prozent wachsen."
+        },
+        {
+          "h": "Als Aussteller auf der Gulf 4P",
+          "p": "Die Website bietet eine Seite zur Standbuchung und ein Anfrageformular; die Seite Why Exhibit erläutert die Gründe zur Teilnahme. Auch Bewerbungen als Redner und Partner sind offen. Auf Verpackungs- und Druckmessen wird der Stand so gebaut, dass Muster in die Hand genommen werden können und kurze Gespräche möglich sind."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Mach & Tools Saudi",
+    "slugs": [
+      "mach-and-tools-saudi"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.machntools.com/"
+    ],
+    "tr": {
+      "intro": "Mach & Tools Saudi, Dammam'da sanayi makineleri, takımlar ve ekipmanlar için düzenlenen B2B fuardır. Organizatör MIE Events – DMCC; sitenin alt bölümünde tarih 14–17 Aralık 2026, yer Dhahran International Exhibition Centre.",
+      "sections": [
+        {
+          "h": "Mach & Tools Saudi'de hangi alanlar var?",
+          "p": "Ana sektörler imalat ekipmanları, teknoloji ve otomasyon, sanayi makineleri, güvenlik ve kalitedir. Fuar sanayicilere, üreticilere, acentelere ve distribütörlere hitap ediyor ve katılımcıların Suudi pazarına ulaşmasını hedefliyor."
+        },
+        {
+          "h": "Tarihler ve eş zamanlı fuar",
+          "p": "Fuar 14–17 Aralık 2026 tarihlerinde; sayfa başlığında farklı bir yıl geçtiğinden tarihleri resmî siteden teyit edin. Gulf 4P aynı sırada, aynı yerde düzenleniyor. Stratejik ortak olarak International Trade Council listeleniyor; ortaklar arasında Türkiye Ticaret Bakanlığı da yer alıyor."
+        },
+        {
+          "h": "Mach & Tools Saudi'de stand açmak",
+          "p": "Sitede Book a Stand ve Exhibiting Enquiry formları, Why Exhibit sayfası ve katılımcı ürün profili bölümü var. Makine ve takım fuarında stand, ürünün çalışır halde gösterilmesi, zemin yükü ve elektrik ihtiyacı ile görüşme alanı birlikte planlanarak kurulur."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Mach & Tools Saudi is a B2B exhibition for industrial machinery, tools and equipment in Dammam. The organiser is MIE Events – DMCC; the footer of the site gives 14–17 December 2026 at the Dhahran International Exhibition Centre.",
+      "sections": [
+        {
+          "h": "What sectors does Mach & Tools Saudi cover?",
+          "p": "The key sectors are manufacturing equipment, technology and automation, industrial machinery, and safety and quality. The show addresses industrialists, manufacturers, agents and distributors and aims to help exhibitors reach the Saudi market."
+        },
+        {
+          "h": "Dates and co-located show",
+          "p": "The show runs on 14–17 December 2026; as the page header shows a different year, confirm the dates on the official site. Gulf 4P takes place at the same time and place. The International Trade Council is listed as strategic partner, and the partners include Turkey's Ministry of Trade."
+        },
+        {
+          "h": "Exhibiting at Mach & Tools Saudi",
+          "p": "The site offers Book a Stand and Exhibiting Enquiry forms, a Why Exhibit page and an exhibits profile section. At a machinery and tools show a stand is planned around running demonstrations, floor load and power supply, and a meeting area."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Mach & Tools Saudi ist eine B2B-Messe für Industriemaschinen, Werkzeuge und Ausrüstung in Dammam. Veranstalter ist MIE Events – DMCC; laut Fußzeile der Website findet sie vom 14. bis 17. Dezember 2026 im Dhahran International Exhibition Centre statt.",
+      "sections": [
+        {
+          "h": "Welche Bereiche deckt die Mach & Tools Saudi ab?",
+          "p": "Die Kernsektoren sind Fertigungsausrüstung, Technologie und Automation, Industriemaschinen sowie Sicherheit und Qualität. Die Messe richtet sich an Industrielle, Hersteller, Agenten und Distributoren und will Ausstellern den Zugang zum saudischen Markt erleichtern."
+        },
+        {
+          "h": "Termin und parallele Messe",
+          "p": "Die Messe findet vom 14. bis 17. Dezember 2026 statt; da der Seitenkopf ein anderes Jahr nennt, sollten die Termine auf der offiziellen Seite bestätigt werden. Die Gulf 4P läuft zeitgleich am selben Ort. Der International Trade Council ist als strategischer Partner genannt; unter den Partnern ist auch das türkische Handelsministerium."
+        },
+        {
+          "h": "Als Aussteller auf der Mach & Tools Saudi",
+          "p": "Die Website bietet Formulare zur Standbuchung und für Ausstellerfragen, die Seite Why Exhibit und einen Bereich zum Ausstellerprofil. Auf einer Maschinen- und Werkzeugmesse wird der Stand um laufende Vorführungen, Bodenlast und Stromversorgung sowie einen Besprechungsbereich geplant."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Worldfood İstanbul",
+    "slugs": [
+      "worldfood-istanbul"
+    ],
+    "updated": "2026-11-26",
+    "sources": [
+      "https://www.worldfood-istanbul.com"
+    ],
+    "tr": {
+      "intro": "Worldfood İstanbul, ICA Events'in İstanbul Fuar Merkezi'nde (IFM) düzenlediği uluslararası gıda ürünleri ve teknolojileri fuarıdır. 2026 baskısı 15–18 Aralık tarihlerinde; organizasyon TOBB gözetiminde yapılıyor ve Ticaret Bakanlığı ile Tarım ve Orman Bakanlığı destekliyor.",
+      "sections": [
+        {
+          "h": "Worldfood İstanbul'da neler sergileniyor?",
+          "p": "Fuar gıda ürünlerini ve gıda teknolojilerini kapsıyor. Yeni FoodTech ürün grubu gıda işleme ve ambalaj teknolojilerini topluyor; Food Tech Garage ve yenilikçi ürünler alanı da var. Ürün kategorileri ve ürün rehberi sitede ayrı sayfalarda."
+        },
+        {
+          "h": "Ziyaretçi profili ve rakamlar",
+          "p": "Fuar ticari ziyaretçilere yönelik: ithalatçılar, distribütörler, perakende zincirleri, üreticiler, toptancılar, süpermarketler ve HoReCa. Organizatöre göre 2025 baskısında 153 ülkeden 78.341 ziyaretçi, 3.125 marka ve 39.000'den fazla B2B görüşme vardı. Hosted Buyer, Key Buyer ve ICA Connect eşleştirme programları yürütülüyor."
+        },
+        {
+          "h": "Worldfood İstanbul'da stand açmak",
+          "p": "Why Exhibit sayfasından sonra Book a Stand ile başvuru yapılıyor; kayıtlı katılımcılar için katılımcı portalı ve araçlar var, 2026 katılımcı listesi yayında. Gıda fuarında stand, ürünün sunulduğu ve tadımın yapılabildiği, alıcı görüşmelerine uygun bir düzen ister; B2B görüşme yoğunluğu nedeniyle kapalı ya da yarı kapalı görüşme alanı önem taşır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Worldfood Istanbul is the international food products and technologies exhibition organised by ICA Events at the Istanbul Expo Center (IFM). The 2026 edition runs on 15–18 December, under the supervision of TOBB and supported by Türkiye's Ministry of Trade and Ministry of Agriculture and Forestry.",
+      "sections": [
+        {
+          "h": "What is on show at Worldfood Istanbul?",
+          "p": "The show covers food products and food technologies. A new FoodTech product group brings together food processing and packaging technologies, and there is a Food Tech Garage and an innovative products area. Product categories and a product directory have their own pages on the site."
+        },
+        {
+          "h": "Visitor profile and figures",
+          "p": "The show is aimed at trade visitors: importers, distributors, retail chains, manufacturers, wholesalers, supermarkets and HoReCa. According to the organiser, the 2025 edition drew 78,341 visitors from 153 countries, 3,125 brands and more than 39,000 B2B meetings. Hosted Buyer, Key Buyer and ICA Connect matchmaking programmes are run."
+        },
+        {
+          "h": "Exhibiting at Worldfood Istanbul",
+          "p": "Applications go through Why Exhibit and then Book a Stand; registered exhibitors have a portal and tools, and the 2026 exhibitor list is published. At a food show a stand needs a layout for presenting and tasting products and for buyer meetings; with this density of B2B meetings, a closed or semi-closed meeting area matters."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Worldfood Istanbul ist die internationale Fachmesse für Lebensmittel und Lebensmitteltechnologien, die ICA Events im Istanbul Expo Center (IFM) veranstaltet. Die Ausgabe 2026 findet vom 15. bis 18. Dezember statt, unter Aufsicht der TOBB und mit Unterstützung des türkischen Handels- sowie des Landwirtschaftsministeriums.",
+      "sections": [
+        {
+          "h": "Was wird auf der Worldfood Istanbul gezeigt?",
+          "p": "Die Messe deckt Lebensmittel und Lebensmitteltechnologien ab. Die neue Produktgruppe FoodTech bündelt Technologien für Verarbeitung und Verpackung; hinzu kommen eine Food Tech Garage und ein Bereich für innovative Produkte. Produktkategorien und ein Produktverzeichnis haben eigene Seiten."
+        },
+        {
+          "h": "Besucherprofil und Zahlen",
+          "p": "Die Messe richtet sich an Fachbesucher: Importeure, Distributoren, Handelsketten, Hersteller, Großhändler, Supermärkte und HoReCa. Laut Veranstalter kamen 2025 78.341 Besucher aus 153 Ländern, 3.125 Marken und mehr als 39.000 B2B-Gespräche zusammen. Es gibt die Matchmaking-Programme Hosted Buyer, Key Buyer und ICA Connect."
+        },
+        {
+          "h": "Als Aussteller auf der Worldfood Istanbul",
+          "p": "Die Anmeldung läuft über Why Exhibit und dann Book a Stand; registrierte Aussteller haben ein Portal mit Werkzeugen, die Ausstellerliste 2026 ist veröffentlicht. Auf einer Lebensmittelmesse braucht der Stand eine Aufteilung für Präsentation und Verkostung sowie für Einkäufergespräche; bei dieser Dichte an B2B-Terminen ist ein geschlossener oder halboffener Besprechungsbereich wichtig."
+        }
+      ]
+    }
   }
 ]
