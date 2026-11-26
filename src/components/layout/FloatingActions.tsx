@@ -1,9 +1,27 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { langFromPath } from "@/lib/i18n";
+import { contactInfo } from "./navigation";
 
-// Tek, küçük ve sakin bir WhatsApp kısayolu; hero geçildikten sonra belirir
+// Ziyaretçinin hangi sayfadan yazdığı mesaja hazır gelir (WhatsApp açılınca metin kutuda yazılı olur)
+const MSG = {
+  tr: { page: (t: string) => `Merhaba, web sitenizden yazıyorum. "${t}" sayfasını inceledim, bilgi almak istiyorum.`, home: "Merhaba, web sitenizden yazıyorum. Bilgi almak istiyorum.", label: "WhatsApp ile yazın" },
+  en: { page: (t: string) => `Hello, I am writing from your website. I looked at "${t}" and would like more information.`, home: "Hello, I am writing from your website and would like more information.", label: "Message us on WhatsApp" },
+  de: { page: (t: string) => `Hallo, ich schreibe über Ihre Website. Ich habe mir „${t}“ angesehen und hätte gern weitere Informationen.`, home: "Hallo, ich schreibe über Ihre Website und hätte gern weitere Informationen.", label: "Per WhatsApp schreiben" },
+  it: { page: (t: string) => `Buongiorno, vi scrivo dal vostro sito. Ho visto "${t}" e vorrei maggiori informazioni.`, home: "Buongiorno, vi scrivo dal vostro sito e vorrei maggiori informazioni.", label: "Scrivici su WhatsApp" },
+  fr: { page: (t: string) => `Bonjour, je vous écris depuis votre site. J'ai consulté « ${t} » et je souhaiterais plus d'informations.`, home: "Bonjour, je vous écris depuis votre site et je souhaiterais plus d'informations.", label: "Écrivez-nous sur WhatsApp" },
+};
+// Sayfa başlığından site adı ekleri atılır ("… | WAWA Interiors")
+const pageTitle = () => document.title.split(/\s[|·–-]\s/)[0].trim();
+
+// Tek, küçük ve sakin bir WhatsApp kısayolu; hero geçildikten sonra belirir, üzerine gelince WhatsApp yeşili olur
 export function FloatingActions() {
+  const pathname = usePathname() ?? "/";
+  const lang = langFromPath(pathname);
+  const m = MSG[lang];
+  const isHome = pathname === "/" || /^\/(en|de|it|fr)\/?$/.test(pathname);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -15,12 +33,17 @@ export function FloatingActions() {
 
   return (
     <a
-      href="https://wa.me/902127062832"
+      href={`${contactInfo.whatsappHref}?text=${encodeURIComponent(m.home)}`}
+      // Tıklandığı anda sayfanın başlığıyla mesaj hazırlanır
+      onClick={(e) => {
+        const t = pageTitle();
+        e.currentTarget.href = `${contactInfo.whatsappHref}?text=${encodeURIComponent(isHome || !t ? m.home : m.page(t))}`;
+      }}
       target="_blank"
       rel="noopener noreferrer"
       inert={!isVisible}
-      aria-label="WhatsApp ile yazın"
-      className={`fixed right-4 bottom-4 z-50 grid h-12 w-12 place-items-center bg-wawa-charcoal text-white transition-[opacity,translate,background-color] duration-300 hover:bg-black lg:right-6 lg:bottom-6 ${
+      aria-label={m.label}
+      className={`fixed right-4 bottom-4 z-50 grid h-12 w-12 place-items-center bg-wawa-charcoal text-white transition-[opacity,translate,background-color] duration-300 hover:bg-[#25D366] focus-visible:bg-[#25D366] lg:right-6 lg:bottom-6 ${
         isVisible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-3 opacity-0"
       }`}
     >
