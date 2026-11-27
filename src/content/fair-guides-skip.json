@@ -148,5 +148,25 @@
     "slug": "milano-home",
     "reason": "milanohome.com iki sayfada da boş içerik döndü; doğrulanabilir bilgi alınamadı",
     "date": "2026-11-27"
+  },
+  {
+    "slug": "bagdat-uluslararasi-fuari-50",
+    "reason": "Tek kaynak ticaret.gov.tr destek listesi, fuarın kendi resmî sitesi yok; rehber için yeterli bilgi yok",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "sigep-world",
+    "reason": "sigep.it WebFetch'te HTTP 403 verdi (iki sayfa); okunabilir bilgi yok",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "ahr-expo",
+    "reason": "ahrexpo.com sayfalarında organizatör, tarih, alan ve ziyaretçi bilgisi okunamadı (içerik kesik); bilgi yetersiz",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "idex",
+    "reason": "idexuae.ae WebFetch'te HTTP 403 verdi; okunabilir bilgi yok",
+    "date": "2026-11-27"
   }
 ]

@@ -4473,5 +4473,445 @@
         }
       ]
     }
+  },
+  {
+    "name": "January Furniture Show",
+    "slugs": [
+      "january-furniture-show"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://januaryfurnitureshow.com/",
+      "https://thefurnitureshows.com/"
+    ],
+    "tr": {
+      "intro": "January Furniture Show, İngiltere'nin Birmingham kentindeki NEC'de yapılan mobilya ve iç mekân ticaret fuarıdır. Organizatörün sitesi fuarı yılın ilk çeyreğindeki tek özel premium mobilya ve ev iç mekânları etkinliği olarak tanıtıyor; 2027 fuarı 37. edisyon.",
+      "sections": [
+        {
+          "h": "Fuarda hangi ürünler sergileniyor?",
+          "p": "Dört salon konuya göre ayrılmış: premium tasarım, ev-bahçe-yaşam tarzı, oturma-yemek-dolap grupları ile döşemeli mobilya ve yataklar. Organizatöre göre alıcılar perakende, kontrat, otel ve iç mimarlık projeleri için ürün tarıyor."
+        },
+        {
+          "h": "Tarih, saat ve alan",
+          "p": "Fuar 24–27 Ocak 2027 tarihlerinde NEC Birmingham'da. Pazar ve pazartesi 09.00–17.30, salı 09.00–17.30, çarşamba 09.00–16.00 arası açık."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör 2027 için 500'den fazla mobilya ve iç mekân markası, 50.000'den fazla ürün ve 20.000'den fazla nitelikli alıcı belirtiyor. Ziyaretçi kaydı ücretsiz; etkinlik programında Retail Revealed Live oturumları ve Excellence in Furniture Awards ödülleri var."
+        },
+        {
+          "h": "January Furniture Show'da stand açmak",
+          "p": "Stand talebi organizatörün sitesindeki Book a Stand formundan iletiliyor; katılımcılar EZone girişiyle hizmetlerine ulaşıyor. Mobilya fuarında stand, ürünün ölçeğini ve malzemesini gösterebilmeli: oturma grubu, yatak ve dolap örnekleri alıcının dolaşabileceği bir düzende, görüşme alanı ise koridordan ayrılmış biçimde planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "The January Furniture Show is a furniture and home interiors trade show held at the NEC in Birmingham, UK. The organiser presents it as the only dedicated premium furniture and home interiors event in the first quarter of the year; the 2027 show is the 37th edition.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "Four halls are curated by theme: premium design, home, garden and lifestyle, living, dining and cabinet furniture, and upholstery and beds. According to the organiser, buyers source for retail, contract, hospitality and interiors projects."
+        },
+        {
+          "h": "Dates, hours and venue",
+          "p": "The show runs 24–27 January 2027 at the NEC Birmingham. Hours are 9:00–17:30 on Sunday, Monday and Tuesday and 9:00–16:00 on Wednesday."
+        },
+        {
+          "h": "Who attends",
+          "p": "For 2027 the organiser lists more than 500 furniture and interiors brands, over 50,000 products and more than 20,000 qualified buyers. Visitor registration is free; the programme includes Retail Revealed Live sessions and the Excellence in Furniture Awards."
+        },
+        {
+          "h": "Exhibiting at the January Furniture Show",
+          "p": "Stand requests go through the Book a Stand form on the organiser's site, and exhibitors manage their services through the EZone login. At a furniture show a stand has to show scale and material: seating, bed and cabinet samples laid out so buyers can walk through, with a meeting area set apart from the aisle."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die January Furniture Show ist eine Fachmesse für Möbel und Wohnaccessoires im NEC Birmingham, Großbritannien. Der Veranstalter beschreibt sie als einzige dedizierte Premium-Möbelmesse im ersten Quartal; 2027 findet die 37. Ausgabe statt.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Vier Hallen sind thematisch gegliedert: Premium-Design, Wohnen, Garten und Lifestyle, Wohn-, Ess- und Schrankmöbel sowie Polstermöbel und Betten. Laut Veranstalter kaufen die Besucher für Einzelhandel, Contract, Hotellerie und Innenarchitektur ein."
+        },
+        {
+          "h": "Termin, Öffnungszeiten und Ort",
+          "p": "Die Messe findet vom 24. bis 27. Januar 2027 im NEC Birmingham statt. Geöffnet ist sonntags, montags und dienstags von 9.00 bis 17.30 Uhr, mittwochs von 9.00 bis 16.00 Uhr."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Für 2027 nennt der Veranstalter über 500 Möbel- und Interior-Marken, mehr als 50.000 Produkte und über 20.000 qualifizierte Einkäufer. Die Besucherregistrierung ist kostenfrei; im Programm laufen Retail Revealed Live und die Excellence in Furniture Awards."
+        },
+        {
+          "h": "Als Aussteller auf der January Furniture Show",
+          "p": "Standanfragen laufen über das Formular Book a Stand auf der Veranstalterseite, Aussteller verwalten ihre Leistungen über den EZone-Zugang. Auf einer Möbelmesse muss der Stand Maßstab und Material zeigen: Sitz-, Bett- und Schrankmuster begehbar angeordnet, der Besprechungsbereich vom Gang abgesetzt."
+        }
+      ]
+    }
+  },
+  {
+    "name": "WHX Labs (Medlab Middle East)",
+    "slugs": [
+      "medlab-middle-east"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.medlabme.com/en/home.html",
+      "https://www.worldhealthexpo.com/events/labs/dubai/en/home.html"
+    ],
+    "tr": {
+      "intro": "Medlab Middle East, Dubai'de yapılan laboratuvar fuarıdır; WHX Labs adıyla anılıyor ve 2027'den itibaren ayrı bir etkinlik olarak değil, World Health Expo (WHX) içinde özel bir Labs Zone olarak yer alıyor. Organizatörü Informa Markets. 2026 fuarı, WHX Labs'in 25. yıl dönümü edisyonuydu.",
+      "sections": [
+        {
+          "h": "Hangi ürünler sergileniyor?",
+          "p": "Labs Zone test, patoloji, laboratuvar teknolojisi, tanı ve bilimsel çözümlere odaklanıyor. WHX'in genel kapsamında tıbbi cihaz, ekipman, görüntüleme ve dijital sağlık da var."
+        },
+        {
+          "h": "Tarihler ve saatler",
+          "p": "Fuar 25–28 Ocak 2027 tarihlerinde. Pazartesi 11.00–18.00, salı ve çarşamba 10.00–18.00, perşembe 10.00–17.00 arası açık. Salon bilgisi sayfada Dubai Exhibition Centre, Expo City ve Dubai World Trade Centre olarak geçiyor; Labs Zone'un hangisinde olduğu için resmî siteden teyit edin."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör sağlık profesyonellerine, alıcılara, tedarikçilere ve laboratuvar yöneticilerine sesleniyor; biletler WHX üzerinden satılıyor. 2026 programında laboratuvar kalite yönetimi, kan nakli tıbbı, immünoloji ve AMR Leaders' Summit vardı."
+        },
+        {
+          "h": "WHX Labs'te stand açmak",
+          "p": "Katılımcılar sitedeki Apply for a stand veya Enquire now bağlantısıyla başvuruyor; satış tarafında ticari direktör iletişim kişisi olarak listeleniyor. Laboratuvar standında cihaz demosu ve teknik görüşme ağırlıkta olur: cihaz yerleşimi, elektrik ve su ihtiyacı kurulumdan önce standın çiziminde netleşmeli, görüşme alanı demo alanından ayrılmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Medlab Middle East is the laboratory trade show held in Dubai. It now appears as WHX Labs and, from 2027, runs as a dedicated Labs Zone inside World Health Expo (WHX) instead of a separate event. The organiser is Informa Markets; the 2026 show was the 25th-anniversary edition of WHX Labs.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The Labs Zone focuses on testing, pathology, laboratory technology, diagnostics and scientific solutions. The wider WHX offering also covers medical devices, equipment, imaging and digital health."
+        },
+        {
+          "h": "Dates and hours",
+          "p": "The show runs 25–28 January 2027: Monday 11:00–18:00, Tuesday and Wednesday 10:00–18:00, Thursday 10:00–17:00. The site lists Dubai Exhibition Centre, Expo City and Dubai World Trade Centre; check the official site for the Labs Zone location."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser addresses healthcare professionals, buyers, suppliers and laboratory leaders, and tickets are sold through WHX. The 2026 programme covered laboratory quality management, blood transfusion medicine, immunology and the AMR Leaders' Summit."
+        },
+        {
+          "h": "Exhibiting at WHX Labs",
+          "p": "Exhibitors apply through the Apply for a stand or Enquire now links, and the commercial director is listed as the sales contact. A laboratory stand leans on instrument demos and technical conversations: instrument placement, power and water needs should be settled in the stand drawing before build-up, with the meeting area kept apart from the demo area."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Medlab Middle East ist die Labormesse in Dubai. Sie firmiert als WHX Labs und läuft ab 2027 nicht mehr als eigene Veranstaltung, sondern als eigene Labs Zone innerhalb der World Health Expo (WHX). Veranstalter ist Informa Markets; 2026 war die 25. Jubiläumsausgabe von WHX Labs.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Die Labs Zone konzentriert sich auf Testverfahren, Pathologie, Labortechnik, Diagnostik und wissenschaftliche Lösungen. Das gesamte WHX-Angebot umfasst außerdem Medizinprodukte, Geräte, Bildgebung und digitale Gesundheit."
+        },
+        {
+          "h": "Termin und Öffnungszeiten",
+          "p": "Die Messe findet vom 25. bis 28. Januar 2027 statt: montags 11.00–18.00, dienstags und mittwochs 10.00–18.00, donnerstags 10.00–17.00 Uhr. Auf der Seite stehen Dubai Exhibition Centre, Expo City und Dubai World Trade Centre; den Ort der Labs Zone bitte auf der offiziellen Seite prüfen."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Der Veranstalter richtet sich an Fachleute des Gesundheitswesens, Einkäufer, Lieferanten und Laborleiter; Tickets werden über WHX verkauft. Das Programm 2026 umfasste Laborqualitätsmanagement, Transfusionsmedizin, Immunologie und den AMR Leaders' Summit."
+        },
+        {
+          "h": "Als Aussteller auf der WHX Labs",
+          "p": "Aussteller bewerben sich über die Links Apply for a stand oder Enquire now; als Vertriebskontakt ist der Commercial Director genannt. Ein Laborstand lebt von Geräte-Demos und Fachgesprächen: Geräteplatzierung sowie Strom- und Wasserbedarf sollten vor dem Aufbau in der Standzeichnung geklärt sein, der Gesprächsbereich getrennt vom Demobereich liegen."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Gift + Home Market Toronto",
+    "slugs": [
+      "gift-home-market-toronto"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://cangift.org/toronto-spring-gift-home-market"
+    ],
+    "tr": {
+      "intro": "Toronto Gift + Home Market, CanGift (Canadian Gift & Tableware Association) tarafından düzenlenen, hediyelik eşya, ev ve yaşam ürünleri toptan ticaret fuarıdır. Organizatör fuarı Kanada'nın ulusal bahar fuarı ve Kanada'nın en büyük bahar toptan ticaret pazarı olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "Hangi ürünler sergileniyor?",
+          "p": "Kategoriler: hatıra eşyası, el yapımı ürünler, ev gereçleri, ev dekorasyonu, moda, oyuncak, gurme gıda, mücevher ve genel hediyelik eşya. 2027 fuarında CFIB'nin sunduğu yeni Proudly Canadian bölümü de var."
+        },
+        {
+          "h": "Tarih, saat ve alan",
+          "p": "Fuar 24–28 Ocak 2027 tarihlerinde, Toronto Congress Centre South Building'de. Pazar–çarşamba 09.00–18.00, perşembe 09.00–13.00 arası açık."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Giriş nitelikli alıcılar için ücretsiz; fuar B2B toptan satış etkinliği. Organizatör aynı yıl için Alberta (21–23 Şubat) ve Toronto Güz (8–11 Ağustos) pazarlarını da duyuruyor."
+        },
+        {
+          "h": "Gift + Home Market'te stand açmak",
+          "p": "Stand için organizatörün katılımcı iletişim adresine başvuruluyor; sitede katılımcı el kitabı, SSS ve pazarlama araç seti yer alıyor. Toptan satış fuarında stand sipariş alma düzenine göre çizilir: ürün grupları kategoriye göre ayrılır, katalog ve numune masası girişte, görüşme alanı arka planda durur."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Toronto Gift + Home Market is a wholesale trade show for gift, home and lifestyle products, organised by CanGift (the Canadian Gift & Tableware Association). The organiser presents it as Canada's national spring show and its largest spring wholesale trade market.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "Categories include souvenirs, handmade goods, housewares, home décor, fashion, toys, gourmet food, jewellery and general gift. The 2027 show adds a new Proudly Canadian feature presented by CFIB."
+        },
+        {
+          "h": "Dates, hours and venue",
+          "p": "The show runs 24–28 January 2027 at the Toronto Congress Centre, South Building. Hours are 9:00–18:00 Sunday to Wednesday and 9:00–13:00 on Thursday."
+        },
+        {
+          "h": "Who attends",
+          "p": "Entry is free for qualified buyers; the show is a B2B wholesale event. The organiser also lists its Alberta (21–23 February) and Toronto Fall (8–11 August) markets for the same year."
+        },
+        {
+          "h": "Exhibiting at the Gift + Home Market",
+          "p": "Exhibitors apply through the organiser's exhibitor contact address, and the site provides an exhibitor manual, FAQ and marketing toolkit. At a wholesale show the stand is drawn around order writing: product groups split by category, catalogues and samples at the front, the meeting area set back."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Der Toronto Gift + Home Market ist eine Großhandelsmesse für Geschenk-, Wohn- und Lifestyle-Produkte, veranstaltet von CanGift (Canadian Gift & Tableware Association). Der Veranstalter bezeichnet sie als Kanadas nationale Frühjahrsmesse und größten Frühjahrs-Großhandelsmarkt.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Die Kategorien reichen von Souvenirs, Handgemachtem, Haushaltswaren und Wohndekoration über Mode, Spielzeug und Feinkost bis zu Schmuck und allgemeinen Geschenkartikeln. 2027 gibt es den neuen Bereich Proudly Canadian, präsentiert von CFIB."
+        },
+        {
+          "h": "Termin, Öffnungszeiten und Ort",
+          "p": "Die Messe läuft vom 24. bis 28. Januar 2027 im Toronto Congress Centre, South Building. Geöffnet ist sonntags bis mittwochs 9.00–18.00 Uhr, donnerstags 9.00–13.00 Uhr."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Der Eintritt ist für qualifizierte Einkäufer kostenlos; die Messe ist eine B2B-Großhandelsveranstaltung. Der Veranstalter kündigt für dasselbe Jahr auch die Märkte Alberta (21.–23. Februar) und Toronto Fall (8.–11. August) an."
+        },
+        {
+          "h": "Als Aussteller auf dem Gift + Home Market",
+          "p": "Aussteller melden sich über die Kontaktadresse des Veranstalters; die Seite bietet Ausstellerhandbuch, FAQ und Marketing-Toolkit. Auf einer Großhandelsmesse wird der Stand um das Ordern herum geplant: Produktgruppen nach Kategorie, Kataloge und Muster vorn, der Besprechungsbereich dahinter."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Toronto Market Week",
+    "slugs": [
+      "toronto-market-week"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.torontomarketweek.ca/"
+    ],
+    "tr": {
+      "intro": "Toronto Market Week, Kanada'nın toptan alım etkinliği olarak tanıtılıyor: perakendeciler gelecek sezonun ürünlerini, markalarını ve tedarikçilerini burada buluyor. Fuar salonları Mississauga'daki The International Centre'da.",
+      "sections": [
+        {
+          "h": "Hangi ürünler sergileniyor?",
+          "p": "Kategoriler: hediyelik eşya, ev, yaşam tarzı, oyuncak, moda ve aksesuar. Fuar salonlarına ek olarak Show T.O. Showrooms adlı showroom etkinliği paralel yürüyor."
+        },
+        {
+          "h": "Tarihler ve alan",
+          "p": "Ocak 2027'de fuar salonları 23–26 Ocak, Show T.O. showroomları 21–28 Ocak tarihlerinde (28 Ocak yalnızca bazı showroomlar için). Fuar salonları The International Centre, 6900 Airport Road, Mississauga'da. Yaz 2027 için Toronto Market Week 8–10 Ağustos, showroomlar 5–11 Ağustos olarak duyuruldu."
+        },
+        {
+          "h": "Ölçek",
+          "p": "Organizatörün 2027 sayfası 1.000'den fazla marka, 400'den fazla katılımcı, 45'ten fazla showroom ve 415.000 fit kareden fazla alan belirtiyor."
+        },
+        {
+          "h": "Toronto Market Week'te stand açmak",
+          "p": "Sitede Buy Exhibit Space, Why Exhibit ve Exhibitor Manual bağlantıları var; stand alanı bu sayfalardan talep ediliyor. Perakendeci alıcıya hitap eden bir standda ürünler sezon koleksiyonuna göre gruplanır, fiyat ve sipariş görüşmesi için kapalı bir masa ayrılır; fiyatları uzaktan okunur tutmak ve numuneyi dokunulabilir sergilemek alıcının işini kolaylaştırır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Toronto Market Week is presented as Canada's wholesale buying event, where retailers source the products, brands and suppliers for the next retail season. The exhibit halls are at The International Centre in Mississauga.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "Categories are gift, home, lifestyle, toys, and fashion and accessories. Show T.O. Showrooms run alongside the exhibit halls."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "In January 2027 the exhibit halls run 23–26 January and the Show T.O. Showrooms 21–28 January (28 January for select showrooms only). The halls are at The International Centre, 6900 Airport Road, Mississauga. The summer 2027 dates announced are 8–10 August for Toronto Market Week and 5–11 August for the showrooms."
+        },
+        {
+          "h": "Scale",
+          "p": "The organiser's 2027 page lists more than 1,000 brands, more than 400 exhibitors, more than 45 showrooms and over 415,000 square feet."
+        },
+        {
+          "h": "Exhibiting at Toronto Market Week",
+          "p": "The site links to Buy Exhibit Space, Why Exhibit and an Exhibitor Manual, and stand space is requested through those pages. A stand aimed at retail buyers groups product by seasonal collection and keeps an enclosed table for pricing and order talks; legible pricing and samples buyers can handle make their work easier."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Toronto Market Week wird als Kanadas Großhandelsveranstaltung beschrieben, auf der Einzelhändler Produkte, Marken und Lieferanten für die nächste Saison finden. Die Messehallen liegen im The International Centre in Mississauga.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Die Kategorien sind Geschenk, Wohnen, Lifestyle, Spielzeug sowie Mode und Accessoires. Parallel zu den Messehallen laufen die Show T.O. Showrooms."
+        },
+        {
+          "h": "Termin und Ort",
+          "p": "Im Januar 2027 sind die Messehallen vom 23. bis 26. Januar geöffnet, die Show T.O. Showrooms vom 21. bis 28. Januar (der 28. nur für ausgewählte Showrooms). Die Hallen befinden sich im The International Centre, 6900 Airport Road, Mississauga. Für den Sommer 2027 sind der 8.–10. August (Market Week) und der 5.–11. August (Showrooms) angekündigt."
+        },
+        {
+          "h": "Größe",
+          "p": "Die Seite des Veranstalters nennt für 2027 mehr als 1.000 Marken, über 400 Aussteller, mehr als 45 Showrooms und über 415.000 Quadratfuß Fläche."
+        },
+        {
+          "h": "Als Aussteller auf der Toronto Market Week",
+          "p": "Die Seite verlinkt Buy Exhibit Space, Why Exhibit und ein Ausstellerhandbuch; Standfläche wird darüber angefragt. Ein Stand für Einzelhandelseinkäufer gruppiert die Ware nach Saisonkollektion und hält einen geschlossenen Tisch für Preis- und Bestellgespräche bereit; gut lesbare Preise und anfassbare Muster erleichtern den Einkauf."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Las Vegas Market",
+    "slugs": [
+      "las-vegas-market-winter"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.lasvegasmarket.com/"
+    ],
+    "tr": {
+      "intro": "Las Vegas Market, mobilya, ev dekorasyonu ve hediyelik eşya alanında yılda iki kez yapılan toptan ticaret pazarıdır; sitede Batı Yakası'nın önde gelen toptan pazarı olarak tanıtılıyor. Alıcılar arasında perakendeciler ve iç mimarlar sayılıyor.",
+      "sections": [
+        {
+          "h": "Hangi ürünler sergileniyor?",
+          "p": "Kapsam mobilya, ev dekorasyonu ve hediyelik eşya. Sitedeki First Finds bölümü yeni ürünleri ve yeni çıkan markaları öne çıkarıyor."
+        },
+        {
+          "h": "Tarihler ve alan",
+          "p": "Kış 2027 pazarı 24–28 Ocak 2027 tarihlerinde. Organizatör, dört binadan oluşan bir kampüste kalıcı ve geçici koleksiyonlarda 3.500'den fazla marka olduğunu belirtiyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Site, dünyanın dört yanından binlerce katılımcıdan söz ediyor; bunlar arasında perakendeciler ve iç mimarlar var. Halka açıklık durumu sitede belirtilmemiş olduğundan katılım koşulları için kayıt sayfasına bakın."
+        },
+        {
+          "h": "Las Vegas Market'te stand açmak",
+          "p": "Katılımcı süreci sitedeki I'm Ready bağlantısıyla başlıyor; organizatör hedefe ve hedef müşteriye uygun bir yerleşim için katılımcıyla çalışıyor. Mobilya ve ev dekorasyonu showroomunda stand, bir mağaza katı gibi okunmalı: kombinler gerçek yaşam senaryosuyla kurulur, aydınlatma ve zemin malzemesi ürünün renk ve dokusunu bozmayacak biçimde seçilir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Las Vegas Market is a wholesale trade market for furniture, home décor and gift held twice a year. The organiser calls it the premier West Coast marketplace bringing wholesale buyers and sellers together; attendees include retailers and interior designers.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The market covers furniture, home décor and gift. The First Finds section highlights new products and emerging brands."
+        },
+        {
+          "h": "Dates and campus",
+          "p": "The winter 2027 market runs 24–28 January 2027. The organiser states that more than 3,500 brands, in permanent and temporary collections, are spread over a four-building campus."
+        },
+        {
+          "h": "Who attends",
+          "p": "The site speaks of thousands of attendees from around the world, including retailers and interior designers. It does not say whether the public may attend, so check the registration page for admission rules."
+        },
+        {
+          "h": "Exhibiting at Las Vegas Market",
+          "p": "The exhibitor process starts with the I'm Ready link, and the organiser works with each exhibitor on a location suited to their goals and target customer. A furniture or décor showroom should read like a store floor: groupings built around real living scenarios, with lighting and flooring chosen so colour and texture are not distorted."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Der Las Vegas Market ist ein zweimal jährlich stattfindender Großhandelsmarkt für Möbel, Wohndekoration und Geschenkartikel. Der Veranstalter bezeichnet ihn als führenden Marktplatz der Westküste für Großhandelskäufer und -verkäufer; zu den Besuchern zählen Einzelhändler und Innenarchitekten.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Der Markt umfasst Möbel, Wohndekoration und Geschenkartikel. Der Bereich First Finds hebt neue Produkte und aufstrebende Marken hervor."
+        },
+        {
+          "h": "Termin und Gelände",
+          "p": "Der Wintermarkt 2027 findet vom 24. bis 28. Januar 2027 statt. Laut Veranstalter verteilen sich über 3.500 Marken in dauerhaften und temporären Kollektionen auf einen Campus aus vier Gebäuden."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Die Seite spricht von Tausenden Teilnehmern aus aller Welt, darunter Einzelhändler und Innenarchitekten. Ob die Öffentlichkeit Zutritt hat, ist nicht angegeben; die Zugangsregeln bitte auf der Registrierungsseite prüfen."
+        },
+        {
+          "h": "Als Aussteller auf dem Las Vegas Market",
+          "p": "Der Ausstellerprozess beginnt über den Link I'm Ready; der Veranstalter sucht gemeinsam mit dem Aussteller einen Standort passend zu Ziel und Zielkunde. Ein Möbel- oder Dekoshowroom sollte wie eine Verkaufsfläche wirken: Gruppen nach echten Wohnszenarien, Licht und Boden so gewählt, dass Farbe und Textur nicht verfälscht werden."
+        }
+      ]
+    }
+  },
+  {
+    "name": "boot Düsseldorf",
+    "slugs": [
+      "boot-dusseldorf"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.boot.com/"
+    ],
+    "tr": {
+      "intro": "boot Düsseldorf, organizatörün sitesinde dünyanın en büyük yat ve su sporları fuarı olarak tanıtılıyor. Organizatör Messe Düsseldorf; yelken, motorlu tekne ve dalış, sörf, kano gibi su sporlarını kapsıyor. Fuar bilet satışıyla halka, ayrı bir kayıtla da sektör ziyaretçilerine açık.",
+      "sections": [
+        {
+          "h": "Hangi ürünler sergileniyor?",
+          "p": "Sitede 16 konu başlığı sayılıyor: tekneler ve yatlar, motorlar ve donanım, yat ekipmanları ve aksesuarlar, hizmetler, kano ve kürek tekneleri, su kayağı ve wakeboard, jet ski, dalış, sörf ve kitesurf, balıkçılık, denizcilik sanatı, kuruluşlar ve kulüpler, marinalar, su sporu turizmi ve charter, lüks oyuncaklar ile doğa ve okyanus koruma."
+        },
+        {
+          "h": "Alan ve ölçek",
+          "p": "Düsseldorf'ta 15 salonda 210.000 m² alan kullanılıyor. Organizatör 110'dan fazla ülkeden 200.000'den fazla ziyaretçi ve 68 ülkeden yaklaşık 1.500 katılımcıdan söz ediyor; bu rakamların yılı sayfada belirtilmemiş. Tarihler için resmî siteyi kontrol edin. Aynı organizatörün CARAVAN SALON DÜSSELDORF fuarı paralel etkinlik olarak listeleniyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Site bilet mağazası ve ayrı bir ticari ziyaretçi alanı sunuyor; ticari ziyaretçiler kayıt bağlantısıyla başvuruyor."
+        },
+        {
+          "h": "boot Düsseldorf'ta stand açmak",
+          "p": "Katılım için çevrimiçi kayıt, katılımcı rehberi, stand maliyet hesaplayıcısı, kontrol listesi, çevrimiçi sipariş sistemi, katılımcı paneli ve stand yapım bilgileri sitede toplanmış. Tekne ve yat sergisinde stand ölçüsü ürüne göre belirlenir: tekne salonda ise zemin yükü ve giriş ölçüleri, aksesuar ve ekipman standında ise raf ve demo düzeni önce çizilir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "boot Düsseldorf is presented on the organiser's site as the world's largest yacht and watersports show. It is organised by Messe Düsseldorf and covers sailing, motor boating and watersports such as diving, surfing and canoeing. Tickets are sold to the public, and trade visitors have a separate registration.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The site lists 16 focus topics: boats and yachts, engines and related equipment, yachting equipment and accessories, services, canoes, kayaks and rowing boats, waterskiing and wakeboarding, jet skiing, diving, surfing, windsurfing and kitesurfing, fishing, maritime art and handicraft, organisations and clubs, marinas, watersport tourism and charter, luxury toys, and nature conservation and ocean protection."
+        },
+        {
+          "h": "Venue and scale",
+          "p": "The show uses 15 halls and 210,000 m² in Düsseldorf. The organiser cites more than 200,000 visitors from over 110 countries and about 1,500 exhibitors from 68 nations; the page does not give the year for these figures. Check the official site for dates. CARAVAN SALON DÜSSELDORF, from the same organiser, is listed as a parallel event."
+        },
+        {
+          "h": "Who attends",
+          "p": "The site offers an online ticket shop and a separate trade visitor area with a registration link."
+        },
+        {
+          "h": "Exhibiting at boot Düsseldorf",
+          "p": "The site gathers online registration, an exhibitor guide, a stand cost calculator, a checklist, the online order system, an exhibitor dashboard and stand construction information. At a boat and yacht show the stand follows the product: for boats in the hall, floor loading and entrance dimensions come first; for equipment and accessories, shelving and demo layout are drawn first."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die boot Düsseldorf wird auf der Veranstalterseite als weltgrößte Yacht- und Wassersportmesse beschrieben. Veranstalter ist die Messe Düsseldorf; die Messe deckt Segeln, Motorbootfahren und Wassersport wie Tauchen, Surfen und Kanufahren ab. Tickets werden an die Öffentlichkeit verkauft, Fachbesucher registrieren sich gesondert.",
+      "sections": [
+        {
+          "h": "Welche Produkte werden gezeigt?",
+          "p": "Die Seite nennt 16 Themenbereiche: Boote und Yachten, Motoren und Zubehör, Yachtausrüstung, Dienstleistungen, Kanus, Kajaks und Ruderboote, Wasserski und Wakeboard, Jetski, Tauchen, Surfen, Windsurfen und Kitesurfen, Angeln, maritime Kunst und Handwerk, Organisationen und Clubs, Marinas, Wassersporttourismus und Charter, Luxusspielzeug sowie Natur- und Meeresschutz."
+        },
+        {
+          "h": "Gelände und Größe",
+          "p": "Die Messe belegt 15 Hallen mit 210.000 m² in Düsseldorf. Der Veranstalter nennt über 200.000 Besucher aus mehr als 110 Ländern und rund 1.500 Aussteller aus 68 Nationen; ein Jahr für diese Zahlen gibt die Seite nicht an. Die Termine bitte auf der offiziellen Seite prüfen. Die CARAVAN SALON DÜSSELDORF desselben Veranstalters ist als Parallelveranstaltung aufgeführt."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Die Seite bietet einen Online-Ticketshop und einen eigenen Fachbesucherbereich mit Registrierungslink."
+        },
+        {
+          "h": "Als Aussteller auf der boot Düsseldorf",
+          "p": "Die Seite bündelt Online-Anmeldung, Ausstellerleitfaden, Standkostenrechner, Checkliste, Online-Bestellsystem, Ausstellerportal und Informationen zum Standbau. Auf einer Boots- und Yachtmesse richtet sich der Stand nach dem Produkt: Bei Booten in der Halle stehen Bodenlast und Einbringmaße am Anfang, bei Ausrüstung und Zubehör Regalsystem und Demo-Layout."
+        }
+      ]
+    }
   }
 ]
