@@ -128,5 +128,15 @@
     "slug": "content-americas",
     "reason": "Resmî site yok; yalnız İTO sayfası var, fuarın ne olduğu/organizatörü/ziyaretçisi belirtilmiyor",
     "date": "2026-11-27"
+  },
+  {
+    "slug": "intermoda-ayakkabi-fuari",
+    "reason": "intermodashoes.com ana sayfası fuarın ileri bir tarihe ertelendiğini yazıyor, tarih ve rakam yok; yeterli doğrulanmış bilgi yok.",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "modexpo-hazir-giyim-ve-tekstil-fuari",
+    "reason": "akort.com ana sayfasında Modexpo Ocak 2027 için tarih, alan ya da katılım bilgisi yok; yeterli doğrulanmış bilgi yok.",
+    "date": "2026-11-27"
   }
 ]

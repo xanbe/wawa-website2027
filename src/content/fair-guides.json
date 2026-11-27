@@ -3374,5 +3374,589 @@
         }
       ]
     }
+  },
+  {
+    "name": "HOGA Nürnberg",
+    "slugs": [
+      "hoga-nurnberg"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.hoga-messe.de/de/"
+    ],
+    "tr": {
+      "intro": "HOGA Nürnberg, otelcilik, gastronomi ve endüstriyel mutfak sektörüne yönelik bir uzman fuarıdır. İlk kez 1950'de düzenlenen fuar iki yılda bir yapılıyor; organizatör AFAG Messen und Ausstellungen GmbH, ana ortak DEHOGA.",
+      "sections": [
+        {
+          "h": "HOGA'da hangi ürünler sergileniyor?",
+          "p": "Fuar yiyecek ve içecek, konukseverlik, iç mekân, mutfak teknolojisi, dijitalleşme ve hizmetler alanlarını kapsıyor. Organizatör alkolsüz içecekleri ve spirit grubunu güncel eğilimler arasında gösteriyor. Programda uzman bilgisi, atölyeler, sunumlar ve yemek gösterileri, ayrıca Gastro Innovation Award 2027 yarışması ve HOGA-Connect kariyer fuarı yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 17–19 Ocak 2027 tarihlerinde, pazar gününden salıya, Messe Nürnberg'de yapılacak. Ziyaret saatleri 10.00–18.00, son giriş 17.00. FOOD SPECIAL alanı 2025 bilgisine göre 3A salonunda yer alıyordu."
+        },
+        {
+          "h": "Katılım rakamları",
+          "p": "Organizatöre göre 2025 fuarında yaklaşık 520 katılımcı, yaklaşık 30.000 m² brüt alan ve üç günde yaklaşık 16.600 uzman ziyaretçi vardı."
+        },
+        {
+          "h": "HOGA'da stand açmak",
+          "p": "Katılımcı bölümü sitenin /de/aussteller sayfasında; müşteri hizmetlerine kundenbetreuung@afag.de adresinden ulaşılıyor. Otel ve restoran sektöründe stand, ürünün tadılabildiği ya da gösterilebildiği bir mutfak ve sunum düzeni ister; fuar alanına göre bu düzen kurulum kurallarıyla birlikte planlanmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "HOGA Nürnberg is a trade fair for hotels, catering and commercial kitchens. First held in 1950, it takes place every two years and is organised by AFAG Messen und Ausstellungen GmbH, with DEHOGA as premium partner.",
+      "sections": [
+        {
+          "h": "What is on show at HOGA?",
+          "p": "The show covers food and beverage, hospitality, interiors, kitchen technology, digitalisation and services. The organiser highlights alcohol-free drinks and spirits as current trends. The programme includes expert talks, workshops, lectures and cooking shows, along with the Gastro Innovation Award 2027 and the HOGA-Connect career fair."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The fair runs 17–19 January 2027, Sunday to Tuesday, at Messe Nürnberg. Opening hours are 10:00–18:00 with last entry at 17:00. According to 2025 information, the FOOD SPECIAL area was in Hall 3A."
+        },
+        {
+          "h": "Figures",
+          "p": "According to the organiser, the 2025 edition had about 520 exhibitors, about 30,000 m² of gross space and about 16,600 trade visitors over three days."
+        },
+        {
+          "h": "Exhibiting at HOGA",
+          "p": "The exhibitor section is at /de/aussteller on the fair site, and customer service can be reached at kundenbetreuung@afag.de. A stand for hotels and catering works best with a kitchen and presentation layout where products can be shown or tasted; plan it together with the venue's build-up rules."
+        }
+      ]
+    },
+    "de": {
+      "intro": "HOGA Nürnberg ist die Fachmesse für Hotellerie, Gastronomie und Großküche. Die Messe fand erstmals 1950 statt, wird alle zwei Jahre veranstaltet und von der AFAG Messen und Ausstellungen GmbH organisiert; DEHOGA ist Premiumpartner.",
+      "sections": [
+        {
+          "h": "Was wird auf der HOGA gezeigt?",
+          "p": "Die Messe deckt Food & Beverage, Hospitality, Interior, Küchentechnik, Digitalisierung und Dienstleistungen ab. Alkoholfreie Getränke und Spirituosen nennt der Veranstalter als aktuelle Trends. Im Programm laufen Expertenwissen, Workshops, Vorträge und Kochshows, dazu der Gastro Innovation Award 2027 und die Karrieremesse HOGA-Connect."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die Messe findet vom 17. bis 19. Januar 2027, Sonntag bis Dienstag, im Messezentrum Nürnberg statt. Geöffnet ist von 10 bis 18 Uhr, letzter Einlass 17 Uhr. Der Bereich FOOD SPECIAL lag laut Stand 2025 in Halle 3A."
+        },
+        {
+          "h": "Zahlen",
+          "p": "Laut Veranstalter zählte die Messe 2025 rund 520 Aussteller, etwa 30.000 m² Bruttofläche und rund 16.600 Fachbesucher an drei Tagen."
+        },
+        {
+          "h": "Ausstellen auf der HOGA",
+          "p": "Der Ausstellerbereich liegt auf der Messeseite unter /de/aussteller, der Kundenservice ist unter kundenbetreuung@afag.de erreichbar. Ein Stand für Hotellerie und Gastronomie braucht eine Küchen- und Präsentationsfläche, auf der Produkte gezeigt oder verkostet werden können; sie wird zusammen mit den Aufbauregeln des Geländes geplant."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Formex",
+    "slugs": [
+      "formex"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://formex.se/"
+    ],
+    "tr": {
+      "intro": "Formex, İskandinavya'nın iç mekân ve tasarım sektörü için kendini en önemli buluşma noktası olarak tanımlayan ticaret fuarıdır. Yılda iki kez, Ocak ve Ağustos'ta Stockholmsmässan'da düzenleniyor; ticaret, ürün sergileri, trend ilhamı, sunumlar ve sergiler bir arada.",
+      "sections": [
+        {
+          "h": "Formex'te hangi ürünler sergileniyor?",
+          "p": "Fuar sekiz ürün alanından oluşuyor; sitede iç mekân, aksesuar, kâğıt ve ambalaj, çocuk ürünleri ve gurme ürünler sayılıyor. 2027 ilkbahar teması 'More of You'. Programda sunumlar ve 'More than a room' sergisi var."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Sıradaki fuarlar 19–21 Ocak 2027 ve 24–26 Ağustos 2027; ardından 18–20 Ocak 2028 ve 29–31 Ağustos 2028 geliyor. Adres Stockholmsmässan, Mässvägen 1, Älvsjö."
+        },
+        {
+          "h": "Bilet bilgisi",
+          "p": "Organizatöre göre bilet satışı 2 Kasım'da başladı, indirimli fiyatlar 2 Kasım–2 Aralık arasında geçerli. Bilet kategorileri ve açılış saatleri sitenin bilet sayfasında."
+        },
+        {
+          "h": "Formex'te stand açmak",
+          "p": "Fiyatlar ve katılım talebi sitenin 'Priser och intresseanmälan' sayfasından alınıyor; katılımcı listesi fuara kadar doluyor. Tasarım ve iç mekân fuarında stand, ürünün yaşam alanı içinde göründüğü sahneler ister; Design Talents bölümü genç tasarımcılar için ayrı bir katılım yolu."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Formex is a trade fair that presents itself as the Nordic region's most important meeting place for interiors and design. It is held twice a year, in January and August, at Stockholmsmässan, and combines trade, product showcases, trend inspiration, talks and exhibitions.",
+      "sections": [
+        {
+          "h": "What is on show at Formex?",
+          "p": "The fair has eight product areas; the site names interiors, accessories, paper and packaging, children's products and delicacies. The spring 2027 theme is 'More of You'. The programme includes talks and the 'More than a room' exhibition."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The next shows are 19–21 January 2027 and 24–26 August 2027, followed by 18–20 January 2028 and 29–31 August 2028. The address is Stockholmsmässan, Mässvägen 1, Älvsjö."
+        },
+        {
+          "h": "Tickets",
+          "p": "According to the organiser, ticket sales opened on 2 November, with discounted prices from 2 November to 2 December. Ticket categories and opening hours are on the ticket page."
+        },
+        {
+          "h": "Exhibiting at Formex",
+          "p": "Prices and expressions of interest are handled on the 'Priser och intresseanmälan' page, and the exhibitor list fills up until the fair. At a design and interiors fair a stand works best as a set of scenes in which products are seen in a living space; the Design Talents section is a separate route for young designers."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Formex ist eine Fachmesse, die sich als wichtigster Treffpunkt des Nordens für Interior und Design versteht. Sie findet zweimal im Jahr, im Januar und August, im Stockholmsmässan statt und verbindet Handel, Produktschauen, Trendinspiration, Vorträge und Ausstellungen.",
+      "sections": [
+        {
+          "h": "Was wird auf der Formex gezeigt?",
+          "p": "Die Messe hat acht Produktbereiche; auf der Website genannt werden Interior, Accessoires, Papier und Verpackung, Kinderprodukte und Delikatessen. Das Frühjahrsthema 2027 lautet „More of You“. Im Programm laufen Vorträge und die Ausstellung „More than a room“."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die nächsten Messen sind vom 19. bis 21. Januar 2027 und vom 24. bis 26. August 2027, danach vom 18. bis 20. Januar 2028 und vom 29. bis 31. August 2028. Adresse: Stockholmsmässan, Mässvägen 1, Älvsjö."
+        },
+        {
+          "h": "Tickets",
+          "p": "Laut Veranstalter begann der Ticketverkauf am 2. November, ermäßigte Preise gelten vom 2. November bis 2. Dezember. Ticketkategorien und Öffnungszeiten stehen auf der Ticketseite."
+        },
+        {
+          "h": "Ausstellen auf der Formex",
+          "p": "Preise und Interessenbekundung laufen über die Seite „Priser och intresseanmälan“, die Ausstellerliste füllt sich bis zur Messe. Auf einer Design- und Interiormesse funktioniert ein Stand als Folge von Szenen, in denen Produkte im Wohnraum zu sehen sind; der Bereich Design Talents ist ein eigener Weg für junge Gestalter."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Hyvolution Paris",
+    "slugs": [
+      "hyvolution-paris"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://paris.hyvolution.com/en"
+    ],
+    "tr": {
+      "intro": "Hyvolution Paris, hidrojen değer zincirinin üretimden son kullanım uygulamalarına kadar bütün halkalarını bir araya getiren uluslararası hidrojen fuarıdır. Sitenin alt bilgisinde GL events yer alıyor; organizatör hakkındaki bilgi sitenin organizatör sayfasında.",
+      "sections": [
+        {
+          "h": "Hyvolution'da neler var?",
+          "p": "Konferans programı teknolojiler, iş modelleri, altyapı ve politikaları kapsayan altı stratejik başlık üzerine kurulu. Sitede ana sahne, atölyeler, sponsorlar ve ortaklar, bir uygulama ve 2027 programı için ayrı sayfalar bulunuyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 19, 20 ve 21 Ocak 2027'de Paris Porte de Versailles'da yapılacak. Ziyaretçiler için rozet gerekiyor; erişim ve pratik bilgiler sitenin ilgili sayfasında."
+        },
+        {
+          "h": "Katılım rakamları",
+          "p": "Sitedeki katılımcı, profesyonel, konferans ve ülke sayaçları 2026 fuarının verilerine ait; organizatör 2027 için henüz rakam vermiyor."
+        },
+        {
+          "h": "Hyvolution'da stand açmak",
+          "p": "Katılımcı olmak için sitedeki Exhibit kayıt formu kullanılıyor; 'Why exhibit' sayfasında katılımın gerekçeleri anlatılıyor. Enerji ve teknoloji fuarında stand, ürünün çalışma mantığını yakından gösteren ve teknik görüşmeler için ayrılmış sakin bir alan ister."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Hyvolution Paris is the international hydrogen exhibition that brings together every link of the hydrogen value chain, from production to end-use applications. The site footer links to GL events, and the organiser is described on its own page.",
+      "sections": [
+        {
+          "h": "What is on at Hyvolution?",
+          "p": "The conference programme is built around six strategic tracks covering technologies, business models, infrastructure and policies. The site has separate pages for the main stage, workshops, sponsors and partners, an app and the 2027 programme."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show takes place on 19, 20 and 21 January 2027 at Paris Porte de Versailles. Visitors need a badge; access and practical information are on the site."
+        },
+        {
+          "h": "Figures",
+          "p": "The counters for exhibitors, professionals, conferences and countries on the site show data from the 2026 edition; the organiser has not published 2027 figures."
+        },
+        {
+          "h": "Exhibiting at Hyvolution",
+          "p": "Exhibitors register through the Exhibit form on the site, and the Why Exhibit page sets out the reasons to take part. At an energy and technology fair a stand works best when it shows how the product operates up close and keeps a quiet area for technical meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Hyvolution Paris ist die internationale Wasserstoffmesse, die alle Glieder der Wasserstoff-Wertschöpfungskette von der Erzeugung bis zu den Endanwendungen zusammenbringt. Im Fußbereich der Website ist GL events verlinkt; der Veranstalter wird auf einer eigenen Seite vorgestellt.",
+      "sections": [
+        {
+          "h": "Was bietet die Hyvolution?",
+          "p": "Das Konferenzprogramm ist um sechs strategische Themenfelder zu Technologien, Geschäftsmodellen, Infrastruktur und Politik aufgebaut. Die Website hat eigene Seiten für Hauptbühne, Workshops, Sponsoren und Partner, eine App und das Programm 2027."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die Messe findet am 19., 20. und 21. Januar 2027 im Paris Porte de Versailles statt. Besucher benötigen einen Badge; Anreise und praktische Hinweise stehen auf der Website."
+        },
+        {
+          "h": "Zahlen",
+          "p": "Die Zähler für Aussteller, Fachleute, Konferenzen und Länder auf der Website stammen von der Ausgabe 2026; für 2027 nennt der Veranstalter noch keine Zahlen."
+        },
+        {
+          "h": "Ausstellen auf der Hyvolution",
+          "p": "Aussteller melden sich über das Exhibit-Formular der Website an; die Seite Why Exhibit erläutert die Gründe für eine Teilnahme. Auf einer Energie- und Technologiemesse zeigt ein Stand am besten aus der Nähe, wie das Produkt arbeitet, und hält einen ruhigen Bereich für technische Gespräche frei."
+        }
+      ]
+    }
+  },
+  {
+    "name": "IIFF İstanbul Mobilya Fuarı",
+    "slugs": [
+      "iiff-istanbul-mobilya-fuari"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.tuyap.com.tr/fuarlar/istanbul-mobilya-fuari"
+    ],
+    "tr": {
+      "intro": "IIFF, Uluslararası İstanbul Mobilya Fuarı, mobilya sektörünün bütün ürün gruplarını bir araya getiriyor. Tüyap Fuarcılık A.Ş. ve MOS Fuarcılık A.Ş. tarafından düzenlenen fuar, Türk mobilyasını dünyaya tanıtmayı ve sektör profesyonelleriyle iş bağlantısı kurmayı amaçlıyor.",
+      "sections": [
+        {
+          "h": "IIFF'de hangi ürünler sergileniyor?",
+          "p": "Tüyap sayfası fuarı mobilya sektörünün tüm ürün gruplarının buluşması olarak tanıtıyor; gruplar tek tek sıralanmıyor. Tüyap'ın fuar listesinde fuar 'Mobilya, Dekorasyon ve Züccaciye' kategorisinde yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "IIFF2027, 19–23 Ocak 2027 tarihlerinde her gün 10.00–18.00 arasında yapılacak. Fuar iki salonda eş zamanlı düzenleniyor: Tüyap Fuar ve Kongre Merkezi ile İFM İstanbul Fuar Merkezi."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Tüyap sayfası 150'den fazla ülkeden profesyonelden söz ediyor. Ziyaretçi ve katılımcı kaydı için ayrı düğmeler var; ziyaretçi kaydı istanbulfurniturefair.com adresindeki formdan yapılıyor."
+        },
+        {
+          "h": "IIFF'de stand açmak",
+          "p": "Katılım 'Katılımcı olmak istiyorum' düğmesindeki başvuru formundan yapılıyor; katılımcı portalı, yerleşim planı ve stand hizmetleri Tüyap sayfasında ayrı başlıklar altında. İki salonlu bir mobilya fuarında stand, ürünün ölçeğini ve malzemesini gösteren tam boyutlu kurgular ister; yerleşim planına göre ziyaretçi akışı baştan çizilmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "IIFF, the International Istanbul Furniture Fair, brings together all product groups of the furniture sector. Organised by Tüyap Fuarcılık A.Ş. and MOS Fuarcılık A.Ş., it aims to introduce Turkish furniture to the world and to create business connections with industry professionals.",
+      "sections": [
+        {
+          "h": "What is on show at IIFF?",
+          "p": "The Tüyap page describes the fair as a meeting of all furniture product groups without listing them one by one. In Tüyap's fair list it appears under the category 'Furniture, Decoration and Tableware'."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "IIFF2027 runs 19–23 January 2027, daily from 10:00 to 18:00. The fair is held in two halls at the same time: the Tüyap Fair and Congress Center and the İFM Istanbul Expo Center."
+        },
+        {
+          "h": "Who attends",
+          "p": "The Tüyap page mentions professionals from more than 150 countries. Visitors and exhibitors register through separate buttons; visitor registration is on the istanbulfurniturefair.com form."
+        },
+        {
+          "h": "Exhibiting at IIFF",
+          "p": "Exhibitors apply through the 'I want to exhibit' form. The exhibitor portal, floor plan and stand services have their own sections on the Tüyap page. At a furniture fair across two venues a stand needs full-size room settings that show the scale and material of each piece, and the visitor flow should be drawn from the floor plan first."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die IIFF, die Internationale Istanbuler Möbelmesse, bringt alle Produktgruppen der Möbelbranche zusammen. Veranstaltet von Tüyap Fuarcılık A.Ş. und MOS Fuarcılık A.Ş., will sie türkische Möbel in der Welt bekannt machen und Geschäftskontakte zu Branchenprofis ermöglichen.",
+      "sections": [
+        {
+          "h": "Was wird auf der IIFF gezeigt?",
+          "p": "Die Tüyap-Seite beschreibt die Messe als Treffen aller Produktgruppen der Möbelbranche, ohne sie einzeln aufzuführen. In der Messeliste von Tüyap steht sie in der Kategorie „Möbel, Dekoration und Haushaltswaren“."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die IIFF2027 findet vom 19. bis 23. Januar 2027 täglich von 10 bis 18 Uhr statt. Die Messe läuft gleichzeitig in zwei Hallen: im Tüyap Messe- und Kongresszentrum und im İFM Istanbul Messezentrum."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Die Tüyap-Seite nennt Fachleute aus mehr als 150 Ländern. Besucher und Aussteller registrieren sich über getrennte Schaltflächen; die Besucherregistrierung läuft über das Formular auf istanbulfurniturefair.com."
+        },
+        {
+          "h": "Ausstellen auf der IIFF",
+          "p": "Die Anmeldung erfolgt über das Formular „Katılımcı olmak istiyorum“ (Ich möchte ausstellen). Ausstellerportal, Hallenplan und Standservices haben auf der Tüyap-Seite eigene Abschnitte. Auf einer Möbelmesse mit zwei Standorten braucht ein Stand Räume in Originalgröße, die Maßstab und Material zeigen; der Besucherfluss wird zuerst anhand des Hallenplans gezeichnet."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Intermoda",
+    "slugs": [
+      "intermoda"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.intermoda.com.mx/"
+    ],
+    "tr": {
+      "intro": "Intermoda, Latin Amerika'nın en büyük moda iş fuarı olarak tanıtılan, Guadalajara'da yılda iki kez yapılan bir fuardır. Sitede 86. edisyon (IM86) için açık kayıt var; fuar kırk yılı aşkın süredir Guadalajara'da düzenleniyor.",
+      "sections": [
+        {
+          "h": "Intermoda'da hangi ürünler sergileniyor?",
+          "p": "Pavyonlar kadın, erkek, çocuk, gece giyimi, aksesuar, denim, ayakkabı, tedarik ve uluslararası olarak ayrılıyor. Programda Trend Zone, Fashion Space, IM Talks konferansları, Mindset atölyeleri ve defile ile marka etkinlikleri olan IM Experience yer alıyor; IM Live Studio hibrit iş görüşmeleri, IM Impulsa ise yeni markalar için."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "IM86, 19–22 Ocak 2027'de Guadalajara'daki Expo Guadalajara'da (Av. Mariano Otero 1499, Col. Verde Valle) yapılacak."
+        },
+        {
+          "h": "Katılım rakamları",
+          "p": "Organizatör IM85'e (Temmuz 2026) ait şu rakamları veriyor: 29.000'den fazla alıcı, 600'den fazla katılımcı, 1.000'den fazla marka, 49.000 m²'den fazla sergi alanı ve 11 katılımcı ülke. Alıcılar 31 eyaletten ve 18 ülkeden geliyor. Alıcı kaydı ücretsiz."
+        },
+        {
+          "h": "Intermoda'da stand açmak",
+          "p": "Tasarımcılar, üreticiler ve distribütörler 'Participar como expositor' sayfasından başvuruyor; katılımcı el kitabı PDF olarak sitede. Moda fuarında stand, koleksiyonun asılı ve katlı hâlini rahat göstermeli, alıcı görüşmesi için ayrı bir masa bırakmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Intermoda is billed as the largest fashion business exhibition in Latin America, held twice a year in Guadalajara. The site has registration open for the 86th edition (IM86), and the fair has been held in Guadalajara for more than four decades.",
+      "sections": [
+        {
+          "h": "What is on show at Intermoda?",
+          "p": "The pavilions are Women, Men, Children, Gala, Accessories, Denim, Footwear, Supply and International. The programme includes Trend Zone, Fashion Space, IM Talks conferences, Mindset workshops and IM Experience with runways and brand activations; IM Live Studio offers hybrid business appointments and IM Impulsa supports emerging brands."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "IM86 takes place 19–22 January 2027 at Expo Guadalajara (Av. Mariano Otero 1499, Col. Verde Valle) in Guadalajara."
+        },
+        {
+          "h": "Figures",
+          "p": "The organiser gives these figures for IM85 (July 2026): more than 29,000 buyers, more than 600 exhibitors, more than 1,000 brands, more than 49,000 m² of exhibition space and 11 exhibiting countries. Buyers come from 31 states and 18 countries. Buyer registration is free."
+        },
+        {
+          "h": "Exhibiting at Intermoda",
+          "p": "Designers, manufacturers and distributors apply on the 'Participar como expositor' page, and the exhibitor manual is available as a PDF. At a fashion fair a stand should show the collection both hung and folded without crowding and leave a separate table for buyer meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Intermoda wird als größte Modemesse Lateinamerikas beworben und findet zweimal im Jahr in Guadalajara statt. Auf der Website ist die Anmeldung für die 86. Ausgabe (IM86) geöffnet; die Messe wird seit mehr als vier Jahrzehnten in Guadalajara veranstaltet.",
+      "sections": [
+        {
+          "h": "Was wird auf der Intermoda gezeigt?",
+          "p": "Die Pavillons heißen Damen, Herren, Kinder, Gala, Accessoires, Denim, Schuhe, Zulieferer und International. Das Programm umfasst Trend Zone, Fashion Space, IM Talks, Mindset-Workshops und IM Experience mit Modenschauen und Markenaktionen; IM Live Studio bietet hybride Geschäftstermine, IM Impulsa unterstützt neue Marken."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die IM86 findet vom 19. bis 22. Januar 2027 in der Expo Guadalajara (Av. Mariano Otero 1499, Col. Verde Valle) statt."
+        },
+        {
+          "h": "Zahlen",
+          "p": "Der Veranstalter nennt für die IM85 (Juli 2026): mehr als 29.000 Einkäufer, über 600 Aussteller, über 1.000 Marken, mehr als 49.000 m² Ausstellungsfläche und 11 Ausstellerländer. Die Einkäufer kommen aus 31 Bundesstaaten und 18 Ländern. Die Anmeldung für Einkäufer ist kostenlos."
+        },
+        {
+          "h": "Ausstellen auf der Intermoda",
+          "p": "Designer, Hersteller und Distributoren bewerben sich über die Seite „Participar como expositor“; das Ausstellerhandbuch gibt es als PDF. Auf einer Modemesse sollte ein Stand die Kollektion gehängt und gefaltet ohne Gedränge zeigen und einen eigenen Tisch für Einkäufergespräche vorsehen."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Perimeter Protection",
+    "slugs": [
+      "perimeter-protection"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.perimeter-protection.de/en"
+    ],
+    "tr": {
+      "intro": "Perimeter Protection, çevre güvenliği, çit sistemleri ve bina güvenliği alanının uluslararası fuarıdır. Organizatör NürnbergMesse; fuar VfS, Gütegemeinschaft Metallzauntechnik ve UAV DACH ile birlikte geliştiriliyor. Site, mekanik, elektronik ve dijital güvenlik teknolojilerini bir araya getiren tek etkinlik olduğunu belirtiyor.",
+      "sections": [
+        {
+          "h": "Perimeter Protection'da neler sergileniyor?",
+          "p": "Kapsamda sanayi, kritik altyapı ve kamu kurumları için bütünleşik çevre güvenliği çözümleri, akıllı algılama sistemleri, bağlantılı gözetim teknolojileri, video izleme, dron algılama, hava sahası gözetimi ve dron karşıtı çözümler var. Üç gün boyunca uzman forumu, insansız teknolojiler için U.T.SEC@Perimeter Protection alanı ve bağlantılı bir kongre yapılıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 19–21 Ocak 2027'de Nürnberg'de, NürnbergMesse Messezentrum 1'de yapılacak. Açılış saatleri 19 ve 20 Ocak'ta 09.00–17.00, 21 Ocak'ta 09.00–16.00. Salon dağılımı sitedeki etkileşimli yerleşim planında."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör fuarı üreticilerin, işletmecilerin, karar vericilerin, güvenlik uzmanlarının ve güvenlik görevlilerinin buluşma noktası olarak tanıtıyor. Biletler sitedeki bilet mağazasından alınıyor. Site ayrıca kritik altyapının korunmasına ilişkin KRITIS çatı yasasının 17 Mart 2026'da yürürlüğe girdiğini hatırlatıyor."
+        },
+        {
+          "h": "Perimeter Protection'da stand açmak",
+          "p": "Stand rezervasyonu sitenin 'Book your stand' sayfasından, stand yapımı ve pazarlama hizmetleri katılımcı bölümünden yönetiliyor. Güvenlik teknolojisi fuarında stand, ürünün dayanıklılığını ve algılama mantığını gösteren canlı bir düzen ve ayrı bir teknik görüşme alanı ister."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Perimeter Protection is the international exhibition for perimeter protection, fencing and building security, organised by NürnbergMesse and developed with VfS, Gütegemeinschaft Metallzauntechnik and UAV DACH. The site calls it the only event that brings together mechanical, electronic and digital security technologies.",
+      "sections": [
+        {
+          "h": "What is on show at Perimeter Protection?",
+          "p": "The scope covers integrated perimeter protection concepts for industry, critical infrastructure and public institutions, intelligent detection systems, connected surveillance, video monitoring, drone detection, airspace surveillance and counter-drone solutions. Over three days there is a specialist forum, the U.T.SEC@Perimeter Protection area on unmanned technologies and a connected congress."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The fair runs 19–21 January 2027 at NürnbergMesse, Messezentrum 1, Nuremberg. Opening hours are 09:00–17:00 on 19 and 20 January and 09:00–16:00 on 21 January. Hall allocations are in the interactive floor plan on the site."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser presents the fair as a meeting place for manufacturers, operators, decision-makers, security experts and security officers. Tickets are bought through the ticket shop on the site. The site also notes that the KRITIS umbrella act on critical infrastructure protection took effect on 17 March 2026."
+        },
+        {
+          "h": "Exhibiting at Perimeter Protection",
+          "p": "Stand booking is made through the site's 'Book your stand' page, and stand construction and marketing services are handled in the exhibitor section. At a security technology fair a stand works best as a live setup that shows how a product withstands and detects, with a separate area for technical meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Perimeter Protection ist die internationale Fachmesse für Perimeterschutz, Zauntechnik und Gebäudesicherheit. Veranstalter ist die NürnbergMesse; entwickelt wird sie mit VfS, Gütegemeinschaft Metallzauntechnik und UAV DACH. Die Website nennt sie die einzige Veranstaltung, die mechanische, elektronische und digitale Sicherheitstechnik zusammenbringt.",
+      "sections": [
+        {
+          "h": "Was wird auf der Perimeter Protection gezeigt?",
+          "p": "Das Spektrum reicht von integrierten Perimeterschutzkonzepten für Industrie, kritische Infrastruktur und öffentliche Einrichtungen über intelligente Detektionssysteme und vernetzte Überwachung bis zu Videoüberwachung, Drohnendetektion, Luftraumüberwachung und Drohnenabwehr. An allen drei Tagen gibt es ein Fachforum, den Bereich U.T.SEC@Perimeter Protection zu unbemannten Technologien und einen angeschlossenen Kongress."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die Messe findet vom 19. bis 21. Januar 2027 im NürnbergMesse, Messezentrum 1, Nürnberg statt. Geöffnet ist am 19. und 20. Januar von 9 bis 17 Uhr und am 21. Januar von 9 bis 16 Uhr. Die Hallenbelegung zeigt der interaktive Hallenplan auf der Website."
+        },
+        {
+          "h": "Besucherprofil",
+          "p": "Der Veranstalter beschreibt die Messe als Treffpunkt von Herstellern, Betreibern, Entscheidern, Sicherheitsexperten und Sicherheitsbeauftragten. Tickets gibt es im Ticketshop der Website. Die Website weist zudem darauf hin, dass das KRITIS-Dachgesetz zum Schutz kritischer Infrastrukturen am 17. März 2026 in Kraft getreten ist."
+        },
+        {
+          "h": "Ausstellen auf der Perimeter Protection",
+          "p": "Die Standbuchung läuft über die Seite „Book your stand“, Standbau und Marketingleistungen werden im Ausstellerbereich abgewickelt. Auf einer Sicherheitsmesse funktioniert ein Stand als Live-Aufbau, der zeigt, wie ein Produkt standhält und erkennt, mit einem eigenen Bereich für technische Gespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "SHOT Show",
+    "slugs": [
+      "shot-show"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://shotshow.org/"
+    ],
+    "tr": {
+      "intro": "SHOT Show, NSSF'in (Firearm Industry Trade Association) düzenlediği Las Vegas'taki ticaret fuarıdır; üreticiler ürünlerini sektör alıcılarına sergiliyor. Fuar, sergilerin yanında networking etkinlikleri ve Las Vegas deneyimlerini içeren daha uzun bir SHOT Week'in parçası.",
+      "sections": [
+        {
+          "h": "SHOT Show'da neler var?",
+          "p": "Site, büyük üreticilerin ve çok sayıda küçük üreticinin yeni ürün ve aksesuarlarının sergilendiğini belirtiyor. Atış, avcılık ve outdoor üreticilerine tedarikçi olanlar için Supplier Showcase var. Programda ayrıca NSSF/HAVA Golf Classic, SHOT After Dark, SHOT University, Law Enforcement Education Program (LEEP), ihracat eğitim oturumları ve SHOT Show CX yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "SHOT Show 2027, 19–22 Ocak 2027'de Las Vegas'ta Venetian Expo ve Caesars Forum'da yapılacak. Sonraki fuarlar 25–28 Ocak 2028 ve 23–26 Ocak 2029."
+        },
+        {
+          "h": "Katılımcı ve ziyaretçi profili",
+          "p": "Site 2027 için 2.700'den fazla sergi sayıyor. Ziyaretçi grupları perakendeciler ve atış poligonları, kolluk kuvvetleri ve silahlı kuvvetler ile uluslararası ziyaretçiler olarak ayrılıyor; giriş koşulları sitedeki 'Attendee Admission Requirements' sayfasında."
+        },
+        {
+          "h": "SHOT Show'da stand açmak",
+          "p": "Yeni katılımcılar 'New Exhibitor Inquiries' sayfasından başvuruyor; site sergi alanının hâlâ müsait olduğunu yazıyor. Tedarikçi standları için Supplier Showcase başvurusu ayrı bir formla yapılıyor. Katılımcı el kitabı ve SSS sitede. İki salon grubuna yayılan büyük bir fuarda stand, ürün gruplarını uzaktan okunur kılan bir düzen ve alıcı görüşmeleri için kapalı bir alan ister."
+        }
+      ]
+    },
+    "en": {
+      "intro": "SHOT Show is the trade show held in Las Vegas by NSSF, the Firearm Industry Trade Association, where exhibitors show products to industry buyers. It is part of a longer SHOT Week that also includes networking events and Las Vegas experiences.",
+      "sections": [
+        {
+          "h": "What is on at SHOT Show?",
+          "p": "The site says products from large manufacturers and many smaller makers, with new products and accessories, are on show. The Supplier Showcase is open to suppliers of shooting, hunting and outdoor manufacturers. The programme also includes the NSSF/HAVA Golf Classic, SHOT After Dark, SHOT University, the Law Enforcement Education Program (LEEP), export training sessions and SHOT Show CX."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "SHOT Show 2027 takes place 19–22 January 2027 at the Venetian Expo and Caesars Forum in Las Vegas. Later shows are 25–28 January 2028 and 23–26 January 2029."
+        },
+        {
+          "h": "Exhibitors and attendees",
+          "p": "The site lists more than 2,700 exhibits for 2027. Attendee groups are retailers and ranges, law enforcement and armed forces, and international attendees; admission requirements are on the Attendee Admission Requirements page."
+        },
+        {
+          "h": "Exhibiting at SHOT Show",
+          "p": "New exhibitors apply through the New Exhibitor Inquiries page, and the site says exhibit space is still available. Supplier Showcase booths use a separate application form. The exhibitor toolkit and FAQs are on the site. At a large show spread over two venues a stand needs a layout where product groups read from a distance and an enclosed area for buyer meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die SHOT Show ist die Fachmesse in Las Vegas, die von der NSSF, dem Branchenverband der Waffenindustrie, veranstaltet wird; Aussteller zeigen dort Produkte für Einkäufer der Branche. Sie ist Teil der längeren SHOT Week mit Networking-Veranstaltungen und Las-Vegas-Erlebnissen.",
+      "sections": [
+        {
+          "h": "Was bietet die SHOT Show?",
+          "p": "Laut Website zeigen große und viele kleinere Hersteller neue Produkte und Zubehör. Der Supplier Showcase steht Zulieferern von Schieß-, Jagd- und Outdoor-Herstellern offen. Im Programm laufen außerdem der NSSF/HAVA Golf Classic, SHOT After Dark, SHOT University, das Law Enforcement Education Program (LEEP), Exportschulungen und SHOT Show CX."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die SHOT Show 2027 findet vom 19. bis 22. Januar 2027 in der Venetian Expo und im Caesars Forum in Las Vegas statt. Die nächsten Termine sind 25. bis 28. Januar 2028 und 23. bis 26. Januar 2029."
+        },
+        {
+          "h": "Aussteller und Besucher",
+          "p": "Die Website nennt für 2027 mehr als 2.700 Exponate. Besuchergruppen sind Einzelhändler und Schießstände, Strafverfolgung und Streitkräfte sowie internationale Besucher; die Zulassungsbedingungen stehen auf der Seite Attendee Admission Requirements."
+        },
+        {
+          "h": "Ausstellen auf der SHOT Show",
+          "p": "Neue Aussteller melden sich über die Seite New Exhibitor Inquiries; laut Website ist noch Standfläche frei. Für den Supplier Showcase gibt es ein eigenes Antragsformular. Exhibitor Toolkit und FAQ stehen auf der Website. Auf einer großen Messe an zwei Standorten braucht ein Stand eine Aufteilung, bei der Produktgruppen aus der Ferne lesbar sind, und einen geschlossenen Bereich für Einkäufergespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Première Vision New York",
+    "slugs": [
+      "premiere-vision-new-york"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://newyork.premierevision.com/"
+    ],
+    "tr": {
+      "intro": "Première Vision New York, sitede 'Kuzey Amerika'nın moda profesyonelleri için ana etkinliği' olarak tanıtılan moda ticaret fuarıdır. Katılımcılar arasında kumaş, deri, baskı ve nakış firmaları ile tasarım stüdyoları var. Sitenin alt bilgisinde GL events logosu görünüyor.",
+      "sections": [
+        {
+          "h": "Fuarda neler var?",
+          "p": "Sitede resmî ürün kategorileri sıralanmıyor; katılımcı listesinde tekstil, kumaş, deri, baskı ve nakış firmaları ile tasarım stüdyoları geçiyor. Programda sunumlar, iş görüşmeleri ve moda araçları bölümü bulunuyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Sıradaki New York fuarı 19–20 Ocak 2027'de Tribeca Rooftop + 360°'de (2 Desbrosses St, New York, NY 10013) yapılacak. Yerleşim planı 11. ve 12. katları gösteriyor. Sitedeki sunum programında Temmuz'a işaret eden bir etiket de var; katılımdan önce program sayfasından teyit edin."
+        },
+        {
+          "h": "Ziyaretçi kaydı",
+          "p": "Moda profesyonelleri için ücretsiz e-pass kaydı sitedeki kayıt sayfasından yapılıyor. Pratik bilgiler, SSS ve PV uygulaması ayrı sayfalarda."
+        },
+        {
+          "h": "Première Vision New York'ta stand açmak",
+          "p": "'Become exhibitor' seçeneği ana Première Vision katılımcı sayfasına yönlendiriyor; mevcut katılımcılar katılımcı alanından giriş yapıyor. Kat ve oda düzenindeki bir tekstil fuarında stand, numune ve kumaş koleksiyonunun dokunularak incelenebildiği, ışığı doğru bir sunumu ve küçük bir görüşme köşesini gerektirir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Première Vision New York is the fashion trade show that its site calls the main event in North America for fashion professionals. Exhibitors include textile, fabric, leather, print and embroidery companies as well as design studios. The site footer shows the GL events logo.",
+      "sections": [
+        {
+          "h": "What is on at the fair?",
+          "p": "The site does not list formal product categories; the exhibitor list includes textile, fabric, leather, print and embroidery companies and design studios. The programme features talks, business meetings and fashion tools."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The next New York show takes place 19–20 January 2027 at Tribeca Rooftop + 360°, 2 Desbrosses St, New York, NY 10013. The show map covers floors 11 and 12. The talks programme on the site also carries a label pointing to July, so check the programme page before you plan around it."
+        },
+        {
+          "h": "Visitor registration",
+          "p": "Fashion professionals register for a free e-pass on the site's registration page. Practical information, the FAQ and the PV app have their own pages."
+        },
+        {
+          "h": "Exhibiting at Première Vision New York",
+          "p": "The 'Become exhibitor' option leads to the main Première Vision exhibit page, and existing exhibitors log in through the exhibitor area. At a textile show laid out over floors and rooms a stand needs correct lighting, a presentation where samples and fabrics can be handled, and a small meeting corner."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Première Vision New York ist die Modefachmesse, die die Website als wichtigste Veranstaltung Nordamerikas für Modeprofis bezeichnet. Unter den Ausstellern finden sich Textil-, Stoff-, Leder-, Druck- und Stickereifirmen sowie Designstudios. Im Fußbereich der Website ist das Logo von GL events zu sehen.",
+      "sections": [
+        {
+          "h": "Was bietet die Messe?",
+          "p": "Die Website führt keine formalen Produktkategorien auf; die Ausstellerliste nennt Textil-, Stoff-, Leder-, Druck- und Stickereifirmen und Designstudios. Das Programm umfasst Vorträge, Geschäftstermine und Fashion Tools."
+        },
+        {
+          "h": "Termin und Veranstaltungsort",
+          "p": "Die nächste New Yorker Ausgabe findet am 19. und 20. Januar 2027 im Tribeca Rooftop + 360°, 2 Desbrosses St, New York, NY 10013 statt. Der Geländeplan zeigt die Etagen 11 und 12. Das Vortragsprogramm der Website trägt auch eine Bezeichnung mit Juli; vor der Planung die Programmseite prüfen."
+        },
+        {
+          "h": "Besucherregistrierung",
+          "p": "Modeprofis registrieren sich auf der Registrierungsseite für einen kostenlosen E-Pass. Praktische Informationen, FAQ und die PV-App haben eigene Seiten."
+        },
+        {
+          "h": "Ausstellen auf der Première Vision New York",
+          "p": "Die Option „Become exhibitor“ führt zur Ausstellerseite von Première Vision, bestehende Aussteller melden sich im Ausstellerbereich an. Auf einer Textilmesse über mehrere Etagen und Räume braucht ein Stand passendes Licht, eine Präsentation, bei der Muster und Stoffe angefasst werden können, und eine kleine Besprechungsecke."
+        }
+      ]
+    }
   }
 ]
