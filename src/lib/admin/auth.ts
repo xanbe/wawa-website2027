@@ -15,7 +15,7 @@ export const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
 const RENEW_BELOW_MS = 6 * 60 * 60 * 1000;
 
 // Vercel'e yapıştırılan değerde kalan boşluk, satır sonu ya da çevreleyen tırnak giriş yapılamamasına yol açmasın
-const env = (v: string | undefined) => (v ?? "").trim().replace(/^(["'])(.*)\1$/s, "$2");
+const env = (v: string | undefined) => (v ?? "").trim().replace(/^(["'])([\s\S]*)\1$/, "$2");
 const secret = () => {
   const s = env(process.env.ADMIN_SECRET);
   return s.length >= 32 ? s : "";
