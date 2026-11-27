@@ -118,5 +118,15 @@
     "slug": "denimsandjeans-egypt",
     "reason": "Sitede ürün grupları, ziyaretçi profili ve katılım süreci yok; yalnız tarih ve mekan var",
     "date": "2026-11-26"
+  },
+  {
+    "slug": "expo-riva-schuh-and-gardabags",
+    "reason": "exporivaschuh.it HTTP 403 verdi (WebFetch), resmî siteden bilgi okunamadı",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "content-americas",
+    "reason": "Resmî site yok; yalnız İTO sayfası var, fuarın ne olduğu/organizatörü/ziyaretçisi belirtilmiyor",
+    "date": "2026-11-27"
   }
 ]

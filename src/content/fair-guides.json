@@ -2813,5 +2813,566 @@
         }
       ]
     }
+  },
+  {
+    "name": "Who's Next",
+    "slugs": [
+      "who-s-next-paris"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://wsn-events.com/events/whos-next"
+    ],
+    "tr": {
+      "intro": "Who's Next, Paris'te Porte de Versailles fuar alanında yılda iki kez düzenlenen kadın modası ve yaşam tarzı ticaret fuarıdır. Organizatör Groupe WSN (WSN Events); fuar 1994'ten beri yapılıyor ve organizatör kendisini Avrupa'nın önde gelen uluslararası kadın modası fuarı olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "Who's Next'te hangi ürünler sergileniyor?",
+          "p": "Fuar kadın hazır giyimi, aksesuar, takı, güzellik ve yaşam tarzı ürünlerini kapsıyor. Bijorhca fuarı aynı dönemde yanında yer alıyor; Ocak'ta Salon International de la Lingerie ve Interfilière Paris de aynı tarihlerde düzenleniyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Sıradaki fuarlar 16–18 Ocak 2027 ve 4–6 Eylül 2027 tarihlerinde Paris Parc des Expositions, Porte de Versailles'da yapılacak."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Fuar sektöre yönelik: çok markalı mağazalar, mağaza zincirleri, e-ticaret alıcıları, temsilciler, gazeteciler, satın alma ofisleri, stilistler ve trend ofisleri hedef kitle. Organizatöre göre her fuarda yaklaşık 1.200 marka yer alıyor ve yaklaşık 38.000 ziyaretçiye ulaşılıyor; ziyaretçilerin yüzde 70'i alıcı."
+        },
+        {
+          "h": "Who's Next'te stand açmak",
+          "p": "Katılımcılar organizatörün Exposer sayfasından başvuruyor; katılım soruları için WSN'nin ticari servisi (exhibit@wsn-events.com) ve katılımcı hesabı portalı kullanılıyor. Moda fuarında stand, koleksiyonu ve alıcı görüşmesini taşımalı: askı ve raf düzeni ürünü net gösterecek şekilde planlanmalı, sipariş görüşmesi için ayrı ve sakin bir alan ayrılmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Who's Next is a women's fashion and lifestyle trade show held twice a year at Paris Porte de Versailles. It is organised by Groupe WSN (WSN Events), has run since 1994, and the organiser presents it as Europe's leading international women's fashion show.",
+      "sections": [
+        {
+          "h": "What is on show at Who's Next?",
+          "p": "The show covers women's ready-to-wear, accessories, jewellery, beauty and lifestyle. Bijorhca runs alongside it, and in January the Salon International de la Lingerie and Interfilière Paris take place on the same dates."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The next editions are 16–18 January 2027 and 4–6 September 2027 at Paris Parc des Expositions, Porte de Versailles."
+        },
+        {
+          "h": "Who attends",
+          "p": "The show is aimed at the trade: multi-brand stores, department stores, e-commerce buyers, agents, journalists, buying offices, stylists and trend offices. According to the organiser, each edition brings about 1,200 brands and about 38,000 visitors, 70% of them buyers."
+        },
+        {
+          "h": "Exhibiting at Who's Next",
+          "p": "Exhibitors apply through the organiser's Exposer page; WSN's commercial service (exhibit@wsn-events.com) answers participation questions and an exhibitor account portal is available. A fashion stand has to carry the collection and the buyer meeting: plan rails and shelving so the product reads clearly, and keep a separate quiet area for order talks."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Who's Next ist eine Fachmesse für Damenmode und Lifestyle, die zweimal im Jahr auf dem Pariser Messegelände Porte de Versailles stattfindet. Veranstalter ist die Groupe WSN (WSN Events); die Messe besteht seit 1994 und wird vom Veranstalter als führende internationale Damenmodemesse Europas bezeichnet.",
+      "sections": [
+        {
+          "h": "Was wird auf der Who's Next gezeigt?",
+          "p": "Die Messe umfasst Damenbekleidung, Accessoires, Schmuck, Beauty und Lifestyle. Die Bijorhca findet parallel statt, und im Januar laufen der Salon International de la Lingerie und die Interfilière Paris zu denselben Terminen."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die nächsten Ausgaben sind vom 16. bis 18. Januar 2027 und vom 4. bis 6. September 2027 im Pariser Parc des Expositions, Porte de Versailles."
+        },
+        {
+          "h": "Besucher",
+          "p": "Die Messe richtet sich an den Handel: Multi-Label-Geschäfte, Kaufhäuser, E-Commerce-Einkäufer, Agenten, Journalisten, Einkaufsbüros, Stylisten und Trendbüros. Laut Veranstalter kommen pro Ausgabe etwa 1.200 Marken und rund 38.000 Besucher, davon 70 % Einkäufer."
+        },
+        {
+          "h": "Als Aussteller auf der Who's Next",
+          "p": "Die Bewerbung läuft über die Seite „Exposer“ des Veranstalters; Fragen beantwortet der Vertrieb von WSN (exhibit@wsn-events.com), dazu gibt es ein Ausstellerportal. Ein Modestand muss Kollektion und Einkäufergespräch tragen: Kleiderstangen und Regale so planen, dass die Ware klar zu sehen ist, und einen ruhigen Bereich für Ordergespräche einplanen."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Salon International de la Lingerie & Interfilière Paris",
+    "slugs": [
+      "salon-international-de-la-lingerie-and-interfiliere-paris"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://saloninternationaldelalingerie.com/"
+    ],
+    "tr": {
+      "intro": "Salon International de la Lingerie, iç giyim sektörünün uluslararası ticaret fuarıdır; Ocak 2027'de Interfilière Paris ile birlikte Paris'te düzenleniyor. Organizatör Eurovet by WSN; site fuarı iç giyim sektörünün dünyadaki önde gelen ticaret etkinliği olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "Fuarda hangi ürünler sergileniyor?",
+          "p": "Organizatörün sitesinde iç giyim ve iç giyim sağlığı (Exposed marka seçkisi) öne çıkıyor; Interfilière ise mayo için kumaş, aksesuar ve tedarik teklifini kapsıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Ocak fuarı 16–18 Ocak 2027 tarihlerinde Paris Porte de Versailles'da yapılacak; saatler 16–17 Ocak'ta 09.00–19.00, 18 Ocak'ta 09.00–18.00. Interfilière Paris 4–6 Eylül 2027'de aynı alanda yapılacak. Organizatörün Curve New York fuarı 7–9 Şubat 2027'de Javits Center'da düzenleniyor."
+        },
+        {
+          "h": "Salon International de la Lingerie'de stand açmak",
+          "p": "2027 katılım kayıtları organizatörün Exhibit sayfasından açık; katılımcılar hesaplarına girerek WSN platformundan 2027 yaka kartını alıyor. İç giyim standında ürün dokunulabilir ve yakından görülebilir olmalı: manken ve askı alanı, kumaş numunelerinin durduğu bir masa ve alıcı görüşmesi için sakin bir köşe planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "The Salon International de la Lingerie is the international trade show for the lingerie sector and takes place in Paris together with Interfilière Paris in January 2027. It is organised by Eurovet by WSN, and the organiser's site presents it as the world's leading trade event for the lingerie sector.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The organiser's site highlights lingerie and intimate wellness (the Exposed brand selection), while Interfilière covers materials, accessories and sourcing for swimwear."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The January show runs 16–18 January 2027 at Paris Porte de Versailles, 9am–7pm on 16–17 January and 9am–6pm on 18 January. Interfilière Paris follows on 4–6 September 2027 at the same venue. The organiser's Curve New York takes place on 7–9 February 2027 at the Javits Center."
+        },
+        {
+          "h": "Exhibiting at the Salon International de la Lingerie",
+          "p": "Registration for 2027 is open on the organiser's Exhibit page; exhibitors log in to their account and collect the 2027 badge through the WSN platform. A lingerie stand has to let buyers see and touch the product: plan a fitting-form and rail area, a table for fabric samples and a quiet corner for buyer meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Der Salon International de la Lingerie ist die internationale Fachmesse der Dessous-Branche und findet im Januar 2027 gemeinsam mit der Interfilière Paris in Paris statt. Veranstalter ist Eurovet by WSN; die Website bezeichnet sie als weltweit führende Fachveranstaltung der Branche.",
+      "sections": [
+        {
+          "h": "Was wird gezeigt?",
+          "p": "Die Website des Veranstalters hebt Dessous und Intimate Wellness (die Auswahl „Exposed“) hervor; die Interfilière deckt Materialien, Zubehör und Sourcing für Bademode ab."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Januar-Messe läuft vom 16. bis 18. Januar 2027 im Parc des Expositions Paris Porte de Versailles, am 16. und 17. Januar von 9 bis 19 Uhr, am 18. Januar von 9 bis 18 Uhr. Die Interfilière Paris folgt am 4. bis 6. September 2027 am selben Ort. Die Curve New York des Veranstalters findet vom 7. bis 9. Februar 2027 im Javits Center statt."
+        },
+        {
+          "h": "Als Aussteller im Salon International de la Lingerie",
+          "p": "Die Anmeldung für 2027 ist über die Seite „Exhibit“ des Veranstalters geöffnet; Aussteller melden sich im Konto an und holen den Ausweis 2027 über die WSN-Plattform. Ein Dessous-Stand muss Ware sichtbar und greifbar machen: Platz für Büsten und Stangen, ein Tisch für Stoffmuster und eine ruhige Ecke für Einkäufergespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "HOGA",
+    "slugs": [
+      "hoga"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.hoga-messe.de"
+    ],
+    "tr": {
+      "intro": "HOGA, Nürnberg'de Messe Nürnberg'de düzenlenen otelcilik, gastronomi ve büyük mutfak ticaret fuarıdır; Bavyera'nın ev sahibi fuarı olarak tanıtılıyor. Organizatör AFAG Messen und Ausstellungen GmbH, destekçi DEHOGA Bayern. İlk fuar 1950'de yapıldı ve fuar iki yılda bir düzenleniyor.",
+      "sections": [
+        {
+          "h": "HOGA'da hangi ürünler sergileniyor?",
+          "p": "Ürün grupları yiyecek ve içecek, otelcilik, interiör, mutfak teknolojisi, dijitalleşme ve hizmetler. Üreticiler, bayiler, satış temsilcileri ve hizmet firmaları katılıyor. Alkolsüz içecekler ve spirits öne çıkan trendler arasında; Halle 3A'da FOOD SPECIAL, ayrıca HOGA-Connect kariyer fuarı, atölyeler, sunumlar, pişirme gösterileri ve Gastro Innovation Award yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "HOGA 2027, 17–19 Ocak 2027 (Pazar–Salı) tarihlerinde Messe Nürnberg'de yapılacak; saatler 10.00–18.00, giriş 17.00'ye kadar."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Fuar yalnızca sektör ziyaretçilerine açık; biletler çevrimiçi mağazadan satılıyor. Organizatöre göre 2025 fuarında yaklaşık 520 katılımcı, yaklaşık 30.000 m² brüt alan ve üç günde yaklaşık 16.600 sektör ziyaretçisi vardı."
+        },
+        {
+          "h": "HOGA'da stand açmak",
+          "p": "Katılımcı ve ziyaretçi desteği için organizatörün müşteri hizmetleri telefon (+49 911 98833-7000) ve e-posta (kundenbetreuung@afag.de) üzerinden çalışıyor. Otel ve gastronomi fuarında stand hem ürünü hem tadımı taşır: mutfak ekipmanı ya da mobilya sergileyen firmalar ürünü çalışır halde gösterebilmeli, yemek ve içecek firmaları ise tadım ve görüşme alanını sergi alanından ayırmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "HOGA is the trade fair for hotels, catering and commercial kitchens held at Messe Nürnberg and presented as Bavaria's host trade show. It is organised by AFAG Messen und Ausstellungen GmbH with DEHOGA Bayern as supporter. The first edition took place in 1950 and the show runs on a two-year cycle.",
+      "sections": [
+        {
+          "h": "What is on show at HOGA?",
+          "p": "Product groups are food and beverage, hospitality, interiors, kitchen technology, digitalisation and services. Manufacturers, dealers, sales representatives and service companies exhibit. Alcohol-free drinks and spirits are highlighted trends; Hall 3A hosts FOOD SPECIAL, and the programme adds the HOGA-Connect career fair, workshops, lectures, cooking shows and the Gastro Innovation Award."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "HOGA 2027 runs 17–19 January 2027 (Sunday to Tuesday) at Messe Nürnberg, 10:00–18:00 with entry until 17:00."
+        },
+        {
+          "h": "Who attends",
+          "p": "The fair is open to trade visitors only, with tickets sold through an online shop. According to the organiser, the 2025 edition had about 520 exhibitors, about 30,000 m² gross space and about 16,600 trade visitors over three days."
+        },
+        {
+          "h": "Exhibiting at HOGA",
+          "p": "Exhibitor and visitor support is available from the organiser by phone (+49 911 98833-7000) and e-mail (kundenbetreuung@afag.de). At a hospitality fair the stand carries both product and tasting: companies showing kitchen equipment or furniture should be able to demonstrate the product in use, and food and drink brands should separate the tasting and meeting area from the display."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die HOGA ist die Fachmesse für Hotellerie, Gastronomie und Großküche im Messezentrum Nürnberg und wird als Bayerns Gastgebermesse bezeichnet. Veranstalter ist die AFAG Messen und Ausstellungen GmbH, Träger ist DEHOGA Bayern. Die erste Ausgabe fand 1950 statt; die Messe läuft im Zwei-Jahres-Rhythmus.",
+      "sections": [
+        {
+          "h": "Was wird auf der HOGA gezeigt?",
+          "p": "Die Angebotsbereiche sind Food & Beverage, Hospitality, Interieur, Küchentechnik, Digitalisierung und Dienstleistungen. Es stellen Hersteller, Händler, Handelsvertreter und Dienstleister aus. Alkoholfreie Getränke und Spirituosen gelten als Trends; in Halle 3A findet FOOD SPECIAL statt, dazu kommen die Karrieremesse HOGA-Connect, Workshops, Vorträge, Kochshows und der Gastro Innovation Award."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die HOGA 2027 läuft vom 17. bis 19. Januar 2027 (Sonntag bis Dienstag) auf dem Messegelände Nürnberg, 10 bis 18 Uhr, Einlass bis 17 Uhr."
+        },
+        {
+          "h": "Besucher",
+          "p": "Die Messe ist nur für Fachbesucher offen; Tickets gibt es im Online-Shop. Laut Veranstalter hatte die Ausgabe 2025 rund 520 Aussteller, etwa 30.000 m² Bruttofläche und rund 16.600 Fachbesucher in drei Tagen."
+        },
+        {
+          "h": "Als Aussteller auf der HOGA",
+          "p": "Für Aussteller und Besucher ist die Kundenbetreuung des Veranstalters per Telefon (+49 911 98833-7000) und E-Mail (kundenbetreuung@afag.de) erreichbar. Auf einer Gastronomiemesse trägt der Stand Produkt und Verkostung: Anbieter von Küchentechnik oder Möbeln zeigen die Ware im Einsatz, Food- und Getränkemarken trennen Verkostungs- und Gesprächsbereich von der Präsentation."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Winter FancyFaire",
+    "slugs": [
+      "winter-fancyfaire"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.specialtyfood.com/fancy-food-shows/winter-fancyfaire/"
+    ],
+    "tr": {
+      "intro": "Winter FancyFaire, ABD'de Specialty Food Association (SFA) tarafından San Francisco'da düzenlenen özel gıda ticaret fuarıdır ve yılın ilk sektör etkinliği olarak tanıtılıyor.",
+      "sections": [
+        {
+          "h": "Winter FancyFaire'de hangi ürünler sergileniyor?",
+          "p": "Organizatöre göre ürünler 40'tan fazla kategoriye yayılıyor; işlevsel içecekler ve yüksek proteinli atıştırmalıklar örnek olarak veriliyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 17–19 Ocak 2027 tarihlerinde Moscone Center'da (747 Howard St, San Francisco) yapılacak. Saatler 17 ve 18 Ocak'ta 10.00–16.00, 19 Ocak'ta 10.00–15.00; alıcı kartı olanlar için salonlar 09.30'da açılıyor. 2028 fuarı 23–25 Ocak'ta San Francisco'da, 2029 fuarı 14–16 Ocak'ta San Diego'da planlanıyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatörün 2026 rakamlarına göre fuara 12.000'den fazla sektör profesyoneli, 4.000'den fazla alıcı katıldı; 1.000'den fazla katılımcının 310'u ilk kez yer aldı ve sergi alanı 135.450 fit kare oldu. Whole Foods, Walmart, Williams Sonoma ve Thrive Market gibi perakendeciler katılan alıcılar arasında sayılıyor."
+        },
+        {
+          "h": "Winter FancyFaire'de stand açmak",
+          "p": "Stand, fuar sitesindeki Book Exhibit formundan ayrılıyor; yeni markalar için SFA Spark Pavilion adlı bir alan var. Rezervasyondan sonra fuar uygulaması, katılımcı paneli, alıcı görüşme programları ve pazarlama araç seti kullanılabiliyor. Gıda standında ürün tadılır ve paketiyle görünür olmalı; tadım tezgâhı ile alıcıyla oturulan görüşme alanı birbirinden ayrı planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Winter FancyFaire is the specialty food trade show run by the Specialty Food Association (SFA) in San Francisco, billed as the first industry event of the year.",
+      "sections": [
+        {
+          "h": "What is on show at Winter FancyFaire?",
+          "p": "According to the organiser, products span more than 40 categories, with functional beverages and high-protein snacks given as examples."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs 17–19 January 2027 at the Moscone Center (747 Howard St, San Francisco). Hours are 10am–4pm on 17 and 18 January and 10am–3pm on 19 January, with halls opening at 9:30am for buyer badges. The 2028 show is planned for 23–25 January in San Francisco and the 2029 show for 14–16 January in San Diego."
+        },
+        {
+          "h": "Who attends",
+          "p": "Per the organiser's 2026 figures, the show drew more than 12,000 industry professionals and more than 4,000 buyers; of more than 1,000 exhibitors, 310 were first-timers, across 135,450 square feet of exhibit space. Whole Foods, Walmart, Williams Sonoma and Thrive Market are among the retailers named."
+        },
+        {
+          "h": "Exhibiting at Winter FancyFaire",
+          "p": "Booths are booked through the Book Exhibit form on the show site, and newer brands can look at the SFA Spark Pavilion. After booking, exhibitors get a show app, an exhibitor dashboard, buyer meeting programmes and a marketing toolkit. A food stand has to be tasted and read by its packaging: plan the sampling counter separately from a seated area for buyer meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Winter FancyFaire ist die Fachmesse für Spezialitätenlebensmittel der Specialty Food Association (SFA) in San Francisco und wird als erste Branchenveranstaltung des Jahres beworben.",
+      "sections": [
+        {
+          "h": "Was wird auf der Winter FancyFaire gezeigt?",
+          "p": "Laut Veranstalter reichen die Produkte über mehr als 40 Kategorien, genannt werden unter anderem funktionale Getränke und proteinreiche Snacks."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 17. bis 19. Januar 2027 im Moscone Center (747 Howard St, San Francisco) statt. Geöffnet ist am 17. und 18. Januar von 10 bis 16 Uhr, am 19. Januar von 10 bis 15 Uhr; für Käuferausweise öffnen die Hallen um 9:30 Uhr. Die Messe 2028 ist für den 23. bis 25. Januar in San Francisco geplant, die Messe 2029 für den 14. bis 16. Januar in San Diego."
+        },
+        {
+          "h": "Besucher",
+          "p": "Nach den Zahlen des Veranstalters für 2026 kamen mehr als 12.000 Branchenprofis und mehr als 4.000 Einkäufer; von über 1.000 Ausstellern waren 310 erstmals dabei, auf 135.450 Quadratfuß Ausstellungsfläche. Genannt werden unter anderem Whole Foods, Walmart, Williams Sonoma und Thrive Market."
+        },
+        {
+          "h": "Als Aussteller auf der Winter FancyFaire",
+          "p": "Stände werden über das Formular „Book Exhibit“ auf der Messe-Website gebucht; für jüngere Marken gibt es den SFA Spark Pavilion. Nach der Buchung stehen eine Messe-App, ein Ausstellerportal, Einkäufer-Meetingprogramme und ein Marketing-Toolkit bereit. Ein Food-Stand muss probiert und an der Verpackung erkannt werden: Probierstation und Sitzbereich für Einkäufergespräche getrennt planen."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Entertainment & Leisure MENA",
+    "slugs": [
+      "deal-entertainment-and-leisure-mena"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.enlmena.com",
+      "https://www.dwtc.com/en/events/entertainment-leisure-mena-2027/"
+    ],
+    "tr": {
+      "intro": "Entertainment & Leisure MENA, eski adıyla DEAL Dubai, Dubai Dünya Ticaret Merkezi'nde düzenlenen eğlence ve boş zaman sektörü fuarıdır. Organizatör GL Exhibitions, destekleyen kurum Dubai Economy & Tourism. Platform 33 yıllık geçmişe dayanıyor.",
+      "sections": [
+        {
+          "h": "Fuarda hangi ürünler sergileniyor?",
+          "p": "Kategoriler: oyun parkı oyuncakları ve cazibe merkezleri (Rides & Attractions), su parkları, oyun ve e-spor, sürükleyici deneyimler ve mekân teknolojisi. Fuar kapalı ve açık alan eğlence mekânları kuran tedarikçileri, işletmecileri, geliştiricileri ve yatırımcıları buluşturuyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 18–20 Ocak 2027 tarihlerinde Dubai Dünya Ticaret Merkezi'nde, Za'abeel Hall 5–6'da yapılacak."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör ziyaretçi kaydının ücretsiz olduğunu belirtiyor. Katılımcılar tema parkı ve cazibe merkezi işletmecileri, aile eğlence merkezi geliştiricileri, oyun ve e-spor mekânı sahipleri, AVM geliştiricileri, turizm planlamacıları ve eğlence yatırımcılarıyla görüştüklerini söylüyor; sitedeki bilgiye göre alıcılar Körfez ülkeleri, Hindistan ve Afrika'dan geliyor."
+        },
+        {
+          "h": "Entertainment & Leisure MENA'da stand açmak",
+          "p": "Katılmak isteyen firmalar sitedeki Exhibit at the Expo formuyla iletişime geçiyor ve katılımcı broşürünü indirebiliyor. Bu sektörde stand ürünü deneyimle birlikte anlatır: ekran ya da simülasyon alanı, ürünün ölçeğini gösteren bir model ve yatırımcıyla görüşme için ayrı bir bölüm planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Entertainment & Leisure MENA, formerly DEAL Dubai, is the entertainment and leisure industry exhibition held at Dubai World Trade Centre. It is organised by GL Exhibitions with the support of Dubai Economy & Tourism, and the platform has 33 years of history.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "Categories are rides and attractions, waterparks and aquatic attractions, gaming and esports, immersive experiences and venue technology. The show connects suppliers, operators, developers and investors building indoor and outdoor entertainment destinations."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs 18–20 January 2027 at Dubai World Trade Centre, Za'abeel Hall 5–6."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser states that visitor registration is free. Exhibitors say they meet theme park and attraction operators, FEC developers, gaming and esports venue owners, mall developers, tourism planners and entertainment investors; buyers come from the GCC, India and Africa according to the site."
+        },
+        {
+          "h": "Exhibiting at Entertainment & Leisure MENA",
+          "p": "Companies contact the organiser through the Exhibit at the Expo form and can download an exhibitor brochure. In this sector a stand explains the product through the experience: plan a screen or simulation area, a model that shows the scale of the attraction and a separate section for talks with investors."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Entertainment & Leisure MENA, früher DEAL Dubai, ist die Fachmesse der Unterhaltungs- und Freizeitbranche im Dubai World Trade Centre. Veranstalter ist GL Exhibitions, unterstützt von Dubai Economy & Tourism; die Plattform blickt auf 33 Jahre zurück.",
+      "sections": [
+        {
+          "h": "Was wird gezeigt?",
+          "p": "Die Bereiche sind Fahrgeschäfte und Attraktionen, Wasserparks, Gaming und Esports, immersive Erlebnisse und Venue-Technologie. Die Messe bringt Lieferanten, Betreiber, Entwickler und Investoren zusammen, die Unterhaltungsziele drinnen und draußen bauen."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 18. bis 20. Januar 2027 im Dubai World Trade Centre statt, Za'abeel Hall 5–6."
+        },
+        {
+          "h": "Besucher",
+          "p": "Der Veranstalter gibt an, dass die Besucherregistrierung kostenlos ist. Aussteller nennen Betreiber von Themenparks und Attraktionen, FEC-Entwickler, Betreiber von Gaming- und Esports-Locations, Mall-Entwickler, Tourismusplaner und Investoren; laut Website kommen die Einkäufer aus den GCC-Staaten, Indien und Afrika."
+        },
+        {
+          "h": "Als Aussteller auf der Entertainment & Leisure MENA",
+          "p": "Interessierte Firmen melden sich über das Formular „Exhibit at the Expo“ und können die Ausstellerbroschüre herunterladen. In dieser Branche erklärt der Stand das Produkt über das Erlebnis: ein Bildschirm- oder Simulationsbereich, ein Modell, das die Größe der Attraktion zeigt, und ein getrennter Bereich für Investorengespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "HDAW",
+    "slugs": [
+      "hdaw-heavy-duty-aftermarket-week"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.hdaw.org/"
+    ],
+    "tr": {
+      "intro": "HDAW (Heavy Duty Aftermarket Week), ağır vasıta yedek parça sektörünün ticaret fuarıdır. Sitede fuarın ortak bir işletme komitesi tarafından düzenlendiği belirtiliyor. 2027 fuarı Grapevine, Teksas'ta yapılacak ve site bunu Grapevine'deki son yıl olarak duyuruyor.",
+      "sections": [
+        {
+          "h": "HDAW'da hangi ürünler sergileniyor?",
+          "p": "Sitede valf sistemleri, telematik ve elektronik, kamyon ve römork parçaları ile veri ve yapay zekâ tabanlı tahmin çözümleri sayılıyor. Programda tedarikçi ve distribütör birebir görüşmeleri, yemekli sohbetler, Women in Leadership Award, Hall of Fame Award, öğrenci programı ve kapanış resepsiyonu yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "HDAW'27, 18–21 Ocak 2027 tarihlerinde Gaylord Texan Resort & Convention Center'da (Grapevine, Teksas) yapılacak. Ürün fuarında 300'den fazla tedarikçi yer alıyor."
+        },
+        {
+          "h": "HDAW'da stand açmak",
+          "p": "Site katılımcılar için neden katılmalı, nasıl katılınır, sponsorluk, katılımcı rehberi, ortak pazarlama araç seti ve 2027 Product Expo haritası sayfalarını sunuyor. Yedek parça standı ürünü elle tutulur göstermeli: parçalar sıralı ve etiketli sergilenmeli, birebir görüşmeler için masa ve oturma alanı ayrılmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "HDAW (Heavy Duty Aftermarket Week) is the trade show for the heavy-duty aftermarket. The site says it is run by a joint operating committee. The 2027 show takes place in Grapevine, Texas, and the site announces it as the last year in Grapevine.",
+      "sections": [
+        {
+          "h": "What is on show at HDAW?",
+          "p": "The site lists valve systems, telematics and electronics, truck and trailer parts, and data and AI predictive modelling solutions. The programme includes supplier and distributor one-on-one meetings, networking lunches, the Women in Leadership Award, the Hall of Fame Award, a student programme and a closing reception."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "HDAW'27 runs 18–21 January 2027 at the Gaylord Texan Resort & Convention Center in Grapevine, Texas. The Product Expo lists more than 300 suppliers."
+        },
+        {
+          "h": "Exhibiting at HDAW",
+          "p": "The site offers pages on why to exhibit, how to become an exhibitor, sponsorship, an exhibitor guide, a partner marketing toolkit and the 2027 Product Expo map. An aftermarket stand should let visitors handle the product: arrange parts in labelled rows and keep a table and seating for the one-on-one meetings."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die HDAW (Heavy Duty Aftermarket Week) ist die Fachmesse für den Nutzfahrzeug-Aftermarket. Laut Website wird sie von einem gemeinsamen Betriebskomitee ausgerichtet. Die Messe 2027 findet in Grapevine, Texas, statt und wird als letztes Jahr in Grapevine angekündigt.",
+      "sections": [
+        {
+          "h": "Was wird auf der HDAW gezeigt?",
+          "p": "Die Website nennt Ventilsysteme, Telematik und Elektronik, Lkw- und Anhängerteile sowie Lösungen für datenbasierte und KI-gestützte Prognosen. Das Programm umfasst Einzelgespräche zwischen Lieferanten und Distributoren, Networking-Lunches, den Women in Leadership Award, den Hall of Fame Award, ein Studentenprogramm und einen Abschlussempfang."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die HDAW'27 läuft vom 18. bis 21. Januar 2027 im Gaylord Texan Resort & Convention Center in Grapevine, Texas. In der Product Expo sind mehr als 300 Lieferanten aufgeführt."
+        },
+        {
+          "h": "Als Aussteller auf der HDAW",
+          "p": "Die Website bietet Seiten zu Gründen für die Teilnahme, zur Anmeldung, zu Sponsoring, einen Ausstellerleitfaden, ein Partner-Marketing-Toolkit und den Plan der Product Expo 2027. Ein Aftermarket-Stand sollte Teile greifbar zeigen: beschriftete Reihen und ein Tisch mit Sitzplätzen für die Einzelgespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "POWERGEN International",
+    "slugs": [
+      "powergen-international"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.powergen.com/"
+    ],
+    "tr": {
+      "intro": "POWERGEN International, enerji üretimi sektörünün elektrik üreticileri, şebeke işletmecileri ve çözüm sağlayıcılarını bir araya getiren fuar ve zirvedir. Organizatör Clarion Events; ev sahibi şirket PacifiCorp ve Rocky Mountain Power.",
+      "sections": [
+        {
+          "h": "POWERGEN'de neler ele alınıyor?",
+          "p": "Öne çıkan konular gaz türbini ve kombine çevrim, veri merkezi, işletme ve bakım, güvenilirlik ve varlık ömrü ile nükleer; OEM bölümünde hidrojen, depolama ve jeotermal de geçiyor. Program anahtar konuşmaları, 100'den fazla uygulayıcı oturumunu, atölyeleri, teknik turları ve bir iş gücü zirvesini içeriyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 18–21 Ocak 2027 tarihlerinde Salt Lake City'deki Salt Palace Convention Center'da yapılacak."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Siteye göre hedef kitle şebeke işletmecileri, bağımsız enerji üreticileri (IPP), OEM ve teknoloji sağlayıcıları ile EPC firmaları; ayrıca sahip/işletmeci grupları ve basın."
+        },
+        {
+          "h": "POWERGEN'de stand açmak",
+          "p": "Katılımcılar fuar sitesindeki Book Your Booth ya da Apply for a booth sayfalarından başvuruyor; kat planı ve Converge+ kaynakları (başarı rehberi, cihaz kiralama) sitede yer alıyor. Enerji fuarında stand teknik görüşmeyi taşımalı: ürün ya da sistem maketi, teknik bilgi için ekran ve mühendislerle oturarak konuşulabilecek kapalı bir toplantı alanı gerekir."
+        }
+      ]
+    },
+    "en": {
+      "intro": "POWERGEN International is the exhibition and summit for electricity generators, utilities and solution providers in power generation. It is organised by Clarion Events, with PacifiCorp and Rocky Mountain Power as host utility.",
+      "sections": [
+        {
+          "h": "What does POWERGEN cover?",
+          "p": "Trending topics are gas turbine and combined cycle, data centres, O&M, reliability and asset life, and nuclear; the OEM section also mentions hydrogen, storage and geothermal. The programme includes keynotes, more than 100 practitioner-led sessions, workshops, technical tours and a workforce summit."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs 18–21 January 2027 at the Salt Palace Convention Center in Salt Lake City, Utah."
+        },
+        {
+          "h": "Who attends",
+          "p": "According to the site, the audience includes utilities, independent power producers, OEMs and technology providers, and EPCs, as well as owner and operator groups and the media."
+        },
+        {
+          "h": "Exhibiting at POWERGEN",
+          "p": "Exhibitors apply through the Book Your Booth or Apply for a booth pages on the show site; a floorplan and Converge+ resources, including a success guide and device rental, are listed there. A power-industry stand has to carry technical conversations: a model of the product or system, a screen for technical data and an enclosed meeting area where engineers can sit down."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die POWERGEN International ist Ausstellung und Gipfel für Stromerzeuger, Versorger und Lösungsanbieter der Energieerzeugung. Veranstalter ist Clarion Events; Gastgeber-Versorger sind PacifiCorp und Rocky Mountain Power.",
+      "sections": [
+        {
+          "h": "Was behandelt die POWERGEN?",
+          "p": "Genannte Schwerpunkte sind Gasturbinen und Kombikraftwerke, Rechenzentren, Betrieb und Wartung, Zuverlässigkeit und Anlagenlebensdauer sowie Kernkraft; im OEM-Bereich kommen Wasserstoff, Speicher und Geothermie vor. Das Programm umfasst Keynotes, über 100 Praxissitzungen, Workshops, technische Besichtigungen und einen Workforce-Gipfel."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 18. bis 21. Januar 2027 im Salt Palace Convention Center in Salt Lake City, Utah, statt."
+        },
+        {
+          "h": "Besucher",
+          "p": "Laut Website gehören Versorger, unabhängige Stromerzeuger, OEMs und Technologieanbieter sowie EPCs zur Zielgruppe, außerdem Eigentümer- und Betreibergruppen und Medien."
+        },
+        {
+          "h": "Als Aussteller auf der POWERGEN",
+          "p": "Die Bewerbung läuft über die Seiten „Book Your Booth“ oder „Apply for a booth“ der Messe-Website; ein Hallenplan und Converge+-Ressourcen mit Erfolgsleitfaden und Gerätemiete sind dort aufgeführt. Ein Stand in der Energiebranche muss technische Gespräche tragen: ein Modell des Produkts oder Systems, ein Bildschirm für technische Daten und ein geschlossener Besprechungsbereich für Ingenieure."
+        }
+      ]
+    }
+  },
+  {
+    "name": "AEEDC Dubai",
+    "slugs": [
+      "aeedc-dubai"
+    ],
+    "updated": "2026-11-27",
+    "sources": [
+      "https://www.aeedc.com/"
+    ],
+    "tr": {
+      "intro": "AEEDC Dubai, Dubai Dünya Ticaret Merkezi'nde düzenlenen diş hekimliği konferansı ve sergisidir; organizatör INDEX Conferences and Exhibitions Organization LLC. Site etkinliği dünyanın en büyük yıllık bilimsel diş hekimliği konferansı ve sergisi olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "AEEDC'de neler yer alıyor?",
+          "p": "Etkinlik dört alandan oluşuyor: konferans, Dental Business Hub, sergi ve bilimsel etkinlikler. 2027 programında Dünya Ortodonti Konferansı, Dünya Ağız ve Çene Cerrahisi Konferansı, poster yarışması, öğrenci yarışması, ileri uzmanlık kursları ve AEEDC Dubai Ödülleri var."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Ana etkinlik 19–21 Ocak 2027 tarihlerinde Dubai Dünya Ticaret Merkezi'nde yapılacak. Dubai World Dental Meeting 16–18 Ocak'ta, ödüller 21 Ocak'ta, AEEDC sonrası seri 22 Ocak'ta düzenleniyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Hedef kitle diş hekimliği profesyonelleri; sergi alıcılara, distribütörlere ve karar vericilere, Dental Business Hub ise üst düzey karar vericilere ve tedarikçilere yönelik. Organizatör sergiyi 192 ülkeden 80.000'den fazla profesyonelle anıyor. Dubai Dünya Ticaret Merkezi kurallarına göre 18 yaş altı katılımcılar sergi ve konferans salonlarına alınmıyor."
+        },
+        {
+          "h": "AEEDC'de stand açmak",
+          "p": "Katılımcılar sitedeki Book Your Stand sayfasından başvuruyor; Why Exhibit sayfası, katılımcı portalı ve 2027 kat planı da sitede yer alıyor. Organizatörün resmî stand yüklenicisi Index Design. Diş hekimliği fuarında stand ürünü denenebilir kılmalı: cihaz ve malzemenin gösterileceği bir uygulama alanı ile klinik karar vericilerle görüşmek için sakin bir toplantı bölümü planlanır."
+        }
+      ]
+    },
+    "en": {
+      "intro": "AEEDC Dubai is the dental conference and exhibition held at Dubai World Trade Centre, organised by INDEX Conferences and Exhibitions Organization LLC. The site presents it as the largest annual scientific dental conference and exhibition in the world.",
+      "sections": [
+        {
+          "h": "What does AEEDC include?",
+          "p": "The event has four activity areas: the conference, the Dental Business Hub, the exhibition and scientific activities. The 2027 programme lists the World Orthodontic Conference, the World Oral & Maxillofacial Surgery Conference, a poster competition, a student competition, advanced specialty courses and the AEEDC Dubai Awards."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The main event runs 19–21 January 2027 at Dubai World Trade Centre. The Dubai World Dental Meeting takes place on 16–18 January, the awards on 21 January and the Special Post AEEDC Series on 22 January."
+        },
+        {
+          "h": "Who attends",
+          "p": "The audience is dental professionals; the exhibition is aimed at buyers, distributors and decision-makers, and the Dental Business Hub at senior decision-makers and suppliers. The organiser cites 80,000+ professionals from 192 countries for the exhibition. Under Dubai World Trade Centre regulations, anyone under 18 is not allowed into the exhibition and conference halls."
+        },
+        {
+          "h": "Exhibiting at AEEDC",
+          "p": "Exhibitors apply through the Book Your Stand page; a Why Exhibit page, an exhibitor portal and the 2027 floor plan are also on the site. Index Design is named as the official stand contractor. A dental stand should let visitors try the product: plan a demonstration area for devices and materials and a quiet meeting section for talks with clinical decision-makers."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die AEEDC Dubai ist der Zahnmedizin-Kongress mit Ausstellung im Dubai World Trade Centre; Veranstalter ist INDEX Conferences and Exhibitions Organization LLC. Die Website bezeichnet sie als größte jährliche wissenschaftliche Dentalkonferenz mit Ausstellung weltweit.",
+      "sections": [
+        {
+          "h": "Was umfasst die AEEDC?",
+          "p": "Die Veranstaltung hat vier Bereiche: Konferenz, Dental Business Hub, Ausstellung und wissenschaftliche Aktivitäten. Das Programm 2027 nennt die World Orthodontic Conference, die World Oral & Maxillofacial Surgery Conference, einen Posterwettbewerb, einen Studentenwettbewerb, Fachkurse und die AEEDC Dubai Awards."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Hauptveranstaltung läuft vom 19. bis 21. Januar 2027 im Dubai World Trade Centre. Das Dubai World Dental Meeting findet am 16. bis 18. Januar statt, die Preisverleihung am 21. Januar und die Special Post AEEDC Series am 22. Januar."
+        },
+        {
+          "h": "Besucher",
+          "p": "Zielgruppe sind Fachleute der Zahnmedizin; die Ausstellung richtet sich an Einkäufer, Distributoren und Entscheider, der Dental Business Hub an Führungskräfte und Lieferanten. Der Veranstalter nennt für die Ausstellung mehr als 80.000 Fachleute aus 192 Ländern. Nach den Regeln des Dubai World Trade Centre haben Personen unter 18 Jahren keinen Zutritt zu den Ausstellungs- und Konferenzhallen."
+        },
+        {
+          "h": "Als Aussteller auf der AEEDC",
+          "p": "Die Anmeldung läuft über die Seite „Book Your Stand“; eine Seite „Why Exhibit“, ein Ausstellerportal und der Hallenplan 2027 stehen ebenfalls bereit. Offizieller Standbauer ist Index Design. Ein Dentalstand sollte Ausprobieren ermöglichen: ein Vorführbereich für Geräte und Materialien und ein ruhiger Besprechungsbereich für Gespräche mit klinischen Entscheidern."
+        }
+      ]
+    }
   }
 ]
