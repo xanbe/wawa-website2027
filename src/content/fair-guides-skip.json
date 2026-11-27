@@ -138,5 +138,15 @@
     "slug": "modexpo-hazir-giyim-ve-tekstil-fuari",
     "reason": "akort.com ana sayfasında Modexpo Ocak 2027 için tarih, alan ya da katılım bilgisi yok; yeterli doğrulanmış bilgi yok.",
     "date": "2026-11-27"
+  },
+  {
+    "slug": "alanya-otel-restoran-kafe-ekipmanlari-fuari",
+    "reason": "Resmî sitede (basakfuar.com) bu fuar için tarih, alan ve ürün bilgisi yok; yalnız ad ve katılımcı formu bağlantısı var",
+    "date": "2026-11-27"
+  },
+  {
+    "slug": "milano-home",
+    "reason": "milanohome.com iki sayfada da boş içerik döndü; doğrulanabilir bilgi alınamadı",
+    "date": "2026-11-27"
   }
 ]
