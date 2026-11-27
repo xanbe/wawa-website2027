@@ -261,7 +261,7 @@ function PageEditor({
         ))}
       </div>
       {lang !== "tr" && row.langs.tr && (
-        <button type="button" disabled={tBusy || !canTranslate} title={canTranslate ? "" : "GEMINI_API_KEY tanımlı değil"} onClick={translate} className={`${btnLine} mb-2 h-9 px-3 text-[13px]`}>
+        <button type="button" disabled={tBusy || !canTranslate} title={canTranslate ? "" : "Panelde otomatik çeviri kapalı; çeviriyi Claude'a yaptırın"} onClick={translate} className={`${btnLine} mb-2 h-9 px-3 text-[13px]`}>
           {tBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Languages className="h-4 w-4" />} Türkçe sayfadan çevir
         </button>
       )}

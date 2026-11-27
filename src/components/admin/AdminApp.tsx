@@ -22,7 +22,7 @@ type Data = {
   categories: string[];
   projects: ProjectRow[];
   posts: PostRow[];
-  checks: { untranslated: { path: string; title: string }[]; noAlt: number };
+  checks: { untranslated: { path: string; title: string }[]; noAlt: number; waiting: { kind: "project" | "post"; path: string; title: string }[] };
 };
 type View = "dashboard" | "projects" | "posts" | "media" | "home" | "pages" | "prices" | "fairs" | "history";
 
@@ -42,8 +42,12 @@ function Dashboard({ data, go, edit }: { data: Data; go: (v: View) => void; edit
   const drafts = data.projects.filter((p) => p.draft).length + data.posts.filter((p) => p.draft).length;
   const setup: [boolean, string, string][] = [
     [data.mode === "github", "Canlı kayıt (GitHub)", data.mode === "github" ? "Değişiklikler GitHub'a kaydedilir, site birkaç dakikada güncellenir." : "Yerel mod: değişiklikler bu bilgisayardaki dosyalara yazılır (GITHUB_TOKEN ve GITHUB_REPO yok)."],
-    [data.translate, "Otomatik çeviri", data.translate ? "İngilizce ve Almanca sürümler Türkçeden çevrilir." : "GEMINI_API_KEY tanımlı değil; diğer dillerde yalnızca görseller eşitlenir."],
-    [data.blob, "MP4 video yükleme", data.blob ? "Kısa videolar Vercel Blob'a yüklenebilir." : "BLOB_READ_WRITE_TOKEN tanımlı değil; şimdilik YouTube bağlantıları kullanılabilir."],
+    // Çeviri anahtarı yoksa çeviriler Claude ile (Claude Code oturumundan) yapılır; bu bir eksik değil
+    data.translate
+      ? [true, "Otomatik çeviri", "İngilizce ve Almanca sürümler kayıtta Türkçeden çevrilir."]
+      : [true, "Çeviri: Claude ile", "Yeni ya da değişen içeriğin İngilizce ve Almanca sürümü önce Türkçe metinle açılır, görseller hemen eşitlenir. Çeviri bekleyenler sağdaki listede; Claude'a \"çevirileri yap\" demeniz yeterli."],
+    // Videolar YouTube ile eklenir; MP4 yükleme yalnızca Vercel Blob bağlanırsa listelenir
+    ...(data.blob ? [[true, "MP4 video yükleme", "Kısa videolar Vercel Blob'a yüklenebilir."] as [boolean, string, string]] : []),
   ];
   const cards: [string, number, View][] = [
     ["Proje", data.projects.length, "projects"],
@@ -80,6 +84,18 @@ function Dashboard({ data, go, edit }: { data: Data; go: (v: View) => void; edit
         <section className={`border bg-white p-5 ${LINE}`}>
           <h2 className="text-[16px] font-medium text-wawa-charcoal">Kontrol edilecekler</h2>
           <ul className="mt-3 grid gap-2 text-[14px] text-wawa-charcoal">
+            {data.checks.waiting.length > 0 && (
+              <li>
+                Çeviri bekleyen içerik ({data.checks.waiting.length}): İngilizce ya da Almanca sürümü Türkçe metinle duruyor.
+                <ul className="mt-1 grid gap-1">
+                  {data.checks.waiting.slice(0, 8).map((p) => (
+                    <li key={p.path} className="text-wawa-charcoal/75">
+                      {p.kind === "project" ? "Proje" : "Yazı"}: {p.title}
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            )}
             {data.checks.noAlt > 0 && <li>{data.checks.noAlt} projede görsel açıklaması (alt metin) eksik ya da dosya adı gibi duruyor.</li>}
             {data.checks.untranslated.length > 0 ? (
               <li>

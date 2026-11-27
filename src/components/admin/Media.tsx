@@ -18,7 +18,7 @@ export function MediaPage({ blobEnabled }: { blobEnabled: boolean }) {
   const [tab, setTab] = useState<"images" | "videos">("images");
   return (
     <div>
-      <PageHead title="Medya" lead="Sitedeki görseller ve videolar. Görseller GitHub'da, kısa MP4 videolar Vercel Blob'da durur; uzun videolar için YouTube kullanın." />
+      <PageHead title="Medya" lead={blobEnabled ? "Sitedeki görseller ve videolar. Görseller GitHub'da, kısa MP4 videolar Vercel Blob'da durur; uzun videolar için YouTube kullanın." : "Sitedeki görseller ve YouTube videoları."} />
       <div className={`mb-6 flex border-b ${LINE}`}>
         {(
           [
@@ -207,7 +207,7 @@ function VideosEdit({ blobEnabled }: { blobEnabled: boolean }) {
   return (
     <div>
       {msg && <Notice text={msg} onClose={() => setMsg(null)} />}
-      <Section title="Fuar standı açılış videosu" lead="Fuar standı sayfalarının açılışında arkada sessiz dönen video. Kısa, sessiz bir MP4 en temiz sonucu verir (YouTube'da başında logo görünebilir).">
+      <Section title="Fuar standı açılış videosu" lead={blobEnabled ? "Fuar standı sayfalarının açılışında arkada sessiz dönen video. Kısa, sessiz bir MP4 en temiz sonucu verir (YouTube'da başında logo görünebilir)." : "Fuar standı sayfalarının açılışında arkada sessiz dönen YouTube videosu."}>
         <select value={v.standHero} onChange={(e) => setV({ ...v, standHero: e.target.value })} className={`${input} max-w-[560px]`}>
           {heroOptions.map((o) => (
             <option key={o.value} value={o.value}>
@@ -216,6 +216,8 @@ function VideosEdit({ blobEnabled }: { blobEnabled: boolean }) {
           ))}
         </select>
       </Section>
+      {/* MP4 bölümü yalnızca Vercel Blob bağlıysa (ya da daha önce yüklenmiş video varsa) görünür; videolar YouTube ile eklenir */}
+      {(blobEnabled || v.files.length > 0) && (
       <Section title="Yüklenen videolar (MP4)" lead="En fazla 30 MB; arka plan ve proje sayfaları için kısa, sessiz videolar. Adresi kopyalayıp projenin video alanına yapıştırabilirsiniz.">
         {blobEnabled ? (
           <label className={`${btnLine} mb-4`}>
@@ -267,6 +269,7 @@ function VideosEdit({ blobEnabled }: { blobEnabled: boolean }) {
         />
         {!v.files.length && <p className="text-[13px] text-wawa-charcoal/55">Henüz yüklenen video yok.</p>}
       </Section>
+      )}
       <Section title="YouTube videoları" lead="Hizmet sayfalarındaki video listesinde bu sırayla görünür. Bağlantıyı yapıştırın, başlık kendiliğinden gelir.">
         <div className="mb-4 flex flex-wrap gap-2">
           <input value={url} onChange={(e) => setUrl(e.target.value)} placeholder="https://www.youtube.com/watch?v=… ya da youtu.be/…" className={`${input} max-w-[460px]`} />

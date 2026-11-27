@@ -124,7 +124,7 @@ async function texts(kind: SyncKind, list: SyncItem[], tr: SyncItem, prev: ItemT
     } else
       note = TRANSLATE_CONFIGURED
         ? "Otomatik çeviri yapılamadı; çevrilmeyen dillerde metin eski hâliyle kaldı. Tekrar kaydederek yeniden deneyebilirsiniz."
-        : "Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil; diğer dillerde yalnızca görseller güncellendi.";
+        : "Diğer dillerde görseller güncellendi; metin çevirisi Claude ile yapılacak (Gösterge'deki çeviri bekleyenler listesinde).";
   }
   if (Object.keys(manual).length) note = `${note} Elle yazılan dil metinleri kaydedildi.`.trim();
   if (!Object.keys(tx).length) tx = {};
@@ -192,6 +192,18 @@ export async function GET(req: Request) {
     const trProjects = projects.filter((p) => p.lang === "tr");
     const untranslated = trProjects.filter((p) => SYNC_LANGS.some((l) => !findAlt(projects, p, l))).map((p) => ({ path: p.path, title: p.title }));
     const noAlt = trProjects.filter((p) => (p.gallery ?? []).some((g) => !g.alt || /^[\w-]+$/.test(g.alt))).length;
+    // İngilizce ya da Almanca sürümü Türkçe metinle duran içerik (çeviri bekliyor; Claude ile ya da otomatik çeviriyle yapılır)
+    const sameText = (list: SyncItem[], kind: "project" | "post") =>
+      list
+        .filter((p) =>
+          p.lang === "tr" &&
+          SYNC_LANGS.some((l) => {
+            const a = findAlt(list, p, l);
+            return a && a.title === p.title && a.html === p.html;
+          }),
+        )
+        .map((p) => ({ kind, path: p.path, title: p.title }));
+    const waiting = [...sameText(projects, "project"), ...sameText(posts, "post")];
     // Panel açık kaldıkça oturum yenilenir
     return renewSession(NextResponse.json({
       enabled: true,
@@ -202,7 +214,7 @@ export async function GET(req: Request) {
       categories: projectCats(),
       projects: trProjects.map((p) => ({ path: p.path, title: p.title, featuredImage: p.featuredImage, category: p.meta?.["Kategori"] ?? "", draft: Boolean(p.draft), video: Boolean(p.video) })),
       posts: posts.filter((p) => p.lang === "tr").map((p) => ({ path: p.path, title: p.title, date: p.date ?? null, featuredImage: p.featuredImage, draft: Boolean(p.draft), langs: SYNC_LANGS.filter((l) => findAlt(posts, p, l)) })),
-      checks: { untranslated, noAlt },
+      checks: { untranslated, noAlt, waiting },
     }));
   } catch (e) {
     if (e instanceof OpError) return bad(e.message, e.status);
@@ -260,7 +272,7 @@ export async function POST(req: Request) {
     if (op === "translate") {
       const src = { title: str(body.title, 180), description: str(body.description, 300), html: cleanHtml(str(body.html, 200_000)) };
       if (!src.title) return bad("Önce Türkçe başlığı yazın.");
-      if (!TRANSLATE_CONFIGURED) return bad("Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil.", 503);
+      if (!TRANSLATE_CONFIGURED) return bad("Panelde otomatik çeviri kapalı; çeviriyi Claude'a yaptırın ya da dil sekmesine elle yazın.", 503);
       const got = await translateProject(src);
       if (!got) return bad("Çeviri yapılamadı, biraz sonra tekrar deneyin.", 502);
       return NextResponse.json(Object.fromEntries(SYNC_LANGS.map((l) => [l, { title: str(got[l].title, 180), description: str(got[l].description, 300), html: cleanHtml(str(got[l].html, 200_000)) }])));
@@ -331,7 +343,7 @@ export async function POST(req: Request) {
           const { tx, note: n } = await texts("project", list, result, prev, langTexts(body.langs), body.translate !== false, translate);
           const fallback = syncItem("project", list, result, tx, true);
           // Çeviri olmadan açılan dil sürümleri Türkçe metinle başlar; panelde açıkça söylenir
-          note = fallback.length ? `İngilizce ve Almanca sayfalar Türkçe metinle açıldı; projeyi açıp dil sekmelerinden düzeltebilir ya da çeviri anahtarı (GEMINI_API_KEY) tanımlandıktan sonra yeniden kaydedebilirsiniz.` : n;
+          note = fallback.length ? `İngilizce ve Almanca sayfalar Türkçe metinle açıldı; çevirisi Claude ile yapılacak (Gösterge'deki çeviri bekleyenler listesinde).` : n;
         }
         return { changes: [{ path: PROJECTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message, result: { project: result, note } };
       });
@@ -384,7 +396,7 @@ export async function POST(req: Request) {
           const manual = langTexts(body.langs);
           const r = await texts("post", list, result, prev, manual, body.translate !== false && (create || hasAlt), translate);
           const fallback = syncItem("post", list, result, r.tx, create);
-          note = fallback.length ? "İngilizce ve Almanca sürümler Türkçe metinle açıldı; dil sekmelerinden düzeltebilir ya da çeviri anahtarı tanımlandıktan sonra yeniden kaydedebilirsiniz." : r.note;
+          note = fallback.length ? "İngilizce ve Almanca sürümler Türkçe metinle açıldı; çevirisi Claude ile yapılacak (Gösterge'deki çeviri bekleyenler listesinde)." : r.note;
         }
         return { changes: [{ path: POSTS_FILE, text: dump(list, crlf) }, ...blobs(body.blobs)], message, result: { post: result, note } };
       });
@@ -497,7 +509,7 @@ export async function POST(req: Request) {
 
     // Yapılandırılmış sayfanın Türkçe metinleri İngilizce ve Almancaya (aynı yapıda) çevrilir
     if (op === "translate.page") {
-      if (!TRANSLATE_CONFIGURED) return bad("Çeviri anahtarı (GEMINI_API_KEY) tanımlı değil.", 503);
+      if (!TRANSLATE_CONFIGURED) return bad("Panelde otomatik çeviri kapalı; çeviriyi Claude'a yaptırın ya da dil sekmesine elle yazın.", 503);
       const item = body.item;
       const list = collectText(item);
       if (!list.length) return bad("Çevrilecek metin yok.");
