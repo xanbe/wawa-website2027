@@ -25,6 +25,7 @@ import {
 } from "./studio-data";
 import type { Moves, SceneApi, View } from "./StudioScene";
 import { useTurnstile } from "@/components/ui/useTurnstile";
+import { OptionCombobox } from "@/components/templates/OptionCombobox";
 import { estimate, euroRange } from "@/content/stand-prices";
 
 const StudioScene = dynamic(() => import("./StudioScene"), {
@@ -69,6 +70,7 @@ const SCENE_T = {
     expired: "Önizlemenin süresi doldu. Görseli yeniden üretin.",
     testNote: "Test modu: yapay zekâ kapalı olduğu için görsel yerine 3D taslak gösteriliyor.",
     offNote: "Görsel üretimi şu an kapalı. Ölçülerinizle doğrudan teklif alabilirsiniz.",
+    failNote: "Görsel şu an üretilemedi. Biraz sonra yeniden deneyin ya da ölçülerinizle doğrudan teklif alın.",
     sendCode: "Doğrulama kodu gönder",
     sending: "Kod gönderiliyor…",
     codeLabel: "Telefonunuza gelen 6 haneli kod",
@@ -101,6 +103,7 @@ const SCENE_T = {
     expired: "The preview has expired. Please generate the image again.",
     testNote: "Test mode: AI is off, so the 3D sketch is shown instead of an image.",
     offNote: "Image generation is currently off. You can request an offer with your dimensions.",
+    failNote: "The image could not be generated right now. Please try again shortly or request an offer with your dimensions.",
     sendCode: "Send verification code",
     sending: "Sending code…",
     codeLabel: "6-digit code sent to your phone",
@@ -133,6 +136,7 @@ const SCENE_T = {
     expired: "Die Vorschau ist abgelaufen. Bitte das Bild neu erstellen.",
     testNote: "Testmodus: KI ist aus, daher wird die 3D-Skizze statt eines Bildes gezeigt.",
     offNote: "Die Bilderstellung ist derzeit aus. Sie können mit Ihren Maßen ein Angebot anfordern.",
+    failNote: "Das Bild konnte gerade nicht erstellt werden. Bitte versuchen Sie es gleich erneut oder fordern Sie mit Ihren Maßen ein Angebot an.",
     sendCode: "Bestätigungscode senden",
     sending: "Code wird gesendet…",
     codeLabel: "6-stelliger Code auf Ihrem Telefon",
@@ -314,7 +318,7 @@ export function AiStudio({
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
   // Sonuç: önizleme (filigranlı) + mühür ya da doğrulama sonrası tam görsel
-  const [result, setResult] = useState<{ preview: string | null; sealed: string | null; image: string | null; test: boolean } | null>(null);
+  const [result, setResult] = useState<{ preview: string | null; sealed: string | null; image: string | null; test: boolean; configured?: boolean } | null>(null);
   const [unlockOpen, setUnlockOpen] = useState(false);
   const lastSketch = useRef<string | null>(null);
   // Önizlemenin üretildiği brif: mühür bu brife bağlıdır, açarken aynısı gönderilir
@@ -382,7 +386,7 @@ export function AiStudio({
   }
 
   const payloadBrief = () => payloadBriefOf(brief, Boolean(logo));
-  type Reply = { image?: string | null; preview?: string | null; sealed?: string | null; test?: boolean; error?: string; message?: string; pass?: string };
+  type Reply = { image?: string | null; preview?: string | null; sealed?: string | null; test?: boolean; configured?: boolean; error?: string; message?: string; pass?: string };
   const errorText = (j: Reply) =>
     j.error === "code" ? (j.message ?? S.codeNeed) : j.error === "bot" ? C.errors.failed : j.error === "too_many_preview" ? S.limitPreview : j.error === "expired" ? S.expired : j.error === "too_many" ? C.errors.too_many : j.error === "invalid" ? C.errors.invalid : C.errors.failed;
   async function post(body: Record<string, unknown>) {
@@ -413,7 +417,7 @@ export function AiStudio({
         if (json.error === "too_many_preview") setUnlockOpen(true);
         return;
       }
-      setResult({ preview: json.preview ?? null, sealed: json.sealed ?? null, image: json.image ?? null, test: Boolean(json.test) });
+      setResult({ preview: json.preview ?? null, sealed: json.sealed ?? null, image: json.image ?? null, test: Boolean(json.test), configured: json.configured !== false });
       setUnlockOpen(false);
       setStatus("done");
     } catch {
@@ -439,7 +443,7 @@ export function AiStudio({
         setError(errorText(json));
         return;
       }
-      setResult((prev) => ({ preview: prev?.preview ?? null, sealed: null, image: json.image ?? null, test: Boolean(json.test ?? prev?.test) }));
+      setResult((prev) => ({ preview: prev?.preview ?? null, sealed: null, image: json.image ?? null, test: Boolean(json.test ?? prev?.test), configured: json.configured !== false }));
       setUnlockOpen(false);
       setStatus("done");
     } catch {
@@ -608,20 +612,14 @@ export function AiStudio({
               {brief.mode === "stand" && (
                 <>
                   <Field label={C.sector}>
-                    <input
+                    <OptionCombobox
                       value={s.sector}
-                      maxLength={80}
-                      onChange={(e) => updStand({ sector: e.target.value })}
+                      onChange={(sector) => updStand({ sector })}
+                      options={SECTORS[lang]}
                       placeholder={C.sectorPlaceholder}
-                      list="studio-sectors"
                       className={`h-12 w-full border px-4 text-[15px] text-wawa-charcoal outline-none placeholder:text-wawa-charcoal/40 focus:border-wawa-charcoal ${LINE}`}
                     />
                   </Field>
-                  <datalist id="studio-sectors">
-                    {SECTORS[lang].map((x) => (
-                      <option key={x} value={x} />
-                    ))}
-                  </datalist>
                   <Field label={C.brandColor}>
                     <div className={`flex h-12 items-center gap-3 border px-2 ${LINE}`}>
                       <input type="color" value={s.color} onChange={(e) => updStand({ color: e.target.value })} aria-label={C.brandColor} className="h-8 w-10 cursor-pointer border-0 bg-transparent p-0" />
@@ -769,7 +767,7 @@ export function AiStudio({
                       {!result.image && <span className="absolute top-0 left-0 bg-wawa-accent px-2.5 py-1 text-[12px] font-medium text-wawa-charcoal">{S.previewBadge}</span>}
                     </figure>
                   ) : (
-                    <p className="bg-[#F3F2EF] p-4 text-[14px] text-wawa-charcoal">{S.offNote}</p>
+                    <p className="bg-[#F3F2EF] p-4 text-[14px] text-wawa-charcoal">{result.configured === false ? S.offNote : S.failNote}</p>
                   )}
                   {result.test && <p className="mt-2 text-[12px] text-wawa-charcoal/55">{S.testNote}</p>}
                   {result.image && <p className="mt-3 text-[14px] leading-relaxed text-wawa-charcoal/70">{C.sentNote}</p>}
