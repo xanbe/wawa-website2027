@@ -2,9 +2,13 @@ import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
-// Yönetim paneli girişi: tek parola (ADMIN_PASSWORD), imzalı oturum çerezi.
+// Yönetim paneli girişi: tek parola, imzalı oturum çerezi.
+// Parola iki şekilde verilebilir; ikisi birden varsa parmak izi geçerlidir:
+//  - ADMIN_PASSWORD_HASH: parolanın SHA-256 parmak izi (64 küçük harf/rakam). Parola sunucuda açık durmaz ve $, tırnak gibi
+//    karakterler ortam değişkeninde sorun çıkarmaz. Üretmek için: parolanın UTF-8 baytlarının SHA-256 özeti, onaltılık.
+//  - ADMIN_PASSWORD: parolanın kendisi (en az 12 karakter)
 // Panel yalnızca şu koşullarda açılır (canlıda yanlışlıkla açık kalmaz):
-//  - ADMIN_PASSWORD en az 12 karakter
+//  - geçerli bir parola ya da parmak izi
 //  - ADMIN_SECRET en az 32 karakter (oturum imzası; SMS kodu anahtarıyla paylaşılmaz)
 // Oturum parolaya ve ADMIN_SESSION_EPOCH'a bağlıdır: parola ya da bu değer değişince tüm açık oturumlar düşer.
 
@@ -24,7 +28,14 @@ const password = () => {
   const p = env(process.env.ADMIN_PASSWORD);
   return p.length >= 12 ? p : "";
 };
-export const adminEnabled = () => Boolean(password() && secret());
+const sha256 = (v: string) => createHash("sha256").update(v, "utf8").digest("hex");
+const passwordHash = () => {
+  const h = env(process.env.ADMIN_PASSWORD_HASH).toLowerCase();
+  return /^[0-9a-f]{64}$/.test(h) ? h : "";
+};
+// Parolanın parmak izi: doğrudan verilmişse o, yoksa açık paroladan hesaplanan
+const expectedHash = () => passwordHash() || (password() ? sha256(password()) : "");
+export const adminEnabled = () => Boolean(expectedHash() && secret());
 
 const sign = (data: string) => createHmac("sha256", secret()).update(data).digest("base64url");
 export const same = (a: string, b: string) => {
@@ -34,11 +45,11 @@ export const same = (a: string, b: string) => {
 };
 
 export function checkPassword(given: string) {
-  return adminEnabled() && same(sign(`pw:${given}`), sign(`pw:${password()}`));
+  return adminEnabled() && same(sign(`pw:${sha256(given)}`), sign(`pw:${expectedHash()}`));
 }
 
 // Oturumu parolaya ve dönem numarasına bağlayan parmak izi (parolanın kendisi imzaya girmez)
-const binding = () => `${process.env.ADMIN_SESSION_EPOCH ?? "0"}:${createHash("sha256").update(password()).digest("base64url")}`;
+const binding = () => `${process.env.ADMIN_SESSION_EPOCH ?? "0"}:${expectedHash()}`;
 
 export function makeSession() {
   const exp = String(Date.now() + SESSION_TTL_MS);
