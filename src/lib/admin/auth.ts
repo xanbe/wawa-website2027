@@ -14,12 +14,14 @@ export const SESSION_COOKIE = PROD ? "__Host-wawa_admin" : "wawa_admin";
 export const SESSION_TTL_MS = 12 * 60 * 60 * 1000;
 const RENEW_BELOW_MS = 6 * 60 * 60 * 1000;
 
+// Vercel'e yapıştırılan değerde kalan boşluk, satır sonu ya da çevreleyen tırnak giriş yapılamamasına yol açmasın
+const env = (v: string | undefined) => (v ?? "").trim().replace(/^(["'])(.*)\1$/s, "$2");
 const secret = () => {
-  const s = process.env.ADMIN_SECRET ?? "";
+  const s = env(process.env.ADMIN_SECRET);
   return s.length >= 32 ? s : "";
 };
 const password = () => {
-  const p = process.env.ADMIN_PASSWORD ?? "";
+  const p = env(process.env.ADMIN_PASSWORD);
   return p.length >= 12 ? p : "";
 };
 export const adminEnabled = () => Boolean(password() && secret());
