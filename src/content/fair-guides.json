@@ -5424,5 +5424,512 @@
         }
       ]
     }
+  },
+  {
+    "name": "STONE Poznań",
+    "slugs": [
+      "stone-poznan"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://targistone.pl/en",
+      "http://targistone.pl/en/about-event/thematic-scope/",
+      "http://targistone.pl/en/about-event/about-the-fair/"
+    ],
+    "tr": {
+      "intro": "STONE, Polonya'nın Poznań kentinde düzenlenen taş sektörü fuarıdır. Organizatörü Grupa MTP (Poznań Uluslararası Fuarı); fuar doğal taş ve yüzey malzemelerini, taş işleme teknolojisi ve makinelerini mimari ve tasarım dünyasıyla aynı çatıda topluyor.",
+      "sections": [
+        {
+          "h": "STONE'da hangi ürünler sergileniyor?",
+          "p": "Organizatör sergi profilini altı grupta topluyor: taş ocağı ve işleme tesisleri, toptan taş ve plaka satışı, yapı ve mimari ürünleri (merdiven, denizlik, mutfak ve banyo tezgâhı, zemin ve karo, cephe ve duvar kaplaması, dekoratif öğeler), işleme teknolojisi (makine, kesici takım, aşındırıcı, geri dönüşüm), kimyasallar ve bakım ürünleri ile nakliye, medya ve dernekler gibi diğer sektörler."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 26–29 Ocak 2027 tarihlerinde, dört gün boyunca Poznań Uluslararası Fuar Alanı'nda yapılıyor. Mimari bölüm yenilenen 4 numaralı pavyonda, teknoloji bölümü BUDMA pavyonlarında ayrılmış bir alanda yer alıyor. Aynı günlerde BUDMA, WINDOOR-TECH, Archi-Strada by BUDMA ve Progetto Fuoco Poland da düzenleniyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör fuarı taş işleme tesislerine, üreticilere, distribütörlere, yüklenicilere, mimarlara, tasarımcılara ve yatırımcılara yönelik tanıtıyor. Ziyaretçi kaydı ve bilet internet sitesi üzerinden yapılıyor."
+        },
+        {
+          "h": "STONE'da stand açmak",
+          "p": "Başvuru organizatörün Exhibitor Zone sayfasından yapılıyor; sitede katılım teklifi, stand kurulumu, teknik hizmetler ve katılımcı yönetmeliği ayrı sayfalarda yer alıyor. Taş sektöründe stand, malzemenin dokusunu ve renk tonunu ışık altında gösterecek numune ve plaka düzenine göre kurgulanmalı; zeminin taşıyacağı ağırlık için teknik hizmetler sayfasındaki kurallar baştan okunmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "STONE is the stone industry trade fair held in Poznań, Poland. Organised by Grupa MTP (Poznań International Fair), it brings natural stone and finishing materials together with stone-processing technology and machinery, alongside architecture and design.",
+      "sections": [
+        {
+          "h": "What is on show at STONE?",
+          "p": "The organiser groups the exhibition profile into six areas: quarries and processing plants, wholesale stone and slabs, construction and architecture products (stairs, windowsills, kitchen and bathroom countertops, flooring and tiles, facades, wall cladding, decorative elements), processing technology (machinery, cutting tools, abrasives, recycling), chemicals and maintenance products, and other sectors such as logistics, media and associations."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The fair runs for four days, 26–29 January 2027, at the Poznań International Fair grounds. The architecture section is in the renovated Pavilion 4 and the technology section has a dedicated area in the BUDMA pavilions. BUDMA, WINDOOR-TECH, Archi-Strada by BUDMA and Progetto Fuoco Poland take place at the same time."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser presents the fair to stone-processing plants, producers, distributors, contractors, architects, designers and investors. Visitor registration and tickets are handled on the fair's website."
+        },
+        {
+          "h": "Exhibiting at STONE",
+          "p": "Applications go through the organiser's Exhibitor Zone; the site has separate pages for the participation offer, stand building, technical services and exhibitor regulations. A stone stand should be planned around sample and slab layouts that show texture and colour under light, and the technical services rules on floor loading should be read before the design is drawn."
+        }
+      ]
+    },
+    "de": {
+      "intro": "STONE ist die Fachmesse der Steinbranche in Poznań, Polen. Veranstalter ist die Grupa MTP (Internationale Messe Posen); die Messe verbindet Naturstein und Oberflächenmaterialien mit Steinbearbeitungstechnik und Maschinen sowie Architektur und Design.",
+      "sections": [
+        {
+          "h": "Was wird auf der STONE gezeigt?",
+          "p": "Der Veranstalter gliedert das Ausstellungsprofil in sechs Bereiche: Steinbrüche und Verarbeitungsbetriebe, Steingroßhandel und Platten, Bau- und Architekturprodukte (Treppen, Fensterbänke, Küchen- und Badarbeitsplatten, Böden und Fliesen, Fassaden, Wandverkleidungen, Dekorelemente), Verarbeitungstechnik (Maschinen, Schneidwerkzeuge, Schleifmittel, Recycling), Chemie und Pflegeprodukte sowie weitere Branchen wie Logistik, Medien und Verbände."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe dauert vier Tage, vom 26. bis 29. Januar 2027, auf dem Gelände der Internationalen Messe Posen. Der Architekturbereich liegt im erneuerten Pavillon 4, der Technikbereich in einem eigenen Bereich der BUDMA-Pavillons. Zeitgleich finden BUDMA, WINDOOR-TECH, Archi-Strada by BUDMA und Progetto Fuoco Poland statt."
+        },
+        {
+          "h": "Besucher",
+          "p": "Der Veranstalter richtet die Messe an Steinbearbeitungsbetriebe, Hersteller, Händler, Bauunternehmer, Architekten, Designer und Investoren. Besucherregistrierung und Tickets laufen über die Website der Messe."
+        },
+        {
+          "h": "Als Aussteller auf der STONE",
+          "p": "Die Anmeldung läuft über die Exhibitor Zone des Veranstalters; die Website hat eigene Seiten für Teilnahmeangebot, Standbau, technische Dienstleistungen und Ausstellerregeln. Ein Stand in der Steinbranche wird um Muster- und Plattenpräsentationen geplant, die Struktur und Farbe im Licht zeigen; die Regeln zur Bodenbelastung bei den technischen Dienstleistungen sollte man vor dem Entwurf lesen."
+        }
+      ]
+    }
+  },
+  {
+    "name": "WINDOOR-TECH",
+    "slugs": [
+      "windoor-tech"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://windoortech.pl/en",
+      "https://windoortech.pl/en/about-event/thematic-scope/",
+      "https://windoortech.pl/en/about-event/about-the-fair/"
+    ],
+    "tr": {
+      "intro": "WINDOOR-TECH, pencere, kapı, geçit ve cephe üretimi için makine ve bileşen fuarıdır. Poznań'da Grupa MTP tarafından düzenleniyor; fuar kendisini Orta ve Doğu Avrupa'da türünün tek örneği olarak tanıtıyor.",
+      "sections": [
+        {
+          "h": "WINDOOR-TECH'te hangi ürünler sergileniyor?",
+          "p": "Kapsam on iki gruptan oluşuyor: yapı ve profil sistemleri, yarı mamuller, malzeme ve yardımcı maddeler (kaplama, yapıştırıcı, dolgu), cam ve cam ürünleri, aksesuar, bağlantı ve güvenlik teknolojisi, gölgeleme ve havalandırma, makineler ve takımlar (PVC doğrama ve boyama robotları, cam, ahşap, plastik ve alüminyum işleme), depolama ve taşıma, ölçüm teknolojisi, bilişim ile hizmet ve dernekler."
+        },
+        {
+          "h": "Tarihler ve eş zamanlı fuarlar",
+          "p": "Fuar 26–29 Ocak 2027 tarihlerinde Poznań'da yapılıyor. Organizatörün sayfasına göre aynı günlerde BUDMA ve WIN_DOOR POLAND ile birlikte düzenleniyor; 2025 fuarı da BUDMA ile eş zamanlıydı."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör fuarı pencere, kapı, geçit ve cephe sistemi üreticilerine, tasarımcılara ve bilim çevrelerine yönelik tanıtıyor ve Polonya'da 2.000'den fazla pencere üreticisinin faaliyet gösterdiğini belirtiyor. Davetiye ve bilet fiyatları sitenin ziyaretçi bölümünde."
+        },
+        {
+          "h": "WINDOOR-TECH'te stand açmak",
+          "p": "Başvuru MTP Exhibitor Zone üzerinden yapılıyor; sitede katılım teklifi, stand kurulumu, reklam seçenekleri ve katılımcı yönetmeliği yer alıyor, ayrıca Gold Medal ve Acanthus Aureus yarışmalarına başvurulabiliyor. Makine fuarında stand, çalışan ekipmanın ağırlığını ve elektrik ihtiyacını taşıyacak şekilde planlanmalı; alüminyum ve PVC profil numuneleri ile köşe birleşimleri ziyaretçinin elle inceleyebileceği yükseklikte sergilenmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "WINDOOR-TECH is a trade fair for machines and components used to make windows, doors, gates and facades. It is held in Poznań by Grupa MTP and presents itself as the only fair of its kind in Central and Eastern Europe.",
+      "sections": [
+        {
+          "h": "What is on show at WINDOOR-TECH?",
+          "p": "The scope has twelve groups: structural and profile systems, semi-finished products, materials and auxiliary agents (coatings, adhesives, sealants), glass and glass products, fittings, fixing and security technology, shading and ventilation, machines and tools (robots for PVC joinery and painting, equipment for glass, wood, plastic and aluminium), storage and transport, measurement technology, IT, and services and associations."
+        },
+        {
+          "h": "Dates and co-located shows",
+          "p": "The fair takes place in Poznań on 26–29 January 2027. According to the organiser's pages it runs together with BUDMA and WIN_DOOR POLAND; the 2025 edition was also held alongside BUDMA."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser aims the fair at manufacturers of window, door, gate and facade systems, designers and academia, and notes that more than 2,000 window manufacturers operate in Poland. Invitations and ticket prices are in the visitor section of the site."
+        },
+        {
+          "h": "Exhibiting at WINDOOR-TECH",
+          "p": "Applications go through the MTP Exhibitor Zone; the site covers the participation offer, stand building, advertising options and exhibitor regulations, and exhibitors can enter the Gold Medal and Acanthus Aureus competitions. A machinery stand has to be planned for the weight and power supply of running equipment, with aluminium and PVC profile samples and corner joints displayed at a height visitors can handle."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die WINDOOR-TECH ist eine Fachmesse für Maschinen und Komponenten zur Herstellung von Fenstern, Türen, Toren und Fassaden. Sie findet in Posen statt, Veranstalter ist die Grupa MTP; die Messe bezeichnet sich als einzige ihrer Art in Mittel- und Osteuropa.",
+      "sections": [
+        {
+          "h": "Was wird auf der WINDOOR-TECH gezeigt?",
+          "p": "Das Angebot umfasst zwölf Gruppen: Konstruktions- und Profilsysteme, Halbzeuge, Materialien und Hilfsstoffe (Beschichtungen, Klebstoffe, Dichtstoffe), Glas und Glasprodukte, Beschläge, Befestigungs- und Sicherheitstechnik, Beschattung und Lüftung, Maschinen und Werkzeuge (Roboter für PVC-Fensterbau und Lackierung, Anlagen für Glas, Holz, Kunststoff und Aluminium), Lager- und Transporttechnik, Messtechnik, IT sowie Dienstleistungen und Verbände."
+        },
+        {
+          "h": "Termine und parallele Messen",
+          "p": "Die Messe findet vom 26. bis 29. Januar 2027 in Posen statt. Laut Veranstalter läuft sie gemeinsam mit BUDMA und WIN_DOOR POLAND; auch die Ausgabe 2025 fand zeitgleich mit der BUDMA statt."
+        },
+        {
+          "h": "Besucher",
+          "p": "Der Veranstalter richtet die Messe an Hersteller von Fenster-, Tür-, Tor- und Fassadensystemen, Planer und die Wissenschaft und nennt mehr als 2.000 Fensterhersteller in Polen. Einladungen und Ticketpreise stehen im Besucherbereich der Website."
+        },
+        {
+          "h": "Als Aussteller auf der WINDOOR-TECH",
+          "p": "Die Anmeldung läuft über die MTP Exhibitor Zone; die Website behandelt Teilnahmeangebot, Standbau, Werbemöglichkeiten und Ausstellerregeln, außerdem kann man an den Wettbewerben Gold Medal und Acanthus Aureus teilnehmen. Ein Maschinenstand muss für Gewicht und Stromversorgung laufender Anlagen geplant werden; Aluminium- und PVC-Profilmuster mit Eckverbindungen gehören auf eine Höhe, in der Besucher sie anfassen können."
+        }
+      ]
+    }
+  },
+  {
+    "name": "World of Coffee Dubai",
+    "slugs": [
+      "world-of-coffee-dubai"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://www.worldofcoffeedubai.com/",
+      "https://dubai.worldofcoffee.org/"
+    ],
+    "tr": {
+      "intro": "World of Coffee Dubai, özel kahve (specialty coffee) sektörünün buluşma fuarıdır. Dubai World Trade Centre'da yapılıyor; sitenin iletişim adresi DWTC'ye ait.",
+      "sections": [
+        {
+          "h": "World of Coffee Dubai'de neler var?",
+          "p": "Fuar alanı Cupping Room (tadım alanı), Brew Bar, çiftçilerin menşe kahvelerini sunduğu Producer Village ve mikro kavurucuların Roaster Village bölümlerinden oluşuyor. Programda SCA Community Lounge, Dubai Coffee Auction, SCA eğitim ve atölyeleri ile SCA UAE Ulusal Şampiyonası yer alıyor; Coffee Design Award ve Best New Product yarışmalarına başvuru açık."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 26–28 Ocak 2027 tarihlerinde Dubai World Trade Centre'ın Za'abeel Salon 1, 4, 5 ve 6 bölümlerinde yapılıyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Ziyaretçiler kayıt sayfasından bilet alıyor; yerel kafeler ücretsiz Cafe Network'e kaydolabiliyor. Konuşmacılar 45 dakikalık oturumlar için başvurabiliyor."
+        },
+        {
+          "h": "World of Coffee Dubai'de stand açmak",
+          "p": "Stand rezervasyonu Exhibitor Registration sayfasından yapılıyor. İki seçenek var: en az 9 m²'lik X-Wall Shell Scheme (shell veya hybrid) ve en az 24 m²'lik Space Only. Kahve fuarında stand tasarımında su ve elektrik bağlantısının yeri, tadım ve demleme tezgâhının ziyaretçi akışı içindeki konumu ve kavrulmuş kahvenin koku ve gürültüsünün komşu standlara etkisi baştan düşünülmeli."
+        }
+      ]
+    },
+    "en": {
+      "intro": "World of Coffee Dubai is a meeting place for the specialty coffee industry, held at the Dubai World Trade Centre; the site's contact address belongs to DWTC.",
+      "sections": [
+        {
+          "h": "What is at World of Coffee Dubai?",
+          "p": "The floor includes a Cupping Room, a Brew Bar, a Producer Village where farmers present their origin coffees and a Roaster Village for micro-roasters. The programme features the SCA Community Lounge, the Dubai Coffee Auction, SCA education and workshops and the SCA UAE National Championships; entries are open for the Coffee Design Award and Best New Product."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show runs on 26–28 January 2027 in Za'abeel Halls 1, 4, 5 and 6 of the Dubai World Trade Centre."
+        },
+        {
+          "h": "Who attends",
+          "p": "Visitors buy tickets through the visitor registration page; local cafés can join the free Cafe Network, and speakers can apply for 45-minute sessions."
+        },
+        {
+          "h": "Exhibiting at World of Coffee Dubai",
+          "p": "Stands are booked on the Exhibitor Registration page. There are two options: the X-Wall Shell Scheme (shell or hybrid) from 9 m² and Space Only from 24 m². For a coffee stand, plan early for water and power points, the position of the cupping and brew counter in the visitor flow, and the aroma and noise of roasting next to neighbouring stands."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die World of Coffee Dubai ist der Treffpunkt der Specialty-Coffee-Branche im Dubai World Trade Centre; die Kontaktadresse der Website gehört zum DWTC.",
+      "sections": [
+        {
+          "h": "Was gibt es auf der World of Coffee Dubai?",
+          "p": "Die Fläche umfasst einen Cupping Room, eine Brew Bar, das Producer Village, in dem Farmer ihre Herkunftskaffees zeigen, und das Roaster Village für Mikrorösterien. Im Programm stehen die SCA Community Lounge, die Dubai Coffee Auction, SCA-Schulungen und Workshops sowie die SCA UAE National Championships; für Coffee Design Award und Best New Product läuft die Bewerbung."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 26. bis 28. Januar 2027 in den Za'abeel-Hallen 1, 4, 5 und 6 des Dubai World Trade Centre statt."
+        },
+        {
+          "h": "Besucher",
+          "p": "Besucher kaufen Tickets über die Registrierungsseite; lokale Cafés können sich kostenlos im Cafe Network anmelden, Referenten können sich für 45-minütige Sessions bewerben."
+        },
+        {
+          "h": "Als Aussteller auf der World of Coffee Dubai",
+          "p": "Die Standbuchung läuft über die Seite Exhibitor Registration. Es gibt zwei Varianten: X-Wall Shell Scheme (Shell oder Hybrid) ab 9 m² und Space Only ab 24 m². Bei einem Kaffeestand sollten Wasser- und Stromanschlüsse, die Lage von Cupping- und Brew-Theke im Besucherfluss sowie Duft und Lärm der Röstung für die Nachbarstände früh eingeplant werden."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Saudi Franchise Expo",
+    "slugs": [
+      "saudi-franchise-expo-riyad"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://www.saudifranchiseexpo.com/",
+      "https://www.saudifranchiseexpo.com/exhibit"
+    ],
+    "tr": {
+      "intro": "Saudi Franchise Expo, kendisini Suudi Arabistan ve GCC'nin en büyük franchise fuarı olarak tanıtıyor. Organizatörü Suudi fuar şirketi Sunaidi Expo & Conferences; fuar uluslararası, bölgesel ve yerel markaları Suudi pazarına açılmak isteyen franchise markalarıyla buluşturuyor.",
+      "sections": [
+        {
+          "h": "Saudi Franchise Expo'da hangi sektörler var?",
+          "p": "Organizatörün ziyaretçi profili listesinde gıda ve içecek, reklam ve medya, moda, eğlence, sağlık ve güzellik, perakende, üretim, iş hizmetleri, güneş ve enerji, mobilya ve ev, eğitim, bilgi teknolojileri, bakım ve danışmanlık sektörleri sayılıyor. Programda eşleştirme (matchmaking), atölye ve panel oturumları da yer alıyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar iki şehirde iki baskı olarak yapılıyor: Cidde'de 23–25 Kasım 2026 ve Riyad'da 26–28 Ocak 2027. Riyad baskısı The Arena'da, her gün 16:00–23:00 arasında. Fuar ticari bir etkinlik olarak tanıtılıyor ve çocuk kabul edilmiyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör fuarı yatırımcılara, girişimcilere ve işini büyütmek isteyenlere yönelik tanıtıyor. Ücretsiz eşleştirme programı iş sahiplerine, yatırımcılara, üst düzey yöneticilere, satın alma ve pazarlama müdürlerine ve danışmanlara açık."
+        },
+        {
+          "h": "Saudi Franchise Expo'da stand açmak",
+          "p": "Başvuru sitedeki Register to exhibit sayfasından veya satış ekibi üzerinden yapılıyor; marka profili gönderildiğinde organizatör uygun alanları ve fiyatları iki iş günü içinde bildiriyor. Üç stand tipi var: en az 9 m²'lik hazır Shell scheme, en az 18 m²'lik Space only (köşe ve ada konumları seçilebilir) ve 60 m² ve üzeri Country pavilion. Franchise fuarında stand, markanın işletme modelini yatırımcıya birkaç dakikada anlatacak şekilde kurgulanmalı: mağaza konseptinin bir köşesi ve görüşme masası öne çıkmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Saudi Franchise Expo presents itself as the largest franchise exhibition in Saudi Arabia and the GCC. It is organised by the Saudi exhibition company Sunaidi Expo & Conferences and brings international, regional and local brands together with franchises looking to enter the Saudi market.",
+      "sections": [
+        {
+          "h": "Which sectors are at Saudi Franchise Expo?",
+          "p": "The organiser's visitor-profile list names food and beverage, advertising and media, fashion, entertainment, health and beauty, retail, manufacturing, business services, solar and energy, furniture and home, education, IT, maintenance and consulting. The programme also includes matchmaking, workshops and panel sessions."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The fair is held in two cities: Jeddah on 23–25 November 2026 and Riyadh on 26–28 January 2027. The Riyadh edition is at The Arena, open 16:00–23:00 each day. It is promoted as a trade event and children are not admitted."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser aims the fair at investors, entrepreneurs and people who want to grow their business. The free matchmaking programme is open to business owners, investors, senior executives, procurement and marketing managers and consultants."
+        },
+        {
+          "h": "Exhibiting at Saudi Franchise Expo",
+          "p": "Applications go through the Register to exhibit page or the sales team; once a brand profile is sent, the organiser replies with available space and prices within two working days. There are three stand types: a Shell scheme from 9 m², Space only from 18 m² with corner and island positions, and a Country pavilion from 60 m². At a franchise show the stand should explain the business model to an investor in a few minutes: a corner of the store concept and a meeting table up front."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Saudi Franchise Expo bezeichnet sich als größte Franchise-Messe Saudi-Arabiens und des GCC. Veranstalter ist das saudische Unternehmen Sunaidi Expo & Conferences; die Messe bringt internationale, regionale und lokale Marken mit Franchisegebern zusammen, die den saudischen Markt erschließen wollen.",
+      "sections": [
+        {
+          "h": "Welche Branchen gibt es auf der Saudi Franchise Expo?",
+          "p": "Das Besucherprofil des Veranstalters nennt Food & Beverage, Werbung und Medien, Mode, Unterhaltung, Gesundheit und Schönheit, Einzelhandel, Produktion, Unternehmensdienstleistungen, Solar und Energie, Möbel und Wohnen, Bildung, IT, Wartung und Beratung. Im Programm gibt es außerdem Matchmaking, Workshops und Panels."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet in zwei Städten statt: in Dschidda vom 23. bis 25. November 2026 und in Riad vom 26. bis 28. Januar 2027. Die Riad-Ausgabe ist in The Arena, täglich 16:00–23:00 Uhr geöffnet. Sie wird als Fachveranstaltung beworben; Kinder haben keinen Zutritt."
+        },
+        {
+          "h": "Besucher",
+          "p": "Der Veranstalter richtet die Messe an Investoren, Gründer und Unternehmer, die wachsen wollen. Das kostenlose Matchmaking-Programm steht Geschäftsinhabern, Investoren, Führungskräften, Einkaufs- und Marketingleitern sowie Beratern offen."
+        },
+        {
+          "h": "Als Aussteller auf der Saudi Franchise Expo",
+          "p": "Die Anmeldung läuft über die Seite Register to exhibit oder das Vertriebsteam; nach Zusendung des Markenprofils nennt der Veranstalter freie Flächen und Preise innerhalb von zwei Werktagen. Es gibt drei Standtypen: Shell Scheme ab 9 m², Space only ab 18 m² mit Eck- und Inselpositionen und Country Pavilion ab 60 m². Auf einer Franchise-Messe muss der Stand das Geschäftsmodell einem Investor in wenigen Minuten erklären: eine Ecke des Ladenkonzepts und ein Besprechungstisch gehören nach vorn."
+        }
+      ]
+    }
+  },
+  {
+    "name": "AGROmashEXPO",
+    "slugs": [
+      "agromashexpo"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://agromashexpo.hu/en",
+      "https://agromashexpo.hu/en/for-exhibitors/product-groups/"
+    ],
+    "tr": {
+      "intro": "AGROmashEXPO, Macaristan'ın ve bölgenin önde gelen tarım fuarı olarak tanıtılıyor. Budapeşte'de HUNGEXPO'da yapılan fuar tarım makinelerinin yanı sıra bağcılık, şarapçılık, hayvancılık ve hayvan sağlığına da yer veriyor.",
+      "sections": [
+        {
+          "h": "AGROmashEXPO'da hangi ürünler sergileniyor?",
+          "p": "Organizatör ürünleri on iki grupta topluyor: tarım makineleri (traktör, toprak işleme, ekim ve sulama, hasat makineleri, dronlar), hayvancılık, tarımsal yapılar (ahır, kurutma ve depolama, sera), ormancılık, tarımsal girdiler (tohum, bitki koruma, gübre), tarım elektroniği ve ölçüm teknolojisi, çevre koruma ve yenilenebilir enerji, iş güvenliği, tarımsal hizmetler, kırsal kalkınma, Macar bahçesi ile bağcılık ve şarapçılık."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 27–30 Ocak 2027 tarihlerinde HUNGEXPO Budapeşte Kongre ve Fuar Merkezi'nde yapılıyor. Organizatörün sayfasına göre 2026'daki 44. baskı 21–24 Ocak 2026'da yapıldı; sayfa, önemli tarım makinesi dağıtıcılarının ve üreticilerinin neredeyse tamamının katıldığını belirtiyor. Programda ayrıca Viticulture and Viniculture ve ANImashEXPO bölümleri anılıyor."
+        },
+        {
+          "h": "AGROmashEXPO'da stand açmak",
+          "p": "Sitenin katılımcı bölümünde başvuru formu, çevrimiçi katılımcı sistemi, katılımcı broşürü ve hizmetler sayfası var; iletişim adresi agromashexpo@hungexpo.hu. Tarım makinesi fuarında stand, büyük araçların giriş ve yerleştirme yolunu ve zemin yükünü hesaba katmalı; makineler çevresinde ziyaretçinin dolaşacağı geniş bir alan ve ayrı bir görüşme noktası ayrılmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "AGROmashEXPO is presented as the leading agricultural fair in Hungary and the region. Held at HUNGEXPO in Budapest, it covers agricultural machinery as well as viticulture, wine-making, livestock and animal health.",
+      "sections": [
+        {
+          "h": "What is on show at AGROmashEXPO?",
+          "p": "The organiser groups products into twelve areas: agricultural machinery (tractors, tillage, sowing and irrigation, harvesters, drones), livestock, agricultural construction (barns, drying and storage, greenhouses), forestry, agricultural inputs (seed, crop protection, fertiliser), agri-electronics and measurement technology, environmental protection and renewable energy, occupational safety, agricultural services, rural development, the Hungarian Garden, and viticulture and wine-making."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The fair takes place on 27–30 January 2027 at the HUNGEXPO Budapest Congress and Exhibition Centre. According to the organiser, the 44th edition ran on 21–24 January 2026 and almost all the most significant agricultural machinery distributors and manufacturers took part. The programme also lists Viticulture and Viniculture and ANImashEXPO."
+        },
+        {
+          "h": "Exhibiting at AGROmashEXPO",
+          "p": "The exhibitor section offers an application form, an online exhibitors' system, an exhibitor brochure and a services page; the contact address is agromashexpo@hungexpo.hu. At a farm machinery show the stand has to allow for the access route and placement of large vehicles and for floor loading, with generous space around the machines and a separate point for conversations."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die AGROmashEXPO gilt als führende Landwirtschaftsmesse Ungarns und der Region. Sie findet bei HUNGEXPO in Budapest statt und zeigt neben Landtechnik auch Weinbau, Weinbereitung, Tierhaltung und Tiergesundheit.",
+      "sections": [
+        {
+          "h": "Was wird auf der AGROmashEXPO gezeigt?",
+          "p": "Der Veranstalter gliedert das Angebot in zwölf Bereiche: Landtechnik (Traktoren, Bodenbearbeitung, Saat und Bewässerung, Erntemaschinen, Drohnen), Tierhaltung, landwirtschaftliches Bauen (Ställe, Trocknung und Lagerung, Gewächshäuser), Forstwirtschaft, landwirtschaftliche Betriebsmittel (Saatgut, Pflanzenschutz, Dünger), Agrarelektronik und Messtechnik, Umweltschutz und erneuerbare Energien, Arbeitsschutz, landwirtschaftliche Dienstleistungen, ländliche Entwicklung, den Ungarischen Garten sowie Weinbau und Weinbereitung."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet vom 27. bis 30. Januar 2027 im HUNGEXPO Budapest Congress and Exhibition Centre statt. Laut Veranstalter lief die 44. Ausgabe vom 21. bis 24. Januar 2026 und fast alle bedeutenden Landtechnikhändler und -hersteller waren dabei. Im Programm stehen außerdem Viticulture and Viniculture und ANImashEXPO."
+        },
+        {
+          "h": "Als Aussteller auf der AGROmashEXPO",
+          "p": "Der Ausstellerbereich bietet ein Anmeldeformular, ein Online-Ausstellersystem, eine Ausstellerbroschüre und eine Serviceseite; die Kontaktadresse lautet agromashexpo@hungexpo.hu. Bei einer Landtechnikmesse muss der Stand Zufahrt und Platzierung großer Fahrzeuge sowie die Bodenlast berücksichtigen, mit viel Raum um die Maschinen und einem eigenen Punkt für Gespräche."
+        }
+      ]
+    }
+  },
+  {
+    "name": "Pharmapack Europe",
+    "slugs": [
+      "pharmapack-europe"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://www.pharmapackeurope.com/"
+    ],
+    "tr": {
+      "intro": "Pharmapack Europe, kendisini Avrupa'nın en büyük ilaç ambalajı ve ilaç uygulama (drug delivery) etkinliği olarak tanıtıyor. Organizatörü Informa Markets; fuar ilaç ambalajı, ilaç uygulama sistemleri, tıbbi cihazlar ve makineleri kapsıyor.",
+      "sections": [
+        {
+          "h": "Pharmapack'te hangi ürünler sergileniyor?",
+          "p": "Sergi alanları ambalaj ve ambalaj malzemeleri, ilaç uygulama, makine ve ekipman, CDMO, etiketleme, akıllı ambalaj teknolojileri ve sürdürülebilirlik çözümlerinden oluşuyor. 2027 için Sustainable Solutions, AI & Tech ve Labelling bölgeleri yeni olarak duyuruluyor."
+        },
+        {
+          "h": "Tarihler ve fuar alanı",
+          "p": "Fuar 27–28 Ocak 2027 tarihlerinde Paris Expo Porte de Versailles'ın 4 numaralı salonunda yapılıyor. Açılış saatleri 27 Ocak'ta 10:00–18:00, 28 Ocak'ta 10:00–17:00; saatler bilet türüne göre değişebiliyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatöre göre 2026 baskısında 6.500'den fazla katılımcı, 430'dan fazla sergileyen firma ve 100'den fazla ülke yer aldı; programda 80'den fazla içerik oturumu vardı. Fuar, yüksek değerli ve karmaşık ilaçlar için ambalaj ve ilaç uygulama çözümleri arayan ilaç profesyonellerine yönelik. Bilet seçenekleri arasında grup rezervasyonu ve Emerging Professionals bileti var; Pharmapack Awards ve Parenteral Drug Association atölyesi programda."
+        },
+        {
+          "h": "Pharmapack'te stand açmak",
+          "p": "Stand rezervasyonu sitedeki Book your stand sayfasından yapılıyor; ayrıca Start-Up market paketi ve Better Stands Programme sunuluyor. İlaç ambalajı fuarında stand temiz, sade ve ürün güvenliğine uygun görünmeli: ürün numuneleri kapalı vitrinde, teknik görüşmeler için sessiz bir masa ve bilgi grafikleri okunur olmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "Pharmapack Europe presents itself as Europe's largest packaging and drug delivery event. Organised by Informa Markets, it covers pharmaceutical packaging, drug delivery, medical devices and machinery.",
+      "sections": [
+        {
+          "h": "What is on show at Pharmapack?",
+          "p": "The exhibit zones are packaging and packaging materials, drug delivery, machinery and equipment, CDMO, labelling, smart packaging technology and sustainability solutions. Sustainable Solutions, AI & Tech and Labelling are announced as new zones for 2027."
+        },
+        {
+          "h": "Dates and venue",
+          "p": "The show takes place on 27–28 January 2027 in Hall 4 of Paris Expo Porte de Versailles. Opening times are 10:00–18:00 on 27 January and 10:00–17:00 on 28 January, and vary by pass type."
+        },
+        {
+          "h": "Who attends",
+          "p": "According to the organiser, the 2026 edition had more than 6,500 attendees, over 430 exhibiting companies, more than 100 countries and over 80 content sessions. The show is aimed at pharma professionals looking for packaging and drug delivery solutions for high-value and complex drugs. Ticket options include group bookings and an Emerging Professionals pass; the Pharmapack Awards and a Parenteral Drug Association workshop are part of the programme."
+        },
+        {
+          "h": "Exhibiting at Pharmapack",
+          "p": "Stands are booked through the Book your stand page, and the site also offers a Start-Up market package and a Better Stands Programme. At a pharma packaging show the stand should look clean, restrained and appropriate to product safety: samples in closed display cases, a quiet table for technical talks and legible information graphics."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die Pharmapack Europe bezeichnet sich als Europas größte Veranstaltung für Pharmaverpackung und Drug Delivery. Veranstalter ist Informa Markets; die Messe umfasst pharmazeutische Verpackung, Arzneimittelabgabe, Medizinprodukte und Maschinen.",
+      "sections": [
+        {
+          "h": "Was wird auf der Pharmapack gezeigt?",
+          "p": "Die Ausstellungsbereiche sind Verpackung und Verpackungsmaterialien, Drug Delivery, Maschinen und Ausrüstung, CDMO, Etikettierung, smarte Verpackungstechnologie und Nachhaltigkeitslösungen. Für 2027 werden Sustainable Solutions, AI & Tech und Labelling als neue Zonen angekündigt."
+        },
+        {
+          "h": "Termine und Gelände",
+          "p": "Die Messe findet am 27. und 28. Januar 2027 in Halle 4 des Paris Expo Porte de Versailles statt. Die Öffnungszeiten sind am 27. Januar 10:00–18:00 und am 28. Januar 10:00–17:00 Uhr und hängen von der Ticketart ab."
+        },
+        {
+          "h": "Besucher",
+          "p": "Laut Veranstalter kamen zur Ausgabe 2026 mehr als 6.500 Teilnehmer, über 430 ausstellende Unternehmen aus mehr als 100 Ländern und es gab über 80 Content-Sessions. Die Messe richtet sich an Pharmafachleute, die Verpackungs- und Drug-Delivery-Lösungen für hochwertige und komplexe Arzneimittel suchen. Zu den Ticketoptionen zählen Gruppenbuchungen und ein Emerging-Professionals-Pass; die Pharmapack Awards und ein Workshop der Parenteral Drug Association gehören zum Programm."
+        },
+        {
+          "h": "Als Aussteller auf der Pharmapack",
+          "p": "Die Standbuchung läuft über die Seite Book your stand; die Website bietet außerdem ein Start-Up-Paket und das Better Stands Programme. Auf einer Pharmaverpackungsmesse sollte der Stand sauber, zurückhaltend und der Produktsicherheit angemessen wirken: Muster in geschlossenen Vitrinen, ein ruhiger Tisch für Fachgespräche und gut lesbare Infografiken."
+        }
+      ]
+    }
+  },
+  {
+    "name": "İzmir Otel, Kafe, Restoran Ekipmanları Fuarı",
+    "slugs": [
+      "izmir-otel-kafe-restoran-ekipmanlari-fuari"
+    ],
+    "updated": "2026-11-28",
+    "sources": [
+      "https://www.basakfuar.com",
+      "https://www.basakfuar.com/izmir_fuari"
+    ],
+    "tr": {
+      "intro": "İzmir Otel, Kafe, Restoran Ekipmanları Fuarı (IZCOREX), otel, kafe ve restoran ekipmanları, ev dışı tüketim ve temizlik teknolojilerini bir araya getiren ticari fuardır. Organizatörü İzmir merkezli Başak Fuar.",
+      "sections": [
+        {
+          "h": "Fuarda hangi ürünler sergileniyor?",
+          "p": "Organizatör katılımcı ürün gruplarını şöyle sıralıyor: otel tekstili, mobilya ve yatak, dekorasyon malzemeleri, endüstriyel mutfak ve çamaşırhane ekipmanları, mutfak ve banyo malzemeleri, güvenlik ve aydınlatma sistemleri, sarf ve toplu tüketim malzemeleri, bilgi işlem sistemleri, personel giyimi, spa ve havuz ekipmanları, park, bahçe ve plaj ekipmanları, toplu tüketim için gıda ve içecek, unlu mamul ve çikolata ürünleri, temizlik ve kâğıt ürünleri ile sektör yayınları."
+        },
+        {
+          "h": "Tarihler",
+          "p": "Fuar 28–30 Ocak 2027 tarihlerinde, üç gün boyunca yapılıyor."
+        },
+        {
+          "h": "Ziyaretçi profili",
+          "p": "Organizatör fuarı otelcilere, restoran, pastane, bar ve eğlence mekânı işletmecilerine, kamu ve askeriye satın alma yetkililerine, okul ve fabrika satın almacılarına, endüstriyel catering firmalarına, toptancılara, şeflere, yiyecek-içecek müdürlerine ve proje ile inşaat firması yöneticilerine yönelik tanıtıyor. Ziyaretçiler çevrimiçi formdan e-davetiye talep ediyor; katılımcılarla önceden planlanan 20 dakikalık B2B görüşmeleri yapılıyor."
+        },
+        {
+          "h": "Fuarda stand açmak",
+          "p": "Katılımcılar e-broşürü inceleyip stand başvuru formunu dolduruyor; organizatör ziyaretçi listelerini fuardan önce katılımcılarla paylaşıyor. Otel ve restoran ekipmanı fuarında stand, ürünün çalışır veya kullanım hâlinde görülebileceği küçük bir örnek mekân gibi kurgulanabilir: mutfak ekipmanı için elektrik ve su ihtiyacı, tekstil ve mobilya için ise sakin bir oturma ve numune alanı baştan planlanmalı."
+        }
+      ]
+    },
+    "en": {
+      "intro": "The İzmir Hotel, Café and Restaurant Equipment Fair (IZCOREX) is a trade show for hotel, café and restaurant equipment, out-of-home consumption and cleaning technologies. It is organised by İzmir-based Başak Fuar.",
+      "sections": [
+        {
+          "h": "What is on show?",
+          "p": "The organiser lists these exhibitor groups: hotel textiles, furniture and bedding, decoration materials, industrial kitchen and laundry equipment, kitchen and bathroom materials, security and lighting systems, consumables and bulk supplies, IT systems, staff clothing, spa and pool equipment, park, garden and beach equipment, food and beverages for bulk consumption, baking and chocolate products, cleaning and paper products, and trade publications."
+        },
+        {
+          "h": "Dates",
+          "p": "The fair runs for three days, 28–30 January 2027."
+        },
+        {
+          "h": "Who attends",
+          "p": "The organiser aims the fair at hoteliers, operators of restaurants, patisseries, bars and entertainment venues, public and military procurement officials, school and factory buyers, industrial caterers, wholesalers, chefs, food and beverage managers, and project and construction company managers. Visitors request an e-invitation through the online form, and pre-arranged 20-minute B2B meetings are held with exhibitors."
+        },
+        {
+          "h": "Exhibiting at the fair",
+          "p": "Exhibitors review the e-brochure and fill in the stand application form; the organiser shares visitor lists with exhibitors before the fair. At a hotel and restaurant equipment show the stand can work like a small sample venue where the product is seen in use: plan power and water for kitchen equipment, and a quiet seating and sample area for textiles and furniture."
+        }
+      ]
+    },
+    "de": {
+      "intro": "Die İzmir Hotel-, Café- und Restaurantausstattungsmesse (IZCOREX) ist eine Fachmesse für Hotel-, Café- und Restaurantausstattung, Außer-Haus-Verbrauch und Reinigungstechnik. Veranstalter ist die in İzmir ansässige Başak Fuar.",
+      "sections": [
+        {
+          "h": "Was wird gezeigt?",
+          "p": "Der Veranstalter nennt diese Ausstellergruppen: Hoteltextilien, Möbel und Betten, Dekorationsmaterial, Großküchen- und Wäschereiausstattung, Küchen- und Badmaterial, Sicherheits- und Beleuchtungssysteme, Verbrauchs- und Großverbrauchsmaterial, IT-Systeme, Berufskleidung, Spa- und Poolausstattung, Park-, Garten- und Strandausstattung, Lebensmittel und Getränke für den Großverbrauch, Back- und Schokoladenwaren, Reinigungs- und Papierprodukte sowie Fachpublikationen."
+        },
+        {
+          "h": "Termine",
+          "p": "Die Messe dauert drei Tage, vom 28. bis 30. Januar 2027."
+        },
+        {
+          "h": "Besucher",
+          "p": "Der Veranstalter richtet die Messe an Hoteliers, Betreiber von Restaurants, Konditoreien, Bars und Unterhaltungsstätten, Einkäufer von Behörden und Militär, Schulen und Fabriken, Industriecaterer, Großhändler, Köche, F&B-Manager sowie Führungskräfte von Projekt- und Bauunternehmen. Besucher fordern über das Online-Formular eine E-Einladung an; mit den Ausstellern gibt es vorab vereinbarte 20-minütige B2B-Gespräche."
+        },
+        {
+          "h": "Als Aussteller auf der Messe",
+          "p": "Aussteller sehen sich die E-Broschüre an und füllen das Standanmeldeformular aus; der Veranstalter teilt die Besucherlisten vor der Messe mit den Ausstellern. Auf einer Hotel- und Restaurantausstattungsmesse kann der Stand wie ein kleiner Musterraum wirken, in dem das Produkt in Benutzung zu sehen ist: Strom und Wasser für Küchentechnik sowie ein ruhiger Sitz- und Musterbereich für Textilien und Möbel gehören früh in die Planung."
+        }
+      ]
+    }
   }
 ]

@@ -183,5 +183,20 @@
     "slug": "budma",
     "reason": "Fuar sayfası yalnızca bilet fiyatı veriyor; fuarın kapsamı, ürün grupları ve katılım süreci okunamadı",
     "date": "2026-11-28"
+  },
+  {
+    "slug": "premiere-vision-paris",
+    "reason": "Fuar sayfası katılımcı sürecini ve ürün kapsamını açıklamıyor; organizatör adı yazmıyor, ürün grupları 'yakında' olarak işaretli",
+    "date": "2026-11-28"
+  },
+  {
+    "slug": "jewels-of-emirates-show-al-ain",
+    "reason": "Kayıtlı kaynak fuarın kendi sitesi değil, Ticaret Bakanlığı destek listesi; resmî fuar sitesi yok",
+    "date": "2026-11-28"
+  },
+  {
+    "slug": "klimahouse",
+    "reason": "Fuar sayfası ürün gruplarını ve ziyaretçi profilini yazmıyor; yalnız tarih, organizatör ve menü bağlantıları var",
+    "date": "2026-11-28"
   }
 ]
