@@ -168,5 +168,20 @@
     "slug": "idex",
     "reason": "idexuae.ae WebFetch'te HTTP 403 verdi; okunabilir bilgi yok",
     "date": "2026-11-27"
+  },
+  {
+    "slug": "navdex",
+    "reason": "navdex.ae WebFetch'te HTTP 403 verdi; içerik okunamadı",
+    "date": "2026-11-28"
+  },
+  {
+    "slug": "ifam-intronika-mte-slovenia",
+    "reason": "icm.si sayfası fuarları tanımlamıyor; organizatör, mekân, ziyaretçi ve katılım bilgisi yok",
+    "date": "2026-11-28"
+  },
+  {
+    "slug": "budma",
+    "reason": "Fuar sayfası yalnızca bilet fiyatı veriyor; fuarın kapsamı, ürün grupları ve katılım süreci okunamadı",
+    "date": "2026-11-28"
   }
 ]
